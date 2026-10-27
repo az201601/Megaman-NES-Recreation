@@ -1,4 +1,0 @@
-all_major_frames.png: 12 frames per row, frame id in hex, left to right.
-Frame ids are indices into MajObjFrameAddrs (bank 6, CPU $8000).
-Use gfx/all_major_frames.png to find the frame you want, then add its
-hex id to OBJECT_STATES / MAJOR_OBJECT_FRAMES in this script.
