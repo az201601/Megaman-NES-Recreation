@@ -20,10 +20,10 @@ Sprites
         └── spr_mm1_stage_select_bombman
 ```
 
-- Background: `spr_mm1_stage_select_background.png`, 256 x 240. Contains only black margins and blue field. Import as one sprite, origin (0,0).
+- Background: `spr_mm1_stage_select_background.png`, 256 x 240. Solid blue edge-to-edge; the emulator-captured black margins have been removed at the user's request. Import as one sprite, origin (0,0).
 - Frame: `spr_mm1_stage_select_frame_strip2.png`, 96 x 48. Import as TWO 48 x 48 subimages, origin (0,0). Subimage 0 = normal; subimage 1 = highlighted. Transparent centre allows the portrait to be drawn separately. Frame colours and clipped corners are preserved.
 - Portraits: six files under `Portraits/`, each 32 x 32, one subimage, origin (0,0). Yellow portrait backdrops are intentional and opaque. Do not remove the background.
-- `stage_select_preview.png`: assembled reference only, NOT a gameplay sprite to import. Initial Cut Man highlight phase. Including text colours, it differs from the sampled emulator image in zero RGB pixels.
+- `stage_select_preview.png`: assembled reference only, NOT a gameplay sprite to import. Initial Cut Man highlight phase. The interior matches the sampled emulator image; the former black outer margins are now blue to match the corrected background.
 
 For all imports: keep original dimensions; no trimming, smoothing, scaling or automatic background-colour removal. Preserve PNG alpha. Disable texture interpolation in the game settings.
 
