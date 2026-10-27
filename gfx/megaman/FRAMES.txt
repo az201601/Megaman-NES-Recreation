@@ -1,0 +1,24 @@
+Mega Man animation frames, extracted from the ROM.
+Canvas 48x48; set the GameMaker sprite origin to (24,24).
+L = facing left, R = facing right. *_strip.png = frames side by side.
+Consecutive duplicate frames were collapsed; 'delay' is the ROM's
+frame count per animation step (use it for image_speed: 60/delay/60).
+Folder P = default palette. Folders C,I,B,F,E,G,M contain the
+weapon colour swaps for the core animations only.
+
+stand        state=$00  frames=$01  delay=8 f/step
+stand_shoot  state=$01  frames=$10  delay=8 f/step
+rock         state=$02  frames=$09  delay=8 f/step
+walk_start   state=$03  frames=$01,$02  delay=2 f/step
+run          state=$06  frames=$03,$05,$04,$05  delay=6 f/step
+run_shoot    state=$07  frames=$11,$13,$12,$13  delay=6 f/step
+jump         state=$09  frames=$06  delay=0 f/step
+jump_shoot   state=$0A  frames=$14  delay=0 f/step
+land         state=$0F  frames=$04,$03  delay=1 f/step
+hurt         state=$12  frames=$1A,$0F,$1A,$0F  delay=2 f/step
+stun         state=$13  frames=$07  delay=7 f/step
+transform    state=$14  frames=$15,$16,$17,$15  delay=2 f/step
+climb        state=$15  frames=$18,$19  delay=8 f/step
+climb_shoot  state=$16  frames=$1B  delay=8 f/step
+damage       state=$19  frames=$1E,$1F,$20  delay=8 f/step
+ready        state=$31  frames=$55  delay=0 f/step
