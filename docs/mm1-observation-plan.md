@@ -2,7 +2,7 @@
 
 ## Scope and method
 
-Observed the supplied `Mega Man (USA).nes` with JSNES 2.1.0, frame-stepping from boot. These are emulator observations, not hardware/cycle-exact validation. Emulator RGB values are not a definitive NES display palette. No extracted ROM graphics or temporary emulator dependencies are added to the project.
+Observed the supplied `Mega Man (USA).nes` with JSNES 2.1.0, frame-stepping from boot. These are emulator observations, not hardware/cycle-exact validation. Emulator RGB values are not a definitive NES display palette. Prepared graphics/audio are stored under Assets; temporary emulator dependencies are not added to the project.
 
 The editable GMS project is currently on the user's machine, not in this repository. Current resource names reported by the user: `spr_mm1_title_screen`, `spr_mm1_font`, `obj_mm1_title_screen`, `rm_mm1_title_screen`. Use game-specific resource prefixes going forward.
 
@@ -80,3 +80,23 @@ Layout:
 - Later: `rm_mm1_boss_intro`, `obj_mm1_boss_intro`
 
 Retain original MM1 behaviour as a baseline. Add fan-game features as explicit later changes rather than accidentally replacing original menu behaviour with a generic grid menu.
+
+## Follow-up: centre instructions and selection flashing
+
+Re-observed with JSNES 2.1.0 using the supplied ROM. Checked each of SELECT, STAGE, PRESS and START pixel regions for more than 500 stage-select frames.
+
+- All four lines change together. They do not disappear.
+- Alternate white (RGB 255,255,255) and light cyan (RGB 176,255,255 in this emulator).
+- Initial phase: white for stage-select frames 1–16; cyan for 17–32; white for 33–48, repeating every 32 frames.
+- The centre words, selected boss label and selected frame change in sync.
+- Unselected names remain light cyan; portraits and blue background do not flash.
+- Previous guidance to keep the timer running unchanged on navigation was incorrect. Right taps tested at stage frames 5, 17 and 31 restart the highlighted phase on the newly selected boss.
+- Input boundary observation: for Right asserted before stage frame t, the old display remained at t, all highlight elements were dim at t+1, and the new selection began its 16-frame white phase at t+2. This boundary sequence is not reproduced by simply resetting a GML counter immediately on a keypress.
+- Holding Right had previously been observed not to auto-repeat. Opposing simultaneous key behaviour has not been measured; cancelling opposing inputs is a recreation choice, not a verified original detail.
+
+The immediate centre-text correction is to derive its colour from the same selection timer used by the selected frame/name. A later navigation timing refinement should implement the observed input boundary instead of claiming an immediate counter reset is frame-exact.
+
+
+## Audio policy and stage-select implementation
+
+Include required audio as each screen/sequence is implemented, not as a separate end-of-project pass. Title idle and title Start transition remain silent. Stage selection needs music and a navigation effect. Assets and complete GMS 1.4 event instructions are in `Assets/Audio/Stage Select/README.md`. Music loops after 256 observed frames. The movement effect replaces both pulse channels for a 13-frame window while triangle continues. Two equal-length compressed stems in a looping sync group permit that channel replacement without restarting music. Boss confirmation audio is intentionally deferred until that sequence is measured and implemented.
