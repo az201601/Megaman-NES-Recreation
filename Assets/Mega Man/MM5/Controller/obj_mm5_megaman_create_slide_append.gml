@@ -1,5 +1,5 @@
 // Append to obj_mm5_megaman > Create > Execute Code.
-// Preparation only: no Step logic is installed by this checkpoint.
+// Initialize before installing the slide Step/Draw checkpoint.
 sliding = false;
 slide_direction = 1;
 slide_speed = 2.5;

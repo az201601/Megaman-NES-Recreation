@@ -15,6 +15,7 @@ if (on_ladder)
 // Insert before the Up-to-grab block, after the missing-ladder check.
 // Down enters only while grounded on a top marker, not while falling.
 if (!on_ladder
+    && !sliding
     && grounded
     && fall_speed == 0
     && keyboard_check(vk_down)
@@ -47,7 +48,7 @@ if (!on_ladder
     }
 }
 
-if (!on_ladder && keyboard_check(vk_up))
+if (!on_ladder && !sliding && keyboard_check(vk_up))
 {
     ladder_grab_candidate = collision_point(
         floor(x), floor(y), obj_stage_ladder, false, true

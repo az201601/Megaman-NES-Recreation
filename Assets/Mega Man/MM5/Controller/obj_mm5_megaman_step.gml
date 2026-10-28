@@ -15,6 +15,7 @@ if (on_ladder)
 // Insert before the Up-to-grab block, after the missing-ladder check.
 // Down enters only while grounded on a top marker, not while falling.
 if (!on_ladder
+    && !sliding
     && grounded
     && fall_speed == 0
     && keyboard_check(vk_down)
@@ -47,7 +48,7 @@ if (!on_ladder
     }
 }
 
-if (!on_ladder && keyboard_check(vk_up))
+if (!on_ladder && !sliding && keyboard_check(vk_up))
 {
     ladder_grab_candidate = collision_point(
         floor(x), floor(y), obj_stage_ladder, false, true
@@ -373,7 +374,7 @@ if (on_ladder)
 
 // MM5 player checkpoint: walk, jump and rectangular-terrain collision.
 // Requires the Create variables and two wall scripts listed in README-jumping.md.
-// Space = jump. Arrow keys = move. No slide, ladders or arrival yet.
+// Space = jump; Down + fresh Space = slide; arrow keys = move. Arrival pending.
 
 var walk_input, walk_amount;
 var horizontal_left, horizontal_step, horizontal_sign;
@@ -387,6 +388,9 @@ if (fall_speed >= 0)
 {
     grounded = scr_mm5_player_supported(x, y);
 }
+
+// Slide handles its own movement/visuals; ordinary walking is skipped.
+if (scr_mm5_player_slide_step()) exit;
 
 // HORIZONTAL MOVEMENT
 walk_input = keyboard_check(vk_right) - keyboard_check(vk_left);
@@ -446,7 +450,7 @@ if (fall_speed >= 0)
 if (grounded)
 {
     fall_speed = 0;
-    if (keyboard_check_pressed(vk_space))
+    if (keyboard_check_pressed(vk_space) && !keyboard_check(vk_down))
     {
         fall_speed = -jump_speed;
         grounded = false;
