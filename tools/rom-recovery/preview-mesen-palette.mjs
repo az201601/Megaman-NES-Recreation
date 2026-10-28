@@ -1,6 +1,7 @@
-// Palette matching, NOT a Mesen emulator capture. Canonical assets unchanged.
+// Palette matching, NOT a Mesen emulator capture. Writes the review copy only.
 // Reject unknown colours/ambiguous RGB -> index mappings instead of guessing.
 import {NES} from 'jsnes';
+import {execFileSync} from 'node:child_process';
 import {PNG} from 'pngjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -17,7 +18,8 @@ for(let i=0;i<64;i++){
  mapping.get(from).add(rgb.join(','));
 }
 const source=new URL('Assets/Mega Man/MM5/Standing/spr_mm5_megaman_idle.png',root);
-const p=PNG.sync.read(fs.readFileSync(source));
+// Pin the original pre-migration image; canonical artwork is now Mesen-coloured.
+const p=PNG.sync.read(execFileSync('git',['show','daf1d40:Assets/Mega Man/MM5/Standing/spr_mm5_megaman_idle.png'],{cwd:root}));
 assert.equal(p.width,32);assert.equal(p.height,32);
 const original=Buffer.from(p.data);let opaque=0,changed=0;
 for(let i=0;i<p.data.length;i+=4){

@@ -7,3 +7,7 @@ This standing PNG is a PALETTE-MATCHED conversion of our current asset, NOT a di
 GMS test: Sprites > Mega Man > MM5 > existing spr_mm5_megaman_idle. Back up sprite, Load Sprite using this PNG, retain name and verify one32x32 frame and origin16,16. Do not edit object default resource reference, Create/Step/Draw, collision masks, timing or audio. Compare standing pose's colours to Mesen. Once approved migrate batches (all MM5 player poses, then MM1 title/select/intro/scenery/objects), preserve dimensions/origins/frame order/transparency/tile arrangements and intentional artwork edits. No blind whole-repo nearest-colour conversion: some assets may use other palettes or deliberate colours.
 
 Use the pinned Mesen palette for future artwork; don't call palette-matched JSNES extraction a Mesen capture. Actual Mesen runtime setup/verification is separate from this palette checkpoint. Do not revise tested mechanics merely because colour output changes.
+
+## Approval and migration
+
+Standing colours approved by user. Canonical MM5 player assets and their extraction tools have now migrated; see MM5-PLAYER-IMPORT.md. The preview generator pins its pre-migration input so it remains reproducible. Other artwork migration remains pending.
