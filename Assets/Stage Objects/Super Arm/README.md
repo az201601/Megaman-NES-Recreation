@@ -27,3 +27,7 @@ Use the revised scenery tileset and entire revised tile-placement script togethe
 This corrects the visual/resource separation only. Collision, Super Arm eligibility, pickup, carrying, throwing, destruction and associated sound effects remain to be implemented and measured with player/weapon behaviour. No new audio event is appropriate merely for displaying a stationary block. The stage music setup is unchanged.
 
 All four full 32 x 32 sprites are opaque artwork in the current source; the black areas are real block artwork, not transparency placeholders. Do not use background-colour removal.
+
+## Approved Mesen palette update (colour only)
+
+Current PNGs use the approved Mesen0.9.9 default2C02 palette rather than the original JSNES RGB output. This is palette matching, not direct Mesen capture. Pixel geometry, alpha, atlas layout and object separation are unchanged. For THIS update reload only the images; do NOT replace tile scripts or recreate objects/rooms/collision. Earlier geometry/import setup notes above are historical; completed player, block collision and ladders remain installed. See `Assets/Palette Review/Mesen 0.9.9/MM1-CUTMAN-STAGE-IMPORT.md`. Compositing123 tiles over sky matches scenery and adding four separate block sprites matches the full layout exactly.

@@ -81,3 +81,7 @@ Shared sprite: `Assets/Stage Objects/Super Arm/spr_mm1_super_arm_block.png` (32 
 `cutman_screen01_scenery_reference.png` shows the scenery without those objects. `cutman_screen01_layout_reference.png` remains the complete intended scene including the blocks. Where a block covers a building wall, the underlying scenery now contains wall-fill tiles; other block locations reveal sky if their object is removed.
 
 Validation: background + scenery tiles matches the scenery reference exactly. Compositing the four block sprites at the listed positions then matches the complete reference exactly. Player collision, lifting, throwing, breaking and their audio are not implemented in this asset correction.
+
+## Approved Mesen palette update (colour only)
+
+Current PNGs use the approved Mesen0.9.9 default2C02 palette rather than the original JSNES RGB output. This is palette matching, not direct Mesen capture. Pixel geometry, alpha, atlas layout and object separation are unchanged. For THIS update reload only the images; do NOT replace tile scripts or recreate objects/rooms/collision. Earlier geometry/import setup notes above are historical; completed player, block collision and ladders remain installed. See `Assets/Palette Review/Mesen 0.9.9/MM1-CUTMAN-STAGE-IMPORT.md`. Compositing123 tiles over sky matches scenery and adding four separate block sprites matches the full layout exactly.

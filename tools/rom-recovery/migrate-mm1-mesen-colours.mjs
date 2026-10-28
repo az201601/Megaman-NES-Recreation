@@ -1,4 +1,4 @@
-// Stage-select and Cut Man intro colour-only batches; pinned originals, idempotent.
+// Stage select, Cut Man intro and first-screen scenery: pinned colour-only migration.
 // Mesen palette matching, NOT a direct Mesen runtime capture.
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -22,7 +22,12 @@ const files=[
 files.push(
  ['Assets/Cut Man/Boss Intro/spr_mm1_cutman_boss_intro_strip3.png',96,32],
  ['Assets/Cut Man/Boss Intro/spr_mm1_cutman_boss_intro_background_strip2.png',512,240],
- ['Assets/Cut Man/Boss Intro/cutman_boss_intro_preview.png',256,240]
+ ['Assets/Cut Man/Boss Intro/cutman_boss_intro_preview.png',256,240],
+ ['Assets/Cut Man/Stage/Screen 01/bg_mm1_cutman_screen01_background.png',256,240],
+ ['Assets/Cut Man/Stage/Screen 01/bg_mm1_cutman_screen01_tileset.png',128,32],
+ ['Assets/Cut Man/Stage/Screen 01/cutman_screen01_layout_reference.png',256,240],
+ ['Assets/Cut Man/Stage/Screen 01/cutman_screen01_scenery_reference.png',256,240],
+ ['Assets/Stage Objects/Super Arm/spr_mm1_super_arm_block.png',32,32]
 );
 for(const [path,w,h] of files){
  const name=path.split('/').pop();
@@ -37,7 +42,7 @@ for(const [path,w,h] of files){
  }
  for(let i=3;i<p.data.length;i+=4)assert.equal(p.data[i],old.data[i]);
  assert.ok(changed>0);
- if(name==='spr_mm1_stage_select_background.png'){
+ if(name==='spr_mm1_stage_select_background.png' || name==='bg_mm1_cutman_screen01_background.png'){
   const first=p.data.subarray(0,4);
   for(let i=0;i<p.data.length;i+=4)assert.deepEqual(p.data.subarray(i,i+4),first,'Background must remain solid edge-to-edge');
  }
