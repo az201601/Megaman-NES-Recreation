@@ -1,4 +1,4 @@
-// Stage-select colour-only batch, pinned original images; reruns are idempotent.
+// Stage-select and Cut Man intro colour-only batches; pinned originals, idempotent.
 // Mesen palette matching, NOT a direct Mesen runtime capture.
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -18,9 +18,14 @@ const files=[
  ['spr_mm1_stage_select_frame_strip2.png',96,48],
  ...['bombman','cutman','elecman','fireman','gutsman','iceman'].map(n=>['Portraits/spr_mm1_stage_select_'+n+'.png',32,32]),
  ['stage_select_preview.png',256,240],
-];
-for(const [name,w,h] of files){
- const path='Assets/Stage Select/'+name;
+].map(([name,w,h])=>['Assets/Stage Select/'+name,w,h]);
+files.push(
+ ['Assets/Cut Man/Boss Intro/spr_mm1_cutman_boss_intro_strip3.png',96,32],
+ ['Assets/Cut Man/Boss Intro/spr_mm1_cutman_boss_intro_background_strip2.png',512,240],
+ ['Assets/Cut Man/Boss Intro/cutman_boss_intro_preview.png',256,240]
+);
+for(const [path,w,h] of files){
+ const name=path.split('/').pop();
  const old=PNG.sync.read(execFileSync('git',['show','4acf61c:'+path],{cwd:root}));
  const p=PNG.sync.read(PNG.sync.write(old));
  assert.equal(p.width,w);assert.equal(p.height,h);let changed=0;
