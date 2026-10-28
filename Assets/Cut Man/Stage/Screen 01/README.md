@@ -38,28 +38,11 @@ Create `rm_mm1_cutman_stage` at 256 x 240, speed60, views disabled. Room Backgro
 
 Create non-persistent `obj_mm1_cutman_stage`, sprite <no sprite>. Place one instance in the stage room, with empty instance Creation Code.
 
-### Create event
+### Stage audio and Create/Alarm/Room End events (updated)
 
-```gml
-scr_mm1_cutman_screen01_tiles();
-stage_music_voice = -1;
-alarm[0] = 2;
-```
+The original single-file looping audio instructions are superseded. That export omitted the song's one-time opening and started at the wrong phrase. Follow `Assets/Audio/Cut Man/Stage/PLAYBACK-GMS14.md` for the replacement Create, Alarm0, Async Audio Playback and Room End events. The replacement Create event retains `scr_mm1_cutman_screen01_tiles();` so visual tile placement is unchanged.
 
-### Alarm 0
-
-```gml
-stage_music_voice = audio_play_sound(snd_mm1_cutman_stage, 1, true);
-```
-
-### Other > Room End
-
-```gml
-if (stage_music_voice != -1)
-{
-    audio_stop_sound(stage_music_voice);
-}
-```
+Add the two supplied PCM files as Included Files and use the queued opening/main playback path. Do not also play the Sound resource directly, and do not loop the combined reference recording.
 
 No Draw or Step event is needed yet. Runtime-created visual tiles are room-owned; do not also manually place the same tiles in the editor. They appear when running, not as editor-placed tiles. The CSV and reference are provided if editor placement is preferred instead.
 
