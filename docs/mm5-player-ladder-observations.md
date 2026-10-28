@@ -95,3 +95,50 @@ Current bounds produce (88,84) / (168,84) for the two tops. This is a functional
 ## Artwork extraction started after complete route passed
 
 User reports the full top/bottom route is flawless. New extract-ladder-art.mjs uses controlled class inputs to extract two climb cells and the top pose. All cells are 32x40, origin16,16. Active climb phases change at 9 updates; neutral holds phase and the renderer ends with timer1 after the handler's reset. Assets include a provenance/import guide; animation selection is not connected by this checkpoint. User imports and visuals pending.
+
+## Static solid obstructions — controlled ROM results and first ceiling checkpoint
+
+User accepted the subsequent climb/top animation integration ("SEEMS GOOD TO ME").
+
+`ladder-obstacles.mjs` supplies a consistent synthetic terrain class as a function of probe Y: class $10 for a horizontal solid band, $20 otherwise. It intercepts the accumulator before the original masking instructions at C551 (vertical movement) and C659 (body query), with X=0. This feeds original class aggregation/carry/snap logic as well as the ladder-presence results. Merely replacing $48-$4A writes would not change the accumulator used by the original collision aggregate and is insufficient for this test. ROM bytes and movement routines remain unchanged. This is controlled static terrain, not a natural encounter or a movable-object experiment.
+
+- Starting Y140, Up toward solid band [96,112): state3 remains attached. First ceiling collision on update14; integer reference Y121 thereafter, retained fraction cycles while continuing Up. Climb timer ends at1 and phase freezes. Neutral holds full Y; Down immediately moves away by1.296875.
+- Down toward solid band [160,176): collision update7 selects state0, reference148.078125 holds on the floor. Up on update28 captures state3 without Y displacement; subsequent update climbs by1.296875.
+- Opposite-direction controls travel unobstructed at1.296875.
+- No conclusion about sounds from this probe; no new sound is installed.
+
+First GMS checkpoint implements ONLY upward obstruction handling: replace bounded movement section with `obj_mm5_megaman_ladder_ceiling_insert.gml`. Uses existing head_offset10 and X±7 probes, stepping at most one pixel, ordinary solid parent only (including Super Arm children). Freeze phase on contact and stay attached; do not apply ordinary jump ceiling fall_speed=1. Normal top/bottom/drop exit branches remain unchanged. Downward internal obstacles and unsupported ends are intentionally still pending.
+
+GMS snaps reference to solid.bbox_bottom+1+head_offset, matching the accepted ordinary ceiling resolver; it does not reproduce the native fractional snap oscillation or native integer stopping coordinate. Local equivalent model passed empty-region movement invariance, ceiling stop/hold/reverse, either head probe and one-pixel obstacles. GMS user runtime confirmation pending.
+
+Temporary runtime test: place one obj_stage_solid (default16x16 region mask, scale1) at (80,128) in the Cut Man stage room. From below, left ladder X88 should stop upward at referenceY154, remain attached, freeze the climbing phase, and allow neutral hold, Down and a fresh Space drop. F2 displays the invisible geometry if desired. Remove that temporary instance after this test to restore the accepted top route. Do not descend onto this obstacle yet; downward internal collision is the next checkpoint.
+
+## Downward internal solid checkpoint
+
+User reports the ceiling stop/hold/retreat works great; accepted. New `obj_mm5_megaman_ladder_floor_insert.gml` replaces only the former downward placeholder else, preserving the approved upward sweep. Downward one-pixel sweeps use X-7, X, X+7 feet probes against obj_stage_solid (children included), NOT one-way ladder-top markers. Collision snaps to solid.bbox_top-feet_offset and detaches to grounded idle immediately; normal physics resumes next Step. Existing endpoint fallback remains intact. Unsupported ends and already-overlapping/moving obstacles remain out of scope.
+
+Added $EC5D sound-command observation to the controlled ROM obstacle test: zero requests in all four 30-update cases, including the downward contact. Accordingly this ladder-to-standing transition adds no landing sound; normal falling/jumping landing sound is unchanged. This observation is limited to these controlled static contacts.
+
+Local equivalent model passed internal landing at Y116 for a top128 solid, detach/grounded state, each of three probes including one-pixel surfaces, floor192 endpoint, neutral hold and unobstructed motion. ROM obstacle and whitespace checks passed. No GMS runtime available; user installation/test pending.
+
+Temporary test setup: one 16x16 obj_stage_solid at (80,128), scale1, and existing player room instance at (88,84) to start on the upper ladder lip. Descend and expect stop at referenceY116 with idle pose, grounded and detached. Holding Down must not pass through; Up should regrab and climb away; ordinary walking/jumping should work on the obstacle. Remove the temporary solid and restore room player instance to (48,180), then repeat the original full ladder route. No edits to stage collision creation script or audio events.
+
+## Unsupported bottom — ROM probe and integration checkpoint
+
+User reports downward solid landing/re-grab is perfect; accepted.
+
+New `ladder-unsupported.mjs` uses consistent raw terrain classes in original vertical/body lookup paths, as in ladder-obstacles.mjs. Synthetic ladder [96,160), optional support [160,176), normal-gravity snapshot; this simulates terrain support disappearing, NOT Super Arm's actual object pickup code. No ROM movement instructions patched.
+
+Results/assertions:
+- Attached at referenceY148: neutral holds even with no floor. Removing synthetic support at update3 while neutral gives exactly the same position/state trace as support absent from the start. Down starts at update7 and descends normally.
+- Upper probe Y-11 is last to leave: reference170 remains attached; reference171 with no input releases to state0 immediately, no displacement that update.
+- Starting140 and holding Down exits at171.125 on update24, state0, fall1. Next update state1 moves +1 then gravity yields1.25. Starting148, after neutral then Down, exits171.34375.
+- No sound requests during sampled contacts/releases/early falling. Near-end starting positions use12 updates to avoid later unrelated bottom-of-screen death and its stop/death audio commands (a longer exploratory run reached those).
+
+GMS changes: remove lower clamp only from ladder_target_y; retain upper bound and supported-bottom reference. Existing downward solid sweep has priority and still exits grounded on solids. After movement, if floor(y)-11 > ladder_instance.bbox_bottom, detach into air/fall_speed1, clear diagnostics and exit; do not run a second movement/gravity pass that Step. This preserves continued hanging while the last upper probe remains inside. Existing top, Space drop, ceiling and normal physics stay unchanged. Scope remains one current rectangular ladder region, not an adjoining-region traversal/metatile engine.
+
+`obj_mm5_megaman_ladder_unsupported_insert.gml` contains exact insertion. Full Step, prefix and climb block synchronized. Local model checked neutral hold/last probe, continuous descent, Up retreat, top clamp and solid-before-unsupported ordering; ROM obstruction and endpoint assertions and whitespace checks pass. User GMS installation/test pending.
+
+Temporary user test: in Scripts > Cut Man > Stage > Screen 01 > scr_mm1_cutman_screen01_collision change ONLY the left ladder's image_yscale6 to3 (logical region endsY144); leave roof/top marker and visual tiles unchanged. Start existing player room instance at88,84. Descend beyond old feet bound132; neutral can still hang until upper probe clears; descent clears atY>=155 and falls to ordinary floorY180 with normal landing audio. F2 exposes shortened region; visible ladder remains long intentionally during test. Restore scale6 and player room instance48,180 afterward; verify complete original route including both solid-supported bottoms. No Super Arm blocks removed or pickup mechanics implemented in this test.
+
+User subsequently reports unsupported-end behaviour works; accepted. User also confirmed debug_ladder_detection=false hides LADDER/TOP labels. Sliding is now the active next mechanic; preserve completed ladder handling.

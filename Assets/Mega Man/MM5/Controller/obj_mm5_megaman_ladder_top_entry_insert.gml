@@ -24,6 +24,8 @@ if (!on_ladder
         {
             on_ladder = true;
             ladder_instance = ladder_entry_region;
+            anim_climb_frame = 0;
+            anim_climb_timer = 0;
             y = ladder_entry_top.bbox_top - feet_offset;
             fall_speed = 0;
             grounded = false;
