@@ -1,9 +1,9 @@
-# MM5 landing sound
+# MM5 landing audio — correction / review pending
 
-`snd_mm5_megaman_land.wav`: mono signed PCM16, 44100 Hz, 7339 samples (~0.1664 s). Source is the supplied Mega Man 5 USA ROM's ordinary landing SFX request $1B, recorded during a Napalm Man jump. No ordinary jump-launch request occurred in the observed runs.
+The previous `snd_mm5_megaman_land.wav` was rejected by the user as the wrong sound and has been removed. Do not reimport it or restore its playback block. The shipped Step-event checkpoint now leaves landing audio disabled; movement and collision are unchanged.
 
-Reproduce: `tools/rom-recovery/extract-landing.mjs`, after generating mm5-stage.json. It forwards the observed sound-driver slot X=0 noise-register writes into a separate JSNES APU; music slot X=40 writes are excluded. The export includes the observed queue-to-audibility delay, a small tail, fixed gain 2.5, and a 64-sample end fade. This is an isolated emulator render, not hardware capture. The separate renderer's noise phase is not guaranteed to equal the original music-running APU's phase.
+The historical `tools/rom-recovery/extract-landing.mjs` forwarded selected writes to a fresh APU, which did not preserve the running game's noise-generator state, and boosted the gain 2.5x. Its event-timing assertions did not establish audible correctness. That extractor is now disabled to prevent regenerating the rejected asset.
 
-GMS1.4 resource folder: Sounds > Mega Man > MM5 > Movement. Resource: snd_mm5_megaman_land. Play nonlooping once on a downward landing (already in the supplied Step event). Do not play at room creation or every supported update.
+## Review files
 
-The current hybrid's MM1 stage music remains unchanged. This standalone sample does not emulate NES music-channel stealing; do not describe the combined GMS music/SFX mix as hardware-identical.
+See `Review/README.md`. The new candidate uses the original running game's noise channel instead, alongside an original full-mix reference. These are comparison files, **not yet an approved replacement**. No subjective listening or hardware-identical claim is made by the code checks.
