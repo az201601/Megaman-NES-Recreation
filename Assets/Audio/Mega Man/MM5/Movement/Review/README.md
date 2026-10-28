@@ -1,3 +1,5 @@
+> **Superseded / rejected:** neither isolated candidate in this review workflow was accepted by the user. Do not install these clips. The user subsequently approved a direct game-output recording with music stopped; the approved trimmed asset is `../snd_mm5_megaman_land.wav`. The notes below describe the historical review only.
+
 # Landing audio comparison — please review before installation
 
 - `mm5_original_mix_landing_reference.wav`: approximately one second of original emulator playback, including stage music and a normal Napalm Man jump landing. Landing occurs about 0.42 seconds into the clip; its sound follows the game's queue delay. No sound-register writes were intercepted or suppressed.

@@ -1,4 +1,4 @@
-> **Audio correction:** the original landing WAV was rejected as incorrect and removed. Do not follow the old sound-import step below or enable landing playback yet. The Step file now leaves audio disabled. Replacement and original-mix comparison clips are in `Assets/Audio/Mega Man/MM5/Movement/Review/`, pending user approval. Movement/collision code is unchanged.
+> **Approved audio replacement:** use the current `snd_mm5_megaman_land.wav` from `Assets/Audio/Mega Man/MM5/Movement/`. The user approved the direct in-game, music-stopped recording; this WAV is its unchanged PCM with silence trimmed. Earlier isolated review clips remain rejected. The Step file now restores one-time landing playback.
 
 # MM5 normal-gravity jumping — GMS 1.4.1760 checkpoint
 
