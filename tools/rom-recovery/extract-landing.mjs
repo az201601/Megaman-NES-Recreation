@@ -1,3 +1,5 @@
+// DEPRECATED: user rejected this extraction. Historical implementation only.
+throw new Error('Deprecated landing extraction: use review-landing.mjs for comparison clips; do not regenerate the rejected WAV.');
 // Render only the landing SFX's noise-register stream into a separate APU.
 // In this ROM sound-driver slot X=0 is the observed landing SFX; music noise uses X=40.
 import {NES,Controller} from 'jsnes';

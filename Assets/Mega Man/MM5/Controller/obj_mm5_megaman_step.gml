@@ -191,7 +191,5 @@ if (!grounded)
     }
 }
 
-if (landed_this_step)
-{
-    audio_play_sound(snd_mm5_megaman_land, 1, false);
-}
+// Landing audio intentionally disabled pending review of the replacement.
+// Keep landed_this_step for animation and future verified audio playback.
