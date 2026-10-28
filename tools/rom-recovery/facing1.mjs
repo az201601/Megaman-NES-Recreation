@@ -1,0 +1,5 @@
+// Exploratory ROM probe; see README.md for setup, sequence and limitations.
+import {fileURLToPath} from 'node:url';
+const root = fileURLToPath(new URL('../../', import.meta.url));
+const work = fileURLToPath(new URL('./.work/', import.meta.url));
+import{NES}from'jsnes';import fs from'node:fs';fs.mkdirSync(work,{recursive:true});let out=[];for(let flip of[false,true]){const n=new NES();n.loadROM(fs.readFileSync(root+'Mega Man (USA).nes','binary'));n.fromJSON(JSON.parse(fs.readFileSync(work+'mm1-before-hit-110.json')));for(let b=0;b<8;b++)n.buttonUp(1,b);if(flip)n.cpu.mem[0x420]^=0x40;let write=n.cpu.write.bind(n.cpu);n.cpu.write=(a,v)=>{if(a===0x6a)console.log('hit',flip,'enemy',n.cpu.REG_X,'flags',n.cpu.mem[0x420+n.cpu.REG_X]);return write(a,v);};let a=[];for(let t=0;t<5;t++){let m=n.cpu.mem;a.push({t,hp:m[0x6a],x:m[0x480]+m[0x4a0]/256,face:m[0x420]&0x40,state:m[0x400]});n.frame();}out.push({flip,rows:a});console.log(flip,a);}fs.writeFileSync(work+'mm1-facing.json',JSON.stringify(out));

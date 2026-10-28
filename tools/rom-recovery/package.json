@@ -1,0 +1,6 @@
+{
+  "name": "megaman-rom-recovery-probes",
+  "private": true,
+  "type": "module",
+  "dependencies": {"jsnes": "2.1.0", "pngjs": "7.0.0"}
+}
