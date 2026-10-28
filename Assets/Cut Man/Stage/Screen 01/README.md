@@ -5,12 +5,12 @@ Prepared from the supplied USA ROM in JSNES 2.1.0 with sprite rendering disabled
 ## Separation
 
 - `bg_mm1_cutman_screen01_background.png`: 256 x 240 opaque image containing only solid cyan sky; all building walls are tiles. This is the bottom room background.
-- `bg_mm1_cutman_screen01_tileset.png`: 128 x 32 RGBA atlas containing 14 unique 16 x 16 visual tiles (two unused cells). Includes a reusable beige wall-fill tile, wall/decor combinations, railings, ladders, brickwork, windows and vents. Only cyan sky pixels are transparent; wall colours are carried by the tiles themselves. Some tiles are composites of adjacent decorative/terrain details; this atlas is scoped to the first screen, not claimed as a complete reusable stage-wide tile catalogue.
+- `bg_mm1_cutman_screen01_tileset.png`: 128 x 32 RGBA atlas containing 11 unique 16 x 16 visual tiles (five unused cells). Includes a reusable beige wall-fill tile, wall/decor combinations, railings, ladders, brickwork, windows and vents. Only cyan sky pixels are transparent; wall colours are carried by the tiles themselves. Some tiles are composites of adjacent decorative/terrain details; this atlas is scoped to the first screen, not claimed as a complete reusable stage-wide tile catalogue.
 - `cutman_screen01_layout_reference.png`: assembled reference, not a room background to import.
-- `tile-placement.csv`: all 135 visual tile placements with source and room coordinates.
+- `tile-placement.csv`: all 123 visual tile placements with source and room coordinates.
 - `scr_mm1_cutman_screen01_tiles.gml`: automatically places those visual tiles at depth 1000. Call once per room entry, not every Step or Draw.
 
-Validation: background + all tiles reconstruct the sprite-free, uncropped source frame with zero differing RGBA pixels. Images are native resolution, without resampling. Palette is the emulator's RGB output.
+Validation: background + scenery tiles + four Super Arm block sprites reconstruct the sprite-free, uncropped source frame with zero differing RGBA pixels. Images are native resolution, without resampling. Palette is the emulator's RGB output.
 
 ## Resource folders
 
@@ -87,4 +87,14 @@ The next gameplay pass should measure and implement Mega Man's arrival, movement
 
 The bottom background is now cyan-only. Beige building silhouettes have been removed from that image and represented in the tileset, including a reusable solid wall-fill tile. The final layout reference is intentionally unchanged. Tile coordinates inside the atlas have changed: replace BOTH PNG resources and the ENTIRE placement script together. Do not mix the old atlas or old CSV/script with the new versions. All resource names, image dimensions, 16 x 16 import settings, depths, room coordinates and audio setup stay unchanged.
 
-Revalidation: 14 unique tiles, 135 placements, 128 x 32 atlas, 256 x 240 single-colour background. Reassembling the revised tiles over the revised background matches the unchanged reference image byte-for-byte in RGBA. Runtime GMS validation remains on the user's local project.
+Previous wall-separation validation (before the Super Arm correction): 14 unique tiles, 135 placements, 128 x 32 atlas, 256 x 240 single-colour background. That earlier wall-only separation preserved the complete reference; the Super Arm correction below supersedes its tile placements. Runtime GMS validation remains on the user's local project.
+
+## Super Arm block correction (current setup)
+
+The four green 32 x 32 Super Arm blocks were incorrectly included as scenery. They are now removed from the tile atlas and visual tile script. The current atlas has 11 unique tiles; the current script has 123 placements. Atlas remains128 x32; tile size remains16 x16. Replace atlas and the entire script together.
+
+Shared sprite: `Assets/Stage Objects/Super Arm/spr_mm1_super_arm_block.png` (32 x32, origin0,0). Create `obj_mm1_super_arm_block` using that sprite and place four instances according to `object-placement.csv`: (128,64), (128,160), (160,128), (160,160). Do not add automatic instance creation to the tile script if placing these manually. See the shared sprite README for object setup and current behaviour limitations.
+
+`cutman_screen01_scenery_reference.png` shows the scenery without those objects. `cutman_screen01_layout_reference.png` remains the complete intended scene including the blocks. Where a block covers a building wall, the underlying scenery now contains wall-fill tiles; other block locations reveal sky if their object is removed.
+
+Validation: background + scenery tiles matches the scenery reference exactly. Compositing the four block sprites at the listed positions then matches the complete reference exactly. Player collision, lifting, throwing, breaking and their audio are not implemented in this asset correction.
