@@ -26,3 +26,7 @@ These observations establish the selected artwork and controlled cadence, not fu
 6. Save. Do not assign it to the player object's default sprite or change events yet.
 
 Next: import the single top pose, then connect visual selection inside the attached-ladder block before its early exit. Normal movement's animation code is intentionally skipped while attached. Keep the working physics unchanged.
+
+## Subsequent integration checkpoint
+
+User has now imported both resources. The controller source connects climb/top selection inside the attached branch; see docs/mm5-player-ladder-animation-setup.md for the exact Create and Step changes. The original import-only notes above are historical. Functional ladder movement is unchanged; user animation validation remains pending.
