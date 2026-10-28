@@ -1,0 +1,5 @@
+// Exploratory ROM probe; see README.md for setup, sequence and limitations.
+import {fileURLToPath} from 'node:url';
+const root = fileURLToPath(new URL('../../', import.meta.url));
+const work = fileURLToPath(new URL('./.work/', import.meta.url));
+import{NES}from'jsnes';import fs from'node:fs';fs.mkdirSync(work,{recursive:true});let out=[];for(let timer of[0,100]){let n=new NES();n.loadROM(fs.readFileSync(root+'Mega Man (USA).nes','binary'));n.fromJSON(JSON.parse(fs.readFileSync(work+'mm1-after-hit-110.json')));n.cpu.mem[0x55]=timer;let original=n.cpu.write.bind(n.cpu),injects=0,death=false,steps=0;n.cpu.write=(a,v)=>{if(a>=0x2a&&a<=0x2c&&n.cpu.REG_PC===0xcb8c){v=3;injects++;}return original(a,v);};let emulate=n.cpu.emulate.bind(n.cpu);n.cpu.emulate=()=>{if(n.cpu.REG_PC===0xc218)death=true;return emulate();};while(!death&&steps++<5)n.frame();let r={timer,injects,death,frames:steps,remainingTimer:n.cpu.mem[0x55]};out.push(r);console.log(r);}fs.writeFileSync(work+'mm1-spike-controlled.json',JSON.stringify(out));

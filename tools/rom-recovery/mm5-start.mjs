@@ -1,0 +1,5 @@
+// Exploratory ROM probe; see README.md for setup, sequence and limitations.
+import {fileURLToPath} from 'node:url';
+const root = fileURLToPath(new URL('../../', import.meta.url));
+const work = fileURLToPath(new URL('./.work/', import.meta.url));
+import{NES,Controller}from'jsnes';import{PNG}from'pngjs';import fs from'node:fs';fs.mkdirSync(work,{recursive:true});let f;const n=new NES({onFrame:a=>f=a.slice()});n.loadROM(fs.readFileSync(root+'Mega Man 5 (USA).nes','binary'));const tick=k=>{for(let i=0;i<k;i++)n.frame();};function save(name){let p=new PNG({width:256,height:240});for(let i=0;i<f.length;i++)p.data.set([f[i]&255,(f[i]>>8)&255,(f[i]>>16)&255,255],i*4);fs.writeFileSync(work+''+name+'.png',PNG.sync.write(p));}function press(b){n.buttonDown(1,b);tick(1);n.buttonUp(1,b);}tick(900);save('mm5-boot');press(Controller.BUTTON_START);tick(300);save('mm5-start');press(Controller.BUTTON_START);tick(600);save('mm5-start2');fs.writeFileSync(work+'mm5-state.json',JSON.stringify(n.toJSON()));
