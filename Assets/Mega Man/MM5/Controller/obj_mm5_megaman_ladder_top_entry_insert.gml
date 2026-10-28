@@ -1,6 +1,7 @@
 // Insert before the Up-to-grab block, after the missing-ladder check.
 // Down enters only while grounded on a top marker, not while falling.
 if (!on_ladder
+    && !sliding
     && grounded
     && fall_speed == 0
     && keyboard_check(vk_down)
