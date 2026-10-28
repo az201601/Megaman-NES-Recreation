@@ -1,0 +1,84 @@
+# Cut Man Stage — Screen 01: static layout
+
+Prepared from the supplied USA ROM in JSNES 2.1.0 with sprite rendering disabled for the capture. The emulator's `clipToTvSize` option is disabled and left-background rendering is enabled, so TV-cropping borders are not baked into the assets. READY, Mega Man, the health meter and original score are not part of these assets. In particular, do not add the original score to this recreation.
+
+## Separation
+
+- `bg_mm1_cutman_screen01_background.png`: 256 x 240 opaque image containing only cyan sky and flat beige wall regions. This is the bottom room background.
+- `bg_mm1_cutman_screen01_tileset.png`: 128 x 32 RGBA atlas containing 14 unique 16 x 16 visual tiles (two unused cells). Includes railings, ladders, brickwork, windows and vents. Pixels supplied by the bottom background are transparent. Some tiles are composites of adjacent decorative/terrain details; this atlas is scoped to the first screen, not claimed as a complete reusable stage-wide tile catalogue.
+- `cutman_screen01_layout_reference.png`: assembled reference, not a room background to import.
+- `tile-placement.csv`: all 123 visual tile placements with source and room coordinates.
+- `scr_mm1_cutman_screen01_tiles.gml`: automatically places those visual tiles at depth 1000. Call once per room entry, not every Step or Draw.
+
+Validation: background + all tiles reconstruct the sprite-free, uncropped source frame with zero differing RGBA pixels. Images are native resolution, without resampling. Palette is the emulator's RGB output.
+
+## Resource folders
+
+```
+Backgrounds > Cut Man > Stage
+    bg_mm1_cutman_screen01_background
+    bg_mm1_cutman_screen01_tileset
+Scripts > Cut Man > Stage > Screen 01
+    scr_mm1_cutman_screen01_tiles
+Objects > Cut Man > Stage
+    obj_mm1_cutman_stage
+Rooms > Cut Man > Stage
+    rm_mm1_cutman_stage
+Sounds > Cut Man > Stage
+    snd_mm1_cutman_stage
+```
+
+## Import
+
+Both PNG assets are GMS 1.4 **Background resources**, not Sprites. Import the background normally, preserving all 256 x 240 pixels. Import the atlas with Use as tile set enabled, tile width/height 16, offsets 0, separations 0. Preserve PNG alpha; do not remove a corner/background colour or crop the image. Keep pixel interpolation off.
+
+Create the script resource with the exact name above and copy the complete supplied GML file into it. The code uses GMS 1.4 `tile_add` with the Background atlas and a depth of 1000. It does not provide collision or ladder behaviour.
+
+Create `rm_mm1_cutman_stage` at 256 x 240, speed60, views disabled. Room Backgrounds: choose bottom background, Visible when room starts on, Foreground off, position0,0, horizontal/vertical tiling off, Stretch off, speed0. Keep room background-colour clearing enabled. The image fills the room.
+
+Create non-persistent `obj_mm1_cutman_stage`, sprite <no sprite>. Place one instance in the stage room, with empty instance Creation Code.
+
+### Create event
+
+```gml
+scr_mm1_cutman_screen01_tiles();
+stage_music_voice = -1;
+alarm[0] = 2;
+```
+
+### Alarm 0
+
+```gml
+stage_music_voice = audio_play_sound(snd_mm1_cutman_stage, 1, true);
+```
+
+### Other > Room End
+
+```gml
+if (stage_music_voice != -1)
+{
+    audio_stop_sound(stage_music_voice);
+}
+```
+
+No Draw or Step event is needed yet. Runtime-created visual tiles are room-owned; do not also manually place the same tiles in the editor. They appear when running, not as editor-placed tiles. The CSV and reference are provided if editor placement is preferred instead.
+
+## Connect the existing intro
+
+In Objects > Cut Man > Boss Intro > obj_mm1_cutman_boss_intro, append to the bottom of its existing Step event:
+
+```gml
+if (intro_frame >= 414)
+{
+    room_goto(rm_mm1_cutman_stage);
+    exit;
+}
+```
+
+Retain its existing timer, sound handling and Room End cleanup.
+
+## Current scope / next pass
+
+This is a static scene and stage-music test only. No player, READY sequence, HUD, collision, ladders, enemies, spikes, boss doors or Guts blocks are implemented by these visual tiles. Invisible collision solids and ladder detection will be added separately based on behaviour measurements. Flat beige walls and windows are scenery, not automatic solid terrain. The tile placement script must not be treated as collision data.
+
+The next gameplay pass should measure and implement Mega Man's arrival, movement/collision, and ladder behaviour with their required audio. Extend beyond this first screen only after validating it.
