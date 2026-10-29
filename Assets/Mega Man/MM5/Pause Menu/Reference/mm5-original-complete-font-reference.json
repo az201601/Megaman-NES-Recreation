@@ -1,0 +1,216 @@
+{
+  "chars": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .",
+  "cell": [
+    8,
+    8
+  ],
+  "compactA": {
+    "left": 1,
+    "top": 1,
+    "width": 6,
+    "height": 6
+  },
+  "largerA": {
+    "left": 0,
+    "top": 0,
+    "width": 7,
+    "height": 7
+  },
+  "missingOriginalSources": {
+    "F": {
+      "chrTile": 13382,
+      "romOffset": 476272,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 7,
+        "height": 7
+      }
+    },
+    "Q": {
+      "chrTile": 13393,
+      "romOffset": 476448,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 7,
+        "height": 7
+      }
+    },
+    "X": {
+      "chrTile": 13400,
+      "romOffset": 476560,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 6,
+        "height": 7
+      }
+    },
+    "Z": {
+      "chrTile": 13402,
+      "romOffset": 476592,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 6,
+        "height": 7
+      }
+    }
+  },
+  "complete": {
+    "0": {
+      "chrTile": 13232,
+      "romOffset": 473872
+    },
+    "1": {
+      "chrTile": 13233,
+      "romOffset": 473888
+    },
+    "2": {
+      "chrTile": 13234,
+      "romOffset": 473904
+    },
+    "3": {
+      "chrTile": 13235,
+      "romOffset": 473920
+    },
+    "4": {
+      "chrTile": 13236,
+      "romOffset": 473936
+    },
+    "5": {
+      "chrTile": 13237,
+      "romOffset": 473952
+    },
+    "6": {
+      "chrTile": 13238,
+      "romOffset": 473968
+    },
+    "7": {
+      "chrTile": 13239,
+      "romOffset": 473984
+    },
+    "8": {
+      "chrTile": 13240,
+      "romOffset": 474000
+    },
+    "9": {
+      "chrTile": 13241,
+      "romOffset": 474016
+    },
+    "A": {
+      "chrTile": 13377,
+      "romOffset": 476192
+    },
+    "B": {
+      "chrTile": 13378,
+      "romOffset": 476208
+    },
+    "C": {
+      "chrTile": 13379,
+      "romOffset": 476224
+    },
+    "D": {
+      "chrTile": 13380,
+      "romOffset": 476240
+    },
+    "E": {
+      "chrTile": 13381,
+      "romOffset": 476256
+    },
+    "F": {
+      "chrTile": 13382,
+      "romOffset": 476272
+    },
+    "G": {
+      "chrTile": 13383,
+      "romOffset": 476288
+    },
+    "H": {
+      "chrTile": 13384,
+      "romOffset": 476304
+    },
+    "I": {
+      "chrTile": 13385,
+      "romOffset": 476320
+    },
+    "J": {
+      "chrTile": 13386,
+      "romOffset": 476336
+    },
+    "K": {
+      "chrTile": 13387,
+      "romOffset": 476352
+    },
+    "L": {
+      "chrTile": 13388,
+      "romOffset": 476368
+    },
+    "M": {
+      "chrTile": 13389,
+      "romOffset": 476384
+    },
+    "N": {
+      "chrTile": 13390,
+      "romOffset": 476400
+    },
+    "O": {
+      "chrTile": 13391,
+      "romOffset": 476416
+    },
+    "P": {
+      "chrTile": 13392,
+      "romOffset": 476432
+    },
+    "Q": {
+      "chrTile": 13393,
+      "romOffset": 476448
+    },
+    "R": {
+      "chrTile": 13394,
+      "romOffset": 476464
+    },
+    "S": {
+      "chrTile": 13395,
+      "romOffset": 476480
+    },
+    "T": {
+      "chrTile": 13396,
+      "romOffset": 476496
+    },
+    "U": {
+      "chrTile": 13397,
+      "romOffset": 476512
+    },
+    "V": {
+      "chrTile": 13398,
+      "romOffset": 476528
+    },
+    "W": {
+      "chrTile": 13399,
+      "romOffset": 476544
+    },
+    "X": {
+      "chrTile": 13400,
+      "romOffset": 476560
+    },
+    "Y": {
+      "chrTile": 13401,
+      "romOffset": 476576
+    },
+    "Z": {
+      "chrTile": 13402,
+      "romOffset": 476592
+    },
+    " ": {
+      "chrTile": 13056,
+      "romOffset": 471056
+    },
+    ".": {
+      "chrTile": 13150,
+      "romOffset": 472560
+    }
+  },
+  "note": "All original MM5 masks. Larger letters match pause heading and password-loaded alphabet. Digits/space/period from original compact-menu/counter data. Different from compact labels: user review before adoption."
+}
