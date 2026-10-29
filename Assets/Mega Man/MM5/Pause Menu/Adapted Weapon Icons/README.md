@@ -9,3 +9,7 @@ Unselected palette: black000000,dark666666,greyADADAD,offwhiteFFFEFF. Palette ma
 Individual16x16 PNGs and112x16 strip7 are review artifacts, NOT instructions to import yet. Selected colours and final integration await user review. Existing player, menu layout and GMS project code unchanged. No new weapon/tank/equipment behaviour enabled. Buster/Rush icons still intended to use original game assets, not these adaptations.
 
 Tests: all seven unique16x16; every interior pixel matches explicit same-position source palette mapping; casing matches native MM5 R.Coil; only four native colours; strip order. Reproduce with adapt-supplied-weapon-icons.mjs; review-supplied-weapon-icons.mjs verifies source crops. Root CREDITS.md records intended in-game attribution, not a claim a credits screen is installed.
+
+## Selection-state follow-up
+
+User confirms grey is unhighlighted and wants selected colour versions. See Selected/ for seven palette proposals, paired strips/review and tests. Existing grey files remain unchanged. Selected approval pending; not GMS-imported. This supersedes earlier statement that selected variants are not yet prepared, but not the review-only/gameplay limitations.
