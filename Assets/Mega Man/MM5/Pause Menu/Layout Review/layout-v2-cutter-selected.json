@@ -5,6 +5,37 @@
   ],
   "font": "User-approved larger original MM5 set",
   "selectedLabel": "R.CUTTER",
+  "livesDisplay": {
+    "icon": [
+      136,
+      142,
+      16,
+      16
+    ],
+    "label": [
+      156,
+      146
+    ],
+    "count": [
+      212,
+      146
+    ],
+    "example": "03",
+    "note": "Illustrative count only; no starting-lives decision or gameplay wiring"
+  },
+  "healthDisplay": {
+    "label": "HEALTH",
+    "labelPosition": [
+      96,
+      19
+    ],
+    "bar": [
+      152,
+      18,
+      56,
+      8
+    ]
+  },
   "placements": [
     {
       "label": "M.BUSTER",

@@ -77,3 +77,7 @@ W tank now original M casing with8x8 letter interior only vertically flipped, ou
 ## Compact names — user correction
 
 User says design is good and requests no space after the period in weapon names: R.CUTTER, not R. CUTTER. V2 now uses M.BUSTER,R.CUTTER,I.SLASHER,H.BOMB,F.STORM,T.BEAM,S.ARM,M.BEAM,R.COIL,R.JET,R.MARINE in both snapshots and metadata. Bounds, icon pixel-identity and compact-name assertions PASS. All icon/bar/frame positions and other design unchanged. Earlier art-review sheets are historical and may retain spaced labels; current menu generator/metadata are authoritative for display labels. No GMS changes; Rush Jet/Marine placeholders still pending.
+
+## Separate lives counter requested
+
+User requests moving life icon (explicitly not health) and adding numbers. V2 original head moved from top-right to spare row below R.MARINE at136,142; LIVES label156,146 with03 example at212,146. Header renamed HEALTH at96,19, health bar152,18 unchanged. Tests assert relocated head exact source and native health bar bytes unchanged. Both selected snapshots/metadata updated.03 is illustrative, no starting-lives rule/gameplay implementation. Placement pending user review; spare slot now used for counter.

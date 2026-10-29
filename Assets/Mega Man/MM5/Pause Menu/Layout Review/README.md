@@ -35,3 +35,7 @@ Tests:11 unique/in-bounds labels, exactly one selected row, all seven icon pixel
 ### Compact-name correction
 
 User likes design and requests R.CUTTER instead of R. CUTTER. Both v2 snapshots/JSON now use compact names for all11 weapon/Rush entries. Only weapon label spacing changes; frame, bars, icons and coordinates unchanged. Generator asserts no period-space in entry labels. Run alternate snapshot with `node tools/rom-recovery/build-pause-layout-v2.mjs M.BUSTER` (default selects R.CUTTER).
+
+### Separate lives counter
+
+User requests moving the life (not health) icon and adding numerical lives. V2 relocates the original MM5 head icon to136,142 in the spare slot below R.MARINE, alongside LIVES and illustrative03. Header now says HEALTH to distinguish it; native health bar coordinates/pixels unchanged. Original head pixel identity and health bar identity asserted.03 is a layout example only, not a starting-lives decision or live game value. No lives/inventory/controller code implemented. Spare slot now occupied by lives display; future optional equipment forms require reflow/page as already noted. Both selection snapshots updated.
