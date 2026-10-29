@@ -191,3 +191,8 @@ User confirms "done and tested it works" after one-line top-shooting Draw replac
 ## READY and arrival combined resource checkpoint
 
 User has imported nothing from arrival-only pack and explicitly requires BOTH flashing READY and arrival. New combined resource pack contains original READY PNG, arrival strip5, sound review, combined import guide. No player/controller changes. ready-arrival.mjs natural restored state572 probes original READY anim1Ahex: visible81..85hex at108,125 through147,132/palette4; odd phase transparent7F, verified all pixels0. Interior visible/blank phases6updates each; state READY572..661 interval90, OAM edges distinguished from logic. READY40x8/origin20,3 retains actor anchor128,128; approved Mesen palette through JSNES. Controller/input/music handoff work still pending, source/art not user installation. Resource import and audio approval pending.
+
+
+## Arrival audio approved
+
+User confirms "sound is correct" for original full-APU arrival review. Promoted byte-identical snd_mm5_megaman_arrival.wav with resource-only import guide. Both READY/arrival Sprite imports still unconfirmed; do not infer installation from audio approval. Combined READY/arrival controller pending.
