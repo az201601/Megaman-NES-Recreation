@@ -1,0 +1,9 @@
+# Pause-menu reference study — preliminary
+
+User confirms health HUD works. Damage/invulnerability deferred until enemies. User requests looking at original MM4/MM5/MM6 menus BEFORE custom layout design, not copying any one exactly. Requirements: Buster/MM1 six weapons and Rush Coil/Jet/Marine in same weapon list with energy bars; dedicated E/W/M inventory space; no score. Power/Jet Mega Man undecided, not enabled features. Tank effects/caps and opening transition not finalized. Do not infer implemented inventory/weapons from this design scope.
+
+2026-10-29: local root, workspace search and GitHub main root tree contain only Mega Man (USA).nes and Mega Man 5 (USA).nes. MM4/MM6 not found; user asked whether elsewhere folder/branch. Do not claim inspected those ROMs. No ROM downloads or substitutions attempted.
+
+inspect-mm5-pause.mjs opens original MM5 Start menu from natural normal-gravity Napalm snapshot, no inventory/player patches. Full256x240 screen recorded via JSNES, approved Mesen0.9.9 palette adapter, NOT direct Mesen runtime captures. Natural initial inventory only: upper large framed WEAPONS ENERGY area has M.BUSTER with icon/horizontal bar at upper left and R.COIL with icon/horizontal bar at right; lower area three separate boxes show E tank00, M tank00, player/lives02. Mega Man V logo occupies unused lower-middle weapon panel. No W tank shown in this MM5 initial menu. Locked weapon layout, full-inventory case, exact navigation/transition duration and all SFX NOT yet measured. Sample15 black and60 fully open show non-instant transition; do not derive exact duration from sparse samples. Original sound request29hex observed on Start at sample1, not yet recorded/auditioned/approved as a WAV.
+
+Ignored .work holds sampled screens1/15/30/60/100 and raw state/sound observations. No custom menu code, art, resource installation or scene changes delivered. Next: locate user-provided MM4/MM6 ROMs; inspect all three before proposal.
