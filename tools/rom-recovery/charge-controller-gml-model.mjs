@@ -168,3 +168,61 @@ for(const c of topCases.filter(c=>c.y<128&&['tap','hold','mid-release','full-rel
  assert.deepEqual(fresh.sounds,c.sounds.filter(s=>s.t<=rows.at(-1).t).map(s=>s.command));
 }
 console.log('PASS:32 settled-lip ROM cases vs actual combined Step/helper/Draw, both facings, natural charge and16 pause/first resumed movement.');
+// Combined startup event ordering + actual unchanged normal player Step and charge-aware Draw.
+const startupBase=new URL('../Arrival/Controller/',base);
+const startupSource=name=>fs.readFileSync(new URL(name,startupBase),'utf8');
+const startupCompile=name=>new Function('env','with(env){'+startupSource(name).replace(/\bmod\b/g,'%').replace(/\bexit\s*;/g,'return;')+'}');
+const managerEvents=Object.fromEntries(['create','room_start','begin_step','end_step','draw','cleanup'].map(e=>[e,startupCompile('obj_mm5_stage_start_'+e+'.gml')]));
+// Prefix must actually exit entire event, not merely an independent helper call.
+const gatedStep=new Function('env','with(env){'+startupSource('obj_mm5_megaman_step_startup_prefix.gml').replace(/\bexit\s*;/g,'return;')+fullSource.replace(/\bmod\b/g,'%').replace(/\bexit\s*;/g,'return;')+'}');
+const gatedDraw=new Function('env','with(env){'+startupSource('obj_mm5_megaman_draw_startup_prefix.gml').replace(/\bexit\s*;/g,'return;')+fs.readFileSync(new URL('Charging/Controller/obj_mm5_megaman_draw_charge_replace.gml',base),'utf8')+'}');
+const startupReferences=JSON.parse(fs.readFileSync(new URL('./.work/arrival-input.json',import.meta.url)));
+for(const c of startupReferences){
+ const p=player();Object.assign(p,{
+  x:128,y:180.5,mm5_startup_active:false,fall_speed:0,grounded:true,walk_pause:0,walk_previous_input:0,walk_speed:1.296875,jump_speed:5,fall_gravity:.25,fall_speed_max:7,
+  feet_offset:12,head_offset:10,slide_overhang_fall:false,vk_up:'up',vk_down:'down',vk_space:'space',noone:-4,
+  obj_stage_ladder:'ladder',obj_stage_ladder_top:'top',obj_stage_solid:'solid',ladder_candidate:-4,ladder_top_candidate:-4,
+  min:Math.min,max:Math.max,abs:Math.abs,scr_mm5_player_supported:()=>true,scr_mm5_player_slide_step:()=>false,
+  scr_mm5_player_can_stand:()=>true,scr_mm5_player_wall_blocked:()=>false,collision_point:()=>-4,
+ });
+ p.scr_mm5_player_try_buster=()=>fire(p);
+ const m={noone:-4,obj_mm5_stage_start:'manager',obj_mm5_megaman:'player',view_enabled:false,view_visible:[false],view_xview:[0],view_yview:[0],
+  spr_mm5_ready:'READY',spr_mm5_megaman_arrival:'ARRIVAL',snd_mm5_megaman_arrival:45,min:Math.min,floor:Math.floor,draws:[],sounds:[],
+  instance_number:()=>1,instance_find:()=>p,instance_exists:id=>id===p,show_error:s=>{throw Error(s);}};
+ for(const match of startupSource('obj_mm5_stage_start_create.gml').matchAll(/^(\w+)\s*=/gm))m[match[1]]=0;
+ m.draw_sprite=(...a)=>m.draws.push(a);m.audio_play_sound=(s,pri,loop)=>{assert.equal(pri,1);assert.equal(loop,false);m.sounds.push(s);return 9001;};
+ m.audio_is_playing=id=>id===9001; m.audio_stop_sound=id=>assert.equal(id,9001,"Cleanup stops only own arrival voice");
+ managerEvents.create(m);startupCompile('obj_mm5_megaman_create_startup_append.gml')(p);managerEvents.room_start(m);
+ const pressed=c.press-571;
+ for(let t=1;t<=125;t++){
+  const held=t>=pressed;
+  p.keys=held?(c.key==='RIGHT'?['right']:c.key==='DOWN'?['down']:c.key==='A'?['space']:[]):[];
+  p.held=held&&c.key==='B';p.fresh=t===pressed&&c.key==='B';
+  p.keyboard_check_pressed=k=>k===88?p.fresh:k==='space'&&c.key==='A'&&t===pressed;
+  managerEvents.begin_step(m);gatedStep(p);managerEvents.end_step(m);managerEvents.draw(m);gatedDraw(p);
+  if(t<=119){assert.equal(p.x,128);assert.equal(p.y,180.5);assert.equal(p.buster_charge,0);assert.equal(p.shots.length,0);}
+  if(t<=90){assert.equal(p.draws.length,0);assert.equal(m.start_state,1);assert.equal(m.draws.filter(d=>d[0]==='READY').length,Math.floor((t-1)/12)*6+Math.min(6,(t-1)%12+1));}
+  if(t>=91&&t<=107)assert.equal(m.start_y,8*(t-90)+.25*(t-90)*(t-89)/2);
+  if(t===108){assert.equal(m.start_y,180.5);assert.deepEqual(m.sounds,[45]);assert.equal(m.start_frame,0);}
+  if(t>=109&&t<=118)assert.equal(m.start_frame,Math.min(4,1+Math.floor((t-109)/3)));
+  if(t===119){assert.equal(p.mm5_startup_active,false);assert.equal(m.start_state,4);}
+  if(t>=120){
+   const r=c.rows.find(r=>r.t===t+571);if(!r)continue;
+   assert.equal(p.x,r.x,c.key+'/'+c.press+'/'+t);assert.equal(p.y,r.y);assert.equal(p.buster_charge,r.charge);assert.equal(p.buster_pose_timer,r.pose);
+  }
+ }
+ assert.deepEqual(m.sounds,[45]);assert.deepEqual(p.sounds,c.sounds.filter(s=>s.cmd!==45).map(s=>s.cmd));
+ managerEvents.cleanup(m);managerEvents.cleanup(m);assert.equal(p.mm5_startup_active,false);
+ if(c===startupReferences[0]){
+  for(const [offset,target] of [[64,244.5],[0,100.5],[0,220.5]]){
+   p.y=target;p.on_ladder=false;p.sliding=false;m.view_enabled=true;m.view_visible=[true];m.view_xview=[32];m.view_yview=[offset];m.draws=[];m.sounds=[];
+   managerEvents.create(m);managerEvents.room_start(m);
+   let moves=0;while(8*moves+.25*moves*(moves+1)/2<target-offset)moves++;
+   const total=90+moves+11;
+   for(let t=1;t<=total;t++){managerEvents.begin_step(m);managerEvents.end_step(m);if(t<total)assert.equal(p.mm5_startup_active,true);}
+   assert.equal(p.mm5_startup_active,false);assert.equal(m.start_y,target);assert.deepEqual(m.sounds,[45]);assert.equal(m.start_ready_x,160);assert.equal(m.start_ready_y,offset+128);
+   managerEvents.cleanup(m);
+  }
+ }
+}
+console.log('PASS: combined startup actual GML events + full normal player Step/Draw;12 ROM input handoffs, READY cadence, beam, one sound,11-tick materialization and cleanup. GMS runtime pending.');
