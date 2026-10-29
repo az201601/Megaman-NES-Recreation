@@ -16,3 +16,5 @@ for(t=1;t<=100;t++){
 }
 fs.writeFileSync(new URL('mm5-pause-observations.json',work),JSON.stringify({sounds,rows},null,2));
 assert.ok(frame);console.log(sounds);
+
+fs.writeFileSync(new URL('mm5-pause-reference.json',work),JSON.stringify(n.toJSON()));
