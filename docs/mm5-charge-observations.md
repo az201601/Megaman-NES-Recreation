@@ -47,3 +47,50 @@ Asset extraction must use pinned Mesen0.9.9 palette adapter, not JSNES packedBGR
 Assertions cover stable standing state, one initial shot/no held autofire, charge counter advancement/cycle, boundaries16/40/80, subthreshold residual vs successful reset, request timing/types, release animation/speed/facing/slots, final coordinates and fixedY,16-update release pose, ROM-table/shadow palette correspondence. All passed.
 
 Still unmeasured: charging/releasing during walk/air/continuous ladder/slide and exit, full/mid active-shot allocation limits, charge retention/cancellation under damage/menu/weapon switch, APU duration/loop/stop semantics, projectile OAM dimensions/frame/origins and native hitboxes. Do not implement or claim these from the stationary sweep. Next: movement/slot interactions, then original projectile art and actual charge/release audio review in small batches. No user installation action at this checkpoint.
+
+## Second checkpoint: movement/slots and first asset/review batch
+
+User requested proceeding. `charge-interactions.mjs`:16 additional original-ROM cases pass. Natural walking, jumping, wall-limited sliding; two explicitly initialized continuous-ladder class20 cases; eight explicitly controlled occupied-slot cases (clone initialized original basic-shot arrays into selected slots immediately before release). Allocation/charge/projectile routines remain unpatched. These are labelled controlled scenarios, not naturally created input histories. Raw rows/spawn writes/requests: ignored .work/charge-interactions.json.
+
+### Movement and release
+
+- Intermediate/full release while walking works; spawning sees already-moved playerX. Walk sample finalX131.890625 => spawn151, first post-update shot156. No inherited walking speed.
+- Full release in natural jump at player147.5Y produces shot146Y, animation08 player; projectile stays at that height while player continues rising. Speed5.
+- These cases directly hook original X/Y writes and assert charged spawn integerX+20/floorY-1, confirming the earlier inferred right offset. Left first-post-update positions remain covered by first sweep; don't confuse those with direct left write instrumentation.
+- Continuing-ladder full/up and intermediate/down releases both remain attached and freeze climbing16 updates, resume1.296875 on17. The original press also pauses16; charging in between continues while normal ladder motion resumes. These probes do not cover top/bottom/drop endpoints.
+- Entering slide freezes charge advancement, including the slide-to-standing update. In this stage the nearby wall ends slide early: entry50, state2 through68, return0 at69, charge48 unchanged throughout. Holding resumes charge at70 (49); release82 therefore emits intermediate (counter60), not full. No assumption of a full26-move open slide here.
+- Releasing at60 during that slide leaves charge48 pending, no shot at60; after wall-end69, intermediate emits automatically at70 without another B press.
+- Starting B hold at5 during a wall-limited slide started1 creates no ordinary press shot. After state returns0 at20, charge begins1 at21, reaches65 at85, releases intermediate at86. Holding through slide can therefore charge later even though original press could not fire. This supersedes earlier deliberately unimplemented slide-buffering assumptions, but does not certify every cancellation/exit priority.
+- Later incidental sound2A occurs outside focused release window in two natural slide traces; raw trace retains it. It is not assigned as a charge or slide sound. Charge review recordings below reject all unrelated commands.
+
+### Occupied-slot differences
+
+Masks1/2/4 mean one occupied slot1/2/3;7 all three. Slots contain valid cloned basic shot atX200 with original routines still moving/cleaning it.
+
+- Full release requires all three slots empty in these probes. Any single occupied slot rejects full emission, no21 sound or16pose; charge becomes1 (not an asserted universal clean0). Even after injected shots clear, no deferred full emission through20 subsequent updates.
+- Intermediate release can share slots with existing basics: allocate highest free slot3, or2 if3 occupied.
+- If all three occupied, intermediate release retains counter40 and does not refresh pose/play20. It automatically emits at56 after a slot has cleared, without another press. Native cleanup/gate order still applies. Thus a simple shared "count<3" gate is insufficient for full charged fire, and blocked intermediate/full charge cannot share one reset rule.
+
+### Artwork prepared / import pending
+
+`extract-charged-art.mjs` exports original rendered OAM/CHR components with pinned approved Mesen0.9.9 palette; NOT direct Mesen capture. Both native directions tested; every phase pixel-equal to mirrored opposite direction about actor reference. No generated imagery. Multiple palette components retained (including full phase2 palette0), component flips/priority retained, repeated phases identical, all opaque pixels fit. Capture uses pre-update actor reference to match OAM pipeline.
+
+Sprites at Assets/Mega Man/MM5/Buster/Charging:
+
+- spr_mm5_buster_mid_strip2.png:48x16,2 cells24x16, origin16,7;5/4 OAM components by phase.
+- spr_mm5_buster_full_strip4.png:128x24,4 cells32x24, origin24,11;4/8/12/5 components.
+
+Import under Sprites > Mega Man > MM5 > Buster > Charging as spr_mm5_buster_mid/full; origins manually as above, all strip offsets/separations0, no crop/resize. Keep existing basic projectile object and all player events unchanged. PNG canvas/alpha is not a damage hitbox. Player charge-colour variants not exported in this batch; no charging implementation installed.
+
+### Actual audio sequences prepared / user hearing approval pending
+
+`record-charge-sfx.mjs` records original full-game APU with approved originalF0 music-stop method,150 warmup updates, settled peak0; no muting/isolation/synthesis/effects. Two review sequences include ordinary press shot, charging, then intermediate/full release. Only PCM-zero edge silence trimmed with5ms padding, retained PCM exact assertion. Not isolated import-ready sounds; do not create Sound resources from these sequences. Need review plus separate final effects/loop-boundary measurements before integration.
+
+- mid review:48000Hz stereoPCM16,44981 frames/0.9371041667s; requests frames10:1A,43:22,51:20; raw trim[9404,54385).
+- full review:48000Hz stereoPCM16,84350 frames/1.7572916667s; requests10:1A,43:22,91:21; raw trim[9404,93754).
+
+Capture180updates/143777 samples each, always state0, no unrelated sound requests. Full takes/traces ignored .work. Existing approved basic/landing sounds byte-untouched. Asset/review ZIP includes two sprite strips, two review WAVs and import/review guides; user import/hearing confirmation pending.
+
+### Remaining scope after second checkpoint
+
+Still no charged GML, damage/hitbox/enemy interactions, hurt/menu/weapon cancellation, all ladder/slide endpoints, rendered charge-colour variants or standalone charging audio loop/stop implementation. Source tests are not GMS runtime proof. Preserve accepted basic-buster/controller until small explicit integration checkpoint.

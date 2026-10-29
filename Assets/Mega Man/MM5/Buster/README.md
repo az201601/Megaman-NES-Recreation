@@ -33,3 +33,7 @@ Replaced air PNG, walk strip (phase2 face restored), and climb PNG (actual settl
 ## Basic player firing integration
 
 User confirms projectile object installed. See INSTALL-PLAYER-FIRING.md and Downloads/mm5-basic-buster-player-hooks.zip. New helper Script and additive player hooks enable basic X firing and ordinary-body ladder pause; user installation/runtime verification pending. Charging and unmeasured boundary priorities deferred. Player Step reference includes these hooks, but install snippets, not whole-event replacement. Shooting poses draw without changing collision sprite_index. Existing slide/dust regression suite passes.
+
+## Charging preparation (basic firing remains accepted)
+
+User confirmed basic firing "all working". Charging original-ROM interaction measurements, two charged-projectile strips and two actual in-game audio review sequences now prepared. See Charging/README.md and Charging/Downloads/mm5-charged-projectiles-and-audio-review.zip. This is import/review only; no charging/controller changes. Review sequences are not isolated Sound resources. Import/hearing approval pending.
