@@ -23,3 +23,7 @@ Only silence removed from release edges, keeping5ms padding. PCM payload equalit
 Natural earlier complete sequences verify successful release replaces/stops original charging voice, not two independent tracks layering indefinitely. Intermediate request51 -> pulse2 silence4004=30 at52; full request91 -> release voice4004=7D at93, silence at100, with no return to old charging voice. These are captured driver updates, not exact GMS scheduling instructions. Later GMS integration should stop its charging playback handle before beginning the selected release sound, rather than bake press/charge/release together or play both sampled tracks concurrently.
 
 Existing approved ordinary shot/landing audio, corrected projectile sprites and current working controller are untouched. Review only; charge loop/cancel/blocked-release audio semantics still not certified.
+
+## Subsequent user approval
+
+User confirmed these separate reviews "seems good to me". Approval pending notes above are historical. Release-only files promoted byte-for-byte to Charging/snd_mm5_buster_mid.wav and snd_mm5_buster_full.wav with separate import instructions. Charge-only preview character accepted, but excerpt still is NOT a verified loop/import-ready sound. Release resource import confirmation and charging implementation remain pending.
