@@ -89,7 +89,11 @@ const supportRun=new Function('env','argument0','argument1','with(env){'+load('C
 const stepTail=load('obj_mm5_megaman_step.gml').split('// MM5 player checkpoint:')[1];
 assert.ok(stepTail);
 const normalRun=new Function('env','with(env){ // MM5 player checkpoint:'+stepTail.replace(/\bexit;/g,'return;').replace(/\bmod\b/g,'%')+'}');
+const busterRun=new Function('env','with(env){'+load('../Buster/scr_mm5_player_try_buster.gml')+'}');
 function integrate(e){
+ e.buster_fire_key=88;
+ e.scr_mm5_player_try_buster=()=>busterRun(e); // Actual helper returns before side effects when X is not freshly pressed.
+
  Object.assign(e,{walk_speed:1.296875,jump_speed:5,abs:Math.abs,spr_mm5_megaman_walk:'walk',obj_stage_ladder:'ladder',ladder_candidate:noone,ladder_top_candidate:noone});
  e.scr_mm5_player_slide_step=()=>run(e);
  e.scr_mm5_player_wall_blocked=(x,y,d)=>blockedRun(e,x,y,d);

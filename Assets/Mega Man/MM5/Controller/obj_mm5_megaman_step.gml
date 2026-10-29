@@ -1,3 +1,15 @@
+// Insert at the very TOP of obj_mm5_megaman > Step, before any possible exit.
+buster_slide_at_start = sliding;
+if (buster_pose_timer > 0)
+{
+    buster_pose_timer -= 1;
+    if (buster_pose_timer == 0)
+    {
+        anim_walk_frame = 0;
+        anim_walk_timer = 0;
+    }
+}
+
 // LADDER MOVEMENT — region-based entry, climbing, drop and supported endpoints.
 // Insert at the very TOP of the existing Step event, before normal physics.
 // Up grabs; Up/Down climb; fresh neutral-vertical Space drops. Supported bottom/top exits and Down entry are installed.
@@ -120,6 +132,10 @@ if (on_ladder)
     // Up = negative Y; Down = positive Y.
     ladder_vertical_input = keyboard_check(vk_down)
                           - keyboard_check(vk_up);
+
+    // Basic buster: continuous-ladder shot pauses vertical movement16 updates.
+    scr_mm5_player_try_buster();
+    if (buster_pose_timer > 0) ladder_vertical_input = 0;
 
     // Top bound and supported-bottom reference; unsupported descent is unbounded.
     ladder_y_min = ladder_instance.bbox_top - feet_offset;
@@ -585,6 +601,9 @@ if (slide_overhang_fall)
     if (grounded || fall_speed < 0 || scr_mm5_player_can_stand(x, y))
         slide_overhang_fall = false;
 }
+
+// Firing sees the final movement/collision reference for this update.
+scr_mm5_player_try_buster();
 
 // VISUAL SELECTION — after movement, collision and landing audio.
 // These changes do not move the player or alter collision probes.
