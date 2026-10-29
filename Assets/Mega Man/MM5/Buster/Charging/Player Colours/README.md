@@ -39,3 +39,7 @@ User confirmed standing charge resource imported. See IMPORT-MOVEMENT.md and Dow
 ## Movement installed; ladder/slide batch
 
 User confirms walking/air charge sprites imported. Next IMPORT-LADDER-SLIDE.md and Downloads/mm5-charge-ladder-slide.zip: climb12 cells, ladder-top6 cells, slide6 cells; all32x40/origin16,16. No event changes or ladder-top firing claims. Face-safe palette composition, exact accepted base frames and dust exclusion checks pass. Import confirmation pending.
+
+## Ladder/slide installed; final shooting colour batch
+
+User confirms all three ladder/slide colour resources imported. IMPORT-SHOOTING.md and Downloads/mm5-charge-shooting-colours.zip add idle_shoot6/walk_shoot24/air_shoot6/climb_shoot6, ALL40x40/origin16,16. Missing-face regression guarded including airborne2F and walking stride38. Base frames match corrected accepted art; face/alpha invariant and all-bank pose checks pass. User import pending; no controller/audio edits. Final currently used player-art colour batch before charge integration.
