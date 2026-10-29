@@ -16,10 +16,12 @@ function world(solids=[floor]){
   image_xscale:1,image_speed:0,image_index:0,sprite_index:'idle',
   walk_pause:0,walk_previous_input:0,anim_walk_frame:0,anim_walk_timer:0,
   vk_down:'down',vk_up:'up',vk_left:'left',vk_right:'right',vk_space:'space',
-  obj_stage_solid:'solid',obj_stage_ladder_top:'top',spr_mm5_megaman_idle:'idle',
+  obj_mm5_slide_dust:'dust',dustInstances:[],obj_stage_solid:'solid',obj_stage_ladder_top:'top',spr_mm5_megaman_idle:'idle',
   spr_mm5_megaman_air:'air',spr_mm5_megaman_slide:'slide',snd_mm5_megaman_land:'land',
   noone,floor:Math.floor,min:Math.min,max:Math.max,sign:Math.sign,
   keys:[],fresh:[],sounds:[],
+  instance_exists:obj=>obj==='dust'&&env.dustInstances.length>0,
+  instance_create:(x,y,obj)=>{assert.equal(obj,'dust');const d={x,y};env.dustInstances.push(d);return d;},
   keyboard_check:k=>env.keys.includes(k)?1:0,
   keyboard_check_pressed:k=>env.fresh.includes(k)?1:0,
   collision_rectangle:(l,t,r,b,type)=>solids.find(s=>s.type===type&&l<=s.r&&r>=s.l&&t<=s.b&&b>=s.t)||noone,
@@ -137,3 +139,25 @@ for(let xx=8;xx<=180;xx+=2.5)for(let yy=120;yy<=190;yy+=3.25)for(const d of [-1,
  assert.equal(limitRun(unchanged,nx,yy,d),oldLimit(unchanged,nx,yy,d));
 }
 console.log('Disabled-grace regression grid passed: normal wall block/resolve results identical to pre-change helpers.');
+
+// Dust entry hook and actual one-shot object event snippets.
+const dustCase=world();tick(dustCase,['down','space'],['space']);
+assert.deepEqual(dustCase.dustInstances,[{x:36,y:187}]);
+tick(dustCase,['left']);assert.equal(dustCase.sliding,false);
+tick(dustCase,['down','space','right'],['space']);
+assert.equal(dustCase.dustInstances.length,1,'Quick re-slide must not duplicate/reset active puff');
+const dustBase=new URL('../Sliding/Dust/',base);
+const dustCreate=new Function('env','with(env){'+fs.readFileSync(new URL('obj_mm5_slide_dust_create.gml',dustBase),'utf8')+'}');
+const dustStep=new Function('env','with(env){'+fs.readFileSync(new URL('obj_mm5_slide_dust_step.gml',dustBase),'utf8').replace(/\bexit;/g,'return;')+'}');
+const d={x:36,y:187,dust_age:0,image_speed:1,image_index:0,image_xscale:-1,image_yscale:1,depth:0,floor:Math.floor,dead:false};
+d.instance_destroy=()=>{d.dead=true;dustCase.dustInstances.length=0;};dustCreate(d);
+assert.equal(d.image_speed,0);assert.equal(d.image_xscale,1);assert.equal(d.depth,-9);
+const frames=[];
+for(let age=0;age<27;age++){assert.equal(d.dead,false);frames.push(d.image_index);dustStep(d);assert.equal(d.x,36);assert.equal(d.y,187);}
+assert.deepEqual(frames,Array.from({length:27},(_,i)=>Math.floor(i/9)));assert.equal(d.dead,true);
+tick(dustCase,['left']);assert.equal(dustCase.sliding,false);
+tick(dustCase,['down','space','right'],['space']);assert.equal(dustCase.dustInstances.length,1,'New puff permitted after expiry');
+assert.equal(blocked.dustInstances.length,0,'Blocked entry must not produce dust');
+assert.equal(e.dustInstances.length,1,'Normal slide emits once, not every update');
+assert.deepEqual(dustCase.sounds,[]);
+console.log('Dust GML tests passed: successful-entry placement, no blocked/continuous/duplicate spawn, stationary 3x9 one-shot, expiry/re-spawn, fixed facing, no added sound.');

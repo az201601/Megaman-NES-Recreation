@@ -17,6 +17,12 @@ if (!sliding)
         obj_stage_solid, false, true
     ) != noone) return false;
 
+    // Spawn at the pre-movement standing reference; no continuous emitter.
+    if (!instance_exists(obj_mm5_slide_dust))
+    {
+        instance_create(x - 12, y + 7, obj_mm5_slide_dust);
+    }
+
     slide_overhang_fall = false;
     sliding = true;
     slide_timer = slide_duration;
