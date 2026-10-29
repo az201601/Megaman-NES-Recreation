@@ -62,3 +62,7 @@ User confirms projectile object installed. Added new scr_mm5_player_try_buster a
 Source tests: actual GML-subset object/helper/prefix/ladder/Draw plus combined real Step with mocked GMS APIs pass standing rapid firing/three-limit/no blocked refresh/reuse29, both directions, final player position spawn, fixed shotY/direction, render-only poses, continuous-ladder16 pause/resume17 and one emission per path. Existing slide/ledge/overhang/dust model regression passes. GMS runtime, projectile creation-End Step scheduling and manual user installation still pending; no claim of runtime1:1.
 
 Explicit guards: no shots while sliding or on slide-exit/cancel update; ladder top-lip shots blocked; release/drop exits unchanged. These unmeasured boundary priorities are deliberately limited, not claimed native. No charging/autofire/enemy/terrain damage. View/room cleanup remains prior static-trace-matched adaptation. User should verify sound resource exists; hearing approved earlier, import not separately confirmed.
+
+## User runtime acceptance
+
+User reported "all working" after installing the player firing hooks. Accept basic buster checkpoint alongside existing movement/slide/dust. Unmeasured ladder endpoint/drop and slide-exit priorities remain explicitly deferred. User then agreed to original-ROM charging measurements; first standing threshold/release pass documented separately in docs/mm5-charge-observations.md. No charging implementation installed.
