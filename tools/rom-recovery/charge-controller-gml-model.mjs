@@ -16,7 +16,7 @@ function player(left=false){
  floor:Math.floor,sign:Math.sign,ord:s=>s.charCodeAt(0),held:false,fresh:false,keys:[],shots:[],sounds:[],events:[],draws:[],audioActive:false};
  for(const name of ['idle','walk','air','climb','ladder_top','slide']){
   p['spr_mm5_megaman_'+name]=name;p['spr_mm5_megaman_'+name+'_charge']=name+'-colour';
-  if(['idle','walk','air','climb'].includes(name))p['spr_mm5_megaman_'+name+'_shoot_charge']=name+'-shoot-colour';
+  if(['idle','walk','air','climb','ladder_top'].includes(name))p['spr_mm5_megaman_'+name+'_shoot_charge']=name+'-shoot-colour';
  }
  p.obj_mm5_charge_audio={scr_mm5_charge_audio_start:()=>{if(!p.audioActive){p.audioActive=true;p.sounds.push(34);p.events.push('start');}},scr_mm5_charge_audio_stop:()=>{p.audioActive=false;p.events.push('stop');}};
  p.keyboard_check_pressed=k=>k===88&&p.fresh;
@@ -67,7 +67,7 @@ for(let c=0;c<=85;c++)for(const pose of ['idle','walk','air','climb','ladder_top
  const p=player();p.buster_charge=c;p.sprite_index=pose;p.sliding=pose==='slide';p.buster_pose_timer=shooting?5:0;p.image_index=pose==='walk'?3:pose==='climb'?1:0;
  draw(p);assert.equal(p.sprite_index,pose);const d=p.draws.at(-1),bank=colour(p);
  const expectedFrame=pose==='slide'||pose==='ladder_top'||pose==='idle'||pose==='air'||shooting&&pose==='climb'?bank:pose==='walk'?bank*4+3:bank*2+1;
- assert.equal(d[1],expectedFrame);assert.equal(d[3],p.y+(pose==='slide'?2:0));
+ assert.equal(d[0],pose+(shooting&&pose!=='slide'?'-shoot-colour':'-colour'));assert.equal(d[1],expectedFrame);assert.equal(d[3],p.y+(pose==='slide'?2:0));
 }
 const stopped=player();stopped.sliding=true;stopped.buster_charge=48;tick(stopped,false,false);assert.equal(stopped.buster_charge,48);assert.equal(stopped.shots.length,0);
 // Counter resumes one update after slide is already gone; release pending then emits.
@@ -139,3 +139,32 @@ for(const row of fullTrace.rows){
 }
 assert.deepEqual(normal.sounds,[26,34,33]);
 console.log('Combined actual normal Step + new helper/Draw also matches full-charge ROM trace with unchanged standingXY.');
+
+// Settled lip vs original spatial probes: only helper/Draw changed, Step untouched.
+const topCases=JSON.parse(fs.readFileSync(new URL('./.work/ladder-top-buster.json',import.meta.url)));
+for(const c of topCases.filter(c=>c.y<128&&['tap','hold','mid-release','full-release','natural-mid','natural-full','descend-mid','ascend-basic'].includes(c.mode))){
+ const fresh=player(c.left);
+ Object.assign(fresh,{x:136,y:c.y,on_ladder:true,fall_speed:0,grounded:false,walk_pause:0,walk_previous_input:0,
+  anim_climb_frame:0,anim_climb_timer:0,ladder_moving:false,feet_offset:12,head_offset:10,ladder_speed:1.296875,
+  ladder_instance:{bbox_left:128,bbox_right:143,bbox_top:128,bbox_bottom:500},sprite_index:'ladder_top',keys:[],
+  vk_up:'up',vk_down:'down',vk_space:'space',noone:-4,obj_stage_ladder:'ladder',obj_stage_ladder_top:'top',obj_stage_solid:'solid',
+  ladder_candidate:-4,ladder_top_candidate:-4,min:Math.min,max:Math.max,collision_point:()=>-4});
+ fresh.instance_exists=obj=>typeof obj==='object'||fresh.shots.some(s=>s.kind===obj);
+ fresh.scr_mm5_player_try_buster=()=>fire(fresh);
+ // Motion beyond the pause differs at unmodelled exit geometry: compare up through first resumed displacement only.
+ const rows=['ascend-basic','descend-mid'].includes(c.mode)?c.rows.slice(0,19):c.rows;
+ for(const row of rows){
+  const t=row.t;
+  fresh.held=(c.mode==='tap'||c.mode==='ascend-basic')?t===3:c.mode==='hold'?t>=3:c.mode==='natural-mid'?t>=3&&t<44:c.mode==='natural-full'?t>=3&&t<84:false;
+  fresh.fresh=fresh.held&&t===3;
+  fresh.keys=t>=3&&c.mode==='ascend-basic'?['up']:t>=3&&c.mode==='descend-mid'?['down']:[];
+  if(t===3&&['mid-release','descend-mid'].includes(c.mode))fresh.buster_charge=40;
+  if(t===3&&c.mode==='full-release')fresh.buster_charge=80;
+  fullStep(fresh);for(const s of fresh.shots){s.view_enabled=true;s.view_visible=[true];s.view_xview=[row.camera];s.step();}fresh.shots=fresh.shots.filter(s=>!s.dead);draw(fresh);
+  assert.equal(fresh.y,row.y,c.mode+'/'+t);assert.equal(fresh.buster_charge,row.charge);assert.equal(fresh.buster_pose_timer,row.pose);
+  assert.deepEqual(fresh.shots.map(s=>[s.x,s.y,s.kind==='basic'?24:s.kind==='mid'?168:169]).sort((a,b)=>a[0]-b[0]),row.shots.map(s=>[s.x,s.y,s.animation]).sort((a,b)=>a[0]-b[0]));
+  if(row.state===3)assert.equal(fresh.draws.at(-1)[0],({10:'climb-colour',11:'climb-shoot-colour',20:'ladder_top-colour',21:'ladder_top-shoot-colour'})[row.animation]);
+ }
+ assert.deepEqual(fresh.sounds,c.sounds.filter(s=>s.t<=rows.at(-1).t).map(s=>s.command));
+}
+console.log('PASS:32 settled-lip ROM cases vs actual combined Step/helper/Draw, both facings, natural charge and16 pause/first resumed movement.');

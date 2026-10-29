@@ -35,7 +35,7 @@ else if (buster_pose_timer > 0)
     }
     else if (sprite_index == spr_mm5_megaman_ladder_top)
     {
-        charge_sprite = spr_mm5_megaman_ladder_top_charge;
+        charge_sprite = spr_mm5_megaman_ladder_top_shoot_charge;
         charge_frame = charge_bank;
     }
 }

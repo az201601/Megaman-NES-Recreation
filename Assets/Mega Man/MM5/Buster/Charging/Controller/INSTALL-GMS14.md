@@ -1,6 +1,6 @@
 # Charging controller integration — GMS1.4.1760
 
-User confirmed charge manager F6 playback/stop/restart all work with no errors. Player-colour resources, release sounds, charged child objects and approved PCM queue are installed. This checkpoint connects X charging. Source/mock checks pass; NEW controller runtime acceptance still pending.
+User confirmed charge manager F6 playback/stop/restart all work with no errors. Player-colour resources, release sounds, charged child objects and approved PCM queue are installed. This checkpoint connects X charging. Subsequent user report: controller works with no errors; ladder-top addition has separate pending acceptance. Source/mock checks pass; NEW controller runtime acceptance still pending.
 
 Back up current player Create/Draw and scr_mm5_player_try_buster before changes. Do not replace whole Create/Step/Draw events.
 
@@ -22,7 +22,9 @@ Keep BOTH existing player Step call sites unchanged: one inside attached ladder 
 
 Scripts > Mega Man > MM5 > Buster > Charging: create scr_mm5_player_charge_colour. Paste matching .gml into Script editor directly (no GMS2 function wrapper). Choose British spelling colour exactly as provided.
 
-## 5 Replace ONLY character drawing block
+## 5 Import ladder-top shooting sprite / replace ONLY character drawing block
+
+Updated pack includes spr_mm5_megaman_ladder_top_shoot_charge_strip6.png. BEFORE new Draw code, create Sprite spr_mm5_megaman_ladder_top_shoot_charge in Sprites > Mega Man > MM5 > Buster > Charging > Player Colours. Edit Sprite > File > Create from Strip:6 images/6 per row,40x40 cells,all offsets/separations0; manual origin16,16 (not Center20,20). Existing non-shooting ladder_top_charge sprite stays. This addition removes old lip firing guard based on controlled native tests; see Charging/Ladder Top/INSTALL-GMS14.md for evidence/limits and already-installed users' small delta.
 
 obj_mm5_megaman > Draw: replace existing buster character visual block (the previously installed if(sliding){...}else{...} from obj_mm5_megaman_draw_buster_replace.gml) with obj_mm5_megaman_draw_charge_replace.gml.
 
@@ -52,7 +54,7 @@ Fresh presses also retain existing charged level if a previously blocked release
 
 New helper/Draw tests execute actual GML subset vs33 original standing traces,9 controlled occupancy cases (including new pending repress),4 charged re-press traces,7 movement/slide reference replays; combined actual normal and ladder Step paths tested with mocks. All counters/poses/shot coordinates/types/request order/palette shadow bank agree in tested traces. Child projectile and audio queue/source regressions pass. Mock descendant counting/with-context APIs do NOT replace actual GMS runtime validation. Palette selection follows post-update RAM palette state; native PPU/OAM pipeline/driver latency is not reproduced cycle-exactly.
 
-No terrain/enemy damage/hitboxes, hurt/pause/menu/weapon charge resets or all ladder/slide endpoint priorities implemented/certified here. Existing lip/slide-at-start guards remain. Graphics preserve face/padding; PCM samples unchanged and intro/loop playback previously user-tested. No generic claim of complete1:1 NES engine.
+No terrain/enemy damage/hitboxes, hurt/pause/menu/weapon charge resets or all ladder/slide endpoint priorities implemented/certified here. Existing slide-at-start guard remains. Ladder lip firing guard removed by subsequent measured top-shooting checkpoint; rectangular entry/exit geometry unchanged, not native-complete. Graphics preserve face/padding; PCM samples unchanged and intro/loop playback previously user-tested. No generic claim of complete1:1 NES engine.
 
 ## Rollback
 

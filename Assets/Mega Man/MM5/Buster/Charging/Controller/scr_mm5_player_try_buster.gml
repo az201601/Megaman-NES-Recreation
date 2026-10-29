@@ -1,7 +1,7 @@
 // REPLACE contents of existing scr_mm5_player_try_buster (not an extra call).
 // Existing normal/ladder Step call sites stay exactly where installed.
 if (sliding || buster_slide_at_start) return false;
-if (on_ladder && y < ladder_instance.bbox_top) return false;
+// Settled ladder lip can fire: native animation14hex ->15hex, same16 pause.
 
 var charge_level, charge_object, charge_sound;
 var charge_dir, charge_input, charge_x, charge_shot;
