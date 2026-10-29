@@ -48,3 +48,9 @@ User confirms projectile imported and sound correct. Copied reviewed WAV byte-fo
 ## User-reported artwork correction
 
 User identified missing face in air shooting. Extractor had incorrectly filtered face tiles to08 only, dropping native air2F and walk phase2 face38. Retain measured face tiles08/24/2F/38 and assert exactly one with correct expected tile per frame. Added static native shooting-animation assertions02/08/0B; revealed ladder initialization captured standing art when firing immediately. Settling two updates before B selects actual ladder0B pose, sampled6/15. Air, walk, climb PNGs and resource ZIP corrected; idle/projectile/audio byte-unchanged. Full extraction assertions and ZIP equality tests passed; user replacement/import not yet confirmed. No GMS gameplay changes.
+
+## Projectile object preparation / fire input
+
+User confirms all corrected shooting sprites imported, accepts proposed X fire key ("sure i guess"). Approved sound-resource import is not explicitly confirmed; retain expected name snd_mm5_buster_shot. Prepared obj_mm5_buster_shot Create/End Step with manual measured1075/256 motion, no gravity, direction owned by instance. No normal Step/custom Draw/audio/collision events or room placement; no player edits yet. This checkpoint deliberately does not enable X firing or the three-shot gate. User object installation pending.
+
+Added original-ROM assertion: static standing shot alive26/absent27 both ways. GMS cleanup uses view0 horizontal reference bounds, room fallback; camera adaptation not native scrolling/endpoints certification. Actual GML-subset model checks fractional motion, direction/Y, zero built-in speed, lifetime, translated/wider/hidden-view fallback. Suite/model passed; no GMS compiler/runtime available. End Step keeps future player-Step spawn before movement phase; runtime validation remains required. Exact object installation guide and ZIP in Buster directory.

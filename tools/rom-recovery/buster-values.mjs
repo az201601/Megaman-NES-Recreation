@@ -80,6 +80,12 @@ assert.equal(get('standing left').births.length,1);
 assert.equal(get('hold B briefly').births.length,1);
 const single=get('standing right').rows;
 assert.ok(single.slice(0,16).every(r=>r.shoot===1));assert.equal(single[16].shoot,0);
+// Static256px window: boundary cleanup is visible on update27 both directions.
+for(const name of ['standing right','standing left']){
+ const rows=get(name).rows;
+ assert.equal(rows[25].shots.length,1,name+' alive26');
+ assert.equal(rows[26].shots.length,0,name+' absent27');
+}
 const rapid=get('rapid taps');
 assert.deepEqual(rapid.births.slice(0,3).map(b=>[b.t,b.slot]),[[1,3],[3,2],[5,1]]);
 assert.ok(rapid.rows.every(r=>r.shots.length<=3));
