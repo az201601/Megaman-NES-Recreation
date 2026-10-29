@@ -31,3 +31,7 @@ Original nine standing OAM components, separate face palette4 unchanged, only bo
 Checks in extract-charge-idle.mjs: base variant equals accepted standing PNG pixel-for-pixel; alpha/geometry/origin consistent; every final face pixel identical across variants; native ROM palette-table values asserted. Independently compare five recoloured outputs with naturally held-charge idle OAM/palette poses at updates36/56/68/84/86; exact RGBA equality. Update52 contains native blink face9, so use56 to compare current accepted open-eye art rather than silently dropping face9 or claiming blink implemented. No opaque clipping.
 
 Walking/air/ladder/shooting charge variants and runtime selection/playback integration remain separate batches. Existing charge projectiles, approved audio and basic X-fire unchanged. User import pending.
+
+## Standing installed; next movement batch
+
+User confirmed standing charge resource imported. See IMPORT-MOVEMENT.md and Downloads/mm5-charge-walk-air.zip for walking24 cells32x32 and airborne6 cells32x40, both origins16,16. No event changes; do not animate walk as one24-frame loop. Movement colour import pending.
