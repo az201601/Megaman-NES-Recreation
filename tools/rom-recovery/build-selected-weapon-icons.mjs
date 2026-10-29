@@ -7,7 +7,7 @@ const palette=JSON.parse(fs.readFileSync(new URL('./palettes/mesen-0.9.9-default
 const rgba=index=>{let v=parseInt(palette[index],16);return[v>>16&255,v>>8&255,v&255,255];};
 const sheet=PNG.sync.read(fs.readFileSync(new URL('Weapon Icon References/kindlypatrick-user-supplied-sheet.png',base)));
 const specs=[
- ['rolling_cutter','R. CUTTER',8,0x27,{'112,112,112':0x27,'184,184,184':0x10,'255,255,255':0x30,'0,0,0':0x0f}],
+ ['rolling_cutter','R. CUTTER',8,0x3d,{'112,112,112':0x00,'184,184,184':0x3d,'255,255,255':0x30,'0,0,0':0x0f}],
  ['ice_slasher','I. SLASHER',2,0x31,{'87,145,248':0x21,'255,255,255':0x30,'0,0,0':0x0f}],
  ['hyper_bomb','H. BOMB',1,0x1b,{'0,144,56':0x1b,'176,248,200':0x3b,'255,255,255':0x30,'0,0,0':0x0f}],
  ['fire_storm','F. STORM',3,0x27,{'216,40,0':0x16,'248,151,56':0x27,'248,216,168':0x37,'0,0,0':0x0f}],
@@ -19,6 +19,7 @@ const casing=(x,y)=>x===0||x===15||y===0||y===15||((x===1||x===14)&&(y===1||y===
 const hash=b=>createHash('sha256').update(b).digest('hex'),originalHashes=[],grays=[],selected=[],manifest=[];
 const strip=new PNG({width:112,height:16}),states=new PNG({width:224,height:16});
 for(const[i,[id,label,column,accent,map]]of specs.entries()){
+ if(id==='rolling_cutter'){assert.equal(accent,0x3d,'Original Cutter casing must remain grey');assert.deepEqual(map,{'112,112,112':0x00,'184,184,184':0x3d,'255,255,255':0x30,'0,0,0':0x0f},'Original source greys, not gold or removed fill');}
  const path=new URL(`spr_mm1_menu_${id}.png`,grayDir),data=fs.readFileSync(path),gray=PNG.sync.read(data),color=new PNG({width:16,height:16});originalHashes.push([path,hash(data)]);
  assert.equal(gray.width,16);assert.equal(gray.height,16);
  for(let y=0;y<16;y++)for(let x=0;x<16;x++){
