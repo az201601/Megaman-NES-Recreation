@@ -7,7 +7,7 @@ const palette=JSON.parse(fs.readFileSync(new URL('./palettes/mesen-0.9.9-default
 const rgba=index=>{let v=parseInt(palette[index],16);return[v>>16&255,v>>8&255,v&255,255];};
 const sheet=PNG.sync.read(fs.readFileSync(new URL('Weapon Icon References/kindlypatrick-user-supplied-sheet.png',base)));
 const specs=[
- ['rolling_cutter','R. CUTTER',8,0x27,{'112,112,112':0x0f,'184,184,184':0x10,'255,255,255':0x30,'0,0,0':0x0f}],
+ ['rolling_cutter','R. CUTTER',8,0x27,{'112,112,112':0x27,'184,184,184':0x10,'255,255,255':0x30,'0,0,0':0x0f}],
  ['ice_slasher','I. SLASHER',2,0x31,{'87,145,248':0x21,'255,255,255':0x30,'0,0,0':0x0f}],
  ['hyper_bomb','H. BOMB',1,0x1b,{'0,144,56':0x1b,'176,248,200':0x3b,'255,255,255':0x30,'0,0,0':0x0f}],
  ['fire_storm','F. STORM',3,0x27,{'216,40,0':0x16,'248,151,56':0x27,'248,216,168':0x37,'0,0,0':0x0f}],
@@ -24,7 +24,7 @@ for(const[i,[id,label,column,accent,map]]of specs.entries()){
  for(let y=0;y<16;y++)for(let x=0;x<16;x++){
   let k=(y*16+x)*4,expected;
   if(casing(x,y))expected=gray.data[k]===0?rgba(0x0f):rgba(accent);
-  else{let s=((4+y)*sheet.width+13+17*column+x)*4,key=Array.from(sheet.data.subarray(s,s+3)).join(',');assert.ok(key in map,id+' source color '+key);expected=rgba(map[key]);}
+  else{let s=((4+y)*sheet.width+13+17*column+x)*4,key=Array.from(sheet.data.subarray(s,s+3)).join(',');assert.ok(key in map,id+' source color '+key);expected=rgba(map[key]);if(id==='rolling_cutter'&&key==='112,112,112')assert.notDeepEqual(expected,rgba(0x0f),'Original filled background must not be removed');}
   color.data.set(expected,k);assert.deepEqual(Array.from(color.data.subarray(k,k+4)),expected);
   color.data.copy(strip.data,(y*112+i*16+x)*4,k,k+4);
   gray.data.copy(states.data,(y*224+i*32+x)*4,k,k+4);color.data.copy(states.data,(y*224+i*32+16+x)*4,k,k+4);
