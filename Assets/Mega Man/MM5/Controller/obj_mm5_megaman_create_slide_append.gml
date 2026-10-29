@@ -5,3 +5,6 @@ slide_direction = 1;
 slide_speed = 2.5;
 slide_duration = 26;
 slide_timer = 0;
+
+// Narrow grace for existing overhead overlap after a slide leaves support.
+slide_overhang_fall = false;

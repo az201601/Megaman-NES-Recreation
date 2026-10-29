@@ -579,6 +579,13 @@ if (landed_this_step)
     audio_play_sound(snd_mm5_megaman_land, 1, false);
 }
 
+// Clear the narrow slide-exit grace after landing or regaining headroom.
+if (slide_overhang_fall)
+{
+    if (grounded || fall_speed < 0 || scr_mm5_player_can_stand(x, y))
+        slide_overhang_fall = false;
+}
+
 // VISUAL SELECTION — after movement, collision and landing audio.
 // These changes do not move the player or alter collision probes.
 image_speed = 0;
