@@ -94,3 +94,9 @@ Capture180updates/143777 samples each, always state0, no unrelated sound request
 ### Remaining scope after second checkpoint
 
 Still no charged GML, damage/hitbox/enemy interactions, hurt/menu/weapon cancellation, all ladder/slide endpoints, rendered charge-colour variants or standalone charging audio loop/stop implementation. Source tests are not GMS runtime proof. Preserve accepted basic-buster/controller until small explicit integration checkpoint.
+
+## Full projectile correction after user review
+
+User reported weird white portions in full-charge strip. Original phase0 actually uses CHR65/66/67 in addition to68/69; previous68..79 filter omitted6 of10 components and24px-high canvas was too short for flash (-15..+16 relativeY). Corrected full extraction to65..79,32x32 cells/origin24,15,128x32 strip. Exact phase component counts10/8/12/5 asserted, not loose4..12. Other phases retain aligned padding. Native white flash/ring phases themselves preserved; they appear in original rendered output, not a palette error. Intermediate sprite/audio unchanged.
+
+Added independent per-opaque-pixel comparison with original JSNES rendered framebuffer for every phase/direction, away from player and with projectile first in OAM to avoid real alternating8-sprites/scanline dropout. Every phase passes; repeated images, clipping and native opposite-direction reflection pass too. Updated import guide/ZIP. User must replace only full sprite's four subimages with32x32 cells and new origin24,15; runtime/import confirmation pending. No GML/controller changes.

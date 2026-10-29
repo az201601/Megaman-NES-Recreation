@@ -22,27 +22,39 @@ function paint(n,slots,w,h,rx,ry,ox,oy){
 
 const evidence=[];
 for(const left of [false,true])for(const held of [41,81]){
- const full=held===81,w=full?32:24,h=full?24:16,ox=left?8:(full?24:16),oy=full?11:7,frames=full?4:2,slot=full?1:3;
- const n=new NES();n.loadROM(fs.readFileSync(new URL('Mega Man 5 (USA).nes',root),'binary'));
+ const full=held===81,w=full?32:24,h=full?32:16,ox=left?8:(full?24:16),oy=full?15:7,frames=full?4:2,slot=full?1:3;
+ let screen;const n=new NES({onFrame:f=>{screen=f;}});n.loadROM(fs.readFileSync(new URL('Mega Man 5 (USA).nes',root),'binary'));
  n.fromJSON(JSON.parse(fs.readFileSync(new URL('./.work/mm5-stage.json',import.meta.url))));
  for(let b=0;b<8;b++)n.buttonUp(1,b);for(let i=0;i<30;i++)n.frame();
  if(left){n.cpu.mem[0x31]=2;n.cpu.mem[0x420]=2;n.cpu.mem[0x528]&=0xdf;}
- const poses=new Map(),samples=[];
- for(let t=1;t<=held+13;t++){
+ const poses=new Map(),samples=[],verified=new Set();
+ for(let t=1;t<=held+14;t++){
   if(t===1)n.buttonDown(1,Controller.BUTTON_B);if(t===held+1)n.buttonUp(1,Controller.BUTTON_B);
   const m=n.cpu.mem,rx=m[0x330+slot]-m[0xfc],ry=m[0x378+slot],phase=m[0x540+slot];
   n.frame();
   if(t<held+2)continue;
   assert.equal(m[0x558+slot],full?0xa9:0xa8);
-  const slots=Array.from({length:64},(_,i)=>i).filter(i=>n.ppu.sprY[i]<239&&n.ppu.sprTile[i]>=0x68&&n.ppu.sprTile[i]<=0x79
+  const slots=Array.from({length:64},(_,i)=>i).filter(i=>n.ppu.sprY[i]<239&&n.ppu.sprTile[i]>=(full?0x65:0x75)&&n.ppu.sprTile[i]<=0x79
    &&n.ppu.sprX[i]>=rx-ox&&n.ppu.sprX[i]<=rx+w-ox&&n.ppu.sprY[i]+1>=ry-oy&&n.ppu.sprY[i]+1<=ry+h-oy);
-  assert.ok(slots.length>=4&&slots.length<=12,'Unexpected charged-shot components');
+  assert.equal(slots.length,(full?[10,8,12,5]:[5,4])[phase],'Every native projectile component must be retained');
   const image=paint(n,slots,w,h,rx,ry,ox,oy);
+  // Once clear of player overlap and first in OAM, compare every opaque pixel.
+  // Alternating lower-priority shot OAM can hit NES eight-sprites/scanline loss.
+  // This catches wrong CHR/palette/component selection independently of mirrored repeats.
+  if(t>=held+6 && Math.min(...slots)===1){
+   for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    const k=(y*w+x)*4;if(!image.data[k+3])continue;
+    const v=mesenRgbFromJsnes(screen[(ry-oy+y)*256+rx-ox+x]);
+    assert.deepEqual([...image.data.subarray(k,k+3)],[v&255,v>>8&255,v>>16&255],JSON.stringify({left,held,t,phase,rx,ry,x,y,worldX:rx-ox+x,worldY:ry-oy+y}));
+   }
+   verified.add(phase);
+  }
   if(poses.has(phase))assert.deepEqual(image.data,poses.get(phase).data,'Same original phase must render identically');
   else poses.set(phase,image);
   samples.push({age:t-held,phase,components:slots.map(i=>({tile:n.ppu.sprTile[i],palette:n.ppu.sprCol[i],dx:n.ppu.sprX[i]-rx,dy:n.ppu.sprY[i]+1-ry,hflip:n.ppu.horiFlip[i],vflip:n.ppu.vertFlip[i]}))});
  }
  assert.deepEqual([...poses.keys()].sort(),Array.from({length:frames},(_,i)=>i));
+ assert.deepEqual([...verified].sort(),Array.from({length:frames},(_,i)=>i),'Each phase must pass rendered-framebuffer check');
  const strip=new PNG({width:w*frames,height:h});
  for(let i=0;i<frames;i++)for(let y=0;y<h;y++)poses.get(i).data.copy(strip.data,(y*w*frames+i*w)*4,y*w*4,(y+1)*w*4);
  const name='spr_mm5_buster_'+(full?'full':'mid')+'_strip'+frames+'.png';
@@ -57,4 +69,4 @@ for(const left of [false,true])for(const held of [41,81]){
  evidence.push({left,name,width:w,height:h,origin:[ox,oy],frames,samples});
 }
 fs.writeFileSync(new URL('./.work/charged-art.json',import.meta.url),JSON.stringify(evidence,null,2));
-console.log('Charged projectile art: mid2x24x16 origin16,7; full4x32x24 origin24,11. Native phase repeat, components, alpha clipping, left/right reflection and Mesen palette checks passed.');
+console.log('Charged projectile art: mid2x24x16 origin16,7; full4x32x32 origin24,15. Native phase repeat, complete components, rendered-framebuffer pixels, alpha clipping, left/right reflection and Mesen palette checks passed.');
