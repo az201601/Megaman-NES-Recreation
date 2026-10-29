@@ -34,3 +34,9 @@ Player state30, new inputs14, held16, selected weapon32 (0 tested), shoot flag34
 ## Next work
 
 Extract the basic projectile and required player shooting poses using pinned Mesen colours; capture and audition actual shot sound with music stopped. Then guide resource imports and basic shooting in small GMS1.4 steps, preserving accepted controller except explicitly measured shooting interactions. Choose a keyboard fire binding before enabling it. Do not assume projectile terrain/enemy collision, damage values, muzzle alignment, charge rules, ladder-top shooting, ladder-drop priority or slide charge buffering from this first probe. No gameplay code changes in this measurement checkpoint.
+
+## Artwork/audio preparation checkpoint
+
+User agreed to preparation. extract-buster-art.mjs extracts projectile8x8/origin4,3; static idle/air/climb shooting40x40/origin16,16; walking shooting160x40 strip/four40x40 cells.40px canvases avoid cannon clipping (32px would clip). Original-ROM pixels use approved Mesen palette; no direct Mesen capture claim. Repeat/different-stride/camera-reference/no-clipping assertions pass. First user import instruction is projectile only; player shooting-pose import follows separately. No objects/events/firing code installed.
+
+record-buster-sfx.mjs records actual standing B shot through full game APU with music stoppedF0, zero settled music tail, exactly one1A sound command and no others. StereoPCM16/48000 review clip9242frames, silence-only trim preserving raw[9405,18647), no waveform processing. Raw take/trace ignored .work. User hearing approval pending; do not install sound yet. Prior approved landing sound/music untouched.
