@@ -17,3 +17,7 @@ prepare-charge-loop.mjs crops unmodified captured PCM. Native register pattern r
 Sample-seam metrics:128-sample stereo window RMS difference37.9113/32767, max460; end-to-start adjacent jump6. Guards RMS<50,max<512,jump<50 pass. These are engineering limits for a candidate, NOT proof of a bit-perfect native seamless loop. No edited samples. User must hear the16-repeat preview before installation. Slight PCM timing adjustment from exact register-cycle duration is a sample-crop adaptation; no claim of hardware/cycle-exact reproduction. Existing accepted non-loop preview remains unchanged.
 
 Reproduce: npm ci in tools/rom-recovery; if needed mm5-start.mjs then mm5-stage.mjs to recreate ignored snapshot; record-charge-effects.mjs; prepare-charge-loop.mjs. Raw takes/seam JSON in ignored .work. User should download ZIP from GitHub and audition locally. Later integration must play intro once then repeat steady segment, stop charging handle on successful release before release sound. Simply looping rising preview is incorrect. Blocked/cancel semantics and sample-queue runtime testing remain separate.
+
+## User hearing acceptance
+
+User reported "very smooth" for16-repeat audition. The proposed intro/loop pair is hearing-approved and remains unchanged. Earlier hearing-pending notes above are historical; GMS intro/loop queue runtime installation is still pending, not inferred from listening acceptance. Do not simply loop the intro or full preview.
