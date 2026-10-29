@@ -33,10 +33,14 @@ function paint(n,slots,w,h,rx,ry,ox,oy){
  }
  assert.ok(count>0);return p;
 }
-function body(n,rx,ry){
+function body(n,rx,ry,expectedFace){
  const slots=Array.from({length:64},(_,i)=>i).filter(i=>n.ppu.sprY[i]<239&&n.ppu.sprX[i]>=rx-20&&n.ppu.sprX[i]<=rx+20
-  &&(n.ppu.sprCol[i]===0||(n.ppu.sprCol[i]===4&&n.ppu.sprTile[i]===8)));
+  &&(n.ppu.sprCol[i]===0||(n.ppu.sprCol[i]===4&&[0x08,0x24,0x2f,0x38].includes(n.ppu.sprTile[i]))));
  assert.ok(slots.length>=7&&slots.length<=12);
+ // Face tile varies with pose/stride; tile08 alone silently drops air/stride faces.
+ const faces=slots.filter(i=>n.ppu.sprCol[i]===4);
+ assert.equal(faces.length,1,'Every shooting pose must retain its original face component');
+ assert.equal(n.ppu.sprTile[faces[0]],expectedFace,'Wrong face component for shooting pose');
  return paint(n,slots,40,40,rx,ry,16,16);
 }
 function save(name,p){fs.writeFileSync(new URL(name,dir),PNG.sync.write(p));}
@@ -48,7 +52,7 @@ for(const mode of ['idle','air','ladder','walk']){
   for(let b=0;b<8;b++)n.buttonUp(1,b);
   if(mode==='air')n.buttonDown(1,Controller.BUTTON_A);
   if(mode==='walk')n.buttonDown(1,Controller.BUTTON_RIGHT);
-  const fire=mode==='walk'?[7,15,23,31].includes(t):t===1;
+  const fire=mode==='walk'?[7,15,23,31].includes(t):t===(mode==='ladder'?3:1);
   if(fire)n.buttonDown(1,Controller.BUTTON_B);
   const m=n.cpu.mem,rx=(m[0x330]-m[0xfc]+256)%256,ry=m[0x378],preAnim=m[0x558],prePhase=m[0x540];
   const bulletX=m[0x333]-m[0xfc],bulletY=m[0x37b];
@@ -59,8 +63,11 @@ for(const mode of ['idle','air','ladder','walk']){
    bullet=paint(n,slots,8,8,bulletX,bulletY,4,3);
   }
   if(mode==='walk'){
-   if(preAnim===5&&!walkPoses.has(prePhase))walkPoses.set(prePhase,body(n,rx,ry));
-  }else if([4,13].includes(t))poses.push(body(n,rx,ry));
+   if(preAnim===5&&!walkPoses.has(prePhase))walkPoses.set(prePhase,body(n,rx,ry,prePhase===2?0x38:0x08));
+  }else if((mode==='ladder'?[6,15]:[4,13]).includes(t)){
+   assert.equal(preAnim,{idle:2,air:8,ladder:0x0b}[mode],mode+' must be in the native shooting animation');
+   poses.push(body(n,rx,ry,{idle:0x08,air:0x2f,ladder:0x24}[mode]));
+  }
  }
  if(mode==='walk'){
   assert.deepEqual([...walkPoses.keys()].sort(),[0,1,2,3]);

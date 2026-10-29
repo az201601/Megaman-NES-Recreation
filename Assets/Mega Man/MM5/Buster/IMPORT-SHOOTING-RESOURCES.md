@@ -23,3 +23,7 @@ Sounds > Mega Man > MM5: create group Buster and sound snd_mm5_buster_shot. Load
 Do not assign shooting sprites as the player's default sprite, change player sprite masks/origins, create a projectile object or edit Create/Step/Draw. These resource imports alone deliberately do not enable firing. Next checkpoint chooses fire key and adds basic projectile behaviour/state in small tested steps; charging remains deferred.
 
 All artwork is original-ROM pixels with approved Mesen default palette (not direct Mesen capture). Preserve alpha and padding. Audio is actual full-game output with music stopped, reviewed by the user; canonical copy introduces no waveform or metadata changes.
+
+## Corrected artwork batch
+
+Updated after user identified the missing air-shoot face. Replace air, walk and climb shooting sprites from current pack. Air/stride face components now included; climb uses the actual settled ladder shooting animation rather than incorrectly retained standing artwork. All existing40x40 frame dimensions/origins16,16 remain unchanged. Re-load air/climb as single images; re-create walk from four40x40 cells. Idle sprite, projectile and approved sound need no replacement.

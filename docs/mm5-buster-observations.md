@@ -44,3 +44,7 @@ record-buster-sfx.mjs records actual standing B shot through full game APU with 
 ## User approval and remaining-resource import
 
 User confirms projectile imported and sound correct. Copied reviewed WAV byte-for-byte to canonical Buster/snd_mm5_buster_shot.wav; no resynthesis/editing. Four player shooting sprites + canonical WAV + import guide packaged as Buster/Downloads/mm5-shooting-resources.zip. User instructions now import three static40x40 poses, four40x40 walking cells, all player origins16,16, and approved sound under Sounds > Mega Man > MM5 > Buster. No gameplay/playback code changes. Resource batch installation pending.
+
+## User-reported artwork correction
+
+User identified missing face in air shooting. Extractor had incorrectly filtered face tiles to08 only, dropping native air2F and walk phase2 face38. Retain measured face tiles08/24/2F/38 and assert exactly one with correct expected tile per frame. Added static native shooting-animation assertions02/08/0B; revealed ladder initialization captured standing art when firing immediately. Settling two updates before B selects actual ladder0B pose, sampled6/15. Air, walk, climb PNGs and resource ZIP corrected; idle/projectile/audio byte-unchanged. Full extraction assertions and ZIP equality tests passed; user replacement/import not yet confirmed. No GMS gameplay changes.
