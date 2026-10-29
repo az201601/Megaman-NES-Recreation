@@ -40,3 +40,7 @@ Extract the basic projectile and required player shooting poses using pinned Mes
 User agreed to preparation. extract-buster-art.mjs extracts projectile8x8/origin4,3; static idle/air/climb shooting40x40/origin16,16; walking shooting160x40 strip/four40x40 cells.40px canvases avoid cannon clipping (32px would clip). Original-ROM pixels use approved Mesen palette; no direct Mesen capture claim. Repeat/different-stride/camera-reference/no-clipping assertions pass. First user import instruction is projectile only; player shooting-pose import follows separately. No objects/events/firing code installed.
 
 record-buster-sfx.mjs records actual standing B shot through full game APU with music stoppedF0, zero settled music tail, exactly one1A sound command and no others. StereoPCM16/48000 review clip9242frames, silence-only trim preserving raw[9405,18647), no waveform processing. Raw take/trace ignored .work. User hearing approval pending; do not install sound yet. Prior approved landing sound/music untouched.
+
+## User approval and remaining-resource import
+
+User confirms projectile imported and sound correct. Copied reviewed WAV byte-for-byte to canonical Buster/snd_mm5_buster_shot.wav; no resynthesis/editing. Four player shooting sprites + canonical WAV + import guide packaged as Buster/Downloads/mm5-shooting-resources.zip. User instructions now import three static40x40 poses, four40x40 walking cells, all player origins16,16, and approved sound under Sounds > Mega Man > MM5 > Buster. No gameplay/playback code changes. Resource batch installation pending.

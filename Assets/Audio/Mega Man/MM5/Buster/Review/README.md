@@ -7,3 +7,7 @@ Reproduce `node tools/rom-recovery/record-buster-sfx.mjs` after stage snapshot/d
 Review clip removes ONLY PCM-zero leading/trailing silence, retaining240frames (5ms) padding each side. Raw sample interval[9405,18647). No gain/normalization, filtering, mixing, resampling or waveform editing. PCM payload equality with the retained raw interval is asserted. This is a short shot, not a charge or slide sound.
 
 No Sound resource or GML playback changes yet. Ask user to approve by hearing the review recording; do not silently replace approved landing audio or queue music behaviour.
+
+## User approval
+
+User explicitly confirmed the sound is correct and projectile sprite imported. Canonical snd_mm5_buster_shot.wav in the parent folder is byte-identical to this review. Historical pending-approval notes above are superseded; resource import is now authorized, but firing/playback code is not installed yet.

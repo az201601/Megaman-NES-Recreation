@@ -19,3 +19,7 @@ Checks: original8x8 sprite mode; projectile tile40hex/palette offset4, correct X
 Sprites > Mega Man > MM5: create **Buster** group and **spr_mm5_buster_shot**. Load Sprite from matching PNG as one8x8 subimage; origin manually4,3; preserve alpha/padding, no crop/resize/background-colour removal. Do not create a projectile object, change player events or assign this as default player sprite. Other four shooting resources are prepared but import/integration instructions follow in separate checkpoints.
 
 Shot audio is separately in Assets/Audio/Mega Man/MM5/Buster/Review and awaits user's hearing approval. Do not install or call it yet. No GMS firing implementation at this artwork checkpoint; preserve existing tested movement.
+
+## Subsequent approved-resource checkpoint
+
+Projectile sprite imported and sound approved by user. Canonical audio is now Assets/Audio/Mega Man/MM5/Buster/snd_mm5_buster_shot.wav, byte-identical to review. See IMPORT-SHOOTING-RESOURCES.md and Downloads/mm5-shooting-resources.zip for remaining sprite/sound imports. Older pending-approval notes above are historical. No GMS firing implementation yet.
