@@ -181,3 +181,8 @@ New extract-ladder-top-buster-art.mjs captures live original top shooting OAM/CH
 Actual-source controller patch removes one obsolete lip early-return and chooses new sprite only in firing ladder_top branch. Existing normal/ladder Step unchanged; masks and geometric lip band unchanged. Model adds32 settled-lip source comparisons with original64-case output: counters,poses,shot positions/type/requests,draws and16pause; camera offset8 supplied in X136 probe to align native bounds. First attempt ignored native viewport offset and wrongly removed shot at256 vs native264; fixed test camera rather than changing accepted cleanup code. Prior33+9+4+7 controller traces, all bank/pose sprite assertions and combined Step checks pass; audio/charged/basic/slide models pass.
 
 GMS rectangular functional lip band is not recertified native geometry. Original settled probes4px/1px above ladder, not proof entire existing12px GMS band/endpoint priorities. Ascending first resumed position tested but exit state/art beyond native attachment not asserted. Natural platform/class40/drop/jump/hurt/weapon/menu interactions still unverified. Small delta ZIP includes new6frame PNG, two complete replacement helper/character-draw blocks, installation guide. Original full controller ZIP updated with new sprite dependency/guide. Ladder-top runtime installation and acceptance PENDING.
+
+
+## Ladder-top runtime acceptance
+
+User confirms "done and tested it works" after one-line top-shooting Draw replacement and helper/resource installation. Ladder-top basic/charged checkpoint accepted as reported; full natural endpoint geometry still not certified. Next work is MM5 arrival, not additional movement changes.
