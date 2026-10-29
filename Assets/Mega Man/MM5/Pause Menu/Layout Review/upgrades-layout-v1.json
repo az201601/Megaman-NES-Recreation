@@ -6,6 +6,8 @@
   "selectedItem": "energy_balancer",
   "items": [
     {
+      "state": "selected",
+      "iconSource": "Adapted Upgrade Icons/spr_mm6_menu_energy_balancer_selected.png",
       "id": "energy_balancer",
       "name": "ENERGY BALANCER",
       "icon": [

@@ -28,3 +28,7 @@ node tools/rom-recovery/build-upgrades-layout-draft.mjs
 ```
 
 Natural initial snapshots live only in ignored.work. Final crops/reference frames/manifests persist. Normal layout rebuilds use committed PNGs and do not need emulator snapshots.
+
+## Follow-up: custom selected upgrade palette
+
+User requests coloured upgrade selections. Original grey Energy Balancer extraction above remains unchanged. Adapted Upgrade Icons/ now contains a custom blue/cyan/white selected remap, explicitly NOT an MM6 original colour-state extraction. Upgrades-page selected preview now uses that coloured icon rather than only an external frame; original extraction and native evidence still intact.
