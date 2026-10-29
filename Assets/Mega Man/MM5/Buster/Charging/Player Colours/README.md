@@ -43,3 +43,7 @@ User confirms walking/air charge sprites imported. Next IMPORT-LADDER-SLIDE.md a
 ## Ladder/slide installed; final shooting colour batch
 
 User confirms all three ladder/slide colour resources imported. IMPORT-SHOOTING.md and Downloads/mm5-charge-shooting-colours.zip add idle_shoot6/walk_shoot24/air_shoot6/climb_shoot6, ALL40x40/origin16,16. Missing-face regression guarded including airborne2F and walking stride38. Base frames match corrected accepted art; face/alpha invariant and all-bank pose checks pass. User import pending; no controller/audio edits. Final currently used player-art colour batch before charge integration.
+
+## All player colour resources installed
+
+User confirmed final four shooting colour sprites imported. Player colour resource import complete. Charged projectile object preparation is separately documented in ../Objects/INSTALL.md; no controller/audio integration installed yet.
