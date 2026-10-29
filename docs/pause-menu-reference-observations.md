@@ -81,3 +81,7 @@ User says design is good and requests no space after the period in weapon names:
 ## Separate lives counter requested
 
 User requests moving life icon (explicitly not health) and adding numbers. V2 original head moved from top-right to spare row below R.MARINE at136,142; LIVES label156,146 with03 example at212,146. Header renamed HEALTH at96,19, health bar152,18 unchanged. Tests assert relocated head exact source and native health bar bytes unchanged. Both selected snapshots/metadata updated.03 is illustrative, no starting-lives rule/gameplay implementation. Placement pending user review; spare slot now used for counter.
+
+## Corrected header: no PAUSE text, lives outside utility grid
+
+User rejects lives in weapon/utility section and says PAUSE text not needed. Supersedes previous spare-row lives placement: head16,13 plus sample03 at36,19 now top-left header; PAUSE removed. HEALTH96,19/bar152,18 retained, exact source pixels checked. No lives drawn in grid; spare utility row free again. Both v2 snapshots and metadata updated, no gameplay changes or starting-lives decision.

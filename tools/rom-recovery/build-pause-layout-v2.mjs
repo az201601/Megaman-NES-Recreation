@@ -22,7 +22,7 @@ function icon(p,x,y){assert.equal(p.width,16);assert.equal(p.height,16);for(let 
 function placeholder(x,y){box(x,y,16,16,muted);line(x+4,y+7,8,1,muted);}
 box(8,8,240,224,blue);box(10,10,236,220,white);
 line(11,32,234,1,blue);line(11,34,234,1,white);
-text('PAUSE',16,19);text('HEALTH',96,19);crop(176,104,56,8,152,18);
+text('HEALTH',96,19);crop(176,104,56,8,152,18);
 text('WEAPONS AND UTILITIES',16,39);
 const left=['M.BUSTER','R.CUTTER','I.SLASHER','H.BOMB','F.STORM','T.BEAM'];
 const right=['S.ARM','M.BEAM','R.COIL','R.JET','R.MARINE'];
@@ -46,9 +46,9 @@ for(const {label,x,y}of placements){
  if(expected)for(let j=0;j<16;j++)assert.deepEqual(out.data.subarray(((y+j)*256+x)*4,((y+j)*256+x+16)*4),expected.data.subarray(j*64,(j+1)*64),'Exact approved icon, selection does not overlap');
 }
 
-// Separate lives display in spare bottom-right weapon-grid slot.03 is illustrative only.
-crop(208,192,16,16,136,142);text('LIVES',156,146);text('03',212,146);
-for(let y=0;y<16;y++)assert.deepEqual(out.data.subarray(((142+y)*256+136)*4,((142+y)*256+152)*4),native.data.subarray(((192+y)*256+208)*4,((192+y)*256+224)*4),'Original life icon moved without repainting');
+// Lives belong in the header, NOT the weapons/utilities grid.03 is illustrative only.
+crop(208,192,16,16,16,13);text('03',36,19);
+for(let y=0;y<16;y++)assert.deepEqual(out.data.subarray(((13+y)*256+16)*4,((13+y)*256+32)*4),native.data.subarray(((192+y)*256+208)*4,((192+y)*256+224)*4),'Original life icon moved without repainting');
 for(let y=0;y<8;y++)assert.deepEqual(out.data.subarray(((18+y)*256+152)*4,((18+y)*256+208)*4),native.data.subarray(((104+y)*256+176)*4,((104+y)*256+232)*4),'Health bar untouched');
 // Exactly one selected row, not both Buster and Cutter.
 line(11,163,234,1,blue);line(11,165,234,1,white);
@@ -67,5 +67,5 @@ const dir=new URL('Assets/Mega Man/MM5/Pause Menu/Layout Review/',root);fs.mkdir
 fs.writeFileSync(new URL(`mm1-custom-pause-layout-v2-${variant}.png`,dir),PNG.sync.write(out));
 const zoom=new PNG({width:1024,height:960});for(let y=0;y<960;y++)for(let x=0;x<1024;x++){const i=(Math.floor(y/4)*256+Math.floor(x/4))*4;zoom.data.set(out.data.subarray(i,i+4),(y*1024+x)*4);}
 fs.writeFileSync(new URL(`mm1-custom-pause-layout-v2-${variant}-4x.png`,dir),PNG.sync.write(zoom));
-fs.writeFileSync(new URL(`layout-v2-${variant}.json`,dir),JSON.stringify({size:[256,240],font:'User-approved larger original MM5 set',selectedLabel,livesDisplay:{icon:[136,142,16,16],label:[156,146],count:[212,146],example:'03',note:'Illustrative count only; no starting-lives decision or gameplay wiring'},healthDisplay:{label:'HEALTH',labelPosition:[96,19],bar:[152,18,56,8]},placements,originalCrops:{buster:[32,32,16,16],coil:[144,96,16,16],eTank:[24,192,16,16],mTank:[80,192,16,16],life:[208,192,16,16],energy:[176,104,56,8]},placeholders:['Rush Jet and Marine originals pending recovery'],scope:'Static layout review only. No inventory ownership, gameplay or controls implemented.'},null,2));
+fs.writeFileSync(new URL(`layout-v2-${variant}.json`,dir),JSON.stringify({size:[256,240],font:'User-approved larger original MM5 set',selectedLabel,livesDisplay:{icon:[16,13,16,16],count:[36,19],section:'header outside weapons and utilities',example:'03',note:'Illustrative count only; no starting-lives decision or gameplay wiring'},healthDisplay:{label:'HEALTH',labelPosition:[96,19],bar:[152,18,56,8]},placements,originalCrops:{buster:[32,32,16,16],coil:[144,96,16,16],eTank:[24,192,16,16],mTank:[80,192,16,16],life:[208,192,16,16],energy:[176,104,56,8]},placeholders:['Rush Jet and Marine originals pending recovery'],scope:'Static layout review only. No inventory ownership, gameplay or controls implemented.'},null,2));
 console.log('PASS:256x240 layout,11 unique labels within panel bounds, approved original MM5 glyphs only; approved custom icons placed, exactly one selection, W letter-only flip verified;2 Rush placeholders remain.');

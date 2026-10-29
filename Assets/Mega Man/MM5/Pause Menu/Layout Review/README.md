@@ -39,3 +39,7 @@ User likes design and requests R.CUTTER instead of R. CUTTER. Both v2 snapshots/
 ### Separate lives counter
 
 User requests moving the life (not health) icon and adding numerical lives. V2 relocates the original MM5 head icon to136,142 in the spare slot below R.MARINE, alongside LIVES and illustrative03. Header now says HEALTH to distinguish it; native health bar coordinates/pixels unchanged. Original head pixel identity and health bar identity asserted.03 is a layout example only, not a starting-lives decision or live game value. No lives/inventory/controller code implemented. Spare slot now occupied by lives display; future optional equipment forms require reflow/page as already noted. Both selection snapshots updated.
+
+### Current header correction (supersedes lives-in-grid draft)
+
+User rejects lives placement in weapons/utilities and explicitly removes PAUSE text. Current v2: no PAUSE label; original head at16,13 and sample03 at36,19 in header. HEALTH label96,19 and original bar152,18 unchanged from prior header. No lives icon/text/count in weapon grid; spare utility slot remains free. Exact original head pixels and unchanged health bar asserted.03 still a static illustration, not live gameplay or an approved starting count. Both snapshots/metadata regenerated.
