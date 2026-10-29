@@ -1,3 +1,7 @@
+## Superseded after user review
+
+User correctly noted these sequences include an unwanted ordinary press shot and combine charge with release. They were whole-action previews, NOT acceptable separate resource effects. Do not import or use them for the next review. Corrected Separate/ contains charge-only preview and mid/full-release-only clips, with explicit controlled-meter provenance. Successful release replaces/stops charging audio in original game; later GMS integration must not layer independent charge/release tracks. Original sequence files retained only as provenance.
+
 # MM5 charge audio — review sequences only
 
 User hearing approval PENDING. Do not import these as Sound resources: each contains an actual full press/charge/release sequence, including the already-approved ordinary shot at the beginning. This lets user hear charging and the original release interaction, without artificial channel isolation or cuts through sound.

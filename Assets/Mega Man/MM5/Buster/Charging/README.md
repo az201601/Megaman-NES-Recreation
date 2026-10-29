@@ -21,7 +21,7 @@ Two intermediate phases (5/4 components); four full phases (10/8/12/5 components
 
 Medium output48x16; full128x32. Displayed OAM samples: intermediate phase0 at ages2..5,1 at6..10,0 again11..13; full0 at2..3,1 at4..6,2 at7..9,3 at10..12,0 again13. Phase0 begins before its first sampled display; do not mistake OAM lag for a shortened GMS lifecycle. Actual GMS animation/event integration is separate. No hitbox/collision/damage information inferred from alpha.
 
-Audio files in the review pack are full press/charge/release sequences, NOT installable isolated effects. Listen externally and approve before new Sound imports. Existing basic/landing sounds remain unchanged.
+Audio files in the updated review pack are now SEPARATE charge-only preview and intermediate/full release-only clips. Initial combined sequences were unsuitable and are superseded. Listen externally and approve before new Sound imports. Charge preview is not a seamless/import-ready loop. See AUDIO-REVIEW.md for controlled-meter release provenance. Existing basic/landing sounds remain unchanged.
 
 ## Corrected full-charge extraction after user review
 
