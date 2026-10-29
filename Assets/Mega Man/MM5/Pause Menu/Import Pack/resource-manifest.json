@@ -1,0 +1,188 @@
+{
+  "status": "Resource import checkpoint only; no working controller/events installed",
+  "credit": "Sprites by KindlyPatrick",
+  "sprites": [
+    {
+      "name": "spr_mm5_pause_weapon_icons",
+      "file": "Sprites/spr_mm5_pause_weapon_icons_strip22.png",
+      "width": 16,
+      "height": 16,
+      "frames": 22,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_upgrade_icons",
+      "file": "Sprites/spr_mm5_pause_upgrade_icons_strip2.png",
+      "width": 16,
+      "height": 16,
+      "frames": 2,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_font",
+      "file": "Sprites/spr_mm5_pause_font_strip38.png",
+      "width": 8,
+      "height": 8,
+      "frames": 38,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_tanks",
+      "file": "Sprites/spr_mm5_pause_tanks_strip3.png",
+      "width": 16,
+      "height": 16,
+      "frames": 3,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_lives",
+      "file": "Sprites/spr_mm5_pause_lives.png",
+      "width": 16,
+      "height": 16,
+      "frames": 1,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_meter_styles",
+      "file": "Sprites/spr_mm5_pause_meter_styles_strip2.png",
+      "width": 56,
+      "height": 8,
+      "frames": 2,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_main_panel",
+      "file": "Sprites/spr_mm5_pause_main_panel.png",
+      "width": 256,
+      "height": 240,
+      "frames": 1,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "spr_mm5_pause_upgrades_panel",
+      "file": "Sprites/spr_mm5_pause_upgrades_panel.png",
+      "width": 256,
+      "height": 240,
+      "frames": 1,
+      "origin": [
+        0,
+        0
+      ]
+    }
+  ],
+  "weaponFrames": [
+    {
+      "label": "M.BUSTER",
+      "grey": 0,
+      "selected": 1
+    },
+    {
+      "label": "R.CUTTER",
+      "grey": 2,
+      "selected": 3
+    },
+    {
+      "label": "I.SLASHER",
+      "grey": 4,
+      "selected": 5
+    },
+    {
+      "label": "H.BOMB",
+      "grey": 6,
+      "selected": 7
+    },
+    {
+      "label": "F.STORM",
+      "grey": 8,
+      "selected": 9
+    },
+    {
+      "label": "T.BEAM",
+      "grey": 10,
+      "selected": 11
+    },
+    {
+      "label": "S.ARM",
+      "grey": 12,
+      "selected": 13
+    },
+    {
+      "label": "M.BEAM",
+      "grey": 14,
+      "selected": 15
+    },
+    {
+      "label": "R.COIL",
+      "grey": 16,
+      "selected": 17
+    },
+    {
+      "label": "R.JET",
+      "grey": 18,
+      "selected": 19
+    },
+    {
+      "label": "R.MARINE",
+      "grey": 20,
+      "selected": 21
+    }
+  ],
+  "upgradeFrames": {
+    "energyBalancer": {
+      "grey": 0,
+      "selected": 1
+    }
+  },
+  "tankFrames": [
+    "E",
+    "W",
+    "M"
+  ],
+  "meterFrames": [
+    "unselected full meter",
+    "selected full meter"
+  ],
+  "fontChars": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .",
+  "sounds": [
+    "snd_mm5_menu_open",
+    "snd_mm5_menu_cursor"
+  ],
+  "notes": [
+    "All frame indices zero-based. State strips are NOT animations.",
+    "Meter sprites are full-style reference states, NOT29 fill levels; energy drawing/inventory remains to implement.",
+    "Panels contain only static frame/black backing. No text/counts/icons or fake inventory baked in.",
+    "Selected original Coil recovered via natural MM5 Right selection.",
+    "Resource names reflect pause system style, not a claim all art originates from MM5."
+  ],
+  "sha256": {
+    "Sprites/spr_mm5_pause_weapon_icons_strip22.png": "91a1443fbe4423aa4904d0106911b1946b60c55749efb349d928603f26a1bc1b",
+    "Sprites/spr_mm5_pause_upgrade_icons_strip2.png": "68c6ed3113aec701b28bcdda7fdaedfd3c6132d57a9ac1a793172a44f7eecc6b",
+    "Sprites/spr_mm5_pause_font_strip38.png": "fdceb874f20ac94669c8c1d1d15e56bae5c2701dfc54527d3f78ebfcda3d3848",
+    "Sprites/spr_mm5_pause_tanks_strip3.png": "f8d6ed9d54d92dbecddc166dc70d1cff4678dc832dd6f2566bd1aea5d7ec1c47",
+    "Sprites/spr_mm5_pause_lives.png": "c47ed8ff8a026b9e091a18534b58916326478ccf57e560ecb8df7192a675dc50",
+    "Sprites/spr_mm5_pause_meter_styles_strip2.png": "29fa601ce46ff4129c1eb09f3329a7158926fbe24cdf00121987de39405d0b4a",
+    "Sprites/spr_mm5_pause_main_panel.png": "e36ba5eb72369b1d1c194a221610aff58b09bb264c0dec23e51de7963059e5b9",
+    "Sprites/spr_mm5_pause_upgrades_panel.png": "b377d836a8adaaf8a0cf2176b564a4344904f89d8e6bde1a137b217a348ee8bc"
+  }
+}

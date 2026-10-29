@@ -1,6 +1,6 @@
 {
-  "credit": "Weapon-menu icons adapted from artwork by KindlyPatrick",
-  "status": "Selected colour draft pending approval. Grey designated unhighlighted by user. No GMS imports/code changes.",
+  "credit": "Sprites by KindlyPatrick",
+  "status": "Grey and selected states approved, including corrected grey Cutter. GMS user installation not confirmed.",
   "paletteSource": "Mesen0.9.9 default2C02, pinned local palette",
   "classification": "Custom palette adaptation of supplied artwork, NOT original GB/NES selected sprites",
   "dimensions": [

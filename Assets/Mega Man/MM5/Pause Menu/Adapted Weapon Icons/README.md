@@ -1,6 +1,6 @@
 # KindlyPatrick-based weapon icons — adaptation review
 
-Credit: **Weapon-menu icons adapted from artwork by KindlyPatrick.** The user supplied the reference sheet and explicitly requested attribution and allowed adaptation. Original supplied image/credit retained under Weapon Icon References. This is external reference artwork, NOT verified original Game Boy/NES ROM extraction. Author/licensing terms beyond the image signature were not supplied; verify redistribution permission before release.
+Credit: **Sprites by KindlyPatrick** The user supplied the reference sheet and explicitly requested attribution and allowed adaptation. Original supplied image/credit retained under Weapon Icon References. This is external reference artwork, NOT verified original Game Boy/NES ROM extraction. Author/licensing terms beyond the image signature were not supplied; verify redistribution permission before release.
 
 The seven earlier hand-invented icons are superseded as design direction, not approved final game art. These new16x16 proposals retain the reference sheet's interior pixel positions without scaling or redrawing. Source14x14 interior is remapped to the original MM5 four-colour unselected palette; native casing replaces the perimeter and four inset corner pixels. This is a deliberately documented modification, not a claim of byte-identical complete icons.
 

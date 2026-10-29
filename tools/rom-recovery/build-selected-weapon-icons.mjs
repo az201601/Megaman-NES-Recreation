@@ -46,12 +46,12 @@ function text(s,x,y){assert.ok(x+s.length*8<=256);for(let i=0;i<s.length;i++){le
 function blit(p,x,y){for(let j=0;j<16;j++)p.data.copy(review.data,((y+j)*256+x)*4,j*64,(j+1)*64);}
 text('WEAPON SELECTION STATES',8,8);text('GRAY',16,26);text('COLOUR',72,26);text('WEAPON',128,26);
 for(let i=0;i<7;i++){let y=40+i*18;blit(grays[i],24,y);blit(selected[i],80,y);text(manifest[i].label,128,y+4);}
-text('ADAPTED FROM KINDLYPATRICK',8,176);
+text('SPRITES BY KINDLYPATRICK',8,176);
 fs.writeFileSync(new URL('weapon-states-review.png',dir),PNG.sync.write(review));
 const large=new PNG({width:1024,height:768});for(let y=0;y<768;y++)for(let x=0;x<1024;x++){let k=(Math.floor(y/4)*256+Math.floor(x/4))*4;large.data.set(review.data.subarray(k,k+4),(y*1024+x)*4);}
 fs.writeFileSync(new URL('weapon-states-review-4x.png',dir),PNG.sync.write(large));
 // Verify final combined image pairs byte-for-byte, not just dimensions.
 const decoded=PNG.sync.read(fs.readFileSync(new URL('spr_mm1_menu_weapons_states_strip14.png',dir)));
 for(let i=0;i<7;i++)for(let y=0;y<16;y++){assert.deepEqual(decoded.data.subarray((y*224+i*32)*4,(y*224+i*32+16)*4),grays[i].data.subarray(y*64,(y+1)*64));assert.deepEqual(decoded.data.subarray((y*224+i*32+16)*4,(y*224+i*32+32)*4),selected[i].data.subarray(y*64,(y+1)*64));}
-fs.writeFileSync(new URL('selected-manifest.json',dir),JSON.stringify({credit:'Weapon-menu icons adapted from artwork by KindlyPatrick',status:'Selected colour draft pending approval. Grey designated unhighlighted by user. No GMS imports/code changes.',paletteSource:'Mesen0.9.9 default2C02, pinned local palette',classification:'Custom palette adaptation of supplied artwork, NOT original GB/NES selected sprites',dimensions:[16,16],statesOrder:'Per weapon: gray,selected; seven weapons in listed order',icons:manifest},null,2));
+fs.writeFileSync(new URL('selected-manifest.json',dir),JSON.stringify({credit:'Sprites by KindlyPatrick',status:'Grey and selected states approved, including corrected grey Cutter. GMS user installation not confirmed.',paletteSource:'Mesen0.9.9 default2C02, pinned local palette',classification:'Custom palette adaptation of supplied artwork, NOT original GB/NES selected sprites',dimensions:[16,16],statesOrder:'Per weapon: gray,selected; seven weapons in listed order',icons:manifest},null,2));
 console.log('PASS:7 selected states, native Mesen colors only,max4 colors per icon; original gray files unchanged; casing/alpha preserved; same-position source mapping;14-frame PNG pairs verified.');

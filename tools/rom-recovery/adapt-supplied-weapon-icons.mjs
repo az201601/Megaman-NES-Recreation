@@ -37,9 +37,9 @@ function text(s,x,y){assert.ok(x+s.length*8<=256);for(let i=0;i<s.length;i++){le
 function blit(p,x,y){for(let j=0;j<16;j++)for(let k=0;k<16;k++){if((j===0||j===15)&&(k===0||k===15))continue;let s=(j*16+k)*4;sheet.data.set(p.data.subarray(s,s+4),((y+j)*256+x+k)*4);}}
 text('KINDLYPATRICK ADAPTATION',8,8);text('SOURCE',8,26);text('MM5',64,26);text('WEAPON',112,26);
 for(let i=0;i<7;i++){let y=40+i*18;blit(originals[i],24,y);blit(adapted[i],72,y);text(manifest[i].label,112,y+4);}
-text('ADAPTED FROM KINDLYPATRICK',8,176);
+text('SPRITES BY KINDLYPATRICK',8,176);
 fs.writeFileSync(new URL('kindlypatrick-adaptation-review.png',dir),PNG.sync.write(sheet));
 const zoom=new PNG({width:1024,height:768});for(let y=0;y<768;y++)for(let x=0;x<1024;x++){let k=(Math.floor(y/4)*256+Math.floor(x/4))*4;zoom.data.set(sheet.data.subarray(k,k+4),(y*1024+x)*4);}
 fs.writeFileSync(new URL('kindlypatrick-adaptation-review-4x.png',dir),PNG.sync.write(zoom));
-fs.writeFileSync(new URL('adaptation-manifest.json',dir),JSON.stringify({credit:'Adapted from artwork by KindlyPatrick',source:'Unmodified user-supplied sheet preserved in Weapon Icon References',classification:'External artwork adaptation, NOT original GB/NES ROM extraction',palette:colors,icons:manifest,status:'Draft for shape/palette review only; no GMS import or selected states yet'},null,2));
+fs.writeFileSync(new URL('adaptation-manifest.json',dir),JSON.stringify({credit:'Sprites by KindlyPatrick',source:'Unmodified user-supplied sheet preserved in Weapon Icon References',classification:'External artwork adaptation, NOT original GB/NES ROM extraction',palette:colors,icons:manifest,status:'Grey icons approved. Selected states provided in Selected/. Manual GMS import not confirmed.'},null,2));
 console.log('PASS: seven unique16x16 adaptations;14x14 source-pixel positions and explicit remaps, native casing unchanged, native4-colour palette,112x16 strip, source comparison with credit.');

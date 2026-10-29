@@ -1,0 +1,29 @@
+// GMS1.4 manual resource checkpoint. No objects/events/gameplay changes.
+import{PNG}from'pngjs';import fs from'node:fs';import assert from'node:assert/strict';import{createHash}from'node:crypto';
+const root=new URL('../../',import.meta.url),base=new URL('Assets/Mega Man/MM5/Pause Menu/',root),out=new URL('Import Pack/',base);fs.mkdirSync(new URL('Sprites/',out),{recursive:true});fs.mkdirSync(new URL('Sounds/',out),{recursive:true});
+const read=p=>PNG.sync.read(fs.readFileSync(new URL(p,base))),native=PNG.sync.read(fs.readFileSync(new URL('docs/pause-menu-reference/mm5-initial-menu.png',root)));
+const resources=[];
+function save(name,p,w,h,count){assert.equal(p.width,w*count);assert.equal(p.height,h);const file=`Sprites/${name}${count>1?'_strip'+count:''}.png`;fs.writeFileSync(new URL(file,out),PNG.sync.write(p));assert.deepEqual(PNG.sync.read(fs.readFileSync(new URL(file,out))).data,p.data);resources.push({name,file,width:w,height:h,frames:count,origin:[0,0]});}
+function crop(x,y,w,h){const p=new PNG({width:w,height:h});for(let j=0;j<h;j++)native.data.copy(p.data,j*w*4,((y+j)*256+x)*4,((y+j)*256+x+w)*4);return p;}
+function strip(images){const w=images[0].width,h=images[0].height,p=new PNG({width:w*images.length,height:h});images.forEach((q,i)=>{assert.equal(q.width,w);assert.equal(q.height,h);for(let y=0;y<h;y++)q.data.copy(p.data,(y*p.width+i*w)*4,y*w*4,(y+1)*w*4);});return p;}
+const labels=['M.BUSTER','R.CUTTER','I.SLASHER','H.BOMB','F.STORM','T.BEAM','S.ARM','M.BEAM','R.COIL','R.JET','R.MARINE'],ids=['rolling_cutter','ice_slasher','hyper_bomb','fire_storm','thunder_beam','super_arm','magnet_beam'];
+const pairs=[[read('Reference/mm5-buster-unselected-original.png'),crop(32,32,16,16)]];
+for(const id of ids)pairs.push([read(`Adapted Weapon Icons/spr_mm1_menu_${id}.png`),read(`Adapted Weapon Icons/Selected/spr_mm1_menu_${id}_selected.png`)]);
+pairs.push([crop(144,96,16,16),read('Reference/mm5-coil-selected-original.png')]);
+for(const id of['jet','marine'])pairs.push([read(`Recovered Utility Icons/spr_mm4_menu_rush_${id}.png`),read(`Recovered Utility Icons/spr_mm4_menu_rush_${id}_selected.png`)]);
+assert.equal(pairs.length,11);for(const[a,b]of pairs)assert.notDeepEqual(a.data,b.data);
+save('spr_mm5_pause_weapon_icons',strip(pairs.flat()),16,16,22);
+save('spr_mm5_pause_upgrade_icons',read('Adapted Upgrade Icons/spr_mm6_menu_energy_balancer_states_strip2.png'),16,16,2);
+save('spr_mm5_pause_font',read('Reference/mm5-original-complete-font-reference.png'),8,8,38);
+save('spr_mm5_pause_tanks',strip([crop(24,192,16,16),read('Reference/mm1-w-tank-letter-flip-draft.png'),crop(80,192,16,16)]),16,16,3);
+save('spr_mm5_pause_lives',crop(208,192,16,16),16,16,1);
+save('spr_mm5_pause_meter_styles',strip([crop(176,104,56,8),crop(64,40,56,8)]),56,8,2);
+function panel(upgrades){const p=new PNG({width:256,height:240});for(let i=0;i<256*240;i++)p.data.set([0,0,0,255],i*4);const blue=[21,95,217,255],white=[255,254,255,255];function line(x,y,w,h,c){for(let j=0;j<h;j++)for(let i=0;i<w;i++)p.data.set(c,((y+j)*256+x+i)*4);}function box(x,y,w,h,c){line(x+2,y,w-4,1,c);line(x+2,y+h-1,w-4,1,c);line(x,y+2,1,h-4,c);line(x+w-1,y+2,1,h-4,c);for(const[i,j]of[[1,1],[w-2,1],[1,h-2],[w-2,h-2]])line(x+i,y+j,1,1,c);}box(8,8,240,224,blue);box(10,10,236,220,white);for(const y of(upgrades?[32,202]:[32,163,202])){line(11,y,234,1,blue);line(11,y+2,234,1,white);}if(upgrades)box(16,112,224,84,blue);return p;}
+save('spr_mm5_pause_main_panel',panel(false),256,240,1);save('spr_mm5_pause_upgrades_panel',panel(true),256,240,1);
+for(const name of['snd_mm5_menu_open','snd_mm5_menu_cursor'])fs.copyFileSync(new URL(`Assets/Audio/Mega Man/MM5/Pause Menu/${name}.wav`,root),new URL(`Sounds/${name}.wav`,out));
+fs.writeFileSync(new URL('CREDITS.txt',out),'Sprites by KindlyPatrick\n\nThis displayed credit applies to the seven supplied-sheet weapon designs.\nOriginal game assets belong to Capcom/their rights holders. Source adaptations and native ROM recoveries are documented in the repository. Credit is not a substitute for redistribution permission.\n');
+const manifest={status:'Resource import checkpoint only; no working controller/events installed',credit:'Sprites by KindlyPatrick',sprites:resources,weaponFrames:labels.map((label,i)=>({label,grey:2*i,selected:2*i+1})),upgradeFrames:{energyBalancer:{grey:0,selected:1}},tankFrames:['E','W','M'],meterFrames:['unselected full meter','selected full meter'],fontChars:'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .',sounds:['snd_mm5_menu_open','snd_mm5_menu_cursor'],notes:['All frame indices zero-based. State strips are NOT animations.','Meter sprites are full-style reference states, NOT29 fill levels; energy drawing/inventory remains to implement.','Panels contain only static frame/black backing. No text/counts/icons or fake inventory baked in.','Selected original Coil recovered via natural MM5 Right selection.','Resource names reflect pause system style, not a claim all art originates from MM5.']};
+manifest.sha256=Object.fromEntries(resources.map(r=>[r.file,createHash('sha256').update(fs.readFileSync(new URL(r.file,out))).digest('hex')]));fs.writeFileSync(new URL('resource-manifest.json',out),JSON.stringify(manifest,null,2));
+// Decode each combined weapon frame and compare with source pixel rows.
+const combined=read('Import Pack/Sprites/spr_mm5_pause_weapon_icons_strip22.png');pairs.flat().forEach((q,i)=>{for(let y=0;y<16;y++)assert.deepEqual(combined.data.subarray((y*352+i*16)*4,(y*352+i*16+16)*4),q.data.subarray(y*64,(y+1)*64));});
+console.log('PASS:8 sprite resources,22 weapon states exact source pixels, original selected Coil, corrected grey Cutter,2 approved sound WAVs copied unchanged; no baked counts/gameplay.');

@@ -6,7 +6,7 @@
 
 The seven adapted weapon/tool menu icons are credited as:
 
-> Weapon-menu icons adapted from artwork by KindlyPatrick.
+> Sprites by KindlyPatrick
 
 Adaptations retain the source designs, remap their colours to the original MM5 unselected palette and use the original MM5 menu casing. The unmodified reference sheet is preserved in `Assets/Mega Man/MM5/Pause Menu/Weapon Icon References/`.
 

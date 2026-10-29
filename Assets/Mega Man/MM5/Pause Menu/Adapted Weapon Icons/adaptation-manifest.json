@@ -1,5 +1,5 @@
 {
-  "credit": "Adapted from artwork by KindlyPatrick",
+  "credit": "Sprites by KindlyPatrick",
   "source": "Unmodified user-supplied sheet preserved in Weapon Icon References",
   "classification": "External artwork adaptation, NOT original GB/NES ROM extraction",
   "palette": [
@@ -154,5 +154,5 @@
       "state": "unselected"
     }
   ],
-  "status": "Draft for shape/palette review only; no GMS import or selected states yet"
+  "status": "Grey icons approved. Selected states provided in Selected/. Manual GMS import not confirmed."
 }

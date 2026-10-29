@@ -2,7 +2,7 @@
 
 User designates existing grey adaptations as UNHIGHLIGHTED and requests coloured HIGHLIGHTED states when selected. This checkpoint provides seven colour proposals next to unchanged grey icons. No GMS/menu/controller/import changes. Selected-colour approval pending.
 
-Credit: **Weapon-menu icons adapted from artwork by KindlyPatrick.** See root CREDITS.md and preserved user sheet. These are custom NES-palette adaptations, NOT verified original GB/NES selected sprites. Existing attribution/permission caveats continue.
+Credit: **Sprites by KindlyPatrick** See root CREDITS.md and preserved user sheet. These are custom NES-palette adaptations, NOT verified original GB/NES selected sprites. Existing attribution/permission caveats continue.
 
 All icons16x16. Same interior source pixel positions and same casing geometry as grey. Colour mapping explicit in selected-manifest.json; approved pinned Mesen0.9.9 default palette only, at most4 total colours per icon including black, no anti-aliasing/scaling. Source sheet's hues guide selected palettes. Rolling Cutter retains the source grey/white colours: source112,112,112 maps to NES00/666666, source184,184,184 to NES3D/B8B8B8, white to NES30/FFFEFF, black to NES0F. Casing uses NES3D. NO gold; no black replacement of grey fill. Super Arm uses warm rust/cream with gold casing. Ice blue/white, Bomb green, Fire red/gold/cream, Thunder gold/white/grey, Magnet blue/cyan/white. These are icon colours only, NOT approved player weapon palettes, energy consumption or gameplay effects.
 
