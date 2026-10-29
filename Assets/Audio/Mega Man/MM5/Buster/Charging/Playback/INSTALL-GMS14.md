@@ -56,3 +56,7 @@ Same GMS1.4 queued-buffer approach used by accepted Cut Man music. queue buffer_
 charge-audio-gml-model.mjs executes actual GML-subset with mocked queue/buffer APIs. Checks intro once,50 refills, short/long stop/restart, stale/shutdown callbacks, no stage-voice stop, allocation/load/play failures, double cleanup. This does NOT prove actual GMS async ordering, handle reuse/latency, compiler availability or sound smoothness. Rapid restart especially needs user runtime test. Source code uses known1.4 APIs, no GMS2 structs/methods/cleanup event or modern Playback Ended.
 
 Approved waveform seam hearing "very smooth" is preserved; this new queue playback itself remains user-runtime pending. Player charging, pending-release/cancel/slot handling, face-safe colour selection and actual charged emission still not enabled at this test checkpoint.
+
+## User runtime acceptance
+
+User confirmed F6 playback, stopping and restarting "they all work with no errors". Queue audition is accepted; next controller checkpoint removes temporary F6 Step and drives these same scripts from measured X-charge events. This acceptance does not certify new charging controller runtime yet.

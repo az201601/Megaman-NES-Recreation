@@ -14,6 +14,7 @@ const cases=[
  {name:'release during slide',release:60,keys:t=>t===50?['DOWN','A']:[]},
  {name:'hold through slide',release:82,keys:t=>t===50?['DOWN','A']:[]},
  {name:'start hold during slide',start:5,release:86,keys:t=>t===1?['DOWN','A']:[]},
+ {name:'mid pending repress',release:42,mask:7,repress:56},
  ...[1,2,4,7].map(mask=>({name:'full occupied mask'+mask,release:82,mask})),
  ...[1,2,4,7].map(mask=>({name:'mid occupied mask'+mask,release:42,mask})),
 ];
@@ -37,6 +38,7 @@ for(const c of cases){
   for(let b=0;b<8;b++)n.buttonUp(1,b);
   for(const k of c.keys?.(t)||[])n.buttonDown(1,Controller['BUTTON_'+k]);
   if(t>=(c.start||1)&&t<c.release)n.buttonDown(1,Controller.BUTTON_B);
+  if(t===c.repress)n.buttonDown(1,Controller.BUTTON_B);
   // Controlled slot occupancy just before release: clone initialized original basic shot.
   // Do NOT patch the charge, allocation, emission or movement routines.
   if(c.mask&&t===c.release){
@@ -94,4 +96,7 @@ for(const mask of [1,2,4,7]){
  assert.equal(mid.sounds.filter(s=>s.command===0x20).length,1);
  if(mask===7){assert.equal(mid.rows[41].charge,40);assert.equal(mid.rows[41].pose,0);}
 }
-console.log('16 charge interaction cases passed: moving/air/ladder releases and direct spawn writes, ladder pause16, slide charge freeze/delayed release, controlled full-slot rejection and pending intermediate release.');
+const pendingRepress=get('mid pending repress');
+assert.equal(pendingRepress.births[1].t,56);
+assert.equal(pendingRepress.rows[55].shots[0].animation,0xa8);
+console.log('17 charge interaction cases passed: moving/air/ladder releases and direct spawn writes, ladder pause16, slide charge freeze/delayed release, controlled full-slot rejection and pending intermediate release.');
