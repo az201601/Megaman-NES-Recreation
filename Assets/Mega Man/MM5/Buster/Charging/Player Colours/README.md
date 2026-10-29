@@ -35,3 +35,7 @@ Walking/air/ladder/shooting charge variants and runtime selection/playback integ
 ## Standing installed; next movement batch
 
 User confirmed standing charge resource imported. See IMPORT-MOVEMENT.md and Downloads/mm5-charge-walk-air.zip for walking24 cells32x32 and airborne6 cells32x40, both origins16,16. No event changes; do not animate walk as one24-frame loop. Movement colour import pending.
+
+## Movement installed; ladder/slide batch
+
+User confirms walking/air charge sprites imported. Next IMPORT-LADDER-SLIDE.md and Downloads/mm5-charge-ladder-slide.zip: climb12 cells, ladder-top6 cells, slide6 cells; all32x40/origin16,16. No event changes or ladder-top firing claims. Face-safe palette composition, exact accepted base frames and dust exclusion checks pass. Import confirmation pending.
