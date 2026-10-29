@@ -67,3 +67,9 @@ User ultimate direction: eight non–Mega Man NES-inspired stages; Castlevania, 
 ## Selected icon colour proposals
 
 User explicitly assigns existing grey icons to unhighlighted state and requests selected coloured versions. build-selected-weapon-icons.mjs adds seven selected16x16 proposals with exact source-position remaps into pinned Mesen palette, max4 colours each, unchanged casing geometry/alpha; original grey PNG SHA256 identities verified untouched. KindlyPatrick credit retained. Shapes not redrawn/scaled. Paired grey/colour review and14-frame alternating state strip prepared, palette maps recorded. Cutter has custom warm casing/black background because reference blade was grey, no claim original selected colours. Source-derived iceblue/greenbomb/firewarm/goldthunder/creamarm/bluemagnet. User colour approval pending; no GMS/gameplay/weapon palette changes. Separate originalBuster/Rush and E/W/M work unaffected.
+
+## Approved paired states / layout v2
+
+User “this looks good!” approves grey/selected custom icon pairs. Next agreed task places approved icons into full menu draft. build-pause-layout-v2.mjs produces Cutter-selected primary and Buster-selected alternate, same11 labels/frame/font; approved icon PNG bytes checked exact. One highlighted row, other weapon icons grey. Selection box18px matchesrowpitch, avoiding overwriting previous row's icon border. New original unselected Buster recovered with natural pause Right-to-Coil; grey-native palette verified, no RAM/colour patch.
+
+W tank now original M casing with8x8 letter interior only vertically flipped, outside pixel identity asserted; user-approved method, still art draft not tank logic. Jet/Marine original icon recovery still pending, explicitly2 placeholders. Bar/count values illustrative, optionalequipment notenabled, no GMS changes. Source credit maintained. V2 layout/frame review pending; icon pair approval doesn't imply layout/gameplay acceptance.
