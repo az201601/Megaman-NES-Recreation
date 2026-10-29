@@ -128,8 +128,16 @@
       8
     ]
   },
-  "placeholders": [
-    "Rush Jet and Marine originals pending recovery"
-  ],
+  "placeholders": [],
+  "upgradeNavigation": {
+    "label": "UPGRADES",
+    "button": [
+      80,
+      208,
+      96,
+      18
+    ],
+    "note": "Visual navigation draft; actual page input not implemented"
+  },
   "scope": "Static layout review only. No inventory ownership, gameplay or controls implemented."
 }

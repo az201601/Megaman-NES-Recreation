@@ -31,7 +31,7 @@ for(const [column,entries]of[left,right].entries())for(const [row,label]of entri
  const x=column===0?16:136,y=52+row*18;placements.push({label,x,y});
  if(label==='M.BUSTER'){if(label===selectedLabel)crop(32,32,16,16,x,y);else icon(busterGray,x,y);}
  else if(ids[label]){const id=ids[label],file=label===selectedLabel?`Selected/spr_mm1_menu_${id}_selected.png`:`spr_mm1_menu_${id}.png`;icon(PNG.sync.read(fs.readFileSync(new URL(file,iconBase))),x,y);}
- else if(label==='R.COIL')crop(144,96,16,16,x,y);else placeholder(x,y);
+ else if(label==='R.COIL')crop(144,96,16,16,x,y);else if(label==='R.JET'||label==='R.MARINE'){const id=label==='R.JET'?'jet':'marine';icon(PNG.sync.read(fs.readFileSync(new URL(`../Recovered Utility Icons/spr_mm4_menu_rush_${id}.png`,iconBase))),x,y);}else placeholder(x,y);
  text(label,x+20,y,label===selectedLabel?cyan:white);crop(label===selectedLabel?64:176,label===selectedLabel?40:104,56,8,x+20,y+8);
  if(label===selectedLabel)box(x-3,y-1,111,18,cyan);
 }
@@ -43,6 +43,7 @@ for(const {label,x,y}of placements){
  let expected;
  if(ids[label])expected=PNG.sync.read(fs.readFileSync(new URL(label===selectedLabel?`Selected/spr_mm1_menu_${ids[label]}_selected.png`:`spr_mm1_menu_${ids[label]}.png`,iconBase)));
  else if(label==='M.BUSTER'&&label!==selectedLabel)expected=busterGray;
+ else if(label==='R.JET'||label==='R.MARINE')expected=PNG.sync.read(fs.readFileSync(new URL(`../Recovered Utility Icons/spr_mm4_menu_rush_${label==='R.JET'?'jet':'marine'}.png`,iconBase)));
  if(expected)for(let j=0;j<16;j++)assert.deepEqual(out.data.subarray(((y+j)*256+x)*4,((y+j)*256+x+16)*4),expected.data.subarray(j*64,(j+1)*64),'Exact approved icon, selection does not overlap');
 }
 
@@ -62,10 +63,10 @@ let changed=0;for(let j=0;j<16;j++)for(let i=0;i<16;i++){let k=(j*16+i)*4;if(i<4
 assert.ok(changed>0);fs.writeFileSync(new URL('mm1-w-tank-letter-flip-draft.png',ref),PNG.sync.write(wTank));icon(wTank,88,182);text('00',108,187);
 crop(80,192,16,16,160,182);text('00',180,187);
 line(11,202,234,1,blue);line(11,204,234,1,white);
-text('E. BALANCER',16,214,muted);box(148,208,92,18,cyan);text('UPGRADES',160,214);
+box(80,208,96,18,cyan);text('UPGRADES',96,214);
 const dir=new URL('Assets/Mega Man/MM5/Pause Menu/Layout Review/',root);fs.mkdirSync(dir,{recursive:true});
 fs.writeFileSync(new URL(`mm1-custom-pause-layout-v2-${variant}.png`,dir),PNG.sync.write(out));
 const zoom=new PNG({width:1024,height:960});for(let y=0;y<960;y++)for(let x=0;x<1024;x++){const i=(Math.floor(y/4)*256+Math.floor(x/4))*4;zoom.data.set(out.data.subarray(i,i+4),(y*1024+x)*4);}
 fs.writeFileSync(new URL(`mm1-custom-pause-layout-v2-${variant}-4x.png`,dir),PNG.sync.write(zoom));
-fs.writeFileSync(new URL(`layout-v2-${variant}.json`,dir),JSON.stringify({size:[256,240],font:'User-approved larger original MM5 set',selectedLabel,livesDisplay:{icon:[16,13,16,16],count:[36,19],section:'header outside weapons and utilities',example:'03',note:'Illustrative count only; no starting-lives decision or gameplay wiring'},healthDisplay:{label:'HEALTH',labelPosition:[96,19],bar:[152,18,56,8]},placements,originalCrops:{buster:[32,32,16,16],coil:[144,96,16,16],eTank:[24,192,16,16],mTank:[80,192,16,16],life:[208,192,16,16],energy:[176,104,56,8]},placeholders:['Rush Jet and Marine originals pending recovery'],scope:'Static layout review only. No inventory ownership, gameplay or controls implemented.'},null,2));
-console.log('PASS:256x240 layout,11 unique labels within panel bounds, approved original MM5 glyphs only; approved custom icons placed, exactly one selection, W letter-only flip verified;2 Rush placeholders remain.');
+fs.writeFileSync(new URL(`layout-v2-${variant}.json`,dir),JSON.stringify({size:[256,240],font:'User-approved larger original MM5 set',selectedLabel,livesDisplay:{icon:[16,13,16,16],count:[36,19],section:'header outside weapons and utilities',example:'03',note:'Illustrative count only; no starting-lives decision or gameplay wiring'},healthDisplay:{label:'HEALTH',labelPosition:[96,19],bar:[152,18,56,8]},placements,originalCrops:{buster:[32,32,16,16],coil:[144,96,16,16],eTank:[24,192,16,16],mTank:[80,192,16,16],life:[208,192,16,16],energy:[176,104,56,8]},placeholders:[],upgradeNavigation:{label:'UPGRADES',button:[80,208,96,18],note:'Visual navigation draft; actual page input not implemented'},scope:'Static layout review only. No inventory ownership, gameplay or controls implemented.'},null,2));
+console.log('PASS:256x240 layout,11 unique labels within panel bounds, approved original MM5 glyphs only; approved custom icons placed, exactly one selection, W letter-only flip verified; original Rush icons placed, no placeholders.');

@@ -1,0 +1,38 @@
+{
+  "size": [
+    256,
+    240
+  ],
+  "selectedItem": "energy_balancer",
+  "items": [
+    {
+      "id": "energy_balancer",
+      "name": "ENERGY BALANCER",
+      "icon": [
+        32,
+        64,
+        16,
+        16
+      ],
+      "selection": [
+        24,
+        56,
+        32,
+        32
+      ],
+      "description": [
+        "ROUTES SPARE WEAPON",
+        "ENERGY TO THE WEAPON",
+        "WITH THE LOWEST ENERGY."
+      ]
+    }
+  ],
+  "descriptionPanel": [
+    16,
+    112,
+    224,
+    84
+  ],
+  "status": "Static review only. Cursor-driven descriptions proposed, not implemented. Description copy draft, not final gameplay specification. No speculative upgrades added.",
+  "navigation": "UPGRADES on main page; WEAPONS on upgrades page; input keys undecided."
+}

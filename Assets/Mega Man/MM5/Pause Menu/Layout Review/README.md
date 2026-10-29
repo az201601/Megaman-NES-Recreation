@@ -43,3 +43,11 @@ User requests moving the life (not health) icon and adding numerical lives. V2 r
 ### Current header correction (supersedes lives-in-grid draft)
 
 User rejects lives placement in weapons/utilities and explicitly removes PAUSE text. Current v2: no PAUSE label; original head at16,13 and sample03 at36,19 in header. HEALTH label96,19 and original bar152,18 unchanged from prior header. No lives icon/text/count in weapon grid; spare utility slot remains free. Exact original head pixels and unchanged health bar asserted.03 still a static illustration, not live gameplay or an approved starting count. Both snapshots/metadata regenerated.
+
+### Separate Upgrades page and completed Rush icons
+
+User requests Energy Balancer as an icon on a separate upgrades page, along with future upgrade icons, and descriptions for the hovered selection. User specifies original MM6 source, and requests Rush Jet/Marine originals. These supersede old missing-icon/E.BALANCER text notes.
+
+Main v2 now has native MM4 grey Rush Jet/Marine icons (exact crop tests) and no placeholders; bottom E.BALANCER label removed. UPGRADES navigation button centred at80,208,96x18, text96,214. Compact weapon names, top-left lives/sample03 and health header retained. Native selected-colour Rush versions recovered alongside grey; current two main snapshots still show Cutter or Buster selected.
+
+Separate mm1-custom-upgrades-layout-v1.png (and exact4x) shows original MM6 Energy Balancer icon at32,64, cyan cursor outside icon; item name and draft description in panel below. Name is contextual description-panel heading, not a persistent text list replacing icon. Spare icon area intentionally blank for future upgrades, none invented/finalized. WEAPONS return button centred below. Both header and bottom frame bytes checked unchanged against main page. Descriptions are an illustrated cursor-driven design proposal, not interactive code; refilling rules/copy still draft. Source and reveal flags in Recovered Utility Icons/README.md. Layout review only; GMS imports and input/page navigation implementation have not begun.

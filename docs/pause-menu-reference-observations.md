@@ -85,3 +85,11 @@ User requests moving life icon (explicitly not health) and adding numbers. V2 or
 ## Corrected header: no PAUSE text, lives outside utility grid
 
 User rejects lives in weapon/utility section and says PAUSE text not needed. Supersedes previous spare-row lives placement: head16,13 plus sample03 at36,19 now top-left header; PAUSE removed. HEALTH96,19/bar152,18 retained, exact source pixels checked. No lives drawn in grid; spare utility row free again. Both v2 snapshots and metadata updated, no gameplay changes or starting-lives decision.
+
+## Upgrades page and original utility icon recovery
+
+User requests icon-based separate Upgrades page, selected-item descriptions, cleaner UPGRADES navigation position; explicitly identifies MM6 Energy Balancer source and asks to fix missing Rush Jet/Marine. recover-utility-menu-icons.mjs captures MM4 native grey/selected Jet144,112 and Marine144,96; MM6 original Energy Balancer120,192. Controlled inventory reveal, NOT natural acquisition. MM4 B1..BD=FF broad inventory fixture; MM6 single0696=01. Disassembly branch38:92E0 cross-checked against supplied ROM bytes AD9606F006A9462028CB00, invokes draw46 only if owned. Docs and four evidence PNGs record provenance. No repaint, per-icon<=4 colours, PNG roundtrip exact tests.
+
+Main draft now no placeholders, uses MM4 Jet/Marine originals; no E.BALANCER label at bottom; centred UPGRADES button. Separate upgrades v1 originalMM6 icon plus external cyan selection frame, contextual name/description panel, centred WEAPONS return. Only Energy Balancer present, future items undecided; no fake placeholders/icons. Name/description static selection illustration, not implemented cursor or mechanics. Header/top-left lives and health retained byte-exact; bottom frame preserved. Three scripts rerun PASS (including both main selection snapshots); no GMS files/ROM patches/gameplay changes. Seven KindlyPatrick adaptations/credit untouched.
+
+Exploration note: low-RAM flag probes and broad MM6 block probes did not establish acquisition flags; do not use them as gameplay proof. ROM branch established0696 and exact native menu art in final recovery. Temporary atlas/probe captures, downloaded disassembly snippets and emulator states remain ignored.work, not deliverables.
