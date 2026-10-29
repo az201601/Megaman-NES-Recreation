@@ -4,60 +4,60 @@
     240
   ],
   "font": "User-approved larger original MM5 set",
-  "selectedLabel": "R. CUTTER",
+  "selectedLabel": "R.CUTTER",
   "placements": [
     {
-      "label": "M. BUSTER",
+      "label": "M.BUSTER",
       "x": 16,
       "y": 52
     },
     {
-      "label": "R. CUTTER",
+      "label": "R.CUTTER",
       "x": 16,
       "y": 70
     },
     {
-      "label": "I. SLASHER",
+      "label": "I.SLASHER",
       "x": 16,
       "y": 88
     },
     {
-      "label": "H. BOMB",
+      "label": "H.BOMB",
       "x": 16,
       "y": 106
     },
     {
-      "label": "F. STORM",
+      "label": "F.STORM",
       "x": 16,
       "y": 124
     },
     {
-      "label": "T. BEAM",
+      "label": "T.BEAM",
       "x": 16,
       "y": 142
     },
     {
-      "label": "S. ARM",
+      "label": "S.ARM",
       "x": 136,
       "y": 52
     },
     {
-      "label": "M. BEAM",
+      "label": "M.BEAM",
       "x": 136,
       "y": 70
     },
     {
-      "label": "R. COIL",
+      "label": "R.COIL",
       "x": 136,
       "y": 88
     },
     {
-      "label": "R. JET",
+      "label": "R.JET",
       "x": 136,
       "y": 106
     },
     {
-      "label": "R. MARINE",
+      "label": "R.MARINE",
       "x": 136,
       "y": 124
     }

@@ -31,3 +31,7 @@ W placeholder replaced by Reference/mm1-w-tank-letter-flip-draft.png: original M
 Original Rush Jet/Marine icons still pending recovery: their TWO outlined slots are honest placeholders, not substitutes from the supplied sheet. Existing invented icon drafts remain historical; v2 uses approved KindlyPatrick adaptations. Optional E.BALANCER/UPGRADES area still capacity planning, not enabled equipment. Both optional adapters still undecided; pagination/reflow needed for extra entries.
 
 Tests:11 unique/in-bounds labels, exactly one selected row, all seven icon pixels exact approved state, selection outline does not overwrite adjacent icon rows, W-only-letter flip, complete font mappings. Selection outline reduced to18px high to fit18px row pitch without painting previous row's bottom icon border. Pixel images256x240 plus exact4x; no antialias/resize on source art. No GMS/menu/input/gameplay/event changes. Frame/layout review pending before importing assets. Root KindlyPatrick credit continues.
+
+### Compact-name correction
+
+User likes design and requests R.CUTTER instead of R. CUTTER. Both v2 snapshots/JSON now use compact names for all11 weapon/Rush entries. Only weapon label spacing changes; frame, bars, icons and coordinates unchanged. Generator asserts no period-space in entry labels. Run alternate snapshot with `node tools/rom-recovery/build-pause-layout-v2.mjs M.BUSTER` (default selects R.CUTTER).

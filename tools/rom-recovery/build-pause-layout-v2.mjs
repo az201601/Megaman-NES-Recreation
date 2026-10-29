@@ -5,12 +5,12 @@ const root=new URL('../../',import.meta.url),ref=new URL('Assets/Mega Man/MM5/Pa
 const glyphs=PNG.sync.read(fs.readFileSync(new URL('mm5-original-complete-font-reference.png',ref)));
 const chars=JSON.parse(fs.readFileSync(new URL('mm5-original-complete-font-reference.json',ref))).chars;
 const native=PNG.sync.read(fs.readFileSync(new URL('docs/pause-menu-reference/mm5-initial-menu.png',root)));
-const selectedLabel=process.argv[2]||'R. CUTTER';
-assert.ok(['R. CUTTER','M. BUSTER'].includes(selectedLabel));
-const variant=selectedLabel==='R. CUTTER'?'cutter-selected':'buster-selected';
+const selectedLabel=process.argv[2]||'R.CUTTER';
+assert.ok(['R.CUTTER','M.BUSTER'].includes(selectedLabel));
+const variant=selectedLabel==='R.CUTTER'?'cutter-selected':'buster-selected';
 const iconBase=new URL('Assets/Mega Man/MM5/Pause Menu/Adapted Weapon Icons/',root);
 const busterGray=PNG.sync.read(fs.readFileSync(new URL('mm5-buster-unselected-original.png',ref)));
-const ids={'R. CUTTER':'rolling_cutter','I. SLASHER':'ice_slasher','H. BOMB':'hyper_bomb','F. STORM':'fire_storm','T. BEAM':'thunder_beam','S. ARM':'super_arm','M. BEAM':'magnet_beam'};
+const ids={'R.CUTTER':'rolling_cutter','I.SLASHER':'ice_slasher','H.BOMB':'hyper_bomb','F.STORM':'fire_storm','T.BEAM':'thunder_beam','S.ARM':'super_arm','M.BEAM':'magnet_beam'};
 const out=new PNG({width:256,height:240});for(let k=0;k<256*240;k++)out.data.set([0,0,0,255],k*4);
 const white=[255,254,255,255],blue=[21,95,217,255],cyan=[100,176,255,255],muted=[88,112,136,255];
 function px(x,y,c){assert.ok(x>=0&&x<256&&y>=0&&y<240);out.data.set(c,(y*256+x)*4);}
@@ -24,24 +24,25 @@ box(8,8,240,224,blue);box(10,10,236,220,white);
 line(11,32,234,1,blue);line(11,34,234,1,white);
 text('PAUSE',16,19);text('LIFE',112,19);crop(176,104,56,8,152,18);crop(208,192,16,16,224,13);
 text('WEAPONS AND UTILITIES',16,39);
-const left=['M. BUSTER','R. CUTTER','I. SLASHER','H. BOMB','F. STORM','T. BEAM'];
-const right=['S. ARM','M. BEAM','R. COIL','R. JET','R. MARINE'];
+const left=['M.BUSTER','R.CUTTER','I.SLASHER','H.BOMB','F.STORM','T.BEAM'];
+const right=['S.ARM','M.BEAM','R.COIL','R.JET','R.MARINE'];
 const placements=[];
 for(const [column,entries]of[left,right].entries())for(const [row,label]of entries.entries()){
  const x=column===0?16:136,y=52+row*18;placements.push({label,x,y});
- if(label==='M. BUSTER'){if(label===selectedLabel)crop(32,32,16,16,x,y);else icon(busterGray,x,y);}
+ if(label==='M.BUSTER'){if(label===selectedLabel)crop(32,32,16,16,x,y);else icon(busterGray,x,y);}
  else if(ids[label]){const id=ids[label],file=label===selectedLabel?`Selected/spr_mm1_menu_${id}_selected.png`:`spr_mm1_menu_${id}.png`;icon(PNG.sync.read(fs.readFileSync(new URL(file,iconBase))),x,y);}
- else if(label==='R. COIL')crop(144,96,16,16,x,y);else placeholder(x,y);
+ else if(label==='R.COIL')crop(144,96,16,16,x,y);else placeholder(x,y);
  text(label,x+20,y,label===selectedLabel?cyan:white);crop(label===selectedLabel?64:176,label===selectedLabel?40:104,56,8,x+20,y+8);
  if(label===selectedLabel)box(x-3,y-1,111,18,cyan);
 }
+assert.ok(placements.every(p=>!p.label.includes('. ')),'Compact names without space after period');
 assert.equal(placements.length,11);assert.equal(new Set(placements.map(p=>p.label)).size,11);
 assert.equal(placements.filter(p=>p.label===selectedLabel).length,1);
 // Selection must never paint over this row or its neighbours' icon pixels.
 for(const {label,x,y}of placements){
  let expected;
  if(ids[label])expected=PNG.sync.read(fs.readFileSync(new URL(label===selectedLabel?`Selected/spr_mm1_menu_${ids[label]}_selected.png`:`spr_mm1_menu_${ids[label]}.png`,iconBase)));
- else if(label==='M. BUSTER'&&label!==selectedLabel)expected=busterGray;
+ else if(label==='M.BUSTER'&&label!==selectedLabel)expected=busterGray;
  if(expected)for(let j=0;j<16;j++)assert.deepEqual(out.data.subarray(((y+j)*256+x)*4,((y+j)*256+x+16)*4),expected.data.subarray(j*64,(j+1)*64),'Exact approved icon, selection does not overlap');
 }
 
