@@ -39,6 +39,16 @@ Create each exact resource name and paste its matching entire.gml file:
 
 Do not replace scr_mm5_pause_test_move; the stage uses its separately named navigation script. Existing charge scripts including scr_mm5_charge_audio_stop must remain installed (already required by your working charge system).
 
+## 2a. Add the persistent state owner (compatibility fix)
+
+Folder: **Objects > Mega Man > MM5 > Pause Menu > Stage**.
+
+Create **obj_mm5_pause_state**: no Sprite, Visible OFF, Solid OFF, Persistent ON. Add ONLY its **Create** event, pasting `obj_mm5_pause_state_create.gml` in full.
+
+**Do not place this object in any room.** The stage-menu Create automatically creates it once via instance_exists/instance_create. It initializes globals explicitly and persists between rooms. No variable_global_exists, variable_instance_exists, or reliance on an uninitialized variable is used. This works even if testing directly from the stage rather than running the title first.
+
+This owner initializes02 spare lives and empty inventory only on its first Create. Later stage entries preserve them; an explicit future New Game can still call scr_mm5_pause_inventory_init(true). Do not manually add another state-owner instance or delete it while playing.
+
 ## 3. Add NEW stage object and6 events
 
 Folder: **Objects > Mega Man > MM5 > Pause Menu > Stage**.
@@ -116,3 +126,17 @@ The controller deactivates other currently active instances; future systems that
 If an inactive instance was already sleeping before menu opens, it is not in the saved list and remains inactive on restore. Direct saved IDs are activated without pre-filtering instance_exists (inactive instances return false there). Room End/Destroy restore/dispose tracking defensively; externally forced room changes while paused still require runtime checking if your project adds such a flow.
 
 Source/manifests/credits remain **Sprites by KindlyPatrick** for supplied-sheet weapon art. No credits screen is implemented here. No change to score (game has none), damage/invulnerability, enemies, movement physics or imported art/audio.
+
+## Fix for the reported obsolete-function compile error
+
+The earlier release incorrectly used variable_global_exists; your GMS1.4 editor reports it obsolete. It is now removed, together with all variable_instance_exists calls. Player/charge-manager fields are read directly from their accepted installed Create events (mm5_startup_active, mm5_health, buster_fire_key, buster_charge and charge_audio_voice). Those working systems are prerequisites, not optional reflected fields.
+
+If you already pasted the previous controller, update ONLY:
+
+- Whole Script scr_mm5_pause_inventory_init
+- Whole Script scr_mm5_pause_open
+- Whole Script scr_mm5_pause_restore
+- obj_mm5_pause_menu > Create (whole event)
+- Create NEW obj_mm5_pause_state and paste its Create as in2a above (no room instance)
+
+Other events, resource names and room placement are unchanged. No new sprite/audio imports. The updated ZIP contains12GML files (rather than11). Compile again before running; this compatibility fix has source/model checks but still needs your compiler/runtime confirmation.

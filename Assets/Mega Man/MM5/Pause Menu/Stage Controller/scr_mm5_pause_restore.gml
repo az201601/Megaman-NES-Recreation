@@ -9,7 +9,7 @@ ds_list_clear(menu_frozen_list);
 if (menu_fire_released && instance_exists(menu_player))
 {
     // A B release while menu was open must not emit a buffered shot on return.
-    if (variable_instance_exists(menu_player, "buster_charge")) menu_player.buster_charge = 0;
+    menu_player.buster_charge = 0;
     if (menu_charge_object >= 0)
     {
         with (menu_charge_object) scr_mm5_charge_audio_stop();

@@ -2,15 +2,11 @@
 if (menu_open || !menu_lists_ready) exit;
 menu_player = instance_find(obj_mm5_megaman, 0);
 if (!instance_exists(menu_player)) exit;
-if (variable_instance_exists(menu_player, "mm5_startup_active"))
-{
-    if (menu_player.mm5_startup_active) exit;
-}
+if (menu_player.mm5_startup_active) exit;
 menu_health = clamp(floor(menu_player.mm5_health), 0, 28);
 menu_lives = global.mm5_lives;
 for (var i = 0; i < 11; i += 1) menu_energy[i] = global.mm5_pause_energy[i];
-menu_fire_key = ord("X");
-if (variable_instance_exists(menu_player, "buster_fire_key")) menu_fire_key = menu_player.buster_fire_key;
+menu_fire_key = menu_player.buster_fire_key;
 menu_fire_held_at_open = keyboard_check(menu_fire_key);
 menu_fire_released = false;
 ds_list_clear(menu_frozen_list);
@@ -22,15 +18,13 @@ with (all)
     {
         if (object_index == other.menu_charge_object)
         {
-            if (variable_instance_exists(id, "charge_audio_voice"))
+            // Accepted charge manager defines this field in Create.
+            if (charge_audio_voice != -1)
             {
-                if (charge_audio_voice != -1)
+                if (audio_is_playing(charge_audio_voice) && !audio_is_paused(charge_audio_voice))
                 {
-                    if (audio_is_playing(charge_audio_voice) && !audio_is_paused(charge_audio_voice))
-                    {
-                        ds_list_add(other.menu_voice_list, charge_audio_voice);
-                        audio_pause_sound(charge_audio_voice);
-                    }
+                    ds_list_add(other.menu_voice_list, charge_audio_voice);
+                    audio_pause_sound(charge_audio_voice);
                 }
             }
         }

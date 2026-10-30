@@ -25,6 +25,8 @@ menu_frozen_list = ds_list_create();
 menu_voice_list = ds_list_create();
 menu_lists_ready = true;
 global.mm5_pause_active = false;
+// Persistent owner provides explicit first-time initialization, including direct-stage tests.
+if (!instance_exists(obj_mm5_pause_state)) instance_create(0, 0, obj_mm5_pause_state);
 scr_mm5_pause_inventory_init(false);
 for (var i = 0; i < 11; i += 1) menu_energy[i] = global.mm5_pause_energy[i];
 for (var k = 0; k < 3; k += 1) menu_tanks[k] = global.mm5_pause_tanks[k];
