@@ -1,0 +1,242 @@
+[
+  {
+    "mode": "openingCursor",
+    "press": 24,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 25,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 26,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 27,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 28,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 29,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 30,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 31,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 32,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 33,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 34,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 35,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 36,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 37,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 38,
+    "cursorSound": 38,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 39,
+    "cursorSound": 39,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 40,
+    "cursorSound": 40,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 41,
+    "cursorSound": 41,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 42,
+    "cursorSound": 42,
+    "walkDelta": 0
+  },
+  {
+    "mode": "openingCursor",
+    "press": 43,
+    "cursorSound": 43,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 24,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 25,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 26,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 27,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 28,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 29,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 30,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 31,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 32,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 33,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 34,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 35,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 36,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 37,
+    "cursorSound": null,
+    "walkDelta": 0
+  },
+  {
+    "mode": "closingWalk",
+    "press": 38,
+    "cursorSound": null,
+    "walkDelta": 1.296875
+  },
+  {
+    "mode": "closingWalk",
+    "press": 39,
+    "cursorSound": null,
+    "walkDelta": 1.296875
+  },
+  {
+    "mode": "closingWalk",
+    "press": 40,
+    "cursorSound": null,
+    "walkDelta": 1.296875
+  },
+  {
+    "mode": "closingWalk",
+    "press": 41,
+    "cursorSound": null,
+    "walkDelta": 1.296875
+  },
+  {
+    "mode": "closingWalk",
+    "press": 42,
+    "cursorSound": null,
+    "walkDelta": 1.296875
+  },
+  {
+    "mode": "closingWalk",
+    "press": 43,
+    "cursorSound": null,
+    "walkDelta": 1.296875
+  }
+]

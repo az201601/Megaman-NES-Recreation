@@ -1,0 +1,7 @@
+import fs from'node:fs';import assert from'node:assert/strict';
+const base=new URL('../../docs/pause-menu-reference/transitions/',import.meta.url),t=JSON.parse(fs.readFileSync(new URL('native-transition-trace.json',base))),p=JSON.parse(fs.readFileSync(new URL('native-input-probes.json',base)));
+for(const phase of['open','close']){const rows=t.traces[phase];assert.equal(rows.length,121);assert.equal(rows[1].imageHash,rows[0].imageHash);assert.equal(rows[14].nonBlack,0);const blank=rows.filter(r=>r.frame<=35&&r.nonBlack===0).map(r=>r.frame);assert.deepEqual(blank,Array.from({length:phase==='open'?10:9},(_,i)=>14+i));for(const f of[2,6,10,14])assert.notDeepEqual(rows[f].palette,rows[f-1].palette);assert.equal(rows[35].imageHash,rows[36].imageHash);}
+assert.deepEqual(t.sounds,[{phase:'open',frame:1,command:0x29},{phase:'close',frame:1,command:0x28}]);
+for(const mode of['openingCursor','closingWalk']){const probes=p.filter(r=>r.mode===mode);for(const r of probes)assert.equal(mode==='openingCursor'?r.cursorSound!==null:r.walkDelta!==0,r.press>=38);}
+for(const phase of ['open','close']){const r=t.traces[phase];for(let i=0;i<r.length;i++){if(r[i].nonBlack>0){assert.equal(r[i].scroll.x,0);assert.equal(r[i].scroll.y,0);assert.equal(r[i].scroll.fineX,0);}if(i&&r[i].scroll.v!==r[i-1].scroll.v)assert.ok(r[i].nonBlack===0||r[i-1].nonBlack===0,'Nametable switch crosses black interval');}}
+console.log('PASS: native palette steps2/6/10/14; black interval; bright35; input accepted38; original29/28 timing; no slide. Original fixture only, NOT GMS implementation.');
