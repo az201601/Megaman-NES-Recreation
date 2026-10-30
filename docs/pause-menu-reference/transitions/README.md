@@ -41,11 +41,15 @@ Do not substitute a smooth black rectangle alpha animation and call it1:1. Our c
 
 Independent cloned pre-open and pre-close states tested one-frame Right presses at EACH frame24..43. During opening, presses24..37 produced no cursor command; first accepted38 produces original27hex cursor sound immediately. During closing, presses24..37 produced zero walk displacement; first38 moves1.296875px. Later39..43 accepted likewise. No held-input/charge/pause-rearm equivalence claimed by those fresh-press probes.
 
-## Implementation status / next change
+## Implementation followup (source ready; installation/runtime pending)
 
-**Observation only. Existing GMS stage controller still lacks these fades; no new import/install instructions yet.** Current previously delivered closing-key release guard must be revisited together with the timed transition so it doesn't accidentally extend the native timing. Existing charge/audio/input safety requires runtime checks, not deletion based on fresh-press-only probes.
+These native GIFs remain observation-only. The later stage controller source/package now implements opening/closing phases, palette-step shader/LUT and outgoing stage snapshot including installed HUD. See Assets/Mega Man/MM5/Pause Menu/Stage Controller/INSTALL-GMS14.md. GMS1.4.1760 compilation/GPU/scheduler/keyboard testing still belongs in user's project, not claimed by this observation or source tests.
 
-Planned phases: capture/freeze outgoing stage -> original stepped fade-out -> black switch -> stepped menu fade-in -> menu-ready38; reverse on successful confirmation, then resume world/input only at corresponding ready boundary. Sound requests occur on transition entry, not at fade completion. Ignore navigation/confirmation during transition. Preserve existing custom layout, plural KindlyPatrick credit, ownership hiding, Start/A confirmation and no leaked jump. Actual GMS solution still to build/test; do not install any unreviewed draft fade/shader.
+Fresh transition triggers sound at1, outgoing dims2/6/10/14, blank interval with separate incoming24(open)/23(close), brighter27/31, full35, ready38. No release-dependent fade delay. World stays frozen until close38; separately rearms newly held fire, preserving prior charge safety. Approved custom layout/ownership/audio/credit retained. RGB white alias limitations and explicit custom white20/30 convention documented in install guide; not a claim of indexed equivalence for our different scene/art.
+
+Additional independent native held-confirm probes: fresh close A or Start held through45 versus tapped1/released2. In all four, playerx128/y180/state0 identical through35..45. Held confirm does not extend transition or auto-jump. Raw native-held-confirm-probes.json included; reproduce with probe-mm5-transition-held-confirm.mjs.
+
+Software mirror of actual LUT reproduces native original outgoing frames2/6/10/14 AND incoming24(or23)/27/31 pixel-for-pixel using correctly labeled original white20/30 pixels. White labels derived from first fade level, not claimed recoverable from RGB alone; subsequent levels checked with same labels. Tests exercise actual timing GML with mocks, not a GMS engine. No artificial fade overlay in implementation.
 
 ## Reproduce
 
@@ -56,6 +60,7 @@ node tools/rom-recovery/mm5-start.mjs
 node tools/rom-recovery/mm5-stage.mjs
 node tools/rom-recovery/inspect-mm5-menu-transitions.mjs
 node tools/rom-recovery/probe-mm5-transition-input.mjs
+node tools/rom-recovery/probe-mm5-transition-held-confirm.mjs
 python -m pip install --target tools/rom-recovery/.work/pydeps pillow
 python tools/rom-recovery/build-mm5-transition-review.py
 node tools/rom-recovery/test-mm5-menu-transitions.mjs

@@ -6,7 +6,21 @@ if (instance_number(obj_mm5_pause_menu) > 1)
     exit;
 }
 menu_open = false;
-menu_just_opened = false;
+// phase0=stage,1=opening,2=menu ready,3=closing. ticks use native frame1 input.
+menu_phase = 0;
+menu_tick = 0;
+menu_dim = 0;
+menu_show_stage = false;
+menu_block_fire = false;
+menu_stage_surface = -1;
+menu_frame_surface = -1;
+menu_lut_surface = -1;
+menu_dim_uniform = shader_get_uniform(shd_mm5_pause_fade, "u_dim");
+menu_white_uniform = shader_get_uniform(shd_mm5_pause_fade, "u_white30");
+menu_lut_sampler = shader_get_sampler_index(shd_mm5_pause_fade, "s_fade_lut");
+if (room_speed != 60) show_error("MM5 pause transitions require room speed60.", true);
+if (!shader_is_compiled(shd_mm5_pause_fade))
+    show_error("MM5 pause: shd_mm5_pause_fade GLSL ES did not compile. Check BOTH shader tabs.", true);
 menu_page = 0;
 menu_cursor = 0;
 menu_upgrade_cursor = 0;

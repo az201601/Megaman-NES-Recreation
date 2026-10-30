@@ -1,28 +1,66 @@
-// Behaviour model + source/resource contract checks. NOT a GMS1.4 execution.
-import fs from'node:fs';import assert from'node:assert/strict';
-const dir=new URL('../../Assets/Mega Man/MM5/Pause Menu/Stage Controller/',import.meta.url),read=f=>fs.readFileSync(new URL(f,dir),'utf8');
+// Execute supported event source with mocks + static contracts. NOT GMS compiler/GPU/scheduler.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const dir=new URL('../../Assets/Mega Man/MM5/Pause Menu/Stage Controller/',import.meta.url);
+const read=f=>fs.readFileSync(new URL(f,dir),'utf8');
 let checks=0;function test(name,fn){fn();checks++;console.log('PASS',name);}
-class Stage{
- constructor(){this.active=new Set(['controller','player','hud','startup','projectile','charge']);this.inactive=new Set(['sleepingEnemy']);this.chargePlaying=true;this.pausedVoices=[];this.opened=false;this.pending=false;this.heldBefore=false;this.released=false;this.charge=80;this.hp=17;this.healthCache=0;this.lives=2;this.openSounds=0;this.just=false;this.snapshot=[];}
- open({start=true,ready=false,fire=false}={}){if(!start||ready||this.opened||!this.active.has('player'))return;this.snapshot=[...this.active].filter(i=>i!=='controller'&&i!=='charge');for(const i of this.snapshot){this.active.delete(i);this.inactive.add(i);}if(this.chargePlaying)this.pausedVoices.push('charge');this.chargePlaying=false;this.opened=true;this.just=true;this.heldBefore=fire;this.released=false;this.healthCache=this.hp;this.openSounds++;}
- confirm({start=false,a=false,escape=false,b=false,cursor=0,page=0}={}){if(!this.opened||this.pending)return;if(this.just){this.just=false;return;}if((start||a)&&page===0&&cursor===0)this.pending=true;}
- update(keys={}){if(!this.opened)return;if(this.heldBefore&&!keys.fire)this.released=true;if(!this.pending)return;const blocked=keys.start||keys.a||keys.left||keys.right||keys.up||keys.down||(keys.fire&&(!this.heldBefore||this.released));if(blocked)return;for(const i of this.snapshot){this.inactive.delete(i);this.active.add(i);}this.snapshot=[];if(this.released)this.charge=0;else if(this.pausedVoices.length)this.chargePlaying=true;this.pausedVoices=[];this.opened=false;this.pending=false;}
-}
-test('Start only opens, READY blocked, real health cached',()=>{let s=new Stage();s.open({start:false});assert.ok(!s.opened);s.open({ready:true});assert.ok(!s.opened);s.open();assert.equal(s.healthCache,17);assert.equal(s.openSounds,1);});
-test('Exact active-ID freeze/restore; sleeping instances stay asleep',()=>{let s=new Stage(),initial=[...s.active].sort();s.open();assert.deepEqual([...s.active].sort(),['charge','controller']);assert.ok(s.inactive.has('sleepingEnemy'));s.confirm();s.confirm({start:true});s.update({});assert.deepEqual([...s.active].sort(),initial);assert.ok(s.inactive.has('sleepingEnemy'));assert.ok(!s.active.has('sleepingEnemy'));});
-test('Same-frame opening Start ignored, no double transition',()=>{let s=new Stage();s.open();s.confirm({start:true});assert.ok(!s.pending);assert.equal(s.openSounds,1);});
-test('Start OR A confirm; B/Escape do not close',()=>{for(const k of['start','a','b','escape']){let s=new Stage();s.open();s.confirm();s.confirm({[k]:true});assert.equal(s.pending,k==='start'||k==='a');}});
-test('Release-gated close prevents held confirm/navigation/jump leakage',()=>{for(const k of['start','a','left','right','up','down','fire']){let s=new Stage();s.open();s.confirm();s.confirm({a:true});s.update({[k]:true});assert.ok(s.opened);s.update({});assert.ok(!s.opened);}});
-test('Continuously held pre-pause fire preserves charge and resumes owned voice',()=>{let s=new Stage();s.open({fire:true});s.confirm();s.confirm({a:true});s.update({fire:true});assert.ok(!s.opened);assert.equal(s.charge,80);assert.ok(s.chargePlaying);});
-test('Fire released while paused cancels charge without release shot; re-press blocked',()=>{let s=new Stage();s.open({fire:true});s.confirm();s.update({});s.confirm({start:true});s.update({fire:true});assert.ok(s.opened);s.update({});assert.equal(s.charge,0);assert.ok(!s.chargePlaying);});
-test('An already paused charge voice stays paused',()=>{let s=new Stage();s.chargePlaying=false;s.open({fire:true});s.confirm();s.confirm({start:true});s.update({fire:true});assert.ok(!s.chargePlaying);});
-test('Unowned weapon cannot select gameplay; inventory not silently consumed',()=>{let s=new Stage();s.open();s.confirm();s.confirm({start:true,cursor:1});assert.ok(!s.pending);s.confirm({start:true,cursor:11});assert.ok(!s.pending);assert.ok(!read('obj_mm5_pause_menu_step.gml').includes('global.mm5_pause_tanks[menu_cursor - 11] -='));});
-test('Global lives02 persists; explicit new game resets to02, no fabricated ownership',()=>{let live=2;live=1;const roomEntry=()=>live;assert.equal(roomEntry(),1);live=2;assert.equal(live,2);const s=read('scr_mm5_pause_inventory_init.gml');assert.ok(s.includes('global.mm5_lives = 2'));assert.ok(s.includes('global.mm5_pause_owned[i] = false'));assert.ok(s.includes('global.mm5_pause_tanks[j] = 0'));});
 const files=fs.readdirSync(dir).filter(f=>f.endsWith('.gml')),all=files.map(read).join('\n');
-test('Source contracts:12 files, actual player health, A/Start, selective activation, original UI intact',()=>{assert.equal(files.length,12);assert.ok(read('scr_mm5_pause_open.gml').includes('menu_player.mm5_health'));assert.ok(read('obj_mm5_pause_menu_begin_step.gml').includes('keyboard_check_pressed(vk_enter)'));assert.ok(read('obj_mm5_pause_menu_step.gml').includes('keyboard_check_pressed(vk_space)'));assert.ok(!read('obj_mm5_pause_menu_step.gml').includes('vk_escape'));assert.ok(!/\b(?:instance_activate_all|instance_deactivate_all|audio_stop_all|audio_pause_all|variable_global_exists|variable_instance_exists|draw_get_font|draw_set_gui_size|array_create|function)\s*\(/.test(all));assert.ok(!all.includes('menu_test_'));assert.ok(read('scr_mm5_pause_restore.gml').includes('instance_activate_object(ds_list_find_value'));});
-test('Sprite/sound/script references and glyph alphabet',()=>{const m=JSON.parse(fs.readFileSync(new URL('../Import Pack/resource-manifest.json',dir))),known=new Set([...m.sprites.map(r=>r.name),...m.sounds]);for(const n of all.match(/\b(?:spr|snd)_mm5_\w+/g)||[])assert.ok(known.has(n),n);let scripts=new Set(files.filter(f=>f.startsWith('scr_')).map(f=>f.slice(0,-4)));for(const n of ['scr_mm5_pause_box','scr_mm5_pause_text','scr_mm5_pause_meter','scr_mm5_charge_audio_stop'])scripts.add(n);for(const n of all.match(/\bscr_\w+(?=\()/g)||[])assert.ok(scripts.has(n),n);let chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .';for(const m of read('obj_mm5_pause_menu_draw_gui.gml').matchAll(/scr_mm5_pause_text\("([^"]*)"/g))assert.ok([...m[1]].every(c=>chars.includes(c)));});
-test('Explicit persistent initializer only resets once, preserves room-entry state',()=>{let state=null,globals={};function enter(){if(!state){state={persistent:true};globals.lives=2;globals.tanks=[0,0,0];}return globals;}enter();globals.lives=1;globals.tanks[0]=3;enter();assert.equal(globals.lives,1);assert.equal(globals.tanks[0],3);assert.ok(read('obj_mm5_pause_menu_create.gml').includes('if (!instance_exists(obj_mm5_pause_state))'));assert.ok(read('obj_mm5_pause_state_create.gml').includes('scr_mm5_pause_inventory_init(true)'));assert.ok(read('scr_mm5_pause_inventory_init.gml').includes('if (!argument0) exit;'));});
-test('Unowned weapon rows hidden AND skipped; visible rows keep their original slots',()=>{const draw=read('obj_mm5_pause_menu_draw_gui.gml'),nav=read('scr_mm5_pause_stage_move.gml');assert.ok(draw.includes('if (!global.mm5_pause_owned[i]) continue;'));assert.ok(nav.includes('if (!global.mm5_pause_owned[i]) continue;'));const slots=Array.from({length:11},(_,i)=>i);for(const owned of[[0],[0,1,9],[0,8,10]]){assert.deepEqual(slots.filter(i=>owned.includes(i)),owned);const eligible=slots.filter(i=>owned.includes(i)).concat([11,12,13,14]);assert.ok(eligible.every(i=>i>=11||owned.includes(i)));}assert.ok(draw.indexOf('if (!global.mm5_pause_owned[i]) continue;')<draw.indexOf('draw_sprite(spr_mm5_pause_weapon_icons'));});
-test('Confirm sound single call inside accepted weapon branch, no per-draw playback',()=>{const step=read('obj_mm5_pause_menu_step.gml');assert.equal((step.match(/audio_play_sound\(snd_mm5_menu_close/g)||[]).length,1);const start=step.indexOf('else if (menu_cursor == 0)'),sound=step.indexOf('audio_play_sound(snd_mm5_menu_close'),pending=step.indexOf('menu_pending_close = true',start);assert.ok(sound>start&&sound<pending);assert.ok(!read('obj_mm5_pause_menu_draw_gui.gml').includes('audio_play_sound'));});
-test('Owned-only cursor graph reaches tanks/pages without entering blank slots',()=>{const pos=Array.from({length:11},(_,i)=>[i<6?72:192,60+18*(i<6?i:i-6)]).concat([[36,190],[108,190],[180,190],[128,217]]);for(const owned of[[0],[0,1,9],[0,8,10]]){const visible=i=>i>=11||owned.includes(i);function move(p,dx,dy){let best=100000,next=p;pos.forEach(([x,y],i)=>{if(!visible(i))return;const a=x-pos[p][0],b=y-pos[p][1],projection=a*dx+b*dy,cross=Math.abs(a*dy-b*dx),cost=projection+cross*4;if(projection>0&&(dx===0||cross<=20)&&cost<best){best=cost;next=i;}});assert.ok(visible(next));return next;}let seen=new Set([0]),q=[0];while(q.length){let p=q.shift();for(const [dx,dy]of[[-1,0],[1,0],[0,-1],[0,1]]){let n=move(p,dx,dy);if(!seen.has(n)){seen.add(n);q.push(n);}}}assert.equal(seen.size,owned.length+4);if(owned.length===1)assert.equal(move(0,0,1),11);}});
-console.log(`${checks} stage model/static checks PASS; native GameMaker compiler, scheduler, async queues and runtime still require user checks.`);
+const begin=compile('obj_mm5_pause_menu_begin_step.gml'),step=compile('obj_mm5_pause_menu_step.gml'),sample=compile('scr_mm5_pause_transition_sample.gml');
+function compile(f){return new Function('c','with(c){'+read(f).replace(/\bexit;/g,'return;').replace(/\bmod\b/g,'%')+'}');}
+function context(){
+ const c={menu_lists_ready:true,menu_open:true,menu_pending_close:false,menu_phase:1,menu_tick:1,
+  menu_fire_held_at_open:false,menu_fire_released:false,menu_fire_key:88,menu_block_fire:false,
+  menu_stage_surface:1,menu_page:0,menu_cursor:0,menu_upgrade_cursor:0,menu_last_weapon:0,
+  menu_nav_key:-1,menu_nav_timer:0,menu_dim:0,menu_show_stage:false,
+  vk_enter:13,vk_space:32,vk_left:37,vk_right:39,vk_up:38,vk_down:40,
+  snd_mm5_menu_close:'close',snd_mm5_menu_cursor:'cursor',held:new Set(),pressed:new Set(),physical:new Set(),
+  global:{mm5_pause_tanks:[0,0,0]},sounds:[],moves:[],restores:0,opens:0,validSurface:true};
+ c.keyboard_check=k=>c.held.has(k);c.keyboard_check_pressed=k=>c.pressed.has(k);
+ c.keyboard_check_direct=k=>c.physical.has(k);c.keyboard_clear=k=>{c.held.delete(k);c.pressed.delete(k);};
+ c.surface_exists=()=>c.validSurface;c.show_debug_message=()=>{};c.audio_stop_sound=()=>{};
+ c.audio_play_sound=s=>c.sounds.push(s);c.scr_mm5_pause_stage_move=(x,y)=>c.moves.push([x,y]);
+ c.scr_mm5_pause_open=()=>c.opens++;
+ c.scr_mm5_pause_restore=()=>{c.restores++;c.menu_open=false;c.menu_phase=0;c.menu_tick=0;};
+ return c;
+}
+test('Actual GML opening frames match original schedule1..37, ready38',()=>{
+ const c=context();const expected=f=>f<2?0:f<6?1:f<10?2:f<14?3:f<24?4:f<27?3:f<31?2:f<35?1:0;
+ for(let f=1;f<=37;f++){assert.equal(c.menu_tick,f);sample(c);assert.equal(c.menu_dim,expected(f));assert.equal(c.menu_show_stage,f<24);assert.equal(c.menu_phase,1);begin(c);}
+ assert.equal(c.menu_phase,2);assert.equal(c.menu_tick,38);assert.equal(c.restores,0);
+});
+test('Actual GML close uses shorter blackout, restores before Step38',()=>{
+ const c=context();c.menu_phase=3;c.menu_pending_close=true;
+ for(let f=1;f<=37;f++){sample(c);const d=f<2?0:f<6?1:f<10?2:f<14?3:f<23?4:f<27?3:f<31?2:f<35?1:0;assert.equal(c.menu_dim,d);assert.equal(c.menu_show_stage,f>=23);assert.equal(c.restores,0);begin(c);}
+ assert.equal(c.restores,1);assert.equal(c.menu_open,false);
+});
+test('No cursor/confirmation during opening; fresh Right accepted38',()=>{
+ for(let f=1;f<=38;f++){const c=context();c.menu_tick=f;c.menu_phase=f<38?1:2;c.held.add(39);c.pressed.add(39);step(c);assert.equal(c.moves.length,f===38?1:0);}
+});
+test('Start and A each begin close immediately, sound exactly once; B/Escape ignored',()=>{
+ for(const key of[13,32,88,27]){const c=context();c.menu_phase=2;c.pressed.add(key);step(c);assert.equal(c.menu_phase,key===13||key===32?3:2);assert.equal(c.sounds.length,key===13||key===32?1:0);if(c.menu_phase===3){assert.equal(c.menu_tick,1);step(c);assert.equal(c.sounds.length,1);}}
+});
+test('Held confirm/navigation no longer extends native close timing',()=>{
+ for(const key of[13,32,37,38,39,40]){const c=context();c.menu_phase=3;c.held.add(key);for(let i=0;i<37;i++)begin(c);assert.equal(c.restores,1);assert.ok(!c.menu_open);}
+});
+test('Fire rearm clears new physical hold without freezing world; reopens only fresh Start',()=>{
+ const c=context();c.menu_open=false;c.menu_phase=0;c.menu_block_fire=true;c.physical.add(88);c.held.add(88);c.pressed.add(88);begin(c);assert.ok(!c.held.has(88));assert.equal(c.restores,0);assert.equal(c.opens,0);c.physical.clear();begin(c);assert.equal(c.menu_block_fire,false);c.pressed.add(13);begin(c);assert.equal(c.opens,1);
+});
+test('Lost volatile stage surface safely restores instead of stranding stage',()=>{const c=context();c.validSurface=false;begin(c);assert.equal(c.restores,1);assert.equal(c.menu_open,false);});
+test('Tanks unconsumed and unimplemented weapon cannot resume',()=>{for(const cursor of[1,8,11,12,13]){const c=context();c.menu_phase=2;c.menu_cursor=cursor;c.global.mm5_pause_tanks=[2,2,1];c.pressed.add(13);step(c);assert.equal(c.menu_phase,2);assert.deepEqual(c.global.mm5_pause_tanks,[2,2,1]);}});
+test('Custom pages remain accessible, Start/A on return does not resume stage',()=>{const c=context();c.menu_phase=2;c.menu_cursor=14;c.pressed.add(13);step(c);assert.equal(c.menu_page,1);c.menu_upgrade_cursor=1;step(c);assert.equal(c.menu_page,0);assert.equal(c.menu_phase,2);});
+test('GMS1.4 source contracts; no obsolete introspection/global activation/audio stops',()=>{assert.equal(files.length,14);assert.ok(!/\b(?:instance_activate_all|instance_deactivate_all|audio_stop_all|audio_pause_all|variable_global_exists|variable_instance_exists|draw_get_font|draw_set_gui_size|array_create|function|gpu_set_texfilter)\s*\(/.test(all));assert.ok(!all.includes('menu_test_'));assert.ok(read('scr_mm5_pause_restore.gml').includes('instance_activate_object(ds_list_find_value'));});
+test('Freeze exact active IDs only, async charge survives; release clears stale charge',()=>{
+ const open=read('scr_mm5_pause_open.gml'),restore=read('scr_mm5_pause_restore.gml');assert.ok(open.indexOf('surface_exists(menu_stage_surface)')<open.indexOf('instance_deactivate_object'));assert.ok(open.includes('else ds_list_add(other.menu_frozen_list, id)'));assert.ok(open.includes('audio_pause_sound(charge_audio_voice)'));assert.ok(restore.includes('menu_player.buster_charge = 0'));assert.ok(restore.includes('audio_resume_sound(voice)'));assert.ok(restore.includes('menu_fire_released'));assert.ok(!restore.includes('instance_exists(ds_list_find_value'));
+});
+test('Cached stage includes installed health HUD and surfaces clean up idempotently',()=>{
+ const draw=read('obj_mm5_pause_menu_draw_gui.gml'),dispose=read('scr_mm5_pause_dispose.gml');assert.ok(draw.includes('draw_surface_stretched(application_surface'));assert.ok(draw.includes('draw_sprite_ext(spr_mm5_health_meter'));assert.ok(draw.includes('24, 25, 1, 1, 0, c_white, 1'));assert.ok(draw.includes('d3d_set_projection_ortho(0, 0, 64, 512, 0)'));for(const name of['menu_stage_surface','menu_frame_surface','menu_lut_surface'])assert.ok(dispose.includes(`surface_free(${name})`));assert.ok(dispose.includes('if (!menu_lists_ready) exit;'));
+});
+test('Sprite/sound/script references include only installed/shared/new transition resources',()=>{
+ const m=JSON.parse(fs.readFileSync(new URL('../Import Pack/resource-manifest.json',dir))),known=new Set([...m.sprites.map(r=>r.name),...m.sounds,'spr_mm5_health_meter','spr_mm5_pause_fade_lut']);for(const n of all.match(/\b(?:spr|snd)_mm5_\w+/g)||[])assert.ok(known.has(n),n);const scripts=new Set(files.filter(f=>f.startsWith('scr_')).map(f=>f.slice(0,-4)));for(const n of['scr_mm5_pause_box','scr_mm5_pause_text','scr_mm5_pause_meter','scr_mm5_charge_audio_stop'])scripts.add(n);for(const n of all.match(/\bscr_\w+(?=\()/g)||[])assert.ok(scripts.has(n),n);
+});
+test('Starting02 spare lives/inventory persists, explicit reset only, no test ownership',()=>{const s=read('scr_mm5_pause_inventory_init.gml');for(const line of['if (!argument0) exit;','global.mm5_lives = 2','global.mm5_pause_owned[i] = false','global.mm5_pause_tanks[j] = 0'])assert.ok(s.includes(line));assert.ok(read('obj_mm5_pause_menu_create.gml').includes('if (!instance_exists(obj_mm5_pause_state))'));assert.ok(read('obj_mm5_pause_state_create.gml').includes('scr_mm5_pause_inventory_init(true)'));});
+test('Unowned rows hidden/skipped at same slots; unchanged approved glyph alphabet/layout',()=>{
+ const draw=read('scr_mm5_pause_draw_page.gml'),nav=read('scr_mm5_pause_stage_move.gml');assert.ok(draw.includes('if (!global.mm5_pause_owned[i]) continue;'));assert.ok(nav.includes('if (!global.mm5_pause_owned[i]) continue;'));assert.ok(draw.includes('scr_mm5_pause_box(80, 208, 96, 18'));for(const m of draw.matchAll(/scr_mm5_pause_text\("([^"]*)"/g))assert.ok([...m[1]].every(c=>'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .'.includes(c)));
+});
+test('Palette shader preserves alpha, indexes lookup, no smooth dim overlay; selected white convention explicit',()=>{const f=read('Transition Resources/shd_mm5_pause_fade.fsh');assert.ok(f.includes('src.a'));assert.ok(f.includes('texture2D(s_fade_lut'));assert.ok(!f.includes('mix('));assert.ok(read('scr_mm5_pause_draw_page.gml').includes('shader_set_uniform_f(menu_white_uniform, selected)'));});
+console.log(`${checks} stage source/model checks PASS; GameMaker1.4 compiler, GPU, event scheduler, key handling and async runtime still require user test.`);

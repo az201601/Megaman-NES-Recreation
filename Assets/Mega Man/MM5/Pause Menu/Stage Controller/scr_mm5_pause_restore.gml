@@ -25,7 +25,13 @@ else
     }
 }
 ds_list_clear(menu_voice_list);
+// A fire key newly held during pause must not become an unintended charge.
+// Physical-key rearm is handled by controller Begin Step, without delaying the fade.
+menu_block_fire = keyboard_check(menu_fire_key)
+    && (!menu_fire_held_at_open || menu_fire_released);
 menu_open = false;
+menu_phase = 0;
+menu_tick = 0;
 menu_pending_close = false;
 menu_nav_key = -1;
 menu_nav_timer = 0;

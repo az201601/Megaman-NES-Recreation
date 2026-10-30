@@ -1,159 +1,124 @@
-# Step3 — stage pause integration (GMS1.4.1760)
+# MM5 stage pause transitions — GameMaker Studio1.4.1760
 
-User confirmed UI-test code works. User approves02 spare lives (current life excluded), and native MM5 weapon confirm uses **Start OR A**, A also jump. Verified supplied ROM Start/A close initial Buster menu, B does not.
+Back up your project. This replaces the instant stage/menu switch with the measured original MM5 transition: discrete NES palette steps, black switch, discrete brightening. **GMS source/install package, not a compiled or runtime-certified GameMaker project.** Original ROM/frame/input and software-palette checks pass; please test compilation and drawing in your existing project.
 
-This checkpoint adds a NEW stage controller, using existing imported art/sounds and shared drawing helpers. **No existing player, HUD, arrival, movement, charge, tile or collision event is replaced.** Back up the GameMaker project first. Source model/static checks pass; this new controller has not been compiled/run in GameMaker here.
+## Upgrade YOUR currently installed stage controller
 
-## What this implements / does not implement
+Do these in order. Do not add another pause object or change the isolated UI test.
 
-- Enter=Start opens menu, only after READY/arrival finishes.
-- Ordinary gameplay is frozen via a recorded list of currently ACTIVE instances, then the same IDs restored. Previously sleeping/deactivated instances are not globally activated.
-- Reads player's actual `mm5_health` at opening. Because player is frozen, that snapshot is the current paused health, not a test value.
-- Real persistent-in-run `global.mm5_lives` counter, initialized02. No death/game-over system exists yet, so lives are not decremented by this checkpoint.
-- Real inventory state begins EMPTY except unlimited Buster. No test02/02/01 tanks, test14 energy or falsely owned upgrades copied into the stage. Unobtained WEAPONS are entirely hidden (icon/name/bar) and skipped by navigation. Unobtained Energy Balancer remains grey on our custom upgrades page. You can browse them, but can't equip unimplemented weapons.
-- Only implemented M.BUSTER can be confirmed for gameplay. Enter OR Space(A) on Buster requests close. Same press cannot jump when stage resumes.
-- Original music left running. Only the charge manager's own active charge voice is paused; that manager stays active to service async buffers. No global audio pause/stop.
-- Tank Start-use rule retained, BUT actual tank refill/effects/consumption remains disabled until implemented. Even if positive counts are externally assigned, this code does NOT consume an item without providing its effect. Energy Balancer routing/other weapon behaviour not implemented. Starting02 lives is not02 tanks.
+### 1. Add ONE sprite
 
-## 1. Shared helpers (already installed)
+Resource folder: **Sprites > Mega Man > MM5 > Pause Menu > Transition**.
 
-Keep the existing scripts, unchanged:
+- Resource name EXACTLY `spr_mm5_pause_fade_lut`.
+- Load `Transition Resources/spr_mm5_pause_fade_lut.png` as ONE image (not a strip).
+- It is **64x512**, origin0,0. Keep its colours and full image size; do NOT centre/crop/resize/repaint it.
+- Remove Background OFF; Smooth Edges OFF. This image is a colour lookup table, NOT visible menu artwork.
+- Keep existing imported sprites, including grey Cutter, exactly as approved.
 
-- scr_mm5_pause_text
-- scr_mm5_pause_meter
-- scr_mm5_pause_box
+### 2. Add ONE shader
 
-For organisation, you may move these existing resources from `Scripts > Mega Man > MM5 > Pause Menu > UI Test` into a new **Shared** folder. Moving folders does not change their names or code. Do NOT create duplicate script resources. The original UI test may keep using them.
+Resource folder: **Shaders > Mega Man > MM5 > Pause Menu**.
 
-## 2. Add5 NEW Scripts
+Create shader resource EXACTLY **shd_mm5_pause_fade**. Set its type/language to **GLSL ES** (not HLSL or GLSL desktop).
+
+A single shader resource has TWO code tabs:
+
+| Shader tab | Replace ENTIRE tab contents using |
+|---|---|
+| Vertex | `Transition Resources/shd_mm5_pause_fade.vsh` |
+| Fragment | `Transition Resources/shd_mm5_pause_fade.fsh` |
+
+Do NOT create two shader resources and do NOT paste these files into Execute Code events or ordinary scripts. This is the GMS1.4 shader system, not a GMS2 layer/filter effect. If your shader editor looks different, show it before guessing. Hardware/shader compilation must be checked on your Windows runner; controller reports a clear error if shader fails.
+
+### 3. Add TWO scripts
 
 Folder: **Scripts > Mega Man > MM5 > Pause Menu > Stage**.
 
-Create each exact resource name and paste its matching entire.gml file:
+Create each exact Script resource and paste the matching WHOLE.gml file:
 
-1. scr_mm5_pause_inventory_init
-2. scr_mm5_pause_open
-3. scr_mm5_pause_restore
-4. scr_mm5_pause_dispose
-5. scr_mm5_pause_stage_move
+1. `scr_mm5_pause_draw_page` — approved custom layout moved intact out of the event so it can render into the fade surface.
+2. `scr_mm5_pause_transition_sample` — measured timing/which screen/palette step.
 
-Do not replace scr_mm5_pause_test_move; the stage uses its separately named navigation script. Existing charge scripts including scr_mm5_charge_audio_stop must remain installed (already required by your working charge system).
+Keep the existing3 Shared drawing scripts unchanged: scr_mm5_pause_text, scr_mm5_pause_meter, scr_mm5_pause_box.
 
-## 2a. Add the persistent state owner (compatibility fix)
+### 4. Replace THREE existing scripts
 
-Folder: **Objects > Mega Man > MM5 > Pause Menu > Stage**.
+Same **Scripts > Mega Man > MM5 > Pause Menu > Stage** folder. Replace contents, not resource names:
 
-Create **obj_mm5_pause_state**: no Sprite, Visible OFF, Solid OFF, Persistent ON. Add ONLY its **Create** event, pasting `obj_mm5_pause_state_create.gml` in full.
+- `scr_mm5_pause_open`
+- `scr_mm5_pause_restore`
+- `scr_mm5_pause_dispose`
 
-**Do not place this object in any room.** The stage-menu Create automatically creates it once via instance_exists/instance_create. It initializes globals explicitly and persists between rooms. No variable_global_exists, variable_instance_exists, or reliance on an uninitialized variable is used. This works even if testing directly from the stage rather than running the title first.
+Keep scr_mm5_pause_inventory_init and scr_mm5_pause_stage_move unchanged. No inventory reset during upgrade other than a normal new run. Initial state remains02 spare lives, Buster only, no tanks or falsely owned upgrades.
 
-This owner initializes02 spare lives and empty inventory only on its first Create. Later stage entries preserve them; an explicit future New Game can still call scr_mm5_pause_inventory_init(true). Do not manually add another state-owner instance or delete it while playing.
+### 5. Replace FOUR existing object events
 
-## 3. Add NEW stage object and6 events
+Object: **Objects > Mega Man > MM5 > Pause Menu > Stage > obj_mm5_pause_menu**.
 
-Folder: **Objects > Mega Man > MM5 > Pause Menu > Stage**.
+Each event keeps ONE Execute Code action. Replace its ENTIRE contents:
 
-Create **obj_mm5_pause_menu**: no Sprite, Visible ON, Solid OFF, Persistent OFF. Create sets depth-20000.
-
-| Object event | Paste file |
+| Event | File |
 |---|---|
 | Create | obj_mm5_pause_menu_create.gml |
-| Step > BEGIN Step | obj_mm5_pause_menu_begin_step.gml |
+| Step > Begin Step | obj_mm5_pause_menu_begin_step.gml |
 | Step > Step | obj_mm5_pause_menu_step.gml |
 | Draw > Draw GUI | obj_mm5_pause_menu_draw_gui.gml |
-| Other > Room End | obj_mm5_pause_menu_room_end.gml |
-| Destroy | obj_mm5_pause_menu_destroy.gml |
 
-BEGIN Step must be its own event, not code appended to ordinary Step. No ordinary Draw, Room Start, Cleanup or GMS2 events. Do not copy Create into the player. Room End/Destroy both call idempotent cleanup to avoid list leaks/frozen instances.
+Do not append new code below the previous drawing/controller code. Do not add normal Draw, Draw GUI End, or End Step events. Existing Room End and Destroy each still call scr_mm5_pause_dispose(), unchanged. obj_mm5_pause_state/Create unchanged; do not place it in a room.
 
-## 4. Place ONE instance in the stage
+### 6. Room/settings
 
-Open existing **rm_mm1_cutman_stage**. Place ONE obj_mm5_pause_menu instance (position0,0 fine). No instance Creation Code.
+- Existing Cut Man stage room speed must be **60**. Controller checks it; do not change timing to room_speed-dependent smooth tweening.
+- Keep exactly ONE obj_mm5_pause_menu in stage room, as already installed (no sprite, Visible ON, Solid OFF, Persistent OFF). Depth is set by Create.
+- Existing player, obj_mm5_hud, arrival, background/tiles, music and charge manager remain in place. No player/HUD/audio events are replaced.
+- Keep normal application surface enabled and existing native256x240 game/view framing. GUI remains256x240. Do not disable application_surface or introduce extra viewports.
+- Code disables texture interpolation, consistent with this NES project. Shader renders into256x240 before enlargement, not expensive per-window-pixel palette searching.
+- This revision targets your **Windows GMS1.4 runner**. Newly held fire uses keyboard_check_direct + keyboard_clear for physical release rearming without delaying stage restoration. Other exporters are NOT certified here.
 
-- Do not place obj_mm5_pause_menu_test in this stage.
-- Keep existing player, HUD, arrival/READY, stage tiles, collision, charge manager and all music setup unchanged.
-- Leave new stage controller out of title, stage-select, intro and UI-test rooms.
-- Restore normal first room (rm_mm1_title_screen) if test room is still first.
-- If room editor exposes instance creation order, place the stage-menu controller before gameplay instances so its Begin Step gets first chance to freeze. It finds the player only at runtime; it doesn't require player to exist during Create.
+### 7. Stop/restart and test
 
-## 5. Controls and release guard
+Do not hot-reload past Create: restart the game.
 
-- Fresh **Enter/Start** opens. Space/A does NOT open during gameplay; it remains Jump.
-- Arrows navigate/repeat as confirmed UI test.
-- **Enter OR Space/A on M.BUSTER** closes after release. Escape and X/B do NOT close the main menu; Escape-close belonged only to the isolated UI test.
-- Enter OR Space on UPGRADES/WEAPONS buttons changes page (custom two-page navigation).
-- Enter on tank currently does nothing at zero count. A-on-tank consumption is not assigned. Tank effect integration comes later.
-- Unobtained weapons are blank and cannot receive the cursor; select M.BUSTER to close until other weapon mechanics are implemented.
-- Successful weapon confirmation plays original MM5 close/confirm sound once; it does not play on blocked selections, tank attempts or page changes.
+1. Finish READY/arrival. Start(Enter) must not open during startup. Health HUD/stage remain unchanged before Start.
+2. Enter: immediate original opening sound; frozen stage **including upper-left health meter** darkens in4steps, black briefly, then menu brightens in steps. No abrupt disappearing player/HUD, slide, wipe, transparency tween, border flash or duplicate HUD.
+3. Navigation/confirm ignored during transition; first control boundary is frame38 counting triggering update as1. Full brightness starts35, three updates before ready. Both directions about0.6sec at60updates/sec.
+4. Menu remains custom layout: Buster only initially; unowned weapon rows hidden/skipped;02 spare lives and actual health; grey Cutter art unchanged; tanks0; separate upgrades page. Do NOT expect original MM5 layout to replace ours. Existing credit remains **Sprites by KindlyPatrick** in its approved location/artwork.
+5. Start OR A(Space) on M.BUSTER: close sound immediately and reverse transition immediately. No waiting for release before fade. Menu darkens, black briefly, frozen stage/HUD brightens; gameplay resumes at38. No automatic jump from held confirmation. Hold Enter or Space through the whole close as an extra test: picture must still finish on time. Release/repress Enter to pause again.
+6. Fresh Right during full-bright-but-not-ready35..37 ignored; fresh Right at38 accepted. Holding movement through close may move upon readiness; it must not prolong the fade.
+7. Test pause while airborne, sliding, on ladder and with projectiles: outgoing stage picture must remain still throughout pause/transition, resume from same world state. Enemies not installed yet; no enemy certification implied.
+8. Music continues throughout. Hold existing charge X continuously before/during pause: charge freezes and its own voice pauses, resumes after transition without restarting music. Release X while paused: no buffered shot on return. New/re-pressed X inside pause is suppressed until released, WITHOUT extending transition. Also test releasing X on the same update as Start.
+9. Open/close repeatedly; test resized window and minimize/restore. Surfaces are volatile: if GPU loses stage snapshot, controller safely exits pause instead of leaving actors permanently inactive. Device-loss recovery may abort the visual transition; that is intentional fallback, not native behaviour.
+10. Tanks still do NOT consume/refill anything because real tank effects are not connected. Extra weapon gameplay and Energy Balancer automation still absent. No damage/life decrement/score added.
 
-A close request keeps the menu visible/frozen until Enter/Space and all held navigation keys are released. Fire newly pressed while in the menu must also be released. This intentionally prevents a held menu input from moving/jumping/shooting immediately in the stage.
+Report exact compiler error (resource,event,line), shader error, or a short video if timing/colour/position differs. Source/software tests do not certify GameMaker1.4's GPU, event order, viewport projection, sampler orientation or physical keyboard behaviour on your machine.
 
-Charge policy for this checkpoint (not a claim about native pause timing):
+## Measured schedule
 
-- If X was already held before pausing and stays held continuously, old charge meter/voice are preserved and resume; releasing X afterward fires normally.
-- If that original X hold is RELEASED while menu is open, queued charge is cancelled on resume, preventing a stale release shot. Only charge voice/queue is stopped, not stage music.
-- Pressing/repressing X within the menu cannot start a new charge or shot on resume. Release it to finish closing.
-- Charge manager must be the accepted asynchronous queue manager, NOT still have the temporary F6 TEST Step that starts/restarts audio independently. Report if that test event still exists before using this integration.
+Frame0 before input; frame1 fresh Start or accepted confirm. Audio at1. Outgoing dims at2/6/10/14(black). Opening allblack14..23, first incoming menu24; closing allblack14..22, first stage23. Incoming brighter27/31, full35, ready38. Opening/closing each37update intervals from trigger1 to ready38. No fade sound or invented sound added; uses approved original29hex open/28hex close/27hex cursor.
 
-## 6. Run these checks in order
+## Palette fidelity and custom-art boundary
 
-1. Enter Cut Man normally. Press/hold Enter during READY/arrival: must NOT open or buffer a menu. After arrival, release and press fresh Enter: opens once with MM5 sound.
-2. Header health matches current gameplay HUD. Lives02. Buster full/unlimited; other weapons0/unowned; all tanks00; Energy Balancer shows NOT OBTAINED. No sample03/14/02/02/01 inventory carried over.
-3. Standing: pause, wait, navigate, select M.BUSTER, press Enter and release. Position/physics resume normally; HUD returns, no duplicate UI. Reopen several times: no progressive slowdown or repeated sounds.
-4. Close with Space/A. Hold it briefly: menu stays pending until release. On release there must be NO new jump. Press Space again afterward: normal jump works.
-5. Pause mid-jump, sliding, and climbing a ladder independently. Position, animation timers, bullets/dust and relevant gameplay must stay frozen. Resume continues state instead of falling/moving behind menu. No extra projectiles or ladder drop from closing A.
-6. Hold an arrow and request close: menu remains until arrow released; no stage movement leaks through the close press. Blocked cursor edge must not make sound.
-7. Normal charge: hold X into full charge, keep X held, open/close menu with Enter. Charge audio pauses while open, resumes without a second intro when returning. Release X in stage: one appropriate shot.
-8. Separate charge case: charge, open menu, RELEASE X in menu, confirm Buster. No stale shot on return; charge sound stops. A fresh X press and subsequent charging still work normally.
-9. New X pressed in menu must not shoot when closing. Ensure stage music continues while paused and isn't restarted/stopped on close. Check repeated charge/pause cycles for queue stutters/errors (async runtime test essential).
-10. Verify upgrades page navigation/description, return and Buster close. Test inventory is not consumed and unimplemented weapons cannot be falsely equipped.
-11. Restart/leave stage through your existing flow after closing; ensure no duplicate controller or stuck inactive player. If you already have a sleeping/offscreen-instance system, verify those remain asleep after pause.
+LUT uses pinned Mesen0.9.9 default NES palette and original index darkening, NOT RGB multiplication/alpha overlay. Generator verifies all64 source indices x4levels. Software shader mirror reproduces original captured outgoing2/6/10/14 and incoming24(or23)/27/31 pixels exactly WHEN original per-pixel white20/30 identities are supplied.
 
-Stop on the first error and report exact event/script/line, or which check fails. This code is new, despite prior UI success; GameMaker scheduling/deactivation/async behaviour cannot be certified by source models.
+Approved game art is RGB, not indexed NES tiles. NES20 and30 are identical RGB white but have different fading paths; this cannot be recovered uniquely from a flattened screen. Explicit custom convention: stage composite/known MM5 player+HUD white20; menu font/frame white20, selected weapon/tank/obtained-upgrade icon white30. Other exact native NES colours retain original index paths. Non-native RGB pixels use nearest NES colour for dimmed steps; full brightness bypasses shader and preserves approved artwork exactly. A stage tile that originally meant white30 cannot be disambiguated from player white20 in this snapshot architecture. Therefore timing/step mechanism is matched, **not a claim of original MM5 per-index/pixel equivalence for our different custom stage/menu**. Original reference capture/trace is separate under docs/pause-menu-reference/transitions/.
 
-## Lives, new-game reset and future state
+The known installed health HUD at24,25 is explicitly included in the cached stage; application_surface alone omits Draw GUI. Future additional GUI HUDs must also be added to this cache before claiming they fade correctly. This does not modify/duplicate the visible HUD in normal play.
 
-`global.mm5_lives` counts spare lives, starts02 once per application session and survives stage-room recreation. Stage Create calls scr_mm5_pause_inventory_init(false), preserving existing inventory/lives. Future death handling must decrement it; no death exception invented here.
+## Fresh installation/resource inventory
 
-When a real New Game/reset flow is added, call `scr_mm5_pause_inventory_init(true);` ONCE from that new-game event. Do not call true from every stage Create: that would erase progress. No title/room code is patched automatically by this package, so in-process New Game reset is not wired yet.
+For an already installed controller use upgrade steps ABOVE. Full package also contains unchanged resources for a fresh install:
 
-New globals for future genuine pickup/weapon systems: mm5_pause_owned[0..10], mm5_pause_energy[0..10], mm5_pause_tanks[0..2], mm5_energy_balancer_owned. These are initial state storage, not implemented weapon/tank/upgrade mechanics. Index order matches imported weapon/tank strip manifest. Do not manually mark weapons owned expecting this checkpoint to implement their attacks.
+**Scripts > Mega Man > MM5 > Pause Menu > Stage** (7): inventory_init,open,restore,dispose,stage_move,draw_page,transition_sample with exact scr_mm5_pause_ prefixes from files. Shared3 scripts remain required from UI test package.
 
-## Safety / limitations
+**Objects > Mega Man > MM5 > Pause Menu > Stage**:
+- obj_mm5_pause_state: no sprite, invisible, non-solid, persistent; Create from matchingfile; NOT room-placed. Menu creates once, explicit inventory_init(true) on first Create. Future New Game may explicitly reset with true; false is no-op.
+- obj_mm5_pause_menu: no sprite, visible, non-solid, nonpersistent; six events Create,BeginStep,Step,DrawGUI,RoomEnd,Destroy using matchingfiles; exactly one in stage room.
 
-The controller deactivates other currently active instances; future systems that MUST service async work while paused need explicit exceptions (current charge manager already handled). Any extra custom streaming music manager should be reported before integration. It intentionally never calls instance_activate_all/deactivate_all, global audio stop/pause, or room_goto.
+**Sprites > Mega Man > MM5 > Pause Menu > Transition**: one64x512LUT. **Shaders > Mega Man > MM5 > Pause Menu**: oneGLSL ES shader with two tabs.
 
-If an inactive instance was already sleeping before menu opens, it is not in the saved list and remains inactive on restore. Direct saved IDs are activated without pre-filtering instance_exists (inactive instances return false there). Room End/Destroy restore/dispose tracking defensively; externally forced room changes while paused still require runtime checking if your project adds such a flow.
+Approved previous pause import pack8sprites+3sounds remains required; existing player, arrival, healthHUD/spr_mm5_health_meter and charge system are prerequisites. snd_mm5_menu_close.wav also retained in ZIP for anyone who missed previous patch; no sound reimport needed if already installed. NativeStart29, cursor27, close28; close Start/A recordings byte-identical.
 
-Source/manifests/credits remain **Sprites by KindlyPatrick** for supplied-sheet weapon art. No credits screen is implemented here. No change to score (game has none), damage/invulnerability, enemies, movement physics or imported art/audio.
+## Rollback
 
-## Fix for the reported obsolete-function compile error
-
-The earlier release incorrectly used variable_global_exists; your GMS1.4 editor reports it obsolete. It is now removed, together with all variable_instance_exists calls. Player/charge-manager fields are read directly from their accepted installed Create events (mm5_startup_active, mm5_health, buster_fire_key, buster_charge and charge_audio_voice). Those working systems are prerequisites, not optional reflected fields.
-
-If you already pasted the previous controller, update ONLY:
-
-- Whole Script scr_mm5_pause_inventory_init
-- Whole Script scr_mm5_pause_open
-- Whole Script scr_mm5_pause_restore
-- obj_mm5_pause_menu > Create (whole event)
-- Create NEW obj_mm5_pause_state and paste its Create as in2a above (no room instance)
-
-Other events, resource names and room placement are unchanged. No new sprite/audio imports. The updated ZIP contains12GML files (rather than11). Compile again before running; this compatibility fix has source/model checks but still needs your compiler/runtime confirmation.
-
-## Weapon-confirm audio and hidden unowned weapons update
-
-User notes native MM5 confirms a weapon with a sound and hides unowned weapon rows completely. Original MM5 close sound recovered from fresh Start AND A on Buster: command28hex, byte-identical48kHz stereo PCM16 WAVs,0.5757291667s. Opening sound allowed to end before capture, original F0 music stop for recording only, no normalization/fade/synthesis; silent5ms margins. Not a new music policy.
-
-If previous corrected controller is installed, update ONLY:
-
-1. Sounds > Mega Man > MM5 > Pause Menu: create **snd_mm5_menu_close**, import matching WAV in this ZIP. Uncompressed/nonstreamed, volume1, default group, no loop. Do not rename/replace open or cursor sounds.
-2. Replace whole Script **scr_mm5_pause_stage_move**.
-3. Replace **obj_mm5_pause_menu > Step > Step** with obj_mm5_pause_menu_step.gml.
-4. Replace **obj_mm5_pause_menu > Draw > Draw GUI** with obj_mm5_pause_menu_draw_gui.gml.
-
-Use exact full filenames in this ZIP (obj_mm5_pause_menu_step.gml and obj_mm5_pause_menu_draw_gui.gml); names above refer to their matching updated contents, not new resource names. No Create/BeginStep/state/inventory/restore change needed. Do not reset globals or add a second controller.
-
-Hidden weapon slots remain in their established positions rather than compacting the layout: no icon/name/energy bar/cursor stop until owned. Test initial stage with only Buster: Buster is the only weapon row drawn/selectable, empty weapon slots are blank; tanks/counts/Upgrades remain accessible. Original UI-test room intentionally still shows its explicit test collection and isn't altered by this stage fix.
-
-Confirm Buster with Enter and then separately Space: each successful close requests sound ONCE; holding confirm does not repeat it. Sound can finish while gameplay resumes; no extra wait-for-sound timer. Moving/blocked-edge navigation still uses cursor sound only on a changed target. Changing pages or trying an empty tank must NOT play close sound. Runtime check required in GMS1.4.
+Restore backed-up7updated resources, remove2new stage scripts/LUT/shader ONLY after restoring old references. Keep existing inventory state owner, shared helpers, approved art/audio, HUD/player/charge/arrival resources. Restart. Avoid mixing old instant-open events with new scripts.

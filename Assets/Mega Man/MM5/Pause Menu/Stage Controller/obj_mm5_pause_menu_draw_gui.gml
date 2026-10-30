@@ -1,79 +1,73 @@
-// obj_mm5_pause_menu > Draw > Draw GUI. Uses existing256x240 imported assets.
+// Draw GUI. Cache native stage pixels PLUS installed HUD; all fades render at256x240.
+// Do not move to ordinary Draw: GUI HUD is not part of application_surface.
+if (!menu_lists_ready) exit;
 draw_set_alpha(1);
 draw_set_color(c_white);
-if (!menu_open) exit;
-var blue, cyan, i, selected, frame, tx, amount;
-blue = make_color_rgb(21, 95, 217);
-cyan = make_color_rgb(100, 176, 255);
-if (menu_page == 0) draw_sprite(spr_mm5_pause_main_panel, 0, 0, 0);
-else draw_sprite(spr_mm5_pause_upgrades_panel, 0, 0, 0);
-draw_sprite(spr_mm5_pause_lives, 0, 16, 13);
-scr_mm5_pause_text(string_copy(string(100 + clamp(floor(global.mm5_lives), 0, 99)), 2, 2), 36, 19, c_white);
-scr_mm5_pause_text("HEALTH", 96, 19, c_white);
-scr_mm5_pause_meter(menu_health, false, 152, 18);
-if (menu_page == 0)
+texture_set_interpolation(false);
+if (!menu_open)
 {
-    scr_mm5_pause_text("WEAPONS AND UTILITIES", 16, 39, c_white);
-    for (i = 0; i < 11; i += 1)
-    {
-        if (!global.mm5_pause_owned[i]) continue;
-        selected = (menu_cursor == i);
-        frame = i * 2;
-        if (selected && global.mm5_pause_owned[i]) frame += 1;
-        draw_sprite(spr_mm5_pause_weapon_icons, frame, menu_x[i], menu_y[i]);
-        if (selected)
-        {
-            scr_mm5_pause_text(menu_label[i], menu_x[i] + 20, menu_y[i], cyan);
-            scr_mm5_pause_box(menu_x[i] - 3, menu_y[i] - 1, 111, 18, cyan);
-        }
-        else scr_mm5_pause_text(menu_label[i], menu_x[i] + 20, menu_y[i], c_white);
-        scr_mm5_pause_meter(menu_energy[i], selected, menu_x[i] + 20, menu_y[i] + 8);
-    }
-    scr_mm5_pause_text("TANKS", 16, 170, c_white);
-    for (i = 0; i < 3; i += 1)
-    {
-        tx = 16 + i * 72;
-        selected = (menu_cursor == 11 + i);
-        frame = i * 2;
-        if (selected) frame += 1;
-        draw_sprite(spr_mm5_pause_tanks, frame, tx, 182);
-        amount = clamp(floor(global.mm5_pause_tanks[i]), 0, 99);
-        if (selected)
-        {
-            scr_mm5_pause_text(string_copy(string(100 + amount), 2, 2), tx + 20, 187, cyan);
-            scr_mm5_pause_box(tx - 3, 179, 42, 22, cyan);
-        }
-        else scr_mm5_pause_text(string_copy(string(100 + amount), 2, 2), tx + 20, 187, c_white);
-    }
-    if (menu_cursor == 14) scr_mm5_pause_box(80, 208, 96, 18, cyan);
-    else scr_mm5_pause_box(80, 208, 96, 18, blue);
-    scr_mm5_pause_text("UPGRADES", 96, 214, c_white);
+    if (!surface_exists(application_surface)) exit;
+    if (!surface_exists(menu_stage_surface)) menu_stage_surface = surface_create(256, 240);
+    if (!surface_exists(menu_stage_surface)) exit;
+    surface_set_target(menu_stage_surface);
+    draw_clear_alpha(c_black, 1);
+    draw_surface_stretched(application_surface, 0, 0, 256, 240);
+    // Exact installed obj_mm5_hud display. No second visible HUD; this is offscreen only.
+    var hp_player;
+    hp_player = instance_find(obj_mm5_megaman, 0);
+    if (instance_exists(obj_mm5_hud) && instance_exists(hp_player))
+        draw_sprite_ext(spr_mm5_health_meter, clamp(floor(hp_player.mm5_health), 0, 28),
+            24, 25, 1, 1, 0, c_white, 1);
+    surface_reset_target();
+    exit;
 }
-else
+scr_mm5_pause_transition_sample();
+// A true black interval: no alpha tween, no partly rendered stage/menu beneath it.
+if (menu_dim == 4 || !surface_exists(menu_stage_surface))
 {
-    scr_mm5_pause_text("UPGRADES", 96, 39, c_white);
-    selected = (menu_upgrade_cursor == 0);
-    frame = 0;
-    if (selected && global.mm5_energy_balancer_owned) frame = 1;
-    draw_sprite(spr_mm5_pause_upgrade_icons, frame, 32, 64);
-    if (selected)
-    {
-        scr_mm5_pause_box(24, 56, 32, 32, cyan);
-        scr_mm5_pause_text("ENERGY BALANCER", 24, 122, cyan);
-        if (!global.mm5_energy_balancer_owned)
-        {
-            scr_mm5_pause_text("NOT OBTAINED.", 24, 146, c_white);
-        }
-        else
-        {
-            scr_mm5_pause_text("ROUTES SPARE WEAPON", 24, 146, c_white);
-            scr_mm5_pause_text("ENERGY TO THE WEAPON", 24, 160, c_white);
-            scr_mm5_pause_text("WITH THE LOWEST ENERGY.", 24, 174, c_white);
-        }
-    }
-    if (menu_upgrade_cursor == 1) scr_mm5_pause_box(80, 208, 96, 18, cyan);
-    else scr_mm5_pause_box(80, 208, 96, 18, blue);
-    scr_mm5_pause_text("WEAPONS", 100, 214, c_white);
+    draw_set_color(c_black);
+    draw_rectangle(0, 0, 256, 240, false);
+    draw_set_color(c_white);
+    exit;
 }
+if (!surface_exists(menu_frame_surface)) menu_frame_surface = surface_create(256, 240);
+if (!surface_exists(menu_lut_surface))
+{
+    menu_lut_surface = surface_create(64, 512);
+    if (surface_exists(menu_lut_surface))
+    {
+        surface_set_target(menu_lut_surface);
+        // LUT is NOT GUI-sized; explicitly select its pixel projection (GMS1.4 API).
+        d3d_set_projection_ortho(0, 0, 64, 512, 0);
+        draw_clear_alpha(c_black, 1);
+        draw_sprite(spr_mm5_pause_fade_lut, 0, 0, 0);
+        surface_reset_target();
+        d3d_set_projection_ortho(0, 0, 256, 240, 0);
+    }
+}
+if (!surface_exists(menu_frame_surface) || !surface_exists(menu_lut_surface))
+{
+    // Low-memory allocation failure: show black this update, abort safely next Begin Step.
+    if (surface_exists(menu_stage_surface)) surface_free(menu_stage_surface);
+    menu_stage_surface = -1;
+    draw_set_color(c_black);
+    draw_rectangle(0, 0, 256, 240, false);
+    draw_set_color(c_white);
+    exit;
+}
+surface_set_target(menu_frame_surface);
+draw_clear_alpha(c_black, 1);
+if (menu_dim > 0)
+{
+    shader_set(shd_mm5_pause_fade);
+    shader_set_uniform_f(menu_dim_uniform, menu_dim);
+    shader_set_uniform_f(menu_white_uniform, 0);
+    texture_set_stage(menu_lut_sampler, surface_get_texture(menu_lut_surface));
+}
+if (menu_show_stage) draw_surface(menu_stage_surface, 0, 0);
+else scr_mm5_pause_draw_page();
+if (menu_dim > 0) shader_reset();
+surface_reset_target();
 draw_set_color(c_white);
 draw_set_alpha(1);
+draw_surface(menu_frame_surface, 0, 0);

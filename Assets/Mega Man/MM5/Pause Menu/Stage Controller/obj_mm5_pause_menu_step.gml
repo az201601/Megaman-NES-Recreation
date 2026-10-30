@@ -1,11 +1,6 @@
 // Step > Step. No test inventory, real tank effects/extra weapon behaviours not connected yet.
-if (!menu_open || menu_pending_close) exit;
-// Ignore Enter on SAME update that Begin Step opened the menu.
-if (menu_just_opened)
-{
-    menu_just_opened = false;
-    exit;
-}
+// Phase is unlocked in BEGIN Step at measured frame38, not when full-bright35.
+if (!menu_open || menu_phase != 2) exit;
 if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space))
 {
     if (menu_page == 1)
@@ -31,6 +26,8 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space))
         audio_stop_sound(snd_mm5_menu_cursor);
         audio_play_sound(snd_mm5_menu_close, 0, false);
         menu_pending_close = true;
+        menu_phase = 3;
+        menu_tick = 1;
     }
     else
     {
