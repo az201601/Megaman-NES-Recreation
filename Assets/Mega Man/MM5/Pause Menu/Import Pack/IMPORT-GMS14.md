@@ -27,7 +27,7 @@ Use the EXACT resource names in this table, **without** `_strip22` etc. in the r
 | Panels | spr_mm5_pause_upgrades_panel | spr_mm5_pause_upgrades_panel.png |256x240|1|
 | Icons | spr_mm5_pause_weapon_icons | spr_mm5_pause_weapon_icons_strip22.png |16x16|22|
 | Icons | spr_mm5_pause_upgrade_icons | spr_mm5_pause_upgrade_icons_strip2.png |16x16|2|
-| Icons | spr_mm5_pause_tanks | spr_mm5_pause_tanks_strip3.png |16x16|3|
+| Icons | spr_mm5_pause_tanks | spr_mm5_pause_tanks_strip6.png |16x16|6|
 | Icons | spr_mm5_pause_lives | spr_mm5_pause_lives.png |16x16|1|
 | Font | spr_mm5_pause_font | spr_mm5_pause_font_strip38.png |8x8|38|
 | Meters | spr_mm5_pause_meter_styles | spr_mm5_pause_meter_styles_strip2.png |56x8|2|
@@ -63,7 +63,7 @@ The font is a **Sprite**, NOT a Fonts resource or a system font. Its38 frames fo
 Cutter selected stays grey/white like source; no gold/removed fill. Its selected casing/shading is slightly brighter than unselected. Both Rush Jet/Marine are original MM4 icons; Coil/Buster original MM5, including recovered selected Coil.
 
 - Upgrade icons:0=original grey Energy Balancer,1=custom blue/cyan selected.
-- Tanks:0=E,1=W,2=M. W flips only original M lettering, not casing.
+- Tanks:0=E grey,1=E selected,2=W grey,3=W selected,4=M grey,5=M selected. W flips only original M lettering, not casing.
 - Font:0..25=A..Z,26..35=0..9,36=space,37=period. All8x8, no invented glyphs.
 - Meter styles:0=original unselected full bar,1=original selected full bar. These are NOT29 energy-fill frames; fill drawing/empty-state verification and inventory mechanics are still later implementation work.
 - Panels are intentionally mostly blank: static frame/separators/backing only. Names, lives/counts/health, bars, icons, cursors and descriptions will be drawn dynamically. Do NOT import the flattened review screenshots instead: they bake sample03/full energy/00 tanks into the picture.
@@ -86,3 +86,7 @@ Confirm all imports/counts/origins before the next checkpoint. Next: GMS1.4 cont
 ## Rebuild / provenance
 
 `node tools/rom-recovery/build-pause-import-pack.mjs` rebuilds PNGs, WAV copies, resource manifest and credit from committed source files (no emulator snapshots needed). ZIP packaging is separate. Pack panels are custom approved frame design; other assets retain source pixels in the strips. Generator asserts22 weapon frame rows match source bytes, all pair dimensions/counts, PNG roundtrip and distinct states. Selected Coil recovery is reproducible via recover-mm5-buster-unselected.mjs after generating MM5 pause snapshot. Technical provenance/permission caveats in root CREDITS.md remain; the visible credit is exactly **Sprites by KindlyPatrick**.
+
+## Tank selection update
+
+Replace ONLY spr_mm5_pause_tanks if you already imported the previous3-frame version. Use spr_mm5_pause_tanks_strip6.png,6 frames each16x16, origin0,0; keep the same resource name. Other resources/names unchanged. Selected tanks use custom blue/cyan NES palette (not a claim of original MM5 selected tank colours); original grey shapes/letters retained. User specifies Start on selected E/W/M uses one, not merely closing the menu. This is recorded for controller implementation; artwork does NOT consume inventory yet. Zero-count/full-meter eligibility, effects and menu-close behaviour still need integration decisions/tests.
