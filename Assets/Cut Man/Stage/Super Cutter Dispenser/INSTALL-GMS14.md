@@ -2,6 +2,18 @@
 
 Apply AFTER Fourth Ladder Transition (1536x1200room, ten scripted blocks). This patch separates the building artwork from scenery; it does NOT add cutter-spawning AI. No route extension or geometry change. Back up affected resources first.
 
+## 0. Verify the required Background resource (fix for “not set before reading”)
+
+This script requires a **Background**, not a variable or Sprite, named EXACTLY:
+```
+bg_mm1_cutman_ladder_route_tileset
+```
+If GameMaker reports that identifier “not set before reading”, it has not resolved an asset under that exact name. Do not initialise an instance/global variable with it and do not substitute the older128x32atlas.
+
+Folder **Backgrounds > Cut Man > Stage > Ladder Route**. If the exact resource already exists, use it; do not create duplicates. Otherwise create a Background with that exact name and load the included **bg_mm1_cutman_ladder_route_tileset.png (128x64)**. This PNG is an unchanged copy from Fourth Ladder Transition. Use as tile set ON; tile width16, tile height16; offsets and separations0. Remove Background OFF, preserve alpha, smoothing OFF. It must be in Backgrounds, NOT Sprites. Keep older opening atlas resources intact.
+
+If you imported the Fourth atlas under a different name, creating this exact Background avoids renaming resources used by unrelated scripts. Stop/restart after saving the resource. No GML variable declaration or camera/room/player changes needed.
+
 ## 1. Add ONE Sprite
 
 Folder **Sprites > Cut Man > Stage > Hazards > Super Cutter Dispenser**.
