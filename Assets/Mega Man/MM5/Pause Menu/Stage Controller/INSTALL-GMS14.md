@@ -10,7 +10,7 @@ This checkpoint adds a NEW stage controller, using existing imported art/sounds 
 - Ordinary gameplay is frozen via a recorded list of currently ACTIVE instances, then the same IDs restored. Previously sleeping/deactivated instances are not globally activated.
 - Reads player's actual `mm5_health` at opening. Because player is frozen, that snapshot is the current paused health, not a test value.
 - Real persistent-in-run `global.mm5_lives` counter, initialized02. No death/game-over system exists yet, so lives are not decremented by this checkpoint.
-- Real inventory state begins EMPTY except unlimited Buster. No test02/02/01 tanks, test14 energy or falsely owned upgrades copied into the stage. Locked weapon/upgrade icons stay grey. You can browse them, but can't equip unimplemented weapons.
+- Real inventory state begins EMPTY except unlimited Buster. No test02/02/01 tanks, test14 energy or falsely owned upgrades copied into the stage. Unobtained WEAPONS are entirely hidden (icon/name/bar) and skipped by navigation. Unobtained Energy Balancer remains grey on our custom upgrades page. You can browse them, but can't equip unimplemented weapons.
 - Only implemented M.BUSTER can be confirmed for gameplay. Enter OR Space(A) on Buster requests close. Same press cannot jump when stage resumes.
 - Original music left running. Only the charge manager's own active charge voice is paused; that manager stays active to service async buffers. No global audio pause/stop.
 - Tank Start-use rule retained, BUT actual tank refill/effects/consumption remains disabled until implemented. Even if positive counts are externally assigned, this code does NOT consume an item without providing its effect. Energy Balancer routing/other weapon behaviour not implemented. Starting02 lives is not02 tanks.
@@ -83,8 +83,8 @@ Open existing **rm_mm1_cutman_stage**. Place ONE obj_mm5_pause_menu instance (po
 - **Enter OR Space/A on M.BUSTER** closes after release. Escape and X/B do NOT close the main menu; Escape-close belonged only to the isolated UI test.
 - Enter OR Space on UPGRADES/WEAPONS buttons changes page (custom two-page navigation).
 - Enter on tank currently does nothing at zero count. A-on-tank consumption is not assigned. Tank effect integration comes later.
-- Locked weapons remain unavailable; navigate back to M.BUSTER to close.
-- No unapproved close/confirm sound is added.
+- Unobtained weapons are blank and cannot receive the cursor; select M.BUSTER to close until other weapon mechanics are implemented.
+- Successful weapon confirmation plays original MM5 close/confirm sound once; it does not play on blocked selections, tank attempts or page changes.
 
 A close request keeps the menu visible/frozen until Enter/Space and all held navigation keys are released. Fire newly pressed while in the menu must also be released. This intentionally prevents a held menu input from moving/jumping/shooting immediately in the stage.
 
@@ -140,3 +140,20 @@ If you already pasted the previous controller, update ONLY:
 - Create NEW obj_mm5_pause_state and paste its Create as in2a above (no room instance)
 
 Other events, resource names and room placement are unchanged. No new sprite/audio imports. The updated ZIP contains12GML files (rather than11). Compile again before running; this compatibility fix has source/model checks but still needs your compiler/runtime confirmation.
+
+## Weapon-confirm audio and hidden unowned weapons update
+
+User notes native MM5 confirms a weapon with a sound and hides unowned weapon rows completely. Original MM5 close sound recovered from fresh Start AND A on Buster: command28hex, byte-identical48kHz stereo PCM16 WAVs,0.5757291667s. Opening sound allowed to end before capture, original F0 music stop for recording only, no normalization/fade/synthesis; silent5ms margins. Not a new music policy.
+
+If previous corrected controller is installed, update ONLY:
+
+1. Sounds > Mega Man > MM5 > Pause Menu: create **snd_mm5_menu_close**, import matching WAV in this ZIP. Uncompressed/nonstreamed, volume1, default group, no loop. Do not rename/replace open or cursor sounds.
+2. Replace whole Script **scr_mm5_pause_stage_move**.
+3. Replace **obj_mm5_pause_menu > Step > Step** with obj_mm5_pause_menu_step.gml.
+4. Replace **obj_mm5_pause_menu > Draw > Draw GUI** with obj_mm5_pause_menu_draw_gui.gml.
+
+Use exact full filenames in this ZIP (obj_mm5_pause_menu_step.gml and obj_mm5_pause_menu_draw_gui.gml); names above refer to their matching updated contents, not new resource names. No Create/BeginStep/state/inventory/restore change needed. Do not reset globals or add a second controller.
+
+Hidden weapon slots remain in their established positions rather than compacting the layout: no icon/name/energy bar/cursor stop until owned. Test initial stage with only Buster: Buster is the only weapon row drawn/selectable, empty weapon slots are blank; tanks/counts/Upgrades remain accessible. Original UI-test room intentionally still shows its explicit test collection and isn't altered by this stage fix.
+
+Confirm Buster with Enter and then separately Space: each successful close requests sound ONCE; holding confirm does not repeat it. Sound can finish while gameplay resumes; no extra wait-for-sound timer. Moving/blocked-edge navigation still uses cursor sound only on a changed target. Changing pages or trying an empty tank must NOT play close sound. Runtime check required in GMS1.4.

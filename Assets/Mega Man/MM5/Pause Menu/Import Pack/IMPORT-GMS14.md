@@ -74,12 +74,13 @@ Under **Sounds > Mega Man > MM5 > Pause Menu**:
 
 - Create/update `snd_mm5_menu_open`, load `Sounds/snd_mm5_menu_open.wav`.
 - Create/update `snd_mm5_menu_cursor`, load `Sounds/snd_mm5_menu_cursor.wav`.
+- Create `snd_mm5_menu_close`, load `Sounds/snd_mm5_menu_close.wav`.
 
-Uncompressed/non-streamed, volume1, default audio group. Original48kHz stereo PCM16, no loop. Preview both in the editor. Do not add playback code yet, replace stage music, or create duplicate resources if already imported. These are the two user-confirmed MM5 sounds; no close/confirm/cancel sound selected.
+Uncompressed/non-streamed, volume1, default audio group. Original48kHz stereo PCM16, no loop. Preview all three in the editor. Do not add playback code yet, replace stage music, or create duplicate resources if already imported. Open/cursor are user-confirmed MM5 sounds; weapon-confirm close is newly recovered from MM5 Start/A. No tank-use/cancel sound chosen.
 
 ## 4. Stop and verify
 
-You should now have **8 new Sprite resources +2 Sound resources**, organised as above. Run the current game: with no new events or room instances yet, title/select/Cut Man/player/HUD/audio should behave exactly as before. If anything changed, check that you did not replace existing resources or add events.
+You should now have **8 new Sprite resources +3 Sound resources**, organised as above. Run the current game: with no new events or room instances yet, title/select/Cut Man/player/HUD/audio should behave exactly as before. If anything changed, check that you did not replace existing resources or add events.
 
 Confirm all imports/counts/origins before the next checkpoint. Next: GMS1.4 controller/text drawing, page navigation, selection and sounds; then safe world-freezing/integration and live health/lives/weapon state. Weapon behaviours, unlock rules, tank consumption and Energy Balancer functionality are NOT implemented by this import pack. No starting-lives count is chosen here.
 
@@ -90,3 +91,7 @@ Confirm all imports/counts/origins before the next checkpoint. Next: GMS1.4 cont
 ## Tank selection update
 
 Replace ONLY spr_mm5_pause_tanks if you already imported the previous3-frame version. Use spr_mm5_pause_tanks_strip6.png,6 frames each16x16, origin0,0; keep the same resource name. Other resources/names unchanged. Selected tanks use custom blue/cyan NES palette (not a claim of original MM5 selected tank colours); original grey shapes/letters retained. User specifies Start on selected E/W/M uses one, not merely closing the menu. This is recorded for controller implementation; artwork does NOT consume inventory yet. Zero-count/full-meter eligibility, effects and menu-close behaviour still need integration decisions/tests.
+
+## Third menu sound: weapon confirmation/close
+
+Create snd_mm5_menu_close under Sounds > Mega Man > MM5 > Pause Menu, using Sounds/snd_mm5_menu_close.wav (uncompressed/nonstreamed, volume1/default group, one-shot). It is original MM5 command28, recovered separately for Start and A with matching PCM. Open/cursor WAVs unchanged. Current pack now8 Sprite resources and3 Sounds. Stage-controller update plays close sound once only on successful weapon confirmation, not page moves/empty tanks. No sprite reimports needed for this audio update.

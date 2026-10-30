@@ -43,3 +43,7 @@ node tools/rom-recovery/mm5-stage.mjs
 node tools/rom-recovery/record-menu-open.mjs
 node tools/rom-recovery/record-menu-cursor.mjs
 ```
+
+## Original weapon-confirm/close sound added
+
+User requests native MM5 weapon-confirm sound. New snd_mm5_menu_close.wav:48kHz stereoPCM16,0.5757291667s, original command28hex from freshStart and freshA on Buster. Both inputs recorded independently with byte-identical WAVs. No opening/cursor/music tail; only silence trimmed5ms each side. Source recorder record-menu-close.mjs accepts START or A; both recovery JSON records included. Import as snd_mm5_menu_close in same Sounds folder, uncompressed/nonstreamed, volume1/default group/no loop. StageStep requests once on accepted weapon confirmation; not on cursor/page/empty-tank input. No global music stop in gameplay. This supersedes earlier statement that no close/confirm sound is assigned.

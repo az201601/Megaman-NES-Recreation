@@ -16,6 +16,7 @@ if (menu_page == 0)
     scr_mm5_pause_text("WEAPONS AND UTILITIES", 16, 39, c_white);
     for (i = 0; i < 11; i += 1)
     {
+        if (!global.mm5_pause_owned[i]) continue;
         selected = (menu_cursor == i);
         frame = i * 2;
         if (selected && global.mm5_pause_owned[i]) frame += 1;

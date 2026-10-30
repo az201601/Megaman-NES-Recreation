@@ -28,6 +28,8 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space))
     else if (menu_cursor == 0)
     {
         menu_last_weapon = 0;
+        audio_stop_sound(snd_mm5_menu_cursor);
+        audio_play_sound(snd_mm5_menu_close, 0, false);
         menu_pending_close = true;
     }
     else

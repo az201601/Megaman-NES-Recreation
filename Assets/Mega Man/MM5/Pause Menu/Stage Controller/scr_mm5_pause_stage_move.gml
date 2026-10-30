@@ -12,6 +12,10 @@ next_target = previous;
 best = 100000;
 for (i = 0; i < 15; i += 1)
 {
+    if (i < 11)
+    {
+        if (!global.mm5_pause_owned[i]) continue;
+    }
     dx = menu_target_x[i] - menu_target_x[previous];
     dy = menu_target_y[i] - menu_target_y[previous];
     projection = dx * argument0 + dy * argument1;

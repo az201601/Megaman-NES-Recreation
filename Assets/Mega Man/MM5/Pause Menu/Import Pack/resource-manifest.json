@@ -170,7 +170,8 @@
   "fontChars": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .",
   "sounds": [
     "snd_mm5_menu_open",
-    "snd_mm5_menu_cursor"
+    "snd_mm5_menu_cursor",
+    "snd_mm5_menu_close"
   ],
   "notes": [
     "All frame indices zero-based. State strips are NOT animations.",
