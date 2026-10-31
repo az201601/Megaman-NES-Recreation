@@ -208,3 +208,26 @@ Originalpage17/X40 bottom-left leads DOWN to **two-screen stripe18–19**, begin
 Existing atlas now **28tiles**, still128×64: old25pixels/indices exact,3native gate-wall tiles appended. **Mandatory existing Background image update despite unchanged dimensions.** Two new gate resources must be created before compiling feature script. Dispenser/spike PNGbytes unchanged; ten spikefeatures and60dispensermarkers retained, damage/spawning stilldisabled. Gatefeaturescriptaddsoneinstance; no manualplacements or StageCreate changes. EightexistingGML replacements+newgateCreate; no StageCreate/music/async/alarms/player/pause/HUD/arrival/helpers/cleanup/guardchanges. Complete matched8GML/atlas/roomwidth/newresources, no extra featurecalls. Native512×240 stripe exactwithfourblocks+gate, whole accepted2048×2160pixels preserved outside newroom; widenedvoidcyan.
 
 **55source/modelchecks pass**, all22nativeactualGMLbusyframecases/freshinputs/900+900+263horizontalframes/11seams/acceptedpositions+outside-stripepixels/widenedvoid/old25atlasidentity/2354actualtilecalls/fullobjects+scene/gateart+maskassignment/17blocks/13features/repeatedtargets+timings/mixed-start/video/post-unlock/charge/rearm/cleanup. Tenth48/Ninth43/Eighth36/Seventh31/Sixth28/Fifth26/Fourth22/dispenser/pause16/UI/Blader1023regressions pass.17file ZIP9GML+2guides+2references+4PNGs byteaudited, reusedspritesunchanged, newatlasmandatory, noROM. Actual GMScompiler/GPU/scheduler/async/descendant/mask/collision unavailable: Eleventh installation/runtimeconfirmation pending. Spike damage, enemies/cutterAI, pickups/tanks, death/checkpoints, gatepassage/boss/reward/returnremainlater. RollbackTenth8GML/atlas/width2048; no vertical rollback.
+
+## User runtime acceptance — Eleventh; first entrance gate active
+
+User accepted the Eleventh connection in-game. Keep its atlas, two-screen approach,
+upward return,17 scripted blocks, two dispensers, ten art-only spikes and closed gate.
+The subsequent audio-buffer and missing-gate issues were resolved by the user during
+installation; no speculative repair is needed or published.
+
+Current approved task: first entrance gate opening and automatic passage into the
+three-screen corridor20–22. **Use MM5's opening sound, not MM1's.** Preserve MM1
+layout and native movement/timing; finish the route before enemies/combat.
+
+Research checkpoint: native first entrance timing and return boundary measured,
+2880 corridor tile-ID/palette pairs validated; MM1 opening/delay byte spans verified.
+MM5 command25 verified at the opening routine and recorded as isolated full APU WAV
+under `Assets/Audio/Mega Man/MM5/Stage/Gate/`. Details and traces are in
+`Assets/Cut Man/Stage/First Gate Research/`. No first-gate closing call observed;
+page20's left boundary is collision-only, not an additional visible shutter.
+
+**Gate-passage GML implementation, resource/room install guide, model tests and ZIP
+remain unfinished.** No replacement installation is ready at this checkpoint;
+accepted Eleventh code remains untouched. No runtime acceptance claimed for the new
+passage, and no enemy/combat/damage/pickup/tank/death/boss work is included.

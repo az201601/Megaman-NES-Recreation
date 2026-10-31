@@ -1,0 +1,50 @@
+{
+  "method": "Original supplied USA MM5 ROM, native queue F0 stop,150 frames warmup,queue25,150 frames full APU capture. No channels muted, no synthesized replacement, no normalization. Trim only PCM silence; retain 10ms silent tail. Not a natural MM5 gate playthrough.",
+  "disassembly": {
+    "url": "https://github.com/refreshing-lemonade/megaman5-disassembly",
+    "commit": "03e59a6855c1aca85d063bd2973005dc3ffd02ef",
+    "file": "bank1B_1F.asm"
+  },
+  "spans": [
+    {
+      "cpu": "cb93",
+      "bank": "1E",
+      "fileOffset": 248739,
+      "hex": "20fcd0",
+      "purpose": "Gate before automatic horizontal passage calls opening routine"
+    },
+    {
+      "cpu": "d0fc",
+      "bank": "1E",
+      "fileOffset": 250124,
+      "hex": "a900859da5260a0a0aaa",
+      "purpose": "Opening routine entry"
+    },
+    {
+      "cpu": "d11c",
+      "bank": "1E",
+      "fileOffset": 250156,
+      "hex": "a9038511a925205dec",
+      "purpose": "Three PPU edits and native sound command 25"
+    },
+    {
+      "cpu": "d1b5",
+      "bank": "1E",
+      "fileOffset": 250309,
+      "hex": "a925205dec",
+      "purpose": "Paired shutter routine uses same command"
+    }
+  ],
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "warmPeak": 0,
+  "firstSample": 841,
+  "lastAudibleSample": 23512,
+  "endSample": 23993,
+  "samples": 23152,
+  "seconds": 0.48233333333333334,
+  "peak": 10322,
+  "bytes": 92652,
+  "sha256": "81145a38ed3410b3776e39ada46c342536dc881cc343d05eafc108fa92d2bd8e"
+}
