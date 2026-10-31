@@ -57,6 +57,16 @@ wav.writeUInt32LE(rate,24);wav.writeUInt32LE(rate*4,28);wav.writeUInt16LE(4,32);
 wav.write('data',36);wav.writeUInt32LE(count*4,40);
 for(let i=first;i<end;i++)for(let c=0;c<2;c++)wav.writeInt16LE(pcm[i][c],44+(i-first)*4+c*2);
 const report={method:'Original supplied USA MM5 ROM, native queue F0 stop,150 frames warmup,queue25,150 frames full APU capture. No channels muted, no synthesized replacement, no normalization. Trim only PCM silence; retain 10ms silent tail. Not a natural MM5 gate playthrough.',disassembly:{url:'https://github.com/refreshing-lemonade/megaman5-disassembly',commit:'03e59a6855c1aca85d063bd2973005dc3ffd02ef',file:'bank1B_1F.asm'},spans,rate,channels:2,bits:16,warmPeak,firstSample:first,lastAudibleSample:last,endSample:end,samples:count,seconds:count/rate,peak:pcm.reduce((p,s)=>Math.max(p,Math.abs(s[0]),Math.abs(s[1])),0),bytes:wav.length,sha256:crypto.createHash('sha256').update(wav).digest('hex')};
+// Also publish the entire capture, without removing even silent samples.
+const full=Buffer.alloc(44+pcm.length*4);
+wav.copy(full,0,0,44);
+full.writeUInt32LE(full.length-8,4);
+full.writeUInt32LE(pcm.length*4,40);
+for(let i=0;i<pcm.length;i++)for(let c=0;c<2;c++)full.writeInt16LE(pcm[i][c],44+i*4+c*2);
+assert.deepEqual(full.subarray(44+first*4,44+end*4),wav.subarray(44),'Trimmed cue must match full capture sample-for-sample');
+assert.ok(pcm.slice(last+1).every(s=>s[0]===0&&s[1]===0));
+report.completeCapture={file:'snd_mm5_gate_open_complete_untrimmed.wav',frames:150,samples:pcm.length,seconds:pcm.length/rate,bytes:full.length,sha256:crypto.createHash('sha256').update(full).digest('hex'),method:'Entire captured output, including native queue latency and all silence after decay. No trimming, fades, normalization, stretching, channel isolation or repeated/stitched effects.'};
+fs.writeFileSync(new URL(report.completeCapture.file,out),full);
 fs.writeFileSync(new URL('snd_mm5_gate_open.wav',out),wav);
 fs.writeFileSync(new URL('recovery.json',out),JSON.stringify(report,null,2)+'\n');
 fs.writeFileSync(new URL('mm5-audio-writes.json',work),JSON.stringify({requests,writes},null,2));

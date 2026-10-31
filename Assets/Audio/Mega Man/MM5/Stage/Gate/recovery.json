@@ -46,5 +46,14 @@
   "seconds": 0.48233333333333334,
   "peak": 10322,
   "bytes": 92652,
-  "sha256": "81145a38ed3410b3776e39ada46c342536dc881cc343d05eafc108fa92d2bd8e"
+  "sha256": "81145a38ed3410b3776e39ada46c342536dc881cc343d05eafc108fa92d2bd8e",
+  "completeCapture": {
+    "file": "snd_mm5_gate_open_complete_untrimmed.wav",
+    "frames": 150,
+    "samples": 119814,
+    "seconds": 2.496125,
+    "bytes": 479300,
+    "sha256": "3dddc9613ade7d4d1eb5db2081095a61b2ec39f8c7b2673d4273f01a4c494b13",
+    "method": "Entire captured output, including native queue latency and all silence after decay. No trimming, fades, normalization, stretching, channel isolation or repeated/stitched effects."
+  }
 }
