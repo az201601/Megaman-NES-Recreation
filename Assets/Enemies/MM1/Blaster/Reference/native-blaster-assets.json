@@ -1,0 +1,346 @@
+{
+  "method": "Supplied USA ROM/JSNES2.1.0, Mesen0.9.9 RGB adaptation. Controlled safeY/protection approach toX760 then stationary observation; source-ROM code unchanged. All4shell poses and bullet match opaque pixels in actual native render. Native OAM pipeline can lag logic; observed art is not inferred solely from high animation nibble.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "art": [
+    {
+      "index": 0,
+      "frame": 484,
+      "cells": [
+        {
+          "x": 192,
+          "y": 64,
+          "tile": 177,
+          "attr": 3
+        },
+        {
+          "x": 192,
+          "y": 72,
+          "tile": 178,
+          "attr": 3
+        },
+        {
+          "x": 184,
+          "y": 68,
+          "tile": 176,
+          "attr": 3
+        }
+      ],
+      "rgbaSha256": "c330aee18176daaa1858211c07596329a1ae49c65ad795bcce4cc277e7344562"
+    },
+    {
+      "index": 1,
+      "frame": 519,
+      "cells": [
+        {
+          "x": 192,
+          "y": 64,
+          "tile": 179,
+          "attr": 3
+        },
+        {
+          "x": 192,
+          "y": 72,
+          "tile": 180,
+          "attr": 3
+        }
+      ],
+      "rgbaSha256": "bfa9991a387d128144b4e70adf7966b9ead423594565ec15e548c8acccd0e9ed"
+    },
+    {
+      "index": 2,
+      "frame": 526,
+      "cells": [
+        {
+          "x": 192,
+          "y": 64,
+          "tile": 182,
+          "attr": 3
+        },
+        {
+          "x": 192,
+          "y": 72,
+          "tile": 183,
+          "attr": 3
+        },
+        {
+          "x": 184,
+          "y": 68,
+          "tile": 181,
+          "attr": 3
+        }
+      ],
+      "rgbaSha256": "4276f040aab9a603e4d7410ec1db8b37ca74d92530eb78b943a1fc7b62647eef"
+    },
+    {
+      "index": 3,
+      "frame": 533,
+      "cells": [
+        {
+          "x": 192,
+          "y": 64,
+          "tile": 185,
+          "attr": 3
+        },
+        {
+          "x": 192,
+          "y": 72,
+          "tile": 186,
+          "attr": 3
+        },
+        {
+          "x": 184,
+          "y": 68,
+          "tile": 184,
+          "attr": 3
+        }
+      ],
+      "rgbaSha256": "2feb2f921c868283f5870009fb44143df1c1b625bc7dc6c74386db67764a0ac7"
+    }
+  ],
+  "bullet": {
+    "frame": 850,
+    "cell": {
+      "x": 37,
+      "y": 87,
+      "tile": 106,
+      "attr": 3
+    },
+    "rgbaSha256": "b7c6cd39f545fd051d72695c8ea643191d950ebb881637ffa4885e71851a69d7"
+  },
+  "spriteSettings": {
+    "shell": {
+      "cell": [
+        16,
+        16
+      ],
+      "frames": 4,
+      "origin": [
+        8,
+        7
+      ],
+      "canonical": "left"
+    },
+    "bullet": {
+      "cell": [
+        8,
+        8
+      ],
+      "frames": 1,
+      "origin": [
+        4,
+        3
+      ]
+    }
+  },
+  "spans": [
+    {
+      "offset": 128627,
+      "hex": "48c91af004c92dd005a9152077c4"
+    },
+    {
+      "offset": 98146,
+      "hex": "bd2004297f9d2004"
+    },
+    {
+      "offset": 98171,
+      "hex": "a91d9d8005"
+    }
+  ],
+  "sounds": {
+    "fire": 21,
+    "blocked": 29,
+    "fireRequests": [
+      {
+        "frame": 532,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 564,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 596,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 628,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 739,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 771,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 803,
+        "sound": 21,
+        "source": 16
+      },
+      {
+        "frame": 835,
+        "sound": 21,
+        "source": 16
+      }
+    ],
+    "driverRequests": [
+      {
+        "frame": 533,
+        "sound": 21
+      },
+      {
+        "frame": 565,
+        "sound": 21
+      },
+      {
+        "frame": 597,
+        "sound": 21
+      },
+      {
+        "frame": 629,
+        "sound": 21
+      },
+      {
+        "frame": 740,
+        "sound": 21
+      },
+      {
+        "frame": 772,
+        "sound": 21
+      },
+      {
+        "frame": 804,
+        "sound": 21
+      },
+      {
+        "frame": 836,
+        "sound": 21
+      }
+    ]
+  },
+  "hits": [
+    {
+      "mode": "closed",
+      "fixture": "Original first Blaster state snapshot; player placed X780/Y72, facingright, real one-frame B press. Y/speed/protection pinned for25frames. No forced hit flags or enemy HP/state edits.",
+      "events": [
+        {
+          "tick": 0,
+          "pc": "c477",
+          "a": 20,
+          "slot": 2,
+          "enemyType": 11,
+          "state": 1,
+          "life": 20
+        },
+        {
+          "tick": 1,
+          "pc": "9003",
+          "a": 20,
+          "slot": 1,
+          "enemyType": 11,
+          "state": 1,
+          "life": 20
+        },
+        {
+          "tick": 7,
+          "pc": "c477",
+          "a": 27,
+          "slot": 16,
+          "enemyType": 11,
+          "state": 1,
+          "life": 20
+        },
+        {
+          "tick": 7,
+          "pc": "bf52",
+          "a": 128,
+          "slot": 16,
+          "enemyType": 11,
+          "state": 1,
+          "life": 20
+        },
+        {
+          "tick": 8,
+          "pc": "9003",
+          "a": 29,
+          "slot": 1,
+          "enemyType": 11,
+          "state": 1,
+          "life": 20
+        }
+      ],
+      "afterType": 11,
+      "afterLife": 20
+    },
+    {
+      "mode": "open",
+      "fixture": "Original first Blaster state snapshot; player placed X780/Y72, facingright, real one-frame B press. Y/speed/protection pinned for25frames. No forced hit flags or enemy HP/state edits.",
+      "events": [
+        {
+          "tick": 0,
+          "pc": "c477",
+          "a": 20,
+          "slot": 2,
+          "enemyType": 11,
+          "state": 50,
+          "life": 20
+        },
+        {
+          "tick": 1,
+          "pc": "9003",
+          "a": 20,
+          "slot": 1,
+          "enemyType": 11,
+          "state": 50,
+          "life": 20
+        },
+        {
+          "tick": 7,
+          "pc": "c477",
+          "a": 27,
+          "slot": 16,
+          "enemyType": 11,
+          "state": 50,
+          "life": 20
+        },
+        {
+          "tick": 7,
+          "pc": "bec2",
+          "a": 128,
+          "slot": 16,
+          "enemyType": 11,
+          "state": 50,
+          "life": 20
+        },
+        {
+          "tick": 7,
+          "pc": "beee",
+          "a": 11,
+          "slot": 16,
+          "enemyType": 11,
+          "state": 50,
+          "life": 20
+        },
+        {
+          "tick": 8,
+          "pc": "9003",
+          "a": 27,
+          "slot": 1,
+          "enemyType": 27,
+          "state": 1,
+          "life": 20
+        }
+      ],
+      "afterType": 27,
+      "afterLife": 20
+    }
+  ]
+}

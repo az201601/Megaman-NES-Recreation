@@ -1,6 +1,6 @@
 # MM1 Blaster — original-ROM research checkpoint
 
-**Research only. No new sprites, sounds or GameMaker objects are ready for import in this checkpoint.** Preserve installed Blader combat, movement, stage routes, pause and accepted gameplay-volume pack. User requested original encounter order: Blaster next, before cutter dispensers.
+**Research/art/audio-review checkpoint. No Blaster gameplay integration or GameMaker object/event update is supplied yet.** Preserve installed Blader combat, movement, stage routes, pause and accepted gameplay-volume pack. User requested original encounter order: Blaster next, before cutter dispensers.
 
 ## Verified so far
 
@@ -43,3 +43,21 @@ node tools/rom-recovery/test-cutman-blaster-reference.mjs
 3. Independently test closed/open vulnerability, normal-shot thresholds, projectile/body damage, native collision bounds and relevant sound requests. Do not guess charged-shot behavior for MM1: charging is an explicit MM5-player adaptation.
 4. Map all11 anchors through accepted route translations; integrate into the existing single combat scheduler without double updates or changes to Blader.
 5. Package GMS1.4 scripts/event deltas and detailed imports, then compile/playtest locally with the user. Preserve accepted SFX +6dB and stage music0.85; do not silently import quiet master recordings over the accepted mix.
+
+## Art and sound recovery completed
+
+`recover-cutman-blaster-assets.mjs` now recovers four original16×16 shell poses and one8×8 bullet. Each pose has an actual opaque-pixel match to the native render (Mesen0.9.9 RGB mapping, not Mesen executable). Shell origin8,7/canonicalleft and bullet origin4,3 retain OAM offsets. `Reference/native-blaster-assets.json` contains cell and pixel hashes.
+
+A second controlled approach stops atX760 so the first cannon is fully visible. Real one-frame B presses from controlled playerX780/Y72 snapshots demonstrate closed-shell hit helperBF52, no life loss20->20, actual driver command1D; the tested open state invokes native damage/death and a normal shot kills. Enemy hit flags/HP/state are NOT injected. This is not yet every animation boundary or charged-shot/reflection certification.
+
+AI firing requests original15hex via CreateEnemy for each bullet. Native command evidence is separate from the isolated cue recording. Sound review files, with exact source/mix treatment documented, are under `Assets/Audio/Mega Man/MM1/Blaster/`. Both cues use the accepted gameplay2x gain for listening; user approval pending. Successful open-shell impacts will retain the already-approved MM6 hit cue, not original MM1 hit audio.
+
+Additional checks:
+
+```sh
+node tools/rom-recovery/recover-cutman-blaster-assets.mjs
+node tools/rom-recovery/record-mm1-blaster-sfx.mjs
+node tools/rom-recovery/test-blaster-assets.mjs
+```
+
+Earlier remaining-work list is historical: original poses, bullet, sound IDs and one closed/open basic-shot collision trial are now recovered. Full variant/timing boundaries, projectile/contact bounds and damage, route mapping and GMS integration remain pending.
