@@ -80,3 +80,17 @@ SHA256 manifest. Complete guide/scope/adaptations at
 Existing gameplay event sources remain historical approved baselines; this package
 supplies precise fragments/replacement hooks rather than pretending to modify an
 absent editable GMX project. Local GMS1.4 compile/playtest acceptance is pending.
+
+## Blaster gameplay checkpoint
+
+`probe-blaster-gameplay.mjs` rebuilds a controlled first-gun observation from ignored `.work/mm1-stage.json` (regenerate with `mm1-hurtwalk.mjs`). Tests4variants×600updates against independent animation-byte/firecounter and signed fixedpoint movement; writes public non-ROM evidence JSON. Variant default tables are bank6, not bank5. `test-blaster-integration.mjs` overlays the additive package on the accepted actual-GML mock engine; the base407checks still run and additional Blaster checks follow. No compiler/runtime equivalence claim.
+
+```sh
+node tools/rom-recovery/mm1-hurtwalk.mjs
+node tools/rom-recovery/probe-blaster-gameplay.mjs
+node tools/rom-recovery/test-blaster-integration.mjs
+node tools/rom-recovery/test-blader-combat-integration.mjs
+python tools/rom-recovery/package-blaster-combat.py
+```
+
+Approved trim source/manifest and MM6ding evidence are packaged with exact hashes. Do not rerun older recorders over accepted output/import quiet masters or rejected previews. No ROM/save-state distribution.

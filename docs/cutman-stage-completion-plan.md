@@ -445,3 +445,9 @@ MM5 RNG history), rectangular terrain/hybrid8x8 target mapping/scheduler, death
 retry from Cut Man OPENING if spare life remains; zero spares returns existing title
 and new-game inventory. Native checkpoint placement/GameOverContinue UI deferred.
 No tank-use changes, other enemy/dispenser/spike AI or boss combat added.
+
+## Blaster combat package prepared (2026-11-01)
+
+User accepted live Blader combat and louder effects/music0.85, then directed original enemy order: Blaster before cutter dispensers. Approved audio is final full-tail live MM1 firing take with exact-zero padding trimmed (`Assets/Audio/Mega Man/MM1/Blaster/Approved/snd_mm1_blaster_fire.wav`), and MM6 blocked-hit27 (`Assets/Audio/Mega Man/MM6/Combat/Blocked Hit/mm6-blocked-hit-balanced-review.wav`). Old firing/blocked previews rejected. Retain existing approved loud MM6 successful-hit35.
+
+Prepared `Assets/Combat/MM5/Blaster Checkpoint/`: additive manual guide/ZIP,2sprites/2approvedsounds/2newobjects/5newscripts/2existing-script replacements/2Create appends. Original11records mapped across opening/three ladder-screen groups. Four native variants/cycle/velocities; body1/bullet2 and same MM5 damage/refill/pause/drop ownership. Closed all-shot bounce and exposed charge handling explicitly hybrid adaptations; normal one-hit threshold native. No manual placements or new Step passes/camera/music/pause/player event edits. Native2396AI transitions/1689projectile moves checked; mocked840native state matches and existing407Blader checks pass with/without overlay. **Package delivery/source tests are not user installation/GMS runtime acceptance.** Local compile/playtest pending; preserve backup and complete installer checklist.

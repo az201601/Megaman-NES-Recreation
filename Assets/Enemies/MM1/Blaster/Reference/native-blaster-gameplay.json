@@ -1,0 +1,4539 @@
+{
+  "method": "Supplied USA ROM. Controlled safe stationary first-gun snapshot; variant type/flags/initialtimer assigned from original bank6 spawn defaults, state1. Original AI/bullet code unmodified.600updates pervariant. Exact fullanimationbyte/timer and successive bulletpositions compared against independent model. Tables are originalCPU half extents/damage, not GMS masks. MM5 player/charged shot adaptation remains separate.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "trials": [
+    {
+      "type": 11,
+      "flags": 6,
+      "initialTimer": 0,
+      "checked": 599,
+      "moves": 561,
+      "firstFour": [
+        {
+          "f": 96,
+          "index": 12,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        },
+        {
+          "f": 128,
+          "index": 16,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        },
+        {
+          "f": 160,
+          "index": 20,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        },
+        {
+          "f": 192,
+          "index": 24,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        }
+      ],
+      "states": [
+        {
+          "f": 0,
+          "state": 1,
+          "timer": 0
+        },
+        {
+          "f": 1,
+          "state": 1,
+          "timer": 1
+        },
+        {
+          "f": 2,
+          "state": 1,
+          "timer": 2
+        },
+        {
+          "f": 3,
+          "state": 1,
+          "timer": 3
+        },
+        {
+          "f": 4,
+          "state": 1,
+          "timer": 4
+        },
+        {
+          "f": 5,
+          "state": 1,
+          "timer": 5
+        },
+        {
+          "f": 6,
+          "state": 1,
+          "timer": 6
+        },
+        {
+          "f": 7,
+          "state": 1,
+          "timer": 7
+        },
+        {
+          "f": 8,
+          "state": 1,
+          "timer": 8
+        },
+        {
+          "f": 9,
+          "state": 1,
+          "timer": 9
+        },
+        {
+          "f": 10,
+          "state": 1,
+          "timer": 10
+        },
+        {
+          "f": 11,
+          "state": 1,
+          "timer": 11
+        },
+        {
+          "f": 12,
+          "state": 1,
+          "timer": 12
+        },
+        {
+          "f": 13,
+          "state": 1,
+          "timer": 13
+        },
+        {
+          "f": 14,
+          "state": 1,
+          "timer": 14
+        },
+        {
+          "f": 15,
+          "state": 1,
+          "timer": 15
+        },
+        {
+          "f": 16,
+          "state": 1,
+          "timer": 16
+        },
+        {
+          "f": 17,
+          "state": 1,
+          "timer": 17
+        },
+        {
+          "f": 18,
+          "state": 1,
+          "timer": 18
+        },
+        {
+          "f": 19,
+          "state": 1,
+          "timer": 19
+        },
+        {
+          "f": 20,
+          "state": 1,
+          "timer": 20
+        },
+        {
+          "f": 21,
+          "state": 1,
+          "timer": 21
+        },
+        {
+          "f": 22,
+          "state": 1,
+          "timer": 22
+        },
+        {
+          "f": 23,
+          "state": 1,
+          "timer": 23
+        },
+        {
+          "f": 24,
+          "state": 1,
+          "timer": 24
+        },
+        {
+          "f": 25,
+          "state": 1,
+          "timer": 25
+        },
+        {
+          "f": 26,
+          "state": 1,
+          "timer": 26
+        },
+        {
+          "f": 27,
+          "state": 1,
+          "timer": 27
+        },
+        {
+          "f": 28,
+          "state": 1,
+          "timer": 28
+        },
+        {
+          "f": 29,
+          "state": 1,
+          "timer": 29
+        },
+        {
+          "f": 30,
+          "state": 1,
+          "timer": 30
+        },
+        {
+          "f": 31,
+          "state": 1,
+          "timer": 31
+        },
+        {
+          "f": 32,
+          "state": 1,
+          "timer": 32
+        },
+        {
+          "f": 33,
+          "state": 1,
+          "timer": 33
+        },
+        {
+          "f": 34,
+          "state": 1,
+          "timer": 34
+        },
+        {
+          "f": 35,
+          "state": 1,
+          "timer": 35
+        },
+        {
+          "f": 36,
+          "state": 1,
+          "timer": 36
+        },
+        {
+          "f": 37,
+          "state": 1,
+          "timer": 37
+        },
+        {
+          "f": 38,
+          "state": 1,
+          "timer": 38
+        },
+        {
+          "f": 39,
+          "state": 1,
+          "timer": 39
+        },
+        {
+          "f": 40,
+          "state": 1,
+          "timer": 40
+        },
+        {
+          "f": 41,
+          "state": 1,
+          "timer": 41
+        },
+        {
+          "f": 42,
+          "state": 1,
+          "timer": 42
+        },
+        {
+          "f": 43,
+          "state": 1,
+          "timer": 43
+        },
+        {
+          "f": 44,
+          "state": 1,
+          "timer": 44
+        },
+        {
+          "f": 45,
+          "state": 1,
+          "timer": 45
+        },
+        {
+          "f": 46,
+          "state": 1,
+          "timer": 46
+        },
+        {
+          "f": 47,
+          "state": 1,
+          "timer": 47
+        },
+        {
+          "f": 48,
+          "state": 1,
+          "timer": 48
+        },
+        {
+          "f": 49,
+          "state": 1,
+          "timer": 49
+        },
+        {
+          "f": 50,
+          "state": 1,
+          "timer": 50
+        },
+        {
+          "f": 51,
+          "state": 1,
+          "timer": 51
+        },
+        {
+          "f": 52,
+          "state": 1,
+          "timer": 52
+        },
+        {
+          "f": 53,
+          "state": 1,
+          "timer": 53
+        },
+        {
+          "f": 54,
+          "state": 1,
+          "timer": 54
+        },
+        {
+          "f": 55,
+          "state": 1,
+          "timer": 55
+        },
+        {
+          "f": 56,
+          "state": 1,
+          "timer": 56
+        },
+        {
+          "f": 57,
+          "state": 1,
+          "timer": 57
+        },
+        {
+          "f": 58,
+          "state": 1,
+          "timer": 58
+        },
+        {
+          "f": 59,
+          "state": 1,
+          "timer": 59
+        },
+        {
+          "f": 60,
+          "state": 1,
+          "timer": 60
+        },
+        {
+          "f": 61,
+          "state": 1,
+          "timer": 61
+        },
+        {
+          "f": 62,
+          "state": 1,
+          "timer": 62
+        },
+        {
+          "f": 63,
+          "state": 1,
+          "timer": 63
+        },
+        {
+          "f": 64,
+          "state": 1,
+          "timer": 64
+        },
+        {
+          "f": 65,
+          "state": 1,
+          "timer": 65
+        },
+        {
+          "f": 66,
+          "state": 1,
+          "timer": 66
+        },
+        {
+          "f": 67,
+          "state": 1,
+          "timer": 67
+        },
+        {
+          "f": 68,
+          "state": 1,
+          "timer": 68
+        },
+        {
+          "f": 69,
+          "state": 1,
+          "timer": 69
+        },
+        {
+          "f": 70,
+          "state": 1,
+          "timer": 70
+        },
+        {
+          "f": 71,
+          "state": 1,
+          "timer": 71
+        },
+        {
+          "f": 72,
+          "state": 1,
+          "timer": 72
+        },
+        {
+          "f": 73,
+          "state": 1,
+          "timer": 73
+        },
+        {
+          "f": 74,
+          "state": 1,
+          "timer": 74
+        },
+        {
+          "f": 75,
+          "state": 1,
+          "timer": 75
+        },
+        {
+          "f": 76,
+          "state": 1,
+          "timer": 76
+        },
+        {
+          "f": 77,
+          "state": 2,
+          "timer": 77
+        },
+        {
+          "f": 78,
+          "state": 3,
+          "timer": 78
+        },
+        {
+          "f": 79,
+          "state": 4,
+          "timer": 79
+        },
+        {
+          "f": 80,
+          "state": 5,
+          "timer": 80
+        },
+        {
+          "f": 81,
+          "state": 6,
+          "timer": 81
+        },
+        {
+          "f": 82,
+          "state": 16,
+          "timer": 82
+        },
+        {
+          "f": 83,
+          "state": 17,
+          "timer": 83
+        },
+        {
+          "f": 84,
+          "state": 18,
+          "timer": 84
+        },
+        {
+          "f": 85,
+          "state": 19,
+          "timer": 85
+        },
+        {
+          "f": 86,
+          "state": 20,
+          "timer": 86
+        },
+        {
+          "f": 87,
+          "state": 21,
+          "timer": 87
+        },
+        {
+          "f": 88,
+          "state": 22,
+          "timer": 88
+        },
+        {
+          "f": 89,
+          "state": 32,
+          "timer": 89
+        },
+        {
+          "f": 90,
+          "state": 33,
+          "timer": 90
+        },
+        {
+          "f": 91,
+          "state": 34,
+          "timer": 91
+        },
+        {
+          "f": 92,
+          "state": 35,
+          "timer": 92
+        },
+        {
+          "f": 93,
+          "state": 36,
+          "timer": 93
+        },
+        {
+          "f": 94,
+          "state": 37,
+          "timer": 94
+        },
+        {
+          "f": 95,
+          "state": 38,
+          "timer": 95
+        },
+        {
+          "f": 96,
+          "state": 48,
+          "timer": 96
+        },
+        {
+          "f": 97,
+          "state": 50,
+          "timer": 0
+        },
+        {
+          "f": 98,
+          "state": 50,
+          "timer": 1
+        },
+        {
+          "f": 99,
+          "state": 50,
+          "timer": 2
+        },
+        {
+          "f": 100,
+          "state": 50,
+          "timer": 3
+        },
+        {
+          "f": 101,
+          "state": 50,
+          "timer": 4
+        },
+        {
+          "f": 102,
+          "state": 50,
+          "timer": 5
+        },
+        {
+          "f": 103,
+          "state": 50,
+          "timer": 6
+        },
+        {
+          "f": 104,
+          "state": 50,
+          "timer": 7
+        },
+        {
+          "f": 105,
+          "state": 50,
+          "timer": 8
+        },
+        {
+          "f": 106,
+          "state": 50,
+          "timer": 9
+        },
+        {
+          "f": 107,
+          "state": 50,
+          "timer": 10
+        },
+        {
+          "f": 108,
+          "state": 50,
+          "timer": 11
+        },
+        {
+          "f": 109,
+          "state": 50,
+          "timer": 12
+        },
+        {
+          "f": 110,
+          "state": 50,
+          "timer": 13
+        },
+        {
+          "f": 111,
+          "state": 50,
+          "timer": 14
+        },
+        {
+          "f": 112,
+          "state": 50,
+          "timer": 15
+        },
+        {
+          "f": 113,
+          "state": 50,
+          "timer": 16
+        },
+        {
+          "f": 114,
+          "state": 50,
+          "timer": 17
+        },
+        {
+          "f": 115,
+          "state": 50,
+          "timer": 18
+        },
+        {
+          "f": 116,
+          "state": 50,
+          "timer": 19
+        },
+        {
+          "f": 117,
+          "state": 50,
+          "timer": 20
+        },
+        {
+          "f": 118,
+          "state": 50,
+          "timer": 21
+        },
+        {
+          "f": 119,
+          "state": 50,
+          "timer": 22
+        },
+        {
+          "f": 120,
+          "state": 50,
+          "timer": 23
+        },
+        {
+          "f": 121,
+          "state": 50,
+          "timer": 24
+        },
+        {
+          "f": 122,
+          "state": 50,
+          "timer": 25
+        },
+        {
+          "f": 123,
+          "state": 50,
+          "timer": 26
+        },
+        {
+          "f": 124,
+          "state": 50,
+          "timer": 27
+        },
+        {
+          "f": 125,
+          "state": 50,
+          "timer": 28
+        },
+        {
+          "f": 126,
+          "state": 50,
+          "timer": 29
+        },
+        {
+          "f": 127,
+          "state": 50,
+          "timer": 30
+        },
+        {
+          "f": 128,
+          "state": 50,
+          "timer": 31
+        },
+        {
+          "f": 129,
+          "state": 50,
+          "timer": 32
+        },
+        {
+          "f": 130,
+          "state": 50,
+          "timer": 33
+        },
+        {
+          "f": 131,
+          "state": 50,
+          "timer": 34
+        },
+        {
+          "f": 132,
+          "state": 50,
+          "timer": 35
+        },
+        {
+          "f": 133,
+          "state": 50,
+          "timer": 36
+        },
+        {
+          "f": 134,
+          "state": 50,
+          "timer": 37
+        },
+        {
+          "f": 135,
+          "state": 50,
+          "timer": 38
+        },
+        {
+          "f": 136,
+          "state": 50,
+          "timer": 39
+        },
+        {
+          "f": 137,
+          "state": 50,
+          "timer": 40
+        },
+        {
+          "f": 138,
+          "state": 50,
+          "timer": 41
+        },
+        {
+          "f": 139,
+          "state": 50,
+          "timer": 42
+        },
+        {
+          "f": 140,
+          "state": 50,
+          "timer": 43
+        },
+        {
+          "f": 141,
+          "state": 50,
+          "timer": 44
+        },
+        {
+          "f": 142,
+          "state": 50,
+          "timer": 45
+        },
+        {
+          "f": 143,
+          "state": 50,
+          "timer": 46
+        },
+        {
+          "f": 144,
+          "state": 50,
+          "timer": 47
+        },
+        {
+          "f": 145,
+          "state": 50,
+          "timer": 48
+        },
+        {
+          "f": 146,
+          "state": 50,
+          "timer": 49
+        },
+        {
+          "f": 147,
+          "state": 50,
+          "timer": 50
+        },
+        {
+          "f": 148,
+          "state": 50,
+          "timer": 51
+        },
+        {
+          "f": 149,
+          "state": 50,
+          "timer": 52
+        },
+        {
+          "f": 150,
+          "state": 50,
+          "timer": 53
+        },
+        {
+          "f": 151,
+          "state": 50,
+          "timer": 54
+        },
+        {
+          "f": 152,
+          "state": 50,
+          "timer": 55
+        },
+        {
+          "f": 153,
+          "state": 50,
+          "timer": 56
+        },
+        {
+          "f": 154,
+          "state": 50,
+          "timer": 57
+        },
+        {
+          "f": 155,
+          "state": 50,
+          "timer": 58
+        },
+        {
+          "f": 156,
+          "state": 50,
+          "timer": 59
+        },
+        {
+          "f": 157,
+          "state": 50,
+          "timer": 60
+        },
+        {
+          "f": 158,
+          "state": 50,
+          "timer": 61
+        },
+        {
+          "f": 159,
+          "state": 50,
+          "timer": 62
+        },
+        {
+          "f": 160,
+          "state": 50,
+          "timer": 63
+        },
+        {
+          "f": 161,
+          "state": 50,
+          "timer": 64
+        },
+        {
+          "f": 162,
+          "state": 50,
+          "timer": 65
+        },
+        {
+          "f": 163,
+          "state": 50,
+          "timer": 66
+        },
+        {
+          "f": 164,
+          "state": 50,
+          "timer": 67
+        },
+        {
+          "f": 165,
+          "state": 50,
+          "timer": 68
+        },
+        {
+          "f": 166,
+          "state": 50,
+          "timer": 69
+        },
+        {
+          "f": 167,
+          "state": 50,
+          "timer": 70
+        },
+        {
+          "f": 168,
+          "state": 50,
+          "timer": 71
+        },
+        {
+          "f": 169,
+          "state": 50,
+          "timer": 72
+        },
+        {
+          "f": 170,
+          "state": 50,
+          "timer": 73
+        },
+        {
+          "f": 171,
+          "state": 50,
+          "timer": 74
+        },
+        {
+          "f": 172,
+          "state": 50,
+          "timer": 75
+        },
+        {
+          "f": 173,
+          "state": 50,
+          "timer": 76
+        },
+        {
+          "f": 174,
+          "state": 50,
+          "timer": 77
+        },
+        {
+          "f": 175,
+          "state": 50,
+          "timer": 78
+        },
+        {
+          "f": 176,
+          "state": 50,
+          "timer": 79
+        },
+        {
+          "f": 177,
+          "state": 50,
+          "timer": 80
+        },
+        {
+          "f": 178,
+          "state": 50,
+          "timer": 81
+        },
+        {
+          "f": 179,
+          "state": 50,
+          "timer": 82
+        },
+        {
+          "f": 180,
+          "state": 50,
+          "timer": 83
+        },
+        {
+          "f": 181,
+          "state": 50,
+          "timer": 84
+        },
+        {
+          "f": 182,
+          "state": 50,
+          "timer": 85
+        },
+        {
+          "f": 183,
+          "state": 50,
+          "timer": 86
+        },
+        {
+          "f": 184,
+          "state": 50,
+          "timer": 87
+        },
+        {
+          "f": 185,
+          "state": 50,
+          "timer": 88
+        },
+        {
+          "f": 186,
+          "state": 50,
+          "timer": 89
+        },
+        {
+          "f": 187,
+          "state": 50,
+          "timer": 90
+        },
+        {
+          "f": 188,
+          "state": 50,
+          "timer": 91
+        },
+        {
+          "f": 189,
+          "state": 50,
+          "timer": 92
+        },
+        {
+          "f": 190,
+          "state": 50,
+          "timer": 93
+        },
+        {
+          "f": 191,
+          "state": 50,
+          "timer": 94
+        },
+        {
+          "f": 192,
+          "state": 50,
+          "timer": 95
+        },
+        {
+          "f": 193,
+          "state": 65,
+          "timer": 96
+        },
+        {
+          "f": 194,
+          "state": 66,
+          "timer": 97
+        },
+        {
+          "f": 195,
+          "state": 67,
+          "timer": 98
+        },
+        {
+          "f": 196,
+          "state": 68,
+          "timer": 99
+        },
+        {
+          "f": 197,
+          "state": 69,
+          "timer": 100
+        },
+        {
+          "f": 198,
+          "state": 70,
+          "timer": 101
+        },
+        {
+          "f": 199,
+          "state": 80,
+          "timer": 102
+        },
+        {
+          "f": 200,
+          "state": 81,
+          "timer": 103
+        },
+        {
+          "f": 201,
+          "state": 82,
+          "timer": 104
+        },
+        {
+          "f": 202,
+          "state": 83,
+          "timer": 105
+        },
+        {
+          "f": 203,
+          "state": 84,
+          "timer": 106
+        },
+        {
+          "f": 204,
+          "state": 85,
+          "timer": 107
+        },
+        {
+          "f": 205,
+          "state": 86,
+          "timer": 108
+        },
+        {
+          "f": 206,
+          "state": 96,
+          "timer": 109
+        },
+        {
+          "f": 207,
+          "state": 1,
+          "timer": 0
+        },
+        {
+          "f": 208,
+          "state": 1,
+          "timer": 1
+        },
+        {
+          "f": 209,
+          "state": 1,
+          "timer": 2
+        }
+      ]
+    },
+    {
+      "type": 23,
+      "flags": 70,
+      "initialTimer": 0,
+      "checked": 599,
+      "moves": 236,
+      "firstFour": [
+        {
+          "f": 96,
+          "index": 12,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        },
+        {
+          "f": 128,
+          "index": 16,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        },
+        {
+          "f": 160,
+          "index": 20,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        },
+        {
+          "f": 192,
+          "index": 24,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        }
+      ],
+      "states": [
+        {
+          "f": 0,
+          "state": 1,
+          "timer": 0
+        },
+        {
+          "f": 1,
+          "state": 1,
+          "timer": 1
+        },
+        {
+          "f": 2,
+          "state": 1,
+          "timer": 2
+        },
+        {
+          "f": 3,
+          "state": 1,
+          "timer": 3
+        },
+        {
+          "f": 4,
+          "state": 1,
+          "timer": 4
+        },
+        {
+          "f": 5,
+          "state": 1,
+          "timer": 5
+        },
+        {
+          "f": 6,
+          "state": 1,
+          "timer": 6
+        },
+        {
+          "f": 7,
+          "state": 1,
+          "timer": 7
+        },
+        {
+          "f": 8,
+          "state": 1,
+          "timer": 8
+        },
+        {
+          "f": 9,
+          "state": 1,
+          "timer": 9
+        },
+        {
+          "f": 10,
+          "state": 1,
+          "timer": 10
+        },
+        {
+          "f": 11,
+          "state": 1,
+          "timer": 11
+        },
+        {
+          "f": 12,
+          "state": 1,
+          "timer": 12
+        },
+        {
+          "f": 13,
+          "state": 1,
+          "timer": 13
+        },
+        {
+          "f": 14,
+          "state": 1,
+          "timer": 14
+        },
+        {
+          "f": 15,
+          "state": 1,
+          "timer": 15
+        },
+        {
+          "f": 16,
+          "state": 1,
+          "timer": 16
+        },
+        {
+          "f": 17,
+          "state": 1,
+          "timer": 17
+        },
+        {
+          "f": 18,
+          "state": 1,
+          "timer": 18
+        },
+        {
+          "f": 19,
+          "state": 1,
+          "timer": 19
+        },
+        {
+          "f": 20,
+          "state": 1,
+          "timer": 20
+        },
+        {
+          "f": 21,
+          "state": 1,
+          "timer": 21
+        },
+        {
+          "f": 22,
+          "state": 1,
+          "timer": 22
+        },
+        {
+          "f": 23,
+          "state": 1,
+          "timer": 23
+        },
+        {
+          "f": 24,
+          "state": 1,
+          "timer": 24
+        },
+        {
+          "f": 25,
+          "state": 1,
+          "timer": 25
+        },
+        {
+          "f": 26,
+          "state": 1,
+          "timer": 26
+        },
+        {
+          "f": 27,
+          "state": 1,
+          "timer": 27
+        },
+        {
+          "f": 28,
+          "state": 1,
+          "timer": 28
+        },
+        {
+          "f": 29,
+          "state": 1,
+          "timer": 29
+        },
+        {
+          "f": 30,
+          "state": 1,
+          "timer": 30
+        },
+        {
+          "f": 31,
+          "state": 1,
+          "timer": 31
+        },
+        {
+          "f": 32,
+          "state": 1,
+          "timer": 32
+        },
+        {
+          "f": 33,
+          "state": 1,
+          "timer": 33
+        },
+        {
+          "f": 34,
+          "state": 1,
+          "timer": 34
+        },
+        {
+          "f": 35,
+          "state": 1,
+          "timer": 35
+        },
+        {
+          "f": 36,
+          "state": 1,
+          "timer": 36
+        },
+        {
+          "f": 37,
+          "state": 1,
+          "timer": 37
+        },
+        {
+          "f": 38,
+          "state": 1,
+          "timer": 38
+        },
+        {
+          "f": 39,
+          "state": 1,
+          "timer": 39
+        },
+        {
+          "f": 40,
+          "state": 1,
+          "timer": 40
+        },
+        {
+          "f": 41,
+          "state": 1,
+          "timer": 41
+        },
+        {
+          "f": 42,
+          "state": 1,
+          "timer": 42
+        },
+        {
+          "f": 43,
+          "state": 1,
+          "timer": 43
+        },
+        {
+          "f": 44,
+          "state": 1,
+          "timer": 44
+        },
+        {
+          "f": 45,
+          "state": 1,
+          "timer": 45
+        },
+        {
+          "f": 46,
+          "state": 1,
+          "timer": 46
+        },
+        {
+          "f": 47,
+          "state": 1,
+          "timer": 47
+        },
+        {
+          "f": 48,
+          "state": 1,
+          "timer": 48
+        },
+        {
+          "f": 49,
+          "state": 1,
+          "timer": 49
+        },
+        {
+          "f": 50,
+          "state": 1,
+          "timer": 50
+        },
+        {
+          "f": 51,
+          "state": 1,
+          "timer": 51
+        },
+        {
+          "f": 52,
+          "state": 1,
+          "timer": 52
+        },
+        {
+          "f": 53,
+          "state": 1,
+          "timer": 53
+        },
+        {
+          "f": 54,
+          "state": 1,
+          "timer": 54
+        },
+        {
+          "f": 55,
+          "state": 1,
+          "timer": 55
+        },
+        {
+          "f": 56,
+          "state": 1,
+          "timer": 56
+        },
+        {
+          "f": 57,
+          "state": 1,
+          "timer": 57
+        },
+        {
+          "f": 58,
+          "state": 1,
+          "timer": 58
+        },
+        {
+          "f": 59,
+          "state": 1,
+          "timer": 59
+        },
+        {
+          "f": 60,
+          "state": 1,
+          "timer": 60
+        },
+        {
+          "f": 61,
+          "state": 1,
+          "timer": 61
+        },
+        {
+          "f": 62,
+          "state": 1,
+          "timer": 62
+        },
+        {
+          "f": 63,
+          "state": 1,
+          "timer": 63
+        },
+        {
+          "f": 64,
+          "state": 1,
+          "timer": 64
+        },
+        {
+          "f": 65,
+          "state": 1,
+          "timer": 65
+        },
+        {
+          "f": 66,
+          "state": 1,
+          "timer": 66
+        },
+        {
+          "f": 67,
+          "state": 1,
+          "timer": 67
+        },
+        {
+          "f": 68,
+          "state": 1,
+          "timer": 68
+        },
+        {
+          "f": 69,
+          "state": 1,
+          "timer": 69
+        },
+        {
+          "f": 70,
+          "state": 1,
+          "timer": 70
+        },
+        {
+          "f": 71,
+          "state": 1,
+          "timer": 71
+        },
+        {
+          "f": 72,
+          "state": 1,
+          "timer": 72
+        },
+        {
+          "f": 73,
+          "state": 1,
+          "timer": 73
+        },
+        {
+          "f": 74,
+          "state": 1,
+          "timer": 74
+        },
+        {
+          "f": 75,
+          "state": 1,
+          "timer": 75
+        },
+        {
+          "f": 76,
+          "state": 1,
+          "timer": 76
+        },
+        {
+          "f": 77,
+          "state": 2,
+          "timer": 77
+        },
+        {
+          "f": 78,
+          "state": 3,
+          "timer": 78
+        },
+        {
+          "f": 79,
+          "state": 4,
+          "timer": 79
+        },
+        {
+          "f": 80,
+          "state": 5,
+          "timer": 80
+        },
+        {
+          "f": 81,
+          "state": 6,
+          "timer": 81
+        },
+        {
+          "f": 82,
+          "state": 16,
+          "timer": 82
+        },
+        {
+          "f": 83,
+          "state": 17,
+          "timer": 83
+        },
+        {
+          "f": 84,
+          "state": 18,
+          "timer": 84
+        },
+        {
+          "f": 85,
+          "state": 19,
+          "timer": 85
+        },
+        {
+          "f": 86,
+          "state": 20,
+          "timer": 86
+        },
+        {
+          "f": 87,
+          "state": 21,
+          "timer": 87
+        },
+        {
+          "f": 88,
+          "state": 22,
+          "timer": 88
+        },
+        {
+          "f": 89,
+          "state": 32,
+          "timer": 89
+        },
+        {
+          "f": 90,
+          "state": 33,
+          "timer": 90
+        },
+        {
+          "f": 91,
+          "state": 34,
+          "timer": 91
+        },
+        {
+          "f": 92,
+          "state": 35,
+          "timer": 92
+        },
+        {
+          "f": 93,
+          "state": 36,
+          "timer": 93
+        },
+        {
+          "f": 94,
+          "state": 37,
+          "timer": 94
+        },
+        {
+          "f": 95,
+          "state": 38,
+          "timer": 95
+        },
+        {
+          "f": 96,
+          "state": 48,
+          "timer": 96
+        },
+        {
+          "f": 97,
+          "state": 50,
+          "timer": 0
+        },
+        {
+          "f": 98,
+          "state": 50,
+          "timer": 1
+        },
+        {
+          "f": 99,
+          "state": 50,
+          "timer": 2
+        },
+        {
+          "f": 100,
+          "state": 50,
+          "timer": 3
+        },
+        {
+          "f": 101,
+          "state": 50,
+          "timer": 4
+        },
+        {
+          "f": 102,
+          "state": 50,
+          "timer": 5
+        },
+        {
+          "f": 103,
+          "state": 50,
+          "timer": 6
+        },
+        {
+          "f": 104,
+          "state": 50,
+          "timer": 7
+        },
+        {
+          "f": 105,
+          "state": 50,
+          "timer": 8
+        },
+        {
+          "f": 106,
+          "state": 50,
+          "timer": 9
+        },
+        {
+          "f": 107,
+          "state": 50,
+          "timer": 10
+        },
+        {
+          "f": 108,
+          "state": 50,
+          "timer": 11
+        },
+        {
+          "f": 109,
+          "state": 50,
+          "timer": 12
+        },
+        {
+          "f": 110,
+          "state": 50,
+          "timer": 13
+        },
+        {
+          "f": 111,
+          "state": 50,
+          "timer": 14
+        },
+        {
+          "f": 112,
+          "state": 50,
+          "timer": 15
+        },
+        {
+          "f": 113,
+          "state": 50,
+          "timer": 16
+        },
+        {
+          "f": 114,
+          "state": 50,
+          "timer": 17
+        },
+        {
+          "f": 115,
+          "state": 50,
+          "timer": 18
+        },
+        {
+          "f": 116,
+          "state": 50,
+          "timer": 19
+        },
+        {
+          "f": 117,
+          "state": 50,
+          "timer": 20
+        },
+        {
+          "f": 118,
+          "state": 50,
+          "timer": 21
+        },
+        {
+          "f": 119,
+          "state": 50,
+          "timer": 22
+        },
+        {
+          "f": 120,
+          "state": 50,
+          "timer": 23
+        },
+        {
+          "f": 121,
+          "state": 50,
+          "timer": 24
+        },
+        {
+          "f": 122,
+          "state": 50,
+          "timer": 25
+        },
+        {
+          "f": 123,
+          "state": 50,
+          "timer": 26
+        },
+        {
+          "f": 124,
+          "state": 50,
+          "timer": 27
+        },
+        {
+          "f": 125,
+          "state": 50,
+          "timer": 28
+        },
+        {
+          "f": 126,
+          "state": 50,
+          "timer": 29
+        },
+        {
+          "f": 127,
+          "state": 50,
+          "timer": 30
+        },
+        {
+          "f": 128,
+          "state": 50,
+          "timer": 31
+        },
+        {
+          "f": 129,
+          "state": 50,
+          "timer": 32
+        },
+        {
+          "f": 130,
+          "state": 50,
+          "timer": 33
+        },
+        {
+          "f": 131,
+          "state": 50,
+          "timer": 34
+        },
+        {
+          "f": 132,
+          "state": 50,
+          "timer": 35
+        },
+        {
+          "f": 133,
+          "state": 50,
+          "timer": 36
+        },
+        {
+          "f": 134,
+          "state": 50,
+          "timer": 37
+        },
+        {
+          "f": 135,
+          "state": 50,
+          "timer": 38
+        },
+        {
+          "f": 136,
+          "state": 50,
+          "timer": 39
+        },
+        {
+          "f": 137,
+          "state": 50,
+          "timer": 40
+        },
+        {
+          "f": 138,
+          "state": 50,
+          "timer": 41
+        },
+        {
+          "f": 139,
+          "state": 50,
+          "timer": 42
+        },
+        {
+          "f": 140,
+          "state": 50,
+          "timer": 43
+        },
+        {
+          "f": 141,
+          "state": 50,
+          "timer": 44
+        },
+        {
+          "f": 142,
+          "state": 50,
+          "timer": 45
+        },
+        {
+          "f": 143,
+          "state": 50,
+          "timer": 46
+        },
+        {
+          "f": 144,
+          "state": 50,
+          "timer": 47
+        },
+        {
+          "f": 145,
+          "state": 50,
+          "timer": 48
+        },
+        {
+          "f": 146,
+          "state": 50,
+          "timer": 49
+        },
+        {
+          "f": 147,
+          "state": 50,
+          "timer": 50
+        },
+        {
+          "f": 148,
+          "state": 50,
+          "timer": 51
+        },
+        {
+          "f": 149,
+          "state": 50,
+          "timer": 52
+        },
+        {
+          "f": 150,
+          "state": 50,
+          "timer": 53
+        },
+        {
+          "f": 151,
+          "state": 50,
+          "timer": 54
+        },
+        {
+          "f": 152,
+          "state": 50,
+          "timer": 55
+        },
+        {
+          "f": 153,
+          "state": 50,
+          "timer": 56
+        },
+        {
+          "f": 154,
+          "state": 50,
+          "timer": 57
+        },
+        {
+          "f": 155,
+          "state": 50,
+          "timer": 58
+        },
+        {
+          "f": 156,
+          "state": 50,
+          "timer": 59
+        },
+        {
+          "f": 157,
+          "state": 50,
+          "timer": 60
+        },
+        {
+          "f": 158,
+          "state": 50,
+          "timer": 61
+        },
+        {
+          "f": 159,
+          "state": 50,
+          "timer": 62
+        },
+        {
+          "f": 160,
+          "state": 50,
+          "timer": 63
+        },
+        {
+          "f": 161,
+          "state": 50,
+          "timer": 64
+        },
+        {
+          "f": 162,
+          "state": 50,
+          "timer": 65
+        },
+        {
+          "f": 163,
+          "state": 50,
+          "timer": 66
+        },
+        {
+          "f": 164,
+          "state": 50,
+          "timer": 67
+        },
+        {
+          "f": 165,
+          "state": 50,
+          "timer": 68
+        },
+        {
+          "f": 166,
+          "state": 50,
+          "timer": 69
+        },
+        {
+          "f": 167,
+          "state": 50,
+          "timer": 70
+        },
+        {
+          "f": 168,
+          "state": 50,
+          "timer": 71
+        },
+        {
+          "f": 169,
+          "state": 50,
+          "timer": 72
+        },
+        {
+          "f": 170,
+          "state": 50,
+          "timer": 73
+        },
+        {
+          "f": 171,
+          "state": 50,
+          "timer": 74
+        },
+        {
+          "f": 172,
+          "state": 50,
+          "timer": 75
+        },
+        {
+          "f": 173,
+          "state": 50,
+          "timer": 76
+        },
+        {
+          "f": 174,
+          "state": 50,
+          "timer": 77
+        },
+        {
+          "f": 175,
+          "state": 50,
+          "timer": 78
+        },
+        {
+          "f": 176,
+          "state": 50,
+          "timer": 79
+        },
+        {
+          "f": 177,
+          "state": 50,
+          "timer": 80
+        },
+        {
+          "f": 178,
+          "state": 50,
+          "timer": 81
+        },
+        {
+          "f": 179,
+          "state": 50,
+          "timer": 82
+        },
+        {
+          "f": 180,
+          "state": 50,
+          "timer": 83
+        },
+        {
+          "f": 181,
+          "state": 50,
+          "timer": 84
+        },
+        {
+          "f": 182,
+          "state": 50,
+          "timer": 85
+        },
+        {
+          "f": 183,
+          "state": 50,
+          "timer": 86
+        },
+        {
+          "f": 184,
+          "state": 50,
+          "timer": 87
+        },
+        {
+          "f": 185,
+          "state": 50,
+          "timer": 88
+        },
+        {
+          "f": 186,
+          "state": 50,
+          "timer": 89
+        },
+        {
+          "f": 187,
+          "state": 50,
+          "timer": 90
+        },
+        {
+          "f": 188,
+          "state": 50,
+          "timer": 91
+        },
+        {
+          "f": 189,
+          "state": 50,
+          "timer": 92
+        },
+        {
+          "f": 190,
+          "state": 50,
+          "timer": 93
+        },
+        {
+          "f": 191,
+          "state": 50,
+          "timer": 94
+        },
+        {
+          "f": 192,
+          "state": 50,
+          "timer": 95
+        },
+        {
+          "f": 193,
+          "state": 65,
+          "timer": 96
+        },
+        {
+          "f": 194,
+          "state": 66,
+          "timer": 97
+        },
+        {
+          "f": 195,
+          "state": 67,
+          "timer": 98
+        },
+        {
+          "f": 196,
+          "state": 68,
+          "timer": 99
+        },
+        {
+          "f": 197,
+          "state": 69,
+          "timer": 100
+        },
+        {
+          "f": 198,
+          "state": 70,
+          "timer": 101
+        },
+        {
+          "f": 199,
+          "state": 80,
+          "timer": 102
+        },
+        {
+          "f": 200,
+          "state": 81,
+          "timer": 103
+        },
+        {
+          "f": 201,
+          "state": 82,
+          "timer": 104
+        },
+        {
+          "f": 202,
+          "state": 83,
+          "timer": 105
+        },
+        {
+          "f": 203,
+          "state": 84,
+          "timer": 106
+        },
+        {
+          "f": 204,
+          "state": 85,
+          "timer": 107
+        },
+        {
+          "f": 205,
+          "state": 86,
+          "timer": 108
+        },
+        {
+          "f": 206,
+          "state": 96,
+          "timer": 109
+        },
+        {
+          "f": 207,
+          "state": 1,
+          "timer": 0
+        },
+        {
+          "f": 208,
+          "state": 1,
+          "timer": 1
+        },
+        {
+          "f": 209,
+          "state": 1,
+          "timer": 2
+        }
+      ]
+    },
+    {
+      "type": 34,
+      "flags": 6,
+      "initialTimer": 38,
+      "checked": 599,
+      "moves": 630,
+      "firstFour": [
+        {
+          "f": 58,
+          "index": 12,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        },
+        {
+          "f": 90,
+          "index": 16,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        },
+        {
+          "f": 122,
+          "index": 20,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        },
+        {
+          "f": 154,
+          "index": 24,
+          "x": 817,
+          "y": 72,
+          "flags": 2
+        }
+      ],
+      "states": [
+        {
+          "f": 0,
+          "state": 1,
+          "timer": 38
+        },
+        {
+          "f": 1,
+          "state": 1,
+          "timer": 39
+        },
+        {
+          "f": 2,
+          "state": 1,
+          "timer": 40
+        },
+        {
+          "f": 3,
+          "state": 1,
+          "timer": 41
+        },
+        {
+          "f": 4,
+          "state": 1,
+          "timer": 42
+        },
+        {
+          "f": 5,
+          "state": 1,
+          "timer": 43
+        },
+        {
+          "f": 6,
+          "state": 1,
+          "timer": 44
+        },
+        {
+          "f": 7,
+          "state": 1,
+          "timer": 45
+        },
+        {
+          "f": 8,
+          "state": 1,
+          "timer": 46
+        },
+        {
+          "f": 9,
+          "state": 1,
+          "timer": 47
+        },
+        {
+          "f": 10,
+          "state": 1,
+          "timer": 48
+        },
+        {
+          "f": 11,
+          "state": 1,
+          "timer": 49
+        },
+        {
+          "f": 12,
+          "state": 1,
+          "timer": 50
+        },
+        {
+          "f": 13,
+          "state": 1,
+          "timer": 51
+        },
+        {
+          "f": 14,
+          "state": 1,
+          "timer": 52
+        },
+        {
+          "f": 15,
+          "state": 1,
+          "timer": 53
+        },
+        {
+          "f": 16,
+          "state": 1,
+          "timer": 54
+        },
+        {
+          "f": 17,
+          "state": 1,
+          "timer": 55
+        },
+        {
+          "f": 18,
+          "state": 1,
+          "timer": 56
+        },
+        {
+          "f": 19,
+          "state": 1,
+          "timer": 57
+        },
+        {
+          "f": 20,
+          "state": 1,
+          "timer": 58
+        },
+        {
+          "f": 21,
+          "state": 1,
+          "timer": 59
+        },
+        {
+          "f": 22,
+          "state": 1,
+          "timer": 60
+        },
+        {
+          "f": 23,
+          "state": 1,
+          "timer": 61
+        },
+        {
+          "f": 24,
+          "state": 1,
+          "timer": 62
+        },
+        {
+          "f": 25,
+          "state": 1,
+          "timer": 63
+        },
+        {
+          "f": 26,
+          "state": 1,
+          "timer": 64
+        },
+        {
+          "f": 27,
+          "state": 1,
+          "timer": 65
+        },
+        {
+          "f": 28,
+          "state": 1,
+          "timer": 66
+        },
+        {
+          "f": 29,
+          "state": 1,
+          "timer": 67
+        },
+        {
+          "f": 30,
+          "state": 1,
+          "timer": 68
+        },
+        {
+          "f": 31,
+          "state": 1,
+          "timer": 69
+        },
+        {
+          "f": 32,
+          "state": 1,
+          "timer": 70
+        },
+        {
+          "f": 33,
+          "state": 1,
+          "timer": 71
+        },
+        {
+          "f": 34,
+          "state": 1,
+          "timer": 72
+        },
+        {
+          "f": 35,
+          "state": 1,
+          "timer": 73
+        },
+        {
+          "f": 36,
+          "state": 1,
+          "timer": 74
+        },
+        {
+          "f": 37,
+          "state": 1,
+          "timer": 75
+        },
+        {
+          "f": 38,
+          "state": 1,
+          "timer": 76
+        },
+        {
+          "f": 39,
+          "state": 2,
+          "timer": 77
+        },
+        {
+          "f": 40,
+          "state": 3,
+          "timer": 78
+        },
+        {
+          "f": 41,
+          "state": 4,
+          "timer": 79
+        },
+        {
+          "f": 42,
+          "state": 5,
+          "timer": 80
+        },
+        {
+          "f": 43,
+          "state": 6,
+          "timer": 81
+        },
+        {
+          "f": 44,
+          "state": 16,
+          "timer": 82
+        },
+        {
+          "f": 45,
+          "state": 17,
+          "timer": 83
+        },
+        {
+          "f": 46,
+          "state": 18,
+          "timer": 84
+        },
+        {
+          "f": 47,
+          "state": 19,
+          "timer": 85
+        },
+        {
+          "f": 48,
+          "state": 20,
+          "timer": 86
+        },
+        {
+          "f": 49,
+          "state": 21,
+          "timer": 87
+        },
+        {
+          "f": 50,
+          "state": 22,
+          "timer": 88
+        },
+        {
+          "f": 51,
+          "state": 32,
+          "timer": 89
+        },
+        {
+          "f": 52,
+          "state": 33,
+          "timer": 90
+        },
+        {
+          "f": 53,
+          "state": 34,
+          "timer": 91
+        },
+        {
+          "f": 54,
+          "state": 35,
+          "timer": 92
+        },
+        {
+          "f": 55,
+          "state": 36,
+          "timer": 93
+        },
+        {
+          "f": 56,
+          "state": 37,
+          "timer": 94
+        },
+        {
+          "f": 57,
+          "state": 38,
+          "timer": 95
+        },
+        {
+          "f": 58,
+          "state": 48,
+          "timer": 96
+        },
+        {
+          "f": 59,
+          "state": 50,
+          "timer": 0
+        },
+        {
+          "f": 60,
+          "state": 50,
+          "timer": 1
+        },
+        {
+          "f": 61,
+          "state": 50,
+          "timer": 2
+        },
+        {
+          "f": 62,
+          "state": 50,
+          "timer": 3
+        },
+        {
+          "f": 63,
+          "state": 50,
+          "timer": 4
+        },
+        {
+          "f": 64,
+          "state": 50,
+          "timer": 5
+        },
+        {
+          "f": 65,
+          "state": 50,
+          "timer": 6
+        },
+        {
+          "f": 66,
+          "state": 50,
+          "timer": 7
+        },
+        {
+          "f": 67,
+          "state": 50,
+          "timer": 8
+        },
+        {
+          "f": 68,
+          "state": 50,
+          "timer": 9
+        },
+        {
+          "f": 69,
+          "state": 50,
+          "timer": 10
+        },
+        {
+          "f": 70,
+          "state": 50,
+          "timer": 11
+        },
+        {
+          "f": 71,
+          "state": 50,
+          "timer": 12
+        },
+        {
+          "f": 72,
+          "state": 50,
+          "timer": 13
+        },
+        {
+          "f": 73,
+          "state": 50,
+          "timer": 14
+        },
+        {
+          "f": 74,
+          "state": 50,
+          "timer": 15
+        },
+        {
+          "f": 75,
+          "state": 50,
+          "timer": 16
+        },
+        {
+          "f": 76,
+          "state": 50,
+          "timer": 17
+        },
+        {
+          "f": 77,
+          "state": 50,
+          "timer": 18
+        },
+        {
+          "f": 78,
+          "state": 50,
+          "timer": 19
+        },
+        {
+          "f": 79,
+          "state": 50,
+          "timer": 20
+        },
+        {
+          "f": 80,
+          "state": 50,
+          "timer": 21
+        },
+        {
+          "f": 81,
+          "state": 50,
+          "timer": 22
+        },
+        {
+          "f": 82,
+          "state": 50,
+          "timer": 23
+        },
+        {
+          "f": 83,
+          "state": 50,
+          "timer": 24
+        },
+        {
+          "f": 84,
+          "state": 50,
+          "timer": 25
+        },
+        {
+          "f": 85,
+          "state": 50,
+          "timer": 26
+        },
+        {
+          "f": 86,
+          "state": 50,
+          "timer": 27
+        },
+        {
+          "f": 87,
+          "state": 50,
+          "timer": 28
+        },
+        {
+          "f": 88,
+          "state": 50,
+          "timer": 29
+        },
+        {
+          "f": 89,
+          "state": 50,
+          "timer": 30
+        },
+        {
+          "f": 90,
+          "state": 50,
+          "timer": 31
+        },
+        {
+          "f": 91,
+          "state": 50,
+          "timer": 32
+        },
+        {
+          "f": 92,
+          "state": 50,
+          "timer": 33
+        },
+        {
+          "f": 93,
+          "state": 50,
+          "timer": 34
+        },
+        {
+          "f": 94,
+          "state": 50,
+          "timer": 35
+        },
+        {
+          "f": 95,
+          "state": 50,
+          "timer": 36
+        },
+        {
+          "f": 96,
+          "state": 50,
+          "timer": 37
+        },
+        {
+          "f": 97,
+          "state": 50,
+          "timer": 38
+        },
+        {
+          "f": 98,
+          "state": 50,
+          "timer": 39
+        },
+        {
+          "f": 99,
+          "state": 50,
+          "timer": 40
+        },
+        {
+          "f": 100,
+          "state": 50,
+          "timer": 41
+        },
+        {
+          "f": 101,
+          "state": 50,
+          "timer": 42
+        },
+        {
+          "f": 102,
+          "state": 50,
+          "timer": 43
+        },
+        {
+          "f": 103,
+          "state": 50,
+          "timer": 44
+        },
+        {
+          "f": 104,
+          "state": 50,
+          "timer": 45
+        },
+        {
+          "f": 105,
+          "state": 50,
+          "timer": 46
+        },
+        {
+          "f": 106,
+          "state": 50,
+          "timer": 47
+        },
+        {
+          "f": 107,
+          "state": 50,
+          "timer": 48
+        },
+        {
+          "f": 108,
+          "state": 50,
+          "timer": 49
+        },
+        {
+          "f": 109,
+          "state": 50,
+          "timer": 50
+        },
+        {
+          "f": 110,
+          "state": 50,
+          "timer": 51
+        },
+        {
+          "f": 111,
+          "state": 50,
+          "timer": 52
+        },
+        {
+          "f": 112,
+          "state": 50,
+          "timer": 53
+        },
+        {
+          "f": 113,
+          "state": 50,
+          "timer": 54
+        },
+        {
+          "f": 114,
+          "state": 50,
+          "timer": 55
+        },
+        {
+          "f": 115,
+          "state": 50,
+          "timer": 56
+        },
+        {
+          "f": 116,
+          "state": 50,
+          "timer": 57
+        },
+        {
+          "f": 117,
+          "state": 50,
+          "timer": 58
+        },
+        {
+          "f": 118,
+          "state": 50,
+          "timer": 59
+        },
+        {
+          "f": 119,
+          "state": 50,
+          "timer": 60
+        },
+        {
+          "f": 120,
+          "state": 50,
+          "timer": 61
+        },
+        {
+          "f": 121,
+          "state": 50,
+          "timer": 62
+        },
+        {
+          "f": 122,
+          "state": 50,
+          "timer": 63
+        },
+        {
+          "f": 123,
+          "state": 50,
+          "timer": 64
+        },
+        {
+          "f": 124,
+          "state": 50,
+          "timer": 65
+        },
+        {
+          "f": 125,
+          "state": 50,
+          "timer": 66
+        },
+        {
+          "f": 126,
+          "state": 50,
+          "timer": 67
+        },
+        {
+          "f": 127,
+          "state": 50,
+          "timer": 68
+        },
+        {
+          "f": 128,
+          "state": 50,
+          "timer": 69
+        },
+        {
+          "f": 129,
+          "state": 50,
+          "timer": 70
+        },
+        {
+          "f": 130,
+          "state": 50,
+          "timer": 71
+        },
+        {
+          "f": 131,
+          "state": 50,
+          "timer": 72
+        },
+        {
+          "f": 132,
+          "state": 50,
+          "timer": 73
+        },
+        {
+          "f": 133,
+          "state": 50,
+          "timer": 74
+        },
+        {
+          "f": 134,
+          "state": 50,
+          "timer": 75
+        },
+        {
+          "f": 135,
+          "state": 50,
+          "timer": 76
+        },
+        {
+          "f": 136,
+          "state": 50,
+          "timer": 77
+        },
+        {
+          "f": 137,
+          "state": 50,
+          "timer": 78
+        },
+        {
+          "f": 138,
+          "state": 50,
+          "timer": 79
+        },
+        {
+          "f": 139,
+          "state": 50,
+          "timer": 80
+        },
+        {
+          "f": 140,
+          "state": 50,
+          "timer": 81
+        },
+        {
+          "f": 141,
+          "state": 50,
+          "timer": 82
+        },
+        {
+          "f": 142,
+          "state": 50,
+          "timer": 83
+        },
+        {
+          "f": 143,
+          "state": 50,
+          "timer": 84
+        },
+        {
+          "f": 144,
+          "state": 50,
+          "timer": 85
+        },
+        {
+          "f": 145,
+          "state": 50,
+          "timer": 86
+        },
+        {
+          "f": 146,
+          "state": 50,
+          "timer": 87
+        },
+        {
+          "f": 147,
+          "state": 50,
+          "timer": 88
+        },
+        {
+          "f": 148,
+          "state": 50,
+          "timer": 89
+        },
+        {
+          "f": 149,
+          "state": 50,
+          "timer": 90
+        },
+        {
+          "f": 150,
+          "state": 50,
+          "timer": 91
+        },
+        {
+          "f": 151,
+          "state": 50,
+          "timer": 92
+        },
+        {
+          "f": 152,
+          "state": 50,
+          "timer": 93
+        },
+        {
+          "f": 153,
+          "state": 50,
+          "timer": 94
+        },
+        {
+          "f": 154,
+          "state": 50,
+          "timer": 95
+        },
+        {
+          "f": 155,
+          "state": 65,
+          "timer": 96
+        },
+        {
+          "f": 156,
+          "state": 66,
+          "timer": 97
+        },
+        {
+          "f": 157,
+          "state": 67,
+          "timer": 98
+        },
+        {
+          "f": 158,
+          "state": 68,
+          "timer": 99
+        },
+        {
+          "f": 159,
+          "state": 69,
+          "timer": 100
+        },
+        {
+          "f": 160,
+          "state": 70,
+          "timer": 101
+        },
+        {
+          "f": 161,
+          "state": 80,
+          "timer": 102
+        },
+        {
+          "f": 162,
+          "state": 81,
+          "timer": 103
+        },
+        {
+          "f": 163,
+          "state": 82,
+          "timer": 104
+        },
+        {
+          "f": 164,
+          "state": 83,
+          "timer": 105
+        },
+        {
+          "f": 165,
+          "state": 84,
+          "timer": 106
+        },
+        {
+          "f": 166,
+          "state": 85,
+          "timer": 107
+        },
+        {
+          "f": 167,
+          "state": 86,
+          "timer": 108
+        },
+        {
+          "f": 168,
+          "state": 96,
+          "timer": 109
+        },
+        {
+          "f": 169,
+          "state": 1,
+          "timer": 0
+        },
+        {
+          "f": 170,
+          "state": 1,
+          "timer": 1
+        },
+        {
+          "f": 171,
+          "state": 1,
+          "timer": 2
+        },
+        {
+          "f": 172,
+          "state": 1,
+          "timer": 3
+        },
+        {
+          "f": 173,
+          "state": 1,
+          "timer": 4
+        },
+        {
+          "f": 174,
+          "state": 1,
+          "timer": 5
+        },
+        {
+          "f": 175,
+          "state": 1,
+          "timer": 6
+        },
+        {
+          "f": 176,
+          "state": 1,
+          "timer": 7
+        },
+        {
+          "f": 177,
+          "state": 1,
+          "timer": 8
+        },
+        {
+          "f": 178,
+          "state": 1,
+          "timer": 9
+        },
+        {
+          "f": 179,
+          "state": 1,
+          "timer": 10
+        },
+        {
+          "f": 180,
+          "state": 1,
+          "timer": 11
+        },
+        {
+          "f": 181,
+          "state": 1,
+          "timer": 12
+        },
+        {
+          "f": 182,
+          "state": 1,
+          "timer": 13
+        },
+        {
+          "f": 183,
+          "state": 1,
+          "timer": 14
+        },
+        {
+          "f": 184,
+          "state": 1,
+          "timer": 15
+        },
+        {
+          "f": 185,
+          "state": 1,
+          "timer": 16
+        },
+        {
+          "f": 186,
+          "state": 1,
+          "timer": 17
+        },
+        {
+          "f": 187,
+          "state": 1,
+          "timer": 18
+        },
+        {
+          "f": 188,
+          "state": 1,
+          "timer": 19
+        },
+        {
+          "f": 189,
+          "state": 1,
+          "timer": 20
+        },
+        {
+          "f": 190,
+          "state": 1,
+          "timer": 21
+        },
+        {
+          "f": 191,
+          "state": 1,
+          "timer": 22
+        },
+        {
+          "f": 192,
+          "state": 1,
+          "timer": 23
+        },
+        {
+          "f": 193,
+          "state": 1,
+          "timer": 24
+        },
+        {
+          "f": 194,
+          "state": 1,
+          "timer": 25
+        },
+        {
+          "f": 195,
+          "state": 1,
+          "timer": 26
+        },
+        {
+          "f": 196,
+          "state": 1,
+          "timer": 27
+        },
+        {
+          "f": 197,
+          "state": 1,
+          "timer": 28
+        },
+        {
+          "f": 198,
+          "state": 1,
+          "timer": 29
+        },
+        {
+          "f": 199,
+          "state": 1,
+          "timer": 30
+        },
+        {
+          "f": 200,
+          "state": 1,
+          "timer": 31
+        },
+        {
+          "f": 201,
+          "state": 1,
+          "timer": 32
+        },
+        {
+          "f": 202,
+          "state": 1,
+          "timer": 33
+        },
+        {
+          "f": 203,
+          "state": 1,
+          "timer": 34
+        },
+        {
+          "f": 204,
+          "state": 1,
+          "timer": 35
+        },
+        {
+          "f": 205,
+          "state": 1,
+          "timer": 36
+        },
+        {
+          "f": 206,
+          "state": 1,
+          "timer": 37
+        },
+        {
+          "f": 207,
+          "state": 1,
+          "timer": 38
+        },
+        {
+          "f": 208,
+          "state": 1,
+          "timer": 39
+        },
+        {
+          "f": 209,
+          "state": 1,
+          "timer": 40
+        }
+      ]
+    },
+    {
+      "type": 35,
+      "flags": 70,
+      "initialTimer": 38,
+      "checked": 599,
+      "moves": 262,
+      "firstFour": [
+        {
+          "f": 58,
+          "index": 12,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        },
+        {
+          "f": 90,
+          "index": 16,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        },
+        {
+          "f": 122,
+          "index": 20,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        },
+        {
+          "f": 154,
+          "index": 24,
+          "x": 831,
+          "y": 72,
+          "flags": 66
+        }
+      ],
+      "states": [
+        {
+          "f": 0,
+          "state": 1,
+          "timer": 38
+        },
+        {
+          "f": 1,
+          "state": 1,
+          "timer": 39
+        },
+        {
+          "f": 2,
+          "state": 1,
+          "timer": 40
+        },
+        {
+          "f": 3,
+          "state": 1,
+          "timer": 41
+        },
+        {
+          "f": 4,
+          "state": 1,
+          "timer": 42
+        },
+        {
+          "f": 5,
+          "state": 1,
+          "timer": 43
+        },
+        {
+          "f": 6,
+          "state": 1,
+          "timer": 44
+        },
+        {
+          "f": 7,
+          "state": 1,
+          "timer": 45
+        },
+        {
+          "f": 8,
+          "state": 1,
+          "timer": 46
+        },
+        {
+          "f": 9,
+          "state": 1,
+          "timer": 47
+        },
+        {
+          "f": 10,
+          "state": 1,
+          "timer": 48
+        },
+        {
+          "f": 11,
+          "state": 1,
+          "timer": 49
+        },
+        {
+          "f": 12,
+          "state": 1,
+          "timer": 50
+        },
+        {
+          "f": 13,
+          "state": 1,
+          "timer": 51
+        },
+        {
+          "f": 14,
+          "state": 1,
+          "timer": 52
+        },
+        {
+          "f": 15,
+          "state": 1,
+          "timer": 53
+        },
+        {
+          "f": 16,
+          "state": 1,
+          "timer": 54
+        },
+        {
+          "f": 17,
+          "state": 1,
+          "timer": 55
+        },
+        {
+          "f": 18,
+          "state": 1,
+          "timer": 56
+        },
+        {
+          "f": 19,
+          "state": 1,
+          "timer": 57
+        },
+        {
+          "f": 20,
+          "state": 1,
+          "timer": 58
+        },
+        {
+          "f": 21,
+          "state": 1,
+          "timer": 59
+        },
+        {
+          "f": 22,
+          "state": 1,
+          "timer": 60
+        },
+        {
+          "f": 23,
+          "state": 1,
+          "timer": 61
+        },
+        {
+          "f": 24,
+          "state": 1,
+          "timer": 62
+        },
+        {
+          "f": 25,
+          "state": 1,
+          "timer": 63
+        },
+        {
+          "f": 26,
+          "state": 1,
+          "timer": 64
+        },
+        {
+          "f": 27,
+          "state": 1,
+          "timer": 65
+        },
+        {
+          "f": 28,
+          "state": 1,
+          "timer": 66
+        },
+        {
+          "f": 29,
+          "state": 1,
+          "timer": 67
+        },
+        {
+          "f": 30,
+          "state": 1,
+          "timer": 68
+        },
+        {
+          "f": 31,
+          "state": 1,
+          "timer": 69
+        },
+        {
+          "f": 32,
+          "state": 1,
+          "timer": 70
+        },
+        {
+          "f": 33,
+          "state": 1,
+          "timer": 71
+        },
+        {
+          "f": 34,
+          "state": 1,
+          "timer": 72
+        },
+        {
+          "f": 35,
+          "state": 1,
+          "timer": 73
+        },
+        {
+          "f": 36,
+          "state": 1,
+          "timer": 74
+        },
+        {
+          "f": 37,
+          "state": 1,
+          "timer": 75
+        },
+        {
+          "f": 38,
+          "state": 1,
+          "timer": 76
+        },
+        {
+          "f": 39,
+          "state": 2,
+          "timer": 77
+        },
+        {
+          "f": 40,
+          "state": 3,
+          "timer": 78
+        },
+        {
+          "f": 41,
+          "state": 4,
+          "timer": 79
+        },
+        {
+          "f": 42,
+          "state": 5,
+          "timer": 80
+        },
+        {
+          "f": 43,
+          "state": 6,
+          "timer": 81
+        },
+        {
+          "f": 44,
+          "state": 16,
+          "timer": 82
+        },
+        {
+          "f": 45,
+          "state": 17,
+          "timer": 83
+        },
+        {
+          "f": 46,
+          "state": 18,
+          "timer": 84
+        },
+        {
+          "f": 47,
+          "state": 19,
+          "timer": 85
+        },
+        {
+          "f": 48,
+          "state": 20,
+          "timer": 86
+        },
+        {
+          "f": 49,
+          "state": 21,
+          "timer": 87
+        },
+        {
+          "f": 50,
+          "state": 22,
+          "timer": 88
+        },
+        {
+          "f": 51,
+          "state": 32,
+          "timer": 89
+        },
+        {
+          "f": 52,
+          "state": 33,
+          "timer": 90
+        },
+        {
+          "f": 53,
+          "state": 34,
+          "timer": 91
+        },
+        {
+          "f": 54,
+          "state": 35,
+          "timer": 92
+        },
+        {
+          "f": 55,
+          "state": 36,
+          "timer": 93
+        },
+        {
+          "f": 56,
+          "state": 37,
+          "timer": 94
+        },
+        {
+          "f": 57,
+          "state": 38,
+          "timer": 95
+        },
+        {
+          "f": 58,
+          "state": 48,
+          "timer": 96
+        },
+        {
+          "f": 59,
+          "state": 50,
+          "timer": 0
+        },
+        {
+          "f": 60,
+          "state": 50,
+          "timer": 1
+        },
+        {
+          "f": 61,
+          "state": 50,
+          "timer": 2
+        },
+        {
+          "f": 62,
+          "state": 50,
+          "timer": 3
+        },
+        {
+          "f": 63,
+          "state": 50,
+          "timer": 4
+        },
+        {
+          "f": 64,
+          "state": 50,
+          "timer": 5
+        },
+        {
+          "f": 65,
+          "state": 50,
+          "timer": 6
+        },
+        {
+          "f": 66,
+          "state": 50,
+          "timer": 7
+        },
+        {
+          "f": 67,
+          "state": 50,
+          "timer": 8
+        },
+        {
+          "f": 68,
+          "state": 50,
+          "timer": 9
+        },
+        {
+          "f": 69,
+          "state": 50,
+          "timer": 10
+        },
+        {
+          "f": 70,
+          "state": 50,
+          "timer": 11
+        },
+        {
+          "f": 71,
+          "state": 50,
+          "timer": 12
+        },
+        {
+          "f": 72,
+          "state": 50,
+          "timer": 13
+        },
+        {
+          "f": 73,
+          "state": 50,
+          "timer": 14
+        },
+        {
+          "f": 74,
+          "state": 50,
+          "timer": 15
+        },
+        {
+          "f": 75,
+          "state": 50,
+          "timer": 16
+        },
+        {
+          "f": 76,
+          "state": 50,
+          "timer": 17
+        },
+        {
+          "f": 77,
+          "state": 50,
+          "timer": 18
+        },
+        {
+          "f": 78,
+          "state": 50,
+          "timer": 19
+        },
+        {
+          "f": 79,
+          "state": 50,
+          "timer": 20
+        },
+        {
+          "f": 80,
+          "state": 50,
+          "timer": 21
+        },
+        {
+          "f": 81,
+          "state": 50,
+          "timer": 22
+        },
+        {
+          "f": 82,
+          "state": 50,
+          "timer": 23
+        },
+        {
+          "f": 83,
+          "state": 50,
+          "timer": 24
+        },
+        {
+          "f": 84,
+          "state": 50,
+          "timer": 25
+        },
+        {
+          "f": 85,
+          "state": 50,
+          "timer": 26
+        },
+        {
+          "f": 86,
+          "state": 50,
+          "timer": 27
+        },
+        {
+          "f": 87,
+          "state": 50,
+          "timer": 28
+        },
+        {
+          "f": 88,
+          "state": 50,
+          "timer": 29
+        },
+        {
+          "f": 89,
+          "state": 50,
+          "timer": 30
+        },
+        {
+          "f": 90,
+          "state": 50,
+          "timer": 31
+        },
+        {
+          "f": 91,
+          "state": 50,
+          "timer": 32
+        },
+        {
+          "f": 92,
+          "state": 50,
+          "timer": 33
+        },
+        {
+          "f": 93,
+          "state": 50,
+          "timer": 34
+        },
+        {
+          "f": 94,
+          "state": 50,
+          "timer": 35
+        },
+        {
+          "f": 95,
+          "state": 50,
+          "timer": 36
+        },
+        {
+          "f": 96,
+          "state": 50,
+          "timer": 37
+        },
+        {
+          "f": 97,
+          "state": 50,
+          "timer": 38
+        },
+        {
+          "f": 98,
+          "state": 50,
+          "timer": 39
+        },
+        {
+          "f": 99,
+          "state": 50,
+          "timer": 40
+        },
+        {
+          "f": 100,
+          "state": 50,
+          "timer": 41
+        },
+        {
+          "f": 101,
+          "state": 50,
+          "timer": 42
+        },
+        {
+          "f": 102,
+          "state": 50,
+          "timer": 43
+        },
+        {
+          "f": 103,
+          "state": 50,
+          "timer": 44
+        },
+        {
+          "f": 104,
+          "state": 50,
+          "timer": 45
+        },
+        {
+          "f": 105,
+          "state": 50,
+          "timer": 46
+        },
+        {
+          "f": 106,
+          "state": 50,
+          "timer": 47
+        },
+        {
+          "f": 107,
+          "state": 50,
+          "timer": 48
+        },
+        {
+          "f": 108,
+          "state": 50,
+          "timer": 49
+        },
+        {
+          "f": 109,
+          "state": 50,
+          "timer": 50
+        },
+        {
+          "f": 110,
+          "state": 50,
+          "timer": 51
+        },
+        {
+          "f": 111,
+          "state": 50,
+          "timer": 52
+        },
+        {
+          "f": 112,
+          "state": 50,
+          "timer": 53
+        },
+        {
+          "f": 113,
+          "state": 50,
+          "timer": 54
+        },
+        {
+          "f": 114,
+          "state": 50,
+          "timer": 55
+        },
+        {
+          "f": 115,
+          "state": 50,
+          "timer": 56
+        },
+        {
+          "f": 116,
+          "state": 50,
+          "timer": 57
+        },
+        {
+          "f": 117,
+          "state": 50,
+          "timer": 58
+        },
+        {
+          "f": 118,
+          "state": 50,
+          "timer": 59
+        },
+        {
+          "f": 119,
+          "state": 50,
+          "timer": 60
+        },
+        {
+          "f": 120,
+          "state": 50,
+          "timer": 61
+        },
+        {
+          "f": 121,
+          "state": 50,
+          "timer": 62
+        },
+        {
+          "f": 122,
+          "state": 50,
+          "timer": 63
+        },
+        {
+          "f": 123,
+          "state": 50,
+          "timer": 64
+        },
+        {
+          "f": 124,
+          "state": 50,
+          "timer": 65
+        },
+        {
+          "f": 125,
+          "state": 50,
+          "timer": 66
+        },
+        {
+          "f": 126,
+          "state": 50,
+          "timer": 67
+        },
+        {
+          "f": 127,
+          "state": 50,
+          "timer": 68
+        },
+        {
+          "f": 128,
+          "state": 50,
+          "timer": 69
+        },
+        {
+          "f": 129,
+          "state": 50,
+          "timer": 70
+        },
+        {
+          "f": 130,
+          "state": 50,
+          "timer": 71
+        },
+        {
+          "f": 131,
+          "state": 50,
+          "timer": 72
+        },
+        {
+          "f": 132,
+          "state": 50,
+          "timer": 73
+        },
+        {
+          "f": 133,
+          "state": 50,
+          "timer": 74
+        },
+        {
+          "f": 134,
+          "state": 50,
+          "timer": 75
+        },
+        {
+          "f": 135,
+          "state": 50,
+          "timer": 76
+        },
+        {
+          "f": 136,
+          "state": 50,
+          "timer": 77
+        },
+        {
+          "f": 137,
+          "state": 50,
+          "timer": 78
+        },
+        {
+          "f": 138,
+          "state": 50,
+          "timer": 79
+        },
+        {
+          "f": 139,
+          "state": 50,
+          "timer": 80
+        },
+        {
+          "f": 140,
+          "state": 50,
+          "timer": 81
+        },
+        {
+          "f": 141,
+          "state": 50,
+          "timer": 82
+        },
+        {
+          "f": 142,
+          "state": 50,
+          "timer": 83
+        },
+        {
+          "f": 143,
+          "state": 50,
+          "timer": 84
+        },
+        {
+          "f": 144,
+          "state": 50,
+          "timer": 85
+        },
+        {
+          "f": 145,
+          "state": 50,
+          "timer": 86
+        },
+        {
+          "f": 146,
+          "state": 50,
+          "timer": 87
+        },
+        {
+          "f": 147,
+          "state": 50,
+          "timer": 88
+        },
+        {
+          "f": 148,
+          "state": 50,
+          "timer": 89
+        },
+        {
+          "f": 149,
+          "state": 50,
+          "timer": 90
+        },
+        {
+          "f": 150,
+          "state": 50,
+          "timer": 91
+        },
+        {
+          "f": 151,
+          "state": 50,
+          "timer": 92
+        },
+        {
+          "f": 152,
+          "state": 50,
+          "timer": 93
+        },
+        {
+          "f": 153,
+          "state": 50,
+          "timer": 94
+        },
+        {
+          "f": 154,
+          "state": 50,
+          "timer": 95
+        },
+        {
+          "f": 155,
+          "state": 65,
+          "timer": 96
+        },
+        {
+          "f": 156,
+          "state": 66,
+          "timer": 97
+        },
+        {
+          "f": 157,
+          "state": 67,
+          "timer": 98
+        },
+        {
+          "f": 158,
+          "state": 68,
+          "timer": 99
+        },
+        {
+          "f": 159,
+          "state": 69,
+          "timer": 100
+        },
+        {
+          "f": 160,
+          "state": 70,
+          "timer": 101
+        },
+        {
+          "f": 161,
+          "state": 80,
+          "timer": 102
+        },
+        {
+          "f": 162,
+          "state": 81,
+          "timer": 103
+        },
+        {
+          "f": 163,
+          "state": 82,
+          "timer": 104
+        },
+        {
+          "f": 164,
+          "state": 83,
+          "timer": 105
+        },
+        {
+          "f": 165,
+          "state": 84,
+          "timer": 106
+        },
+        {
+          "f": 166,
+          "state": 85,
+          "timer": 107
+        },
+        {
+          "f": 167,
+          "state": 86,
+          "timer": 108
+        },
+        {
+          "f": 168,
+          "state": 96,
+          "timer": 109
+        },
+        {
+          "f": 169,
+          "state": 1,
+          "timer": 0
+        },
+        {
+          "f": 170,
+          "state": 1,
+          "timer": 1
+        },
+        {
+          "f": 171,
+          "state": 1,
+          "timer": 2
+        },
+        {
+          "f": 172,
+          "state": 1,
+          "timer": 3
+        },
+        {
+          "f": 173,
+          "state": 1,
+          "timer": 4
+        },
+        {
+          "f": 174,
+          "state": 1,
+          "timer": 5
+        },
+        {
+          "f": 175,
+          "state": 1,
+          "timer": 6
+        },
+        {
+          "f": 176,
+          "state": 1,
+          "timer": 7
+        },
+        {
+          "f": 177,
+          "state": 1,
+          "timer": 8
+        },
+        {
+          "f": 178,
+          "state": 1,
+          "timer": 9
+        },
+        {
+          "f": 179,
+          "state": 1,
+          "timer": 10
+        },
+        {
+          "f": 180,
+          "state": 1,
+          "timer": 11
+        },
+        {
+          "f": 181,
+          "state": 1,
+          "timer": 12
+        },
+        {
+          "f": 182,
+          "state": 1,
+          "timer": 13
+        },
+        {
+          "f": 183,
+          "state": 1,
+          "timer": 14
+        },
+        {
+          "f": 184,
+          "state": 1,
+          "timer": 15
+        },
+        {
+          "f": 185,
+          "state": 1,
+          "timer": 16
+        },
+        {
+          "f": 186,
+          "state": 1,
+          "timer": 17
+        },
+        {
+          "f": 187,
+          "state": 1,
+          "timer": 18
+        },
+        {
+          "f": 188,
+          "state": 1,
+          "timer": 19
+        },
+        {
+          "f": 189,
+          "state": 1,
+          "timer": 20
+        },
+        {
+          "f": 190,
+          "state": 1,
+          "timer": 21
+        },
+        {
+          "f": 191,
+          "state": 1,
+          "timer": 22
+        },
+        {
+          "f": 192,
+          "state": 1,
+          "timer": 23
+        },
+        {
+          "f": 193,
+          "state": 1,
+          "timer": 24
+        },
+        {
+          "f": 194,
+          "state": 1,
+          "timer": 25
+        },
+        {
+          "f": 195,
+          "state": 1,
+          "timer": 26
+        },
+        {
+          "f": 196,
+          "state": 1,
+          "timer": 27
+        },
+        {
+          "f": 197,
+          "state": 1,
+          "timer": 28
+        },
+        {
+          "f": 198,
+          "state": 1,
+          "timer": 29
+        },
+        {
+          "f": 199,
+          "state": 1,
+          "timer": 30
+        },
+        {
+          "f": 200,
+          "state": 1,
+          "timer": 31
+        },
+        {
+          "f": 201,
+          "state": 1,
+          "timer": 32
+        },
+        {
+          "f": 202,
+          "state": 1,
+          "timer": 33
+        },
+        {
+          "f": 203,
+          "state": 1,
+          "timer": 34
+        },
+        {
+          "f": 204,
+          "state": 1,
+          "timer": 35
+        },
+        {
+          "f": 205,
+          "state": 1,
+          "timer": 36
+        },
+        {
+          "f": 206,
+          "state": 1,
+          "timer": 37
+        },
+        {
+          "f": 207,
+          "state": 1,
+          "timer": 38
+        },
+        {
+          "f": 208,
+          "state": 1,
+          "timer": 39
+        },
+        {
+          "f": 209,
+          "state": 1,
+          "timer": 40
+        }
+      ]
+    }
+  ],
+  "speeds": [
+    {
+      "index": 12,
+      "vyRaw": 556,
+      "vxRaw": 556
+    },
+    {
+      "index": 16,
+      "vyRaw": 104,
+      "vxRaw": 783
+    },
+    {
+      "index": 20,
+      "vyRaw": -104,
+      "vxRaw": 783
+    },
+    {
+      "index": 24,
+      "vyRaw": -556,
+      "vxRaw": 556
+    }
+  ],
+  "tables": [
+    {
+      "type": 11,
+      "width": 2,
+      "height": 8,
+      "bodyDamage": 1,
+      "basicDamage": 20
+    },
+    {
+      "type": 23,
+      "width": 2,
+      "height": 8,
+      "bodyDamage": 1,
+      "basicDamage": 20
+    },
+    {
+      "type": 34,
+      "width": 2,
+      "height": 8,
+      "bodyDamage": 1,
+      "basicDamage": 20
+    },
+    {
+      "type": 35,
+      "width": 2,
+      "height": 8,
+      "bodyDamage": 1,
+      "basicDamage": 20
+    },
+    {
+      "type": 45,
+      "width": 1,
+      "height": 1,
+      "bodyDamage": 2,
+      "basicDamage": 0
+    }
+  ],
+  "spans": [
+    {
+      "offset": 107419,
+      "hex": "06"
+    },
+    {
+      "offset": 107559,
+      "hex": "00"
+    },
+    {
+      "offset": 107431,
+      "hex": "46"
+    },
+    {
+      "offset": 107571,
+      "hex": "00"
+    },
+    {
+      "offset": 107442,
+      "hex": "06"
+    },
+    {
+      "offset": 107582,
+      "hex": "26"
+    },
+    {
+      "offset": 107443,
+      "hex": "46"
+    },
+    {
+      "offset": 107583,
+      "hex": "26"
+    },
+    {
+      "offset": 129875,
+      "hex": "02"
+    },
+    {
+      "offset": 130081,
+      "hex": "08"
+    },
+    {
+      "offset": 130724,
+      "hex": "01"
+    },
+    {
+      "offset": 130156,
+      "hex": "14"
+    },
+    {
+      "offset": 129887,
+      "hex": "02"
+    },
+    {
+      "offset": 130093,
+      "hex": "08"
+    },
+    {
+      "offset": 130736,
+      "hex": "01"
+    },
+    {
+      "offset": 130168,
+      "hex": "14"
+    },
+    {
+      "offset": 129898,
+      "hex": "02"
+    },
+    {
+      "offset": 130104,
+      "hex": "08"
+    },
+    {
+      "offset": 130747,
+      "hex": "01"
+    },
+    {
+      "offset": 130179,
+      "hex": "14"
+    },
+    {
+      "offset": 129899,
+      "hex": "02"
+    },
+    {
+      "offset": 130105,
+      "hex": "08"
+    },
+    {
+      "offset": 130748,
+      "hex": "01"
+    },
+    {
+      "offset": 130180,
+      "hex": "14"
+    },
+    {
+      "offset": 129909,
+      "hex": "01"
+    },
+    {
+      "offset": 130115,
+      "hex": "01"
+    },
+    {
+      "offset": 130758,
+      "hex": "02"
+    },
+    {
+      "offset": 130190,
+      "hex": "00"
+    },
+    {
+      "offset": 128360,
+      "hex": "2c022c0268000f0398ff0f03d4fd2c02"
+    }
+  ]
+}

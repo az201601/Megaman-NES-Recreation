@@ -3,6 +3,13 @@
 import fs from'node:fs';import assert from'node:assert/strict';
 const root=new URL('../../',import.meta.url),base=new URL('Assets/Combat/MM5/Blader Checkpoint/',root),sources=new Map();
 for(const dir of['Scripts','Objects','Player','Hooks'])for(const f of fs.readdirSync(new URL(dir+'/',base)))if(f.endsWith('.gml'))sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,base),'utf8'));
+// Optional additive checkpoint overlay; default still tests the accepted Blader package.
+if (process.env.BLASTER_OVERLAY === '1') {
+ const overlay=new URL('Assets/Combat/MM5/Blaster Checkpoint/',root);
+ for(const dir of ['Scripts','Objects']) for(const f of fs.readdirSync(new URL(dir+'/',overlay)))
+  if(f.endsWith('.gml')) sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,overlay),'utf8'));
+ sources.set('obj_mm5_combat_create',sources.get('obj_mm5_combat_create')+'\n'+fs.readFileSync(new URL('Hooks/obj_mm5_combat_create_blaster_append.gml',overlay),'utf8'));
+}
 function adapt(s){s=s.replace(/\/\/[^\n]*/g,'').replace(/\bmod\b/g,'%').replace(/\$([0-9a-f]+)/gi,'0x$1').replace(/\bexit\s*;/g,'return;');let start=0;while(true){const re=/\bwith\s*\(/g;re.lastIndex=start;const m=re.exec(s);if(!m)break;let a=re.lastIndex,d=1,z=a;while(d){if(s[z]==='(')d++;if(s[z]===')')d--;z++;}const expr=s.slice(a,z-1);while(/\s/.test(s[z]))z++;let body,end;if(s[z]==='{'){let k=z+1,dep=1;while(dep){if(s[k]==='{')dep++;if(s[k]==='}')dep--;k++;}body=s.slice(z+1,k-1);end=k;}else{end=s.indexOf(';',z)+1;body=s.slice(z,end);}const replacement=`__with(${expr},function(__ctx){with(__ctx){${adapt(body)}}});`;s=s.slice(0,m.index)+replacement+s.slice(end);start=m.index+replacement.length;}return s;}
 const compiled=new Map([...sources].map(([k,s])=>[k,new Function('env','with(env){'+adapt(s)+'}') ]));
 let checks=0;function check(x,msg){assert.ok(x,msg);checks++;}function eq(a,b,msg){assert.deepEqual(a,b,msg);checks++;}
@@ -15,7 +22,7 @@ class Engine{
  make(type,x=0,y=0){const a={object_index:type,x,y,dead:false,active:true,id:null};a.id=a;this.actors.push(a);let file=type+'_create';if(compiled.has(file)){for(const m of sources.get(file).matchAll(/(?:^|[;\n])\s*(\w+)\s*(\[[^\]]+\])?\s*=/g)){if(!Object.hasOwn(a,m[1]))a[m[1]]=m[2]?[]:0;}this.call(file,a);}return a;}
  setup(){this.owner=this.make('obj_mm5_combat');this.p=this.make('obj_mm5_megaman',128,2020);Object.assign(this.p,{mm5_health:28,mm5_startup_active:false,buster_charge:0,buster_pose_timer:0,image_xscale:1,on_ladder:false,ladder_instance:-1,ladder_moving:false,sliding:false,slide_timer:9,slide_overhang_fall:false,grounded:true,fall_speed:0,fall_gravity:.25,fall_speed_max:7,feet_offset:12,head_offset:10,walk_pause:0,walk_previous_input:0,anim_walk_frame:0,anim_walk_timer:0,sprite_index:'idle',image_index:0});for(const m of sources.get('obj_mm5_megaman_create_combat_append').matchAll(/^(\w+)\s*=/gm))this.p[m[1]]=0;this.call('obj_mm5_megaman_create_combat_append',this.p);return this;}
  tick(){this.call('obj_mm5_combat_begin_step',this.owner);if(!this.call('scr_mm5_combat_locked',this.p)&&this.p.mm5_hurt_left>0)this.call('scr_mm5_player_hurt_step',this.p);this.call('scr_mm5_combat_end_frame',this.owner);}
- shot(type,x,y){const a=this.make(type,x,y);Object.assign(a,{shot_direction:1,shot_speed:type==='obj_mm5_buster_shot'?1075/256:5,image_xscale:1,image_index:0,shot_anim_age:0,shot_anim_period:type==='obj_mm5_buster_mid'?5:3,shot_anim_frames:type==='obj_mm5_buster_mid'?2:4});return a;}
+ shot(type,x,y){const a=this.make(type,x,y);Object.assign(a,{mm5_shot_deflected:false,shot_direction:1,shot_speed:type==='obj_mm5_buster_shot'?1075/256:5,image_xscale:1,image_index:0,shot_anim_age:0,shot_anim_period:type==='obj_mm5_buster_mid'?5:3,shot_anim_frames:type==='obj_mm5_buster_mid'?2:4});return a;}
  enemy(x,y){const a=this.make('obj_mm1_blader',x,y);a.blader_born_tick=-1;return a;}
  item(kind){const a=this.make('obj_mm5_pickup',this.p.x,this.p.y);a.pickup_kind=kind;return a;}
 }
@@ -71,3 +78,5 @@ eq(sources.get('scr_mm1_cutman_camera_end_update'),fs.readFileSync(new URL('Asse
  const e=new Engine().setup();const item=e.item(0x75);item.pickup_age=196;e.call('obj_mm5_pickup_draw',item);eq(e.draws.length,0,'Native bit1 hides countdown59');item.pickup_age=198;e.call('obj_mm5_pickup_draw',item);eq(e.draws.length,1,'Native bit1 clear shows countdown57');
 }
 console.log(`PASS ${checks} actual-GML combat integration checks: shared frame clock,9spawn mapping,normal/mid/full hits and piercing,death/drop/no-drop,contact27+60protection,refill cadence/caps/ownvoice,extra-life once/cap/sound,deferredammo,route cleanup and safe death retry/title. NOT GMS runtime.`);
+
+export {Engine,eq,check};
