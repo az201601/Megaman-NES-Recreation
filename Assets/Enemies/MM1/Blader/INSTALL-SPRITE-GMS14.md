@@ -1,3 +1,5 @@
+> **Superseded for combat:** this is the historical art-only guide. The complete manual combat source/import package is now at `Assets/Combat/MM5/Blader Checkpoint/INSTALL-GMS14.md`; follow that guide instead. Local GMS compilation/playtesting remains required.
+
 # Cut Man: Blader sprite checkpoint — GMS1.4.1760
 
 Original MM1 Blader graphics recovered from supplied USA ROM, using actual OAM components/attributes and pinned Mesen0.9.9 RGB palette. JSNES2.1.0, not a Mesen executable/hardware capture. Two16x24 canonical left-facing frames; original right-facing counterpart is mirrored. Not repainted, AI-generated or redrawn. Each pose has been matched against original rendered opaque pixels.

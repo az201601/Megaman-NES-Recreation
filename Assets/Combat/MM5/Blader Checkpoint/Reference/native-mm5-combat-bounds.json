@@ -1,0 +1,206 @@
+{
+  "method": "Original CPU F06D shot thresholds and EF87 contact function with entity flag0/8x8 target. Original MM1 Blader is8x8 half-size; choosing MM5 target flag0 is the documented hybrid mapping, not a claim MM5 contains Blader. Active display flags set, positions controlled; no natural collision frequency claim. IRQ/PPU advancement disabled for isolated routines.",
+  "shots": [
+    {
+      "index": 0,
+      "x": 11,
+      "y": 10
+    },
+    {
+      "index": 13,
+      "x": 14,
+      "y": 14
+    },
+    {
+      "index": 14,
+      "x": 16,
+      "y": 20
+    }
+  ],
+  "contacts": [
+    {
+      "state": 0,
+      "dx": 0,
+      "dy": 0,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 0,
+      "dy": 12,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 0,
+      "dy": 13,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 0,
+      "dy": 19,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 0,
+      "dy": 20,
+      "hit": false
+    },
+    {
+      "state": 0,
+      "dx": 15,
+      "dy": 0,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 15,
+      "dy": 12,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 15,
+      "dy": 13,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 15,
+      "dy": 19,
+      "hit": true
+    },
+    {
+      "state": 0,
+      "dx": 15,
+      "dy": 20,
+      "hit": false
+    },
+    {
+      "state": 0,
+      "dx": 16,
+      "dy": 0,
+      "hit": false
+    },
+    {
+      "state": 0,
+      "dx": 16,
+      "dy": 12,
+      "hit": false
+    },
+    {
+      "state": 0,
+      "dx": 16,
+      "dy": 13,
+      "hit": false
+    },
+    {
+      "state": 0,
+      "dx": 16,
+      "dy": 19,
+      "hit": false
+    },
+    {
+      "state": 0,
+      "dx": 16,
+      "dy": 20,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 0,
+      "dy": 0,
+      "hit": true
+    },
+    {
+      "state": 2,
+      "dx": 0,
+      "dy": 12,
+      "hit": true
+    },
+    {
+      "state": 2,
+      "dx": 0,
+      "dy": 13,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 0,
+      "dy": 19,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 0,
+      "dy": 20,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 15,
+      "dy": 0,
+      "hit": true
+    },
+    {
+      "state": 2,
+      "dx": 15,
+      "dy": 12,
+      "hit": true
+    },
+    {
+      "state": 2,
+      "dx": 15,
+      "dy": 13,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 15,
+      "dy": 19,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 15,
+      "dy": 20,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 16,
+      "dy": 0,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 16,
+      "dy": 12,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 16,
+      "dy": 13,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 16,
+      "dy": 19,
+      "hit": false
+    },
+    {
+      "state": 2,
+      "dx": 16,
+      "dy": 20,
+      "hit": false
+    }
+  ],
+  "deathVectorSpan": {
+    "offset": 230348,
+    "hex": "000f800f00f180f10087c087007940790001010100fefefe0000000000ffffff80f1000f800f00f140790087c0870079fefe0001010100feffff0000000000ff"
+  }
+}

@@ -65,3 +65,18 @@ bank7.s files, run `mm5-hit.mjs`, `probe-blader-combat.mjs`,
 a syntax adapter. Neither is a GMS compiler/runtime test or a claim that the
 requested enemy/player/pickup object/event integration is finished. Current scope:
 `../../Assets/Combat/MM5/Blader Checkpoint/README.md`.
+
+## Blader combined combat package (supersedes foundation-only status)
+
+`probe-mm5-combat-bounds.mjs` executes original CPU contact/shot threshold functions;
+`recover-mm5-combat-effects.mjs` and `recover-mm5-hurt-stars.mjs` recover native
+pixel-matched effects/offsets and original16death vectors. `record-mm5-combat-sfx.mjs`
+now includes original extra-life24 and death1D as well as hurt1C/refill26.
+`test-blader-combat-integration.mjs` executes actual source scripts/events with
+407mock-engine assertions (NOT GMS runtime). `package-blader-combat.py` builds the
+self-contained manual import ZIP and validates byte-identical resource copies and
+SHA256 manifest. Complete guide/scope/adaptations at
+`../../Assets/Combat/MM5/Blader Checkpoint/INSTALL-GMS14.md` and README.md.
+Existing gameplay event sources remain historical approved baselines; this package
+supplies precise fragments/replacement hooks rather than pretending to modify an
+absent editable GMX project. Local GMS1.4 compile/playtest acceptance is pending.

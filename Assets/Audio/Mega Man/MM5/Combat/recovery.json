@@ -1,5 +1,5 @@
 {
-  "method": "Supplied original USA MM5, native8slot soundqueue after F0+150frame warmup with final50frames exact silence. Full APU48kHz/stereo16bit. One commanded effect per150frame take; no unrelated native requests, filtering, normalization or channel muting. Trim only PCM silence retaining10ms tail; exact full-take sample comparison. Sound identity from ROM byte spans, refill additionally identified in native collection trace.",
+  "method": "Supplied original USA MM5, native8slot soundqueue after F0+150frame warmup with final50frames exact silence. Full APU48kHz/stereo16bit. One commanded effect per take (150frames for hurt/refill,240frames for life/death); no unrelated native requests, filtering, normalization or channel muting. Trim only PCM silence retaining10ms tail; exact full-take sample comparison. Sound identity from ROM byte spans, refill additionally identified in native collection trace.",
   "files": [
     {
       "name": "snd_mm5_health_refill",
@@ -46,6 +46,54 @@
           "bytes": 479300,
           "seconds": 2.496125,
           "sha256": "0bb20bab9e1f9e8e4c73b73010330448befa5081a37ee48dc2770f17ae6a22dd"
+        }
+      ]
+    },
+    {
+      "name": "snd_mm5_extra_life",
+      "command": 36,
+      "offset": 241487,
+      "hex": "24",
+      "warmPeak": 0,
+      "first": 841,
+      "last": 52598,
+      "end": 53079,
+      "files": [
+        {
+          "file": "snd_mm5_extra_life.wav",
+          "bytes": 208996,
+          "seconds": 1.0882916666666667,
+          "sha256": "7c48ef1c5c6f55e448e622497604feee06e162da63642ca4e69f0bf6a3a6ea0d"
+        },
+        {
+          "file": "snd_mm5_extra_life_complete_untrimmed.wav",
+          "bytes": 766852,
+          "seconds": 3.9937916666666666,
+          "sha256": "d36f6c9ff4c7306e9e95129886b516d140aa91a896c1cae744e5c83e52dbb6bd"
+        }
+      ]
+    },
+    {
+      "name": "snd_mm5_megaman_death",
+      "command": 29,
+      "offset": 230215,
+      "hex": "a91d205dec",
+      "warmPeak": 0,
+      "first": 840,
+      "last": 71926,
+      "end": 72407,
+      "files": [
+        {
+          "file": "snd_mm5_megaman_death.wav",
+          "bytes": 286312,
+          "seconds": 1.4909791666666667,
+          "sha256": "6dd32ce4101f372b25423f9bc81392ffb6a51ad6aa1c920653bd1939848689f1"
+        },
+        {
+          "file": "snd_mm5_megaman_death_complete_untrimmed.wav",
+          "bytes": 766852,
+          "seconds": 3.9937916666666666,
+          "sha256": "fd545f758f10486e28314edc3eeb3c945aead4c8cc6914dc723d13bc7e8c73e0"
         }
       ]
     }

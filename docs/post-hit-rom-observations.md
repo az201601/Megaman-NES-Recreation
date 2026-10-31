@@ -65,3 +65,15 @@ These results concern spikes, not pits, crushers, lava, or every instant-death h
 - Recoil direction logic and speed are tested and code-checked. A full matrix of boss attacks, ladders, slides, airborne/grounded impacts, fresh jump/fire presses, and frame-boundary contacts is not completed.
 - The MM1 spike exception is a rule demonstrated here, not evidence of whether its developers intended it or made an oversight.
 - Implement MM5 facing-based recoil, counter-steering and the separate hurt/protection phases when player work begins. Do not import MM1 spike bypass or an invented attraction force.
+
+## Blader combat checkpoint follow-up
+
+Controlled original initializer trials now cover incoming normal0/air1/slide2/
+ladder3 × neutral/fresh-fire/fresh-jump. All27hurt updates; slide saves/restores2,
+ladder detaches to0; no charging or new shots during hurt. These substitute the
+incoming state at ORIGINAL nonlethal initializer after natural tiger HP subtraction;
+not naturally reached slide/ladder geometry contacts. Recorded at
+`Assets/Combat/MM5/Blader Checkpoint/Reference/native-hurt-state-boundaries.json`.
+The manual GMS combat source/import package is now complete with rectangle-terrain
+adaptations documented; native source tests do not certify every project wall,
+ceiling/slide tunnel or the Windows runner. Local playtesting remains required.

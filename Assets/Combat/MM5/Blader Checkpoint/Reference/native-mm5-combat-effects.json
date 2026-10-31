@@ -1,0 +1,299 @@
+{
+  "method": "Original USA native B8/animation42/handlerAE59, controlled position184,80. Five OAM/CHR/palette phases, each opaque pixel matched against renderer. Original16player death vectors from bank1C83BC..83FB; y converted positive-down. Body explosion timing0..3 for3updates each, phase4 then original drop handler runs at nextupdate13. No redraw.",
+  "poses": [
+    {
+      "frame": 2,
+      "cells": [
+        {
+          "x": 172,
+          "y": 69,
+          "tile": 89,
+          "attr": 1
+        },
+        {
+          "x": 180,
+          "y": 69,
+          "tile": 90,
+          "attr": 1
+        },
+        {
+          "x": 188,
+          "y": 69,
+          "tile": 89,
+          "attr": 65
+        },
+        {
+          "x": 172,
+          "y": 77,
+          "tile": 91,
+          "attr": 1
+        },
+        {
+          "x": 188,
+          "y": 77,
+          "tile": 91,
+          "attr": 65
+        },
+        {
+          "x": 172,
+          "y": 85,
+          "tile": 89,
+          "attr": 129
+        },
+        {
+          "x": 180,
+          "y": 85,
+          "tile": 90,
+          "attr": 129
+        },
+        {
+          "x": 188,
+          "y": 85,
+          "tile": 89,
+          "attr": 193
+        }
+      ],
+      "matched": true
+    },
+    {
+      "frame": 4,
+      "cells": [
+        {
+          "x": 176,
+          "y": 73,
+          "tile": 92,
+          "attr": 1
+        },
+        {
+          "x": 184,
+          "y": 73,
+          "tile": 92,
+          "attr": 65
+        },
+        {
+          "x": 176,
+          "y": 81,
+          "tile": 92,
+          "attr": 129
+        },
+        {
+          "x": 184,
+          "y": 81,
+          "tile": 92,
+          "attr": 193
+        }
+      ],
+      "matched": true
+    },
+    {
+      "frame": 7,
+      "cells": [
+        {
+          "x": 176,
+          "y": 73,
+          "tile": 93,
+          "attr": 1
+        },
+        {
+          "x": 184,
+          "y": 73,
+          "tile": 93,
+          "attr": 65
+        },
+        {
+          "x": 176,
+          "y": 81,
+          "tile": 93,
+          "attr": 129
+        },
+        {
+          "x": 184,
+          "y": 81,
+          "tile": 93,
+          "attr": 193
+        }
+      ],
+      "matched": true
+    },
+    {
+      "frame": 10,
+      "cells": [
+        {
+          "x": 176,
+          "y": 73,
+          "tile": 94,
+          "attr": 1
+        },
+        {
+          "x": 184,
+          "y": 73,
+          "tile": 94,
+          "attr": 65
+        },
+        {
+          "x": 176,
+          "y": 81,
+          "tile": 94,
+          "attr": 129
+        },
+        {
+          "x": 184,
+          "y": 81,
+          "tile": 94,
+          "attr": 193
+        }
+      ],
+      "matched": true
+    },
+    {
+      "frame": 13,
+      "cells": [
+        {
+          "x": 180,
+          "y": 77,
+          "tile": 95,
+          "attr": 129
+        }
+      ],
+      "matched": true
+    }
+  ],
+  "trace": [
+    {
+      "frame": 1,
+      "type": 184,
+      "animationFrame": 0
+    },
+    {
+      "frame": 2,
+      "type": 184,
+      "animationFrame": 0
+    },
+    {
+      "frame": 3,
+      "type": 184,
+      "animationFrame": 1
+    },
+    {
+      "frame": 4,
+      "type": 184,
+      "animationFrame": 1
+    },
+    {
+      "frame": 5,
+      "type": 184,
+      "animationFrame": 1
+    },
+    {
+      "frame": 6,
+      "type": 184,
+      "animationFrame": 2
+    },
+    {
+      "frame": 7,
+      "type": 184,
+      "animationFrame": 2
+    },
+    {
+      "frame": 8,
+      "type": 184,
+      "animationFrame": 2
+    },
+    {
+      "frame": 9,
+      "type": 184,
+      "animationFrame": 3
+    },
+    {
+      "frame": 10,
+      "type": 184,
+      "animationFrame": 3
+    },
+    {
+      "frame": 11,
+      "type": 184,
+      "animationFrame": 3
+    },
+    {
+      "frame": 12,
+      "type": 184,
+      "animationFrame": 4
+    },
+    {
+      "frame": 13,
+      "type": 0,
+      "animationFrame": 4
+    },
+    {
+      "frame": 14,
+      "type": 0,
+      "animationFrame": 4
+    }
+  ],
+  "vectors": [
+    {
+      "x256": 0,
+      "y256": 384
+    },
+    {
+      "x256": 271,
+      "y256": 271
+    },
+    {
+      "x256": 384,
+      "y256": 0
+    },
+    {
+      "x256": 271,
+      "y256": -271
+    },
+    {
+      "x256": 0,
+      "y256": -384
+    },
+    {
+      "x256": -271,
+      "y256": -271
+    },
+    {
+      "x256": -384,
+      "y256": 0
+    },
+    {
+      "x256": -271,
+      "y256": 271
+    },
+    {
+      "x256": 0,
+      "y256": 192
+    },
+    {
+      "x256": 135,
+      "y256": 135
+    },
+    {
+      "x256": 192,
+      "y256": 0
+    },
+    {
+      "x256": 135,
+      "y256": -135
+    },
+    {
+      "x256": 0,
+      "y256": -192
+    },
+    {
+      "x256": -135,
+      "y256": -135
+    },
+    {
+      "x256": -192,
+      "y256": 0
+    },
+    {
+      "x256": -135,
+      "y256": 135
+    }
+  ]
+}

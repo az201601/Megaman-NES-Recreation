@@ -1,88 +1,71 @@
-# Blader combat checkpoint — IN PROGRESS, do not install yet
+# Blader combat checkpoint — GMS 1.4 source/import package
 
-## User-authorized target
+**Source implementation complete for this checkpoint; local GameMaker compilation and playtesting are still required.** The repository contains manually imported GML/resources, not the user's editable GMX project. Nothing is automatically installed into that project. Follow `INSTALL-GMS14.md` on a backup.
 
-Script-spawned MM1 Blader movement/art; MM5-style player contact hurt/recoil and
-protection; normal/mid/full buster damage and enemy death; approved MM6 hit cue
-for both normal/charged impacts; MM5 enemy drop selection; collectable health
-(+2/+10 capped28) with MM5 incremental refill sound and world pause; extra life
-(+1 spare life, max9). Keep weapon-energy drops in the table but defer their
-refill effects until special weapons exist. Fixed stage pickups/tanks remain separate.
+## Included
 
-## Completed foundation, not a playable integration package
+- Nine original Cut Man Blader spawn records, translated into the accepted 3328×2160 multi-stripe stage, script-created as their anchors enter view. No manual enemy placements or fixed spawn timer.
+- Original MM1 Blader art and fixed-point pursuit/dive movement. Original one-normal-hit kill threshold (logical HP1), normal/mid shots do1 damage, full charge3 and pierces this weak enemy. Contact damage3.
+- MM5 hurt body/flash and initial three stars, facing-based recoil/counter-steering,27 hurt updates then60-count protection. Native renderer's PRE-decrement blink sampling. Ladder hits detach; slide hurt uses crouched terrain handling and returns to slide.
+- Original MM5 explosion art, one byte-modulo50 drop decision per completed death; no drop on despawn or route cleanup. Full original five-outcome table including weapon energy and no-item outcomes.
+- Health +2/+10 capped28, one bar and one native MM5 cue26 per four active updates. World, shots, hurt/protection, drops, camera and dust freeze; music/HUD stay alive. Final four-update wait is retained, including when the health cap truncates the amount. Full-health pickups are consumed silently.
+- Extra life +1 spare life capped9, **MM5 cue24 once per collected extra life**, including at the cap. Not a repeated collision sound.
+- Weapon-energy drops still appear and can be collected, but do nothing/play no refill sound while special weapons are deferred. No reroll into health, no Energy Balancer behavior yet.
+- Approved MM6 cue35 for accepted normal/mid/full buster impacts. MM5 firing/charging/release and the accepted stage/music/pause layouts are unchanged.
+- Safe health0 flow: hide player, stop charge and only the known stage music voice, play original MM5 death1D, original16 death vectors, then retry after the native300-update countdown. Spare lives exclude the current life.
 
-- `Scripts/scr_mm1_blader_ai.gml`: actual GMS1.4 movement kernel executed through
-  syntax adaptation against all1023 previously recorded original CPU entry/outcome
-  pairs, including globalY+1920 adaptation and eight-bit Y wrap. Original AI is
-  preserved, not substituted with sine motion or a continuously homing dive.
-- `Scripts/scr_mm5_enemy_drop_from_byte.gml`: native selector tested on all256
-  original input-byte outcomes. The eventual RNG owner still needs integration;
-  this function does not claim to reproduce the whole native RNG state sequence.
-- `Scripts/scr_mm5_recoil_dx.gml`: stored-facing recoil and counter-steering, six
-  input/facing combinations. Collision sweep and state ownership remain separate.
-- `Scripts/scr_mm5_health_refill_tick.gml`: incremental health kernel, cap28,
-  immediate first bar and four-update cadence, including final wait. Tested on
-  eight amount/starting-health branches. Caller must restart only its own refill
-  sound voice and resume gameplay on the frame the final wait reaches zero.
-- `Art/spr_mm5_megaman_hurt_strip2.png`: original MM5 standing/air hurt body and
-  flash poses,32x40 cells/origin16,16/canonical right. Every opaque pose matches
-  native renderer pixels. Separate initial stars are NOT part of this strip.
-- `Reference/native-health-refill-freeze.json`: original native collection of
-  both health sizes with a second dropped-item lifetime as freeze witness.
-  Hold Right+Jump+Fire from frame3: player position, charge counter38hex and
-  witness lifetime stay frozen. Small +2 sounds at2,6 and resumes10; large +10
-  sounds at2,6,...38 and resumes42. Native sound26 is requested once per bar.
-- `Reference/native-hurt-state-boundaries.json`:12 controlled initializer trials
-  (incoming state normal/air/slide/ladder × neutral/fresh-fire/fresh-jump).
-  All execute27 hurt updates. Charge stays zero and no new shots are emitted
-  during hurt. Slide saves/restores state2 and uses terrain selector4. Ladder
-  state3 is NOT preserved; damage initializer saves normal state0. Thus the
-  future controller must detach a hit climber, not snap them back to the ladder.
-  These substitute the incoming state byte at the ORIGINAL nonlethal initializer
-  after natural tiger-contact HP subtraction. They are NOT naturally reached
-  ladder/slide impacts or a full wall/ceiling/ladder-mouth boundary matrix.
-- Audio recovered at `Assets/Audio/Mega Man/MM5/Combat/`: native hurt1C and
-  refill26, full APU recordings plus silence-only trimmed versions. No approved
-  firing, charging, stage, gate or MM6 hit files changed.
+## Explicit adaptations / scope boundaries
 
-## Blader ROM results
+This is a hybrid MM1 enemy/MM5 player in rectangular GameMaker geometry, **not an end-to-end 1:1 NES emulator**.
 
-`Assets/Enemies/MM1/Blader/Reference/native-blader-combat.json`:
+- Drop **selection** is original and all256 byte outcomes are tested. The integrated RNG owner is GMS `irandom(255)`, preserving byte-modulo50 bias, **not** MM5's full carry-dependent RNG history. See the existing pickup report for nominal versus uniform-byte conditional probabilities.
+- Original MM1 Blader fallback half-size8×8 maps to MM5 target collision flag0. Original CPU routines give strict combined body/pickup thresholds16×20 (16×13 sliding), shot thresholds11×10/14×14/16×20 for normal/mid/full. Integer centres, not sprite alpha masks. This mapping is explicitly hybrid, not a claim MM5 contains Blader.
+- Terrain collision for hurt and pickups adapts the project's existing rectangular solids/one-way ladder tops. The source proof is not certification of every wall corner, slide tunnel or falling room seam in GMS.
+- Combat has a defined project order after final player Step AND camera placement: existing enemy AI → shots → completed explosions/drop rolls → contact → pickups → timer sampling → new spawns. That avoids instance-ID ordering races; it is not a claim the two different NES engines share this scheduler.
+- **Death/retry adaptation:** this checkpoint restarts at the Cut Man opening when spare lives remain. No-spares returns to the existing title and resets inventory for a new game. Original mid-stage checkpoints and a dedicated Game Over/Continue screen are not implemented or claimed. Test on a backup; no accepted stage coordinates are changed.
+- Other enemies, dispenser spawning, active spikes and Cut Man boss combat remain deferred. No score, tank-use changes, special weapons or boss sequence are added.
 
-- Original generic enemy life20, original normal buster damage20 for Blader.
-  **One normal hit kills it.** Intended hybrid logicalHP1/normal1/full3 preserves
-  that threshold. Do not invent several hits merely because the health byte is20.
-- Original contact damage **3**. The source is RockmanJ-based; its printed operand
-  FEBD is NOT the supplied USA address. The USA instruction at PRG16235 actually
-  reads FE89. Derive/verify the original operand, never use the J table address.
-- Type fallback half-width8, half-height8. This does NOT finish all contact,
-  projectile-shape, slide and exact boundary hitbox testing; art alpha isn't a mask.
-- Native first spawn record `[01,10,4C,00]`: X272,Y76, type0. Natural Right trace
-  spawns at cameraX17, when right edge reaches272; not a fixed21-update timer.
-- Full original stage record list contains nine Bladers: page1 X16/64/80,
-  page2 X56/112/128, page15 X96/144/160; Y76/140/92 for each triple.
-  This is original stage-page data. Translate through the accepted multi-stripe
-  stage geometry before script placement; don't use page*256 as globalX for page15.
+## Drop selection used by this build
 
-## Still required before installation
+| Result | Byte remainder /50 | Inputs /256 | Chance with GMS uniform byte |
+|---|---|---:|---:|
+| Small health |3–7|28|10.9375%|
+| Large health |8–9|10|3.90625%|
+| Small weapon energy |10–13|20|7.8125%|
+| Large weapon energy |0–1|12|4.6875%|
+| Extra life |2|6|2.34375%|
+| Nothing |14–49|180|70.3125%|
 
-1. Finish native projectile/body/pickup boundary checks, death/drop presentation and
-   original hurt stars; validate damage interruptions against real project terrain.
-2. Implement the object/controller event layer: scripted native spawn activation and
-   respawn/despawn rules, deterministically ordered shot/AI/contact passes, health0
-   safe death flow, and exactly-once death/drop selection. Keep full-shot piercing
-   of low-HP targets from MM5, not automatic destruction on every impact.
-3. Connect hurt/slide/ladder state transitions and draw overrides without replacing
-   the existing accumulated player events; preserve charge release/input behavior.
-4. Wire health refill's world lock into all gameplay updates, camera/route handoffs
-   and pause opening, leaving music/GUI alive; do not strand actors with unmanaged
-   instance deactivation. Refill sounds restart, not overlap a pile of one-shot WAVs.
-5. Add pickup motion, collision/collection, expiry/blink and extra-life inventory
-   award. Weapon pickup effects stay deferred; do not reroll them to health.
-6. Package precise resource folders/events and test actual GML event sources with
-   mocked engine scheduling. GMS1.4 compiler/runtime/visual checks require the user's
-   local project; no GMX is available in this repository.
+These preserve the original byte-modulo bias. The nominal50-bucket table is
+10%/4%/8%/4%/2%/72%; a direct50-way random draw would **not** preserve that bias.
+Actual original MM5 RNG history is not emulated by this GameMaker random owner.
 
-No new object has been placed, no existing gameplay event has been changed, and no
-installation ZIP is offered at this intermediate foundation checkpoint. Kernel tests
-are not proof that the complete requested combat system is installed or ready.
+## Tests and provenance
+
+`test-blader-combat-integration.mjs` executes actual GML scripts/events using a limited syntax and mocked-engine adapter (407 assertions when packaged). Checks include camera ordering, all9 spawn coordinates, projectile inheritance guards, normal/mid/full damage and piercing, exactly-once death/drop/no-drop,27+60 hurt/protection, refill cadence/caps/freeze/own-voice replacement, extra-life cap/sound/once-only collection, deferred ammo, route cleanup, pickup expiry/blink and safe death destinations. **Not GMS compiler, Windows runner, GPU or async-audio validation.**
+
+Independent existing kernel tests execute actual GML against1023 original Blader CPU entry/outcome pairs, all256 original drop-byte outcomes, six recoil inputs and eight refill/cap branches. ROM probes additionally verify30 original contact boundary cases and three shot shapes,12 controlled incoming-state hurt initializations, both native health freeze trials, original art/offsets and four isolated native MM5 sounds. Native artwork uses OAM/CHR/palettes with the project's Mesen colour adapter; every exported effect/body/star pose has an opaque-pixel render match. No redraw.
+
+Primary evidence: `Reference/`, plus original Blader and MM5 pickup reports. The supplied USA ROMs are authoritative. Source navigation uses pinned MM1/mm5 disassemblies; their modified ROMs/executables are never run. In particular, MM1's J-source printed damage addressFEBD is wrong for USA: original USA operand readsFE89 and gives Blader contact3. Original enemy life20 and normal damage20 mean one hit, not20 normal shots.
+
+## Reproduce
+
+Prepare normal original-ROM stage snapshots as documented in `tools/rom-recovery/README.md`, then:
+
+```sh
+node tools/rom-recovery/probe-blader-combat.mjs
+node tools/rom-recovery/mm5-hit.mjs
+node tools/rom-recovery/probe-mm5-hurt-boundaries.mjs
+node tools/rom-recovery/probe-mm5-health-freeze.mjs
+node tools/rom-recovery/probe-mm5-combat-bounds.mjs
+node tools/rom-recovery/recover-mm5-hurt-art.mjs
+node tools/rom-recovery/recover-mm5-hurt-stars.mjs
+node tools/rom-recovery/recover-mm5-combat-effects.mjs
+node tools/rom-recovery/record-mm5-combat-sfx.mjs
+node tools/rom-recovery/test-blader-combat-kernels.mjs
+node tools/rom-recovery/test-blader-combat-research.mjs
+node tools/rom-recovery/test-blader-combat-integration.mjs
+python3 tools/rom-recovery/package-blader-combat.py
+```
+
+No ROM, disassembly dump, executable or generated emulator state is in the download. Full untrimmed sound takes remain in the repository for research; only selected trimmed WAVs are included in the import ZIP.

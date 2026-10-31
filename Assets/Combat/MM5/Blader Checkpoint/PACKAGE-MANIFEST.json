@@ -1,0 +1,383 @@
+{
+  "scope": "Manual GMS1.4 combat source/resource package, not an installed GMX or runner build. Use INSTALL-GMS14.md. No ROM/untrimmed research audio/emulator snapshots.",
+  "files": [
+    {
+      "path": "Art/mm5-hurt-pose-0.png",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Art/mm5-hurt-pose-0.png",
+      "bytes": 617,
+      "sha256": "be47250dd3f15cf98584edc9a3c9b1a24ba205dc7f93fc263ca57158ee5b196a"
+    },
+    {
+      "path": "Art/mm5-hurt-pose-1.png",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Art/mm5-hurt-pose-1.png",
+      "bytes": 309,
+      "sha256": "202d36b548fef3fe60f47df91551bc458c4703e1fde33fd193538b53a6e17282"
+    },
+    {
+      "path": "Art/spr_mm1_blader_strip2.png",
+      "source": "Assets/Enemies/MM1/Blader/spr_mm1_blader_strip2.png",
+      "bytes": 462,
+      "sha256": "79ecd56917faa74045ceb871f2b5d593387b84354bc098e23dab65dd0ac196a6"
+    },
+    {
+      "path": "Art/spr_mm5_combat_explosion_strip5.png",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Art/spr_mm5_combat_explosion_strip5.png",
+      "bytes": 667,
+      "sha256": "68a581b080e92121217cdf93ba80325509b85c008794e334d2712cef468618d5"
+    },
+    {
+      "path": "Art/spr_mm5_hurt_star.png",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Art/spr_mm5_hurt_star.png",
+      "bytes": 156,
+      "sha256": "3437b0c847fe1801e07e7d46f8e2a548ca4860dbc089b5dbcaba816690d87f29"
+    },
+    {
+      "path": "Art/spr_mm5_megaman_hurt_strip2.png",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Art/spr_mm5_megaman_hurt_strip2.png",
+      "bytes": 871,
+      "sha256": "3b9e8db983dd7544053909ee6f6a62edd7e1e6d04bb9fbf4b23a4de222511d40"
+    },
+    {
+      "path": "Art/spr_mm5_pickup_extra_life_strip1.png",
+      "source": "Assets/Pickups/MM5/Recovered/spr_mm5_pickup_extra_life_strip1.png",
+      "bytes": 298,
+      "sha256": "bd7d9789bb0c9ce630b240eda7cf7a8508b5c134d12c41aaa997a8a93ad7b0f7"
+    },
+    {
+      "path": "Art/spr_mm5_pickup_large_health_strip2.png",
+      "source": "Assets/Pickups/MM5/Recovered/spr_mm5_pickup_large_health_strip2.png",
+      "bytes": 381,
+      "sha256": "346f48729bc2d37d36ac2b02df8ea02794d69ea9694c0129978060397daa4518"
+    },
+    {
+      "path": "Art/spr_mm5_pickup_large_weapon_strip2.png",
+      "source": "Assets/Pickups/MM5/Recovered/spr_mm5_pickup_large_weapon_strip2.png",
+      "bytes": 337,
+      "sha256": "55b398652b58494fc33dc6f62df950d8afe36cdc1c3b194389dbe9526f994d39"
+    },
+    {
+      "path": "Art/spr_mm5_pickup_small_health_strip2.png",
+      "source": "Assets/Pickups/MM5/Recovered/spr_mm5_pickup_small_health_strip2.png",
+      "bytes": 167,
+      "sha256": "2a5f14fb0f91dbd5947d058caf922a15a5ef15103ab7a728df84cf2823bfbbc1"
+    },
+    {
+      "path": "Art/spr_mm5_pickup_small_weapon_strip2.png",
+      "source": "Assets/Pickups/MM5/Recovered/spr_mm5_pickup_small_weapon_strip2.png",
+      "bytes": 188,
+      "sha256": "fcd553cfc8399ecedce44ba277b3ff9dc24c61ae8dac9f5fa987dc4aa49a7798"
+    },
+    {
+      "path": "Audio/snd_mm5_extra_life.wav",
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_extra_life.wav",
+      "bytes": 208996,
+      "sha256": "7c48ef1c5c6f55e448e622497604feee06e162da63642ca4e69f0bf6a3a6ea0d"
+    },
+    {
+      "path": "Audio/snd_mm5_health_refill.wav",
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_health_refill.wav",
+      "bytes": 51324,
+      "sha256": "777accaa2324c76349fde032c029af4f45dd66d28d0986ea54ee511e29af8fbf"
+    },
+    {
+      "path": "Audio/snd_mm5_megaman_death.wav",
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_megaman_death.wav",
+      "bytes": 286312,
+      "sha256": "6dd32ce4101f372b25423f9bc81392ffb6a51ad6aa1c920653bd1939848689f1"
+    },
+    {
+      "path": "Audio/snd_mm5_megaman_hurt.wav",
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_megaman_hurt.wav",
+      "bytes": 58208,
+      "sha256": "94052f27f0d18f1fa7c983c8b5c367adaf86b59a92fbb822b2100ead5c4f8501"
+    },
+    {
+      "path": "Audio/snd_mm6_enemy_hit.wav",
+      "source": "Assets/Audio/Mega Man/MM6/Combat/Enemy Hit/snd_mm6_enemy_hit.wav",
+      "bytes": 77432,
+      "sha256": "e51cc99123c8f14a41ec7ea9d83bde99b60952bf772b312462fc9c85ab70a86c"
+    },
+    {
+      "path": "Hooks/camera_begin_step_prefix.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/camera_begin_step_prefix.gml",
+      "bytes": 259,
+      "sha256": "211ce00233c42d827e5100806ef85029ca9a713875a065557f0afa3d2e08b45f"
+    },
+    {
+      "path": "Hooks/camera_end_step_replace.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/camera_end_step_replace.gml",
+      "bytes": 381,
+      "sha256": "c9e84ee6dcb433d10f219370f2b9630b1fdf7c84229c15b1802d68db0b2faaf5"
+    },
+    {
+      "path": "Hooks/obj_mm5_buster_shot_end_step_replace.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/obj_mm5_buster_shot_end_step_replace.gml",
+      "bytes": 711,
+      "sha256": "a81883b2b68455ae82edb38852d3b206fedf7c7353d72ba7d239c3593845cada"
+    },
+    {
+      "path": "Hooks/obj_mm5_charged_buster_end_step_replace.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/obj_mm5_charged_buster_end_step_replace.gml",
+      "bytes": 446,
+      "sha256": "f5a0efd6af95b5f3a19fb9386a2f842603744e5686679b5e48cbb738ba7cf77a"
+    },
+    {
+      "path": "Hooks/pause_begin_step_prefix.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/pause_begin_step_prefix.gml",
+      "bytes": 273,
+      "sha256": "ebb5a96a78310b727032ea2176152b1c7692be42761a5cd4abe1bc3f00510e5b"
+    },
+    {
+      "path": "Hooks/pause_restore_append.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/pause_restore_append.gml",
+      "bytes": 193,
+      "sha256": "ac03638465afd4ea3e091d33eb8295b0fe1f6664b50d6b5d371cb5b68bd54027"
+    },
+    {
+      "path": "Hooks/slide_dust_step_prefix.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Hooks/slide_dust_step_prefix.gml",
+      "bytes": 109,
+      "sha256": "13498be76d39292439d45d22e460fa8b78ce6ceb3c27b7aab7dc041b813fee40"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/INSTALL-GMS14.md",
+      "bytes": 12159,
+      "sha256": "b696fd80cef8357b108d22263f357744ed65cfa9615ae39371f70449dbe916e4"
+    },
+    {
+      "path": "Objects/obj_mm1_blader_create.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm1_blader_create.gml",
+      "bytes": 328,
+      "sha256": "fa08ddeaa366b807d676b0a0d2cf15cd42783f9252d8895bb478aa05228823c7"
+    },
+    {
+      "path": "Objects/obj_mm1_blader_draw.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm1_blader_draw.gml",
+      "bytes": 127,
+      "sha256": "01525d22cb4b9f5de79744cf74d56155974864365e4f2c2c1924b3368d79b14f"
+    },
+    {
+      "path": "Objects/obj_mm5_combat_begin_step.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_combat_begin_step.gml",
+      "bytes": 24,
+      "sha256": "b1ef3dc45d5fac856507e4922a87264e5ba4267c4841eb7ac30f523499345b6a"
+    },
+    {
+      "path": "Objects/obj_mm5_combat_cleanup.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_combat_cleanup.gml",
+      "bytes": 228,
+      "sha256": "14e6e923cc5d9ddd4f39ebce6192b502c10d15f410ebe74050f0fa9f45155ce7"
+    },
+    {
+      "path": "Objects/obj_mm5_combat_create.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_combat_create.gml",
+      "bytes": 2577,
+      "sha256": "35fa1e6ae90353ae5e3cf30fa907568bd741d28bc966fd34dae10bbee98682bb"
+    },
+    {
+      "path": "Objects/obj_mm5_combat_draw.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_combat_draw.gml",
+      "bytes": 431,
+      "sha256": "2a3d1977a212adaac9dca0c070e2f9106e476139fbc5bf546e8239c65f1e95b0"
+    },
+    {
+      "path": "Objects/obj_mm5_enemy_explosion_create.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_enemy_explosion_create.gml",
+      "bytes": 104,
+      "sha256": "21366ed3d0dd59846a73fd1f1cb3a5c5fa336f77031958120fa857bc9a098b2d"
+    },
+    {
+      "path": "Objects/obj_mm5_enemy_explosion_draw.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_enemy_explosion_draw.gml",
+      "bytes": 93,
+      "sha256": "510f6f0ba8bc1067fe7e2b77487f0e711ebe66b3c4e33d1c012d0896cd46bb81"
+    },
+    {
+      "path": "Objects/obj_mm5_pickup_create.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_pickup_create.gml",
+      "bytes": 123,
+      "sha256": "f434e5df9fc7441b04519fa5175aa064381e86c1dfeb9628819c52da85c905f5"
+    },
+    {
+      "path": "Objects/obj_mm5_pickup_draw.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Objects/obj_mm5_pickup_draw.gml",
+      "bytes": 641,
+      "sha256": "379ad9cf9184422a55aa5c27c1f5a9542ec7b4ccffe275df2eeb70e2a577628b"
+    },
+    {
+      "path": "Player/obj_mm5_megaman_create_combat_append.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Player/obj_mm5_megaman_create_combat_append.gml",
+      "bytes": 294,
+      "sha256": "75401aed675c1fc7fd509a3df0fdbee5f1dbf047b12b2a4a3ad481cebb0d2133"
+    },
+    {
+      "path": "Player/obj_mm5_megaman_draw_combat_replace_body.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Player/obj_mm5_megaman_draw_combat_replace_body.gml",
+      "bytes": 3095,
+      "sha256": "ffb0d1dffe0f00f2a72de7f9db08d7d42c8a12016281bd3b74a1f0dd05ebaa55"
+    },
+    {
+      "path": "Player/obj_mm5_megaman_step_combat_prefix.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Player/obj_mm5_megaman_step_combat_prefix.gml",
+      "bytes": 255,
+      "sha256": "e6be1282eec96b6046300224005f6b02341fb1fe9ab3687c9fb8cb7dde9cb7b1"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/README.md",
+      "bytes": 7266,
+      "sha256": "0b933108406b1f8cfd6bc833e275acf5bff514c5a1ee5ea66de22a9b37f51ca3"
+    },
+    {
+      "path": "Reference/native-health-refill-freeze.json",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Reference/native-health-refill-freeze.json",
+      "bytes": 28944,
+      "sha256": "36fa03f50f64077b6589c20228779dd16735c621de2ea6ec84a0bd66e0032195"
+    },
+    {
+      "path": "Reference/native-hurt-state-boundaries.json",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Reference/native-hurt-state-boundaries.json",
+      "bytes": 173791,
+      "sha256": "fd05dcf8c79612cafa72dec889612923f1a101b340f6f6b721f8aa520028731a"
+    },
+    {
+      "path": "Reference/native-mm5-combat-bounds.json",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Reference/native-mm5-combat-bounds.json",
+      "bytes": 3219,
+      "sha256": "35d4780f4905ca31912a8874bb910d59e3762bc59c3ed7c5606d67d24b6e5490"
+    },
+    {
+      "path": "Reference/native-mm5-combat-effects.json",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Reference/native-mm5-combat-effects.json",
+      "bytes": 4831,
+      "sha256": "3cd59d0f07463c5998213a69cfef20df155c4e076006a8c9f14299072c43c933"
+    },
+    {
+      "path": "Reference/native-mm5-hurt-art.json",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Reference/native-mm5-hurt-art.json",
+      "bytes": 36263,
+      "sha256": "4d4cd56610056453223b00bf59aeac0879a4bd94fee5cf18cd004556bd67dadc"
+    },
+    {
+      "path": "Reference/native-mm5-hurt-stars.json",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Reference/native-mm5-hurt-stars.json",
+      "bytes": 4379,
+      "sha256": "63956712a70e2b5f52bfda3d603a4218bd9714f8fd5c8db327c74e9605159eef"
+    },
+    {
+      "path": "Scripts/scr_mm1_blader_ai.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm1_blader_ai.gml",
+      "bytes": 1381,
+      "sha256": "f81d54e8d93dd8107b648509a7905d4e2a35cfbff245ac9b9db5421c8e6372b6"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_camera_end_update.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm1_cutman_camera_end_update.gml",
+      "bytes": 2055,
+      "sha256": "cc377adc6570d4b5362162d37049958c0ee0cb70badffc461ffb9a2a997a3816"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_begin.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_begin.gml",
+      "bytes": 1093,
+      "sha256": "118e9a118654d8625f847b787b4adad356181d1d384b30327505af76a3bba6f7"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_collect.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_collect.gml",
+      "bytes": 1149,
+      "sha256": "3cee3421cfdd9632e70735419781e3d5af976ba646488bc380aed4e55ccfbd84"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_damage.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_damage.gml",
+      "bytes": 1013,
+      "sha256": "12b05d72e65647a1630bfa465ce73d374d0d65d80847a38566326bdc219e8728"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_die.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_die.gml",
+      "bytes": 825,
+      "sha256": "73b6a26ae8c0623923d3f400d813fb3d93c07ee34b98d285d9481ca1ab1c045d"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 4109,
+      "sha256": "1def906ebe8b6cbf85e0887715fe1c20490a36a1a38f195adbd4040e8b0ac4dc"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_hit_blader.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_hit_blader.gml",
+      "bytes": 833,
+      "sha256": "3b7073f140d5b3a603a44282cf2cfa94b64b4ce18bdbc384b9ba6f1e8bb26cfb"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_install.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_install.gml",
+      "bytes": 153,
+      "sha256": "cbb213f13789cafafac96b0b7f9ae1e5ed11a4b810b9f7dd6bc57852cd0a1692"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_locked.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_locked.gml",
+      "bytes": 148,
+      "sha256": "3f1e043ae1c6e96c80b6be321b32ee4b358f1d2f90e6914fd291b23db2af965b"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_overlap.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_overlap.gml",
+      "bytes": 258,
+      "sha256": "a5be62706247082fd21857f35712534163256b48b461b8922e9122507044ff57"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_pickup_step.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_pickup_step.gml",
+      "bytes": 1288,
+      "sha256": "b038316e0d0b77d3ac7f2e43a0a103681906c15248a048a38eeb4de7a95301c0"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_refill_sound.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_refill_sound.gml",
+      "bytes": 215,
+      "sha256": "1c68c267147d3ec26788e1a8ea4a5e4e0ba79a84ed34a2e2e901866a025c99b6"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 1062,
+      "sha256": "21c651c6e914ea7c9e70195c33bc6a786ab754c4f5f5372d1419d9bfb7d18c27"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_stop_charge.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_combat_stop_charge.gml",
+      "bytes": 57,
+      "sha256": "fbea40e1f1578533e0155c4b45be3d4d8fec5404acaaa595afb9ee6c7041bd31"
+    },
+    {
+      "path": "Scripts/scr_mm5_enemy_drop_from_byte.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_enemy_drop_from_byte.gml",
+      "bytes": 542,
+      "sha256": "92d14eecfff5e7c968c25541e21979403e7efec6c9eaa914f976f400902bf251"
+    },
+    {
+      "path": "Scripts/scr_mm5_health_refill_tick.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_health_refill_tick.gml",
+      "bytes": 668,
+      "sha256": "d873f49c27dbee680041ad6d71da48095356a0714a5df315cb11a026030dfa81"
+    },
+    {
+      "path": "Scripts/scr_mm5_player_hurt_step.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_player_hurt_step.gml",
+      "bytes": 2060,
+      "sha256": "c04b69f6bc8a145caba3ae47c887cf8299e435121b3573845193a7605e0deb7d"
+    },
+    {
+      "path": "Scripts/scr_mm5_recoil_dx.gml",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Scripts/scr_mm5_recoil_dx.gml",
+      "bytes": 368,
+      "sha256": "f317d1a9b8dabd82df7224e54349cb9158d2f335674e71b4c3b76c835bde4e77"
+    }
+  ]
+}

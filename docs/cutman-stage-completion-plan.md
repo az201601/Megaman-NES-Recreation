@@ -414,3 +414,34 @@ shot/contact/pickup boundary coverage, original death/drop effects and hurt star
 safe player death flow, terrain integration, pause/refill/route scheduling and
 resource installer/runtime acceptance are tracked in the checkpoint README.
 No existing player/stage/pause/shot event has been changed. No importZIP yet.
+
+### Blader combined combat import package — source complete, GMS acceptance pending
+
+Supersedes the foundation-only status above. `Assets/Combat/MM5/Blader Checkpoint/`
+now includes four scripted actor/manager Objects, nine original MM1 spawn records
+translated into accepted lower/upper stripes, original MM5 explosion/hurt stars,
+normal/mid/full collision/damage (full pierces weak Blader), contact3 and27+60
+hurt/protection, once-only native byte-modulo drop selection, pickup lifetime/blink,
+working +2/+10 health refill with4-update bar/cue/world lock, and sparelife+1/max9
+with native MM5 extra-life24 sound once. Weapon energy still deferred. Approved
+MM6 successful-hit35 and MM5 firing/charge/release remain unchanged.
+
+Deterministic combat pass belongs to CAMERA EndStep after accepted camera-update
+helper (copied byte-identical), not an order-dependent manager EndStep. Shared Begin
+latch avoids ID-order/two-tick refill races; pause restore rearms it. Exact-ID menu
+freeze remains owned by approved pause code. Protection/pickup blink uses native bit1;
+player samples before decrement. Stage feature script creates manager once; no manual
+enemy/pickup/manager placement, no geometry/music/stage Create replacements.
+
+Native30contact edge/3shot threshold proofs plus stars/explosion rendered-pixel
+matches and death vectors added. MM5 sound24extra-life and1Ddeath extracted through
+native queues/fullAPU with silence-only trims; full research takes retained.
+407actual-GML source/mock checks PASS, prior1023AI/256drops/MM6audio tests PASS.
+This is NOT GMS compiler/runtime/Windows/async-audio acceptance. Installer, in-game
+checklist and deterministic self-contained ZIP provided; user installation pending.
+
+Explicit project adaptations: GMS uniform byte RNG (native selector, NOT complete
+MM5 RNG history), rectangular terrain/hybrid8x8 target mapping/scheduler, death
+retry from Cut Man OPENING if spare life remains; zero spares returns existing title
+and new-game inventory. Native checkpoint placement/GameOverContinue UI deferred.
+No tank-use changes, other enemy/dispenser/spike AI or boss combat added.
