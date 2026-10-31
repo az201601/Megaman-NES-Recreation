@@ -8,4 +8,4 @@ Identity evidence: original projectile bounce routine negates horizontal speed, 
 
 Recording uses the same fullAPU/defaultstereo/native-mailbox method as accepted35 audio: F0stop, uncaptured35 settling cue,150warmupdates(last50 exactzero), one27 cue,150captureupdates. Trim only leading/trailing zero PCM, keep10ms tail. Review is exactly2x the original-amplitude `mm6-blocked-hit-raw.wav` at every sample. No ramps, filters, normalization, channel muting or synthesized tones. Peak0.3125, no individual clipping. Source/PCM bounds/hashes/verified instructions in recovery.json.
 
-**User listening approval pending. Do not import or edit gameplay yet.**
+**User approved this MM6 ding. Keep it unchanged.** Blaster firing approval and complete gameplay integration remain pending; do not import or edit gameplay until the complete installer is ready.

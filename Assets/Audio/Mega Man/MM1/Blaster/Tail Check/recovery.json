@@ -1,0 +1,147 @@
+{
+  "method": "Fresh native MM1 boot and normal music initialization/playback. At controlled approachframe300 originalFF is queued at nativeD554 tostopmusic,232updates before firstfire. No music request is replaced duringboot. Original stage AI creates real bullets and issues15. Controlled playerY36/verticalspeed0/protection100, Right toX760 then released. Default JSNES stereo as accepted MM5/MM6 SFX captures; no channels isolated. Firstshot through nextrequest and finalshot with50mspreroll/fulltail through frame700 (no zero trimming), plus completeburst; exact2xPCM gain; no fade/filter/channel muting/command-injected cue. Not natural unassisted traversal or hardware certification.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "suppressed": [
+    {
+      "phase": "encounter",
+      "f": 300,
+      "id": 255
+    }
+  ],
+  "requests": [
+    {
+      "f": 532,
+      "id": 21,
+      "source": 16,
+      "sample": 5815
+    },
+    {
+      "f": 564,
+      "id": 21,
+      "source": 16,
+      "sample": 31373
+    },
+    {
+      "f": 596,
+      "id": 21,
+      "source": 16,
+      "sample": 56932
+    },
+    {
+      "f": 628,
+      "id": 21,
+      "source": 16,
+      "sample": 82492
+    }
+  ],
+  "dispatch": [
+    {
+      "phase": "encounter",
+      "f": 300,
+      "id": 255,
+      "sample": 0
+    },
+    {
+      "phase": "encounter",
+      "f": 533,
+      "id": 21,
+      "sample": 6430
+    },
+    {
+      "phase": "encounter",
+      "f": 565,
+      "id": 21,
+      "sample": 31988
+    },
+    {
+      "phase": "encounter",
+      "f": 597,
+      "id": 21,
+      "sample": 57547
+    },
+    {
+      "phase": "encounter",
+      "f": 629,
+      "id": 21,
+      "sample": 83106
+    }
+  ],
+  "tail": [
+    0,
+    0
+  ],
+  "ends": [
+    {
+      "f": 542,
+      "sample": 13609,
+      "channel": 3,
+      "usage": 6
+    },
+    {
+      "f": 542,
+      "sample": 13627,
+      "channel": 2,
+      "usage": 0
+    },
+    {
+      "f": 574,
+      "sample": 39167,
+      "channel": 3,
+      "usage": 6
+    },
+    {
+      "f": 574,
+      "sample": 39185,
+      "channel": 2,
+      "usage": 0
+    },
+    {
+      "f": 606,
+      "sample": 64726,
+      "channel": 3,
+      "usage": 6
+    },
+    {
+      "f": 606,
+      "sample": 64744,
+      "channel": 2,
+      "usage": 0
+    },
+    {
+      "f": 638,
+      "sample": 90284,
+      "channel": 3,
+      "usage": 6
+    },
+    {
+      "f": 638,
+      "sample": 90303,
+      "channel": 2,
+      "usage": 0
+    }
+  ],
+  "firstStartSample": 3415,
+  "firstEndSample": 31373,
+  "lastStartSample": 80092,
+  "totalSamples": 140573,
+  "files": [
+    {
+      "name": "mm1-blaster-last-shot-full-tail-balanced.wav",
+      "seconds": 1.2600208333333334,
+      "sha256": "351fd51e988c34518b54918b88a7470d2cb2c3d30b8cdae9f05e36cac5d9790e",
+      "peak": 0.53436279296875
+    },
+    {
+      "name": "mm1-blaster-first-shot-untrimmed-balanced.wav",
+      "seconds": 0.5824583333333333,
+      "sha256": "751eb3a8c483f86cf34350a90252a0129302c01b74c7ebe0aad4f46e71b63cea",
+      "peak": 0.41790771484375
+    },
+    {
+      "name": "mm1-blaster-full-burst-untrimmed-balanced.wav",
+      "seconds": 2.9286041666666667,
+      "sha256": "474a22b2d5fe5eabaa4c7d789f7e51ef0e74728557d55b197eed1dad854f19a5",
+      "peak": 0.53436279296875
+    }
+  ]
+}

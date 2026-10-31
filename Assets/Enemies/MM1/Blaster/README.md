@@ -65,3 +65,7 @@ Earlier remaining-work list is historical: original poses, bullet, sound IDs and
 ## Audio correction after review
 
 User rejected first15 isolated fire and MM1 ding. `recapture-blaster-fire-live.mjs` now records actual four-shot nativeAI encounter (only stage music suppressed; controlled player placement disclosed), defaultstereo/fullAPU/exact2xgain/no fades. Requested replacement ding is originalMM6 blocked-hit27; byte-verified bounce handler, separate isolated driver recording via `record-mm6-blocked-hit-sfx.mjs`. Revised files under MM1audio/Blaster/Review V2 and MM6audio/Combat/Blocked Hit. `test-blaster-audio-v2.mjs` verifies original spans/output hashes and every2xPCM sample. Earlier reviewZIP/cues are rejected, preserved only as historical evidence. New listening approval pending; no gameplay changes.
+
+## Latest listening checkpoint
+
+User approves the MM6 ding; keep that accepted cue. Firing remains unapproved: user suspects incomplete output. Tail Check audio now keeps full first/finalshot windows from a real nativeAI burst with normal music initialization followed byFFstop at approach300. Both original used sound channels reach end-of-data on542/574/606/638; finalshot capture continues through700. No missing component/truncation fix is claimed; compare untrimmed output by ear. Still no Blaster gameplay installation.
