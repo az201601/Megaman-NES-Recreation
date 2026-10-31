@@ -1,0 +1,65 @@
+{
+  "status": "Custom draft. User approval pending. Not original ROM weapon art.",
+  "size": [
+    16,
+    16
+  ],
+  "order": [
+    {
+      "id": "rolling_cutter",
+      "label": "R. CUTTER"
+    },
+    {
+      "id": "ice_slasher",
+      "label": "I. SLASHER"
+    },
+    {
+      "id": "hyper_bomb",
+      "label": "H. BOMB"
+    },
+    {
+      "id": "fire_storm",
+      "label": "F. STORM"
+    },
+    {
+      "id": "thunder_beam",
+      "label": "T. BEAM"
+    },
+    {
+      "id": "super_arm",
+      "label": "S. ARM"
+    },
+    {
+      "id": "magnet_beam",
+      "label": "M. BEAM"
+    }
+  ],
+  "palette": {
+    ".": [
+      0,
+      0,
+      0,
+      255
+    ],
+    "d": [
+      102,
+      102,
+      102,
+      255
+    ],
+    "g": [
+      173,
+      173,
+      173,
+      255
+    ],
+    "W": [
+      255,
+      254,
+      255,
+      255
+    ]
+  },
+  "sourceCasing": "Original MM5 unselected R.Coil cropped at144,96 from docs/pause-menu-reference/mm5-initial-menu.png",
+  "selectedStates": "Not yet prepared; shapes reviewed first."
+}

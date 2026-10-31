@@ -1,0 +1,207 @@
+# MM5 charge — first standing threshold/release checkpoint
+
+## Status
+
+User confirmed basic-buster integration "all working" and agreed to measuring charging next. Basic X-fire/controller is the accepted checkpoint. No charging GML, new sprites, sound resources or playback changes installed by this measurement pass. Preserve accepted movement/slide/dust/ladder/basic-shot behaviour.
+
+Run `node tools/rom-recovery/charge-values.mjs` from repository root, with existing rom-recovery dependencies and .work/mm5-stage.json snapshot. Uses original supplied MM5 USA ROM via JSNES2.1.0, normal gravity/default weapon, natural stationary stage state. Not hardware/cycle certification or Mesen capture.33 cases /2954 recorded updates plus per-case30 neutral warmup updates; three cases explicitly set facing left as in previous standing-left tests. No charge/projectile routine patches. Raw full rows/births/palette traces/requests are ignored .work/charge-values.json, console .work/charge-log.txt.
+
+## Exact input/update convention
+
+Hold B beginning update1, through updateH inclusive; release before updateH+1. Fresh press produces the already accepted ordinary shot on update1. Charge byte RAM38 remains0 that first update, then advances from1 on update2. No extra automatic shots while held, including180-update hold. This counter is NOT the16-update shooting-pose timer33.
+
+| Last held charge counter | H in these tests | Release result |
+|---|---|---|
+|0..15|1..16|No additional release projectile (sampled1,2,15,16)|
+|16..39|17..40|Additional ordinary buster (boundary17 and40 tested)|
+|40..79|41..80|Intermediate charged projectile (boundaries41 and80 tested)|
+|80..85 cycling|81 and longer|Full charged projectile (81..86,180 tested)|
+
+Times at60updates/sec: intermediate hold41 updates ~0.683s, full hold81 updates1.35s, then release emits on following update. These exact inclusive-hold conventions avoid misleadingly labelling this as simply "40/80 frames after key-down". The underlying counter thresholds are40/80. Additional ordinary release after17..40 held updates is significant: charging is not just an overlay on press-only firing. Subthreshold residual counter remains H-1 after release in these cases; emitted release resets it0. Do not blindly assert every release immediately clears native RAM38.
+
+Hold81+ counter cycles80,81,82,83,84,85 rather than growing/saturating indefinitely. Cycle resets to80 on update87;180-update hold ends83. This drives palette cycling. Successful release resets shooting pose timer16; next16 updates count16..1, then0.
+
+## Projectile motion, spawn and slots
+
+Standing player reference128,180.5. Ordinary release uses accepted X offsets+16/-15 and floorY-1; speed1075/256=4.19921875. Intermediate/full release speed exactly5px/update, fixedY179. First post-creation-update X153/right or103/left, implying native charged spawn+20/-20 followed by one same-update5px motion. Unlike basic shot, charged spawn is symmetric. This pass asserts first post-update coordinates, motion and fixedY; direct per-write spawn instrumentation for charged shots remains a follow-up (do not confuse inferred pre-movement spawn with direct write capture).
+
+Animation IDs: basic18hex, intermediateA8hex, fullA9hex. Intermediate allocates ordinary available slot3 in empty scenario; full uses slot1 when all original shots have left. Early ordinary release atH17..20 allocates slot2 because original slot3 is still active. This is NOT proof of full-charge limits/replacement priorities while other shots occupy slots. No claims about damage, enemy collision, terrain behaviour, width/hitboxes or exact scrolling cleanup.
+
+## Audio requests (recording still to do)
+
+- Fresh press/ordinary release:1Ahex (=26), already approved basic sound.
+- Charging:22hex (=34), requested once on hold update34 when prior counter32 advances33. Not a full-charge threshold notification. No repeated22 request during180-update hold; this alone does not establish whether the APU sound loops internally.
+- Intermediate release:20hex (=32).
+- Full release:21hex (=33).
+
+Request IDs/timing are measured, not reviewed WAVs. Record actual full-game output with original F0 music-stop method and no channel isolation/synthesis, then have user listen before importing new audio. Existing approved basic/landing recordings unchanged.
+
+## Visual data and colour provenance
+
+Per-update original palette shadow bytes611..613 and rendered JSNES sprite palette0..7 logged separately. Shadow tables at original player-bank addresses8F47/8F4F/8F57 independently read from ROM offset36010 mapping8000; all held-state palette triples assert against original routine's counter-dependent table selection. Base indices0F,2C,11. First changed shadow at hold35; first corresponding rendered palette change in this trace at36. Early charging alternates palette colour1 with05,15,25 at successive counter bands; full charge cycles the three body colours in three2-update phases. Keep shadow-write vs displayed timing separate (release baseline shadow181 /rendered182 in long case). These observations are not final GMS draw-phase timing.
+
+Asset extraction must use pinned Mesen0.9.9 palette adapter, not JSNES packedBGR colours as RGB. Face components must be retained for every pose/stride, following the corrected basic-shot extractor tests. No new PNG batch exported yet.
+
+## Assertions / remaining work
+
+Assertions cover stable standing state, one initial shot/no held autofire, charge counter advancement/cycle, boundaries16/40/80, subthreshold residual vs successful reset, request timing/types, release animation/speed/facing/slots, final coordinates and fixedY,16-update release pose, ROM-table/shadow palette correspondence. All passed.
+
+Still unmeasured: charging/releasing during walk/air/continuous ladder/slide and exit, full/mid active-shot allocation limits, charge retention/cancellation under damage/menu/weapon switch, APU duration/loop/stop semantics, projectile OAM dimensions/frame/origins and native hitboxes. Do not implement or claim these from the stationary sweep. Next: movement/slot interactions, then original projectile art and actual charge/release audio review in small batches. No user installation action at this checkpoint.
+
+## Second checkpoint: movement/slots and first asset/review batch
+
+User requested proceeding. `charge-interactions.mjs`:16 additional original-ROM cases pass. Natural walking, jumping, wall-limited sliding; two explicitly initialized continuous-ladder class20 cases; eight explicitly controlled occupied-slot cases (clone initialized original basic-shot arrays into selected slots immediately before release). Allocation/charge/projectile routines remain unpatched. These are labelled controlled scenarios, not naturally created input histories. Raw rows/spawn writes/requests: ignored .work/charge-interactions.json.
+
+### Movement and release
+
+- Intermediate/full release while walking works; spawning sees already-moved playerX. Walk sample finalX131.890625 => spawn151, first post-update shot156. No inherited walking speed.
+- Full release in natural jump at player147.5Y produces shot146Y, animation08 player; projectile stays at that height while player continues rising. Speed5.
+- These cases directly hook original X/Y writes and assert charged spawn integerX+20/floorY-1, confirming the earlier inferred right offset. Left first-post-update positions remain covered by first sweep; don't confuse those with direct left write instrumentation.
+- Continuing-ladder full/up and intermediate/down releases both remain attached and freeze climbing16 updates, resume1.296875 on17. The original press also pauses16; charging in between continues while normal ladder motion resumes. These probes do not cover top/bottom/drop endpoints.
+- Entering slide freezes charge advancement, including the slide-to-standing update. In this stage the nearby wall ends slide early: entry50, state2 through68, return0 at69, charge48 unchanged throughout. Holding resumes charge at70 (49); release82 therefore emits intermediate (counter60), not full. No assumption of a full26-move open slide here.
+- Releasing at60 during that slide leaves charge48 pending, no shot at60; after wall-end69, intermediate emits automatically at70 without another B press.
+- Starting B hold at5 during a wall-limited slide started1 creates no ordinary press shot. After state returns0 at20, charge begins1 at21, reaches65 at85, releases intermediate at86. Holding through slide can therefore charge later even though original press could not fire. This supersedes earlier deliberately unimplemented slide-buffering assumptions, but does not certify every cancellation/exit priority.
+- Later incidental sound2A occurs outside focused release window in two natural slide traces; raw trace retains it. It is not assigned as a charge or slide sound. Charge review recordings below reject all unrelated commands.
+
+### Occupied-slot differences
+
+Masks1/2/4 mean one occupied slot1/2/3;7 all three. Slots contain valid cloned basic shot atX200 with original routines still moving/cleaning it.
+
+- Full release requires all three slots empty in these probes. Any single occupied slot rejects full emission, no21 sound or16pose; charge becomes1 (not an asserted universal clean0). Even after injected shots clear, no deferred full emission through20 subsequent updates.
+- Intermediate release can share slots with existing basics: allocate highest free slot3, or2 if3 occupied.
+- If all three occupied, intermediate release retains counter40 and does not refresh pose/play20. It automatically emits at56 after a slot has cleared, without another press. Native cleanup/gate order still applies. Thus a simple shared "count<3" gate is insufficient for full charged fire, and blocked intermediate/full charge cannot share one reset rule.
+
+### Artwork prepared / import pending
+
+`extract-charged-art.mjs` exports original rendered OAM/CHR components with pinned approved Mesen0.9.9 palette; NOT direct Mesen capture. Both native directions tested; every phase pixel-equal to mirrored opposite direction about actor reference. No generated imagery. Multiple palette components retained (including full phase2 palette0), component flips/priority retained, repeated phases identical, all opaque pixels fit. Capture uses pre-update actor reference to match OAM pipeline.
+
+Sprites at Assets/Mega Man/MM5/Buster/Charging:
+
+- spr_mm5_buster_mid_strip2.png:48x16,2 cells24x16, origin16,7;5/4 OAM components by phase.
+- spr_mm5_buster_full_strip4.png:128x24,4 cells32x24, origin24,11;4/8/12/5 components.
+
+Import under Sprites > Mega Man > MM5 > Buster > Charging as spr_mm5_buster_mid/full; origins manually as above, all strip offsets/separations0, no crop/resize. Keep existing basic projectile object and all player events unchanged. PNG canvas/alpha is not a damage hitbox. Player charge-colour variants not exported in this batch; no charging implementation installed.
+
+### Actual audio sequences prepared / user hearing approval pending
+
+`record-charge-sfx.mjs` records original full-game APU with approved originalF0 music-stop method,150 warmup updates, settled peak0; no muting/isolation/synthesis/effects. Two review sequences include ordinary press shot, charging, then intermediate/full release. Only PCM-zero edge silence trimmed with5ms padding, retained PCM exact assertion. Not isolated import-ready sounds; do not create Sound resources from these sequences. Need review plus separate final effects/loop-boundary measurements before integration.
+
+- mid review:48000Hz stereoPCM16,44981 frames/0.9371041667s; requests frames10:1A,43:22,51:20; raw trim[9404,54385).
+- full review:48000Hz stereoPCM16,84350 frames/1.7572916667s; requests10:1A,43:22,91:21; raw trim[9404,93754).
+
+Capture180updates/143777 samples each, always state0, no unrelated sound requests. Full takes/traces ignored .work. Existing approved basic/landing sounds byte-untouched. Asset/review ZIP includes two sprite strips, two review WAVs and import/review guides; user import/hearing confirmation pending.
+
+### Remaining scope after second checkpoint
+
+Still no charged GML, damage/hitbox/enemy interactions, hurt/menu/weapon cancellation, all ladder/slide endpoints, rendered charge-colour variants or standalone charging audio loop/stop implementation. Source tests are not GMS runtime proof. Preserve accepted basic-buster/controller until small explicit integration checkpoint.
+
+## Full projectile correction after user review
+
+User reported weird white portions in full-charge strip. Original phase0 actually uses CHR65/66/67 in addition to68/69; previous68..79 filter omitted6 of10 components and24px-high canvas was too short for flash (-15..+16 relativeY). Corrected full extraction to65..79,32x32 cells/origin24,15,128x32 strip. Exact phase component counts10/8/12/5 asserted, not loose4..12. Other phases retain aligned padding. Native white flash/ring phases themselves preserved; they appear in original rendered output, not a palette error. Intermediate sprite/audio unchanged.
+
+Added independent per-opaque-pixel comparison with original JSNES rendered framebuffer for every phase/direction, away from player and with projectile first in OAM to avoid real alternating8-sprites/scanline dropout. Every phase passes; repeated images, clipping and native opposite-direction reflection pass too. Updated import guide/ZIP. User must replace only full sprite's four subimages with32x32 cells and new origin24,15; runtime/import confirmation pending. No GML/controller changes.
+
+## Separate audio correction after user feedback
+
+User objected to initial ordinary shot and charge+release bundled in both review sequences. Whole-action previews were not suitable isolated effects. Superseded combined previews (retained only as provenance), replaced main pack audio with3 separate clips and created audio-only pack. No controller/audio resource installation changes.
+
+record-charge-effects.mjs: original full-game APU recording, F0 music stop/warm150/peak0, B at10; capture starts35 after ordinary press shot finished (all recorded35..39 samples asserted exactly zero). Charge-only natural hold through259, only captured sound22 at43, no release;171917samples/3.5816041667s. Excerpt, NOT seamless/import-ready loop; no end fade/artificial waveform editing.
+
+Release-only takes explicitly preset charge RAM38 to40dec(mid)/80dec(full) immediately before B release40, while natural counter had reached29 and no22 had been requested. All three original slots clear. Original emission/projectile/sound-driver routines unpatched: correctA8/A9 projectile, counter0,16pose and exactly captured20/21 request. No preceding press/charge in retained audio. Full APU, no channel muting/isolation, synthesis, gain or resampling. Silence-only release trims with5ms padding, PCM interval equality asserted. Mid12216samples/0.2545s, full19564/0.4075833333s,48000 stereoPCM16. Controlled meter setup is disclosed, not claimed natural full hold history. Raw takes/traces ignored .work.
+
+verify-charge-audio.mjs re-records natural original sequences + separate clips and verifies stop/replacement: mid original request51 silences charge pulse2 at52 (4004=30); full request91 takes over at93 (7D),silences100, no charge voice restarts. Successful release should therefore stop GMS charge handle before playing separate release, not layer both tracks. Natural steady charge register pattern repeats8updates from110,17 repeats assert; PCM loop seam not yet certified. User approval of separate clips pending; do not import new audio yet. Existing basic/landing audio and all GML unchanged. Blocked release/cancel audio still separate scope.
+
+## Separate audio accepted; release-resource import checkpoint
+
+User reviewed separate files and confirmed "seems good to me". Mark mid/full release recordings approved; charge-only preview audible character accepted, but no seamless-loop claim. Promoted mid/full WAVs byte-for-byte to canonical snd_mm5_buster_mid.wav/snd_mm5_buster_full.wav under Assets/Audio/Mega Man/MM5/Buster/Charging. Validated PCM headers/frame counts and equality with approved review, packaged two WAVs+import guide in Downloads/mm5-charged-release-sounds.zip. User import confirmation pending. Charging preview remains excluded from resource pack until intro/loop seam verification. No player/projectile GML or existing audio changed. Corrected full-charge sprite import not separately reconfirmed; do not infer it from audio approval.
+
+## Release resources imported / charge-loop audition
+
+User confirmed "done" after intermediate/full sound import instructions. Mark both release resources imported, preserve basic controller. Regenerated ignored dependencies/stage snapshot and separate original full-APU take; approved review/canonical WAVs byte-unchanged. prepare-charge-loop.mjs now prepares intro/loop audition. Native steady8-update register pattern verified17 cycles, but waveform phase not identical: first single-cycle candidate failed RMS guard and was not published. Wider search found roughly3-cycle PCM crop with128-sample stereo RMS37.9113,max460,adjacent seam jump6 (PCM16); engineering guards50/512/50 pass. Not bit-perfect/native-cycle certification. No waveform edits/fades/synthesis/channel isolation/resampling.
+
+Intro raw[7804,111061):103257samples/2.1511875s; loop[111061,130251):19190samples/0.3997916667s,48000stereoPCM16. Intro-to-loop contiguous; preview exact intro+16 copies of loop,410297samples/8.5478541667s. Wave/header/concatenation/ZIP equality tests passed. Proposed sample-crop seam uses slight timing adjustment to native register cycle; needs USER listening approval, not yet imported. GitHub audio-only audition pack under Charging/Loop Review/Downloads. No GML/controller edits. Still need charge colour variants and safe intro/loop playback integration after hearing confirmation.
+
+## Loop hearing accepted / standing colour resource preparation
+
+User reported "very smooth" for loop audition. Retain exact proposed intro/loop pair; audio seam hearing accepted, GMS runtime playback not installed. Preparing charge colour artwork next, in small batches. extract-charge-idle.mjs outputs six32x32 standing cells (192x32 strip), origin16,16, separate resource spr_mm5_megaman_idle_charge under Sprites > Mega Man > MM5 > Buster > Charging > Player Colours. Colour-state selection, not automatic sequential animation.
+
+Native body palette triples from original charge tables: base0F/2C/11; early05/2C/11,15/2C/11,25/2C/11; full rotations2C/11/0F and11/0F/2C. Only original palette0 components change; original face palette4 untouched. Default Mesen0.9.9 matching, not direct capture. Base image exact accepted-standing PNG, all alpha/face pixels invariant; all five colour variants exact independent natural held-charge OAM/palette matches36/56/68/84/86. Native blink at52 would use face9; open-eye comparison uses56 deliberately, not a missing-face filter. No GML changes, source checks passed. Standing colour import user confirmation pending. Other moving/shooting poses and audio queue integration remain next batches.
+
+## Standing colour imported / walking-air colour batch
+
+User confirms standing charge resource "imported". Prepared extract-charge-movement.mjs and two resource strips: walk24x32x32 (six banks of four poses), air6x32x40; origins16,16. Original moving OAM/CHR geometry and native ROM charge palette tables, Mesen-matched. Face palette4 preserved independently, not whole-image tint. Base bank exactly accepted movement art; alpha/face invariant across six banks; four walk phase checks and all-bank ascent/descent equality pass; no opaque clipping. These are component/palette compositions, not claims of individual natural charged-run capture of every moving-colour image. Pack contains only two new PNGs and import guide. User import pending; no player/projectile/controller/audio changes. Loop hearing approved, runtime queue still pending; ladder/slide/shooting colours remain next.
+
+## Walking/air imported; ladder/slide colour batch
+
+User confirms movement charge sprites imported. Prepared extract-charge-ladder-slide.mjs and three resources: climb12 (six banks x two poses), ladder_top6 and slide6, all32x40/origin16,16. Same controlled ladder setup/native slide poses as accepted source extraction, not natural ladder-endpoint certification. Six native palette-table triples only applied to body palette0; slide face palette4 preserved, back-facing climb/top have no separate face. Mesen-matched original pixel composition, not direct capture or claim every variant was individually recorded while charging.
+
+All base images equal accepted originals; alpha/face invariant, cycle/repeated-pose checks all banks, opaque bounds, exact11 slide components/dust exclusion pass. Packed three PNGs + import guide. User import pending; no GML/controller/audio changes. Slide colour variants preserve paused charge state, not advancing charge during slide. Shooting colour variants then sound/controller integration still pending.
+
+## Ladder/slide colours imported; final shooting colour asset batch
+
+User confirms "all imported" for three ladder/slide charge resources. Prepared extract-charge-shooting.mjs and idle_shoot6/walk_shoot24/air_shoot6/climb_shoot6 colour strips, all40x40 cells/origin16,16. Original corrected shooting extractor pose setup/OAM selection retained; native face08/2F/24/38 asserted exactly once per capture, settled controlled ladder animation0B preserved. Body-only native charge ROM palette substitutions; final face pixels/alpha invariant, base frames exact accepted corrected shooting PNGs, repeated/stride checks pass every bank, no opaque clipping. Pinned Mesen-matched pixels, no direct capture/global tint/generated art claims. Composed variants, not individually natural charged-run captures. Source test and five-file ZIP equality pass.
+
+Pack under Player Colours/Downloads/mm5-charge-shooting-colours.zip, guide IMPORT-SHOOTING.md. User import pending; this is final currently-used pose colour batch, not installed charging functionality. All normal art/player/projectile/audio code unchanged. Charge intro/loop hearing approved but queue/runtime integration still pending. Before integration confirm corrected full projectile uses32x32/origin24,15 and complete source/resource inventory; do not infer runtime verification from imports.
+
+## Final player colours imported / charged projectile object preparation
+
+User confirms final four shooting-colour resources imported. All currently used player charge-colour sprites now imported. Prepared two child objects obj_mm5_buster_mid/full, both parent obj_mm5_buster_shot. Inherited Create supplies default direction/no built-in speed/depth; child chooses sprite, speed5, animation age0/period5-or3/frames2-or4. Shared EndStep advances age, selects floor(age/period)modframes, inherits one movement/cleanup pass. No player/basic projectile/helper/Draw/audio edits. No room placement; these children aren't fired yet. Actual GMS inheritance/counting/runtime verification pending.
+
+Regenerated ignored dependencies/snapshot and33-case original charge sweep. Native standing mid/full active ages1..21, absent22 static256px window; parent cleanup matches. Added charged-projectile-gml-model.mjs: actual GML subset with inherited mocks, no Create movement, exactly once parent events, both directions, fixedY, speed5 and exact original post-update RAM animation phases. Intermediate initial phase0 age1..4,full1..2; displayed OAM lag still not hardware frame certification. Tests and ZIP equality passed. Guide explicitly checks corrected full sprite32x32/origin24,15,mid24x16/origin16,7. User charged-object install pending; next input/colours/audio queue integration. No claim importing art enables charged firing.
+
+## Charged objects installed / actual GMS charge-audio queue test
+
+User confirms both charged objects "done". Prepared dedicated invisible nonpersistent obj_mm5_charge_audio and3 context scripts start/stop/dispose, Included Files raw48000stereoPCM16 intro/loop copied exactly from approved WAV payloads. No waveform changes. Queue approach follows existing accepted Cut Man stage audio architecture: intro once +2 loops ahead, own-queue Audio Playback refills loop only, voice/queue stop before buffers deleted, idempotent Room End/Destroy/Game End cleanup. Existing stage music queue and approved release/basic/landing Sound resources untouched.
+
+Installation guide includes temporary manager Step using F6 to test start/stop/restart and10sec looping BEFORE connecting X gameplay. Player Create only adds singleton manager creation; no Step/Draw/firing helper changes. Manager not room-placed. Intro413028bytes/103257frames,loop76760bytes/19190frames; exact approved payload and10-file ZIP checks pass. All GML1.4-style APIs/syntax, no modern Cleanup/Playback Ended.
+
+charge-audio-gml-model.mjs passes actual-source mocked queue/buffer execution: intro once,50 loop refills, repeat start no overlap, stop retains buffers, late/shutdown/other queue callbacks, restart, idempotent cleanup, failed load/allocation/play cleanup and stage voice unaffected. NOT actual GMS runtime/async handle-reuse proof. User compiler/smoothness/rapid-restart/room-exit tests pending. F6 starts immediately for audition, not native charge threshold. Next integration must REMOVE temporary F6 Step and drive audio/colours/emission from measured X charge events. No charged X firing installed yet.
+
+## Queue runtime accepted / charging controller prepared
+
+User confirms F6 playback/stop/restart "they all work with no errors". Preserve tested manager/PCM architecture. New Charging/Controller checkpoint removes temporary manager F6 Step, appends only buster_charge0 in player Create, replaces SAME scr_mm5_player_try_buster contents, adds scr_mm5_player_charge_colour, replaces only character drawing block. No new player Step hooks or movement edits; existing normal/ladder call sites and slide-at-start/timer prefix retained. X initial shot, held charge increments,16/40/80 release thresholds,80..85 cycle, lower pending release/full all-clear, colour banks, child shot selection, audio start/stop integrated. New controller install/runtime acceptance PENDING.
+
+Additional original-ROM checks before wiring exposed important exclusivity: either charged projectile blocks fresh ordinary presses; lower pending release also waits for other charged shot. charge-repress.mjs4 cases verify no press-time pose refresh, forced pending mid after charged projectile clears; charge-interactions expanded17th case proves fresh repress56 with retained counter40 still emits mid. Helper preserves level, doesn't blindly force basic on fresh input.
+
+charge-rejected-full-audio.mjs explicitly controlled slot clone at full-release91, original player/audio routines unchanged: only requests1A10/2243; counter1 after rejection and charge pulse remains through179 (volume7A). Helper preserves native retained voice rather than inventing a stop on failed full emission. New22 threshold request stops/restarts manager to match retrigger; successful emission always stops queue BEFORE selected shot sound. No global music/landing changes. This rare controlled failure is labelled, not generalized cancellation certification.
+
+charge-controller-gml-model.mjs executes actual new helper/Draw/palette logic with actual projectile inherited GML and mocks: all33 standing traces counters/poses/positions/types/sound requests/palette shadow banks,9 occupancy traces,4 repress traces,7 movement/slide reference replays; all poses/all86 counter states draw bounds/bank maps/no sprite_index mutation; combined actual normal Step matches full-charge ROM trace, actual ladder Step full release pauses16/resumes17. Audio/charged projectile/basic/slide+dust regression models pass. Source/mocks NOT GMS runtime/inheritance/with/async certification. Source palette phase follows RAM, not full native display pipeline.
+
+Guide reminds correct256px view or room for static lifetime/clear-gate tests (wider room without views keeps initial shot alive longer); do not weaken all-clear rule. Existing top-lip/slide-start guards and unmeasured endpoint/hurt/menu/weapon priorities remain limited. No enemies/damage/hitboxes. User should test quicktap, intermediate and full standing first; old source/Draw backup supports rollback. All previously approved waveform/art files unchanged.
+
+
+## Runtime report / ladder-top shooting correction
+
+User reports charging "everything works no errors" after correcting slide-charge Sprite resource typo. No broad all-endpoint certification inferred. User correctly noted ladder-top shooting still missing before arrival; next checkpoint now addresses that gap.
+
+ladder-top-buster.mjs64 original-ROM cases supply terrain classes only at verified C550/C658 hooks: ladder20 atY>=128, empty above. Initial player Y124/127 settles state3, terrain00/00/20, anim14hex. Tap/controlled40/80 releases emit basic/mid/full, top-shoot animation15hex, pose16 cleared17, pause16; natural held starts3 -> charge22 request36, mid release44/full84. Both directions and body baselines128/140 included. First ascending/descending displacement after pause1.296875; synthetic no-platform upward departure is NOT whole platform-top priority proof. A preliminary Y120 setup fell off because original attached lower probe is onlyY+5; not mislabelled as a settled top shot.
+
+New extract-ladder-top-buster-art.mjs captures live original top shooting OAM/CHR for basic/mid/full, samples6/15 equal; face24hex intact, six body-only native palettes,40x40/origin16,16. New spr_mm5_megaman_ladder_top_shoot_charge_strip6.png imported as resource without _strip6. No repainting, audio edits or direct Mesen runtime claim.
+
+Actual-source controller patch removes one obsolete lip early-return and chooses new sprite only in firing ladder_top branch. Existing normal/ladder Step unchanged; masks and geometric lip band unchanged. Model adds32 settled-lip source comparisons with original64-case output: counters,poses,shot positions/type/requests,draws and16pause; camera offset8 supplied in X136 probe to align native bounds. First attempt ignored native viewport offset and wrongly removed shot at256 vs native264; fixed test camera rather than changing accepted cleanup code. Prior33+9+4+7 controller traces, all bank/pose sprite assertions and combined Step checks pass; audio/charged/basic/slide models pass.
+
+GMS rectangular functional lip band is not recertified native geometry. Original settled probes4px/1px above ladder, not proof entire existing12px GMS band/endpoint priorities. Ascending first resumed position tested but exit state/art beyond native attachment not asserted. Natural platform/class40/drop/jump/hurt/weapon/menu interactions still unverified. Small delta ZIP includes new6frame PNG, two complete replacement helper/character-draw blocks, installation guide. Original full controller ZIP updated with new sprite dependency/guide. Ladder-top runtime installation and acceptance PENDING.
+
+
+## Ladder-top runtime acceptance
+
+User confirms "done and tested it works" after one-line top-shooting Draw replacement and helper/resource installation. Ladder-top basic/charged checkpoint accepted as reported; full natural endpoint geometry still not certified. Next work is MM5 arrival, not additional movement changes.
+
+
+## READY and arrival combined resource checkpoint
+
+User has imported nothing from arrival-only pack and explicitly requires BOTH flashing READY and arrival. New combined resource pack contains original READY PNG, arrival strip5, sound review, combined import guide. No player/controller changes. ready-arrival.mjs natural restored state572 probes original READY anim1Ahex: visible81..85hex at108,125 through147,132/palette4; odd phase transparent7F, verified all pixels0. Interior visible/blank phases6updates each; state READY572..661 interval90, OAM edges distinguished from logic. READY40x8/origin20,3 retains actor anchor128,128; approved Mesen palette through JSNES. Controller/input/music handoff work still pending, source/art not user installation. Resource import and audio approval pending.
+
+
+## Arrival audio approved
+
+User confirms "sound is correct" for original full-APU arrival review. Promoted byte-identical snd_mm5_megaman_arrival.wav with resource-only import guide. Both READY/arrival Sprite imports still unconfirmed; do not infer installation from audio approval. Combined READY/arrival controller pending.
+
+
+## Combined READY/arrival controller prepared
+
+User confirms "import done" after both Sprite and approved Sound instructions. Resources accepted/imported; NEW startup manager runtime still pending. obj_mm5_stage_start:Create/RoomStart/BeginStep/EndStep/Draw/RoomEnd/Destroy; only player changes are Create lock=false append and first-line Step/Draw guards. Original player masks/position/Step contents preserved. RoomStart locks after all Creates; BeginStep updates90 READY6/6, beam8+.25 per move to supported initial spawn, one approved2D sound at ground,11 materialization ticks. EndStep unlock yields first ordinary control NEXT Step independent of object order. Sound cleanup stores/stops own voice, not global/stage audio. Static256x240/flat-supported nonpersistent gameplay test only; explicit errors for invalid counts/spawn.
+
+arrival-input.mjs12 original handoffs Right/A/B/Down early573/transition690/control691 use independent structuredClone+button-reset snapshots. Original state/position/charge/pose remain gated through690. Early held B begins counter1 without press shot at691; fresh B691 emits1A/pose16, fresh A691 jumps175.5; early/690A not buffered. Initial mutable-snapshot cross-case input contamination found and corrected before final assertions; only corrected traces used. Actual combined startup events + unchanged full player Step/charge Draw model passes all12 counters/pose/position/request handoffs, READY counts, beam movement, contact one sound, phases, idle unlock, translated view/target heights and repeated cleanup. Prior33standing/9occupancy/4repress/7movement/32settled-top checks and charged/audio/basic/slide regressions pass. No actual GMS compilation/runtime claimed; alternative-floor checks are source-only, not native certification.
+
+Rendering intentionally uses logical GMS phases, not NES OAM latency; beam clamps final fractional spawn Y instead of native postcontact wobble, integer art agreement at sampled floor. No gameplay scene music/menu flow changes, old MM1 provisional assets preserved, no respawn/hurt system. Installation guide/delta ZIP deliver event snippets only; both original sprites/Sound already imported. Runtime test starts neutral then input/cleanup; user acceptance pending.

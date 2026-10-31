@@ -1,0 +1,4 @@
+import fs from'node:fs';import{NES,Controller as C}from'jsnes';
+const root=new URL('../../',import.meta.url),work=new URL('./.work/cutman-eighth-scroll/',import.meta.url),snap=JSON.parse(fs.readFileSync(new URL('before-down-trigger.json',work))),rom=fs.readFileSync(new URL('Mega Man (USA).nes',root),'binary'),results=[];
+for(const press of[92,93,94,95,96,97]){const n=new NES();n.loadROM(rom);n.fromJSON(structuredClone(snap));n.buttonDown(1,C.BUTTON_DOWN);for(let age=0;age<=130;age++){if(age===1)n.buttonUp(1,C.BUTTON_DOWN);if(age===press)n.buttonDown(1,C.BUTTON_DOWN);if(age===press+1)n.buttonUp(1,C.BUTTON_DOWN);n.frame();}results.push({pressAge:press,finalY:n.cpu.mem[0x600]+n.cpu.mem[0x620]/256});}
+fs.writeFileSync(new URL('native-down-ready.json',work),JSON.stringify({source:'Original MM1 from controlled before-trigger snapshot. TriggerDown age0/released1, independent freshDown probes92..97; no extra patches.',results},null,2));console.log(results);

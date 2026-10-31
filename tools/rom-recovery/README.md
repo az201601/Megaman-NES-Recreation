@@ -28,3 +28,17 @@ Run the sequence in order. `.work/` contains ignored, regenerable snapshots, RAM
 - `verify`: assertions over the generated observations. This is targeted regression coverage, not emulator/hardware certification or proof of all attack types.
 
 Known unmeasured cases include an independently identified enemy projectile, fresh jump/fire buffering, and the full grounded/airborne/ladder/slide/attack matrix. ROM hashes are recorded in the observations document. No ROM copies or save states are distributed in this tool directory.
+
+## Cut Man opening route (four-screen horizontal stripe)
+
+```
+npm ci --prefix tools/rom-recovery --ignore-scripts
+node tools/rom-recovery/mm1-hurtwalk.mjs
+node tools/rom-recovery/recover-cutman-opening-route.mjs
+node tools/rom-recovery/probe-cutman-opening-camera.mjs
+node tools/rom-recovery/build-cutman-opening-package.mjs
+node tools/rom-recovery/test-cutman-opening-package.mjs
+python tools/rom-recovery/package-cutman-opening.py
+```
+
+Supplied MM1 USA bank0 decoding. First two pages checked against original boot nametables; latter two checked against original renderer during explicitly controlled Y/protection-pinned traversal, not natural playthrough. Original first-screen static-solid/ladder coverage unchanged. Camera GML compared against1620native frames; source mocks are NOT GMS1.4 compile/runtime proof. Install guide/ZIP in Assets/Cut Man/Stage/Opening Route. No next-room upward handoff/enemies/combat/pickups installed by this checkpoint. Raw generated scratch frames remain.work. Committed geometry/nativecamera records make source tests auditable without external ROM distribution.

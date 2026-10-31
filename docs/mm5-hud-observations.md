@@ -1,0 +1,13 @@
+# MM5 HUD checkpoint
+
+User reports combined READY/arrival works really well, requests HUD FIRST, postpones damage/invulnerability to enemies. No enemy, damage, invulnerability, pickup/weapon or score changes authorized for this checkpoint. Earlier suggested startup input tests not explicitly all runtime-confirmed.
+
+hud-health.mjs original USA ROM/JSNES2.1.0 tests all29 controlled HP0..28 presets; preserves upper bitsB0 flagged9C fullHP28, original HUD/player routines unchanged.7 sprites8x8 atX24/Y25..73 step8, palette4/tiles60..64hex.8x56 meter at24,25. Per top-row tile60+clamp(hp-4*(6-row),0,4). Full28, each unit4 creamF7D8A5 +2 whiteFFFEFF pixels; original opaque black448-6*hp background. No artificial transparency or palette changes. Tested native startup10 samples through READY/beam/materialization/idle: full meter persists, so later HUD should not share player startup Draw guard.
+
+New resource Sprite spr_mm5_health_meter, strip29 images8x56 across232x56, origin0,0;0 empty,14 half,28 full, bottom-up. Native OAM/CHR composed with approved Mesen0.9.9 palette adapter, not direct Mesen runtime capture. Guide/two-file ZIP ready; import not yet user-confirmed. No health variable/drawing object installed yet; next checkpoint separate HUD binding and logical scaling. No static HUD SFX, no test damage keys. HP0 UI preset does not certify death logic. Controlled-level extraction not a damage/refill simulation.
+
+## Health HUD binding prepared
+
+User confirms meter sprite "imported". New Controller package appends only mm5_health=28 to player Create; no Step/Draw/arrival/movement/audio modifications. New nonpersistent visible obj_mm5_hud:Create initializes player reference/depth and global GUI size256x240; RoomStart validates single HUD/player and binds after all Creates; DrawGUI frameclamp0..28 of plain health at24,25,explicit white/fullalpha/unit scale. HUD independent of player startup lock, above ordinary scene, no score/SFX/input/damage controls. GUI size affects all GUI events (explicit guide warning), not ordinary scene/view/window resolution. Place one in existing Cut Man first-screen room alongside existing player/startup manager. Current player Create full-health reset/persistent health/respawn rebinding future scope.
+
+hud-gml-model.mjs actual GML subset passes both Create orders, all29 HP states in locked/unlocked startup, native tile/PNG litpixel correspondence, exact8x56logical anchor24,25,renderclamp without health mutation, missing player safe and duplicate/zero count errors. GUI runtime/window scaling untested in GMS; installation/acceptance pending. Prior controller/audio/projectile/basic/slide models rerun. ZIP byte-equality verified. No damage/invulnerability/enemies added, as requested.

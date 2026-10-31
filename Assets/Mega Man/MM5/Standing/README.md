@@ -47,3 +47,7 @@ Keep the sprite at its native size within the 256x240 room. Existing whole-windo
 ## Next checkpoint
 
 Once the visual is confirmed, measure/install the stable MM5 collision proxy and basic movement against the existing `obj_stage_solid` regions. Then walking/jumping animations and ladder behavior, followed by MM5 READY/arrival and required sounds. Charging, sliding, damage recovery and pickup artwork remain planned work; no score system will be added.
+
+## Approved Mesen colour update
+
+User approved the Mesen0.9.9 default-palette standing preview. Current PNGs now use that palette; geometry, padding, frame layouts and origins are unchanged. Extraction tools retain the same palette. This is palette matching, not a direct Mesen capture. See `Assets/Palette Review/Mesen 0.9.9/MM5-PLAYER-IMPORT.md` for batch replacement instructions.

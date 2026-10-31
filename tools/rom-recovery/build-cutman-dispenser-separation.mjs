@@ -1,0 +1,14 @@
+// Authorised conversion of native background artwork into a separate sprite/object.
+// Uses published fourth-checkpoint data. No historical package mutations or ROM needed.
+import fs from 'node:fs';import assert from 'node:assert/strict';import {PNG} from 'pngjs';
+const old=new URL('../../Assets/Cut Man/Stage/Fourth Ladder Transition/',import.meta.url),out=new URL('../../Assets/Cut Man/Stage/Super Cutter Dispenser/',import.meta.url);fs.mkdirSync(out,{recursive:true});
+const g=JSON.parse(fs.readFileSync(new URL('geometry.json',old))),atlas=PNG.sync.read(fs.readFileSync(new URL('bg_mm1_cutman_ladder_route_tileset.png',old))),ref=PNG.sync.read(fs.readFileSync(new URL('cutman_fourth_route_reference.png',old))),r={x:864,y:128,width:96,height:80},inside=p=>p.x>=r.x&&p.x<r.x+r.width&&p.y>=r.y&&p.y<r.y+r.height;
+const removed=g.placements.filter(inside),placements=g.placements.filter(p=>!inside(p));assert.equal(removed.length,30);assert.equal(placements.length,1177);assert.ok(g.cells.filter(inside).every(c=>c.class===0&&!c.object));
+const sprite=new PNG({width:r.width,height:r.height});for(let y=0;y<r.height;y++)for(let x=0;x<r.width;x++){const k=((r.y+y)*ref.width+r.x+x)*4,a=ref.data.subarray(k,k+4);if(![72,205,222,255].every((v,i)=>a[i]===v))sprite.data.set(a,(y*r.width+x)*4);}
+fs.writeFileSync(new URL('spr_mm1_super_cutter_dispenser.png',out),PNG.sync.write(sprite));
+let code='// Fourth route checkpoint, dispenser artwork removed from tile layer.\n';for(const p of placements)code+=`tile_add(bg_mm1_cutman_ladder_route_tileset, ${p.tile%8*16}, ${Math.floor(p.tile/8)*16}, 16, 16, ${p.x}, ${p.y}, 1000);\n`;fs.writeFileSync(new URL('scr_mm1_cutman_ladder_route_tiles.gml',out),code);
+fs.writeFileSync(new URL('scr_mm1_cutman_ladder_route_features.gml',out),'// Call ONCE per room entry, after existing three geometry calls.\ninstance_create(864, 128, obj_mm1_super_cutter_dispenser);\n');
+fs.writeFileSync(new URL('obj_mm1_super_cutter_dispenser_create.gml',out),'// Artwork object only. Cutter spawning/AI intentionally not installed yet.\ndepth = 999;\nimage_speed = 0;\nimage_index = 0;\n');
+fs.writeFileSync(new URL('separation.json',out),JSON.stringify({source:'Fourth Ladder Transition native-decoded scenery, authorised sprite/object conversion. Not a claim original hardware drew the building as sprites.',building:r,removedTiles:removed,placements:placements.length,spriteOrigin:[0,0],collision:'unchanged class0; object has no collision parent',behaviour:'artwork only; spawning deferred'},null,2));
+fs.writeFileSync(new URL('geometry.json',out),JSON.stringify({...g,placements,features:[{kind:'super_cutter_dispenser',...r}],cells:g.cells.map(c=>inside(c)?{...c,feature:'super_cutter_dispenser'}:c)},null,2));
+console.log('Built96x80sprite, removed30tiles,1177remain; terrain/atlas/camera/blocks untouched.');

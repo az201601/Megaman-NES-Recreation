@@ -1,0 +1,158 @@
+{
+  "credit": "Sprites by KindlyPatrick",
+  "source": "Unmodified user-supplied sheet preserved in Weapon Icon References",
+  "classification": "External artwork adaptation, NOT original GB/NES ROM extraction",
+  "palette": [
+    [
+      0,
+      0,
+      0,
+      255
+    ],
+    [
+      102,
+      102,
+      102,
+      255
+    ],
+    [
+      173,
+      173,
+      173,
+      255
+    ],
+    [
+      255,
+      254,
+      255,
+      255
+    ]
+  ],
+  "icons": [
+    {
+      "id": "rolling_cutter",
+      "label": "R. CUTTER",
+      "sourceRect": [
+        149,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "112,112,112": 1,
+        "184,184,184": 2,
+        "255,255,255": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    },
+    {
+      "id": "ice_slasher",
+      "label": "I. SLASHER",
+      "sourceRect": [
+        47,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "87,145,248": 1,
+        "255,255,255": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    },
+    {
+      "id": "hyper_bomb",
+      "label": "H. BOMB",
+      "sourceRect": [
+        30,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "0,144,56": 1,
+        "176,248,200": 2,
+        "255,255,255": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    },
+    {
+      "id": "fire_storm",
+      "label": "F. STORM",
+      "sourceRect": [
+        64,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "216,40,0": 1,
+        "248,151,56": 2,
+        "248,216,168": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    },
+    {
+      "id": "thunder_beam",
+      "label": "T. BEAM",
+      "sourceRect": [
+        98,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "112,112,112": 1,
+        "240,183,56": 2,
+        "255,255,255": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    },
+    {
+      "id": "super_arm",
+      "label": "S. ARM",
+      "sourceRect": [
+        132,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "200,72,8": 2,
+        "248,216,168": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    },
+    {
+      "id": "magnet_beam",
+      "label": "M. BEAM",
+      "sourceRect": [
+        166,
+        4,
+        16,
+        16
+      ],
+      "colorMap": {
+        "0,113,232": 1,
+        "55,185,248": 2,
+        "255,255,255": 3,
+        "0,0,0": 0
+      },
+      "geometry": "14x14 interior preserved in place except four casing inset corners; no scaling/redrawing",
+      "state": "unselected"
+    }
+  ],
+  "status": "Grey icons approved. Selected states provided in Selected/. Manual GMS import not confirmed."
+}

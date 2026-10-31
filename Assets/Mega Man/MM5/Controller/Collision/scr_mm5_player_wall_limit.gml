@@ -31,6 +31,18 @@ for (probe_index = 0; probe_index < 3; probe_index += 1)
 
     if (hit_wall != noone)
     {
+        // Only ignore an upper probe ALREADY inside this same overhead solid.
+        // Side/body/feet contacts and newly entered upper obstacles still block.
+        if (slide_overhang_fall && !grounded && fall_speed >= 0
+            && probe_offset == -9 && hit_wall.bbox_bottom < floor(argument1))
+        {
+            if (collision_point(
+                floor(x) + wall_dir * 8, probe_y + probe_offset,
+                obj_stage_solid, false, true
+            ) == hit_wall)
+                continue;
+        }
+
         if (wall_dir > 0)
         {
             resolved_x = min(resolved_x, hit_wall.bbox_left - 8);

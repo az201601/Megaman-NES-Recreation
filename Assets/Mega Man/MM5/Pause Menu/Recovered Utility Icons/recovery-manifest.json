@@ -1,0 +1,38 @@
+{
+  "classification": "Original ROM-rendered art, controlled inventory reveals; not natural progression proof",
+  "palette": "Pinned Mesen0.9.9 default via JSNES adapter",
+  "rush": {
+    "game": 4,
+    "patches": {
+      "00B1..00BD": "FF"
+    },
+    "jetRect": [
+      144,
+      112,
+      16,
+      16
+    ],
+    "marineRect": [
+      144,
+      96,
+      16,
+      16
+    ],
+    "selection": "From Buster:Right=Dive,Down=Skull,Down=Coil,Down=Marine,Down=Jet; original menu colours"
+  },
+  "energyBalancer": {
+    "game": 6,
+    "patches": {
+      "0696": "01"
+    },
+    "rect": [
+      120,
+      192,
+      16,
+      16
+    ],
+    "selection": "Passive item; original MM6 does not supply cursor-selected colour state",
+    "codeEvidence": "USA PRG bank38 address92E0 loads0696; zero skips; nonzero invokes original draw command46 at92E5"
+  },
+  "scope": "Recovery and static reviews only; no GMS implementation"
+}
