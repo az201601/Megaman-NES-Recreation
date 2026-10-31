@@ -1,8 +1,9 @@
-# First entrance gate — research, not an installation package
+# First entrance gate — research record
 
-The Eleventh connection is user-accepted. This is research for the next connection;
-no replacement GML, room expansion or gate-operation package has been delivered yet.
-Keep the accepted Eleventh installation unchanged for now.
+The Eleventh connection is user-accepted. This folder preserves the research
+checkpoint. The subsequent source-complete installation is now in sibling
+`First Gate Passage/`; use its install guide, not this research folder.
+Actual GameMaker runtime acceptance of that passage remains pending.
 
 ## Approved hybrid
 
@@ -71,4 +72,5 @@ The recovery tools require local supplied ROMs and prior ignored snapshot lead-i
 no ROM or emulator snapshots are distributed. The test also needs the local MM1 ROM
 for its byte checks. Existing Eleventh55 source/model checks still pass unchanged.
 GameMaker compiler/runtime/scheduler/collision and completed gate-passage integration
-remain untested because the new GML implementation has not been made yet.
+were pending at this research checkpoint. The later implementation is in sibling
+`First Gate Passage/`, with source/model checks but no GMS runtime certification.

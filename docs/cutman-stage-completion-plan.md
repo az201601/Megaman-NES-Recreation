@@ -231,3 +231,45 @@ page20's left boundary is collision-only, not an additional visible shutter.
 remain unfinished.** No replacement installation is ready at this checkpoint;
 accepted Eleventh code remains untouched. No runtime acceptance claimed for the new
 passage, and no enemy/combat/damage/pickup/tank/death/boss work is included.
+
+## First entrance gate passage — source complete, runtime pending
+
+User approved the complete, untrimmed MM5 opening WAV (6c3ec06), then authorized
+integration. New canonical package: `Assets/Cut Man/Stage/First Gate Passage/`.
+This supersedes the preceding research-only unfinished status; **installation and
+user runtime confirmation still pending**, not a claim that Cut Man is complete.
+
+MM1 first entrance opens bottom-up at ages33/39/45/51, approved MM5 cue once at32,
+camera+4/player+1 over64 steps56..119, stand119, commitsection12 at152/control153.
+No first-gate close animation/cue is invented. MM5 grounded/standing contact and
+quarter-pixel entry snap2264→2264.25/Y880−feet_offset are adaptations; no native
+midair/slide entry claim. X2328.25 at exit; normal MM5 movement/cadence retained.
+Full approved2.496125s WAV imported as built-in `snd_mm5_gate_open`, not PCM buffers.
+Camera RoomEnd/Destroy stop only their own voice then call the existing disposer.
+
+Room width2304→3072 only; height2160, opening viewY1920/player2100 unchanged.
+All accepted positions/scene pixels preserved. New corridor20–22 X2304..3071/Y720,
+camera2304..2816/Y720, original collision-only return boundary2304,816/16×64.
+Closed second gate3056,816/16×64 is a scripted instance of existing gate Object,
+separate sprite/mask; opening it/boss room deferred. First gate custom normal Draw
+crops four16px strips over recovered native backdrop, closed mask stays behind the
+return boundary. No duplicated visible shutter/scenery gate, no manual placements.
+Totals3070tiles/109terrain+boundary solids/24ladders/24tops/17blocks/2dispensers/
+10art-only spikes/2gates. Atlas29tiles128×64, old28 exact; update mandatory.
+
+Manual install:2newSprites+1Sound+1Script; five existing Scripts, five Camera events,
+gateCreate+newnormalDraw.13GML files,21file ZIP incl2guides/2references/3PNGs and
+approved complete WAV, byte identity audited. Version1201 rejects stale1101; old
+ladder targets/timings preserved. Shared finish/dispose/query and player/pause/charge/
+HUD/arrival/audio manager/music/StageCreate/async/alarms unchanged.
+
+35 source/model checks PASS: all22 native ladder busy trajectories, complete gate
+busy sequence and fresh release, charge/rearm, stale scripts, idempotent owned-only
+teardown, exact geometry/feature/block/tile GML, accepted scene identity, native
+corridor reconstruction, old atlas indices, actual MM5 wall probes for return and
+second gate. Builder checks PPU pixels at first/second/fully-open phases. Research
+checks+Eleventh55/Tenth48/Ninth43/Eighth36/Seventh31/Sixth28/Fifth26/Fourth22/
+dispenser/pause16/UI regressions PASS. Not GMS compiler/GPU/scheduler/parent-mask/
+async certification; user must test installation and confirm. Enemies/cutter spawning,
+spike damage/invulnerability/death, pickups/tank effects/checkpoints, second gate/
+boss/reward/return remain later work.
