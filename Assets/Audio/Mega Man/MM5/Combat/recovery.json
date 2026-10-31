@@ -1,0 +1,53 @@
+{
+  "method": "Supplied original USA MM5, native8slot soundqueue after F0+150frame warmup with final50frames exact silence. Full APU48kHz/stereo16bit. One commanded effect per150frame take; no unrelated native requests, filtering, normalization or channel muting. Trim only PCM silence retaining10ms tail; exact full-take sample comparison. Sound identity from ROM byte spans, refill additionally identified in native collection trace.",
+  "files": [
+    {
+      "name": "snd_mm5_health_refill",
+      "command": 38,
+      "offset": 241402,
+      "hex": "a926205dec",
+      "warmPeak": 0,
+      "first": 840,
+      "last": 13179,
+      "end": 13660,
+      "files": [
+        {
+          "file": "snd_mm5_health_refill.wav",
+          "bytes": 51324,
+          "seconds": 0.26708333333333334,
+          "sha256": "777accaa2324c76349fde032c029af4f45dd66d28d0986ea54ee511e29af8fbf"
+        },
+        {
+          "file": "snd_mm5_health_refill_complete_untrimmed.wav",
+          "bytes": 479300,
+          "seconds": 2.496125,
+          "sha256": "a6f4e7c42c7a5e215cbbe4b99f150ce3a982c1c04ce16775afe424ace8869430"
+        }
+      ]
+    },
+    {
+      "name": "snd_mm5_megaman_hurt",
+      "command": 28,
+      "offset": 230204,
+      "hex": "a91c205dec",
+      "warmPeak": 0,
+      "first": 841,
+      "last": 14901,
+      "end": 15382,
+      "files": [
+        {
+          "file": "snd_mm5_megaman_hurt.wav",
+          "bytes": 58208,
+          "seconds": 0.3029375,
+          "sha256": "94052f27f0d18f1fa7c983c8b5c367adaf86b59a92fbb822b2100ead5c4f8501"
+        },
+        {
+          "file": "snd_mm5_megaman_hurt_complete_untrimmed.wav",
+          "bytes": 479300,
+          "seconds": 2.496125,
+          "sha256": "0bb20bab9e1f9e8e4c73b73010330448befa5081a37ee48dc2770f17ae6a22dd"
+        }
+      ]
+    }
+  ]
+}

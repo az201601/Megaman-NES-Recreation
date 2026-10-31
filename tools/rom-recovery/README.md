@@ -53,3 +53,15 @@ palette phases,255-update lifetime traces and five original collision/refill tri
 Research and art only; no installed GMS pickup/drop behavior. Full native RNG state
 sequence, natural enemy spawn/drop eligibility and collision boundary matrix remain
 separate from these controlled probes.
+
+## Blader combat implementation foundation (unfinished integration)
+
+After the MM1/MM5 stage snapshots and original MM1 pinned source-only bank5.s/
+bank7.s files, run `mm5-hit.mjs`, `probe-blader-combat.mjs`,
+`probe-mm5-hurt-boundaries.mjs`, `probe-mm5-health-freeze.mjs`,
+`recover-mm5-hurt-art.mjs` and `record-mm5-combat-sfx.mjs`.
+`test-blader-combat-research.mjs` verifies those evidence/art/audio assets;
+`test-blader-combat-kernels.mjs` executes the actual four pure GML kernels through
+a syntax adapter. Neither is a GMS compiler/runtime test or a claim that the
+requested enemy/player/pickup object/event integration is finished. Current scope:
+`../../Assets/Combat/MM5/Blader Checkpoint/README.md`.

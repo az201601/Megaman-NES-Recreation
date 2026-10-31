@@ -36,3 +36,15 @@ Next installation checkpoints require camera/route expansion before placement, e
 ## Reproduce/source tests
 
 Prepare original stage snapshot with tools/rom-recovery/mm1-hurtwalk.mjs. Recover source-only reference ASM into ignored.work from pinned GitHub commit (bank5.s,bank7.s); never fetch/run a modified ROM. Run recover-cutman-blader.mjs and test-cutman-blader.mjs. Raw four360-frame traces and per-pose source OAM in Reference/native-blader-trace.json. Generated data does not modify ROMs or GameMaker project.
+
+## Combat foundation follow-up (not an installation release)
+
+The accepted stage route is now fully extended, so the historical route-expansion
+prerequisite above is satisfied. `Reference/native-blader-combat.json` now decodes
+all nine original Blader spawn records and confirms the first natural camera
+threshold: cameraX17, right edge272, record `[01,10,4C,00]`. This replaces the
+previous unknown-trigger status, not the original observation at update21.
+Native body damage3 and one-normal-shot kill threshold are now byte checked;
+USA body-damage table isFE89 (the J-based source's printed FEBD is not correct
+for the supplied USA ROM). Complete combat installation is still pending at
+`Assets/Combat/MM5/Blader Checkpoint/README.md`. Do not place an object yet.

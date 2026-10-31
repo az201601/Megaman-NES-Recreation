@@ -1,0 +1,1281 @@
+{
+  "method": "Controlled B7 health item at player plus isolated second B7 timer witness. After collection, hold Right+Jump+Fire. Unmodified native collection/refill/sound handlers execute; compare player position/charge and witness lifetime over refill. Ordinary emulated frames, no handler/ROM patch.",
+  "results": [
+    {
+      "name": "small_health",
+      "amount": 2,
+      "sounds": [
+        {
+          "frame": 2,
+          "command": 38
+        },
+        {
+          "frame": 6,
+          "command": 38
+        },
+        {
+          "frame": 43,
+          "command": 34
+        },
+        {
+          "frame": 50,
+          "command": 26
+        }
+      ],
+      "refillFirst": 2,
+      "refillResume": 10,
+      "trace": [
+        {
+          "frame": 1,
+          "health": 5,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 2,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 3,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 4,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 5,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 6,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 7,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 8,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 9,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 10,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 253,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 11,
+          "health": 7,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 252,
+          "charge": 1,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 12,
+          "health": 7,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 251,
+          "charge": 2,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 13,
+          "health": 7,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 250,
+          "charge": 3,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 14,
+          "health": 7,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 249,
+          "charge": 4,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 15,
+          "health": 7,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 248,
+          "charge": 5,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 16,
+          "health": 7,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 247,
+          "charge": 6,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 17,
+          "health": 7,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 246,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 18,
+          "health": 7,
+          "x": 131.890625,
+          "y": 180.5,
+          "otherItemTimer": 245,
+          "charge": 8,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 19,
+          "health": 7,
+          "x": 133.1875,
+          "y": 180.5,
+          "otherItemTimer": 244,
+          "charge": 9,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 20,
+          "health": 7,
+          "x": 134.484375,
+          "y": 180.5,
+          "otherItemTimer": 243,
+          "charge": 10,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 21,
+          "health": 7,
+          "x": 135.78125,
+          "y": 180.5,
+          "otherItemTimer": 242,
+          "charge": 11,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 22,
+          "health": 7,
+          "x": 137.078125,
+          "y": 180.5,
+          "otherItemTimer": 241,
+          "charge": 12,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 23,
+          "health": 7,
+          "x": 138.375,
+          "y": 180.5,
+          "otherItemTimer": 240,
+          "charge": 13,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 24,
+          "health": 7,
+          "x": 139.671875,
+          "y": 180.5,
+          "otherItemTimer": 239,
+          "charge": 14,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 25,
+          "health": 7,
+          "x": 140.96875,
+          "y": 180.5,
+          "otherItemTimer": 238,
+          "charge": 15,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 26,
+          "health": 7,
+          "x": 142.265625,
+          "y": 180.5,
+          "otherItemTimer": 237,
+          "charge": 16,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 27,
+          "health": 7,
+          "x": 143.5625,
+          "y": 180.5,
+          "otherItemTimer": 236,
+          "charge": 17,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 28,
+          "health": 7,
+          "x": 144.859375,
+          "y": 180.5,
+          "otherItemTimer": 235,
+          "charge": 18,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 29,
+          "health": 7,
+          "x": 146.15625,
+          "y": 180.5,
+          "otherItemTimer": 234,
+          "charge": 19,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 30,
+          "health": 7,
+          "x": 147.453125,
+          "y": 180.5,
+          "otherItemTimer": 233,
+          "charge": 20,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 31,
+          "health": 7,
+          "x": 148.75,
+          "y": 180.5,
+          "otherItemTimer": 232,
+          "charge": 21,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 32,
+          "health": 7,
+          "x": 150.046875,
+          "y": 180.5,
+          "otherItemTimer": 231,
+          "charge": 22,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 33,
+          "health": 7,
+          "x": 151.34375,
+          "y": 180.5,
+          "otherItemTimer": 230,
+          "charge": 23,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 34,
+          "health": 7,
+          "x": 152.640625,
+          "y": 180.5,
+          "otherItemTimer": 229,
+          "charge": 24,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 35,
+          "health": 7,
+          "x": 153.9375,
+          "y": 180.5,
+          "otherItemTimer": 228,
+          "charge": 25,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 36,
+          "health": 7,
+          "x": 155.234375,
+          "y": 180.5,
+          "otherItemTimer": 227,
+          "charge": 26,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 37,
+          "health": 7,
+          "x": 156.53125,
+          "y": 180.5,
+          "otherItemTimer": 226,
+          "charge": 27,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 38,
+          "health": 7,
+          "x": 157.828125,
+          "y": 180.5,
+          "otherItemTimer": 225,
+          "charge": 28,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 39,
+          "health": 7,
+          "x": 159.125,
+          "y": 180.5,
+          "otherItemTimer": 224,
+          "charge": 29,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 40,
+          "health": 7,
+          "x": 160.421875,
+          "y": 180.5,
+          "otherItemTimer": 223,
+          "charge": 30,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 41,
+          "health": 7,
+          "x": 161.71875,
+          "y": 180.5,
+          "otherItemTimer": 222,
+          "charge": 31,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 42,
+          "health": 7,
+          "x": 163.015625,
+          "y": 180.5,
+          "otherItemTimer": 221,
+          "charge": 32,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 43,
+          "health": 7,
+          "x": 164.3125,
+          "y": 180.5,
+          "otherItemTimer": 220,
+          "charge": 33,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 44,
+          "health": 7,
+          "x": 165.609375,
+          "y": 180.5,
+          "otherItemTimer": 219,
+          "charge": 34,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 45,
+          "health": 7,
+          "x": 166.90625,
+          "y": 180.5,
+          "otherItemTimer": 218,
+          "charge": 35,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 46,
+          "health": 7,
+          "x": 168.203125,
+          "y": 180.5,
+          "otherItemTimer": 217,
+          "charge": 36,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 47,
+          "health": 7,
+          "x": 168.203125,
+          "y": 180.5,
+          "otherItemTimer": 217,
+          "charge": 36,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 48,
+          "health": 7,
+          "x": 169.5,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 37,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 49,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 38,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 50,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 51,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 52,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 53,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 54,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 55,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 56,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 57,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 58,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 59,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 60,
+          "health": 7,
+          "x": 170.796875,
+          "y": 180.5,
+          "otherItemTimer": 0,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        }
+      ]
+    },
+    {
+      "name": "large_health",
+      "amount": 10,
+      "sounds": [
+        {
+          "frame": 2,
+          "command": 38
+        },
+        {
+          "frame": 6,
+          "command": 38
+        },
+        {
+          "frame": 10,
+          "command": 38
+        },
+        {
+          "frame": 14,
+          "command": 38
+        },
+        {
+          "frame": 18,
+          "command": 38
+        },
+        {
+          "frame": 22,
+          "command": 38
+        },
+        {
+          "frame": 26,
+          "command": 38
+        },
+        {
+          "frame": 30,
+          "command": 38
+        },
+        {
+          "frame": 34,
+          "command": 38
+        },
+        {
+          "frame": 38,
+          "command": 38
+        }
+      ],
+      "refillFirst": 2,
+      "refillResume": 42,
+      "trace": [
+        {
+          "frame": 1,
+          "health": 5,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 2,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 10,
+          "playerState": 0
+        },
+        {
+          "frame": 3,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 10,
+          "playerState": 0
+        },
+        {
+          "frame": 4,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 10,
+          "playerState": 0
+        },
+        {
+          "frame": 5,
+          "health": 6,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 10,
+          "playerState": 0
+        },
+        {
+          "frame": 6,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 9,
+          "playerState": 0
+        },
+        {
+          "frame": 7,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 9,
+          "playerState": 0
+        },
+        {
+          "frame": 8,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 9,
+          "playerState": 0
+        },
+        {
+          "frame": 9,
+          "health": 7,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 9,
+          "playerState": 0
+        },
+        {
+          "frame": 10,
+          "health": 8,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 8,
+          "playerState": 0
+        },
+        {
+          "frame": 11,
+          "health": 8,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 8,
+          "playerState": 0
+        },
+        {
+          "frame": 12,
+          "health": 8,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 8,
+          "playerState": 0
+        },
+        {
+          "frame": 13,
+          "health": 8,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 8,
+          "playerState": 0
+        },
+        {
+          "frame": 14,
+          "health": 9,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 7,
+          "playerState": 0
+        },
+        {
+          "frame": 15,
+          "health": 9,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 7,
+          "playerState": 0
+        },
+        {
+          "frame": 16,
+          "health": 9,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 7,
+          "playerState": 0
+        },
+        {
+          "frame": 17,
+          "health": 9,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 7,
+          "playerState": 0
+        },
+        {
+          "frame": 18,
+          "health": 10,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 6,
+          "playerState": 0
+        },
+        {
+          "frame": 19,
+          "health": 10,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 6,
+          "playerState": 0
+        },
+        {
+          "frame": 20,
+          "health": 10,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 6,
+          "playerState": 0
+        },
+        {
+          "frame": 21,
+          "health": 10,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 6,
+          "playerState": 0
+        },
+        {
+          "frame": 22,
+          "health": 11,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 5,
+          "playerState": 0
+        },
+        {
+          "frame": 23,
+          "health": 11,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 5,
+          "playerState": 0
+        },
+        {
+          "frame": 24,
+          "health": 11,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 5,
+          "playerState": 0
+        },
+        {
+          "frame": 25,
+          "health": 11,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 5,
+          "playerState": 0
+        },
+        {
+          "frame": 26,
+          "health": 12,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 4,
+          "playerState": 0
+        },
+        {
+          "frame": 27,
+          "health": 12,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 4,
+          "playerState": 0
+        },
+        {
+          "frame": 28,
+          "health": 12,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 4,
+          "playerState": 0
+        },
+        {
+          "frame": 29,
+          "health": 12,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 4,
+          "playerState": 0
+        },
+        {
+          "frame": 30,
+          "health": 13,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 3,
+          "playerState": 0
+        },
+        {
+          "frame": 31,
+          "health": 13,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 3,
+          "playerState": 0
+        },
+        {
+          "frame": 32,
+          "health": 13,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 3,
+          "playerState": 0
+        },
+        {
+          "frame": 33,
+          "health": 13,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 3,
+          "playerState": 0
+        },
+        {
+          "frame": 34,
+          "health": 14,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 35,
+          "health": 14,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 36,
+          "health": 14,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 37,
+          "health": 14,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 2,
+          "playerState": 0
+        },
+        {
+          "frame": 38,
+          "health": 15,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 39,
+          "health": 15,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 40,
+          "health": 15,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 41,
+          "health": 15,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 254,
+          "charge": 0,
+          "refillRemaining": 1,
+          "playerState": 0
+        },
+        {
+          "frame": 42,
+          "health": 15,
+          "x": 128,
+          "y": 180.5,
+          "otherItemTimer": 253,
+          "charge": 0,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 43,
+          "health": 15,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 252,
+          "charge": 1,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 44,
+          "health": 15,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 251,
+          "charge": 2,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 45,
+          "health": 15,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 250,
+          "charge": 3,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 46,
+          "health": 15,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 249,
+          "charge": 4,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 47,
+          "health": 15,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 248,
+          "charge": 5,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 48,
+          "health": 15,
+          "x": 129.296875,
+          "y": 180.5,
+          "otherItemTimer": 247,
+          "charge": 6,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 49,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 246,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 50,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 245,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 51,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 244,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 52,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 243,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 53,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 242,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 54,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 241,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 55,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 240,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 56,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 239,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 57,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 238,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 58,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 237,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 59,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 236,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        },
+        {
+          "frame": 60,
+          "health": 15,
+          "x": 130.59375,
+          "y": 180.5,
+          "otherItemTimer": 235,
+          "charge": 7,
+          "refillRemaining": 0,
+          "playerState": 0
+        }
+      ]
+    }
+  ]
+}

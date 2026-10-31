@@ -391,3 +391,26 @@ phases at9updates/phase; life is static. Tests and import guide delivered.
 **Art/research only, no pickup/drop/combat integration yet.** Fixed stage pickups,
 Eddie and the approved tank distribution stay separate. Resume Blader/combat work
 after this checkpoint; do not claim that enemy damage/drop gameplay is installed.
+
+### Blader combat implementation in progress — foundation, not install-ready
+
+User authorized combined Blader/contact damage/buster+charge hits/death/MM5 drop
+checkpoint, then added working +2/+10 health pickup refill with original MM5 sound,
+incremental timing and freeze. Weapon-energy effects explicitly deferred (keep
+those outcomes in the drop table), extra lives +1/max9 planned.
+
+New original-USA proofs at `Assets/Combat/MM5/Blader Checkpoint/`: nine native
+Blader records/firstcameraX17 trigger, one-normal-shot kill threshold (MM1 internal
+20life/20normal damage), contact3, two original32x40 hurt/flash poses, MM5 hurt1C
+and refill26 recordings. Twelve controlled incoming-state hurt initializations
+confirm27hurtupdates; slide returns2, ladder detaches to0; no fresh-fire shot or
+charge during hurt. Native +2/+10 collection traces show per-bar26 at4updates and
+world/charge/seconditem lifetime frozen through final wait (resume10/42).
+Actual GMS1.4 movement/drop/recoil/refill kernels tested against1023original AI
+outcomes,256original drop-byte outcomes,6recoil inputs and8refill/cap branches.
+
+**Not a completed combat package.** Remaining object/event wiring, native precise
+shot/contact/pickup boundary coverage, original death/drop effects and hurt stars,
+safe player death flow, terrain integration, pause/refill/route scheduling and
+resource installer/runtime acceptance are tracked in the checkpoint README.
+No existing player/stage/pause/shot event has been changed. No importZIP yet.
