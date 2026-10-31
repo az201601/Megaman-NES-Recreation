@@ -74,3 +74,23 @@ for its byte checks. Existing Eleventh55 source/model checks still pass unchange
 GameMaker compiler/runtime/scheduler/collision and completed gate-passage integration
 were pending at this research checkpoint. The later implementation is in sibling
 `First Gate Passage/`, with source/model checks but no GMS runtime certification.
+
+## MM5 opening timing check — requested after delay report
+
+`native-mm5-opening-timing.json` and `probe-mm5-gate-timing.mjs` verify the supplied
+USA opening routine, not a natural gate approach. At the normal camera-update JSR
+entry, the probe redirects its destination once to the original openerD0FC using
+the existing caller stack. No ROM instructions are changed. On the entry frame,
+command25 is queued and the first PPU edit built; subsequent edits occur4 and8
+frames later, and the routine returns after12 frame waits (nominal0.20s at60Hz).
+The opening routine contains no initial32-frame hold. Verified caller bytes at
+CB8D test the gate flag and call the opener directly, without an intervening wait.
+Exact contact-to-visible-opening latency still needs a gate-trigger/PPU trace;
+this controlled routine probe is not a natural MM5 gate playthrough.
+
+User asked to shorten the recreation's initial wait, then interrupted to request
+this MM5 check before choosing timing. The previously proposed0.15s wait was only
+a suggestion; **no gameplay timing changes or replacement ZIP have been made**
+in this timing-check checkpoint. The installed package still has the original
+MM1-derived32-frame initial wait. MM5's three-edit/four-frame opening animation
+must not be mislabeled as the existing MM1 four-edit/six-frame animation.
