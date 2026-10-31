@@ -376,3 +376,18 @@ MM6 enemy-hit cue approved by user (“very good”), with explicit request to r
 extra silence. Use **`snd_mm6_enemy_hit.wav`**,0.403063s, for gameplay, NOT the2.496s
 untrimmed research take. All audible PCM samples retained; only silence removed,
 with10ms silent tail. Verification compares exact PCM slice to original full take.
+
+### MM5 random drops / original pickup art checkpoint
+
+User requested original MM5 enemy drop selection and small/large health,
+small/large weapon energy and extra-life sprites. Recovered/tested at
+`Assets/Pickups/MM5/`: five original-size sprite strips and native render/effect
+traces. Nominal50bucket rates: smallhealth10%,largehealth4%,smallweapon8%,
+largeweapon4%,life2%,none72%. Original byte modulo50 biases these; report includes
+all256 controlled CPU results and explicitly distinguishes uniform-byte math
+from unproven actual RNG frequencies. Native collection trials confirm +2/+10
+health, +2/+10 selected-weapon energy, +1life. Four energy pickups have two palette
+phases at9updates/phase; life is static. Tests and import guide delivered.
+**Art/research only, no pickup/drop/combat integration yet.** Fixed stage pickups,
+Eddie and the approved tank distribution stay separate. Resume Blader/combat work
+after this checkpoint; do not claim that enemy damage/drop gameplay is installed.

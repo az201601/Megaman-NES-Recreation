@@ -1,0 +1,330 @@
+{
+  "method": "Controlled original B7 pickup at player position, original collision/collection/refill handlers; selected weapon1 for ammo tests. Health/weapon internal encoding0x80+bars. 120 natural frames per branch.",
+  "results": [
+    {
+      "name": "small_health",
+      "animation": 117,
+      "start": {
+        "health": 133,
+        "weapon": 133,
+        "lives": 2
+      },
+      "end": {
+        "health": 135,
+        "weapon": 133,
+        "lives": 2
+      },
+      "trace": [
+        {
+          "frame": 1,
+          "health": 133,
+          "weapon": 133,
+          "lives": 2,
+          "item": 183
+        },
+        {
+          "frame": 2,
+          "health": 134,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 3,
+          "health": 134,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 6,
+          "health": 135,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        }
+      ]
+    },
+    {
+      "name": "large_health",
+      "animation": 116,
+      "start": {
+        "health": 133,
+        "weapon": 133,
+        "lives": 2
+      },
+      "end": {
+        "health": 143,
+        "weapon": 133,
+        "lives": 2
+      },
+      "trace": [
+        {
+          "frame": 1,
+          "health": 133,
+          "weapon": 133,
+          "lives": 2,
+          "item": 183
+        },
+        {
+          "frame": 2,
+          "health": 134,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 3,
+          "health": 134,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 6,
+          "health": 135,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 10,
+          "health": 136,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 14,
+          "health": 137,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 18,
+          "health": 138,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 22,
+          "health": 139,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 26,
+          "health": 140,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 30,
+          "health": 141,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 34,
+          "health": 142,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 38,
+          "health": 143,
+          "weapon": 133,
+          "lives": 2,
+          "item": 0
+        }
+      ]
+    },
+    {
+      "name": "small_weapon",
+      "animation": 119,
+      "start": {
+        "health": 133,
+        "weapon": 133,
+        "lives": 2
+      },
+      "end": {
+        "health": 133,
+        "weapon": 135,
+        "lives": 2
+      },
+      "trace": [
+        {
+          "frame": 1,
+          "health": 133,
+          "weapon": 133,
+          "lives": 2,
+          "item": 183
+        },
+        {
+          "frame": 2,
+          "health": 133,
+          "weapon": 134,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 3,
+          "health": 133,
+          "weapon": 134,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 6,
+          "health": 133,
+          "weapon": 135,
+          "lives": 2,
+          "item": 0
+        }
+      ]
+    },
+    {
+      "name": "large_weapon",
+      "animation": 118,
+      "start": {
+        "health": 133,
+        "weapon": 133,
+        "lives": 2
+      },
+      "end": {
+        "health": 133,
+        "weapon": 143,
+        "lives": 2
+      },
+      "trace": [
+        {
+          "frame": 1,
+          "health": 133,
+          "weapon": 133,
+          "lives": 2,
+          "item": 183
+        },
+        {
+          "frame": 2,
+          "health": 133,
+          "weapon": 134,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 3,
+          "health": 133,
+          "weapon": 134,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 6,
+          "health": 133,
+          "weapon": 135,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 10,
+          "health": 133,
+          "weapon": 136,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 14,
+          "health": 133,
+          "weapon": 137,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 18,
+          "health": 133,
+          "weapon": 138,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 22,
+          "health": 133,
+          "weapon": 139,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 26,
+          "health": 133,
+          "weapon": 140,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 30,
+          "health": 133,
+          "weapon": 141,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 34,
+          "health": 133,
+          "weapon": 142,
+          "lives": 2,
+          "item": 0
+        },
+        {
+          "frame": 38,
+          "health": 133,
+          "weapon": 143,
+          "lives": 2,
+          "item": 0
+        }
+      ]
+    },
+    {
+      "name": "extra_life",
+      "animation": 120,
+      "start": {
+        "health": 133,
+        "weapon": 133,
+        "lives": 2
+      },
+      "end": {
+        "health": 133,
+        "weapon": 133,
+        "lives": 3
+      },
+      "trace": [
+        {
+          "frame": 1,
+          "health": 133,
+          "weapon": 133,
+          "lives": 2,
+          "item": 183
+        },
+        {
+          "frame": 2,
+          "health": 133,
+          "weapon": 133,
+          "lives": 3,
+          "item": 0
+        },
+        {
+          "frame": 3,
+          "health": 133,
+          "weapon": 133,
+          "lives": 3,
+          "item": 0
+        }
+      ]
+    }
+  ]
+}

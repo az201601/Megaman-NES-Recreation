@@ -42,3 +42,14 @@ python tools/rom-recovery/package-cutman-opening.py
 ```
 
 Supplied MM1 USA bank0 decoding. First two pages checked against original boot nametables; latter two checked against original renderer during explicitly controlled Y/protection-pinned traversal, not natural playthrough. Original first-screen static-solid/ladder coverage unchanged. Camera GML compared against1620native frames; source mocks are NOT GMS1.4 compile/runtime proof. Install guide/ZIP in Assets/Cut Man/Stage/Opening Route. No next-room upward handoff/enemies/combat/pickups installed by this checkpoint. Raw generated scratch frames remain.work. Committed geometry/nativecamera records make source tests auditable without external ROM distribution.
+
+## MM5 pickup/drop recovery
+
+After `mm5-start.mjs` and `mm5-stage.mjs`, run `recover-mm5-drops.mjs`,
+`probe-mm5-pickup-effects.mjs` and `test-mm5-drops.mjs`. Output and scope notes:
+`../../Assets/Pickups/MM5/README.md`. Includes all256 controlled original-CPU
+modulo50/selection results, native-render-checked original sprite strips, nine-update
+palette phases,255-update lifetime traces and five original collision/refill trials.
+Research and art only; no installed GMS pickup/drop behavior. Full native RNG state
+sequence, natural enemy spawn/drop eligibility and collision boundary matrix remain
+separate from these controlled probes.
