@@ -1,0 +1,176 @@
+{
+  "method": "Natural boot/stage entry followed by Right with periodic fresh B and A presses. No placement, HP or shot RAM patches.",
+  "events": [
+    {
+      "frame": 82,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 5,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 95,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 4,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 119,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 3,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 131,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 2,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 147,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 1,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 183,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 0,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 225,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 5,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 261,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 4,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 363,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 3,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 378,
+      "pc": "e9fb",
+      "slot": 21,
+      "command": 53,
+      "hp": 2,
+      "pending": 48,
+      "damage": 0
+    },
+    {
+      "frame": 465,
+      "pc": "e9fb",
+      "slot": 18,
+      "command": 53,
+      "hp": 5,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 477,
+      "pc": "e9fb",
+      "slot": 18,
+      "command": 53,
+      "hp": 4,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 497,
+      "pc": "e9fb",
+      "slot": 18,
+      "command": 53,
+      "hp": 3,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 689,
+      "pc": "e9fb",
+      "slot": 18,
+      "command": 53,
+      "hp": 2,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 706,
+      "pc": "e9fb",
+      "slot": 18,
+      "command": 53,
+      "hp": 1,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 751,
+      "pc": "e9fb",
+      "slot": 17,
+      "command": 53,
+      "hp": 5,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 763,
+      "pc": "e9fb",
+      "slot": 18,
+      "command": 53,
+      "hp": 0,
+      "pending": 48,
+      "damage": 0
+    },
+    {
+      "frame": 763,
+      "pc": "e9fb",
+      "slot": 17,
+      "command": 53,
+      "hp": 4,
+      "pending": 17,
+      "damage": 1
+    },
+    {
+      "frame": 869,
+      "pc": "e9fb",
+      "slot": 17,
+      "command": 53,
+      "hp": 3,
+      "pending": 17,
+      "damage": 1
+    }
+  ]
+}

@@ -345,3 +345,29 @@ scheduler/mask runtime certification; actual installation/confirmation pending.
 Enemies/cutter spawning/spike damage/damage/invulnerability/death/pickups/tank effects/
 checkpoints, Cut Man entrance+closing+boss music/health fill/fight/reward/return remain
 future work. No complete-Cut-Man-stage claim.
+
+## Blader combat active; MM6 enemy-hit cue audio checkpoint
+
+User confirmed both gate passages/boss-room layout “perfect”, then approved Blader
+as the first stage enemy, with MM5-style damage/recoil/protection and buster combat.
+Keep route/second-gate update984bc4d as accepted baseline. User then specifically
+requested **MM6's successful enemy-hit sound for normal AND charged buster shots**;
+MM5 firing/charging/release sounds stay unchanged.
+
+MM6 command35 identified by supplied-ROM byte checks and independent natural hits:
+normal pending11hex/damage1; held-B release120 branch hits126 with pending13hex/
+damage3/HP5, next evidenceHP2. Same35 cue. No HP/charge/position patches in identity
+traces. Full isolated APU take extracted to `Assets/Audio/Mega Man/MM6/Combat/Enemy
+Hit/`, complete untrimmed2.496292s and sample-identical silence-trimmed0.403063s WAVs.
+NativeF0 stop has constant JSNES DC residual; an uncaptured native35 preparation
+finishes and final50frames exact silence is asserted before captured35. No filtering,
+muting channels or preceding preparation cue in the downloadable take. Four USA
+byte spans, single consumed captured command and WAV hash/silence tests PASS.
+Blader1023update/16attack/15reversal research regression still PASS unchanged.
+
+**This is an audio checkpoint, NOT completed Blader gameplay.** No enemy Object,
+spawner, shot-hit/damage logic or player hurt controller installed yet. Blader spawn
+threshold/tables, contact/shot hitboxes/HP/death, MM5 damage state boundary matrix,
+hurt art/audio and safe pause/charge integration still need work before delivery.
+Resource import for the chosen MM6 cue may precede the Blader gameplay package;
+accepted stage/music/player/audio-manager code remains untouched.

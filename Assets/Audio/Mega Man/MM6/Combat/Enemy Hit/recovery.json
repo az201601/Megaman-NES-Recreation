@@ -1,0 +1,59 @@
+{
+  "method": "Original supplied MM6 USA + JSNES2.1.0 full APU48kHz stereo16bit. Neutral stage snapshot; native DC mailbox F0 stops music, then an uncaptured native35 preparation cue settles a constant JSNES DC residual without filtering or channel patches;150frames warmup with final50frames exactly silent; mailbox35 and150frames capture. No channels muted, normalization, fades, stretching or stitched effects. Controlled isolated extraction, NOT live-impact audio. Natural impact traces independently prove cue identity.",
+  "source": {
+    "repository": "https://github.com/refreshing-lemonade/megaman6-disassembly",
+    "commit": "f0763c46fad2bbcb45e4b8a2f759a10ee3c7c421",
+    "file": "bank38_3F.asm"
+  },
+  "spans": [
+    {
+      "cpu": "e9f9",
+      "offset": 518665,
+      "hex": "a93585dc",
+      "purpose": "Normal successful enemy-hit cue before HP subtraction"
+    },
+    {
+      "cpu": "ea42",
+      "offset": 518738,
+      "hex": "a93585dc",
+      "purpose": "Alternate successful hit handler"
+    },
+    {
+      "cpu": "eb0a",
+      "offset": 518938,
+      "hex": "a93585dc",
+      "purpose": "Damage table accepted hit"
+    },
+    {
+      "cpu": "c61b",
+      "offset": 509483,
+      "hex": "a5dcc9fff00720b2c8a9ff85dc",
+      "purpose": "Native sound mailbox consume and reset"
+    }
+  ],
+  "rate": 48000,
+  "warmPeak": 0,
+  "commands": [
+    {
+      "frame": 0,
+      "sound": 53
+    }
+  ],
+  "firstSample": 1197,
+  "lastAudibleSample": 20063,
+  "samples": 119822,
+  "files": [
+    {
+      "name": "snd_mm6_enemy_hit_complete_untrimmed.wav",
+      "bytes": 479332,
+      "seconds": 2.4962916666666666,
+      "sha256": "9d1fc1cab91c9d5cc4d24e526aea6c7cd56ca5a8aa2f4b5ce80d910532075202"
+    },
+    {
+      "name": "snd_mm6_enemy_hit.wav",
+      "bytes": 77432,
+      "seconds": 0.4030625,
+      "sha256": "e51cc99123c8f14a41ec7ea9d83bde99b60952bf772b312462fc9c85ab70a86c"
+    }
+  ]
+}

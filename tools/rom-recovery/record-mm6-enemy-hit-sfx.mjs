@@ -1,0 +1,23 @@
+// Full original APU, native sound mailbox. No channel isolation or synthesized audio.
+import fs from'node:fs';import assert from'node:assert/strict';import crypto from'node:crypto';import{NES,Controller as C}from'jsnes';
+const root=new URL('../../',import.meta.url),w=new URL('./.work/mm6-hit/',import.meta.url),out=new URL('Assets/Audio/Mega Man/MM6/Combat/Enemy Hit/',root);fs.mkdirSync(out,{recursive:true});
+const rom=fs.readFileSync(new URL('Mega Man 6 (USA).nes',root)),spans=[];
+for(const[cpu,hex,purpose]of[[0xe9f9,'a93585dc','Normal successful enemy-hit cue before HP subtraction'],[0xea42,'a93585dc','Alternate successful hit handler'],[0xeb0a,'a93585dc','Damage table accepted hit'],[0xc61b,'a5dcc9fff00720b2c8a9ff85dc','Native sound mailbox consume and reset']]){let offset=16+(cpu<0xe000?62:63)*8192+(cpu&0x1fff);assert.equal(rom.subarray(offset,offset+hex.length/2).toString('hex'),hex);spans.push({cpu:cpu.toString(16),offset,hex,purpose});}
+let capture=false,frame=0,warmPeak=0;const baseline=[],samples=[],commands=[],n=new NES({sampleRate:48000,onAudioSample:(l,r)=>{if(capture)samples.push([l,r]);else if(frame>=100){warmPeak=Math.max(warmPeak,Math.abs(l),Math.abs(r));baseline.push([l,r]);}}});n.loadROM(rom.toString('binary'));n.fromJSON(JSON.parse(fs.readFileSync(new URL('stage.json',w))));for(let b=0;b<8;b++)n.buttonUp(1,b);
+// Native F0 stop leaves a constant DC residual in this JSNES state. Do not
+// subtract it or mute a channel. Let an uncaptured original35 cue finish first;
+// its native channel release settles the output, then verify exact silence.
+assert.equal(n.cpu.mem[0xdc],0xff);n.cpu.mem[0xdc]=0xf0;
+for(let i=0;i<150;i++)n.frame();
+assert.equal(n.cpu.mem[0xdc],0xff);n.cpu.mem[0xdc]=0x35;
+warmPeak=0;baseline.length=0;
+for(frame=0;frame<150;frame++)n.frame();assert.equal(warmPeak,0);
+const em=n.cpu.emulate.bind(n.cpu);n.cpu.emulate=()=>{if(n.cpu.REG_PC===0xc8b1)commands.push({frame,sound:n.cpu.REG_ACC});return em();};
+assert.equal(n.cpu.mem[0xdc],0xff);capture=true;n.cpu.mem[0xdc]=0x35;for(frame=0;frame<150;frame++)n.frame();assert.deepEqual(commands.map(r=>r.sound),[0x35]);
+const pcm=samples.map(s=>s.map(v=>Math.round(Math.max(-1,Math.min(1,v))*32767))),first=pcm.findIndex(s=>s.some(v=>v!==0));let last=pcm.length-1;while(last>=0&&pcm[last].every(v=>v===0))last--;assert.ok(first>=0&&last>first&&last<pcm.length-48000,'Full cue must finish with >=1 second silent PCM');
+function wav(start,end){let b=Buffer.alloc(44+(end-start)*4);b.write('RIFF');b.writeUInt32LE(b.length-8,4);b.write('WAVEfmt ',8);b.writeUInt32LE(16,16);b.writeUInt16LE(1,20);b.writeUInt16LE(2,22);b.writeUInt32LE(48000,24);b.writeUInt32LE(192000,28);b.writeUInt16LE(4,32);b.writeUInt16LE(16,34);b.write('data',36);b.writeUInt32LE(b.length-44,40);for(let i=start;i<end;i++)for(let c=0;c<2;c++)b.writeInt16LE(pcm[i][c],44+(i-start)*4+c*2);return b;}
+const full=wav(0,pcm.length),end=last+1+480,trimmed=wav(first,end);assert.deepEqual(full.subarray(44+first*4,44+end*4),trimmed.subarray(44));
+const normal=JSON.parse(fs.readFileSync(new URL('hits.json',w))),charged=JSON.parse(fs.readFileSync(new URL('charged-hits.json',w)));assert.ok(normal.events.some(e=>e.command===0x35&&e.pending===0x11&&e.damage===1));assert.ok(charged.branches['120'].some(e=>e.sound===0x35&&e.pending===0x13&&e.damage===3));
+const files=[];for(const[name,b]of[['snd_mm6_enemy_hit_complete_untrimmed.wav',full],['snd_mm6_enemy_hit.wav',trimmed]]){fs.writeFileSync(new URL(name,out),b);files.push({name,bytes:b.length,seconds:(b.length-44)/192000,sha256:crypto.createHash('sha256').update(b).digest('hex')});}
+const report={method:'Original supplied MM6 USA + JSNES2.1.0 full APU48kHz stereo16bit. Neutral stage snapshot; native DC mailbox F0 stops music, then an uncaptured native35 preparation cue settles a constant JSNES DC residual without filtering or channel patches;150frames warmup with final50frames exactly silent; mailbox35 and150frames capture. No channels muted, normalization, fades, stretching or stitched effects. Controlled isolated extraction, NOT live-impact audio. Natural impact traces independently prove cue identity.',source:{repository:'https://github.com/refreshing-lemonade/megaman6-disassembly',commit:'f0763c46fad2bbcb45e4b8a2f759a10ee3c7c421',file:'bank38_3F.asm'},spans,rate:48000,warmPeak,commands,firstSample:first,lastAudibleSample:last,samples:pcm.length,files};
+fs.writeFileSync(new URL('recovery.json',out),JSON.stringify(report,null,2)+'\n');fs.writeFileSync(new URL('native-normal-hit-evidence.json',out),JSON.stringify(normal,null,2)+'\n');fs.writeFileSync(new URL('native-charged-hit-evidence.json',out),JSON.stringify(charged,null,2)+'\n');console.log(report);
