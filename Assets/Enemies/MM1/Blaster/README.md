@@ -61,3 +61,7 @@ node tools/rom-recovery/test-blaster-assets.mjs
 ```
 
 Earlier remaining-work list is historical: original poses, bullet, sound IDs and one closed/open basic-shot collision trial are now recovered. Full variant/timing boundaries, projectile/contact bounds and damage, route mapping and GMS integration remain pending.
+
+## Audio correction after review
+
+User rejected first15 isolated fire and MM1 ding. `recapture-blaster-fire-live.mjs` now records actual four-shot nativeAI encounter (only stage music suppressed; controlled player placement disclosed), defaultstereo/fullAPU/exact2xgain/no fades. Requested replacement ding is originalMM6 blocked-hit27; byte-verified bounce handler, separate isolated driver recording via `record-mm6-blocked-hit-sfx.mjs`. Revised files under MM1audio/Blaster/Review V2 and MM6audio/Combat/Blocked Hit. `test-blaster-audio-v2.mjs` verifies original spans/output hashes and every2xPCM sample. Earlier reviewZIP/cues are rejected, preserved only as historical evidence. New listening approval pending; no gameplay changes.

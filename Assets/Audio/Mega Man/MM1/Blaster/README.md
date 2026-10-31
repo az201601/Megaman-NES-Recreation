@@ -1,3 +1,5 @@
+> **Rejected/superseded preview:** user rejected both initial cues. Use `Review V2/` for the live MM1 firing recapture and `Assets/Audio/Mega Man/MM6/Combat/Blocked Hit/` for the requested MM6 ding. Do not install the old review ZIP.
+
 # MM1 Blaster fire and closed-shell ding — review
 
 Original supplied MM1 USA ROM, JSNES2.1.0 full APU. This is an audio-review checkpoint, **not installed Blaster gameplay**.

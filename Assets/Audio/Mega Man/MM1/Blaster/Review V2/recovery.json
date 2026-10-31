@@ -1,0 +1,82 @@
+{
+  "method": "Fresh native MM1 boot with only Cut Man music request05 changed toFF before driverinit; original select/intro/arrival audio allowed to complete. Original stage AI creates real bullets and issues15. Controlled playerY36/verticalspeed0/protection100, Right toX760 then released. Default JSNES stereo as accepted MM5/MM6 SFX captures; no channels isolated. First real cue and actual four-shot sequence, exact2xPCM gain; no fade/filter/channel muting/command-injected cue. Not natural unassisted traversal or hardware certification.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "suppressed": [
+    {
+      "phase": "boot",
+      "f": -1,
+      "id": 5
+    }
+  ],
+  "requests": [
+    {
+      "f": 532,
+      "id": 21,
+      "source": 16,
+      "sample": 0
+    },
+    {
+      "f": 564,
+      "id": 21,
+      "source": 16,
+      "sample": 25558
+    },
+    {
+      "f": 596,
+      "id": 21,
+      "source": 16,
+      "sample": 51117
+    },
+    {
+      "f": 628,
+      "id": 21,
+      "source": 16,
+      "sample": 76677
+    }
+  ],
+  "dispatch": [
+    {
+      "phase": "encounter",
+      "f": 533,
+      "id": 21,
+      "sample": 615
+    },
+    {
+      "phase": "encounter",
+      "f": 565,
+      "id": 21,
+      "sample": 26173
+    },
+    {
+      "phase": "encounter",
+      "f": 597,
+      "id": 21,
+      "sample": 51732
+    },
+    {
+      "phase": "encounter",
+      "f": 629,
+      "id": 21,
+      "sample": 77291
+    }
+  ],
+  "tail": [
+    0,
+    0
+  ],
+  "firstClipFrames": 9164,
+  "files": [
+    {
+      "name": "mm1-blaster-fire-live-balanced.wav",
+      "seconds": 0.19091666666666668,
+      "sha256": "8ef15a6389bcee95aac76be2ea7ad7ce12447d079f5cb3a9a3229ca294234565",
+      "peak": 0.37408447265625
+    },
+    {
+      "name": "mm1-blaster-four-shot-burst-live-balanced.wav",
+      "seconds": 2.8074583333333334,
+      "sha256": "52e81e472ef06d9c19cad500f049ae51f130fddbe406e8d16e60c42876faa0bc",
+      "peak": 0.49005126953125
+    }
+  ]
+}
