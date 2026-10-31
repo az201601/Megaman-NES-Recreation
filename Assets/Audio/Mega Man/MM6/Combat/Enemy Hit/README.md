@@ -53,8 +53,9 @@ live-hit audio; independent natural hit traces establish its identity.
 ## Optional resource import — no playback code yet
 
 Folder **Sounds > MM6 > Combat > Enemy Hits**.
-Create exactly **`snd_mm6_enemy_hit`** and import the complete untrimmed WAV (or the
-sample-identical silence-trimmed copy for shorter resource duration).
+Create exactly **`snd_mm6_enemy_hit`** and import **`snd_mm6_enemy_hit.wav`**.
+The user approved the cue and requested removing the extra silence; use this
+0.403063second silence-trimmed file for gameplay. Keep the complete take as research only.
 Use a normal built-in effect, uncompressed/in-memory, Default audio group, stereo,
 48kHz, volume1, no loop/pitch changes. No Included Files or charge PCM buffers.
 Do NOT change the accepted audio manager, music, firing/charge sounds, queue,

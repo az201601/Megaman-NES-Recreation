@@ -371,3 +371,8 @@ threshold/tables, contact/shot hitboxes/HP/death, MM5 damage state boundary matr
 hurt art/audio and safe pause/charge integration still need work before delivery.
 Resource import for the chosen MM6 cue may precede the Blader gameplay package;
 accepted stage/music/player/audio-manager code remains untouched.
+
+MM6 enemy-hit cue approved by user (“very good”), with explicit request to remove
+extra silence. Use **`snd_mm6_enemy_hit.wav`**,0.403063s, for gameplay, NOT the2.496s
+untrimmed research take. All audible PCM samples retained; only silence removed,
+with10ms silent tail. Verification compares exact PCM slice to original full take.
