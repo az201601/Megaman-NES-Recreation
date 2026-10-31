@@ -7,9 +7,12 @@ route_start_version = 0;
 scr_mm1_cutman_scroll_start(0);
 if (route_start_version != 1201)
     show_error("Cut Man gate script mismatch: replace the ENTIRE scr_mm1_cutman_scroll_start with the First Gate Passage version, then restart.", true);
+// MM5-style immediate response; retain adapted MM1 four-strip artwork/cadence.
+route_gate_voice = audio_play_sound(snd_mm5_gate_open, 15, false);
+route_gate.gate_open_rows = 1;
 route_gate_mode = true;
 route_target_section = 12;
-route_unlock = 153;
+route_unlock = 121;
 // Snap only the quarter-pixel native gate-entry phase; floor adapts MM5 feet reference.
 route_entry_x = 2264.25;
 route_entry_y = 880 - camera_player.feet_offset;

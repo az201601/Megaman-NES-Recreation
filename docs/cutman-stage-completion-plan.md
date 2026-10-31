@@ -273,3 +273,27 @@ dispenser/pause16/UI regressions PASS. Not GMS compiler/GPU/scheduler/parent-mas
 async certification; user must test installation and confirm. Enemies/cutter spawning,
 spike damage/invulnerability/death, pickups/tank effects/checkpoints, second gate/
 boss/reward/return remain later work.
+
+## Approved MM5-style immediate opening — source complete, runtime pending
+
+User reports the missing backdrop resource error resolved and gate passage working,
+but initial wait felt long. Repository video2026-10-31 16-26-46.mp4 was inspected;
+opening observed around0.55–0.58s after contact, consistent with the old32-frame hold.
+User requested shorter response, then asked to check MM5 before choosing a delay.
+Original MM5 controlled opening-routine probe verifies sound/first edit in entry
+frame, three edits4frames apart, return after12 waits; not a natural contact trace.
+User then approved MM5 opening following the explicit proposal to remove the initial
+wait while retaining MM1 four-part artwork and passage speed.
+
+Applied: sound and first removed strip in trigger age0, remaining strips6/12/18,
+scroll24..87 at unchanged camera4/player1, stand87, commit120, control121. No guessed
+0.15s wait. This is MM5-style immediate response, NOT a claim of the full MM5 three-
+edit/12-frame animation on MM1's taller gate. Approved complete WAV unchanged.
+
+Canonical First Gate Passage refreshed; `MM5 Immediate Opening/` patch includes just
+cameraBeginStep +gate-startScript +guide (3file ZIP). Both must be replaced together
+because sound ownership moved from age32 BeginStep to gate-start. No other resources,
+room, geometry, gateDraw/backdrop, player/charge/menu/audio manager edits.1201 ladder
+handshake unchanged; earlier directions preserved.35source/model checks PASS,
+including immediate first strip/single sound, shifted path, control121/rearm, cleanup
+and22 native ladder busy trajectories. Actual in-game confirmation still pending.

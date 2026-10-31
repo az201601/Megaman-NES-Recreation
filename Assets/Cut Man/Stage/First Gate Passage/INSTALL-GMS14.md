@@ -129,8 +129,9 @@ Stop/restart; do not hot-continue a run with old camera fields.
 1. Traverse the working earlier routes. Confirm the Eleventh descent/upward return
    still works before committing through the gate.
 2. Walk **right on the floor** into the first gate. Stop sliding/jumping first.
-   At ground contact it takes control, pauses briefly, plays the approved MM5 sound,
-   opens bottom-up and moves player/camera automatically into the corridor.
+   At ground contact it takes control and immediately starts the approved MM5 sound
+   and first opening strip (no initial half-second hold), then opens bottom-up and
+   moves player/camera automatically into the corridor.
 3. After the standing hold, normal walking/jumping/sliding/shooting and pause return.
    Test release/re-hold of charge through the sequence; no stale release shot.
 4. Traverse all three corridor screens. Camera Y stays720; no vertical jump/reset.
@@ -152,3 +153,19 @@ Rollback: restore the working Eleventh8 script/camera replacements, old atlas,
 gate Create (remove new normal Draw), original camera RoomEnd/Destroy disposer-only
 code, room width2304, and restart. Remove the unused new resources if desired;
 no vertical rollback or audio-manager repair is needed.
+
+
+## Already installed the first-gate package? Timing-only upgrade
+
+Use the separate **MM5 Immediate Opening** patch ZIP. Replace ONLY these two complete
+code resources as a matched pair, then stop/restart:
+1. Objects > Cut Man > Stage > Ladder Route > `obj_mm1_cutman_camera` > **Begin Step**:
+   `obj_mm1_cutman_camera_begin_step.gml`.
+2. Scripts > Cut Man > Stage > Doors > **`scr_mm1_cutman_gate_start`**:
+   `scr_mm1_cutman_gate_start.gml`.
+
+No new resources, atlas/room/player/audio changes or reinstallation of the whole
+corridor. The version1201 ladder handshake remains unchanged. Do not replace the
+Gate Draw event or backdrop sprite that you already fixed. Sound and first strip
+start together at contact; four strips finish at0.30s, passage starts at0.40s.
+This retains MM1 artwork/cadence; only the initial response follows MM5.

@@ -18,13 +18,16 @@ pixels/indices unchanged. Native corridor is reconstructed exactly from actual t
 placements plus the separate second-gate sprite; all earlier scene pixels preserved.
 Native black upper/lower corridor bands are scenery tiles, not a room background change.
 
-Native age0 trigger, sound32, visible strips33/39/45/51, scroll56..119 (64×camera4 /
-player1), stand119, section bookkeeping152, control153. First entrance has no observed
-closing routine; none is invented. MM5 walk artwork/cadence is retained, not MM1
-player art. Grounded/standing entry atX2264 is adapted to MM5 collision probes and
-snapped to2264.25/Y880−feet_offset; final X2328.25. Y is MM5-floor-adapted, not a
-claim of MM1 subpixel-Y identity or native midair/slide gate entry. Normal MM5 movement
-resumes on ready153, so no MM1 normal acceleration is copied after release.
+**User-approved MM5-style immediate start:** sound and first removed strip at
+trigger age0, next strips6/12/18, scroll24..87 (64×camera4/player1), stand87,
+section bookkeeping120/control121. The initial32-frame hold is removed.
+This is deliberately hybrid: MM5's immediate response, approved MM5 sound,
+MM1 artwork/four strips at6-frame intervals and MM1 passage speed. It is NOT
+MM5's complete three-edit/four-frame/12-frame animation transplanted onto MM1 art.
+No first-gate close animation/cue is invented. MM5 walk artwork/cadence retained.
+Grounded/standing entry atX2264 adapts MM5 collision probes and snaps to2264.25/
+Y880−feet_offset; finalX2328.25. No native MM1 subpixel-Y or midair/slide entry claim.
+Normal MM5 movement resumes on ready121; no MM1 normal acceleration is copied.
 
 Shared busy/shot/charge/pause guards and finishing/rearm helpers reused. Gate playback
 is one built-in sound owned by the camera; only this voice is stopped on teardown.

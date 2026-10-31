@@ -17,22 +17,20 @@ if (route_busy && route_gate_mode)
     route_tick += 1;
     camera_player.x = route_entry_x;
     camera_player.y = route_entry_y;
-    if (route_tick == 32)
-        route_gate_voice = audio_play_sound(snd_mm5_gate_open, 15, false);
     if (instance_exists(route_gate))
     {
-        if (route_tick >= 33) route_gate.gate_open_rows = min(4, 1 + floor((route_tick - 33) / 6));
+        route_gate.gate_open_rows = min(4, 1 + floor(route_tick / 6));
     }
     view_yview[0] = 720;
     view_xview[0] = 2048;
-    if (route_tick >= 56)
+    if (route_tick >= 24)
     {
         var gate_step;
-        gate_step = min(64, route_tick - 55);
+        gate_step = min(64, route_tick - 23);
         view_xview[0] = 2048 + gate_step * 4;
         camera_player.x = route_entry_x + gate_step;
     }
-    if (route_tick < 119)
+    if (route_tick < 87)
     {
         camera_player.anim_walk_timer += 1;
         if (camera_player.anim_walk_timer >= 7)
@@ -49,8 +47,8 @@ if (route_busy && route_gate_mode)
         camera_player.image_index = 0;
     }
     camera_player.image_speed = 0;
-    if (route_tick >= 152) route_section = 12;
-    if (route_tick >= 153)
+    if (route_tick >= 120) route_section = 12;
+    if (route_tick >= 121)
     {
         camera_player.walk_pause = 0;
         camera_player.walk_previous_input = 0;

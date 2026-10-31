@@ -7,24 +7,24 @@ harness+=String.raw`
 const gateStart=compile('scr_mm1_cutman_gate_start.gml');
 function gateContext(){const c=context();Object.assign(c,{vk_right:39,vk_left:37,min:Math.min,spr_mm5_megaman_walk:91,spr_mm5_megaman_idle:92,snd_mm5_gate_open:93,obj_mm1_cutman_boss_gate:94,plays:[],stops:[],audio_play_sound:(...args)=>{c.plays.push(args);return 555;},audio_stop_sound:v=>c.stops.push(v)});c.gate={gate:true,x:2272,y:816,gate_open_rows:0};c.instance_exists=v=>!!v&&(v.player===true||v.gate===true);c.instance_nearest=()=>c.gate;c.scr_mm1_cutman_gate_start=()=>gateStart(c);c.route_section=11;c.view_xview[0]=2048;c.view_yview[0]=720;Object.assign(c.camera_player,{x:2264,y:868,grounded:true,feet_offset:12,sliding:false,on_ladder:false,fall_speed:0,anim_walk_frame:0,anim_walk_timer:0,walk_pause:0,walk_previous_input:0});c.held.add(39);return c;}
 const research=new URL('../../Assets/Cut Man/Stage/First Gate Research/',`+JSON.stringify(previous.href)+String.raw`),rows=JSON.parse(fs.readFileSync(new URL('native-gate.json',research))).rows;
-test('Gate actual GML: age0..153, all native X/camera steps, four strips, one approved MM5 cue, section commit and control release',()=>{
+test('Gate actual GML: age0..121, MM5 immediate start and shifted MM1 X/camera steps, four strips, one approved MM5 cue, section commit and control release',()=>{
  const c=gateContext();begin(c);assert.ok(c.route_busy);assert.equal(c.route_start_version,1201);assert.equal(c.shots.length,0);
- for(let age=0;age<=153;age++){
-  if(age)begin(c);const r=rows.find(r=>r.frame===20+Math.min(age,152));
+ for(let age=0;age<=121;age++){
+  if(age)begin(c);const r=rows.find(r=>r.frame===52+Math.min(age,120));
   assert.equal(c.view_xview[0],r.cameraX-2816,'camera age'+age);assert.equal(c.view_yview[0],720);assert.equal(c.camera_player.x,r.logicalX-2816,'player age'+age);assert.equal(c.camera_player.y,868);
-  assert.equal(c.route_busy,age<153);assert.equal(c.route_section,age<152?11:12);assert.equal(c.gate.gate_open_rows,age<33?0:Math.min(4,1+Math.floor((age-33)/6)));assert.equal(c.plays.length,age<32?0:1);
-  assert.equal(c.camera_player.sprite_index,age<119?91:92);end(c);assert.equal(c.view_xview[0],r.cameraX-2816);
+  assert.equal(c.route_busy,age<121);assert.equal(c.route_section,age<120?11:12);assert.equal(c.gate.gate_open_rows,Math.min(4,1+Math.floor(age/6)));assert.equal(c.plays.length,1);
+  assert.equal(c.camera_player.sprite_index,age<87?91:92);end(c);assert.equal(c.view_xview[0],r.cameraX-2816);
  }
  assert.deepEqual(c.plays,[[93,15,false]]);assert.equal(c.camera_player.walk_previous_input,0);
 });
 test('Gate trigger rejects slide/midair/wrong floor/left/both/READY/Start and no duplicate gate entries',()=>{
  for(const edit of[c=>c.camera_player.sliding=true,c=>c.camera_player.grounded=false,c=>c.camera_player.y=820,c=>c.camera_player.x=2260,c=>c.held.add(37),c=>c.held.clear(),c=>c.pressed.add(13),c=>c.camera_player.mm5_startup_active=true]){const c=gateContext();edit(c);begin(c);assert.equal(c.route_busy,false);}
- const c=gateContext();begin(c);for(let i=0;i<153;i++)begin(c);c.camera_player.x=2264;begin(c);assert.equal(c.route_busy,false);assert.equal(c.plays.length,1);
+ const c=gateContext();begin(c);for(let i=0;i<121;i++)begin(c);c.camera_player.x=2264;begin(c);assert.equal(c.route_busy,false);assert.equal(c.plays.length,1);
 });
-test('Gate shares charge release/rearm, continuous charge resume and fresh ready153 fire',()=>{
- let c=gateContext();c.held.add(88);begin(c);c.route_voices.push(7);for(let i=0;i<153;i++)begin(c);assert.equal(c.camera_player.buster_charge,80);assert.equal(c.resumes,1);
- c=gateContext();c.held.add(88);begin(c);c.held.delete(88);begin(c);c.held.add(88);c.physical.add(88);for(let i=1;i<153;i++)begin(c);assert.equal(c.camera_player.buster_charge,0);assert.equal(c.route_block_fire,true);assert.equal(c.held.has(88),false);
- c=gateContext();begin(c);for(let i=0;i<152;i++)begin(c);c.held.add(88);c.physical.add(88);c.pressed.add(88);begin(c);assert.equal(c.route_block_fire,false);assert.equal(c.held.has(88),true);
+test('Gate shares charge release/rearm, continuous charge resume and fresh ready121 fire',()=>{
+ let c=gateContext();c.held.add(88);begin(c);c.route_voices.push(7);for(let i=0;i<121;i++)begin(c);assert.equal(c.camera_player.buster_charge,80);assert.equal(c.resumes,1);
+ c=gateContext();c.held.add(88);begin(c);c.held.delete(88);begin(c);c.held.add(88);c.physical.add(88);for(let i=1;i<121;i++)begin(c);assert.equal(c.camera_player.buster_charge,0);assert.equal(c.route_block_fire,true);assert.equal(c.held.has(88),false);
+ c=gateContext();begin(c);for(let i=0;i<120;i++)begin(c);c.held.add(88);c.physical.add(88);c.pressed.add(88);begin(c);assert.equal(c.route_block_fire,false);assert.equal(c.held.has(88),true);
 });
 test('Gate stale Eleventh1101 start rejected before passage',()=>{const c=gateContext();c.scr_mm1_cutman_scroll_start=()=>{c.route_start_version=1101;};assert.throws(()=>begin(c),/gate script mismatch/);});
 test('Camera voice cleanup is idempotent, owned-only, including mid-opening teardown',()=>{const c=gateContext();begin(c);for(let i=0;i<32;i++)begin(c);compile('obj_mm1_cutman_camera_room_end.gml')(Object.assign(c,{scr_mm1_cutman_scroll_dispose:()=>dispose(c)}));compile('obj_mm1_cutman_camera_destroy.gml')(c);assert.deepEqual(c.stops,[555]);assert.equal(c.route_lists_ready,false);assert.equal(c.route_busy,false);});
