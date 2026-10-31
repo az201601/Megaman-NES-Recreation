@@ -3,6 +3,7 @@
 camera_player = noone;
 route_section = 0;
 route_target_section = 0;
+route_start_version = 0;
 route_busy = false;
 route_tick = 0;
 route_dir = -1;

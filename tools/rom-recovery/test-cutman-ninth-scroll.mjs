@@ -1,4 +1,5 @@
 // Supported actual GML source with engine mocks, plus original ROM traces. NOT GameMaker.
+import {execFileSync} from'node:child_process';
 import fs from'node:fs';import assert from'node:assert/strict';import{PNG}from'pngjs';
 const first=new URL('../../Assets/Cut Man/Stage/First Ladder Transition/',import.meta.url);
 const previous=new URL('../../Assets/Cut Man/Stage/Second Ladder Transition/',import.meta.url);
@@ -122,6 +123,21 @@ test('Repeated ninth down/up resets target and preserves older eighth left retur
  const c=context();c.route_section=8;c.camera_player.x=1992;c.camera_player.y=231.96875;c.view_xview[0]=1792;c.held.add(40);begin(c);assert.equal(c.route_target_section,9);for(let i=0;i<126;i++)begin(c);end(c);assert.equal(c.route_section,9);assert.equal(c.view_yview[0],240);assert.equal(c.view_xview[0],1792);
  c.held.clear();c.held.add(38);c.camera_player.y=244.96875;begin(c);assert.equal(c.route_target_section,8);for(let i=0;i<126;i++)begin(c);end(c);assert.equal(c.route_section,8);assert.equal(c.view_yview[0],0);assert.equal(c.view_xview[0],1792);
  c.held.clear();c.held.add(40);c.camera_player.x=1336;c.camera_player.y=231.96875;c.view_xview[0]=1280;begin(c);assert.equal(c.route_target_section,7);assert.equal(c.route_unlock,95);for(let i=0;i<95;i++)begin(c);end(c);assert.equal(c.route_section,7);assert.equal(c.view_yview[0],240);assert.equal(c.view_xview[0],1280);
+});
+test('Video regression: original ninth camera plus older eighth start silently resets arrival to section0',()=>{
+ const historical=f=>execFileSync('git',['show',`1cf4f20:Assets/Cut Man/Stage/Ninth Ladder Transition/${f}`],{cwd:new URL('../../',import.meta.url),encoding:'utf8'});
+ const originalBegin=new Function('c','with(c){'+historical('obj_mm1_cutman_camera_begin_step.gml').replace(/\bexit;/g,'return;')+'}');
+ const olderStart=new Function('c','with(c){'+fs.readFileSync(new URL('scr_mm1_cutman_scroll_start.gml',eighth),'utf8').replace(/\bexit;/g,'return;')+'}');
+ const c=context();c.scr_mm1_cutman_scroll_start=d=>{c.argument0=d;olderStart(c);};c.held.add(38);originalBegin(c);assert.equal(c.route_target_section,0);
+ for(let i=0;i<126;i++)originalBegin(c);end(c);assert.equal(c.route_section,0);assert.equal(c.view_yview[0],1920);assert.equal(c.camera_player.y,1909);assert.ok(c.camera_player.y<c.view_yview[0]);
+});
+test('Mixed start script now stops immediately with a named repair instead of a silent camera reset',()=>{
+ const olderStart=new Function('c','with(c){'+fs.readFileSync(new URL('scr_mm1_cutman_scroll_start.gml',eighth),'utf8').replace(/\bexit;/g,'return;')+'}');
+ for(const section of[0,5,8]){const c=context();c.route_section=section;c.route_start_version=901;c.camera_player.x=section===0?984:section===5?1496:1992;c.camera_player.y=section===8?231.96875:1920-section*240+4.96875;c.view_xview[0]=section===0?768:section===5?1280:1792;c.held.add(section===8?40:38);c.scr_mm1_cutman_scroll_start=d=>{c.argument0=d;olderStart(c);};assert.throws(()=>begin(c),/replace the ENTIRE scr_mm1_cutman_scroll_start/);assert.equal(c.route_tick,0);assert.equal(c.route_start_version,0);}
+});
+test('Matched opening arrival stays in section1 after unlock and subsequent neutral frames',()=>{
+ const c=context();c.held.add(38);begin(c);assert.equal(c.route_target_section,1);assert.equal(c.route_start_version,901);for(let i=0;i<126;i++)begin(c);c.held.clear();
+ for(let i=0;i<120;i++){begin(c);end(c);assert.equal(c.route_section,1);assert.equal(c.view_xview[0],768);assert.equal(c.view_yview[0],1680);assert.equal(c.camera_player.y-c.view_yview[0],229);}
 });
 test('Source resource/compatibility contracts: minimal guards, no global activation/stop/music edits',()=>{
  const all=fs.readdirSync(base).filter(f=>f.endsWith('.gml')).map(read).join('\n');assert.ok(!/\b(variable_global_exists|variable_instance_exists|instance_activate_all|instance_deactivate_all|audio_stop_all|audio_pause_all|camera_create_view)\s*\(/.test(all));for(const f of['obj_mm5_megaman_step_route_prefix.gml','obj_mm5_pause_menu_begin_step_route_prefix.gml'])assert.ok(read(f).includes('if (scr_mm1_cutman_route_busy()) exit;'));assert.ok(read('scr_mm1_cutman_scroll_start.gml').includes('with (obj_mm5_buster_shot) instance_destroy();'));

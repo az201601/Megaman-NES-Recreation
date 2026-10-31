@@ -1,5 +1,7 @@
 // Camera context. argument0=-1 up, +1 down. Native timing trigger=age0.
 if (route_busy || !route_lists_ready || !instance_exists(camera_player)) exit;
+// Matched camera/start handshake. Older start scripts must not silently select section0.
+route_start_version = 901;
 route_dir = argument0;
 route_target_section = route_section - route_dir;
 // Right-hand descent is a new branch, NOT the left return to section7.

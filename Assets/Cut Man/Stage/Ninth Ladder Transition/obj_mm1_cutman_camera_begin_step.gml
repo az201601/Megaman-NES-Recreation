@@ -89,14 +89,20 @@ if ((route_section < 8 || route_section == 9) && climbing && up
     && camera_player.y >= base_y - 8 && camera_player.y < base_y + 20
     && floor(camera_player.y - camera_player.ladder_speed) < base_y + 4)
 {
+    route_start_version = 0;
     scr_mm1_cutman_scroll_start(-1);
+    if (route_start_version != 901)
+        show_error("Cut Man route script mismatch: replace the ENTIRE scr_mm1_cutman_scroll_start with the Ninth Transition Repair version, then restart. Do not change room/view/player coordinates.", true);
 }
 else if (route_section > 0 && route_section < 9 && climbing && down
     && abs(camera_player.x - seam_x) <= 1
     && (route_section != 8 || view_xview[0] == 1280 || view_xview[0] == 1792)
     && floor(camera_player.y + camera_player.ladder_speed) >= base_y + 232)
 {
+    route_start_version = 0;
     scr_mm1_cutman_scroll_start(1);
+    if (route_start_version != 901)
+        show_error("Cut Man route script mismatch: replace the ENTIRE scr_mm1_cutman_scroll_start with the Ninth Transition Repair version, then restart. Do not change room/view/player coordinates.", true);
 }
 else if (route_section > 0 && route_section < 9 && !camera_player.on_ladder
     && camera_player.fall_speed > 0 && camera_player.y >= base_y + 232
@@ -105,5 +111,8 @@ else if (route_section > 0 && route_section < 9 && !camera_player.on_ladder
         || (view_xview[0] == 1792 && camera_player.x >= 1984 && camera_player.x < 2000)))
 {
     // Controller adaptation for falling through open return seam, not native-certified.
+    route_start_version = 0;
     scr_mm1_cutman_scroll_start(1);
+    if (route_start_version != 901)
+        show_error("Cut Man route script mismatch: replace the ENTIRE scr_mm1_cutman_scroll_start with the Ninth Transition Repair version, then restart. Do not change room/view/player coordinates.", true);
 }

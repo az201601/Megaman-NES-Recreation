@@ -77,7 +77,7 @@ Atlas/sprite recovery PNGs are byte-identical to Eighth. Do not reimport/rename 
 
 **2076 scenery tiles,95 terrain solids,23 ladders,23 tops,13 scripted blocks,2 scripted dispensers.** Optional `obj_stage_solid` debugcount108 includes13 block descendants. Existing eight seams remain; the ninth is the right-hand seam atY240/X1984, distinct from the earlier left seam atY240/X1328.
 
-**40 source/model checks pass**, including all18 captured direction cases, both earlier900-frame camera captures, independent ready timings, unchanged accepted scene/positions, repeated branch selection, bounds/seams, charge/rearm and cleanup. Actual GMS1.4 compilation/GPU/event scheduling/async audio/descendant iteration/collision fit still require your confirmation. No enemy/cutter AI, damage, pickups/tank effects, death/checkpoints or boss completion claimed.
+**43 source/model checks pass**, including all18 captured direction cases, both earlier900-frame camera captures, independent ready timings, unchanged accepted scene/positions, repeated branch selection, bounds/seams, charge/rearm and cleanup. Actual GMS1.4 compilation/GPU/event scheduling/async audio/descendant iteration/collision fit still require your confirmation. No enemy/cutter AI, damage, pickups/tank effects, death/checkpoints or boss completion claimed.
 
 ## Original reference / adaptation limits
 
@@ -92,3 +92,8 @@ Supplied MM1 USA ROM, JSNES2.1.0, Mesen RGB mapping; not Mesen executable/hardwa
 ## Rollback
 
 Restore Eighth's five scripts and three camera events together, then restart. **Room2048×2160, viewY1920 and player start2100 for original180 stay unchanged.** This removes page16 and restores the right outgoing ladder as unconnected. Both dispensers/thirteen blocks retain their accepted positions. No Stage Create/music/assets/helpers/guards changes.
+
+
+## Video-reported camera reset / matched-code safeguard
+
+See [Ninth Transition Repair](../Ninth%20Transition%20Repair/INSTALL-GMS14.md) for the small four-code-resource repair bundle. The repository video shows a scroll followed by a camera reset/player disappearance. A reproduced mixed Eighth-start/Ninth-camera case leaves target0 and causes this reset. Current canonical sources include a per-call901 handshake to reject an older start script with a named error instead of silently resetting. All four camera/start replacements must match; no geometry/coordinate changes. New source checks cover this mixed-version regression and correct post-unlock arrival. Actual installed GML has not been supplied; runtime confirmation remains pending.
