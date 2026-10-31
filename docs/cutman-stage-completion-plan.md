@@ -297,3 +297,51 @@ room, geometry, gateDraw/backdrop, player/charge/menu/audio manager edits.1201 l
 handshake unchanged; earlier directions preserved.35source/model checks PASS,
 including immediate first strip/single sound, shifted path, control121/rearm, cleanup
 and22 native ladder busy trajectories. Actual in-game confirmation still pending.
+
+## Second gate passage and empty boss room — source complete, runtime pending
+
+User advanced with “okay next” after the immediate-first-gate patch. New canonical
+package `Assets/Cut Man/Stage/Second Gate Passage/` adds the second opening/scroll
+and original page23 scenery/collision/two scripted Super Arm blocks, NOT boss AI.
+
+Controlled original-USA probe inherits prior lead-ins,466frame Right/A-once corridor
+renderer traverse pinsY148/velocity0/protection100, one page22X216/Y148 reset plus
+neutral cache refresh, then original Right420. Trigger20/open52/strips53,59,65,71/
+scroll76..139/type2commit172. Second player differs from first:63 steps11/16px,
+then native incoming-boundary resolution to5912.5625; adapted world3096.5625.
+Camera+4 each of64frames. Native closingD092 only355, after Cut Man entrance,
+not immediately after scrolling. No fake empty-room close timer or boss music/health
+fill introduced. Native boss-intro control lock is deferred with that whole sequence.
+
+Approved immediate sound/first strip age0 retained for BOTH gates; remaining strips
+6/12/18, scroll24..87, stand87/commit120/control121. Second ready121 is explicitly an
+empty-room adaptation, not a full native boss-intro timing claim. MM5 floorY868 and
+normal movement preserved. First gate path unchanged. Approved complete WAV reused.
+
+Width3072→3328 only, height2160/openviewY1920/playeropening unchanged. New page23
+X3072..3327/Y720..959, camera3072,720, normal player3096..3304 with native right wall.
+Native collision-only left boundary3072,816/16×64. Two new blocks3104,880 and3136,880
+bring total19; both excluded from permanent terrain/scenery.3302tiles/115terrain+
+boundary solids/24ladders/24tops/19blocks/2dispensers/10visualspikes/2gates. All old
+positions/3072×2160scene pixels unchanged. Atlas29tiles128×64 byte-identical; no
+mandatory image replacement. New16×64second-open-backdrop sprite and gateDraw select
+native second-door background, not first gate cyan. No extra visible left shutter.
+
+Manual install1newSprite, sixexistingScripts/fiveCameraevents/gateCreate+Draw full
+matched13GML set; new1301 start/camera/gate safeguard rejects1201. StageCreate/shared
+finish/dispose/query/player/charge/pause/HUD/arrival/audio-manager/music/async/alarms
+unchanged. Existing features script unchanged; no manual placements/extra calls.
+19file ZIP13GML/2guides/2references/2PNGs byte-identity checked, noROM.
+
+34 actual-GML source/model checks PASS:22ladder busy directions +bothgate paths,
+immediate/single cue/second slower movement/final boundary, input restrictions,
+charge/rearm/freshfire, stale-script error, owned/idempotentcleanup, actual tiles/
+regions/blocks, native scene reconstruction/acceptedscene identity/unchangedatlas,
+MM5 support on original left ledge and bossroom bounds/backdrop selection.960live
+bossroom tile-ID/palette pairs verified; builder checks native PPU first/second/full
+opening pixels. Priorfirst35/Eleventh55/Tenth48/Ninth43/Eighth36/Seventh31/Sixth28/
+Fifth26/Fourth22/dispenser/pause16/UI regressions pass. Not GMS compiler/GPU/
+scheduler/mask runtime certification; actual installation/confirmation pending.
+Enemies/cutter spawning/spike damage/damage/invulnerability/death/pickups/tank effects/
+checkpoints, Cut Man entrance+closing+boss music/health fill/fight/reward/return remain
+future work. No complete-Cut-Man-stage claim.
