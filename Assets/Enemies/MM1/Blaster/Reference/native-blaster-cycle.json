@@ -1,0 +1,1682 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "method": "JSNES 2.1.0 supplied USA ROM. Original AI runs unmodified. Player Y36/vertical fraction and speed0/protection100 forced each frame, Right until X700 then released. This is controlled camera approach and stationary observation, NOT natural traversal, GMS runtime, damage/vulnerability or audio/art certification.",
+  "externalSource": "TheRealQuantam/mm1base 9c1cb05bd1d63c176e1930053dda76bcb85cd977 labels AI_Beak. All143 bytes AF26..AFB4 match supplied USA ROM; modified source project is never executed.",
+  "verifiedBytes": 143,
+  "spans": [
+    {
+      "offset": 94006,
+      "hex": "20a5b3"
+    },
+    {
+      "offset": 94009,
+      "hex": "20a3af"
+    },
+    {
+      "offset": 94012,
+      "hex": "2049be"
+    },
+    {
+      "offset": 94015,
+      "hex": "fe4006"
+    },
+    {
+      "offset": 94018,
+      "hex": "bd4004"
+    },
+    {
+      "offset": 94021,
+      "hex": "c940"
+    },
+    {
+      "offset": 94023,
+      "hex": "b051"
+    },
+    {
+      "offset": 94025,
+      "hex": "c930"
+    },
+    {
+      "offset": 94027,
+      "hex": "b009"
+    },
+    {
+      "offset": 94029,
+      "hex": "bd4006"
+    },
+    {
+      "offset": 94032,
+      "hex": "c94d"
+    },
+    {
+      "offset": 94034,
+      "hex": "9059"
+    },
+    {
+      "offset": 94036,
+      "hex": "b05c"
+    },
+    {
+      "offset": 94038,
+      "hex": "d005"
+    },
+    {
+      "offset": 94040,
+      "hex": "a900"
+    },
+    {
+      "offset": 94042,
+      "hex": "9d4006"
+    },
+    {
+      "offset": 94045,
+      "hex": "bd4006"
+    },
+    {
+      "offset": 94048,
+      "hex": "850c"
+    },
+    {
+      "offset": 94050,
+      "hex": "291f"
+    },
+    {
+      "offset": 94052,
+      "hex": "d02e"
+    },
+    {
+      "offset": 94054,
+      "hex": "a92d"
+    },
+    {
+      "offset": 94056,
+      "hex": "2063f6"
+    },
+    {
+      "offset": 94059,
+      "hex": "b01e"
+    },
+    {
+      "offset": 94061,
+      "hex": "a0f9"
+    },
+    {
+      "offset": 94063,
+      "hex": "bd2004"
+    },
+    {
+      "offset": 94066,
+      "hex": "2940"
+    },
+    {
+      "offset": 94068,
+      "hex": "f002"
+    },
+    {
+      "offset": 94070,
+      "hex": "a007"
+    },
+    {
+      "offset": 94072,
+      "hex": "18"
+    },
+    {
+      "offset": 94073,
+      "hex": "98"
+    },
+    {
+      "offset": 94074,
+      "hex": "7d8004"
+    },
+    {
+      "offset": 94077,
+      "hex": "9d8004"
+    },
+    {
+      "offset": 94080,
+      "hex": "a50c"
+    },
+    {
+      "offset": 94082,
+      "hex": "4a"
+    },
+    {
+      "offset": 94083,
+      "hex": "4a"
+    },
+    {
+      "offset": 94084,
+      "hex": "4a"
+    },
+    {
+      "offset": 94085,
+      "hex": "690c"
+    },
+    {
+      "offset": 94087,
+      "hex": "a8"
+    },
+    {
+      "offset": 94088,
+      "hex": "2033f5"
+    },
+    {
+      "offset": 94091,
+      "hex": "a62f"
+    },
+    {
+      "offset": 94093,
+      "hex": "bd4006"
+    },
+    {
+      "offset": 94096,
+      "hex": "c960"
+    },
+    {
+      "offset": 94098,
+      "hex": "f013"
+    },
+    {
+      "offset": 94100,
+      "hex": "a931"
+    },
+    {
+      "offset": 94102,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 94105,
+      "hex": "60"
+    },
+    {
+      "offset": 94106,
+      "hex": "c960"
+    },
+    {
+      "offset": 94108,
+      "hex": "9014"
+    },
+    {
+      "offset": 94110,
+      "hex": "a900"
+    },
+    {
+      "offset": 94112,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 94115,
+      "hex": "9d4006"
+    },
+    {
+      "offset": 94118,
+      "hex": "60"
+    },
+    {
+      "offset": 94119,
+      "hex": "a940"
+    },
+    {
+      "offset": 94121,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 94124,
+      "hex": "60"
+    },
+    {
+      "offset": 94125,
+      "hex": "a900"
+    },
+    {
+      "offset": 94127,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 94130,
+      "hex": "60"
+    },
+    {
+      "offset": 94131,
+      "hex": "bd4004"
+    },
+    {
+      "offset": 94134,
+      "hex": "29f0"
+    },
+    {
+      "offset": 94136,
+      "hex": "d00a"
+    },
+    {
+      "offset": 94138,
+      "hex": "bd2004"
+    },
+    {
+      "offset": 94141,
+      "hex": "2980"
+    },
+    {
+      "offset": 94143,
+      "hex": "f003"
+    },
+    {
+      "offset": 94145,
+      "hex": "2052bf"
+    },
+    {
+      "offset": 94148,
+      "hex": "60"
+    }
+  ],
+  "firstSpawn": {
+    "frame": 435,
+    "type": 11,
+    "x": 824,
+    "y": 72,
+    "camera": 569
+  },
+  "records": [
+    {
+      "index": 6,
+      "page": 3,
+      "x": 56,
+      "y": 72,
+      "type": 11
+    },
+    {
+      "index": 7,
+      "page": 3,
+      "x": 184,
+      "y": 120,
+      "type": 11
+    },
+    {
+      "index": 8,
+      "page": 4,
+      "x": 120,
+      "y": 88,
+      "type": 11
+    },
+    {
+      "index": 9,
+      "page": 4,
+      "x": 152,
+      "y": 56,
+      "type": 34
+    },
+    {
+      "index": 10,
+      "page": 4,
+      "x": 216,
+      "y": 152,
+      "type": 11
+    },
+    {
+      "index": 11,
+      "page": 5,
+      "x": 72,
+      "y": 184,
+      "type": 23
+    },
+    {
+      "index": 12,
+      "page": 5,
+      "x": 120,
+      "y": 120,
+      "type": 11
+    },
+    {
+      "index": 13,
+      "page": 5,
+      "x": 184,
+      "y": 56,
+      "type": 34
+    },
+    {
+      "index": 14,
+      "page": 6,
+      "x": 120,
+      "y": 216,
+      "type": 23
+    },
+    {
+      "index": 15,
+      "page": 6,
+      "x": 152,
+      "y": 40,
+      "type": 11
+    },
+    {
+      "index": 16,
+      "page": 6,
+      "x": 184,
+      "y": 88,
+      "type": 34
+    }
+  ],
+  "aiUpdates": 765,
+  "transitions": [
+    {
+      "frame": 436,
+      "state": 1,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 513,
+      "state": 2,
+      "timer": 77,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 514,
+      "state": 3,
+      "timer": 78,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 515,
+      "state": 4,
+      "timer": 79,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 516,
+      "state": 5,
+      "timer": 80,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 517,
+      "state": 6,
+      "timer": 81,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 518,
+      "state": 16,
+      "timer": 82,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 519,
+      "state": 17,
+      "timer": 83,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 520,
+      "state": 18,
+      "timer": 84,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 521,
+      "state": 19,
+      "timer": 85,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 522,
+      "state": 20,
+      "timer": 86,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 523,
+      "state": 21,
+      "timer": 87,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 524,
+      "state": 22,
+      "timer": 88,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 525,
+      "state": 32,
+      "timer": 89,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 526,
+      "state": 33,
+      "timer": 90,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 527,
+      "state": 34,
+      "timer": 91,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 528,
+      "state": 35,
+      "timer": 92,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 529,
+      "state": 36,
+      "timer": 93,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 530,
+      "state": 37,
+      "timer": 94,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 531,
+      "state": 38,
+      "timer": 95,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 532,
+      "state": 48,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 533,
+      "state": 50,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 629,
+      "state": 65,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 630,
+      "state": 66,
+      "timer": 97,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 631,
+      "state": 67,
+      "timer": 98,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 632,
+      "state": 68,
+      "timer": 99,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 633,
+      "state": 69,
+      "timer": 100,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 634,
+      "state": 70,
+      "timer": 101,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 635,
+      "state": 80,
+      "timer": 102,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 636,
+      "state": 81,
+      "timer": 103,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 637,
+      "state": 82,
+      "timer": 104,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 638,
+      "state": 83,
+      "timer": 105,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 639,
+      "state": 84,
+      "timer": 106,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 640,
+      "state": 85,
+      "timer": 107,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 641,
+      "state": 86,
+      "timer": 108,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 642,
+      "state": 96,
+      "timer": 109,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 643,
+      "state": 1,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 720,
+      "state": 2,
+      "timer": 77,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 721,
+      "state": 3,
+      "timer": 78,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 722,
+      "state": 4,
+      "timer": 79,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 723,
+      "state": 5,
+      "timer": 80,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 724,
+      "state": 6,
+      "timer": 81,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 725,
+      "state": 16,
+      "timer": 82,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 726,
+      "state": 17,
+      "timer": 83,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 727,
+      "state": 18,
+      "timer": 84,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 728,
+      "state": 19,
+      "timer": 85,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 729,
+      "state": 20,
+      "timer": 86,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 730,
+      "state": 21,
+      "timer": 87,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 731,
+      "state": 22,
+      "timer": 88,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 732,
+      "state": 32,
+      "timer": 89,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 733,
+      "state": 33,
+      "timer": 90,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 734,
+      "state": 34,
+      "timer": 91,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 735,
+      "state": 35,
+      "timer": 92,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 736,
+      "state": 36,
+      "timer": 93,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 737,
+      "state": 37,
+      "timer": 94,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 738,
+      "state": 38,
+      "timer": 95,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 739,
+      "state": 48,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 740,
+      "state": 50,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 836,
+      "state": 65,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 837,
+      "state": 66,
+      "timer": 97,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 838,
+      "state": 67,
+      "timer": 98,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 839,
+      "state": 68,
+      "timer": 99,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 840,
+      "state": 69,
+      "timer": 100,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 841,
+      "state": 70,
+      "timer": 101,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 842,
+      "state": 80,
+      "timer": 102,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 843,
+      "state": 81,
+      "timer": 103,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 844,
+      "state": 82,
+      "timer": 104,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 845,
+      "state": 83,
+      "timer": 105,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 846,
+      "state": 84,
+      "timer": 106,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 847,
+      "state": 85,
+      "timer": 107,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 848,
+      "state": 86,
+      "timer": 108,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 849,
+      "state": 96,
+      "timer": 109,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 850,
+      "state": 1,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 927,
+      "state": 2,
+      "timer": 77,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 928,
+      "state": 3,
+      "timer": 78,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 929,
+      "state": 4,
+      "timer": 79,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 930,
+      "state": 5,
+      "timer": 80,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 931,
+      "state": 6,
+      "timer": 81,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 932,
+      "state": 16,
+      "timer": 82,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 933,
+      "state": 17,
+      "timer": 83,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 934,
+      "state": 18,
+      "timer": 84,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 935,
+      "state": 19,
+      "timer": 85,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 936,
+      "state": 20,
+      "timer": 86,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 937,
+      "state": 21,
+      "timer": 87,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 938,
+      "state": 22,
+      "timer": 88,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 939,
+      "state": 32,
+      "timer": 89,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 940,
+      "state": 33,
+      "timer": 90,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 941,
+      "state": 34,
+      "timer": 91,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 942,
+      "state": 35,
+      "timer": 92,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 943,
+      "state": 36,
+      "timer": 93,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 944,
+      "state": 37,
+      "timer": 94,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 945,
+      "state": 38,
+      "timer": 95,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 946,
+      "state": 48,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 947,
+      "state": 50,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1043,
+      "state": 65,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1044,
+      "state": 66,
+      "timer": 97,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1045,
+      "state": 67,
+      "timer": 98,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1046,
+      "state": 68,
+      "timer": 99,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1047,
+      "state": 69,
+      "timer": 100,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1048,
+      "state": 70,
+      "timer": 101,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1049,
+      "state": 80,
+      "timer": 102,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1050,
+      "state": 81,
+      "timer": 103,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1051,
+      "state": 82,
+      "timer": 104,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1052,
+      "state": 83,
+      "timer": 105,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1053,
+      "state": 84,
+      "timer": 106,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1054,
+      "state": 85,
+      "timer": 107,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1055,
+      "state": 86,
+      "timer": 108,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1056,
+      "state": 96,
+      "timer": 109,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1057,
+      "state": 1,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1134,
+      "state": 2,
+      "timer": 77,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1135,
+      "state": 3,
+      "timer": 78,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1136,
+      "state": 4,
+      "timer": 79,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1137,
+      "state": 5,
+      "timer": 80,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1138,
+      "state": 6,
+      "timer": 81,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1139,
+      "state": 16,
+      "timer": 82,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1140,
+      "state": 17,
+      "timer": 83,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1141,
+      "state": 18,
+      "timer": 84,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1142,
+      "state": 19,
+      "timer": 85,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1143,
+      "state": 20,
+      "timer": 86,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1144,
+      "state": 21,
+      "timer": 87,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1145,
+      "state": 22,
+      "timer": 88,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1146,
+      "state": 32,
+      "timer": 89,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1147,
+      "state": 33,
+      "timer": 90,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1148,
+      "state": 34,
+      "timer": 91,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1149,
+      "state": 35,
+      "timer": 92,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1150,
+      "state": 36,
+      "timer": 93,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1151,
+      "state": 37,
+      "timer": 94,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1152,
+      "state": 38,
+      "timer": 95,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1153,
+      "state": 48,
+      "timer": 96,
+      "life": 20,
+      "age": 0
+    },
+    {
+      "frame": 1154,
+      "state": 50,
+      "timer": 0,
+      "life": 20,
+      "age": 0
+    }
+  ],
+  "shotAttempts": [
+    {
+      "frame": 532,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 48,
+        "timer": 0,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 564,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 32,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 596,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 64,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 628,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 96,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 739,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 48,
+        "timer": 0,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 771,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 32,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 803,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 64,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 835,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 96,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 946,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 48,
+        "timer": 0,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 978,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 32,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1010,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 64,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1042,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 96,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1153,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 48,
+        "timer": 0,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1185,
+      "parent": {
+        "slot": 16,
+        "type": 11,
+        "x": 824,
+        "y": 72,
+        "state": 50,
+        "timer": 32,
+        "flags": 6,
+        "life": 20,
+        "age": 0
+      }
+    }
+  ],
+  "speedInitializations": [
+    {
+      "frame": 532,
+      "index": 12,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 564,
+      "index": 16,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 596,
+      "index": 20,
+      "object": {
+        "slot": 18,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 628,
+      "index": 24,
+      "object": {
+        "slot": 19,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 739,
+      "index": 12,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 771,
+      "index": 16,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 803,
+      "index": 20,
+      "object": {
+        "slot": 18,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 835,
+      "index": 24,
+      "object": {
+        "slot": 19,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 946,
+      "index": 12,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 978,
+      "index": 16,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1010,
+      "index": 20,
+      "object": {
+        "slot": 18,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1042,
+      "index": 24,
+      "object": {
+        "slot": 19,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1153,
+      "index": 12,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    },
+    {
+      "frame": 1185,
+      "index": 16,
+      "object": {
+        "slot": 17,
+        "type": 45,
+        "x": 817,
+        "y": 72,
+        "state": 0,
+        "timer": 0,
+        "flags": 2,
+        "life": 20,
+        "age": 0
+      }
+    }
+  ],
+  "completeBursts": 3
+}
