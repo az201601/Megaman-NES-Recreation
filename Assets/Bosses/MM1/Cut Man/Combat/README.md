@@ -109,7 +109,7 @@ resource/frame mapping has been introduced by this checkpoint.
 - Package complete resources and incremental object/event/replacement instructions,
   then installed GMS compile/playtest. No ZIP is issued for incomplete dependencies.
 
-## Rolling Cutter throw — listening approval pending
+## Rolling Cutter throw — user approved
 
 `Audio/Review/mm1-cutman-rolling-cutter-throw-review.wav` is the actual native25
 throw cue, separate from rejected26. `mm1-cutman-rolling-cutter-throw-full-tail.wav`
@@ -124,6 +124,9 @@ empty sound queue, FF stop and60exact-silent frames before requesting25. Verifie
 original DFB4 bytes request25, not26. Driver dispatch/end/stream trace, WAV hashes
 and limitations: `Reference/rolling-cutter-throw-audio.json`.
 
-**Not installed or approved yet.** Listen to the review take before any new Sound
-resource/import or runtime playback change. Keep already-approved combat sounds.
+**User approved: “sound effect approved”.** The byte-identical take is preserved
+as `Audio/Approved/snd_mm1_cutman_rolling_cutter_throw.wav`; its hash and approval
+are recorded separately in `Reference/rolling-cutter-throw-approval.json` so
+regenerating the extraction report cannot erase the approval. Runtime integration
+and installation remain pending. Keep already-approved combat sounds.
 The MM6 clear/weapon-get music is a separate future approval, not included here.

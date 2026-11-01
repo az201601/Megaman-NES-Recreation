@@ -680,3 +680,12 @@ only; full-tail2.04667s also supplied. Research/audition files under Combat/Audi
 Review, evidence under Combat/Reference. No runtime Sound imports, playback or
 accepted entrance changes; USER LISTENING APPROVAL PENDING. MM6 music approval
 remains separate. Combat physics/cutter/shot/contact/victory integration unfinished.
+
+## Rolling Cutter throw sound accepted
+
+User explicitly confirmed **“sound effect approved”**. Preserved exact review WAV
+as Combat/Audio/Approved/snd_mm1_cutman_rolling_cutter_throw.wav, SHA256
+6d9db536caa473457109f7677b6620aa81f6481bcdb1b0d64a1c9c3eeb9d355e.
+Separate approval record prevents extraction regeneration from losing acceptance.
+No gain/trim/content changes, no runtime playback/import changes yet. Native25 only;
+rejected26 stays removed. MM6 victory music still needs its own approval.

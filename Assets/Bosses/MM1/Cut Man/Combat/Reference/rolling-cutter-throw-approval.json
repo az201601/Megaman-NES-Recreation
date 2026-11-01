@@ -1,0 +1,10 @@
+{
+  "status": "User listening approved; runtime integration pending",
+  "userConfirmation": "sound effect approved",
+  "file": "Audio/Approved/snd_mm1_cutman_rolling_cutter_throw.wav",
+  "sha256": "6d9db536caa473457109f7677b6620aa81f6481bcdb1b0d64a1c9c3eeb9d355e",
+  "source": "Audio/Review/mm1-cutman-rolling-cutter-throw-review.wav",
+  "processing": "Byte-identical approved take. No further gain, trimming or other audio processing.",
+  "resourceName": "snd_mm1_cutman_rolling_cutter_throw",
+  "rejectedCue26": "Remains removed; approval applies only to actual throw25."
+}
