@@ -94,3 +94,7 @@ a suggestion; **no gameplay timing changes or replacement ZIP have been made**
 in this timing-check checkpoint. The installed package still has the original
 MM1-derived32-frame initial wait. MM5's three-edit/four-frame opening animation
 must not be mislabeled as the existing MM1 four-edit/six-frame animation.
+
+## Follow-up: original contact/PPU/display trace (2026-11-01)
+
+The historical opener-only limitation above is now investigated in [the contact report](../../../../docs/mm5-gate-contact-reference/README.md). Four real boundary-triggered gate entries across both sequential Napalm doors/two Xfraction alignments, after disclosed controlled native-room-render lead-in. No opening-call redirection/forced gateflag/per-frame pins during measurement. PPU writes plus unoccluded actual displayed pixels confirm edits at trigger+1/+5/+9; original boundary trigger follows geometric side-probe/tile-face crossing by6–7walkingupdates, not a fixed wait timer. Current project starts earlier at the solid face but strips are6frames apart rather than native4. No timing/GML/geometry/audio changes. The old “32-frame hold still installed” paragraph describes its historical checkpoint, not the current Jumping Gate Entry baseline.
