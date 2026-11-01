@@ -1,0 +1,107 @@
+{
+  "scope": "Additive Screw Bomber manual installer after seven accepted enemies and Free Fall. Preserve latest jumping/walking gates. Reuse existing Blaster bullet/art/fire cue. GMS1.4compile/installed acceptance pending. No ROM/states/disassembly/oldaudio/terrain/room/camera/player/death replacements.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_screw_bomber_ceiling_strip5.png",
+      "source": "Assets/Enemies/MM1/Screw Bomber/spr_mm1_screw_bomber_ceiling_strip5.png",
+      "bytes": 901,
+      "sha256": "6c2c6bf60b6de5726a7b4cdcd8657de3c1ff11146e6a3c4d8f4736339438a0f3"
+    },
+    {
+      "path": "Art/spr_mm1_screw_bomber_floor_strip5.png",
+      "source": "Assets/Enemies/MM1/Screw Bomber/spr_mm1_screw_bomber_floor_strip5.png",
+      "bytes": 866,
+      "sha256": "ab01c17c03c135d43f5df389def6914369f179d925f6e989fba52ff96b81eca5"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_screw_bomber_append.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Hooks/obj_mm5_combat_create_screw_bomber_append.gml",
+      "bytes": 550,
+      "sha256": "e32ffbd012817bf1ae882de49b3507542f3cff0ae8537d31ce79abf47e34f876"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/INSTALL-GMS14.md",
+      "bytes": 8265,
+      "sha256": "4fb23394687a688f45a4805dda40f534922651066b2ca5fa7c686afa6e90a141"
+    },
+    {
+      "path": "Objects/obj_mm1_screw_bomber_create.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Objects/obj_mm1_screw_bomber_create.gml",
+      "bytes": 242,
+      "sha256": "b4ecae8fca9d6d4b097d9823f0f7ed07d339cc140fcee44246bce5b6bba2f79b"
+    },
+    {
+      "path": "Objects/obj_mm1_screw_bomber_draw.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Objects/obj_mm1_screw_bomber_draw.gml",
+      "bytes": 235,
+      "sha256": "526d444ce9d76d4db4817d33bb818ef8d08361a0bd6dbc1b541bb63f6720d4b2"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/README.md",
+      "bytes": 2945,
+      "sha256": "b2acda0c39c9c9b46bda9c75225a4fe99c929ab730ee4d0adc9720aecdc7a826"
+    },
+    {
+      "path": "Reference/native-screw-bomber-art.json",
+      "source": "Assets/Enemies/MM1/Screw Bomber/Reference/native-screw-bomber-art.json",
+      "bytes": 10665,
+      "sha256": "17c1e14ff1c924df52e78c888dd8634b4bc9df69505e133f4e6a1827e9f8ffb1"
+    },
+    {
+      "path": "Reference/native-screw-bomber-gameplay.json",
+      "source": "Assets/Enemies/MM1/Screw Bomber/Reference/native-screw-bomber-gameplay.json",
+      "bytes": 2188632,
+      "sha256": "19680ed6dc2d7fa40101fa1b9b1bb63a0a234a04a85de7acefd771b12f011409"
+    },
+    {
+      "path": "Reference/native-screw-bomber-source.json",
+      "source": "Assets/Enemies/MM1/Screw Bomber/Reference/native-screw-bomber-source.json",
+      "bytes": 6481,
+      "sha256": "2a9ea9e28702f2777c81304a2d72a113b9a0afae88bb2fa794eb0ac937141e51"
+    },
+    {
+      "path": "Scripts/scr_mm1_screw_bomber_contact.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm1_screw_bomber_contact.gml",
+      "bytes": 480,
+      "sha256": "cc21beb66f4183ec38052d24638e478ba93c2293257779fcdf751402d2b18a77"
+    },
+    {
+      "path": "Scripts/scr_mm1_screw_bomber_hit.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm1_screw_bomber_hit.gml",
+      "bytes": 928,
+      "sha256": "1d2fa7e2f0823c2e07d222970b7ded7ac0cc21920c40653e6f916939df15f762"
+    },
+    {
+      "path": "Scripts/scr_mm1_screw_bomber_spawn.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm1_screw_bomber_spawn.gml",
+      "bytes": 712,
+      "sha256": "ca240c7b5ebeed728a4fe9627855d147b03d0e95a6cdcba0efb2ec7331e9d892"
+    },
+    {
+      "path": "Scripts/scr_mm1_screw_bomber_step.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm1_screw_bomber_step.gml",
+      "bytes": 2495,
+      "sha256": "a4860e003b39b1e2a5cb05fb73e171111ee949a1f6ef3712112c32e09101696c"
+    },
+    {
+      "path": "Scripts/scr_mm1_screw_bomber_world_step.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm1_screw_bomber_world_step.gml",
+      "bytes": 675,
+      "sha256": "cdb3d3df2491b001fb38472b1aee2f0263f731c142c8035a14a65ec513166ee3"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 5991,
+      "sha256": "c987c271802f7299dd3619cd519d4a44849b52ea1f3a0c1eab7611e49aca27f1"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 4435,
+      "sha256": "c07d7fecaaa16c909aae1962d629530a921f72eb8093e873226a5ccc6efb8e83"
+    }
+  ]
+}

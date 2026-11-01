@@ -1,0 +1,482 @@
+{
+  "method": "Supplied original USA/JSNES2.1.0; controlled type05/16 fixture from gameplay probe. Ten distinct native OAM/CHR/palette poses matched at opaque pixels to native rendered frame. Mesen0.9.9RGB conversion, not Mesen executable.16x16commoncell; floor/ceiling separately recovered including native flips; two-cell closed pose is top8rows for floor, bottom8rows for ceiling (same native object-origin offset), other8transparent. No painting or generic sprite flips substituted. Native always-vulnerable body observed with real B presses, including closed cooldown; no guessed closed-shell block behavior.",
+  "cell": [
+    16,
+    16
+  ],
+  "origin": [
+    8,
+    7
+  ],
+  "bulletReuse": {
+    "resource": "spr_mm1_blaster_bullet",
+    "tile": 106,
+    "palette": 3,
+    "rgbaSha256": "b7c6cd39f545fd051d72695c8ea643191d950ebb881637ffa4885e71851a69d7",
+    "method": "Native tile/palette RGBA for BOTH fixtures exactly equal accepted Blaster bullet asset; reuse existing actor as well as sprite."
+  },
+  "frames": [
+    {
+      "type": 5,
+      "index": 0,
+      "frame": 103,
+      "cells": [
+        {
+          "i": 6,
+          "x": 120,
+          "y": 152,
+          "tile": 207,
+          "attr": 3
+        },
+        {
+          "i": 7,
+          "x": 128,
+          "y": 152,
+          "tile": 188,
+          "attr": 3
+        }
+      ],
+      "top": 152,
+      "rgbaSha256": "23f1ac44f2211d9f3bafd175a3d71e8399785bd9428a788ee66e17107e9c4995"
+    },
+    {
+      "type": 5,
+      "index": 1,
+      "frame": 2,
+      "cells": [
+        {
+          "i": 22,
+          "x": 120,
+          "y": 144,
+          "tile": 193,
+          "attr": 3
+        },
+        {
+          "i": 23,
+          "x": 128,
+          "y": 144,
+          "tile": 194,
+          "attr": 3
+        },
+        {
+          "i": 24,
+          "x": 120,
+          "y": 152,
+          "tile": 195,
+          "attr": 3
+        },
+        {
+          "i": 25,
+          "x": 128,
+          "y": 152,
+          "tile": 196,
+          "attr": 3
+        }
+      ],
+      "top": 144,
+      "rgbaSha256": "02865f1a58e5c6c66fdb0b2b5afd516c4de7e43fb95933e2ff880df0b86cabcd"
+    },
+    {
+      "type": 5,
+      "index": 2,
+      "frame": 7,
+      "cells": [
+        {
+          "i": 1,
+          "x": 120,
+          "y": 144,
+          "tile": 191,
+          "attr": 3
+        },
+        {
+          "i": 2,
+          "x": 128,
+          "y": 144,
+          "tile": 192,
+          "attr": 3
+        },
+        {
+          "i": 3,
+          "x": 124,
+          "y": 152,
+          "tile": 206,
+          "attr": 3
+        }
+      ],
+      "top": 144,
+      "rgbaSha256": "761061c67567556c2604fffc66c338b613aa390bc5a67a536f60205af763d201"
+    },
+    {
+      "type": 5,
+      "index": 3,
+      "frame": 12,
+      "cells": [
+        {
+          "i": 22,
+          "x": 120,
+          "y": 144,
+          "tile": 189,
+          "attr": 3
+        },
+        {
+          "i": 23,
+          "x": 128,
+          "y": 144,
+          "tile": 190,
+          "attr": 3
+        },
+        {
+          "i": 24,
+          "x": 124,
+          "y": 152,
+          "tile": 206,
+          "attr": 3
+        }
+      ],
+      "top": 144,
+      "rgbaSha256": "5e34b08bbd15d0fa1f6808edaf57a1296287f9b29c026f18a915e278a0816e45"
+    },
+    {
+      "type": 5,
+      "index": 4,
+      "frame": 17,
+      "cells": [
+        {
+          "i": 1,
+          "x": 120,
+          "y": 144,
+          "tile": 207,
+          "attr": 3
+        },
+        {
+          "i": 2,
+          "x": 128,
+          "y": 144,
+          "tile": 188,
+          "attr": 3
+        },
+        {
+          "i": 3,
+          "x": 124,
+          "y": 152,
+          "tile": 206,
+          "attr": 3
+        }
+      ],
+      "top": 144,
+      "rgbaSha256": "53e3064bc9663df8d57dd6b3be2533fb185808e4ee22b665d8c2afce16cc34c1"
+    },
+    {
+      "type": 22,
+      "index": 0,
+      "frame": 103,
+      "cells": [
+        {
+          "i": 6,
+          "x": 120,
+          "y": 96,
+          "tile": 188,
+          "attr": 195
+        },
+        {
+          "i": 7,
+          "x": 128,
+          "y": 96,
+          "tile": 207,
+          "attr": 195
+        }
+      ],
+      "top": 88,
+      "rgbaSha256": "264a8cf478c4d97bcdd1fc2ad22471a42b65100b3ee8a66678cd7ab7359af72c"
+    },
+    {
+      "type": 22,
+      "index": 1,
+      "frame": 2,
+      "cells": [
+        {
+          "i": 22,
+          "x": 120,
+          "y": 96,
+          "tile": 196,
+          "attr": 195
+        },
+        {
+          "i": 23,
+          "x": 128,
+          "y": 96,
+          "tile": 195,
+          "attr": 195
+        },
+        {
+          "i": 24,
+          "x": 120,
+          "y": 104,
+          "tile": 194,
+          "attr": 195
+        },
+        {
+          "i": 25,
+          "x": 128,
+          "y": 104,
+          "tile": 193,
+          "attr": 195
+        }
+      ],
+      "top": 96,
+      "rgbaSha256": "435aeb7204bfe42e5955436baf61c1ce1663a411a11bc78b35314e0b48d09bc3"
+    },
+    {
+      "type": 22,
+      "index": 2,
+      "frame": 7,
+      "cells": [
+        {
+          "i": 1,
+          "x": 120,
+          "y": 104,
+          "tile": 192,
+          "attr": 195
+        },
+        {
+          "i": 2,
+          "x": 128,
+          "y": 104,
+          "tile": 191,
+          "attr": 195
+        },
+        {
+          "i": 3,
+          "x": 124,
+          "y": 96,
+          "tile": 206,
+          "attr": 195
+        }
+      ],
+      "top": 96,
+      "rgbaSha256": "1f7c36face8ff8f84608a4b24db9b19db94f653f537d438bebc7da7b482e7f4b"
+    },
+    {
+      "type": 22,
+      "index": 3,
+      "frame": 12,
+      "cells": [
+        {
+          "i": 22,
+          "x": 120,
+          "y": 104,
+          "tile": 190,
+          "attr": 195
+        },
+        {
+          "i": 23,
+          "x": 128,
+          "y": 104,
+          "tile": 189,
+          "attr": 195
+        },
+        {
+          "i": 24,
+          "x": 124,
+          "y": 96,
+          "tile": 206,
+          "attr": 195
+        }
+      ],
+      "top": 96,
+      "rgbaSha256": "97f1160263c919c7f4dd0563ee95f6a92dc4003e4c6699a287ebfedc2669c9f9"
+    },
+    {
+      "type": 22,
+      "index": 4,
+      "frame": 17,
+      "cells": [
+        {
+          "i": 1,
+          "x": 120,
+          "y": 104,
+          "tile": 188,
+          "attr": 195
+        },
+        {
+          "i": 2,
+          "x": 128,
+          "y": 104,
+          "tile": 207,
+          "attr": 195
+        },
+        {
+          "i": 3,
+          "x": 124,
+          "y": 96,
+          "tile": 206,
+          "attr": 195
+        }
+      ],
+      "top": 96,
+      "rgbaSha256": "fff1d0380b6fed8038bca563f41219056b6af094cabb8c27af656f92fe40fbab"
+    }
+  ],
+  "hits": [
+    {
+      "type": 5,
+      "phase": "closed",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 0,
+          "timer": 45,
+          "hp": 20,
+          "type": 5
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 0,
+          "timer": 25,
+          "hp": 13,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 5
+        }
+      ],
+      "finalType": 27
+    },
+    {
+      "type": 5,
+      "phase": "open",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 51,
+          "timer": 52,
+          "hp": 20,
+          "type": 5
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 67,
+          "timer": 32,
+          "hp": 13,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 5
+        }
+      ],
+      "finalType": 27
+    },
+    {
+      "type": 22,
+      "phase": "closed",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 0,
+          "timer": 45,
+          "hp": 20,
+          "type": 22
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 0,
+          "timer": 25,
+          "hp": 13,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 22
+        }
+      ],
+      "finalType": 27
+    },
+    {
+      "type": 22,
+      "phase": "open",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 51,
+          "timer": 52,
+          "hp": 20,
+          "type": 22
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 67,
+          "timer": 32,
+          "hp": 13,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 22
+        }
+      ],
+      "finalType": 27
+    }
+  ]
+}

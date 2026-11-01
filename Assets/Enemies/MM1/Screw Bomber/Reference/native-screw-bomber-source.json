@@ -1,0 +1,430 @@
+{
+  "method": "Initial static source-to-supplied-USA-ROM byte verification only. No emulator trials, artwork, audio or gameplay implementation yet. J-derived pinned source spans verified individually; no whole-disassembly identity claim.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "source": "TheRealQuantam/mm1base@9c1cb05bd1d63c176e1930053dda76bcb85cd977",
+  "verifiedBytes": 230,
+  "spans": [
+    {
+      "offset": 94938,
+      "hex": "a908"
+    },
+    {
+      "offset": 94940,
+      "hex": "850d"
+    },
+    {
+      "offset": 94942,
+      "hex": "850e"
+    },
+    {
+      "offset": 94944,
+      "hex": "a904"
+    },
+    {
+      "offset": 94946,
+      "hex": "850f"
+    },
+    {
+      "offset": 94948,
+      "hex": "d00c"
+    },
+    {
+      "offset": 94950,
+      "hex": "a9f8"
+    },
+    {
+      "offset": 94952,
+      "hex": "850d"
+    },
+    {
+      "offset": 94954,
+      "hex": "a909"
+    },
+    {
+      "offset": 94956,
+      "hex": "850e"
+    },
+    {
+      "offset": 94958,
+      "hex": "a9fc"
+    },
+    {
+      "offset": 94960,
+      "hex": "850f"
+    },
+    {
+      "offset": 94962,
+      "hex": "20a5b3"
+    },
+    {
+      "offset": 94965,
+      "hex": "bd4004"
+    },
+    {
+      "offset": 94968,
+      "hex": "f004"
+    },
+    {
+      "offset": 94970,
+      "hex": "c901"
+    },
+    {
+      "offset": 94972,
+      "hex": "d039"
+    },
+    {
+      "offset": 94974,
+      "hex": "bd4006"
+    },
+    {
+      "offset": 94977,
+      "hex": "f007"
+    },
+    {
+      "offset": 94979,
+      "hex": "a900"
+    },
+    {
+      "offset": 94981,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 94984,
+      "hex": "f07d"
+    },
+    {
+      "offset": 94986,
+      "hex": "203bf6"
+    },
+    {
+      "offset": 94989,
+      "hex": "48"
+    },
+    {
+      "offset": 94990,
+      "hex": "bd2004"
+    },
+    {
+      "offset": 94993,
+      "hex": "29bf"
+    },
+    {
+      "offset": 94995,
+      "hex": "9d2004"
+    },
+    {
+      "offset": 94998,
+      "hex": "68"
+    },
+    {
+      "offset": 94999,
+      "hex": "c950"
+    },
+    {
+      "offset": 95001,
+      "hex": "9007"
+    },
+    {
+      "offset": 95003,
+      "hex": "a900"
+    },
+    {
+      "offset": 95005,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 95008,
+      "hex": "f078"
+    },
+    {
+      "offset": 95010,
+      "hex": "a910"
+    },
+    {
+      "offset": 95012,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 95015,
+      "hex": "38"
+    },
+    {
+      "offset": 95016,
+      "hex": "bd0006"
+    },
+    {
+      "offset": 95019,
+      "hex": "e50d"
+    },
+    {
+      "offset": 95021,
+      "hex": "9d0006"
+    },
+    {
+      "offset": 95024,
+      "hex": "a960"
+    },
+    {
+      "offset": 95026,
+      "hex": "9d4006"
+    },
+    {
+      "offset": 95029,
+      "hex": "d050"
+    },
+    {
+      "offset": 95031,
+      "hex": "c950"
+    },
+    {
+      "offset": 95033,
+      "hex": "d005"
+    },
+    {
+      "offset": 95035,
+      "hex": "a920"
+    },
+    {
+      "offset": 95037,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 95040,
+      "hex": "b045"
+    },
+    {
+      "offset": 95042,
+      "hex": "bd4006"
+    },
+    {
+      "offset": 95045,
+      "hex": "f02d"
+    },
+    {
+      "offset": 95047,
+      "hex": "291f"
+    },
+    {
+      "offset": 95049,
+      "hex": "d04c"
+    },
+    {
+      "offset": 95051,
+      "hex": "a92d"
+    },
+    {
+      "offset": 95053,
+      "hex": "2063f6"
+    },
+    {
+      "offset": 95056,
+      "hex": "b01e"
+    },
+    {
+      "offset": 95058,
+      "hex": "38"
+    },
+    {
+      "offset": 95059,
+      "hex": "bd0006"
+    },
+    {
+      "offset": 95062,
+      "hex": "e50f"
+    },
+    {
+      "offset": 95064,
+      "hex": "9d0006"
+    },
+    {
+      "offset": 95067,
+      "hex": "a40e"
+    },
+    {
+      "offset": 95069,
+      "hex": "b99bb3"
+    },
+    {
+      "offset": 95072,
+      "hex": "9d2004"
+    },
+    {
+      "offset": 95075,
+      "hex": "b991b3"
+    },
+    {
+      "offset": 95078,
+      "hex": "a8"
+    },
+    {
+      "offset": 95079,
+      "hex": "2033f5"
+    },
+    {
+      "offset": 95082,
+      "hex": "c60e"
+    },
+    {
+      "offset": 95084,
+      "hex": "c60e"
+    },
+    {
+      "offset": 95086,
+      "hex": "10db"
+    },
+    {
+      "offset": 95088,
+      "hex": "a62f"
+    },
+    {
+      "offset": 95090,
+      "hex": "d023"
+    },
+    {
+      "offset": 95092,
+      "hex": "a903"
+    },
+    {
+      "offset": 95094,
+      "hex": "20a0c5"
+    },
+    {
+      "offset": 95097,
+      "hex": "aa"
+    },
+    {
+      "offset": 95098,
+      "hex": "bd8eb3"
+    },
+    {
+      "offset": 95101,
+      "hex": "a62f"
+    },
+    {
+      "offset": 95103,
+      "hex": "9d4006"
+    },
+    {
+      "offset": 95106,
+      "hex": "a950"
+    },
+    {
+      "offset": 95108,
+      "hex": "9d4004"
+    },
+    {
+      "offset": 95111,
+      "hex": "bd4004"
+    },
+    {
+      "offset": 95114,
+      "hex": "c960"
+    },
+    {
+      "offset": 95116,
+      "hex": "d009"
+    },
+    {
+      "offset": 95118,
+      "hex": "18"
+    },
+    {
+      "offset": 95119,
+      "hex": "bd0006"
+    },
+    {
+      "offset": 95122,
+      "hex": "650d"
+    },
+    {
+      "offset": 95124,
+      "hex": "9d0006"
+    },
+    {
+      "offset": 95127,
+      "hex": "de4006"
+    },
+    {
+      "offset": 95130,
+      "hex": "2049be"
+    },
+    {
+      "offset": 95133,
+      "hex": "60"
+    },
+    {
+      "offset": 95157,
+      "hex": "bda006"
+    },
+    {
+      "offset": 95160,
+      "hex": "f005"
+    },
+    {
+      "offset": 95162,
+      "hex": "2049be"
+    },
+    {
+      "offset": 95165,
+      "hex": "68"
+    },
+    {
+      "offset": 95166,
+      "hex": "68"
+    },
+    {
+      "offset": 95167,
+      "hex": "60"
+    },
+    {
+      "offset": 95134,
+      "hex": "203f7d60605c6458685c64606042424242020202020202"
+    }
+  ],
+  "records": [
+    {
+      "index": 45,
+      "page": 20,
+      "x": 216,
+      "y": 160,
+      "type": 5
+    },
+    {
+      "index": 46,
+      "page": 21,
+      "x": 200,
+      "y": 96,
+      "type": 22
+    },
+    {
+      "index": 47,
+      "page": 22,
+      "x": 80,
+      "y": 160,
+      "type": 5
+    }
+  ],
+  "tables": [
+    {
+      "type": 5,
+      "normalDamage": 7,
+      "contact": 1,
+      "halfWidth": 8,
+      "halfHeight": 8
+    },
+    {
+      "type": 22,
+      "normalDamage": 7,
+      "contact": 2,
+      "halfWidth": 8,
+      "halfHeight": 8
+    },
+    {
+      "type": 45,
+      "normalDamage": 0,
+      "contact": 2,
+      "halfWidth": 1,
+      "halfHeight": 1
+    }
+  ]
+}
