@@ -1,6 +1,6 @@
 {
   "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
-  "method": "Original-USA native second-door entrance with all five audio channels enabled. Same disclosed checkpoint/controlled approach snapshot as entrance probe; then Right only475updates. NO forced sound requests, queue injection, sound suppression, actor/CHR edits or additional PC redirects. Captures original C477 request and opcode-qualified9003 driver dispatch. Original initializer issues26hex; original driver26 data beginsBBDC priorityA0/channelmask0A. This is Cut Man scissors sound, NOT a separate materialize/teleport/appear effect. Existing standalone WAV is the isolated26 driver take; only name/description corrected.",
+  "method": "Original-USA native second-door entrance with all five audio channels enabled. Same disclosed checkpoint/controlled approach snapshot as entrance probe; then Right only650updates. NO forced sound requests, queue injection, sound suppression, actor/CHR edits or additional PC redirects. Captures original C477 request and opcode-qualified9003 driver dispatch. Original initializer issues26hex; original driver26 data beginsBBDC priorityA0/channelmask0A. This is Cut Man scissors sound, NOT a separate materialize/teleport/appear effect. Existing standalone WAV is the isolated26 driver take; only name/description corrected.",
   "scissorsData": {
     "cpu": "BBDC",
     "offset": 80876,
@@ -161,6 +161,31 @@
       "frame": 472,
       "id": 254,
       "sample": 376381
+    },
+    {
+      "frame": 522,
+      "id": 38,
+      "sample": 416360
+    },
+    {
+      "frame": 553,
+      "id": 25,
+      "sample": 441139
+    },
+    {
+      "frame": 557,
+      "id": 22,
+      "sample": 444253
+    },
+    {
+      "frame": 567,
+      "id": 38,
+      "sample": 452336
+    },
+    {
+      "frame": 583,
+      "id": 37,
+      "sample": 465191
     }
   ],
   "dispatch": [
@@ -323,6 +348,52 @@
       "frame": 473,
       "id": 254,
       "sample": 377081
+    },
+    {
+      "frame": 523,
+      "id": 38,
+      "sample": 417000
+    },
+    {
+      "frame": 554,
+      "id": 25,
+      "sample": 441773
+    },
+    {
+      "frame": 558,
+      "id": 22,
+      "sample": 444958
+    },
+    {
+      "frame": 568,
+      "id": 38,
+      "sample": 452963
+    },
+    {
+      "frame": 584,
+      "id": 37,
+      "sample": 465715
     }
-  ]
+  ],
+  "bossCalls": [
+    {
+      "frame": 522,
+      "pc": "df64"
+    },
+    {
+      "frame": 567,
+      "pc": "df64"
+    },
+    {
+      "frame": 583,
+      "pc": "dfb4"
+    }
+  ],
+  "throwHandler": {
+    "cpu": "DFB4",
+    "offset": 122820,
+    "hex": "a9252077c4",
+    "sound": 37
+  },
+  "identification": "26hex is the short initialization/stand-and-make-noise cue, NOT Rolling Cutter throw. Native CutmanThrowScissor atDFB4 requests25hex; both calls also verified during original execution."
 }

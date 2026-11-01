@@ -53,8 +53,8 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 12172,
-      "sha256": "e22c94e0aa55a71571017f0c681ab75799f594a117e826c846f6429d0278f8ec"
+      "bytes": 12930,
+      "sha256": "3cd61cb21eaf575d45f884118135e38b0cb1415d8468af94088475fe2cada0dd"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_create.gml",
@@ -118,8 +118,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3782,
-      "sha256": "fe6f40a33a26e7235f44cc87491ff3b5c381d8b003709fad3f36ae4202d8d82f"
+      "bytes": 4540,
+      "sha256": "8ec37956338df378f85b37a29ffdbcfa933e5e8f4abde81571fd390bd12ad540"
     },
     {
       "path": "Reference/native-audio.json",
@@ -133,8 +133,8 @@
     },
     {
       "path": "Reference/native-scissors-verification.json",
-      "bytes": 5468,
-      "sha256": "6becf3f4fea63781633488f3fc74a2f8cc09b62acccbb78e0422723319d335e2"
+      "bytes": 6681,
+      "sha256": "7497f29e851659e07a0a03070a39dac14f42815152aa4261e07fcf39030072d3"
     },
     {
       "path": "Reference/scissors-full-tail-audit.json",

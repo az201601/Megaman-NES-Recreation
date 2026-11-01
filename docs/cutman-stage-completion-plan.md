@@ -617,3 +617,7 @@ User challenged nonexistent generic boss-appear cue. Rechecked original-USA nati
 ## Scissors incomplete-sound report — open investigation
 
 User says cue is incomplete, not merely misnamed. New native26 driver audit traces first pass181, repeat189, natural end197 (two8-update passes), retains command lead/full tail. Current runtime WAV PCM equals matching subrange of new full-tail audition WAV; no demonstrated missing exported repeat. Do not claim user-audible issue fixed. Need distinguish standalone WAV preview vs installed entrance cutoff. Runtime cue/timing unchanged pending that clarification/listening.
+
+## Distinguish actual throw25 from short head/taunt26
+
+User says throwing sound is different, cannot identify current take. Correct: original CutmanThrowScissor DFB4 requests25hex, not26; USA bytes a9252077c4 verified, native execution650updates logs DFB4 and corresponding request.26 comes from initialization and stand/make-noise atDF64. Earlier "scissors" naming conflated distinct cues; tail audit only proved26's repeat, not suitability as throw. No current throw-audio implementation, no stretch/repeat/rename-only supposed fix. Current entrance runtime remains unchanged pending auditory acceptance; upcoming throw must recover25 separately.
