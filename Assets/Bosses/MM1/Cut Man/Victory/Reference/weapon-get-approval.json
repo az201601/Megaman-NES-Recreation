@@ -1,0 +1,9 @@
+{
+  "status": "User listening approved; runtime loop preparation/integration pending",
+  "userConfirmation": "this is the one",
+  "file": "Audio/Approved/snd_mm6_weapon_get_review_excerpt.wav",
+  "source": "Audio/Review/mm6-weapon-award-music-review.wav",
+  "sha256": "53935979892fb2e30dc1cebb54b3aa7c09b0135bc7bed3a28efdf70d3993f519",
+  "processing": "Byte-identical approved preview; no gain or trimming changes.",
+  "limitation": "29.9555-second excerpt of continuing track, not a seamless runtime loop. Approval identifies the correct music; does not certify loop boundaries or effects."
+}

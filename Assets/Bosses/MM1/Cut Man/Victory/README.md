@@ -188,3 +188,11 @@ stage0 and06A5=0, and terminates the final RTS via C5E6 because there is no fixt
 caller. No ROM/code/audio injection in the scene. This **does not** establish a
 natural boss-kill caller chain, complete victory timing or airborne MM5 behavior.
 Those remain outstanding, along with the runtime controller and installation.
+
+## Weapon-get music approved
+
+User confirmed **“this is the one”** for the scene-verified16hex music preview.
+`Reference/weapon-get-approval.json` records its unchanged hash; the exact preview
+is preserved in `Audio/Approved/snd_mm6_weapon_get_review_excerpt.wav`.
+This supersedes pending-listening status above, not the loop limitation: seamless
+runtime preparation and integration remain outstanding. No new effects approved.

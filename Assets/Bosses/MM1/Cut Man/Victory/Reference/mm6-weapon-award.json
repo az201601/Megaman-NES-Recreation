@@ -2,7 +2,7 @@
   "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
   "method": "Controlled native coroutine0 entry at3B:BD1B, from natural playable snapshot; banks3A/3B, stage0, acquisition flag06A5=0. No patched ROM/code/audio injections. Final RTS ended via C5E6 because fixture has no caller. Not natural boss defeat.",
   "sceneVerification": "Inspected native rendered frame320: YOU GET B.ATTACK and Mega Man, not boss statistics or castle intro. Later native weapon demonstration.",
-  "approval": "pending",
+  "approval": "User listening approved: this is the one; runtime loop preparation/integration pending",
   "limitations": [
     "Controlled scene entry, not natural final-hit/caller trace.",
     "Music capture is a 30-second excerpt of a continuing track; not a seamless runtime loop.",
