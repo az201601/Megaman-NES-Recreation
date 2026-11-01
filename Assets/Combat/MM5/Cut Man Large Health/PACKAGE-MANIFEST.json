@@ -1,0 +1,45 @@
+{
+  "scope": "Original Cut Man fixed large health world1832,184/band0. Reuse accepted MM5 pickup art/+10 refill/audio. One child Create-only object/one script/manager Create append/two full central script replacements. No room/terrain/camera/player/door/death/shot/enemy/audio changes. Source/model checks, NOT installed GMS acceptance.",
+  "files": [
+    {
+      "path": "Hooks/obj_mm5_combat_create_large_health_append.gml",
+      "bytes": 204,
+      "sha256": "dee6263faab99966be614b2b0fa80d82e124f9e6cb6d6a4583d296483049cbf1"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "bytes": 6891,
+      "sha256": "2b4aa57234816851cb0a379601f6115f16988c0e180ee956f6f42736ae0f7a2a"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_large_health_create.gml",
+      "bytes": 207,
+      "sha256": "3e8241485278838c6109714007df661cf5d27fab8917d0fb59ced0c79d0c6054"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1610,
+      "sha256": "c67cb13f2d22b9bb461ba8a74842a74af9d3d2b5882c28a4007c827298faf4a3"
+    },
+    {
+      "path": "Reference/native-cutman-large-health.json",
+      "bytes": 3437,
+      "sha256": "ddef9415aa1ff0ecdf92cdc96394d9365b98d9c918a702fe602447731e881622"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_large_health_spawn.gml",
+      "bytes": 724,
+      "sha256": "3db828d141c8cd4f8b74440c420194e37781b3dd8a9107f4b382b142faa69155"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 6103,
+      "sha256": "1d6255ed3a09fbf14fe20d95c4a04ad704088ec0a8dafe63be015d84ad5f88df"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_pickup_step.gml",
+      "bytes": 1426,
+      "sha256": "542512b61ea1df24a4cc6c4b17036e00ab3c581a9f9974d9c95b605f9c3a53fa"
+    }
+  ]
+}
