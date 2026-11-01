@@ -1,0 +1,218 @@
+{
+  "method": "Controlled actor0 handoff042A/0413=9145 used by F9B4; stage0,06A5=0,x128,y180,initial velocity0. Natural stage geometry, not boss-room fixture. Original ROM/code; no sound injection or subsequent scene redirects. Runs continuously through real teleport, native main caller, award and demo return. Does not include final hit/clear/centring.",
+  "finished": true,
+  "frames": 1121,
+  "events": [
+    {
+      "frame": 0,
+      "kind": "linked-victory-code",
+      "pc": "9145"
+    },
+    {
+      "frame": 0,
+      "kind": "linked-victory-code",
+      "pc": "9167"
+    },
+    {
+      "frame": 0,
+      "kind": "audio-dispatch",
+      "command": 58
+    },
+    {
+      "frame": 55,
+      "kind": "linked-victory-code",
+      "pc": "91a7"
+    },
+    {
+      "frame": 55,
+      "kind": "audio-dispatch",
+      "command": 95
+    },
+    {
+      "frame": 274,
+      "kind": "linked-victory-code",
+      "pc": "91fe"
+    },
+    {
+      "frame": 274,
+      "kind": "audio-dispatch",
+      "command": 240
+    },
+    {
+      "frame": 275,
+      "kind": "linked-victory-code",
+      "pc": "9237"
+    },
+    {
+      "frame": 275,
+      "kind": "teleport",
+      "pc": "dfb9"
+    },
+    {
+      "frame": 276,
+      "kind": "audio-dispatch",
+      "command": 58
+    },
+    {
+      "frame": 308,
+      "kind": "teleport",
+      "pc": "dff3"
+    },
+    {
+      "frame": 310,
+      "kind": "audio-dispatch",
+      "command": 240
+    },
+    {
+      "frame": 330,
+      "kind": "award",
+      "pc": "bd1b"
+    },
+    {
+      "frame": 338,
+      "kind": "audio-dispatch",
+      "command": 22
+    },
+    {
+      "frame": 436,
+      "kind": "audio-dispatch",
+      "command": 101
+    },
+    {
+      "frame": 534,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 538,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 542,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 546,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 550,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 554,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 558,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 562,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 566,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 570,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 574,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 578,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 582,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 586,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 590,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 705,
+      "kind": "award",
+      "pc": "be42"
+    },
+    {
+      "frame": 791,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 855,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 919,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 983,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 1120,
+      "kind": "award",
+      "pc": "bea9"
+    }
+  ],
+  "limitations": [
+    "No natural final hit, boss room, clear or centre walk in this trace.",
+    "Earlier final-hit/clear/centre evidence remains source-byte audit and isolated native centring trials.",
+    "Attempt to prepend F95A in starting-stage geometry failed: player died/reset; discarded as invalid fixture, not proof of victory behavior."
+  ],
+  "spans": [
+    {
+      "bank": "0x3f",
+      "address": "0xf9b4",
+      "hex": "a9458d2a04a9918d1304a9002030d44c56e4",
+      "name": "Centring/landing continuation installs player9145"
+    },
+    {
+      "bank": "0x38",
+      "address": "0x9237",
+      "hex": "206ddb20b9dfa90185f04c56e4",
+      "name": "Player calls teleport then sets stage-finished flag"
+    },
+    {
+      "bank": "0x3e",
+      "address": "0xdfb9",
+      "hex": "a92a20a4ca202bc6a93a85dc2024e0a200a0662022e5a9",
+      "name": "Teleport animation and sound start"
+    },
+    {
+      "bank": "0x3e",
+      "address": "0xdfec",
+      "hex": "adcb04c908b0e6201be02005e02012e0a9008db1058dc805608a48",
+      "name": "Teleport rises offscreen and exits"
+    }
+  ]
+}

@@ -234,3 +234,42 @@ in `Audio/Approved/snd_mm6_weapon_acquisition_review_excerpt.wav`; approval/hash
 in `Reference/weapon-acquisition-approval.json`. This supersedes pending listening
 status for5F above. Runtime timing/stop ownership remains to implement;65 remains
 rejected and3A is not approved by this confirmation.
+
+## Latest screen/music direction and sequence clarification
+
+User explicitly chose **custom music** for our custom weapon-get screen, retaining
+an MM6-style new-weapon demonstration. The previously identified/approved MM6
+weapon-get music remains a reference, **not the production screen music choice**.
+No custom music has been composed or integrated.
+
+Original normal-stage order supported by supplied-ROM source and component probes:
+final hit/defeat -> boss disappears -> pre-clear wait -> stage-clear13 -> neutral
+wait -> centre walk -> landing/vertical-position check -> player9145 acquisition
+animation (approved5F during energy circles) -> teleport routineDFB9 -> screen.
+Important: stage-clear is NOT an immediate final-hit dispatch in MM6. F95A waits
+for slot8 inactive, F964 loads240 updates (first8 stages), F97E requests13, then
+another240-update wait precedes centring. These constants are source evidence,
+not measured end-to-end onset times. User-described immediate music would be a
+project adaptation, not exact MM6 timing. Full natural-kill/caller trace remains
+unverified; do not claim complete end-to-end runtime validation.
+
+## Linked verification requested by user
+
+`probe-mm6-linked-victory.mjs` now runs continuously from the native player9145
+continuation through energy animation, teleport, **the real main-scene caller**,
+weapon-get screen and weapon demonstration, returning to the real caller. No
+second scene redirect or fake RTS termination. Captured/asserted order:
+
+- frame0: actor9145; frame55: approved5F energy effect;
+- frame274: nativeF0 stops effect; frame275: actualDFB9 teleport routine;
+- frame308: teleport reaches offscreen-exit branchDFF3;
+- frame330: main flow reachesBD1B award; frame338: native16 music;
+- frame705: demo setupBE42; shots791/855/919/983; frame1120: returnBEA9.
+
+These offsets are relative to the **controlled acquisition entry**, not final hit.
+See `Reference/mm6-linked-victory.json` and `mm6-linked-victory-demo.png`.
+The supplied ROM bytes additionally link F9B4->player9145 and player9237->DFB9.
+The earlier clear/centre byte audit still applies. A complete **natural boss kill
+through clear and centre** has NOT been captured. An attempted F95A manager fixture
+in starting-stage geometry killed/reset the player and was discarded; it must not
+be presented as successful end-to-end verification. Implementation remains pending.
