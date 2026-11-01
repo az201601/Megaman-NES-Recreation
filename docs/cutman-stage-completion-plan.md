@@ -733,3 +733,27 @@ latestFreeFallpitreset/retry/E/life. RNG explicitly projectbyteperactiveupdate, 
 originalrastersequence. NO GMSruntimeclaim. Not packaged/installable: final-hit
 MM6victoryowner/control-lock/effects/music/acquisition/weapon-screen/unlock/return
 still missing; installing combat-only now would leave stage unfinished at finalhit.
+
+## MM6 weapon-get path traced; victory audio auditions prepared
+
+Original suppliedMM6 controlled native coroutine0 weapon-get entry80C5 (banks3C/3D,
+Blizzard variant51=0, native scheduler entry fields) runs453frames to its own final
+RTS. No ROM/CHR/palette edits or sound injections in path trace. Not natural boss
+kill/full final-hit sequence. Music10 at16, native acquisition61 at51/71, profile
+setup96, text ticks27 at276..356/every8, finalwait372, routineend452. First animation
+uses current stage background; Blizzard profile/stats are research only, not project
+Cut Man data. Text length will be adapted to Rolling Cutter.
+
+Extracted original13clear3.351s,10weaponget5.981s,61acquisitionflash0.703s for USER
+LISTENING APPROVAL.27texttick reference0.120s uses same identity as already-approved
+MM6 blocked-hit cue; reuse existing snd_mm6_blocked_hit, no new resource approval.
+User's only-new-COMBAT-effect clarification stands:61 is a confirmed VICTORY effect,
+not new battle/appearance SFX. Rejected26 remains absent. Native fullAPU/default
+pan→mono/48k16bit, music2.125/SFX2gain, no clipping, full natural tails.5USA call spans,
+mailbox+actualdriverdispatch/WAVhash/tail/native453frame trace tests PASS. Audition
+only; no runtime import/controller/package yet. Approved throw unchanged.
+
+Controlled entry must use native scheduler, not rawPC redirect at idle33=FF. Finished
+weapon-get fixture unsuitable for isolated audio here; successful takes use original
+natural playable-stage snapshot with F0/uncaptured35 settle and1second exact silence.
+Final-hit owner/MM5control/auto-walk/effects/profile/unlock/return still pending.

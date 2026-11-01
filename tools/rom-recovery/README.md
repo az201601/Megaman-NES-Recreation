@@ -297,3 +297,16 @@ handoff fields and actual Create/world/shot/contact/post/Draw/death scripts unde
 limited engine mocks:1,200update strategy/throw/catch run, tenfullhits, threewhole
 shot_step routes, guards/contact4/deathmusic shutdown/exactlatestbaseline preservation.
 No GMS scheduler/real pause deactivation/audio/victory playtest claim.
+
+## MM6 weapon-get coroutine / victory audio approval
+
+After `probe-mm6-enemy-hit.mjs`, run `probe-mm6-weapon-get.mjs`: one disclosed native
+coroutine0 restart at80C5/banks3C3D/stage0; original453-frame weapon-get routine and
+PPU afterward, final RTS intercepted only to end fixture safely. Not a natural kill.
+`recover-mm6-victory-audio.mjs` uses natural playable-stage snapshot for isolated
+native13/10/61/27 full-tail auditions, exact-silence prerequisite/fullAPU/2.125music/
+2xSFX/no clipping. `test-mm6-victory-audio.mjs` checks5USA spans, WAV hashes/formats/
+natural tails, mailbox+driver dispatches and observed weapon-get cue timing.
+Audio files/evidence/limitations at Cut Man/Victory. Listening approval pending;
+27already approved as blocked-hit identity,61confirmed additional VICTORY effect.
+No runtime imports or completed victory controller are implied.

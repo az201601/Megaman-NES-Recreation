@@ -97,3 +97,85 @@ walking speed, elapsed game frames, collisions, audio or full cutscene playback.
 No new Sound, Sprite, Object, Script or event should be imported from this research
 checkpoint. There is deliberately no Downloads ZIP until executable integration
 and resource dependencies exist.
+
+## Native weapon-get coroutine and audio approval checkpoint
+
+**Still not an installable victory controller.** Original weapon-get path now
+traced through453 original frames from an explicitly controlled entry, and the
+requested music is available for listening approval.
+
+`probe-mm6-weapon-get.mjs` begins with the naturally booted stage snapshot from
+`probe-mm6-enemy-hit.mjs`, releases buttons, sets original banks3C/3D and bank shadows,
+selects original Blizzard stage variant51=0, and restarts native coroutine0 at80C5
+through scheduler fields21/29/2D/34/38. Original routines and PPU run afterward.
+The final8275 RTS is intercepted ONLY after reaching the function end, terminating
+the fixture coroutine through originalC5E6 rather than returning to a nonexistent
+caller. This is NOT a natural boss kill or a complete final-hit-to-select trace.
+
+Observed original events relative to this controlled entry:
+
+-16: music10 dispatch (weapon-get).
+-51 and71: acquisition-flash effect61 dispatch, matching its two original call sites.
+-96: original preparation for the following profile/weapon-information screen.
+-276..356 every8: eleven text-character ticks27 in the Blizzard fixture.
+-372: final text wait begins.
+-452: native weapon-get routine reaches its final RTS (453frames including0).
+
+The first animation retains the current stage background; the Blizzard fixture's
+following profile screen naturally contains Blizzard data/art, NOT approved Cut Man
+stats or a completed project adaptation. Text duration will need adapting to the
+actual Rolling Cutter wording. Never copy Blizzard stats into Cut Man or assume
+this controlled-entry timing certifies the earlier boss-death/auto-walk phases.
+
+### Audio auditions (approval pending, no imports)
+
+- `Audio/Review/mm6-stage-clear-review.wav`: original13,3.35121s.
+- `Audio/Review/mm6-weapon-get-music-review.wav`: original10,5.98123s.
+- `Audio/Review/mm6-weapon-acquisition-flash-review.wav`: original61,0.70325s.
+- `Audio/Review/mm6-weapon-screen-text-tick-review.wav`: original27,0.11990s;
+  reference only. Same cue identity as existing accepted `snd_mm6_blocked_hit`;
+  reuse that existing resource, do not demand a new approval/resource for the tick.
+
+Only the first THREE are new listening approvals. The user was right that the
+throw is the only new COMBAT effect;61 is separately confirmed in the approved
+MM6 VICTORY sequence, not an extra Cut Man fight/appearance sound. Rejected26
+remains absent. Native61 is requested twice20updates apart; the eventual audio
+owner must restart its owned effect, not silently blend two independent full tails.
+
+All48kHz mono16bit, full native APU/default channel panning averaged to mono,
+music gain2.125 and SFX2x, no clipping. Exports retain command lead and natural full
+tail; only exact-zero trailing silence is trimmed to10ms padding. All four commands
+finish naturally within the long capture windows (15/20/5/4seconds), not arbitrary
+music loops. Exact hashes, peaks, original driver dispatches and source-native
+weapon-get trace are in `Reference/mm6-victory-audio.json`.
+
+Reproduction:
+
+```sh
+npm ci --prefix tools/rom-recovery --ignore-scripts
+node tools/rom-recovery/probe-mm6-enemy-hit.mjs
+node tools/rom-recovery/probe-mm6-weapon-get.mjs
+node tools/rom-recovery/recover-mm6-victory-audio.mjs
+node tools/rom-recovery/test-mm6-victory-audio.mjs
+```
+
+Extraction uses the natural playable-stage snapshot (not the finished weapon-get
+fixture), F0 stop plus an uncaptured native35 warmup to settle the known JSNES DC
+residual, then verifies a full second of exact silence. Both mailbox queue and
+original driver entry are traced: ONLY the requested command is dispatched during
+each take. No ROM patch, channel mute, DC subtraction, synthesized notes, stitched
+cues, fade, normalization or stretching.5 original-USA call spans, four WAV hashes/
+formats/tails and controlled-entry event timing checks pass. No GMS audio/runtime
+or user listening approval is implied.
+
+Research pitfalls retained: redirecting the idle CPU with native task33=FF saves
+continuations in the wrong slot; use the native scheduler entry fixture instead.
+The completed weapon-get fixture did not produce isolated audio here, so do not
+reuse it as the extraction source or equate a queued command with audible output.
+The successful stage-snapshot takes independently assert nonzero audio and natural
+release plus exact-silent tail.
+
+Remaining implementation is unchanged: final-hit effects/control owner, original
+pre-clear/post-clear waits, MM5 auto-walk/airborne handling, acquisition/profile
+adaptation, Rolling Cutter unlock/clear persistence/return selection, then a complete
+incremental GMS package. Do NOT install partial combat/victory resources yet.
