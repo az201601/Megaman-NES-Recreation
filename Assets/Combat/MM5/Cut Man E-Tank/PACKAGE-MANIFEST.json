@@ -7,6 +7,11 @@
       "sha256": "b58b636e5be905a201c39608a96680a41df3e11506a4d9fa9bcf93dbdba02205"
     },
     {
+      "path": "HEALTH-COMMIT-FIX.md",
+      "bytes": 2337,
+      "sha256": "6d2c74b6822ece562f71dbf9747f9fbaa7a3681d6680270d6590a6a1215616bd"
+    },
+    {
       "path": "Hooks/obj_mm5_combat_create_e_tank_append.gml",
       "bytes": 177,
       "sha256": "cb437de0401bc82618253f32b43670b8a8f7bc848c9c1ac5ee48afbef9837161"
@@ -18,8 +23,8 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 10783,
-      "sha256": "7e06a487ae24e8bb4d61f49bdf646183526653176140f875cfedc63ff98c5f45"
+      "bytes": 11276,
+      "sha256": "562250ba02160ad799ae26bde0c66af538fe62e558ee06f82d5b3ebdfa39529c"
     },
     {
       "path": "Objects/obj_mm1_cutman_e_tank_create.gml",
@@ -67,6 +72,11 @@
       "sha256": "a824069133a2f7a85cdec9ba3c3470cc03cf499ca8e885ee6b2ffcc42aceb610"
     },
     {
+      "path": "Scripts/scr_mm5_combat_begin.gml",
+      "bytes": 1424,
+      "sha256": "8f5b6d69b934b08942ac396c138aa06512e1b4a0865585c3e3d02ab616ba87aa"
+    },
+    {
       "path": "Scripts/scr_mm5_combat_collect.gml",
       "bytes": 1711,
       "sha256": "41bd0529fd2a773bdd796273934f8cd07ac884f84ecea7f5d6b08118e95c70d1"
@@ -80,6 +90,11 @@
       "path": "Scripts/scr_mm5_combat_pickup_step.gml",
       "bytes": 1467,
       "sha256": "f9a339a83bb86de9c92d3e36aa5a6b61bfcb4f6dbd30dd43f282dd97c2248fd4"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_e_tank_commit.gml",
+      "bytes": 365,
+      "sha256": "2e80ac742f3eb5dbccbf1f44b17b78daa744f86d409df57307132db03a192d75"
     },
     {
       "path": "Scripts/scr_mm5_pause_e_tank_tick.gml",
@@ -98,8 +113,8 @@
     },
     {
       "path": "Scripts/scr_mm5_pause_restore.gml",
-      "bytes": 1863,
-      "sha256": "43eff2dd65b9f26b7034557f8db4c8f22433bd7e8addf7d979e6ca93b1cdaa24"
+      "bytes": 1666,
+      "sha256": "a5c0f4ef1538c81727916aa6d97bb383f689b6a6c4e1206f298030c76ffc286a"
     }
   ]
 }

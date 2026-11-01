@@ -2,6 +2,10 @@
 
 Requires accepted eight enemies/Screw final art, fixed large health, active spikes, Free Fall/Jumping Gates, real MM5 refill/audio and working stage pause controller. Back up your working project and **STOP the runner before installing**. Manual source patch, not a GMX import. Complete all steps before running: new-game inventory initialization defines the persistent collection flag.
 
+## Health-commit correction
+
+Existing installs with animated refill but unchanged live health: follow **HEALTH-COMMIT-FIX.md** (one new Script, two full Script replacements only). Fresh installs must also complete those three resources after the steps below. Pending heal is retained until the exact player is active; combat Begin Step retries before its frame-once guard. Immediate activation visibility is not assumed. Room-End transfer to a destroyed/replacement player is not guaranteed.
+
 ## Approved rules
 
 - ONE E-Tank atop the lone raised Super Arm block after the first cutter dispenser/before the middle outdoor pit: **world1168,1048, camera band960**. Existing block1152,1056/32×32;32px climb from nearby ledge1088. Normal jump reaches it; no Super Arm removal or terrain change.

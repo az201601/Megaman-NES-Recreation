@@ -6,19 +6,13 @@ for (var i = 0; i < ds_list_size(menu_frozen_list); i += 1)
     instance_activate_object(ds_list_find_value(menu_frozen_list, i));
 }
 ds_list_clear(menu_frozen_list);
-// Commit only AFTER exact frozen IDs were activated. Never access inactive player events.
-// Surface-loss/Room-End recovery completes the committed E benefit rather than wasting a tank.
-if (menu_e_tank_pending && instance_exists(menu_player))
-{
-    menu_player.mm5_health = 28;
-    menu_player.mm5_refill_left = 0;
-    menu_player.mm5_refill_wait = 0;
-}
+// Try now; retain pending if activation is not visible until this event finishes.
+// Combat Begin Step retries before any combat/refill/hazard processing.
+scr_mm5_pause_e_tank_commit();
 if (mm5_refill_voice != -1) audio_stop_sound(mm5_refill_voice);
 mm5_refill_voice = -1;
 mm5_refill_left = 0;
 mm5_refill_wait = 0;
-menu_e_tank_pending = false;
 menu_e_tank_refilling = false;
 if (menu_fire_released && instance_exists(menu_player))
 {
