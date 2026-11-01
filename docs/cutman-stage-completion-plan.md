@@ -653,3 +653,18 @@ trace, elapsed rendered timing measurement, recovered/accepted music, or complet
 fight/victory GML. Script handoff to weapon screen, full audio/art recovery, runtime
 integration, source regressions, packaging and GMS installed playtest remain pending.
 Nothing to import from this research-only checkpoint.
+
+## Cut Man decision/animation foundation implemented; integration still pending
+
+`Assets/Bosses/MM1/Cut Man/Combat/` now contains actual GMS1.4 decision, facing and
+animation scripts plus explicit dependency/field contract. All21 native strategy
+IDs5..25 ported; no live object/event changes yet. 12,000 differential cases execute
+original supplied-USA6502 strategy routines and native face/RNG/division/recoil
+helpers against the actual GML. Physics and projectile allocation are disclosed
+stubs; no whole-fight equivalence claim. Native Cut Man recoil resumes14, NOT5
+(previous preliminary research note was incorrect). Rejected26 cue remains absent.
+65,536 original6502-vs-GML animation-counter cases and3,072 source-derived
+sleep/fire/blink cases pass. Native-table/frame selection, art, cutter, collision,
+shots/contact, final-hit victory integration, packaging and installed GMS acceptance
+remain unfinished. Existing entrance/shutter/flash/E source untouched. Do not import
+partial scripts: motion helper intentionally awaits full integration.

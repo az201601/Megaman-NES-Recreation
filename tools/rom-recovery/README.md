@@ -259,3 +259,11 @@ replaced with1/2/3-pixel fixture strides: not a natural kill or speed/timing tes
 Report generated under `.work/mm6-victory/`; committed reference and remaining
 scope: `../../Assets/Bosses/MM1/Cut Man/Victory/README.md`. No installable GML or
 music/sprite extraction is implied by this audit.
+
+## Cut Man boss decision / animation differential
+
+`node tools/rom-recovery/test-cutman-boss-decisions.mjs`: 12,000 supplied-MM1-USA
+original6502-vs-actual-GML strategy cases (disclosed terrain/projectile stubs),
+65,536 native animation-counter cases and3,072 source-derived sleep/fire/blink
+checks. Details and unfinished dependencies:
+`../../Assets/Bosses/MM1/Cut Man/Combat/README.md`. Not an installable fight yet.
