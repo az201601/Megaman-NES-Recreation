@@ -1,6 +1,6 @@
 # Octopus Battery / Suzy — original-ROM research checkpoint
 
-**Research and recovered art only; not a gameplay installer.** The user accepted Flea as working (“very good.. it all works”), then authorized research of this next original enemy. Preserve installed Blader/Blaster/Super Cutter/Flea. No combat, camera, terrain, player, pause or audio resources are changed by this checkpoint. Do not import/place new actors yet.
+**Research and recovered art only; not a gameplay installer.** The user accepted Flea as working (“very good.. it all works”), then authorized research of this next original enemy. Preserve installed Blader/Blaster/Super Cutter/Flea. This research directory itself changes no combat, camera, terrain, player, pause or audio resources. A subsequent additive gameplay package is now prepared separately at `Assets/Combat/MM5/Octopus Battery Checkpoint/`; use its INSTALL-GMS14.md rather than importing this research directory as an installer. User GMS compile/runtime acceptance is pending.
 
 ## Verified behavior
 
@@ -33,4 +33,4 @@ node tools/rom-recovery/recover-octopus-battery-art.mjs
 node tools/rom-recovery/test-octopus-battery-research.mjs
 ```
 
-Next: map all16records to accepted route bands, additive GMS1.4 terrain-aware implementation and5HP/MM5charged combat/drop integration, preserve accepted sounds and ownership, then deliver exact manual resource/event instructions and install ZIP. **None of that is claimed installed or finished by this research checkpoint.**
+Subsequent source integration, mapped16records and manual ZIP/installer are now prepared under `Assets/Combat/MM5/Octopus Battery Checkpoint/`. Its tests separately document measured GML terrain/state matches and explicit project adaptations. **Prepared source/package is not GMS compilation or user-installed runtime acceptance.**

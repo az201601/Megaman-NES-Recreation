@@ -1,0 +1,107 @@
+{
+  "scope": "Additive Octopus Battery manual installer after accepted Blader/Blaster/Super Cutter/Flea combat. User GMS import/compile/runtime pending. No ROM/savestates/audio/building replacements.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_octopus_battery_strip3.png",
+      "source": "Assets/Enemies/MM1/Octopus Battery/spr_mm1_octopus_battery_strip3.png",
+      "bytes": 636,
+      "sha256": "1ece7669f69e712e860d32fdbd79a0fdfce4ac682be5c7dc14829aa2513d7596"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_octopus_battery_append.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Hooks/obj_mm5_combat_create_octopus_battery_append.gml",
+      "bytes": 3572,
+      "sha256": "bbb2b5cdab4acf7766b0d8734a8b0b186886e43624adab80c25e08cdc0d0d6fc"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/INSTALL-GMS14.md",
+      "bytes": 8411,
+      "sha256": "7b15231b5dff93b654b87f4865dbdd6f867dd5390028428fcf85ca1b63dc40d6"
+    },
+    {
+      "path": "Objects/obj_mm1_octopus_battery_create.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Objects/obj_mm1_octopus_battery_create.gml",
+      "bytes": 276,
+      "sha256": "7476555e59cbd72f2d69a2be22f5ff917d86a489356dc8145ec4871676b7c183"
+    },
+    {
+      "path": "Objects/obj_mm1_octopus_battery_draw.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Objects/obj_mm1_octopus_battery_draw.gml",
+      "bytes": 77,
+      "sha256": "7d851098e44bcc864185400044d7d7c7a7103e1ea19d50a6674ea365ec8e7688"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/README.md",
+      "bytes": 5406,
+      "sha256": "df044d37d7ae13c76e7e3746fea707377f06cfc8c14d98072d81b87887f63ffa"
+    },
+    {
+      "path": "Reference/mapped-octopus-battery-anchors.json",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Reference/mapped-octopus-battery-anchors.json",
+      "bytes": 2822,
+      "sha256": "2c87f51ba49274d92e3b2328f1b5624d9365da5a81d614c1de8dbc6a66797cfc"
+    },
+    {
+      "path": "Reference/native-octopus-battery-art.json",
+      "source": "Assets/Enemies/MM1/Octopus Battery/Reference/native-octopus-battery-art.json",
+      "bytes": 2494,
+      "sha256": "eacf2f9702fc4523f1d31fa7e8e8fa219d8c0bb26447a5ebab4641adea3751cc"
+    },
+    {
+      "path": "Reference/native-octopus-battery.json",
+      "source": "Assets/Enemies/MM1/Octopus Battery/Reference/native-octopus-battery.json",
+      "bytes": 731730,
+      "sha256": "68c5cfdacf2c6b19b9a0200e95d67d115f16acfb0b58f4b6649bc726adf4afeb"
+    },
+    {
+      "path": "Scripts/scr_mm1_octopus_battery_contact.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm1_octopus_battery_contact.gml",
+      "bytes": 460,
+      "sha256": "6ffb13c5756c2582775d809c2380b4c130b95b47459b422c67bca3b774d3c6cd"
+    },
+    {
+      "path": "Scripts/scr_mm1_octopus_battery_hit.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm1_octopus_battery_hit.gml",
+      "bytes": 880,
+      "sha256": "f1e95221203391653bcbc796ad3065e79b8c63105504eae0a36fbadda71866b0"
+    },
+    {
+      "path": "Scripts/scr_mm1_octopus_battery_spawn.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm1_octopus_battery_spawn.gml",
+      "bytes": 749,
+      "sha256": "6d366d8b350f28bd9264c1faf3b87ad685949d1c01eb76480fc2e85dfc8baaa6"
+    },
+    {
+      "path": "Scripts/scr_mm1_octopus_battery_state.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm1_octopus_battery_state.gml",
+      "bytes": 835,
+      "sha256": "8b3d87b12fd884d974cce67c404dcb9322ece81ed8d1adf857b43bc2f2505bb1"
+    },
+    {
+      "path": "Scripts/scr_mm1_octopus_battery_step.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm1_octopus_battery_step.gml",
+      "bytes": 1665,
+      "sha256": "84a9ee1c3e9dd3bbb68c466e04c07a1a1cb02009f89b9ad2e1df1ac1eb12ccfe"
+    },
+    {
+      "path": "Scripts/scr_mm1_octopus_battery_world_step.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm1_octopus_battery_world_step.gml",
+      "bytes": 571,
+      "sha256": "bfeec5c5116151ebb975a4cf6c7363988e714cfa30027cd1a7d8fe116982fc41"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 5155,
+      "sha256": "20fd975fff7f6486ff8a231d66f1b74dfc1e0b8cbf3a0287f329d2d2dc29f068"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Octopus Battery Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 3181,
+      "sha256": "dcd82a8e64a7a5ae3dc2a712d28cfb956a324c992d397e193fd3ffda8ad7ed7b"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "mapping": "Accepted Second Gate Passage camera: original page9 in route_section4 at band960/x1280+local; page10/11/12 in route_section5/6/7 at band720/480/240/x1280+local. Scene/camera untouched. Original native records are research evidence; these mapped coordinates are project route adaptations.",
+  "anchors": [
+    {
+      "index": 0,
+      "recordIndex": 21,
+      "nativePage": 9,
+      "x": 1352,
+      "y": 1128,
+      "band": 960,
+      "vertical": true
+    },
+    {
+      "index": 1,
+      "recordIndex": 22,
+      "nativePage": 9,
+      "x": 1384,
+      "y": 1064,
+      "band": 960,
+      "vertical": true
+    },
+    {
+      "index": 2,
+      "recordIndex": 23,
+      "nativePage": 9,
+      "x": 1464,
+      "y": 1096,
+      "band": 960,
+      "vertical": false
+    },
+    {
+      "index": 3,
+      "recordIndex": 24,
+      "nativePage": 10,
+      "x": 1352,
+      "y": 792,
+      "band": 720,
+      "vertical": false
+    },
+    {
+      "index": 4,
+      "recordIndex": 25,
+      "nativePage": 10,
+      "x": 1368,
+      "y": 856,
+      "band": 720,
+      "vertical": true
+    },
+    {
+      "index": 5,
+      "recordIndex": 26,
+      "nativePage": 10,
+      "x": 1400,
+      "y": 824,
+      "band": 720,
+      "vertical": false
+    },
+    {
+      "index": 6,
+      "recordIndex": 27,
+      "nativePage": 10,
+      "x": 1496,
+      "y": 856,
+      "band": 720,
+      "vertical": false
+    },
+    {
+      "index": 7,
+      "recordIndex": 28,
+      "nativePage": 11,
+      "x": 1400,
+      "y": 648,
+      "band": 480,
+      "vertical": false
+    },
+    {
+      "index": 8,
+      "recordIndex": 29,
+      "nativePage": 11,
+      "x": 1416,
+      "y": 664,
+      "band": 480,
+      "vertical": true
+    },
+    {
+      "index": 9,
+      "recordIndex": 30,
+      "nativePage": 11,
+      "x": 1464,
+      "y": 584,
+      "band": 480,
+      "vertical": false
+    },
+    {
+      "index": 10,
+      "recordIndex": 31,
+      "nativePage": 11,
+      "x": 1496,
+      "y": 552,
+      "band": 480,
+      "vertical": false
+    },
+    {
+      "index": 11,
+      "recordIndex": 32,
+      "nativePage": 12,
+      "x": 1320,
+      "y": 312,
+      "band": 240,
+      "vertical": false
+    },
+    {
+      "index": 12,
+      "recordIndex": 33,
+      "nativePage": 12,
+      "x": 1336,
+      "y": 360,
+      "band": 240,
+      "vertical": true
+    },
+    {
+      "index": 13,
+      "recordIndex": 34,
+      "nativePage": 12,
+      "x": 1336,
+      "y": 408,
+      "band": 240,
+      "vertical": false
+    },
+    {
+      "index": 14,
+      "recordIndex": 35,
+      "nativePage": 12,
+      "x": 1416,
+      "y": 376,
+      "band": 240,
+      "vertical": false
+    },
+    {
+      "index": 15,
+      "recordIndex": 36,
+      "nativePage": 12,
+      "x": 1480,
+      "y": 280,
+      "band": 240,
+      "vertical": true
+    }
+  ]
+}

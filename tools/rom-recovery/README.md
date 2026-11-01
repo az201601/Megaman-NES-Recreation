@@ -131,3 +131,17 @@ python tools/rom-recovery/package-flea-combat.py
 `probe-octopus-battery.mjs` uses the ignored firstFlea snapshot and controlled Right/Y36/protected lead-in to first native04vertical/21hex-horizontal spawns. Records1999AI entries and independently checks1996state/timer/reversal/graphics transitions using observed native collision flags; both63/126delays,2pixel axis travel and silence verified. Eight native-B bullets relocated for controlled overlap test all four eye phases for each type: all20->16, **closed eye is vulnerable**. No enemy HP/state/flags patches.295ROMbytes checked,286exact source matches and three annotated USA-vs-J-derived table operands; see scope/controls at `Assets/Enemies/MM1/Octopus Battery/README.md`.
 
 Run `probe-octopus-battery.mjs`, `recover-octopus-battery-art.mjs`, then `test-octopus-battery-research.mjs`. Three independently native-render-matched16×16poses; no new gameplay/audio/terrain resources or installer yet. Local GMS integration/runtime remains future work. No ROM/state/disassembly distributed.
+
+## Octopus Battery additive implementation (supersedes research-only preparation status)
+
+`test-octopus-battery-integration.mjs` loads the new package after all four accepted enemy checkpoints under `OCTOPUS_OVERLAY=1`. Actual GML state and full accepted-terrain movement/state each match1996native transitions for the first vertical/horizontal pair; all16mapped anchors additionally get1000step terrain sojourns. Combat, HP/charge/pierce,7px/contact4, cleanup/freeze/born/oneway/removal/rearm/deflection, source-preservation and built-in-local guards pass. No GMS compiler/runtime or whole-native-metatile/RNG certification.
+
+```sh
+node tools/rom-recovery/test-octopus-battery-integration.mjs
+OCTOPUS_OVERLAY=1 node tools/rom-recovery/test-flea-integration.mjs
+OCTOPUS_OVERLAY=1 node tools/rom-recovery/test-super-cutter-integration.mjs
+OCTOPUS_OVERLAY=1 node tools/rom-recovery/test-blaster-integration.mjs
+python tools/rom-recovery/package-octopus-battery-combat.py
+```
+
+`package-octopus-battery-combat.py` emits deterministic18file ZIP plus manifest/CRC/exact-copy checks; no ROM/emulator states/audio/scenery replacement. Follow `Assets/Combat/MM5/Octopus Battery Checkpoint/INSTALL-GMS14.md`. The package is prepared, not installed merely because source tests pass.
