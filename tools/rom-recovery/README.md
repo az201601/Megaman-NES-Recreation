@@ -112,3 +112,16 @@ The optional `SUPER_CUTTER_OVERLAY=1` loads accepted Blaster then additive cutte
 ## Flea original-game research (not a gameplay installer)
 
 `probe-flea-gameplay.mjs` starts from the existing ignored fourth-ladder snapshot, releases ladder with native A, then uses controlled high-Y/protected Right approach to first original page8Flea spawn. Saves ignored frame-boundary `.work/flea-before-first-ai.json`. Five controlled600-update original-AI trials produce public215ROM-byte evidence and2708state entries, both native RNG hop choices,45landings/15-update waits,499air skips and no sound issue calls. `recover-flea-art.mjs` independently native-render-matches both grounded/extended-spring poses. `test-flea-research.mjs` checks ROM spans, traces, mapped anchors and strip hashes. Run these three scripts in that order. No gameplay/installation or GMS-runtime completion implied; scope at `Assets/Enemies/MM1/Flea/README.md`.
+
+## Flea additive gameplay package (research-only status superseded)
+
+`test-flea-integration.mjs` overlays the new `Assets/Combat/MM5/Flea Checkpoint/` on accepted Blader/Blaster/Super Cutter sources in the limited actual-GML adapter. Checks1369native free transitions/614grounded/498skips plus explicit rectangular-terrain boundary and accepted3support fixtures; new spawning/hits/contact/drop/cleanup/freeze/deflection and built-in-local guards pass. All old central-script lines preserved outside additive calls. Not the GMS compiler/runner or complete native metatile solver proof.
+
+```sh
+node tools/rom-recovery/test-flea-integration.mjs
+FLEA_OVERLAY=1 node tools/rom-recovery/test-super-cutter-integration.mjs
+FLEA_OVERLAY=1 node tools/rom-recovery/test-blaster-integration.mjs
+python tools/rom-recovery/package-flea-combat.py
+```
+
+`FLEA_OVERLAY=1` layers all three earlier checkpoints before Flea and retains the407base checks. `package-flea-combat.py` writes deterministic16file ZIP/manifest with original evidence/art and manual folder/resource/object/event instructions; no ROM/save-state/audio/scenery replacement. Local GMS compile/playtest acceptance pending. Follow INSTALL-GMS14.md, not historical research-only guidance.

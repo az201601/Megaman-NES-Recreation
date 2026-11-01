@@ -4,17 +4,23 @@ import fs from'node:fs';import assert from'node:assert/strict';
 const root=new URL('../../',import.meta.url),base=new URL('Assets/Combat/MM5/Blader Checkpoint/',root),sources=new Map();
 for(const dir of['Scripts','Objects','Player','Hooks'])for(const f of fs.readdirSync(new URL(dir+'/',base)))if(f.endsWith('.gml'))sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,base),'utf8'));
 // Optional additive checkpoint overlay; default still tests the accepted Blader package.
-if (process.env.BLASTER_OVERLAY === '1' || process.env.SUPER_CUTTER_OVERLAY === '1') {
+if (process.env.BLASTER_OVERLAY === '1' || process.env.SUPER_CUTTER_OVERLAY === '1' || process.env.FLEA_OVERLAY === '1') {
  const overlay=new URL('Assets/Combat/MM5/Blaster Checkpoint/',root);
  for(const dir of ['Scripts','Objects']) for(const f of fs.readdirSync(new URL(dir+'/',overlay)))
   if(f.endsWith('.gml')) sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,overlay),'utf8'));
  sources.set('obj_mm5_combat_create',sources.get('obj_mm5_combat_create')+'\n'+fs.readFileSync(new URL('Hooks/obj_mm5_combat_create_blaster_append.gml',overlay),'utf8'));
 }
-if (process.env.SUPER_CUTTER_OVERLAY === '1') {
+if (process.env.SUPER_CUTTER_OVERLAY === '1' || process.env.FLEA_OVERLAY === '1') {
  const overlay=new URL('Assets/Combat/MM5/Super Cutter Checkpoint/',root);
  for(const dir of ['Scripts','Objects']) for(const f of fs.readdirSync(new URL(dir+'/',overlay)))
   if(f.endsWith('.gml')) sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,overlay),'utf8'));
  sources.set('obj_mm5_combat_create',sources.get('obj_mm5_combat_create')+'\n'+fs.readFileSync(new URL('Hooks/obj_mm5_combat_create_super_cutter_append.gml',overlay),'utf8'));
+}
+if (process.env.FLEA_OVERLAY === '1') {
+ const overlay=new URL('Assets/Combat/MM5/Flea Checkpoint/',root);
+ for(const dir of ['Scripts','Objects']) for(const f of fs.readdirSync(new URL(dir+'/',overlay)))
+  if(f.endsWith('.gml')) sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,overlay),'utf8'));
+ sources.set('obj_mm5_combat_create',sources.get('obj_mm5_combat_create')+'\n'+fs.readFileSync(new URL('Hooks/obj_mm5_combat_create_flea_append.gml',overlay),'utf8'));
 }
 function adapt(s){s=s.replace(/\/\/[^\n]*/g,'').replace(/\bmod\b/g,'%').replace(/\$([0-9a-f]+)/gi,'0x$1').replace(/\bexit\s*;/g,'return;');let start=0;while(true){const re=/\bwith\s*\(/g;re.lastIndex=start;const m=re.exec(s);if(!m)break;let a=re.lastIndex,d=1,z=a;while(d){if(s[z]==='(')d++;if(s[z]===')')d--;z++;}const expr=s.slice(a,z-1);while(/\s/.test(s[z]))z++;let body,end;if(s[z]==='{'){let k=z+1,dep=1;while(dep){if(s[k]==='{')dep++;if(s[k]==='}')dep--;k++;}body=s.slice(z+1,k-1);end=k;}else{end=s.indexOf(';',z)+1;body=s.slice(z,end);}const replacement=`__with(${expr},function(__ctx){with(__ctx){${adapt(body)}}});`;s=s.slice(0,m.index)+replacement+s.slice(end);start=m.index+replacement.length;}return s;}
 const compiled=new Map([...sources].map(([k,s])=>[k,new Function('env','with(env){'+adapt(s)+'}') ]));

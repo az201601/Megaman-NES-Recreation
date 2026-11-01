@@ -1,6 +1,6 @@
 # Flea — original-game research checkpoint (not a gameplay installer)
 
-Super Cutter's corrected GMS1.4 package is user-accepted as working. The user authorized research of the next new enemy in original encounter order: Flea/type02, three robots on native page8 after the first dispenser. This directory adds **reference evidence and recovered art only**. No gameplay scripts, room actors, install ZIP or changes to accepted combat are supplied here yet.
+Super Cutter's corrected GMS1.4 package is user-accepted as working. The user authorized research of the next new enemy in original encounter order: Flea/type02, three robots on native page8 after the first dispenser. This directory adds **reference evidence and recovered art only**. This reference directory itself supplies no room actors or gameplay scripts. The subsequent additive gameplay package is now prepared separately at `Assets/Combat/MM5/Flea Checkpoint/`; follow its INSTALL-GMS14.md rather than treating this research directory as an installer. User GMS compilation/installed acceptance is pending.
 
 ## Verified findings
 
@@ -28,4 +28,4 @@ node tools/rom-recovery/recover-flea-art.mjs
 node tools/rom-recovery/test-flea-research.mjs
 ```
 
-Next work is additive GMS1.4 integration, terrain/ceiling/floor probes, shared airborne skip phase, MM5 normal/mid/full hits/drops and preservation tests, followed by manual installation and user runtime confirmation. None is claimed complete by this research checkpoint.
+Subsequent additive GMS1.4 integration and source/mock tests are now prepared under `Assets/Combat/MM5/Flea Checkpoint/`, including explicit rectangular-terrain adaptations. This does not make the research trials a GMS runtime certification. Manual installation and user confirmation remain pending.
