@@ -54,7 +54,7 @@
   "effects": [
     {
       "id": 38,
-      "file": "Audio/snd_mm1_cutman_boss_appear.wav",
+      "file": "Audio/snd_mm1_cutman_boss_scissors.wav",
       "firstNonzero": 1631,
       "trimStart": 1535,
       "trimEnd": 15331,

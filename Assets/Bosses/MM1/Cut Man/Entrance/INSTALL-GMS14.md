@@ -4,6 +4,12 @@
 
 This replaces only the second door's temporary empty-room control return. Opening art/cue/cadence, walking/jumping entry and scrolling remain unchanged. At its age120 room commit, music changes and control stays held for the researched entrance. New INCOMING shutter closes at world3072,816, not the old outgoing doorway3056,816. No terrain/room/editor changes.
 
+## Sound-name clarification (existing installs)
+
+There is NO separate generic boss-appearance/teleport sound. The original Cut Man initializer requests26hex, the **scissors** effect. A new native-entrance driver trace confirms request379/dispatch380, without injecting or isolating sound requests. My earlier `snd_mm1_cutman_boss_appear` label was misleading. The WAV is the same native26 scissors take, not an invented spawn cue.
+
+This update renames it **snd_mm1_cutman_boss_scissors**; audio bytes/playback timing are unchanged. Existing installs can simply retain the old resource/code if desired (identical playback). To match current names: STOP runner, rename the old Sound resource to `snd_mm1_cutman_boss_scissors`, then replace ONLY Script `scr_mm1_cutman_boss_entrance_step` with the current complete file. If not imported yet, use the new name below. No other events/appends/PCM reimport needed. Internal `route_boss_appear_voice` field kept for compatibility; no new variable initialization required.
+
 ## 1 — THREE new Sprites
 
 Folder **Sprites → MM1 → Bosses → Cut Man → Entrance**. Exact resource names:
@@ -19,10 +25,10 @@ For strips: Edit Sprite → File → Create from Strip, specified counts/cell di
 ## 2 — TWO new Sounds and TWO Included Files
 
 **Sounds → MM1 → Bosses → Cut Man → Entrance**:
-- `snd_mm1_cutman_boss_appear` ← matching Audio WAV.
+- `snd_mm1_cutman_boss_scissors` ← matching Audio WAV.
 - `snd_mm1_cutman_boss_fill` ← matching Audio WAV.
 
-New audio engine; uncompressed WAV, preload, volume1, pitch1, no looping/effects. Existing approved `snd_mm5_gate_open` reused for new shutter closing, no reimport/change. MM1 native door uses24hex, but project deliberately retains the approved MM5 gate cue. New native26 appearance/18 meter cues are isolated full-APU takes at accepted2×effects gain, exact-silence trimmed, no invented audio.
+New audio engine; uncompressed WAV, preload, volume1, pitch1, no looping/effects. Existing approved `snd_mm5_gate_open` reused for new shutter closing, no reimport/change. MM1 native door uses24hex, but project deliberately retains the approved MM5 gate cue. New native26 scissors/18 meter cues are isolated full-APU takes at accepted2×effects gain, exact-silence trimmed, no invented audio.
 
 **Included Files → MM1 → Bosses → Cut Man → Playback** (organize in IDE, but export paths MUST be root):
 - `Playback/mm1_cutman_boss_intro.pcm`
@@ -90,7 +96,7 @@ Keep pause Create/BeginStep/Step/restore/E commit/combat_begin from your latest 
 
 - Existing stage music, first door and both walking/jumping entries remain unchanged. Reach second door normally. Camera scroll must match accepted opening. At room commit Mega Man stays on entry platform, camera3072,720; no teleport down to Cut Man's lower floor.
 - Stage music stops once and boss musical opening begins once. Native boss meter appears empty at40,25. There is an intentional ~3second wait BEFORE incoming shutter closes; not a stuck transition.
-- Relative to room commit: shutter sound183, visible top-down closing strips184/190/196/202; appearance cue208/body209, two original scissors poses alternate; first health unit211/every2 through full28 at265; seven fill cues217..265/every8. Native rendering has one-frame OAM latency; GML GUI shows current health directly. Control returns303 (about5seconds after room commit), NOT as soon as meter full.
+- Relative to room commit: shutter sound183, visible top-down closing strips184/190/196/202; scissors cue208/body209, two original scissors poses alternate; first health unit211/every2 through full28 at265; seven fill cues217..265/every8. Native rendering has one-frame OAM latency; GML GUI shows current health directly. Control returns303 (about5seconds after room commit), NOT as soon as meter full.
 - Hold/release/repress fire through intro; accepted charge/rearm policy retained. Start during intro must not open pause or interrupt it; hold movement/jump must not move Mega Man during lock. After intro, fresh Start opens normal pause.
 - Pause after intro >30seconds, then resume: boss music continues its main phrase, never repeats opening/runs out; boss actor freezes; boss meter appears in cached closing stage; E heal remains real after unpause; player/charge/fire transitions unchanged.
 - Leave/restart room: no leaked boss music/duplicate queues; entry starts fresh. Missing PCM should give explicit error, not silent substitute. Both PCM filenames/rate/root export must match.

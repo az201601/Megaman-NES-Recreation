@@ -17,11 +17,6 @@
       "sha256": "2a0611dafe7fa1b52311db3bac7c84ea1739a556edb5b94b4e90e086a07c8295"
     },
     {
-      "path": "Audio/snd_mm1_cutman_boss_appear.wav",
-      "bytes": 27636,
-      "sha256": "6d38a8c61c5dc5958bd516a36a31f0caf35d22ac5f365a94723c5cb8c5b45b79"
-    },
-    {
       "path": "Audio/snd_mm1_cutman_boss_fill.wav",
       "bytes": 20962,
       "sha256": "3b7e9b6227a89135834663db684c80b27a1a1094b17ffea536c22e05dd9495b8"
@@ -37,6 +32,11 @@
       "sha256": "9cc5be542eaac38c7a4a39609c6b6440d0daa3a458da9e3a4e39654121053578"
     },
     {
+      "path": "Audio/snd_mm1_cutman_boss_scissors.wav",
+      "bytes": 27636,
+      "sha256": "6d38a8c61c5dc5958bd516a36a31f0caf35d22ac5f365a94723c5cb8c5b45b79"
+    },
+    {
       "path": "Hooks/obj_mm1_cutman_camera_cleanup_append.gml",
       "bytes": 424,
       "sha256": "3738a6a01afd353a09d770a494d2f3be9317568cf361e809c5de0981a3459f91"
@@ -48,8 +48,8 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 11159,
-      "sha256": "d0476baec6aaa2168665122d72194e9dbce434633844ffae22e9adce7dc2aca6"
+      "bytes": 12172,
+      "sha256": "e22c94e0aa55a71571017f0c681ab75799f594a117e826c846f6429d0278f8ec"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_create.gml",
@@ -113,18 +113,23 @@
     },
     {
       "path": "README.md",
-      "bytes": 2754,
-      "sha256": "d3f0d85579ac44909497c66e0196341b466d1b4d8152f65ba7fc0e8205764d9e"
+      "bytes": 3204,
+      "sha256": "cf5bb659c214f31332d63806ebaa6b3b24cd5bff3bf3605a7118bd2b2ffdcce8"
     },
     {
       "path": "Reference/native-audio.json",
-      "bytes": 2848,
-      "sha256": "e4a32f06b19b3ad50d3a8e13b34d57b483a819d84c1ca7dbde5d47af6c6543b4"
+      "bytes": 2850,
+      "sha256": "aab68ca783befa1a81989121971575aefe796194ac8b9031b100f9af71f157d7"
     },
     {
       "path": "Reference/native-entrance.json",
       "bytes": 247332,
       "sha256": "3cfc2de145135ebd70143538f354456a7e5329b5379fdb861ced1da9a6055962"
+    },
+    {
+      "path": "Reference/native-scissors-verification.json",
+      "bytes": 5468,
+      "sha256": "6becf3f4fea63781633488f3fc74a2f8cc09b62acccbb78e0422723319d335e2"
     },
     {
       "path": "Scripts/scr_mm1_cutman_boss_entrance_start.gml",
@@ -133,8 +138,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_boss_entrance_step.gml",
-      "bytes": 2320,
-      "sha256": "4b447e5d7a95bb3b189341baddfbaff5972c2924dc4b6dd2bd5d317ecbf1ccca"
+      "bytes": 2322,
+      "sha256": "8b950c319f29de1e17fcdae06b18894ff631df2451bd90c68cbda94c76c6828a"
     },
     {
       "path": "Scripts/scr_mm1_cutman_boss_music_dispose.gml",
