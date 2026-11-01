@@ -206,3 +206,22 @@ begins at195. This is separate from text ticks37, music16, and withdrawn61.
 2x gain, no clipping, natural tail followed by silence. Provenance and native
 sound dispatcher checks: `Reference/mm6-weapon-acquisition-effect.json`.
 **Listening approval pending; no runtime integration.** Music approvals unchanged.
+
+## Correction: requested effect is BEFORE the weapon-get screen
+
+User rejected65: they mean the in-room sequence after centre walking, before the
+YOU GET screen.65 remains unapproved; its prior candidate interpretation is withdrawn.
+
+Following F9B4 installs player continuation38:9145. This continuation requests3A
+at9167, launches the player upward, then requests5F at91A7 when vertical velocity
+is nonnegative and Y>=78hex, spawns four animated entities, waits, then requestsF0.
+`probe-mm6-pre-award.mjs` runs that original actor continuation using a disclosed
+x128/y180/stage0/06A5=0 fixture in natural stage geometry (NOT a natural boss kill).
+Observed3A frame0,5F frame55,F0 frame274; transition reached275.
+`Reference/mm6-pre-award-energy-animation.png` shows the player/energy circles;
+trace is `Reference/mm6-pre-award-trace.json`.
+
+`Audio/Review/mm6-pre-award-energy-animation-review.wav` is5F, full native APU,
+2x gain, no clipping. **Timed219-update excerpt, NOT a natural-tail or loop claim**:
+the native scene interrupts it withF0. Listening approval pending.3A is separately
+observed at the start, not silently combined with5F. Approved music unchanged.

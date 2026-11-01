@@ -1,0 +1,29 @@
+{
+  "method": "Full native APU export from playable snapshot, requested3A/5F separately after silence/warmup. Native actor9145 is installed by F9B4 after centring/landing; controlled pre-award probe observes3A at9167 and5F at91A7, thenF0 before transition. Stage geometry fixture, not natural boss kill. Listening approval pending; not integrated.",
+  "files": [
+    {
+      "id": "0x5f",
+      "file": "Audio/Review/mm6-pre-award-energy-animation-review.wav",
+      "framesCaptured": 219,
+      "endsNaturally": false,
+      "firstSample": 1168,
+      "lastNonzero": 174939,
+      "seconds": 3.6445833333333333,
+      "gain": 2,
+      "peak": 0.16412353515625,
+      "sha256": "c72f2ebd5e6dfe4f441213f11e4abe9cfaa9def2fccdfdc9464a8479e42d2847",
+      "dispatch": [
+        {
+          "frame": 0,
+          "command": 95
+        }
+      ],
+      "driverDispatch": [
+        {
+          "frame": 0,
+          "command": 95
+        }
+      ]
+    }
+  ]
+}
