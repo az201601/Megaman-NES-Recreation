@@ -716,3 +716,20 @@ adapter with63blink/shot absorption and immediate once-only final-hit combat/cut
 shutdown;261 actual-GML balance/latch checks pass. Neither native flight timing nor
 GMS runtime claimed. Actor/central shot/contact/update ordering and MM6 victory/
 weapon-screen integration still pending, no installable package. Entrance untouched.
+
+## Actor/shot/contact/animation/death adapters connected in source
+
+Added existing boss Create/ordinaryDraw replacements, four manager helpers and full
+latest-baseline end_frame/shot_step/death replacements in Combat, NOT overwriting
+accepted Entrance/E sources. Sharedclock guards; world→shots→contacts→animation;
+original damage4/body8x12/cutter6x6; fullshot absorbed; finalhit disablescontacts.
+Nativehandoff473 strategy5/pose27/counter3/fire0/FFC0 verified. Expanded native art
+fixtures27/28/88:56PPUfixtures,still34unique frames; generatedlookups refreshed.
+Actual-GML1,200-update connected mocked simulation exercises15strategystates,
+throws/catches, tenfullhits, threewhole-shotstep routes, contact4, duplicateclock/
+guards/read-onlyDraw/deathcleanup.16groupedchecks+exactbaseline preservation pass.
+New deathhook disposes independent bossPCMowner (not just oldstagevoice), preserves
+latestFreeFallpitreset/retry/E/life. RNG explicitly projectbyteperactiveupdate, not
+originalrastersequence. NO GMSruntimeclaim. Not packaged/installable: final-hit
+MM6victoryowner/control-lock/effects/music/acquisition/weapon-screen/unlock/return
+still missing; installing combat-only now would leave stage unfinished at finalhit.

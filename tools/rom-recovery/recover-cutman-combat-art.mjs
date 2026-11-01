@@ -14,7 +14,7 @@ const snap=JSON.parse(fs.readFileSync(new URL('./.work/cutman-boss-entrance/fram
 let pixels;const n=new NES({emulateSound:false,onFrame:p=>pixels=p.slice()});n.loadROM(rom.toString('binary'));
 const frames=new Map(),animations=[],fixtures=[];
 fs.mkdirSync(new URL('Art/',base),{recursive:true});
-for(const {pose,hurt} of [...[63,64,65,66,67,68,69,70,71,87].map(pose=>({pose,hurt:false})),{pose:87,hurt:true}]){
+for(const {pose,hurt} of [...[27,28,63,64,65,66,67,68,69,70,71,87,88].map(pose=>({pose,hurt:false})),{pose:87,hurt:true}]){
  const pointer=rw(0x8186+pose*2),header=rb(pointer),count=(header>>4)+1,animation={pose,hurt,pointer,header,frames:[]};
  assert.ok(count<=8&&count>=1);
  for(let index=0;index<count;index++)for(const right of[false,true]){

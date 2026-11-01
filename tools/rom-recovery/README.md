@@ -289,3 +289,11 @@ header/frame mapping. `test-cutman-cutter.mjs` additionally runs3,000 original D
 allocation/aim/throw25 comparisons and4,000 projectile arithmetic cases.
 `test-cutman-boss-hit.mjs` checks261 project-policy1/1/3/HP28/flash/shot-consumption/
 final-hit-latch cases. These are not a complete live fight or GMS runtime test.
+
+`build-cutman-combat-lookups.mjs` regenerates GML header/frame scripts from native
+combat-art.json. Art recovery now includes handoff poses27/28 and hurt+fire88:
+56originalPPU fixtures,34uniqueframes. `test-cutman-live-adapters.mjs` checks native
+handoff fields and actual Create/world/shot/contact/post/Draw/death scripts under
+limited engine mocks:1,200update strategy/throw/catch run, tenfullhits, threewhole
+shot_step routes, guards/contact4/deathmusic shutdown/exactlatestbaseline preservation.
+No GMS scheduler/real pause deactivation/audio/victory playtest claim.

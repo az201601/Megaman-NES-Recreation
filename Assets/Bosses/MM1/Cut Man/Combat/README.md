@@ -189,7 +189,7 @@ MM6 victory remain unfinished. Accepted entrance and audio bytes are unchanged.
 
 New `Art/spr_mm1_cutman_combat_strip34.png`:34frames48x64, origin24,32. Includes
 explicit left/right facings, head/no-head-cutter variants, cutter and native hurt
-metasprite. `Reference/combat-art.json` records48 controlled original-renderer
+metasprite. `Reference/combat-art.json` records56 controlled original-renderer
 fixtures: native frame473 snapshot, force actor pose/counter/position/facing and
 lifecycle1 for two original frames, export OAM cells and independently compare
 EVERY opaque output pixel to completed native PPU output. No CHR/ROM/palette edits.
@@ -202,7 +202,7 @@ mirroring; transparent margins must not be cropped.
 `scr_mm1_cutman_animation_sprite` maps effective pose/pre-advance frame/facing/hurt
 to verified sprite-strip index. Select pose+floor(fire/16) BEFORE fire decrement;
 use pre-advance counter/hurt sample. Native hurt rendering is a separate metasprite,
-not an invented white tint of the walking body. Mapping checks cover all48fixtures.
+not an invented white tint of the walking body. Mapping checks now cover all56fixtures, including native intro handoff poses27/28 and hurt+fire pose88.
 
 `scr_mm1_cutman_cutter_throw`: integer spawn boss±8,Y−10, zero fractions, copies
 PRE-search facing, then native aim from original target-distance inputs. Sets
@@ -234,3 +234,61 @@ routing, pause/E/death cleanup and the MM6 final-hit/weapon-get controller remai
 to be connected and tested. In particular don't run animation in Draw, advance
 blink before hit processing, or give the cutter a second independent Step. All
 accepted entrance resources and approved audio bytes remain unchanged.
+
+
+## Actor and central-combat adapters connected in source
+
+New full Create/ordinary Draw replacements for the EXISTING `obj_mm1_cutman_boss`
+are under `Objects/`. Create retains every accepted entrance line, then initializes
+combat fields. Initial native strategy5, pose27, counter3, fire0 and Y speedFFC0
+match supplied original entrance snapshot473; combat activates only after the
+existing `boss_intro_complete` flag. There is intentionally NO actor/cutter Step.
+New ordinary Draw is read-only, uses old entrance Draw until activation, then
+explicit native-facing body/cutter frame mappings. Existing Draw GUI meter unchanged.
+
+Added controller scripts `boss_world_step`, `boss_contact`, `boss_post_frame`,
+`boss_stop_combat`. Full replacement central `scr_mm5_combat_end_frame` preserves
+the latest accepted E-Tank version exactly except three calls: world before shots,
+contact after shots, animation after contacts. Full replacement shot_step preserves
+the latest Screw Bomber version exactly except Cut Man collision routing (+4Y for
+its12-high body). The cutter is not an invented shootable target. Each controller
+phase has a shared combat_tick guard; pause/refill/death/startup guards preserve
+clock ownership. Native combat world order is boss AI then projectile motion;
+newly allocated cutter moves during that same active update.
+
+Contact uses verified original USA boss override FEBB[0]=4 and body8x12/cutter6x6
+bounds, through the established shared MM5 damage helper. Player thresholds follow
+the existing enemy-contact adapter: player8x12 standing/8x5 sliding. These are
+project rectangle thresholds, not certification of exact MM5 native probes.
+
+RNG is an explicit project adaptation: one `irandom(255)` per active boss update,
+shared by its decisions; NOT an identical raster-dependent original random-seed
+sequence. Phase uses the shared combat clock, not wall time or independent Steps.
+
+Player-death replacement is based on latest Free Fall `scr_mm5_combat_die`, including
+its pit-death reset. Only one boss-shutdown call is added after charge shutdown.
+It clears active cutter/combat and disposes the independent queued boss music via
+the existing idempotent owner helper. Existing stage stop/death cue/retry/life/
+E-Tank persistence are unchanged. Merely stopping the old stage voice would NOT
+have stopped the new boss music.
+
+`test-cutman-live-adapters.mjs` executes actual Create/world/contact/post/Draw,
+actual full shot_step and actual death adapter under limited engine mocks. Checks
+native handoff fields, duplicate-tick guards, pause/refill/death/startup guards,
+1,200 active unhit updates (15 strategy states,12 total throws/7 catches across the
+fixture plus subsequent hit trial), ten full hits to final-hit shutdown, three
+actual whole-shot-step damage routes, contact4, read-only Draw, single death cue/
+music disposal and exact baseline preservation.16 grouped checks pass. No full
+GMS scheduler/instance deactivation/player/camera/queued-audio runtime claim.
+
+Art recovery now includes original handoff poses27/28 and hurt-with-cutter pose88:
+56 original PPU pose/facing fixtures, still34 unique frames (shared graphics dedup).
+Use `build-cutman-combat-lookups.mjs` after recovery to regenerate GML mappings.
+
+**Not yet installable:** final-hit currently stops combat and leaves
+`cm_defeat_pending` for the missing MM6 victory owner. Installing these replacements
+alone would leave the stage unfinished after the last hit. Next is that owner,
+player-control lock/auto-walk, defeat effects, MM6 music approval, acquisition/
+weapon screen and Rolling Cutter unlock/return-selection, followed by a complete
+incremental package and installed GMS playtest. Do not import this partial adapter
+checkpoint or replace the working E-Tank/entrance files yet.
