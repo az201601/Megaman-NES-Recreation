@@ -53,8 +53,8 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 14081,
-      "sha256": "394959d7b7715cd2f5a2c4c738267a68f50ea5a255e03a6abba6c747f5086471"
+      "bytes": 11666,
+      "sha256": "71c674c7c335589294e8c3d9f8c9668f865221fcfb3221f5b69408ae5f600d01"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_create.gml",

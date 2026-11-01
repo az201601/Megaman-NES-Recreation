@@ -4,19 +4,11 @@
 
 This replaces only the second door's temporary empty-room control return. Opening art/cue/cadence, walking/jumping entry and scrolling remain unchanged. At its age120 room commit, music changes and control stays held for the researched entrance. New INCOMING shutter closes at world3072,816, not the old outgoing doorway3056,816. No terrain/room/editor changes.
 
-## Current correction: REMOVE disputed standalone cue
+## Start here: fresh installation after working E-Tanks
 
-User supplied a fight video and reports not hearing the exported cue. Its isolated sound-driver capture was NOT verified as an audible match to the native mixed fight. Earlier descriptions calling the exported WAV a verified appearance/head-scissors effect were overstated. **The current entrance does NOT play it.** No replacement effect is substituted.
+Use this guide from step1 if you have installed NOTHING since E-Tanks worked. Ignore all earlier boss-package rename/correction messages. This package already removes the disputed sound. **Do not import any appear/scissors/full-tail-check WAV.** The only new Sound resource is `snd_mm1_cutman_boss_fill`; music uses the two PCM Included Files below.
 
-**Existing installs:** STOP runner. Replace ONLY Script **scr_mm1_cutman_boss_entrance_step** with the current complete file. No other event/appends/PCM changes. Existing `snd_mm1_cutman_boss_appear` or `snd_mm1_cutman_boss_scissors` resources may remain unused; no need to rename/reimport them. Camera's old voice field stays initialized at-1 for compatibility. Boss music, door, meter fill, sprites and timings unchanged.
-
-**Fresh installs:** import only the fill Sound in step2. Scissors WAV/full-tail check are disputed research references, NOT required runtime resources. Do not play them manually at boss appearance. Historical ROM request/dispatch evidence is not proof that the isolated waveform is perceptually correct in the native mixed scene. YouTube not accessible in this workspace; no claim video was watched.
-
-## Earlier sound-name clarification (superseded for playback)
-
-There is NO separate generic boss-appearance/teleport sound. The original Cut Man initializer requests26hex, the **scissors** effect. A new native-entrance driver trace confirms request379/dispatch380, without injecting or isolating sound requests. My earlier `snd_mm1_cutman_boss_appear` label was misleading. The WAV is the same native26 scissors take, not an invented spawn cue.
-
-This update renames it **snd_mm1_cutman_boss_scissors**; audio bytes/playback timing are unchanged. Existing installs can simply retain the old resource/code if desired (identical playback). To match current names: STOP runner, rename the old Sound resource to `snd_mm1_cutman_boss_scissors`, then replace ONLY Script `scr_mm1_cutman_boss_entrance_step` with the current complete file. If not imported yet, use the new name below. No other events/appends/PCM reimport needed. Internal `route_boss_appear_voice` field kept for compatibility; no new variable initialization required.
+Keep your working E-Tank scripts, inventory initializer and health-commit fix. No E-Tank installation steps need repeating. Install the boss resources below once; no room placements or terrain edits.
 
 ## 1 — THREE new Sprites
 
@@ -117,7 +109,3 @@ Native entrance probe fresh-boots supplied MM1USA then discloses ONE original ch
 Native music0D is separately recaptured with only its native driver request after complete silence. Pointer first loop arrival373, returns757/1141; all four pointers match on successive384frame returns. One-time opening + immutable sample queue loop, not frame-timed looping. Full-APU masters include emulator filtering; independent music/SFX mixing is NOT native channel stealing. Sound/loop seams/new original cues still need listening approval. Existing opening MM5 cue deliberately retained for closing; not native-MM1 door audio claim.
 
 606 actual-GML intro ticks (held/released fire), native sprites/meters/timing/spans, music/WAV/PCM, queue ownership/idempotence, camera source-preservation and pause cache/guard tests pass. Limited mocks are NOT GMS1.4 compilation, event ordering, collision, async/GPU/audio or user acceptance. Compile/playtest before accepting. Boss combat not implemented.
-
-### Important distinction: head/taunt cue is NOT the throw sound
-
-User correctly identified that the supplied short26hex cue is unlike Rolling Cutter throwing. Original CutmanThrowScissor atDFB4 explicitly requests **25hex** (a9252077c4 verified in supplied USA ROM). Short26 is used by boss initialization and the stand/make-noise behaviour atDF64; original execution to650updates verifies both call paths. Do NOT use the current26 WAV as a throwing sound or stretch/repeat it into25. Current resource name retained for installed compatibility; earlier broad "scissors sound" identification was insufficient. Throw audio belongs to upcoming combat checkpoint. No runtime entrance change made by this clarification; sound listening acceptance remains open.
