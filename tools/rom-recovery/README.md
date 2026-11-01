@@ -313,3 +313,11 @@ export integrity and explicitapproval/rejectionrecords, not missingweapongetiden
 Corrected status/evidence: `../../Assets/Bosses/MM1/Cut Man/Victory/README.md`.
 Trace actualpostboss path/callers and visually verifyaward screen before exporting
 replacement music/effects. No victory runtime imports/controller/package exist yet.
+
+### Actual award-screen checkpoint
+
+`probe-mm6-weapon-award.mjs` runs controlled3B:BD1B (not80C5) and captures the
+native YOU GET B.ATTACK screen and demonstration. `recover-mm6-weapon-award-audio.mjs`
+exports scene-observed16 as a 30-second review excerpt, NOT a seamless loop.
+`test-mm6-weapon-award.mjs` checks scene-specific ROM spans and archived hashes.
+Music approval pending; no new effects exported, no natural-kill/runtime claim.

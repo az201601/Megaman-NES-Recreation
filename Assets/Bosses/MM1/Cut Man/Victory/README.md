@@ -166,3 +166,25 @@ No victory controller, resource import or complete stage package has been issued
 Final-hit owner, MM5 controls/auto-walk, original defeat/acquisition effects,
 correct weapon screen/music, Rolling Cutter unlock and return selection remain
 unfinished. Keep working entrance/combat sources and approved audio unchanged.
+
+## Scene-verified replacement music candidate (pending listening approval)
+
+The controlled original-ROM entry at **3B:BD1B** now renders the actual weapon
+award: frame320 says **YOU GET B.ATTACK**, followed by a native weapon demonstration.
+See `Reference/mm6-weapon-award-you-get.png` and `Reference/mm6-weapon-award.json`.
+This is distinct from the withdrawn stage-intro fixture. Its native audio dispatch
+is **16hex music**, **65hex effect**, then **37hex text ticks**; later demonstration
+shots request23hex. No new effects have been exported or approved.
+
+`Audio/Review/mm6-weapon-award-music-review.wav` is a **29.9555-second excerpt**
+(full native APU, 48k mono16, gain2.125, unclipped peak0.844572). The track continues;
+this excerpt is **not a seamless runtime loop**. Approval is pending. Approved
+stage-clear13 and throw25 remain unchanged. Do not integrate this candidate yet.
+
+Reproduce with `probe-mm6-weapon-award.mjs`, then
+`recover-mm6-weapon-award-audio.mjs`; verify with `test-mm6-weapon-award.mjs`.
+The fixture restarts coroutine0 from a playable snapshot, maps banks3A/3B, sets
+stage0 and06A5=0, and terminates the final RTS via C5E6 because there is no fixture
+caller. No ROM/code/audio injection in the scene. This **does not** establish a
+natural boss-kill caller chain, complete victory timing or airborne MM5 behavior.
+Those remain outstanding, along with the runtime controller and installation.
