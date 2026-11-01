@@ -16,8 +16,8 @@
     {
       "path": "INSTALL-GMS14.md",
       "source": "Assets/Combat/MM5/Super Cutter Checkpoint/INSTALL-GMS14.md",
-      "bytes": 7498,
-      "sha256": "9cb123c5aae901acadc440e97ab071d014ba673cbd13881bd861590686bc890c"
+      "bytes": 8225,
+      "sha256": "7d30359da0ed57c26bf76a257f8a29c5baef8179b577f7f7ad7e7e0620af9dba"
     },
     {
       "path": "Objects/obj_mm1_super_cutter_create.gml",
@@ -70,8 +70,8 @@
     {
       "path": "Scripts/scr_mm1_super_cutter_world_step.gml",
       "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm1_super_cutter_world_step.gml",
-      "bytes": 1610,
-      "sha256": "010b244f32a888abe9757603f79f8f1d57e558d976f08ac34b55c2f351f45a61"
+      "bytes": 1645,
+      "sha256": "9f8c5739ebab1d7b1ac6a796cb8254ed40d6cffed2fb0b81ecca0cee2f2004c4"
     },
     {
       "path": "Scripts/scr_mm5_combat_end_frame.gml",

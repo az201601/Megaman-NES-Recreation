@@ -1,5 +1,5 @@
 // Manager context; called only by the existing central combat pass.
-var p, i, actor, inside, delta, direction;
+var p, i, actor, inside, delta, launch_direction;
 p = argument0;
 for (i = instance_number(obj_mm1_super_cutter) - 1; i >= 0; i -= 1)
 {
@@ -22,11 +22,11 @@ for (i = 0; i < super_spawn_count; i += 1)
         delta = floor(p.x) - super_spawn_x[i];
         if (abs(delta) < 80)
         {
-            direction = 1;
-            if (delta < 0) direction = -1;
+            launch_direction = 1;
+            if (delta < 0) launch_direction = -1;
             actor = instance_create(super_spawn_x[i], super_spawn_y[i], obj_mm1_super_cutter);
-            actor.super_vx = direction * floor(abs(delta) * 256 / 51) / 256;
-            actor.super_direction = direction;
+            actor.super_vx = launch_direction * floor(abs(delta) * 256 / 51) / 256;
+            actor.super_direction = launch_direction;
             actor.super_band = super_spawn_band[i];
             actor.super_born_tick = combat_tick;
             super_spawn_timer[i] = 32;

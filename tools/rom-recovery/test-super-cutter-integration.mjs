@@ -35,3 +35,9 @@ for(const flag of['combat_dead','combat_refilling']){const e=setup(),a=e.make('o
 // Existing deflected Blaster shots cannot hit cutters.
 {const e=setup(),a=e.make('obj_mm1_super_cutter',900,1100),s=e.shot('obj_mm5_buster_full',895,1100);s.mm5_shot_deflected=true;e.call('scr_mm5_combat_shot_step',s);eq(a.super_hp,5);eq(e.sounds.length,0);}
 console.log(`PASS Super Cutter: ${states} native position/velocity/animation states;9trigger trials;2anchors; five normal/mid or2full hits; highHP fullshot consumed/weakpierce; body4/slide/protection; no launch sound; one drop; born/route/offscreen/freeze guards. NOT GMSruntime.`);
+
+// GMS1.4 built-ins cannot be redeclared by var; JS adapter alone misses this.
+const checkpoint=new URL('Assets/Combat/MM5/Super Cutter Checkpoint/',root);
+const reservedLocals=new Set(['direction','speed','hspeed','vspeed','gravity','gravity_direction','friction','x','y','id','depth','visible','solid','persistent','object_index','sprite_index','image_index','image_speed','image_xscale','image_yscale','image_angle','image_alpha','image_blend','mask_index']);
+for(const dir of ['Scripts','Objects','Hooks'])for(const file of fs.readdirSync(new URL(dir+'/',checkpoint))){if(!file.endsWith('.gml'))continue;const text=fs.readFileSync(new URL(dir+'/'+file,checkpoint),'utf8').replace(/\/\/[^\n]*/g,'');for(const declaration of text.matchAll(/\bvar\s+([^;]+);/g))for(const name of declaration[1].split(',').map(v=>v.trim()))check(!reservedLocals.has(name),`${file}: cannot redeclare built-in ${name}`);}
+console.log('PASS checkpoint local-variable declarations avoid checked GMS1.4 built-ins.');

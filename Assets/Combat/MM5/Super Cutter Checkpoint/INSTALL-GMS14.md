@@ -91,3 +91,9 @@ Source/native/mock checks have passed; **GMS 1.4 compilation and your installed 
 Launch anchors are `(912,1140)` in camera band960 and `(1424,180)` in band0. Existing building top-left positions remain `(864,1088)` and `(1376,128)`. **Do not move or recreate them.**
 
 If you see “unknown variable super_spawn_count,” check Step4; an unknown new script/object/sprite means Steps1–3 are incomplete. An extra movement update usually means an unwanted cutter Step event or duplicated central pass. Stop and correct that before judging timing.
+
+## Compile-error correction — built-in `direction`
+
+If the first package reports **“cannot redeclare a builtin variable”** in `scr_mm1_super_cutter_world_step`, the original script mistakenly declared local `direction`, a GMS1.4 built-in. The corrected file uses `launch_direction` throughout; behavior is unchanged.
+
+Download the updated ZIP, open the existing **Script resource `scr_mm1_super_cutter_world_step`**, select all its code and replace it with the entire corrected `Scripts/scr_mm1_super_cutter_world_step.gml`. Save and compile again. **Only that one script needs replacing** if you already completed the installation. Do not reappend the manager Create block, recreate resources, or replace other events.
