@@ -1,0 +1,5966 @@
+{
+  "romSha256": "32bd2b4ecd2129aa5337afe9171696ef35646d3fd597339aebba19221764521c",
+  "method": "Freshboot supplied USA Napalm/JSNES2.1.0. World E uses controlled nativeB6fixed item/animation72 at184,80, all other slots cleared and itemposition/speed pinned80frames, two complete4cell palette phases opaque-render matched; this is common MM5 pickup artwork, NOT opening-area MM1 enemy type substitution. Pickup cases controlled item at player, original collection/cap/audio; native full9 removes item (project deliberately leaves it per user). Use trials: health/count seeded, natural Start menu90frames thenDown toE, count set0/1/2 for edge isolation, natural Start oneframe orheld160, native handlers/refill/audio unchanged. Remains in menu; selected Buster returns after successful refill by visual review. Not natural fullstage/globalpickupspawn or GMSruntime certification.",
+  "spans": [
+    {
+      "offset": 241481,
+      "hex": "24"
+    },
+    {
+      "offset": 241354,
+      "hex": "a5bdc989f0f9e6bdd0f5"
+    }
+  ],
+  "art": {
+    "poses": [
+      {
+        "frame": 80,
+        "cells": [
+          {
+            "x": 176,
+            "y": 73,
+            "tile": 65,
+            "attr": 0
+          },
+          {
+            "x": 184,
+            "y": 73,
+            "tile": 66,
+            "attr": 0
+          },
+          {
+            "x": 176,
+            "y": 81,
+            "tile": 65,
+            "attr": 128
+          },
+          {
+            "x": 184,
+            "y": 81,
+            "tile": 66,
+            "attr": 128
+          }
+        ],
+        "rgbaSha256": "4c5330255418a8f10cb7585672ec70aaf712da0f9256e7e24d1eb25736e0358b"
+      },
+      {
+        "frame": 72,
+        "cells": [
+          {
+            "x": 176,
+            "y": 73,
+            "tile": 67,
+            "attr": 0
+          },
+          {
+            "x": 184,
+            "y": 73,
+            "tile": 67,
+            "attr": 64
+          },
+          {
+            "x": 176,
+            "y": 81,
+            "tile": 67,
+            "attr": 128
+          },
+          {
+            "x": 184,
+            "y": 81,
+            "tile": 67,
+            "attr": 192
+          }
+        ],
+        "rgbaSha256": "11c0d8b2b56b52bf0aa01b5b0e04a7be9e4f7cd609e78e84d988c7945e0c5380"
+      }
+    ],
+    "cell": [
+      16,
+      16
+    ],
+    "origin": [
+      8,
+      7
+    ],
+    "animation": 114
+  },
+  "pickups": [
+    {
+      "count": 0,
+      "after": 1,
+      "itemRemoved": true,
+      "sounds": [
+        {
+          "frame": 2,
+          "id": 36
+        }
+      ]
+    },
+    {
+      "count": 8,
+      "after": 9,
+      "itemRemoved": true,
+      "sounds": [
+        {
+          "frame": 2,
+          "id": 36
+        }
+      ]
+    },
+    {
+      "count": 9,
+      "after": 9,
+      "itemRemoved": true,
+      "sounds": [
+        {
+          "frame": 2,
+          "id": 36
+        }
+      ]
+    }
+  ],
+  "use": [
+    {
+      "start": 5,
+      "count": 2,
+      "held": false,
+      "success": true,
+      "changedNametableCells": 17,
+      "sounds": [
+        {
+          "frame": 1,
+          "id": 38
+        },
+        {
+          "frame": 5,
+          "id": 38
+        },
+        {
+          "frame": 9,
+          "id": 38
+        },
+        {
+          "frame": 13,
+          "id": 38
+        },
+        {
+          "frame": 17,
+          "id": 38
+        },
+        {
+          "frame": 21,
+          "id": 38
+        },
+        {
+          "frame": 25,
+          "id": 38
+        },
+        {
+          "frame": 29,
+          "id": 38
+        },
+        {
+          "frame": 33,
+          "id": 38
+        },
+        {
+          "frame": 37,
+          "id": 38
+        },
+        {
+          "frame": 41,
+          "id": 38
+        },
+        {
+          "frame": 45,
+          "id": 38
+        },
+        {
+          "frame": 49,
+          "id": 38
+        },
+        {
+          "frame": 53,
+          "id": 38
+        },
+        {
+          "frame": 57,
+          "id": 38
+        },
+        {
+          "frame": 61,
+          "id": 38
+        },
+        {
+          "frame": 65,
+          "id": 38
+        },
+        {
+          "frame": 69,
+          "id": 38
+        },
+        {
+          "frame": 73,
+          "id": 38
+        },
+        {
+          "frame": 77,
+          "id": 38
+        },
+        {
+          "frame": 81,
+          "id": 38
+        },
+        {
+          "frame": 85,
+          "id": 38
+        },
+        {
+          "frame": 89,
+          "id": 38
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 2,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 3,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 4,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 5,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 6,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 7,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 8,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 9,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 10,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 11,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 12,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 13,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 14,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 15,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 16,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 17,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 18,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 19,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 20,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 21,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 22,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 23,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 24,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 25,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 26,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 27,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 28,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 29,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 30,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 31,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 32,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 33,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 34,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 35,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 36,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 37,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 38,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 39,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 40,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 41,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 42,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 43,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 44,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 45,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 46,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 47,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 48,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 49,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 50,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 51,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 52,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 53,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 54,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 55,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 56,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 57,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 58,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 59,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 60,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 61,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 62,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 63,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 64,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 65,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 66,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 67,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 68,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 69,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 70,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 71,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 72,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 73,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 74,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 75,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 76,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 77,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 78,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 79,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 80,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 81,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 82,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 83,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 84,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 85,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 86,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 87,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 88,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 89,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 90,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 91,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 92,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 93,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 94,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 95,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 96,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 97,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 98,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 99,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 100,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 101,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 102,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 103,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 104,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 105,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 106,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 107,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 108,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 109,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 110,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 111,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 112,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 113,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 114,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 115,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 116,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 117,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 118,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 119,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 120,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 121,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 122,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 123,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 124,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 125,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 126,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 127,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 128,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 129,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 130,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 131,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 132,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 133,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 134,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 135,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 136,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 137,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 138,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 139,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 140,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 141,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 142,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 143,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 144,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 145,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 146,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 147,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 148,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 149,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 150,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 151,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 152,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 153,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 154,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 155,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 156,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 157,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 158,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 159,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 160,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "start": 27,
+      "count": 1,
+      "held": false,
+      "success": true,
+      "changedNametableCells": 8,
+      "sounds": [
+        {
+          "frame": 1,
+          "id": 38
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 2,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 3,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 4,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 5,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 6,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 7,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 8,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 9,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 10,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 11,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 12,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 13,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 14,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 15,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 16,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 17,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 18,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 19,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 20,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 21,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 22,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 23,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 24,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 25,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 26,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 27,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 28,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 29,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 30,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 31,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 32,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 33,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 34,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 35,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 36,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 37,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 38,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 39,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 40,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 41,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 42,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 43,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 44,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 45,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 46,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 47,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 48,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 49,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 50,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 51,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 52,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 53,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 54,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 55,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 56,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 57,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 58,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 59,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 60,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 61,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 62,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 63,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 64,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 65,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 66,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 67,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 68,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 69,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 70,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 71,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 72,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 73,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 74,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 75,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 76,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 77,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 78,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 79,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 80,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 81,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 82,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 83,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 84,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 85,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 86,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 87,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 88,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 89,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 90,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 91,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 92,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 93,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 94,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 95,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 96,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 97,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 98,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 99,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 100,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 101,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 102,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 103,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 104,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 105,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 106,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 107,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 108,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 109,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 110,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 111,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 112,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 113,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 114,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 115,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 116,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 117,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 118,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 119,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 120,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 121,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 122,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 123,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 124,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 125,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 126,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 127,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 128,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 129,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 130,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 131,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 132,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 133,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 134,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 135,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 136,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 137,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 138,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 139,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 140,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 141,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 142,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 143,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 144,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 145,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 146,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 147,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 148,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 149,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 150,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 151,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 152,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 153,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 154,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 155,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 156,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 157,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 158,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 159,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 160,
+          "health": 28,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "start": 28,
+      "count": 1,
+      "held": false,
+      "success": false,
+      "changedNametableCells": 0,
+      "sounds": [],
+      "rows": [
+        {
+          "frame": 1,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 2,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 3,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 4,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 5,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 6,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 7,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 8,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 9,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 10,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 11,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 12,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 13,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 14,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 15,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 16,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 17,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 18,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 19,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 20,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 21,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 22,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 23,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 24,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 25,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 26,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 27,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 28,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 29,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 30,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 31,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 32,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 33,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 34,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 35,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 36,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 37,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 38,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 39,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 40,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 41,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 42,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 43,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 44,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 45,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 46,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 47,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 48,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 49,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 50,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 51,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 52,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 53,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 54,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 55,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 56,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 57,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 58,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 59,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 60,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 61,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 62,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 63,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 64,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 65,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 66,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 67,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 68,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 69,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 70,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 71,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 72,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 73,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 74,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 75,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 76,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 77,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 78,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 79,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 80,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 81,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 82,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 83,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 84,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 85,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 86,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 87,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 88,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 89,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 90,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 91,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 92,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 93,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 94,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 95,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 96,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 97,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 98,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 99,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 100,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 101,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 102,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 103,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 104,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 105,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 106,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 107,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 108,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 109,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 110,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 111,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 112,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 113,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 114,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 115,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 116,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 117,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 118,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 119,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 120,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 121,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 122,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 123,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 124,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 125,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 126,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 127,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 128,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 129,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 130,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 131,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 132,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 133,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 134,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 135,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 136,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 137,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 138,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 139,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 140,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 141,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 142,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 143,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 144,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 145,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 146,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 147,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 148,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 149,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 150,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 151,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 152,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 153,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 154,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 155,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 156,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 157,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 158,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 159,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 160,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "start": 5,
+      "count": 0,
+      "held": false,
+      "success": false,
+      "changedNametableCells": 0,
+      "sounds": [],
+      "rows": [
+        {
+          "frame": 1,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 2,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 3,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 4,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 5,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 6,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 7,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 8,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 9,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 10,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 11,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 12,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 13,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 14,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 15,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 16,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 17,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 18,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 19,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 20,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 21,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 22,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 23,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 24,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 25,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 26,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 27,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 28,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 29,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 30,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 31,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 32,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 33,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 34,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 35,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 36,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 37,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 38,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 39,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 40,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 41,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 42,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 43,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 44,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 45,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 46,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 47,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 48,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 49,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 50,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 51,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 52,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 53,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 54,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 55,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 56,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 57,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 58,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 59,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 60,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 61,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 62,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 63,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 64,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 65,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 66,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 67,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 68,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 69,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 70,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 71,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 72,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 73,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 74,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 75,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 76,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 77,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 78,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 79,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 80,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 81,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 82,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 83,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 84,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 85,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 86,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 87,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 88,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 89,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 90,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 91,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 92,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 93,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 94,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 95,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 96,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 97,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 98,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 99,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 100,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 101,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 102,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 103,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 104,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 105,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 106,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 107,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 108,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 109,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 110,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 111,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 112,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 113,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 114,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 115,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 116,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 117,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 118,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 119,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 120,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 121,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 122,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 123,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 124,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 125,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 126,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 127,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 128,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 129,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 130,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 131,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 132,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 133,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 134,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 135,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 136,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 137,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 138,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 139,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 140,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 141,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 142,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 143,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 144,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 145,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 146,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 147,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 148,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 149,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 150,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 151,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 152,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 153,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 154,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 155,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 156,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 157,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 158,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 159,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 160,
+          "health": 5,
+          "tanks": 0,
+          "x": 128,
+          "y": 180
+        }
+      ]
+    },
+    {
+      "start": 5,
+      "count": 2,
+      "held": true,
+      "success": true,
+      "changedNametableCells": 17,
+      "sounds": [
+        {
+          "frame": 1,
+          "id": 38
+        },
+        {
+          "frame": 5,
+          "id": 38
+        },
+        {
+          "frame": 9,
+          "id": 38
+        },
+        {
+          "frame": 13,
+          "id": 38
+        },
+        {
+          "frame": 17,
+          "id": 38
+        },
+        {
+          "frame": 21,
+          "id": 38
+        },
+        {
+          "frame": 25,
+          "id": 38
+        },
+        {
+          "frame": 29,
+          "id": 38
+        },
+        {
+          "frame": 33,
+          "id": 38
+        },
+        {
+          "frame": 37,
+          "id": 38
+        },
+        {
+          "frame": 41,
+          "id": 38
+        },
+        {
+          "frame": 45,
+          "id": 38
+        },
+        {
+          "frame": 49,
+          "id": 38
+        },
+        {
+          "frame": 53,
+          "id": 38
+        },
+        {
+          "frame": 57,
+          "id": 38
+        },
+        {
+          "frame": 61,
+          "id": 38
+        },
+        {
+          "frame": 65,
+          "id": 38
+        },
+        {
+          "frame": 69,
+          "id": 38
+        },
+        {
+          "frame": 73,
+          "id": 38
+        },
+        {
+          "frame": 77,
+          "id": 38
+        },
+        {
+          "frame": 81,
+          "id": 38
+        },
+        {
+          "frame": 85,
+          "id": 38
+        },
+        {
+          "frame": 89,
+          "id": 38
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 2,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 3,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 4,
+          "health": 6,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 5,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 6,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 7,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 8,
+          "health": 7,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 9,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 10,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 11,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 12,
+          "health": 8,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 13,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 14,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 15,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 16,
+          "health": 9,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 17,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 18,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 19,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 20,
+          "health": 10,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 21,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 22,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 23,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 24,
+          "health": 11,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 25,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 26,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 27,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 28,
+          "health": 12,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 29,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 30,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 31,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 32,
+          "health": 13,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 33,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 34,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 35,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 36,
+          "health": 14,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 37,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 38,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 39,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 40,
+          "health": 15,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 41,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 42,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 43,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 44,
+          "health": 16,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 45,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 46,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 47,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 48,
+          "health": 17,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 49,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 50,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 51,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 52,
+          "health": 18,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 53,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 54,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 55,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 56,
+          "health": 19,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 57,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 58,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 59,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 60,
+          "health": 20,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 61,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 62,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 63,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 64,
+          "health": 21,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 65,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 66,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 67,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 68,
+          "health": 22,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 69,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 70,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 71,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 72,
+          "health": 23,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 73,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 74,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 75,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 76,
+          "health": 24,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 77,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 78,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 79,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 80,
+          "health": 25,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 81,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 82,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 83,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 84,
+          "health": 26,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 85,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 86,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 87,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 88,
+          "health": 27,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 89,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 90,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 91,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 92,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 93,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 94,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 95,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 96,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 97,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 98,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 99,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 100,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 101,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 102,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 103,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 104,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 105,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 106,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 107,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 108,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 109,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 110,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 111,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 112,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 113,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 114,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 115,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 116,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 117,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 118,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 119,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 120,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 121,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 122,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 123,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 124,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 125,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 126,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 127,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 128,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 129,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 130,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 131,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 132,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 133,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 134,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 135,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 136,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 137,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 138,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 139,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 140,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 141,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 142,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 143,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 144,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 145,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 146,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 147,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 148,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 149,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 150,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 151,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 152,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 153,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 154,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 155,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 156,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 157,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 158,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 159,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 160,
+          "health": 28,
+          "tanks": 1,
+          "x": 128,
+          "y": 180
+        }
+      ]
+    }
+  ],
+  "projectPolicy": "User approves world1168,1048/band960 optional block perch, capacity9, leavepickupatcap, no respawn after life loss. Reset collectedflag only explicit new game. Start onE usesone/fullrefill, fullhealth/empty no consume. W/M still deferred."
+}
