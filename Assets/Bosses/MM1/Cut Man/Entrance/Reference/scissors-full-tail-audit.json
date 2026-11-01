@@ -1,0 +1,549 @@
+{
+  "method": "Same disclosed native26 isolated driver take as current export, audit through all stream commands/repeat/end, full APUs. Full-tail reference starts at request and ends8updates after driver clearsSFX; no silence trimming. Existing exported PCM asserted byte-equal to its matching subrange. No claim this resolves installed playback cutoff.",
+  "first": [
+    {
+      "f": 181,
+      "addr": 48094,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 189,
+      "addr": 48094,
+      "byte": 1,
+      "loop": 1
+    }
+  ],
+  "end": {
+    "f": 197,
+    "usage": 0,
+    "addr": 48122,
+    "wait": 0,
+    "loop": 0
+  },
+  "commands": [
+    {
+      "f": 181,
+      "addr": 48094,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48095,
+      "byte": 176,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48096,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48097,
+      "byte": 63,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48098,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48099,
+      "byte": 30,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48100,
+      "byte": 0,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48101,
+      "byte": 4,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48102,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48103,
+      "byte": 58,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48104,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48105,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48106,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48107,
+      "byte": 176,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48108,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48109,
+      "byte": 63,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48110,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48111,
+      "byte": 50,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48112,
+      "byte": 0,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48113,
+      "byte": 4,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48114,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48115,
+      "byte": 58,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48116,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "addr": 48117,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 189,
+      "addr": 48118,
+      "byte": 4,
+      "loop": 0
+    },
+    {
+      "f": 189,
+      "addr": 48119,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 189,
+      "addr": 48120,
+      "byte": 222,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48121,
+      "byte": 187,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48094,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48095,
+      "byte": 176,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48096,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48097,
+      "byte": 63,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48098,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48099,
+      "byte": 30,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48100,
+      "byte": 0,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48101,
+      "byte": 4,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48102,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48103,
+      "byte": 58,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48104,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 189,
+      "addr": 48105,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48106,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48107,
+      "byte": 176,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48108,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48109,
+      "byte": 63,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48110,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48111,
+      "byte": 50,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48112,
+      "byte": 0,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48113,
+      "byte": 4,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48114,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48115,
+      "byte": 58,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48116,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "addr": 48117,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 197,
+      "addr": 48118,
+      "byte": 4,
+      "loop": 1
+    },
+    {
+      "f": 197,
+      "addr": 48119,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 197,
+      "addr": 48122,
+      "byte": 6,
+      "loop": 0
+    },
+    {
+      "f": 197,
+      "addr": 48122,
+      "byte": 6,
+      "loop": 0
+    }
+  ],
+  "lifecycle": [
+    {
+      "f": 180,
+      "usage": 10,
+      "addr": 48094,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 3,
+      "loop": 0
+    },
+    {
+      "f": 182,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 2,
+      "loop": 0
+    },
+    {
+      "f": 183,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 1,
+      "loop": 0
+    },
+    {
+      "f": 184,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 3,
+      "loop": 0
+    },
+    {
+      "f": 186,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 2,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 1,
+      "loop": 0
+    },
+    {
+      "f": 188,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 189,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 3,
+      "loop": 1
+    },
+    {
+      "f": 190,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 2,
+      "loop": 1
+    },
+    {
+      "f": 191,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 1,
+      "loop": 1
+    },
+    {
+      "f": 192,
+      "usage": 10,
+      "addr": 48106,
+      "wait": 0,
+      "loop": 1
+    },
+    {
+      "f": 193,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 3,
+      "loop": 1
+    },
+    {
+      "f": 194,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 2,
+      "loop": 1
+    },
+    {
+      "f": 195,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 1,
+      "loop": 1
+    },
+    {
+      "f": 196,
+      "usage": 10,
+      "addr": 48118,
+      "wait": 0,
+      "loop": 1
+    },
+    {
+      "f": 197,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 198,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 199,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 200,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 201,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 202,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 203,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 204,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 205,
+      "usage": 0,
+      "addr": 48122,
+      "wait": 0,
+      "loop": 0
+    }
+  ],
+  "file": "Audio/mm1-cutman-scissors-full-tail-check.wav",
+  "peak": 0.40594482421875,
+  "sha256": "839838da5c5c79bb093cdb5318e36201ae172f2ac57c37d521a9ef5a60f8ea9e"
+}

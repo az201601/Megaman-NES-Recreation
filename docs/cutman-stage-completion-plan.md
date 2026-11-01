@@ -613,3 +613,7 @@ At handoff Cut Man remains stationary, no attack/contact/hit/defeat/reward yet. 
 ## Entrance sound naming correction
 
 User challenged nonexistent generic boss-appear cue. Rechecked original-USA native entrance with all channels enabled/no sound injection:26hex requested379, native driver dispatch380. Original26 is Cut Man scissors, not a separate materialize/appear sound. Existing isolated26 WAV is unchanged; corrected name to snd_mm1_cutman_boss_scissors and package instructions. Internal voice field remains compatible; existing installs can keep old name with identical playback or rename Sound+replace intro-step Script only. New Reference/native-scissors-verification.json records full requests/dispatch/native data span. Installed sound listening acceptance still pending.
+
+## Scissors incomplete-sound report — open investigation
+
+User says cue is incomplete, not merely misnamed. New native26 driver audit traces first pass181, repeat189, natural end197 (two8-update passes), retains command lead/full tail. Current runtime WAV PCM equals matching subrange of new full-tail audition WAV; no demonstrated missing exported repeat. Do not claim user-audible issue fixed. Need distinguish standalone WAV preview vs installed entrance cutoff. Runtime cue/timing unchanged pending that clarification/listening.

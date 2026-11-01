@@ -17,6 +17,11 @@
       "sha256": "2a0611dafe7fa1b52311db3bac7c84ea1739a556edb5b94b4e90e086a07c8295"
     },
     {
+      "path": "Audio/mm1-cutman-scissors-full-tail-check.wav",
+      "bytes": 39978,
+      "sha256": "839838da5c5c79bb093cdb5318e36201ae172f2ac57c37d521a9ef5a60f8ea9e"
+    },
+    {
       "path": "Audio/snd_mm1_cutman_boss_fill.wav",
       "bytes": 20962,
       "sha256": "3b7e9b6227a89135834663db684c80b27a1a1094b17ffea536c22e05dd9495b8"
@@ -113,8 +118,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3204,
-      "sha256": "cf5bb659c214f31332d63806ebaa6b3b24cd5bff3bf3605a7118bd2b2ffdcce8"
+      "bytes": 3782,
+      "sha256": "fe6f40a33a26e7235f44cc87491ff3b5c381d8b003709fad3f36ae4202d8d82f"
     },
     {
       "path": "Reference/native-audio.json",
@@ -130,6 +135,11 @@
       "path": "Reference/native-scissors-verification.json",
       "bytes": 5468,
       "sha256": "6becf3f4fea63781633488f3fc74a2f8cc09b62acccbb78e0422723319d335e2"
+    },
+    {
+      "path": "Reference/scissors-full-tail-audit.json",
+      "bytes": 8173,
+      "sha256": "e9f524784418df7b160a4cfe53123890ebcf95a61e30a80c485340077ce1ee58"
     },
     {
       "path": "Scripts/scr_mm1_cutman_boss_entrance_start.gml",
