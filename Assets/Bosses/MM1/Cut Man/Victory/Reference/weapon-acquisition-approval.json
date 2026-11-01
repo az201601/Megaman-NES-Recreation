@@ -1,0 +1,12 @@
+{
+  "status": "User listening approved; runtime integration pending",
+  "userConfirmation": "yes that one..",
+  "command": "0x5f",
+  "file": "Audio/Approved/snd_mm6_weapon_acquisition_review_excerpt.wav",
+  "source": "Audio/Review/mm6-pre-award-energy-animation-review.wav",
+  "sha256": "c72f2ebd5e6dfe4f441213f11e4abe9cfaa9def2fccdfdc9464a8479e42d2847",
+  "processing": "Byte-identical approved review excerpt; no gain or trimming changes.",
+  "context": "In-room energy-circle animation after centre walking, before YOU GET screen.",
+  "limitation": "219-update timed excerpt; native sequence stops effect with F0. Not a natural-tail or seamless-loop claim.",
+  "excluded": "Earlier65 effect rejected;3A animation-start cue not approved by this confirmation."
+}

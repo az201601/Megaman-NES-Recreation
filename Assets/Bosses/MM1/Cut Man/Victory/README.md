@@ -225,3 +225,12 @@ trace is `Reference/mm6-pre-award-trace.json`.
 2x gain, no clipping. **Timed219-update excerpt, NOT a natural-tail or loop claim**:
 the native scene interrupts it withF0. Listening approval pending.3A is separately
 observed at the start, not silently combined with5F. Approved music unchanged.
+
+## Pre-screen acquisition effect approved
+
+User confirmed **“yes that one..”** for5F, the in-room energy-circle animation
+effect after centre walking and before YOU GET. Exact preview preserved unchanged
+in `Audio/Approved/snd_mm6_weapon_acquisition_review_excerpt.wav`; approval/hash
+in `Reference/weapon-acquisition-approval.json`. This supersedes pending listening
+status for5F above. Runtime timing/stop ownership remains to implement;65 remains
+rejected and3A is not approved by this confirmation.
