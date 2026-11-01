@@ -1,5 +1,7 @@
 # Screw Bomber — corrected sprites (GMS1.4.1760)
 
+**Already installed the previous sprite/bullet correction and it works? Use only `FIRST-FRAME-FIX-GMS14.md` and `Downloads/mm1-screw-bomber-first-frame-fix-gms14.zip`. Replace the two body strips; no code/object/bullet reinstall. Frame0 fixed, frames1–4 unchanged.**
+
 **Use `Downloads/mm1-screw-bomber-sprite-correction-gms14.zip` if you already installed the first Screw Bomber package.** It contains only this guide, three PNGs, two bullet events, and one replacement Screw script. No manager append, central replacement, or gate code. If Screw Bomber is not installed yet, use the updated full ZIP and `INSTALL-GMS14.md` instead; do not install both sets of instructions.
 
 ## What was wrong

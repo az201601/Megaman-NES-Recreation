@@ -30,3 +30,14 @@ with zipfile.ZipFile(correction)as z:
  assert z.testzip() is None and sorted(z.namelist())==sorted(correction_names)
  for name in correction_names:assert z.read(name)==files[name].read_bytes()
 print('PASS correction',len(correction_names),'files',correction.stat().st_size,'bytes',hashlib.sha256(correction.read_bytes()).hexdigest())
+
+# Sprites-only follow-up: working corrected installations need no code/object reinstall.
+first_names=['FIRST-FRAME-FIX-GMS14.md','Art/spr_mm1_screw_bomber_floor_strip5.png','Art/spr_mm1_screw_bomber_ceiling_strip5.png']
+first=base/'Downloads/mm1-screw-bomber-first-frame-fix-gms14.zip'
+with zipfile.ZipFile(first,'w',zipfile.ZIP_DEFLATED)as z:
+ for name in sorted(first_names):
+  i=zipfile.ZipInfo(name,(2026,11,1,0,0,0));i.compress_type=zipfile.ZIP_DEFLATED;i.external_attr=0o100644<<16;z.writestr(i,files[name].read_bytes())
+with zipfile.ZipFile(first)as z:
+ assert z.testzip() is None and sorted(z.namelist())==sorted(first_names)
+ for name in first_names:assert z.read(name)==files[name].read_bytes()
+print('PASS first-frame fix',len(first_names),'files',first.stat().st_size,'bytes',hashlib.sha256(first.read_bytes()).hexdigest())

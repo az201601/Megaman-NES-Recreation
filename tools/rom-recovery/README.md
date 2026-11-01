@@ -239,3 +239,5 @@ User opted to keep both doors as-is after the contact-speed comparison and resum
 ### Screw Bomber artwork correction
 
 `recover-screw-bomber-art.mjs` now self-boots and uses the actual three corridor spawns after a disclosed native checkpoint-reload setup, not the opening-area type-swapped AI fixture. Old art hashes and Blaster-bullet RGBA-equivalence claims are superseded: opening CHR/palette produced scrambled sprites. Corrected15pose/native-render/ROM-pattern/repeat-floor checks; corridor salmon bullet uses its own child Draw, accepted Blaster unchanged. Minimal sprite-correction ZIP prevents duplicate manager/central installation. See checkpoint SPRITE-CORRECTION-GMS14.md. Not installed/GMS acceptance.
+
+Screw first-frame follow-up: user confirmed working runtime, flagged both closed frames. Require exact complete tile sets (closedBC/CF) in addition to render matches, preventing a transitional lower-half C3/C4 extraction after the Y shift. Only index0 in each strip changes; other eight poses/bullet unchanged. Sprites-only three-file ZIP/guide; no code/object reinstall.

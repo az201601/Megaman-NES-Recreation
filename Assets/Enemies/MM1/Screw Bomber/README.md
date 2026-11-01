@@ -21,3 +21,7 @@ Reproduce: `node tools/rom-recovery/test-screw-bomber-source.mjs`; `node tools/r
 ## Correction installation
 
 The first delivered strips were scrambled opening-area tile data. This was our extraction error, not an import error. **SPRITE-CORRECTION-GMS14.md** in the combat package covers replacing only the affected Screw resources. No doors/accepted enemies/audio/terrain change. Enlarged strip previews and three cropped native encounter screenshots are in Reference/.
+
+### First-frame follow-up
+
+User confirmed working behaviour, but identified both first frames as still wrong. Previous corrected extraction captured only the lower C3/C4 cells of a transitional emerging pose after the Y shift. Recovery now uses a broad Y window and exact COMPLETE tile sets (closed BC/CF), then settled alignment/native-render matching. Only index0 of each body strip changes; indices1–4 and bullet unchanged. FIRST-FRAME-FIX-GMS14.md/three-file sprites-only ZIP avoids any code/object reinstall. User visual acceptance pending.

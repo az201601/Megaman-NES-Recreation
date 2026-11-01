@@ -1,5 +1,7 @@
 # Screw Bomber combat checkpoint
 
+**Already installed the previous sprite/bullet correction and it works? Use only `FIRST-FRAME-FIX-GMS14.md` and `Downloads/mm1-screw-bomber-first-frame-fix-gms14.zip`. Replace the two body strips; no code/object/bullet reinstall. Frame0 fixed, frames1–4 unchanged.**
+
 Next in Cut Man stage order after seven accepted enemies/Free Fall correction; after the opening-speed investigation, user explicitly chose to keep both doors as-is and resume Screw Bomber. Gate timing/trigger geometry remains unchanged; this is not a separate claim of exhaustive gate playtest acceptance. No existing camera/gate/player/death/art/audio/terrain/room resources changed.
 
 **Follow INSTALL-GMS14.md**: two16×16/five-frame body sprites plus one8×8bullet sprite, one parentless body and one bullet child Create+Drawobject, five new scripts, one managerCreateappend, two whole central-script replacements. Bullet child inherits accepted Blaster movement/contact/cleanup but draws the correct corridor palette. Reuse approved fire cue; no new sound/imported room instances. Preserve Free Fall and jumping-gate resources and combat-owned cameraEndStep.

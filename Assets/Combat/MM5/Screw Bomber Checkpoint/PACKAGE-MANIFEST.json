@@ -10,14 +10,20 @@
     {
       "path": "Art/spr_mm1_screw_bomber_ceiling_strip5.png",
       "source": "Assets/Enemies/MM1/Screw Bomber/spr_mm1_screw_bomber_ceiling_strip5.png",
-      "bytes": 832,
-      "sha256": "4a0573d5f2be72e42c7d4f104abc908af42fb049f2fd3349ce9bb9a39b5f3b22"
+      "bytes": 906,
+      "sha256": "2896e7f43977a2d034087e54ceaa03d7dceaa7170f8c0d10ce28892679cb2533"
     },
     {
       "path": "Art/spr_mm1_screw_bomber_floor_strip5.png",
       "source": "Assets/Enemies/MM1/Screw Bomber/spr_mm1_screw_bomber_floor_strip5.png",
-      "bytes": 835,
-      "sha256": "2e9342669d3e676e7e390a2193482734c1c877cba0f806f63023773114bbe75a"
+      "bytes": 854,
+      "sha256": "4eb83f269ca751eae81cd7c4da57925650bea16d407480a4c718f1a3ce9bd023"
+    },
+    {
+      "path": "FIRST-FRAME-FIX-GMS14.md",
+      "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/FIRST-FRAME-FIX-GMS14.md",
+      "bytes": 2586,
+      "sha256": "96be4ab5af2c4c2714a36bc0026fa6e04a2263bfd389314a36823e515679a03e"
     },
     {
       "path": "Hooks/obj_mm5_combat_create_screw_bomber_append.gml",
@@ -28,8 +34,8 @@
     {
       "path": "INSTALL-GMS14.md",
       "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/INSTALL-GMS14.md",
-      "bytes": 9275,
-      "sha256": "bf85480c9cdf2150f4cbd2267551274d1ab2e222311d613461f25b41f6c0f48e"
+      "bytes": 9545,
+      "sha256": "bd0113cbbbd655d50e52b676b910c300557a4876116aecc45187a33f9d3f744a"
     },
     {
       "path": "Objects/obj_mm1_screw_bomber_bullet_create.gml",
@@ -58,14 +64,14 @@
     {
       "path": "README.md",
       "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/README.md",
-      "bytes": 3842,
-      "sha256": "a6509e81b11dacf9f0241be48567fa7f79ac17dbe08a36310d6c097b7f61fd4d"
+      "bytes": 4112,
+      "sha256": "7cfe1e89447b2f3e2ec3604dc4351ea519069b989b3d3ac948bf513299d97963"
     },
     {
       "path": "Reference/native-screw-bomber-art.json",
       "source": "Assets/Enemies/MM1/Screw Bomber/Reference/native-screw-bomber-art.json",
-      "bytes": 19127,
-      "sha256": "7a9fe1f8f213f97a06595f1de0632ba209c3ec318e63ad911e1af3d3d5eab468"
+      "bytes": 19434,
+      "sha256": "c4f854d5f1233380572998e09b2660a602930bc5e720a4435666b9be7bd04d13"
     },
     {
       "path": "Reference/native-screw-bomber-gameplay.json",
@@ -82,8 +88,8 @@
     {
       "path": "SPRITE-CORRECTION-GMS14.md",
       "source": "Assets/Combat/MM5/Screw Bomber Checkpoint/SPRITE-CORRECTION-GMS14.md",
-      "bytes": 5338,
-      "sha256": "4a93f1a6f35f219f8d0dbf801dbf20766f0b1524ce7da453b09243661df3323e"
+      "bytes": 5608,
+      "sha256": "c9dc365b2d71c774ae81c5dc1162f45f9cce416dd12d728ce68ac89b8f0ab967"
     },
     {
       "path": "Scripts/scr_mm1_screw_bomber_contact.gml",

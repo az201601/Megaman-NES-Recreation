@@ -33,9 +33,12 @@ for(const [type,worldX,baseY,stopX,label] of [[5,5336,160,5296,'floor'],[22,5576
   m[0x55]=100;n.frame();
   assert.equal(m[0x6e0+slot],type);assert.equal(m[0x480+slot]+256*m[0x460+slot],worldX);
   const sx=worldX-m[0x1a]-256*m[0x1b],enemyY=m[0x600+slot],cells=[];
-  for(let i=0;i<64;i++){const[y,tile,attr,x]=n.ppu.spriteMem.slice(i*4,i*4+4);if(tile>=188&&tile<=207&&x>=sx-8&&x<sx+8&&y>=enemyY-8&&y<enemyY+8)cells.push({i,x,y,tile,attr});}
+  for(let i=0;i<64;i++){const[y,tile,attr,x]=n.ppu.spriteMem.slice(i*4,i*4+4);if(tile>=188&&tile<=207&&x>=sx-8&&x<sx+8&&y>=enemyY-16&&y<enemyY+16)cells.push({i,x,y,tile,attr});}
   if(![2,3,4].includes(cells.length)||cells.some(c=>c.x<sx-8||c.x+8>sx+8))continue;
   const index=cells.length===2?0:cells.length===4?1:cells.some(c=>c.tile===191)?2:cells.some(c=>c.tile===189)?3:4;
+  // Require the COMPLETE native pose, not a clipped subset during a Y transition.
+  const expectedTiles=[[188,207],[193,194,195,196],[191,192,206],[189,190,206],[188,206,207]][index];
+  if(JSON.stringify(cells.map(c=>c.tile).sort((a,b)=>a-b))!==JSON.stringify(expectedTiles))continue;
   if(poses.has(index))continue;
   let top=Math.min(...cells.map(c=>c.y));if(type===22&&index===0)top-=8;
   // OAM can still contain the preceding pose on a state-transition update.
@@ -71,8 +74,8 @@ for(const [type,worldX,baseY,stopX,label] of [[5,5336,160,5296,'floor'],[22,5576
  fs.writeFileSync(new URL('spr_mm1_screw_bomber_bullet.png',out),PNG.sync.write(bullet));bulletMatches.push(hash(bullet.data));
 }
 fs.writeFileSync(new URL('Reference/native-screw-bomber-art.json',out),JSON.stringify({
- method:'CORRECTED: supplied USA/JSNES2.1.0 fresh boot. One disclosed page20 placement + PC C219 native death-handler redirect, then700native frames to checkpoint restart. Original restart loads corridor graphics and palette. Right-only approaches stop at5296/5536/5672, neutral320updates each, protection100 only; no enemy/type/CHR/palette edits. All THREE original corridor encounters spawn naturally after checkpoint setup. Fifteen poses native-render matched; repeated floor independently matches first floor. Not natural whole-stage traversal, hardware/Mesen executable or GMS runtime certification.',
- correction:'Previous extraction substituted types05/16 atX824 in opening-area graphics. AI/OAM IDs were real but underlying CHR and palette were WRONG. Matching the same faulty fixture did not validate sprite identity. Superseded all ten previous art hashes. Existing damage observations below remain separate controlled AI-fixture evidence, not artwork evidence.',
+ method:'CORRECTED: supplied USA/JSNES2.1.0 fresh boot. One disclosed page20 placement + PC C219 native death-handler redirect, then700native frames to checkpoint restart. Original restart loads corridor graphics and palette. Right-only approaches stop at5296/5536/5672, neutral320updates each, protection100 only; no enemy/type/CHR/palette edits. All THREE original corridor encounters spawn naturally after checkpoint setup. Fifteen COMPLETE poses native-render matched with exact tile-set checks; repeated floor independently matches first floor. Not natural whole-stage traversal, hardware/Mesen executable or GMS runtime certification.',
+ correction:'Previous extraction substituted types05/16 atX824 in opening-area graphics. AI/OAM IDs were real but underlying CHR and palette were WRONG. Matching the same faulty fixture did not validate sprite identity. Superseded all ten previous art hashes. Existing damage observations below remain separate controlled AI-fixture evidence, not artwork evidence. Follow-up: first corrected frame0 had selected only C3/C4 from a transitional emerging pose after Y changed. Broadened Y selection plus exact COMPLETE tile sets now requires BC/CF for closed, rejecting partial OAM-transition captures. Other eight body poses unchanged.',
  romSha256:hash(rom),cell:[16,16],origin:[8,7],roomGraphicsIndex:55,spritePalette3:palette,
  bulletReuse:{resource:'spr_mm1_screw_bomber_bullet',tile:106,palette:3,rgbaSha256:bulletMatches[0],method:'Actual original corridor tile6A/palette3 agrees at all three encounters. Shape matches Blaster, but colour is native26 rather than opening-area14. Dedicated child object/Draw keeps accepted Blaster unchanged.'},
  encounters,frames,hits:previous.hits

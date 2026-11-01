@@ -1,5 +1,7 @@
 # Screw Bomber — GMS1.4.1760 manual installation
 
+**Already installed the previous sprite/bullet correction and it works? Use only `FIRST-FRAME-FIX-GMS14.md` and `Downloads/mm1-screw-bomber-first-frame-fix-gms14.zip`. Replace the two body strips; no code/object/bullet reinstall. Frame0 fixed, frames1–4 unchanged.**
+
 Back up your working project and stop the runner. Requires the seven accepted enemies through Big Eye, existing Blaster bullet/fire resources, and accepted Free Fall Correction. **Keep your latest camera/gate code, including Jumping Gate Entry if installed. Do not reinstall older stage/combat checkpoints.** This ZIP is a manual source/resource patch, not an importable GMX. Complete every step before running.
 
 **Already installed the earlier Screw package? Use `SPRITE-CORRECTION-GMS14.md` and its smaller correction ZIP instead. Do not reappend manager initialization. The earlier scrambled strips are superseded.**

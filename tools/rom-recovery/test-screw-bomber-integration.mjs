@@ -35,7 +35,7 @@ for(const type of[5,22]){const png=PNG.sync.read(fs.readFileSync(new URL('Assets
 eq(art.roomGraphicsIndex,55);eq(art.spritePalette3,[0x30,0x26,0x0f]);
 eq(art.encounters.map(e=>[e.type,e.worldX,e.baseY]),[[5,5336,160],[22,5576,96],[5,5712,160]]);
 for(const e of art.encounters)eq(e.poses.length,5);
-for(const f of art.frames){check(f.opaquePixels>0);for(const p of f.patterns){const rom=fs.readFileSync(new URL('Mega Man (USA).nes',root));eq(rom.subarray(p.romOffset,p.romOffset+16).toString('hex'),p.hex);}}
+for(const f of art.frames){eq(f.cells.map(c=>c.tile).sort((a,b)=>a-b),[[188,207],[193,194,195,196],[191,192,206],[189,190,206],[188,206,207]][f.index]);check(f.opaquePixels>0);for(const p of f.patterns){const rom=fs.readFileSync(new URL('Mega Man (USA).nes',root));eq(rom.subarray(p.romOffset,p.romOffset+16).toString('hex'),p.hex);}}
 const bullet=PNG.sync.read(fs.readFileSync(new URL('Assets/Enemies/MM1/Screw Bomber/spr_mm1_screw_bomber_bullet.png',root)));
 eq([bullet.width,bullet.height],[8,8]);eq(createHash('sha256').update(bullet.data).digest('hex'),art.bulletReuse.rgbaSha256);
 const colors=new Set();for(let k=0;k<bullet.data.length;k+=4)if(bullet.data[k+3])colors.add([...bullet.data.subarray(k,k+4)].join(','));
