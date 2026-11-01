@@ -621,3 +621,7 @@ User says cue is incomplete, not merely misnamed. New native26 driver audit trac
 ## Distinguish actual throw25 from short head/taunt26
 
 User says throwing sound is different, cannot identify current take. Correct: original CutmanThrowScissor DFB4 requests25hex, not26; USA bytes a9252077c4 verified, native execution650updates logs DFB4 and corresponding request.26 comes from initialization and stand/make-noise atDF64. Earlier "scissors" naming conflated distinct cues; tail audit only proved26's repeat, not suitability as throw. No current throw-audio implementation, no stretch/repeat/rename-only supposed fix. Current entrance runtime remains unchanged pending auditory acceptance; upcoming throw must recover25 separately.
+
+## Disputed entrance cue removed from runtime
+
+User links YouTube WpdM1bhovRs fight video and says sound not heard. Workspace cannot view video; do not claim watched. Prior isolated26 command/tail verification was overstated as perceptually correct head-snipping/appearance audio. Remove explicit26 audio_play_sound atintro208, no replacement; music/door/fill/art/timing unchanged. Existing install replaces only scr_mm1_cutman_boss_entrance_step. Old Sound may remain unused; camera voice field remains-1 for compatibility. Historical native command evidence and disputed isolated WAV retained as research, not accepted audibility proof. Source/model test asserts no cue26 runtime call; GMS user acceptance pending.

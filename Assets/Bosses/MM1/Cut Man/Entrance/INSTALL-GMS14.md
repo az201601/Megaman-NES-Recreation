@@ -4,7 +4,15 @@
 
 This replaces only the second door's temporary empty-room control return. Opening art/cue/cadence, walking/jumping entry and scrolling remain unchanged. At its age120 room commit, music changes and control stays held for the researched entrance. New INCOMING shutter closes at world3072,816, not the old outgoing doorway3056,816. No terrain/room/editor changes.
 
-## Sound-name clarification (existing installs)
+## Current correction: REMOVE disputed standalone cue
+
+User supplied a fight video and reports not hearing the exported cue. Its isolated sound-driver capture was NOT verified as an audible match to the native mixed fight. Earlier descriptions calling the exported WAV a verified appearance/head-scissors effect were overstated. **The current entrance does NOT play it.** No replacement effect is substituted.
+
+**Existing installs:** STOP runner. Replace ONLY Script **scr_mm1_cutman_boss_entrance_step** with the current complete file. No other event/appends/PCM changes. Existing `snd_mm1_cutman_boss_appear` or `snd_mm1_cutman_boss_scissors` resources may remain unused; no need to rename/reimport them. Camera's old voice field stays initialized at-1 for compatibility. Boss music, door, meter fill, sprites and timings unchanged.
+
+**Fresh installs:** import only the fill Sound in step2. Scissors WAV/full-tail check are disputed research references, NOT required runtime resources. Do not play them manually at boss appearance. Historical ROM request/dispatch evidence is not proof that the isolated waveform is perceptually correct in the native mixed scene. YouTube not accessible in this workspace; no claim video was watched.
+
+## Earlier sound-name clarification (superseded for playback)
 
 There is NO separate generic boss-appearance/teleport sound. The original Cut Man initializer requests26hex, the **scissors** effect. A new native-entrance driver trace confirms request379/dispatch380, without injecting or isolating sound requests. My earlier `snd_mm1_cutman_boss_appear` label was misleading. The WAV is the same native26 scissors take, not an invented spawn cue.
 
@@ -22,13 +30,12 @@ Folder **Sprites → MM1 → Bosses → Cut Man → Entrance**. Exact resource n
 
 For strips: Edit Sprite → File → Create from Strip, specified counts/cell dimensions, all offsets/gaps0. Confirm actual subimage dimensions/count. Keep PNG alpha; do not crop/resize/recolour/centre/Remove Background. Cut Man's original white/magenta palette is native to this fight; it was not taken from the stage-select introduction. Two poses are alternating scissors, not a walk animation. The extra transparent vertical padding preserves native alignment. Existing `spr_mm1_cutman_boss_gate_closed` is reused unchanged.
 
-## 2 — TWO new Sounds and TWO Included Files
+## 2 — ONE new Sound and TWO Included Files
 
 **Sounds → MM1 → Bosses → Cut Man → Entrance**:
-- `snd_mm1_cutman_boss_scissors` ← matching Audio WAV.
 - `snd_mm1_cutman_boss_fill` ← matching Audio WAV.
 
-New audio engine; uncompressed WAV, preload, volume1, pitch1, no looping/effects. Existing approved `snd_mm5_gate_open` reused for new shutter closing, no reimport/change. MM1 native door uses24hex, but project deliberately retains the approved MM5 gate cue. New native26 scissors/18 meter cues are isolated full-APU takes at accepted2×effects gain, exact-silence trimmed, no invented audio.
+New audio engine; uncompressed WAV, preload, volume1, pitch1, no looping/effects. Existing approved `snd_mm5_gate_open` reused for new shutter closing, no reimport/change. MM1 native door uses24hex, but project deliberately retains the approved MM5 gate cue. The native18 meter take uses accepted2×effects gain. Disputed26 is not played.
 
 **Included Files → MM1 → Bosses → Cut Man → Playback** (organize in IDE, but export paths MUST be root):
 - `Playback/mm1_cutman_boss_intro.pcm`
@@ -96,7 +103,7 @@ Keep pause Create/BeginStep/Step/restore/E commit/combat_begin from your latest 
 
 - Existing stage music, first door and both walking/jumping entries remain unchanged. Reach second door normally. Camera scroll must match accepted opening. At room commit Mega Man stays on entry platform, camera3072,720; no teleport down to Cut Man's lower floor.
 - Stage music stops once and boss musical opening begins once. Native boss meter appears empty at40,25. There is an intentional ~3second wait BEFORE incoming shutter closes; not a stuck transition.
-- Relative to room commit: shutter sound183, visible top-down closing strips184/190/196/202; scissors cue208/body209, two original scissors poses alternate; first health unit211/every2 through full28 at265; seven fill cues217..265/every8. Native rendering has one-frame OAM latency; GML GUI shows current health directly. Control returns303 (about5seconds after room commit), NOT as soon as meter full.
+- Relative to room commit: shutter sound183, visible top-down closing strips184/190/196/202; body209 (no added appearance sound), two original scissors poses alternate; first health unit211/every2 through full28 at265; seven fill cues217..265/every8. Native rendering has one-frame OAM latency; GML GUI shows current health directly. Control returns303 (about5seconds after room commit), NOT as soon as meter full.
 - Hold/release/repress fire through intro; accepted charge/rearm policy retained. Start during intro must not open pause or interrupt it; hold movement/jump must not move Mega Man during lock. After intro, fresh Start opens normal pause.
 - Pause after intro >30seconds, then resume: boss music continues its main phrase, never repeats opening/runs out; boss actor freezes; boss meter appears in cached closing stage; E heal remains real after unpause; player/charge/fire transitions unchanged.
 - Leave/restart room: no leaked boss music/duplicate queues; entry starts fresh. Missing PCM should give explicit error, not silent substitute. Both PCM filenames/rate/root export must match.

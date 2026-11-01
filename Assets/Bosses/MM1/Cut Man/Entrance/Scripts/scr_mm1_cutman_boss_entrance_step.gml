@@ -15,10 +15,7 @@ if (route_boss_intro_tick == 183)
 }
 if (route_boss_intro_tick >= 184 && instance_exists(route_boss_shutter))
     route_boss_shutter.gate_open_rows = max(0, 3 - floor((route_boss_intro_tick - 184) / 6));
-if (route_boss_intro_tick == 208)
-{
-    route_boss_appear_voice = audio_play_sound(snd_mm1_cutman_boss_scissors, 15, false);
-}
+// No standalone appearance/head-scissors cue: isolated export was not audibly verified.
 if (instance_exists(route_boss_actor))
 {
     route_boss_actor.image_index = 0;

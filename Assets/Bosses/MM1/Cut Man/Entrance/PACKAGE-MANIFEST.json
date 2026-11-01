@@ -53,8 +53,8 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 12930,
-      "sha256": "3cd61cb21eaf575d45f884118135e38b0cb1415d8468af94088475fe2cada0dd"
+      "bytes": 14081,
+      "sha256": "394959d7b7715cd2f5a2c4c738267a68f50ea5a255e03a6abba6c747f5086471"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_create.gml",
@@ -118,8 +118,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4540,
-      "sha256": "8ec37956338df378f85b37a29ffdbcfa933e5e8f4abde81571fd390bd12ad540"
+      "bytes": 5175,
+      "sha256": "cde6089dddc4a8e71960ea8bd32364069165f1af7bbf0ad8df8ee66841a45951"
     },
     {
       "path": "Reference/native-audio.json",
@@ -148,8 +148,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_boss_entrance_step.gml",
-      "bytes": 2322,
-      "sha256": "8b950c319f29de1e17fcdae06b18894ff631df2451bd90c68cbda94c76c6828a"
+      "bytes": 2284,
+      "sha256": "79995b8c6670b3dd228f9b6f91043f3adc498f92c3ef7c01c744cda51a2cbf36"
     },
     {
       "path": "Scripts/scr_mm1_cutman_boss_music_dispose.gml",
