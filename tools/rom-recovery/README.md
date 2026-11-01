@@ -249,3 +249,13 @@ Screw first-frame follow-up: user confirmed working runtime, flagged both closed
 ### Cut Man active spikes
 
 `probe-mm5-spike-guards.mjs`: self-boot original Napalm, controlled F0 terrain classifications,60exactUSAinstructionbytes, flash0/1/2/60expiry and isolated recoil-state guard/ordinary16particledeath/onecue. Not natural spike geometry/fullrecoil trial. `test-cutman-spikes.mjs`: SPIKE_OVERLAY includes fixed-health/Screw/FreeFall;8580actualGML boundaries,10anchors,continuous expiry/no-safe-latch/recoil/contactorder/refillpriority/deathparticles/retry/guards/source-preservation. `package-cutman-spikes.py`: one new script/one latest central replacement, no new art/audio/object/events/manager append. Preserve MM5 hurt+flash, fix MM1 spike exception; rectangle hit-envelope is explicit project adaptation. GMS/runtime acceptance pending.
+
+## MM6 victory flow — initial source/CPU audit
+
+`node tools/rom-recovery/verify-mm6-victory-flow.mjs` checks nine supplied-USA-ROM
+instruction spans and executes the original fixed-bank centre-walk routine plus
+forced-input helper in21 isolated cases. Frame/physics helper E468 is deliberately
+replaced with1/2/3-pixel fixture strides: not a natural kill or speed/timing test.
+Report generated under `.work/mm6-victory/`; committed reference and remaining
+scope: `../../Assets/Bosses/MM1/Cut Man/Victory/README.md`. No installable GML or
+music/sprite extraction is implied by this audit.

@@ -635,3 +635,21 @@ User correctly reports two columns overlap entry player. New incoming child inhe
 User says all good except missing boss-room flashing, confirms omission. Original supplied-ROM freshboot + disclosed native checkpoint/controlled approach rerun; end-frame BGpalette2 transitions and independent full-coloured-wall actual-render matches verify five pulses atrelative1..8/17..24/33..40/49..56/65..71 (39bright updates), normal from72. Native palette `[0F,20,10,00]→[0F,30,20,10]`; other background palettes unchanged. New transparent256×240mask derived original NT/attribute/CHR, every opaque normal pixel matches accepted room PNG. Render comparisons per-update avoid inferring timing from pending palette RAM writes. No forced palettes/boss/CHR/framecounter after approach.
 
 New sprite+scenery-only object(Create+ordinaryDraw depth998 behind actors/HUD), one-line spawn in entrance-start Script at3072,720. No camera/entrance-step/one-column shutter/music/fill/health/E/pause changes, disputed cue stays removed. FLASH-INSTALL-GMS14.md and minimal7fileZIP, full package refreshed. Tests actualDraw follows all native phases/39brightupdates, RGB/hash/depth/no-overlay72+ and existing606introchecks pass. Palette2 overlay may include the open doorway's grey backdrop during flash; closing shutter is not created until183, so no overlap with closing animation. No full-screen white fade or invincibility flicker. Nonpersistent inert overlay cleans up on room exit/restart. Source/model/native/package checks not GMS GPU/compiler or installed acceptance. Flash visual acceptance pending; AI still next.
+
+## Entrance/flash accepted; fight and MM6 victory scope approved
+
+User confirmed room flash works and requested the boss fight. Explicit balance:
+28HP, normal/partial/full Buster1/1/3. User additionally approved replacing the
+final-hit/victory flow with MM6-based defeat, stage-clear music, automatic walk to
+room centre, acquisition animation, adapted new-weapon screen/music and Rolling
+Cutter award. No score/CLEAR POINTS. Accepted entrance/shutter/flash unchanged.
+
+Initial research at `Assets/Bosses/MM1/Cut Man/Victory/README.md` and its committed
+source-audit JSON: nine exact supplied-MM6-USA ROM spans, 21 isolated native-CPU
+centring cases using explicitly substituted frame/physics strides. Original native
+X128 crossing/snap logic and forced-control helper verified; separate pre-clear and
+post-command13 counter initializations found. This is NOT a full native defeat
+trace, elapsed rendered timing measurement, recovered/accepted music, or completed
+fight/victory GML. Script handoff to weapon screen, full audio/art recovery, runtime
+integration, source regressions, packaging and GMS installed playtest remain pending.
+Nothing to import from this research-only checkpoint.
