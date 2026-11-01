@@ -108,3 +108,7 @@ python tools/rom-recovery/package-super-cutter-combat.py
 ```
 
 The optional `SUPER_CUTTER_OVERLAY=1` loads accepted Blaster then additive cutter sources into the existing407check adapter. New tests compare actual GML against native trigger/motion/pose records and exercise5HP/charged piercing/cleanup/contact/drop/freeze integration. Tests are not GMS compiler/runtime proof; use `Assets/Combat/MM5/Super Cutter Checkpoint/INSTALL-GMS14.md` for exact manual import. Do not replace building/scenery or approved audio. Source package is runtime-pending, not installed merely because tests pass.
+
+## Flea original-game research (not a gameplay installer)
+
+`probe-flea-gameplay.mjs` starts from the existing ignored fourth-ladder snapshot, releases ladder with native A, then uses controlled high-Y/protected Right approach to first original page8Flea spawn. Saves ignored frame-boundary `.work/flea-before-first-ai.json`. Five controlled600-update original-AI trials produce public215ROM-byte evidence and2708state entries, both native RNG hop choices,45landings/15-update waits,499air skips and no sound issue calls. `recover-flea-art.mjs` independently native-render-matches both grounded/extended-spring poses. `test-flea-research.mjs` checks ROM spans, traces, mapped anchors and strip hashes. Run these three scripts in that order. No gameplay/installation or GMS-runtime completion implied; scope at `Assets/Enemies/MM1/Flea/README.md`.
