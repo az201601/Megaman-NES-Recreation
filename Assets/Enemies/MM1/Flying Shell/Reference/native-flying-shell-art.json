@@ -1,0 +1,98 @@
+{
+  "method": "Supplied MM1USA/JSNES2.1.0 original live OAM/CHR/palette, ninthladder snapshot from documented controlled lead-in. PlayerY36/verticalspeed0/protection100, neutralinput. Two original closed/open poses independently opaque-pixel native-render matched. Mesen0.9.9RGB conversion, not Mesen.exe. Common17x24canvas preserves original1pixel-right offset of open middle pair; closed16x16 is placed4rows down, no invented pixels.",
+  "cell": [
+    17,
+    24
+  ],
+  "origin": [
+    8,
+    11
+  ],
+  "canonical": "left",
+  "frames": [
+    {
+      "index": 0,
+      "frame": 1,
+      "cells": [
+        {
+          "i": 1,
+          "x": 190,
+          "y": 120,
+          "tile": 192,
+          "attr": 3
+        },
+        {
+          "i": 2,
+          "x": 198,
+          "y": 120,
+          "tile": 193,
+          "attr": 3
+        },
+        {
+          "i": 3,
+          "x": 190,
+          "y": 128,
+          "tile": 194,
+          "attr": 3
+        },
+        {
+          "i": 4,
+          "x": 198,
+          "y": 128,
+          "tile": 195,
+          "attr": 3
+        }
+      ],
+      "rgbaSha256": "5c8549a86690581ffdcfe161fe59d2289fac64cf27c325bd51ac1535d5d79933"
+    },
+    {
+      "index": 1,
+      "frame": 13,
+      "cells": [
+        {
+          "i": 1,
+          "x": 177,
+          "y": 116,
+          "tile": 198,
+          "attr": 3
+        },
+        {
+          "i": 2,
+          "x": 185,
+          "y": 116,
+          "tile": 199,
+          "attr": 3
+        },
+        {
+          "i": 3,
+          "x": 178,
+          "y": 124,
+          "tile": 196,
+          "attr": 3
+        },
+        {
+          "i": 4,
+          "x": 186,
+          "y": 124,
+          "tile": 197,
+          "attr": 3
+        },
+        {
+          "i": 5,
+          "x": 177,
+          "y": 132,
+          "tile": 194,
+          "attr": 3
+        },
+        {
+          "i": 6,
+          "x": 185,
+          "y": 132,
+          "tile": 195,
+          "attr": 3
+        }
+      ],
+      "rgbaSha256": "432e38900683f8f0e28fa2113d2c8a1b18bd002b1eb2ae25549f4e5dd7874694"
+    }
+  ]
+}

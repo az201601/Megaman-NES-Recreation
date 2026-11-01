@@ -145,3 +145,9 @@ python tools/rom-recovery/package-octopus-battery-combat.py
 ```
 
 `package-octopus-battery-combat.py` emits deterministic18file ZIP plus manifest/CRC/exact-copy checks; no ROM/emulator states/audio/scenery replacement. Follow `Assets/Combat/MM5/Octopus Battery Checkpoint/INSTALL-GMS14.md`. The package is prepared, not installed merely because source tests pass.
+
+## Flying Shell / Shellgun research (not gameplay installation)
+
+After accepted Octopus Battery, regenerate fifth-through-tenth ladder probes from the existing fourth snapshot as needed. `probe-flying-shell.mjs` uses ninth/tenth frame-boundary states with controlled high-Y/protection to observe actual type0A repeated-flight/spawn cycles,413sourcebytes,1984active-state transitions/1038bullet deltas/20eight-way bursts. Eight sound15requests AND eight opcode-qualified15driver dispatches occur perburst (not deduplicated). Native-B controlled overlaps prove closed block/openonehitkill; invisible kill replacement counter72/reactivation70subsequent frames is separately recorded. No enemy/AI/ROM patches, no natural aiming/GMS/audio-waveform identity claim.
+
+Run `probe-flying-shell.mjs`, `recover-flying-shell-art.mjs`, `test-flying-shell-research.mjs`. Two native-render-matched jaw poses in17×24cells/origin8,11preserve the original1pxmiddle offset. No ROM/state/audio/gameplay installer distributed here. Native burst audio comparison and additive GMS implementation are next; keep approved Blaster/MM6ding/hit assets untouched. Scope/controls at `Assets/Enemies/MM1/Flying Shell/README.md`.
