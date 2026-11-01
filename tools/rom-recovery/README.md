@@ -170,3 +170,7 @@ python tools/rom-recovery/package-flying-shell-combat.py
 ```
 
 Package22files/manifest/CRC/exactcopies; only trimmed new burst in ZIP, fulltail stays repo. No ROM/state/disassembly/audio-master replacement. Follow `Assets/Combat/MM5/Flying Shell Checkpoint/INSTALL-GMS14.md`; source prepared, compilation/installed playtest and new sound acceptance pending.
+
+## Big Eye initial research
+
+`probe-big-eye-gameplay.mjs` replays eleventh beforeDown snapshot (generate with `probe-cutman-eleventh-ladder.mjs`), protects player, captures native record44/type09 spawn, finds enemy slot separately, then five controlled600video-update trials.219source/helper/speed bytes exactUSA;1347actual AI entries/25launches/20landing29hexrequests/236skips. Rightward trials leave slot after49entries; no3000AI-entry/fullterrain claim. `test-big-eye-research.mjs` verifies persisted traces/source bytes and limits. Research-only: art/audio recovery, additive source/installer and GMS runtime still pending. Accepted six-enemy baseline unchanged.
