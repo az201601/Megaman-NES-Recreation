@@ -174,3 +174,23 @@ Package22files/manifest/CRC/exactcopies; only trimmed new burst in ZIP, fulltail
 ## Big Eye initial research
 
 `probe-big-eye-gameplay.mjs` replays eleventh beforeDown snapshot (generate with `probe-cutman-eleventh-ladder.mjs`), protects player, captures native record44/type09 spawn, finds enemy slot separately, then five controlled600video-update trials.219source/helper/speed bytes exactUSA;1347actual AI entries/25launches/20landing29hexrequests/236skips. Rightward trials leave slot after49entries; no3000AI-entry/fullterrain claim. `test-big-eye-research.mjs` verifies persisted traces/source bytes and limits. Research-only: art/audio recovery, additive source/installer and GMS runtime still pending. Accepted six-enemy baseline unchanged.
+
+## Big Eye native resources + additive package
+
+`recover-big-eye-art.mjs`: native OAM/CHR/palette, two independently render-matched32×48poses/origin12,27. `recover-big-eye-audio.mjs`: initializedPAPU/nativeFFstop, fullAPU actual29hexlanding, holds grounded wait255 afterward solely to avoid second landing in tail; total1request/1dispatchasserted. Exact2×gain/exactzeros-only2mslead+10mstrail,8652trimframes/54953fulltail. New take awaiting approval; accepted audio untouched.
+
+`test-big-eye-integration.mjs`: actual GML through limited adapter matches721native free/350ground/236skip transitions; accepted anchor support/rectangular terrainfixtures,20normal/mid/7full/weakpierce/contact10/slide/bounds/landingonce/drop/freeze/rearm/cleanup/killbeforecontact/art/audio/preservedcentral/builtin guards. Full native terrain-edge solver not claimed. All prior overlays supported through `BIG_EYE_OVERLAY=1`; tests are not GMS runtime.
+
+```sh
+node tools/rom-recovery/recover-big-eye-art.mjs
+node tools/rom-recovery/recover-big-eye-audio.mjs
+node tools/rom-recovery/test-big-eye-integration.mjs
+BIG_EYE_OVERLAY=1 node tools/rom-recovery/test-flying-shell-integration.mjs
+BIG_EYE_OVERLAY=1 node tools/rom-recovery/test-octopus-battery-integration.mjs
+BIG_EYE_OVERLAY=1 node tools/rom-recovery/test-flea-integration.mjs
+BIG_EYE_OVERLAY=1 node tools/rom-recovery/test-super-cutter-integration.mjs
+BIG_EYE_OVERLAY=1 node tools/rom-recovery/test-blaster-integration.mjs
+python tools/rom-recovery/package-big-eye-combat.py
+```
+
+Follow `Assets/Combat/MM5/Big Eye Checkpoint/INSTALL-GMS14.md`. Source/resources prepared; GMS compilation/installedgame/newcue acceptance pending. No ROM/savestates/fulltail/oldscene/audio replacements in ZIP.
