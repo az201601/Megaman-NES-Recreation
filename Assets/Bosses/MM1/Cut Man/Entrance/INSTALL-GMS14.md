@@ -58,7 +58,7 @@ Folder **Objects → MM1 → Bosses → Cut Man → Entrance**. Create **`obj_mm
 ### B. Incoming boss-room shutter
 
 Folder **Objects → MM1 → Bosses → Cut Man → Entrance → Door**. Create **`obj_mm1_cutman_boss_entry_gate`**:
-- Sprite `spr_mm1_cutman_boss_gate_closed`; Parent **existing `obj_mm1_cutman_boss_gate`**; Visible ON, Solid OFF, Persistent OFF. Inherits existing solid-parent collision mask.
+- Sprite **`spr_mm1_cutman_second_gate_closed` (16×64)**; Parent **existing `obj_mm1_cutman_boss_gate`**; Visible ON, Solid OFF, Persistent OFF. Its Create explicitly overrides the inherited32×64 mask with the SAME16×64 sprite.
 - **Create:** WHOLE `Objects/obj_mm1_cutman_boss_entry_gate_create.gml` (contains event_inherited; required).
 - **ordinary Draw:** WHOLE `Objects/obj_mm1_cutman_boss_entry_gate_draw.gml`.
 - No other events/room placement. Do NOT replace the existing gate object's Create/Draw, move either existing gate, or add room-editor collision.
@@ -109,3 +109,7 @@ Native entrance probe fresh-boots supplied MM1USA then discloses ONE original ch
 Native music0D is separately recaptured with only its native driver request after complete silence. Pointer first loop arrival373, returns757/1141; all four pointers match on successive384frame returns. One-time opening + immutable sample queue loop, not frame-timed looping. Full-APU masters include emulator filtering; independent music/SFX mixing is NOT native channel stealing. Sound/loop seams/new original cues still need listening approval. Existing opening MM5 cue deliberately retained for closing; not native-MM1 door audio claim.
 
 606 actual-GML intro ticks (held/released fire), native sprites/meters/timing/spans, music/WAV/PCM, queue ownership/idempotence, camera source-preservation and pause cache/guard tests pass. Limited mocks are NOT GMS1.4 compilation, event ordering, collision, async/GPU/audio or user acceptance. Compile/playtest before accepting. Boss combat not implemented.
+
+## Closing shutter width correction (existing installs)
+
+Only obj_mm1_cutman_boss_entry_gate changes. Set its Sprite to existing spr_mm1_cutman_second_gate_closed (16×64/origin0,0); replace its ENTIRE Create event with updated Objects/obj_mm1_cutman_boss_entry_gate_create.gml. Both sprite_index AND mask_index must be16×64 AFTER event_inherited. Do not resize either existing door sprite, change existing door objects, move player/camera, or repeat any appends. Ordinary Draw remains unchanged. Spawn3072,816 is correct: one column spans3072..3087; player centre3096.5625 stays clear. Previous32×64 spans3072..3103 and overlaps player; that was a source bug.

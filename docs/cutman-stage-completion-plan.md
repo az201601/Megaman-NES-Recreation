@@ -625,3 +625,7 @@ User says throwing sound is different, cannot identify current take. Correct: or
 ## Disputed entrance cue removed from runtime
 
 User links YouTube WpdM1bhovRs fight video and says sound not heard. Workspace cannot view video; do not claim watched. Prior isolated26 command/tail verification was overstated as perceptually correct head-snipping/appearance audio. Remove explicit26 audio_play_sound atintro208, no replacement; music/door/fill/art/timing unchanged. Existing install replaces only scr_mm1_cutman_boss_entrance_step. Old Sound may remain unused; camera voice field remains-1 for compatibility. Historical native command evidence and disputed isolated WAV retained as research, not accepted audibility proof. Source/model test asserts no cue26 runtime call; GMS user acceptance pending.
+
+## Boss closing shutter width correction
+
+User correctly reports two columns overlap entry player. New incoming child inherited32×64 first-gate mask and assigned same32×64 sprite; source width error, not placement. Explicitly override sprite AND mask with existing spr_mm1_cutman_second_gate_closed16×64 after inherited Create. Spawn3072,816/centre3096.5625 unchanged.16wide ends3087, old32wide ends3103. No other gate/opening/player/camera/source changes. Guide updated; existing installs change new child's sprite and replace Create only. Source dimension/mask/bounds checks; GMS acceptance pending.

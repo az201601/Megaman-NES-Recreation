@@ -53,8 +53,8 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 11666,
-      "sha256": "71c674c7c335589294e8c3d9f8c9668f865221fcfb3221f5b69408ae5f600d01"
+      "bytes": 12383,
+      "sha256": "cfeaf50d42a47ec23985d5e71ee73f78104807ad4758dd49dab9b9c1fbd0a222"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_create.gml",
@@ -73,8 +73,8 @@
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_entry_gate_create.gml",
-      "bytes": 175,
-      "sha256": "c3ace3d8b6faeac4502cb3aedca869cdff722b4a6b510c3599916d44b78e4675"
+      "bytes": 240,
+      "sha256": "4278fd3e97184603f1b7d1fcd512b6f28e09b21be85a4e3d205c2ba6adb5ca03"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_entry_gate_draw.gml",
@@ -118,8 +118,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5175,
-      "sha256": "cde6089dddc4a8e71960ea8bd32364069165f1af7bbf0ad8df8ee66841a45951"
+      "bytes": 5654,
+      "sha256": "f624c79468e01171c7af48810fab29ee58b478c6107fb8711fb49d744a3f2aea"
     },
     {
       "path": "Reference/native-audio.json",

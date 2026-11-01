@@ -16,3 +16,6 @@ const scissors=JSON.parse(read('Reference/native-scissors-verification.json'));a
 const tail=JSON.parse(read('Reference/scissors-full-tail-audit.json'));assert.equal(tail.end.f,197);assert.deepEqual(tail.first.map(r=>r.loop),[0,1]);const full=fs.readFileSync(new URL(tail.file,base));assert.equal(hash(full),tail.sha256);const current=fs.readFileSync(new URL('Audio/snd_mm1_cutman_boss_scissors.wav',base)).subarray(44);assert.deepEqual(full.subarray(44+1535*2,44+1535*2+current.length),current);
 
 assert.ok(!read('Scripts/scr_mm1_cutman_boss_entrance_step.gml').includes('snd_mm1_cutman_boss_scissors'));
+
+// Incoming shutter must be one16px column, NOT the32px first gate sprite/mask.
+const narrow=fs.readFileSync(new URL('Assets/Cut Man/Stage/First Gate Passage/spr_mm1_cutman_second_gate_closed.png',root));assert.deepEqual([narrow.readUInt32BE(16),narrow.readUInt32BE(20)],[16,64]);const shutterCreate=read('Objects/obj_mm1_cutman_boss_entry_gate_create.gml');assert.ok(shutterCreate.includes('sprite_index = spr_mm1_cutman_second_gate_closed;'));assert.ok(shutterCreate.includes('mask_index = spr_mm1_cutman_second_gate_closed;'));assert.ok(shutterCreate.indexOf('event_inherited()')<shutterCreate.indexOf('mask_index ='));assert.ok(3072+16<=3096.5625-7);assert.ok(3072+32>3096.5625-7);
