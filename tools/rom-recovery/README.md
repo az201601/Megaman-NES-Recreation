@@ -215,3 +215,9 @@ python tools/rom-recovery/package-cutman-free-fall.py
 ```
 
 Follow `Assets/Cut Man/Stage/Free Fall Correction/INSTALL-GMS14.md`.14file deterministicZIP/manifest/CRC/exactcopies. No newart/audio/object/geometry/enemy resources; don't replace accepted combat-owned cameraEndStep. HUDhealth0/opening-title retry/horizontal camera interpolation are explicit project adaptations. Cut Man spike collision not added. Installed acceptance pending.
+
+### Jumping gate entry (after user-accepted Free Fall Correction)
+
+`node tools/rom-recovery/test-jumping-gates.mjs` executes the new gateBegin/start/air-helperGML with the accepted camera/scrollStart/scrollFinish mock.1476trace/eligibility checks plus both overhead-mask/ceiling cases, chargecleanup/rearm,11connectedfalls+6pits through NEW BeginStep, exact non-gate FreeFall-body reconstruction and GMS1.4local/obsoleteintrospection guards. Not compiler/runner/event-order or installed playtest proof; airborne choreography is project adaptation, not new native ROM fidelity claim.
+
+`python tools/rom-recovery/package-jumping-gates.py` makes deterministic minimal ZIP+SHA256manifest; verifies CRC/all bytes. ThreeGML+README+installer+manifest only. Sources: Assets/Cut Man/Stage/Jumping Gate Entry. Seven-enemy/accepted FreeFall baseline retained; Screw still paused for user acceptance of this gate change.
