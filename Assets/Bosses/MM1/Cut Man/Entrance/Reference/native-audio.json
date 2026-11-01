@@ -1,0 +1,104 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "method": "Original USA initialized entrance-approach snapshot. Neutral protected player, enemy slots lifecycle cleared each update; wait for empty D554 queue, native FF stop at1, command0D/26/18 at180. Full APU, all five channels centred, no ROM patches/channel mutes; only requested command dispatched after180;60frame exact silence prerequisite.48k monoPCM16. Music gain2.125 (accepted stage2.5*85%); effects2x, no clipping. Music intro includes command-to-first-note lead, one-time192frame musical phrase then384frame loop; pulse1 pointer first arrival373/back757/back1141, all four pointers equal at both backs. No waveform ramps/filter changes; loop/GMS audio acceptance pending. Effects exact-zero trim2ms lead/10ms tail. Existing accepted cues untouched; closing deliberately uses accepted MM5 gate cue.",
+  "tracks": [
+    {
+      "name": "intro",
+      "start": 180,
+      "end": 374,
+      "frames": 194,
+      "samples": 154949
+    },
+    {
+      "name": "loop",
+      "start": 374,
+      "end": 758,
+      "frames": 384,
+      "samples": 306703
+    }
+  ],
+  "loopReturns": [
+    {
+      "f": 757,
+      "p": [
+        44883,
+        44945,
+        45031,
+        45098
+      ]
+    },
+    {
+      "f": 1141,
+      "p": [
+        44883,
+        44945,
+        45031,
+        45098
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "Playback/mm1_cutman_boss_intro.pcm",
+      "bytes": 309898,
+      "sha256": "3fadab26d1a46f00b587bbb3d31678b2e164b8c956437e95f584404102bfb68b",
+      "peak": 0.5384483337402344
+    },
+    {
+      "file": "Playback/mm1_cutman_boss_loop.pcm",
+      "bytes": 613406,
+      "sha256": "7fed9979e42b881a223c2baef76306edd24dba2740663d28facacbdfa91b4cb7",
+      "peak": 0.61529541015625
+    }
+  ],
+  "effects": [
+    {
+      "id": 38,
+      "file": "Audio/snd_mm1_cutman_boss_appear.wav",
+      "firstNonzero": 1631,
+      "trimStart": 1535,
+      "trimEnd": 15331,
+      "samples": 13796,
+      "peak": 0.40594482421875,
+      "sha256": "6d38a8c61c5dc5958bd516a36a31f0caf35d22ac5f365a94723c5cb8c5b45b79",
+      "dispatch": [
+        {
+          "f": 0,
+          "id": 25
+        },
+        {
+          "f": 1,
+          "id": 255
+        },
+        {
+          "f": 180,
+          "id": 38
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "file": "Audio/snd_mm1_cutman_boss_fill.wav",
+      "firstNonzero": 1631,
+      "trimStart": 1535,
+      "trimEnd": 11994,
+      "samples": 10459,
+      "peak": 0.42279052734375,
+      "sha256": "3b7e9b6227a89135834663db684c80b27a1a1094b17ffea536c22e05dd9495b8",
+      "dispatch": [
+        {
+          "f": 0,
+          "id": 25
+        },
+        {
+          "f": 1,
+          "id": 255
+        },
+        {
+          "f": 180,
+          "id": 24
+        }
+      ]
+    }
+  ]
+}
