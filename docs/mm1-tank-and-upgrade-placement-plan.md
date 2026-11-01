@@ -19,3 +19,7 @@ Exact rooms, coordinates, route requirements, revisit/respawn rules and pickup/c
 Energy Balancer is specifically settled for Bomb Man; exact hiding spot remains to choose. Existing starting inventory remains zero tanks, Buster only and02 spare lives. No tank effects, consumption or pickups are implemented by this planning document.
 
 Pause menu checkpoint: user explicitly confirmed both opening and closing transitions work and look correct in-game. Preserve that working baseline.
+
+## Cut Man location approved
+
+User approved the proposed visible optional perch: on the lone raised Super Arm block in the long middle outdoor section, after the first cutter dispenser and just before the small pit. Existing block top-left1152,1056/32×32; proposed tank centre anchor1168,1048/camera band960, final sprite alignment to verify when implemented. Adjacent ledge top1088 gives32px climb, within accepted52.5px jump height; no Super Arm removal or terrain changes required. This approves LOCATION only, not inventory capacity, death/revisit respawn policy or consumption implementation. Preserve existing zero starting tanks and disabled consumption until refill is connected.
