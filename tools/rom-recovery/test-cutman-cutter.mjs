@@ -111,3 +111,26 @@ for(const right of[false,true]){
   assert.equal(s.cm_speed_y,62464);assert.ok(s.y>1500);motionChecks++;
 }
 console.log(`PASS ${motionChecks} actual-GML project-solid motion fixtures; USA operands verify body8x12. Corner/overhang behavior deliberately project-adapted; not GMS runtime.`);
+
+const throwCutter=compile('scr_mm1_cutman_cutter_throw'),moveCutter=compile('scr_mm1_cutman_cutter_move');
+let throwChecks=0,moveChecks=0;
+for(let i=0;i<3000;i++){
+ m.fill(0,0,0x800);m[0x54]=32;for(let slot=16;slot<32;slot++)m[0x600+slot]=248;
+ const s={...math,cm_cutter:0,cm_x:24+rand(209),cm_y:24+rand(192),cm_target_x:24+rand(209),cm_target_y:24+rand(192),cm_face_right:!!rand(2),cc_face_right:false,cc_x:0,cc_y:0,cc_x_fp:0,cc_y_fp:0,cc_anim:99,cc_draw_frame:99,cc_caught:false,cc_base:0,cc_dx:0,cc_dy_byte:0,cc_upward:false,cc_speed_x:0,cc_speed_y:0,snd_mm1_cutman_rolling_cutter_throw:25,plays:[]};
+ s.scr_mm1_cutman_boss_face=()=>face(s);s.scr_mm1_cutman_cutter_aim=()=>aim(s);s.audio_play_sound=(...args)=>s.plays.push(args);
+ m[0x481]=s.cm_x;m[0x601]=s.cm_y;m[0x480]=s.cm_target_x;m[0x600]=s.cm_target_y;m[0x421]=s.cm_face_right?67:3;
+ m[0x461]=m[0x460]=23;m[0x4f]=0;start(0xdf8f);run();throwCutter(s);
+ assert.equal(s.cm_cutter,m[0x44]);assert.equal(s.cc_x,m[0x490]);assert.equal(s.cc_y,m[0x610]);assert.equal(s.cc_face_right,!!(m[0x430]&64));
+ assert.equal(s.cc_speed_x,m[0x4f0]|m[0x4d0]<<8);assert.equal(s.cc_speed_y,m[0x670]|m[0x690]<<8);
+ assert.equal(s.cc_x_fp,s.cc_x*256);assert.equal(s.cc_y_fp,s.cc_y*256);assert.equal(s.cc_anim,0);
+ assert.deepEqual(s.plays,[[25,10,false]]);assert.equal(m[0x580],0x25);
+ throwCutter(s);assert.equal(s.plays.length,1,'No second cutter or repeated throw sound');throwChecks++;
+}
+for(let i=0;i<4000;i++){
+ const s={...math,argument0:0x34,cm_cutter:1,cc_face_right:!!rand(2),cc_x_fp:rand(65536),cc_y_fp:rand(65536),cc_speed_x:rand(2048),cc_speed_y:rand(65536),cc_anim:0,cc_draw_frame:0,cc_x:0,cc_y:0};
+ const expectedX=(s.cc_x_fp+(s.cc_face_right?1:-1)*s.cc_speed_x+65536)%65536;
+ const signedY=s.cc_speed_y>=32768?s.cc_speed_y-65536:s.cc_speed_y;
+ const expectedY=(s.cc_y_fp-signedY+65536)%65536;
+ moveCutter(s);assert.equal(s.cc_x_fp,expectedX);assert.equal(s.cc_y_fp,expectedY);assert.equal(s.cc_x,expectedX>>8);assert.equal(s.cc_y,expectedY>>8);assert.equal(s.cc_draw_frame,0);assert.equal(s.cc_anim,1);moveChecks++;
+}
+console.log(`PASS ${throwChecks} original-6502 allocation/aim/throw25 cases and ${moveChecks} fixed-point projectile motion fixtures. Complete live-world update order NOT tested.`);

@@ -184,3 +184,53 @@ calling manage. Body motion helper must only run where decide calls it.
 Still no live actor/Create/Draw/central-combat replacements or installable ZIP.
 Sprites/cutter projectile movement/allocation, contact/shot integration and final-hit
 MM6 victory remain unfinished. Accepted entrance and audio bytes are unchanged.
+
+## Combat art, projectile allocation/motion and Buster hit checkpoint
+
+New `Art/spr_mm1_cutman_combat_strip34.png`:34frames48x64, origin24,32. Includes
+explicit left/right facings, head/no-head-cutter variants, cutter and native hurt
+metasprite. `Reference/combat-art.json` records48 controlled original-renderer
+fixtures: native frame473 snapshot, force actor pose/counter/position/facing and
+lifecycle1 for two original frames, export OAM cells and independently compare
+EVERY opaque output pixel to completed native PPU output. No CHR/ROM/palette edits.
+Not natural animation timing or installed GMS rendering. Recovery script:
+`recover-cutman-combat-art.mjs`; stored-art/mapping tests:
+`test-cutman-combat-art.mjs`. Both native facings exported to avoid guessed origin
+mirroring; transparent margins must not be cropped.
+
+`scr_mm1_cutman_animation_header` maps effective pose to original packed header.
+`scr_mm1_cutman_animation_sprite` maps effective pose/pre-advance frame/facing/hurt
+to verified sprite-strip index. Select pose+floor(fire/16) BEFORE fire decrement;
+use pre-advance counter/hurt sample. Native hurt rendering is a separate metasprite,
+not an invented white tint of the walking body. Mapping checks cover all48fixtures.
+
+`scr_mm1_cutman_cutter_throw`: integer spawn boss±8,Y−10, zero fractions, copies
+PRE-search facing, then native aim from original target-distance inputs. Sets
+single cutter out and plays the approved Sound once on successful creation only.
+`cutter_move`:16-bit fixed-point wrap, facing-based horizontal move, upward-positive
+Y/no gravity/no terrain collision, original packed animation counter. Their state
+fields are initialized on throw. The tests now include3,000 ORIGINAL6502 DF8F
+allocation/aim/command25 comparisons (no allocation/aim helper stubs) and4,000
+projectile motion arithmetic fixtures. Whole-world spawn-frame update order is
+still unintegrated; movement tests are arithmetic fixtures, not natural flights.
+
+`scr_mm1_cutman_boss_hit`: actual GML project-policy adapter with28HP and1/1/3
+normal/partial/full damage, accepted MM6 successful-hit sound,63-update native
+Cut Man surviving-hit blink. Absorbs all boss-colliding projectiles, including full
+charge; invulnerable hits consume shots without another successful-hit cue. Final
+hit immediately latches `cm_defeat_pending`, disables `cm_active`, clears cutter
+and pending throw, zeros speeds, and clamps HP0. A later controller must claim
+that flag exactly once for the MM6 victory flow. It is NOT an implemented victory
+sequence or a call to existing random-drop enemy explosion handling.
+
+`test-cutman-boss-hit.mjs`:261 actual-GML checks, including28normal/28partial/
+10full-charge hits, all63 blink values, intro/inactive guards, overkill and duplicate
+final-hit prevention. This is explicit project balance/absorption policy, not a
+claim that MM1 originally had MM5 charge projectiles or this damage table.
+
+**Still no installation instructions or ZIP:** actor initialization/drawing,
+central AI→shots→contacts→animation ordering, contact bounds/damage, live shot
+routing, pause/E/death cleanup and the MM6 final-hit/weapon-get controller remain
+to be connected and tested. In particular don't run animation in Draw, advance
+blink before hit processing, or give the cutter a second independent Step. All
+accepted entrance resources and approved audio bytes remain unchanged.

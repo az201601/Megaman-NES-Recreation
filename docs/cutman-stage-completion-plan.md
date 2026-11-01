@@ -703,3 +703,16 @@ Approved throw WAV hash asserted unchanged. No live actor or central combat edit
 no installable ZIP yet. Remaining: combat sprites/frame mapping, actual cutter
 allocation/movement/update order, shots/contact, MM6 final-hit/victory/weapon screen
 and complete incremental installation/playtest package. Entrance remains untouched.
+
+## Combat sprites, cutter allocation/motion and Buster damage source added
+
+Recovered34native combat frames48x64/origin24,32 including both facings,
+head/no-head variants, detached cutter and native hurt metasprite.48controlled
+original-PPU fixtures, everyopaque pixel verified; source art not guessed mirrors.
+Added actual header/frame lookup scripts. Original DF8F allocation/aim/throw25 vs
+GML3,000cases pass;4,000 projectile fixed-point motion fixtures pass. Uses exact
+approved Sound once per accepted throw; no audio changes. Added28HP/1-1-3 shot-hit
+adapter with63blink/shot absorption and immediate once-only final-hit combat/cutter
+shutdown;261 actual-GML balance/latch checks pass. Neither native flight timing nor
+GMS runtime claimed. Actor/central shot/contact/update ordering and MM6 victory/
+weapon-screen integration still pending, no installable package. Entrance untouched.
