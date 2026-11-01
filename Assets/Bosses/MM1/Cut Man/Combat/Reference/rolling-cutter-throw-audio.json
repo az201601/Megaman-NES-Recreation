@@ -1,0 +1,1793 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "status": "Awaiting user listening approval; NOT installed",
+  "method": "Original USA initialized approach snapshot, native FF stop then wait60exact-silent frames. Empty D554 queue receives25 at180; original driver, allAPUchannels centred, no ROM edits/channel muting/synthesis/filtering/stretching.48kHz mono16bit, accepted2xSFX gain with no clipping. Full-tail take begins at command and ends8updates after natural driver release. Preview removes exact-zero silence only, retains2ms lead/10ms tail, asserted byte-identical subrange.",
+  "throwCall": {
+    "cpu": "DFB4",
+    "offset": 122820,
+    "hex": "a9252077c4"
+  },
+  "dispatch": [
+    {
+      "f": 0,
+      "id": 25
+    },
+    {
+      "f": 1,
+      "id": 255
+    },
+    {
+      "f": 180,
+      "id": 37
+    }
+  ],
+  "driverEnd": {
+    "f": 295,
+    "usage": 0,
+    "addr": 48091,
+    "wait": 0,
+    "loop": 0
+  },
+  "firstNonzero": 1635,
+  "lastNonzero": 91935,
+  "trimStart": 1539,
+  "trimEnd": 92416,
+  "commands": [
+    {
+      "f": 181,
+      "addr": 48043,
+      "byte": 5,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48044,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48045,
+      "byte": 98,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48046,
+      "byte": 132,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48047,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48048,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48049,
+      "byte": 63,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48050,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48051,
+      "byte": 33,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48052,
+      "byte": 0,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48053,
+      "byte": 6,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48054,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48055,
+      "byte": 58,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48056,
+      "byte": 2,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48057,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48058,
+      "byte": 5,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48059,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48060,
+      "byte": 98,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48061,
+      "byte": 132,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48062,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48063,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "addr": 48064,
+      "byte": 4,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48065,
+      "byte": 5,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48066,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48067,
+      "byte": 98,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48068,
+      "byte": 132,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48069,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48070,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48071,
+      "byte": 63,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48072,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48073,
+      "byte": 33,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48074,
+      "byte": 0,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48075,
+      "byte": 32,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48076,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48077,
+      "byte": 58,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48078,
+      "byte": 2,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48079,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48080,
+      "byte": 5,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48081,
+      "byte": 1,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48082,
+      "byte": 98,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48083,
+      "byte": 132,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48084,
+      "byte": 3,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48085,
+      "byte": 128,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "addr": 48086,
+      "byte": 4,
+      "loop": 0
+    },
+    {
+      "f": 219,
+      "addr": 48087,
+      "byte": 4,
+      "loop": 0
+    },
+    {
+      "f": 219,
+      "addr": 48088,
+      "byte": 2,
+      "loop": 0
+    },
+    {
+      "f": 219,
+      "addr": 48089,
+      "byte": 171,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48090,
+      "byte": 187,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48043,
+      "byte": 5,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48044,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48045,
+      "byte": 98,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48046,
+      "byte": 132,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48047,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48048,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48049,
+      "byte": 63,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48050,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48051,
+      "byte": 33,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48052,
+      "byte": 0,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48053,
+      "byte": 6,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48054,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48055,
+      "byte": 58,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48056,
+      "byte": 2,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48057,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48058,
+      "byte": 5,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48059,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48060,
+      "byte": 98,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48061,
+      "byte": 132,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48062,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48063,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 219,
+      "addr": 48064,
+      "byte": 4,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48065,
+      "byte": 5,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48066,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48067,
+      "byte": 98,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48068,
+      "byte": 132,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48069,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48070,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48071,
+      "byte": 63,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48072,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48073,
+      "byte": 33,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48074,
+      "byte": 0,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48075,
+      "byte": 32,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48076,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48077,
+      "byte": 58,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48078,
+      "byte": 2,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48079,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48080,
+      "byte": 5,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48081,
+      "byte": 1,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48082,
+      "byte": 98,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48083,
+      "byte": 132,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48084,
+      "byte": 3,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48085,
+      "byte": 128,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "addr": 48086,
+      "byte": 4,
+      "loop": 1
+    },
+    {
+      "f": 257,
+      "addr": 48087,
+      "byte": 4,
+      "loop": 1
+    },
+    {
+      "f": 257,
+      "addr": 48088,
+      "byte": 2,
+      "loop": 1
+    },
+    {
+      "f": 257,
+      "addr": 48089,
+      "byte": 171,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48090,
+      "byte": 187,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48043,
+      "byte": 5,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48044,
+      "byte": 1,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48045,
+      "byte": 98,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48046,
+      "byte": 132,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48047,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48048,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48049,
+      "byte": 63,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48050,
+      "byte": 128,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48051,
+      "byte": 33,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48052,
+      "byte": 0,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48053,
+      "byte": 6,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48054,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48055,
+      "byte": 58,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48056,
+      "byte": 2,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48057,
+      "byte": 128,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48058,
+      "byte": 5,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48059,
+      "byte": 1,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48060,
+      "byte": 98,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48061,
+      "byte": 132,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48062,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48063,
+      "byte": 128,
+      "loop": 2
+    },
+    {
+      "f": 257,
+      "addr": 48064,
+      "byte": 4,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48065,
+      "byte": 5,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48066,
+      "byte": 1,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48067,
+      "byte": 98,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48068,
+      "byte": 132,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48069,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48070,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48071,
+      "byte": 63,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48072,
+      "byte": 128,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48073,
+      "byte": 33,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48074,
+      "byte": 0,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48075,
+      "byte": 32,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48076,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48077,
+      "byte": 58,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48078,
+      "byte": 2,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48079,
+      "byte": 128,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48080,
+      "byte": 5,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48081,
+      "byte": 1,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48082,
+      "byte": 98,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48083,
+      "byte": 132,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48084,
+      "byte": 3,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48085,
+      "byte": 128,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "addr": 48086,
+      "byte": 4,
+      "loop": 2
+    },
+    {
+      "f": 295,
+      "addr": 48087,
+      "byte": 4,
+      "loop": 2
+    },
+    {
+      "f": 295,
+      "addr": 48088,
+      "byte": 2,
+      "loop": 2
+    },
+    {
+      "f": 295,
+      "addr": 48091,
+      "byte": 6,
+      "loop": 0
+    },
+    {
+      "f": 295,
+      "addr": 48091,
+      "byte": 6,
+      "loop": 0
+    }
+  ],
+  "lifecycle": [
+    {
+      "f": 180,
+      "usage": 10,
+      "addr": 48043,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 181,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 5,
+      "loop": 0
+    },
+    {
+      "f": 182,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 4,
+      "loop": 0
+    },
+    {
+      "f": 183,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 3,
+      "loop": 0
+    },
+    {
+      "f": 184,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 2,
+      "loop": 0
+    },
+    {
+      "f": 185,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 1,
+      "loop": 0
+    },
+    {
+      "f": 186,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 187,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 31,
+      "loop": 0
+    },
+    {
+      "f": 188,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 30,
+      "loop": 0
+    },
+    {
+      "f": 189,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 29,
+      "loop": 0
+    },
+    {
+      "f": 190,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 28,
+      "loop": 0
+    },
+    {
+      "f": 191,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 27,
+      "loop": 0
+    },
+    {
+      "f": 192,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 26,
+      "loop": 0
+    },
+    {
+      "f": 193,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 25,
+      "loop": 0
+    },
+    {
+      "f": 194,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 24,
+      "loop": 0
+    },
+    {
+      "f": 195,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 23,
+      "loop": 0
+    },
+    {
+      "f": 196,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 22,
+      "loop": 0
+    },
+    {
+      "f": 197,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 21,
+      "loop": 0
+    },
+    {
+      "f": 198,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 20,
+      "loop": 0
+    },
+    {
+      "f": 199,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 19,
+      "loop": 0
+    },
+    {
+      "f": 200,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 18,
+      "loop": 0
+    },
+    {
+      "f": 201,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 17,
+      "loop": 0
+    },
+    {
+      "f": 202,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 16,
+      "loop": 0
+    },
+    {
+      "f": 203,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 15,
+      "loop": 0
+    },
+    {
+      "f": 204,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 14,
+      "loop": 0
+    },
+    {
+      "f": 205,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 13,
+      "loop": 0
+    },
+    {
+      "f": 206,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 12,
+      "loop": 0
+    },
+    {
+      "f": 207,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 11,
+      "loop": 0
+    },
+    {
+      "f": 208,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 10,
+      "loop": 0
+    },
+    {
+      "f": 209,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 9,
+      "loop": 0
+    },
+    {
+      "f": 210,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 8,
+      "loop": 0
+    },
+    {
+      "f": 211,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 7,
+      "loop": 0
+    },
+    {
+      "f": 212,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 6,
+      "loop": 0
+    },
+    {
+      "f": 213,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 5,
+      "loop": 0
+    },
+    {
+      "f": 214,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 4,
+      "loop": 0
+    },
+    {
+      "f": 215,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 3,
+      "loop": 0
+    },
+    {
+      "f": 216,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 2,
+      "loop": 0
+    },
+    {
+      "f": 217,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 1,
+      "loop": 0
+    },
+    {
+      "f": 218,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 219,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 5,
+      "loop": 1
+    },
+    {
+      "f": 220,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 4,
+      "loop": 1
+    },
+    {
+      "f": 221,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 3,
+      "loop": 1
+    },
+    {
+      "f": 222,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 2,
+      "loop": 1
+    },
+    {
+      "f": 223,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 1,
+      "loop": 1
+    },
+    {
+      "f": 224,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 0,
+      "loop": 1
+    },
+    {
+      "f": 225,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 31,
+      "loop": 1
+    },
+    {
+      "f": 226,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 30,
+      "loop": 1
+    },
+    {
+      "f": 227,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 29,
+      "loop": 1
+    },
+    {
+      "f": 228,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 28,
+      "loop": 1
+    },
+    {
+      "f": 229,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 27,
+      "loop": 1
+    },
+    {
+      "f": 230,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 26,
+      "loop": 1
+    },
+    {
+      "f": 231,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 25,
+      "loop": 1
+    },
+    {
+      "f": 232,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 24,
+      "loop": 1
+    },
+    {
+      "f": 233,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 23,
+      "loop": 1
+    },
+    {
+      "f": 234,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 22,
+      "loop": 1
+    },
+    {
+      "f": 235,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 21,
+      "loop": 1
+    },
+    {
+      "f": 236,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 20,
+      "loop": 1
+    },
+    {
+      "f": 237,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 19,
+      "loop": 1
+    },
+    {
+      "f": 238,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 18,
+      "loop": 1
+    },
+    {
+      "f": 239,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 17,
+      "loop": 1
+    },
+    {
+      "f": 240,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 16,
+      "loop": 1
+    },
+    {
+      "f": 241,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 15,
+      "loop": 1
+    },
+    {
+      "f": 242,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 14,
+      "loop": 1
+    },
+    {
+      "f": 243,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 13,
+      "loop": 1
+    },
+    {
+      "f": 244,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 12,
+      "loop": 1
+    },
+    {
+      "f": 245,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 11,
+      "loop": 1
+    },
+    {
+      "f": 246,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 10,
+      "loop": 1
+    },
+    {
+      "f": 247,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 9,
+      "loop": 1
+    },
+    {
+      "f": 248,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 8,
+      "loop": 1
+    },
+    {
+      "f": 249,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 7,
+      "loop": 1
+    },
+    {
+      "f": 250,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 6,
+      "loop": 1
+    },
+    {
+      "f": 251,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 5,
+      "loop": 1
+    },
+    {
+      "f": 252,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 4,
+      "loop": 1
+    },
+    {
+      "f": 253,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 3,
+      "loop": 1
+    },
+    {
+      "f": 254,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 2,
+      "loop": 1
+    },
+    {
+      "f": 255,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 1,
+      "loop": 1
+    },
+    {
+      "f": 256,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 0,
+      "loop": 1
+    },
+    {
+      "f": 257,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 5,
+      "loop": 2
+    },
+    {
+      "f": 258,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 4,
+      "loop": 2
+    },
+    {
+      "f": 259,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 3,
+      "loop": 2
+    },
+    {
+      "f": 260,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 2,
+      "loop": 2
+    },
+    {
+      "f": 261,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 1,
+      "loop": 2
+    },
+    {
+      "f": 262,
+      "usage": 10,
+      "addr": 48065,
+      "wait": 0,
+      "loop": 2
+    },
+    {
+      "f": 263,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 31,
+      "loop": 2
+    },
+    {
+      "f": 264,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 30,
+      "loop": 2
+    },
+    {
+      "f": 265,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 29,
+      "loop": 2
+    },
+    {
+      "f": 266,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 28,
+      "loop": 2
+    },
+    {
+      "f": 267,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 27,
+      "loop": 2
+    },
+    {
+      "f": 268,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 26,
+      "loop": 2
+    },
+    {
+      "f": 269,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 25,
+      "loop": 2
+    },
+    {
+      "f": 270,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 24,
+      "loop": 2
+    },
+    {
+      "f": 271,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 23,
+      "loop": 2
+    },
+    {
+      "f": 272,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 22,
+      "loop": 2
+    },
+    {
+      "f": 273,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 21,
+      "loop": 2
+    },
+    {
+      "f": 274,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 20,
+      "loop": 2
+    },
+    {
+      "f": 275,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 19,
+      "loop": 2
+    },
+    {
+      "f": 276,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 18,
+      "loop": 2
+    },
+    {
+      "f": 277,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 17,
+      "loop": 2
+    },
+    {
+      "f": 278,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 16,
+      "loop": 2
+    },
+    {
+      "f": 279,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 15,
+      "loop": 2
+    },
+    {
+      "f": 280,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 14,
+      "loop": 2
+    },
+    {
+      "f": 281,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 13,
+      "loop": 2
+    },
+    {
+      "f": 282,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 12,
+      "loop": 2
+    },
+    {
+      "f": 283,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 11,
+      "loop": 2
+    },
+    {
+      "f": 284,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 10,
+      "loop": 2
+    },
+    {
+      "f": 285,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 9,
+      "loop": 2
+    },
+    {
+      "f": 286,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 8,
+      "loop": 2
+    },
+    {
+      "f": 287,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 7,
+      "loop": 2
+    },
+    {
+      "f": 288,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 6,
+      "loop": 2
+    },
+    {
+      "f": 289,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 5,
+      "loop": 2
+    },
+    {
+      "f": 290,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 4,
+      "loop": 2
+    },
+    {
+      "f": 291,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 3,
+      "loop": 2
+    },
+    {
+      "f": 292,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 2,
+      "loop": 2
+    },
+    {
+      "f": 293,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 1,
+      "loop": 2
+    },
+    {
+      "f": 294,
+      "usage": 10,
+      "addr": 48087,
+      "wait": 0,
+      "loop": 2
+    },
+    {
+      "f": 295,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 296,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 297,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 298,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 299,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 300,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 301,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 302,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    },
+    {
+      "f": 303,
+      "usage": 0,
+      "addr": 48091,
+      "wait": 0,
+      "loop": 0
+    }
+  ],
+  "files": [
+    {
+      "file": "Audio/Review/mm1-cutman-rolling-cutter-throw-review.wav",
+      "bytes": 181798,
+      "seconds": 1.8932708333333332,
+      "peak": 0.43310546875,
+      "sha256": "6d9db536caa473457109f7677b6620aa81f6481bcdb1b0d64a1c9c3eeb9d355e"
+    },
+    {
+      "file": "Audio/Review/mm1-cutman-rolling-cutter-throw-full-tail.wav",
+      "bytes": 196524,
+      "seconds": 2.046666666666667,
+      "peak": 0.43310546875,
+      "sha256": "3160303ddad8a6919960e1f64bfbd5ffcd5937c8298cfafd02093b89cecf6c50"
+    }
+  ],
+  "limitations": [
+    "Controlled driver extraction, not live mix with boss music.",
+    "Native cue identity/duration are evidence, not user listening approval.",
+    "No runtime resource import or event/script audio changes.",
+    "Rejected26 remains removed."
+  ]
+}

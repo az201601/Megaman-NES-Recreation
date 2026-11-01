@@ -267,3 +267,9 @@ original6502-vs-actual-GML strategy cases (disclosed terrain/projectile stubs),
 65,536 native animation-counter cases and3,072 source-derived sleep/fire/blink
 checks. Details and unfinished dependencies:
 `../../Assets/Bosses/MM1/Cut Man/Combat/README.md`. Not an installable fight yet.
+
+`node tools/rom-recovery/recover-cutman-throw-audio.mjs` recovers actual native25
+Rolling Cutter throw from the existing entrance approach snapshot, with a complete
+native-driver tail and exact-silence-only preview trim. Saves Combat/Audio/Review
+WAVs and a dispatch/stream/release/hash report. Audition only, not runtime approval;
+rejected26 is neither reintroduced nor renamed to25.

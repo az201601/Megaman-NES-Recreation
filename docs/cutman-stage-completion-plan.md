@@ -668,3 +668,15 @@ sleep/fire/blink cases pass. Native-table/frame selection, art, cutter, collisio
 shots/contact, final-hit victory integration, packaging and installed GMS acceptance
 remain unfinished. Existing entrance/shutter/flash/E source untouched. Do not import
 partial scripts: motion helper intentionally awaits full integration.
+
+## Actual Rolling Cutter throw audio prepared for approval
+
+User clarified only the new scissors THROW effect is needed for combat; retain
+approved Buster/charge/hit/hurt/death sounds. Native25 extracted separately from
+rejected26; DFB4 bytes verified; fullAPU/empty-queue/60silent-frame fixture,
+original driver release plus8updates retained,2xgain/peak0.4331/no clipping.
+Review WAV1.89327s is byte-exact full-tail subrange with exact-zero silence trim
+only; full-tail2.04667s also supplied. Research/audition files under Combat/Audio/
+Review, evidence under Combat/Reference. No runtime Sound imports, playback or
+accepted entrance changes; USER LISTENING APPROVAL PENDING. MM6 music approval
+remains separate. Combat physics/cutter/shot/contact/victory integration unfinished.

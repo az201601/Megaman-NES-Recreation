@@ -108,3 +108,22 @@ resource/frame mapping has been introduced by this checkpoint.
   return selection with clear status, no score or duplicate E reward.
 - Package complete resources and incremental object/event/replacement instructions,
   then installed GMS compile/playtest. No ZIP is issued for incomplete dependencies.
+
+## Rolling Cutter throw — listening approval pending
+
+`Audio/Review/mm1-cutman-rolling-cutter-throw-review.wav` is the actual native25
+throw cue, separate from rejected26. `mm1-cutman-rolling-cutter-throw-full-tail.wav`
+starts at command dispatch and includes8updates after the original driver releases
+the effect. Both48kHz mono16bit,2xSFX gain, peak0.4331/no clipping. Preview1.89327s;
+full-tail2.04667s. Preview only removes exact-zero silence; PCM is asserted an exact
+subrange of the full-tail file. No fade/filter/loop stitching/time stretching.
+
+Reproduce: `node tools/rom-recovery/recover-cutman-throw-audio.mjs` after generating
+`probe-cutman-boss-entrance.mjs`'s ignored approach snapshot. Uses full native APU,
+empty sound queue, FF stop and60exact-silent frames before requesting25. Verified
+original DFB4 bytes request25, not26. Driver dispatch/end/stream trace, WAV hashes
+and limitations: `Reference/rolling-cutter-throw-audio.json`.
+
+**Not installed or approved yet.** Listen to the review take before any new Sound
+resource/import or runtime playback change. Keep already-approved combat sounds.
+The MM6 clear/weapon-get music is a separate future approval, not included here.
