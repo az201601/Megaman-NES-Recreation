@@ -125,3 +125,9 @@ python tools/rom-recovery/package-flea-combat.py
 ```
 
 `FLEA_OVERLAY=1` layers all three earlier checkpoints before Flea and retains the407base checks. `package-flea-combat.py` writes deterministic16file ZIP/manifest with original evidence/art and manual folder/resource/object/event instructions; no ROM/save-state/audio/scenery replacement. Local GMS compile/playtest acceptance pending. Follow INSTALL-GMS14.md, not historical research-only guidance.
+
+## Octopus Battery / Suzy original research (not gameplay installation)
+
+`probe-octopus-battery.mjs` uses the ignored firstFlea snapshot and controlled Right/Y36/protected lead-in to first native04vertical/21hex-horizontal spawns. Records1999AI entries and independently checks1996state/timer/reversal/graphics transitions using observed native collision flags; both63/126delays,2pixel axis travel and silence verified. Eight native-B bullets relocated for controlled overlap test all four eye phases for each type: all20->16, **closed eye is vulnerable**. No enemy HP/state/flags patches.295ROMbytes checked,286exact source matches and three annotated USA-vs-J-derived table operands; see scope/controls at `Assets/Enemies/MM1/Octopus Battery/README.md`.
+
+Run `probe-octopus-battery.mjs`, `recover-octopus-battery-art.mjs`, then `test-octopus-battery-research.mjs`. Three independently native-render-matched16×16poses; no new gameplay/audio/terrain resources or installer yet. Local GMS integration/runtime remains future work. No ROM/state/disassembly distributed.
