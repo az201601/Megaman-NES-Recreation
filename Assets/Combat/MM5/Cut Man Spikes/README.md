@@ -1,0 +1,9 @@
+# Cut Man active spikes / MM5 invincibility guard
+
+User accepted fixed large health, requested spike functionality and fixing the vanilla spike/after-hit-invincibility bug. Keep MM5 rules: recoil AND subsequent flashing protect; unprotected spike contact is lethal at any health. Continuous every-active-update check ensures lethality returns as protection expires, not an enter-only/permanent-safe flag. Ordinary shared death/16particles, not pit wrapper. Contact after entity hits/before health collection, matching the native guard ordering category.
+
+One new scr_mm1_cutman_spike_contact and ONE whole scr_mm5_combat_end_frame replacement based on latest fixed-health/eight-enemy version. No new objects/events/manager append/art/audio/terrain/player/camera/gate/health/death/oldenemy resources. Uses ten existing top-left16×16 spike objects. Numeric player controller envelope is explicit project-rectangle adaptation, not exact corner-by-corner native metatile collision certification. See INSTALL-GMS14.md.
+
+Reference/native-mm5-spike-guards.json: supplied USA original60instructionbytes; freshboot controlled F0terrain-query classifications, initialflash0/1/2/60→death1/2/3/61, isolated three state6 guards→death4; all16nativeparticles/onecue. Query/guard code unpatched, vertical placement controlled to exclude pits. Not natural spike traversal. Existing independent MM5 recoil27/flash60 evidence unchanged. No ROM/states/disassembly shipped.
+
+Reproduce node tools/rom-recovery/probe-mm5-spike-guards.mjs; node tools/rom-recovery/test-cutman-spikes.mjs; python tools/rom-recovery/package-cutman-spikes.py.8580actualGML boundary samples/10anchors/timer/recoil/continuous checks/contactorder/refillpriority/death/guards/source-preservation; accepted baseline/regression suites under SPIKE_OVERLAY. NOT GMScompiler/runtime/installed acceptance. Back up and playtest, especially expiry while remaining on spikes.

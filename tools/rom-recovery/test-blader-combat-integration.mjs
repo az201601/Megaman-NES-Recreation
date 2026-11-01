@@ -1,3 +1,4 @@
+if (process.env.SPIKE_OVERLAY === '1') process.env.FIXED_HEALTH_OVERLAY = '1';
 if (process.env.FIXED_HEALTH_OVERLAY === '1') process.env.SCREW_OVERLAY = '1';
 if (process.env.SCREW_OVERLAY === '1') process.env.FALL_OVERLAY = '1';
 if (process.env.FALL_OVERLAY === '1') process.env.BIG_EYE_OVERLAY = '1';
@@ -59,6 +60,11 @@ if (process.env.FIXED_HEALTH_OVERLAY === '1') {
  for(const dir of ['Scripts','Objects']) for(const f of fs.readdirSync(new URL(dir+'/',overlay)))
   if(f.endsWith('.gml')) sources.set(f.slice(0,-4),fs.readFileSync(new URL(dir+'/'+f,overlay),'utf8'));
  sources.set('obj_mm5_combat_create',sources.get('obj_mm5_combat_create')+'\n'+fs.readFileSync(new URL('Hooks/obj_mm5_combat_create_large_health_append.gml',overlay),'utf8'));
+}
+if (process.env.SPIKE_OVERLAY === '1') {
+ const overlay=new URL('Assets/Combat/MM5/Cut Man Spikes/',root);
+ for(const f of fs.readdirSync(new URL('Scripts/',overlay)))
+  if(f.endsWith('.gml')) sources.set(f.slice(0,-4),fs.readFileSync(new URL('Scripts/'+f,overlay),'utf8'));
 }
 function adapt(s){s=s.replace(/\/\/[^\n]*/g,'').replace(/\bmod\b/g,'%').replace(/\$([0-9a-f]+)/gi,'0x$1').replace(/\bexit\s*;/g,'return;');let start=0;while(true){const re=/\bwith\s*\(/g;re.lastIndex=start;const m=re.exec(s);if(!m)break;let a=re.lastIndex,d=1,z=a;while(d){if(s[z]==='(')d++;if(s[z]===')')d--;z++;}const expr=s.slice(a,z-1);while(/\s/.test(s[z]))z++;let body,end;if(s[z]==='{'){let k=z+1,dep=1;while(dep){if(s[k]==='{')dep++;if(s[k]==='}')dep--;k++;}body=s.slice(z+1,k-1);end=k;}else{end=s.indexOf(';',z)+1;body=s.slice(z,end);}const replacement=`__with(${expr},function(__ctx){with(__ctx){${adapt(body)}}});`;s=s.slice(0,m.index)+replacement+s.slice(end);start=m.index+replacement.length;}return s;}
 const compiled=new Map([...sources].map(([k,s])=>[k,new Function('env','with(env){'+adapt(s)+'}') ]));

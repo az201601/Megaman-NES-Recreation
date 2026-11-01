@@ -1,0 +1,30 @@
+{
+  "scope": "Activate ten existing Cut Man spike objects with MM5 recoil/flashing guard and continuous expiry checks. One new script/one full latest fixed-health combat_end_frame replacement. Shared ordinary death, NOT pit wrapper. No new art/audio/objects/events/terrain/player/door/death-resource changes. Source/model checks, NOT installed GMS acceptance.",
+  "files": [
+    {
+      "path": "INSTALL-GMS14.md",
+      "bytes": 7330,
+      "sha256": "3797dcecc42e3053295423109e2eea3ea247446fe9efcb906f39a7cb5db88936"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1924,
+      "sha256": "a4630840cd6177d2e76524ae9053f3d249b2f6b15e63d2407f3587ddfd209784"
+    },
+    {
+      "path": "Reference/native-mm5-spike-guards.json",
+      "bytes": 25641,
+      "sha256": "aa796d2e65d98ae4c91f3bfa55377c111c3dfe1899ebccc881a579b821ef6540"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_spike_contact.gml",
+      "bytes": 1362,
+      "sha256": "ffb015856caf3ad7c8f2478ee7ccee72b833a596026be3b09efddf18f8a3940f"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 6261,
+      "sha256": "510273d6eee2d8da5eb677bbbdda04d7e899ab0bf453b53af6bb2d2946b50068"
+    }
+  ]
+}
