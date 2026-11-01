@@ -196,3 +196,13 @@ User confirmed **“this is the one”** for the scene-verified16hex music previ
 is preserved in `Audio/Approved/snd_mm6_weapon_get_review_excerpt.wav`.
 This supersedes pending-listening status above, not the loop limitation: seamless
 runtime preparation and integration remain outstanding. No new effects approved.
+
+## Weapon-acquisition effect review
+
+`recover-mm6-weapon-acquisition-effect.mjs` exports **65hex**, observed at frame97
+of the verified BD1B award fixture, at the animation transition BD9D before text
+begins at195. This is separate from text ticks37, music16, and withdrawn61.
+`Audio/Review/mm6-weapon-acquisition-effect-review.wav`: 0.670479s, 48k mono16,
+2x gain, no clipping, natural tail followed by silence. Provenance and native
+sound dispatcher checks: `Reference/mm6-weapon-acquisition-effect.json`.
+**Listening approval pending; no runtime integration.** Music approvals unchanged.

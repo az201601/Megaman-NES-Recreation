@@ -1,0 +1,29 @@
+{
+  "method": "Full native APU export from playable snapshot, requested65 after silence/warmup. Scene identity separately verified by native BD1B probe and YOU GET B.ATTACK screenshot. Effect65 dispatched at native animation frame97 (BD9D), before award text at195. Listening approval pending; not integrated.",
+  "files": [
+    {
+      "id": "0x65",
+      "file": "Audio/Review/mm6-weapon-acquisition-effect-review.wav",
+      "framesCaptured": 600,
+      "endsNaturally": true,
+      "firstSample": 1512,
+      "lastNonzero": 31702,
+      "seconds": 0.6704791666666666,
+      "gain": 2,
+      "peak": 0.248504638671875,
+      "sha256": "11a312f903d89de955115e7f9a09476365b8025fcaad997dd287d52d94ee37db",
+      "dispatch": [
+        {
+          "frame": 0,
+          "command": 101
+        }
+      ],
+      "driverDispatch": [
+        {
+          "frame": 0,
+          "command": 101
+        }
+      ]
+    }
+  ]
+}
