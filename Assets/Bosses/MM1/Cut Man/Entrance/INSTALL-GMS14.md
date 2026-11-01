@@ -10,6 +10,10 @@ Use this guide from step1 if you have installed NOTHING since E-Tanks worked. Ig
 
 Keep your working E-Tank scripts, inventory initializer and health-commit fix. No E-Tank installation steps need repeating. Install the boss resources below once; no room placements or terrain edits.
 
+## Room flashing addition
+
+User accepted the entrance/one-column shutter but reported missing room flashing. Existing installs: use **FLASH-INSTALL-GMS14.md** and the small room-flash ZIP only. Fresh full installs: complete this guide plus that flash guide before testing. It adds one sprite/one scenery-only object with Create+Draw; replaces entrance-start Script with the included current version. No timing/audio/other event changes or repeated camera hooks.
+
 ## 1 — THREE new Sprites
 
 Folder **Sprites → MM1 → Bosses → Cut Man → Entrance**. Exact resource names:

@@ -4,6 +4,7 @@ route_boss_intro = true;
 route_boss_intro_tick = 0;
 route_gate_mode = false;
 route_section = 13;
+instance_create(3072, 720, obj_mm1_cutman_boss_room_flash);
 route_boss_actor = instance_create(3264, 900, obj_mm1_cutman_boss);
 camera_player.x = 3096.5625;
 camera_player.y = route_entry_y;
