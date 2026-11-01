@@ -1,6 +1,6 @@
 # Flying Shell / Shellgun — original-ROM research checkpoint
 
-**Reference evidence and recovered art only; no gameplay installer yet.** User accepted Octopus Battery (“confirmed working”), then authorized research of the next original enemy after the later Bladers. Preserve installed Blader/Blaster/Super Cutter/Flea/Octopus Battery. No working combat/camera/terrain/player/pause/audio resources changed here.
+**Reference evidence and recovered art only; no gameplay installer yet.** User accepted Octopus Battery (“confirmed working”), then authorized research of the next original enemy after the later Bladers. Preserve installed Blader/Blaster/Super Cutter/Flea/Octopus Battery. This research directory itself changes no installed resources. A subsequent additive implementation is now prepared separately at `Assets/Combat/MM5/Flying Shell Checkpoint/`; follow its INSTALL-GMS14.md for exact parent/event/resource instructions. User GMS runtime and new sound acceptance are pending.
 
 ## Verified behavior
 
@@ -14,7 +14,7 @@
 
 ## Sound findings — no audio replacement approved here
 
-Each eight-bullet burst issues **eight original15hex(21decimal) sound requests**, and all eight reach the opcode-qualified sound driver in the following emulator frame. **There is no deduplication in this trace.** It is the same sound-command ID as accepted Blaster firing, but this research does not prove an eight-dispatch burst has a sample-identical waveform to the approved single-shot recording. Do not stack eight WAV voices as an unverified substitute. A native full-APU burst comparison/capture remains part of the next audio/integration work before choosing reuse or presenting a new take. Existing approved WAVs, volumes/charge ownership remain untouched.
+Each eight-bullet burst issues **eight original15hex(21decimal) sound requests**, and all eight reach the opcode-qualified sound driver in the following emulator frame. **There is no deduplication in this trace.** It is the same sound-command ID as accepted Blaster firing, but this research does not prove an eight-dispatch burst has a sample-identical waveform to the approved single-shot recording. Do not stack eight WAV voices as an unverified substitute. A subsequent full-APU comparison/capture is now available under `Assets/Audio/Mega Man/MM1/Flying Shell/`: actual8dispatch and1request control are not sample-identical; the additive package supplies the actual8dispatch burst as one WAV, still awaiting user listening approval. Existing approved WAVs, volumes/charge ownership remain untouched.
 
 The closed-hit routine queues native1D. That is behavioral evidence only, not a request to replace the user-approved MM6blocked27 sound. Original impact/blocked traces are separate from normal movement sound observations.
 
@@ -40,4 +40,4 @@ node tools/rom-recovery/recover-flying-shell-art.mjs
 node tools/rom-recovery/test-flying-shell-research.mjs
 ```
 
-Next: native burst-audio comparison/capture, additive GMS1.4 repeated-spawn/flight/burst/closed-block/open-kill implementation, preserved MM5 combat/drop/pause/refill ownership, detailed resource/event instructions and GitHub install ZIP. **No gameplay integration/installation/runtime acceptance is claimed by this research checkpoint.**
+Subsequent native burst comparison/capture and additive source implementation/installer are now prepared at `Assets/Combat/MM5/Flying Shell Checkpoint/`. Native bullet color differs from accepted Blaster palette, so that package adds a separate native-render-matched salmon bullet sprite and a child projectile object sharing the existing movement/contact owner. **Prepared source/package is not GMS compilation, installed-runtime or new audio approval.**

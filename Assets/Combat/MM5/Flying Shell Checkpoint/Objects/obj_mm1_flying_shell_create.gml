@@ -1,0 +1,11 @@
+shell_state = 1;
+shell_timer = 0;
+shell_vx = 288 / 256;
+shell_open = false;
+shell_draw_pose = 0;
+shell_hp = 1;
+shell_dead = false;
+shell_band = view_yview[0];
+shell_spawn_index = -1;
+shell_born_tick = -1;
+depth = -5;

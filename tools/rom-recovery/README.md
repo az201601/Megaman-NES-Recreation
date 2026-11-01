@@ -151,3 +151,22 @@ python tools/rom-recovery/package-octopus-battery-combat.py
 After accepted Octopus Battery, regenerate fifth-through-tenth ladder probes from the existing fourth snapshot as needed. `probe-flying-shell.mjs` uses ninth/tenth frame-boundary states with controlled high-Y/protection to observe actual type0A repeated-flight/spawn cycles,413sourcebytes,1984active-state transitions/1038bullet deltas/20eight-way bursts. Eight sound15requests AND eight opcode-qualified15driver dispatches occur perburst (not deduplicated). Native-B controlled overlaps prove closed block/openonehitkill; invisible kill replacement counter72/reactivation70subsequent frames is separately recorded. No enemy/AI/ROM patches, no natural aiming/GMS/audio-waveform identity claim.
 
 Run `probe-flying-shell.mjs`, `recover-flying-shell-art.mjs`, `test-flying-shell-research.mjs`. Two native-render-matched jaw poses in17×24cells/origin8,11preserve the original1pxmiddle offset. No ROM/state/audio/gameplay installer distributed here. Native burst audio comparison and additive GMS implementation are next; keep approved Blaster/MM6ding/hit assets untouched. Scope/controls at `Assets/Enemies/MM1/Flying Shell/README.md`.
+
+## Flying Shell native audio + additive gameplay package
+
+`compare-flying-shell-audio.mjs` compares actual8native15dispatch and labelled1request control from identical ninth-ladder initializedPAPU snapshots after nativeFFstop, protectedneutral player. Active PCM differs; records real8dispatch full-APU burst with2×gain and silence-only trim, not8WAVvoice stacking. New cue awaits user approval; accepted audio untouched. `recover-flying-shell-art.mjs` now additionally recovers native salmon bullet palette independently render-matched (not accepted Blaster magenta).
+
+`test-flying-shell-integration.mjs` loads all accepted overlays before Shell, tests1984native flight states/1038bullet deltas,8vectors, repeatededge reentry/70update kill replacement, closed/open normal-mid-full, body1/bullet2, drop/freeze/cleanup, source/initialization preservation, builtinlocals and exactaudio trim/hashes. Adapter explicitly models new projectile child inclusion in existing parent bullet loop; GMSGUI parent selection/runtime must still be tested. No camera/player/terrain/oldaudio edits.
+
+```sh
+node tools/rom-recovery/compare-flying-shell-audio.mjs
+node tools/rom-recovery/recover-flying-shell-art.mjs
+node tools/rom-recovery/test-flying-shell-integration.mjs
+SHELL_OVERLAY=1 node tools/rom-recovery/test-octopus-battery-integration.mjs
+SHELL_OVERLAY=1 node tools/rom-recovery/test-flea-integration.mjs
+SHELL_OVERLAY=1 node tools/rom-recovery/test-super-cutter-integration.mjs
+SHELL_OVERLAY=1 node tools/rom-recovery/test-blaster-integration.mjs
+python tools/rom-recovery/package-flying-shell-combat.py
+```
+
+Package22files/manifest/CRC/exactcopies; only trimmed new burst in ZIP, fulltail stays repo. No ROM/state/disassembly/audio-master replacement. Follow `Assets/Combat/MM5/Flying Shell Checkpoint/INSTALL-GMS14.md`; source prepared, compilation/installed playtest and new sound acceptance pending.
