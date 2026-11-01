@@ -1,0 +1,103 @@
+{
+  "method": "Supplied MM1USA/JSNES2.1.0 controlled firstdispenser, playerX1896/Y36/verticalspeed0/protection100. Both2original poses independently match opaque native-renderpixels. Original OAM components/colors with Mesen0.9.9RGB mapping, not Mesen.exe. Common16x32cell retains all original tall-pose pixels; shortpose centered with8transparent rows top/bottom, no repainting.",
+  "cell": [
+    16,
+    32
+  ],
+  "frames": 2,
+  "origin": [
+    8,
+    15
+  ],
+  "canonical": "left",
+  "poses": [
+    {
+      "index": 0,
+      "f": 2,
+      "cells": [
+        {
+          "x": 135,
+          "y": 167,
+          "tile": 171,
+          "attr": 3
+        },
+        {
+          "x": 143,
+          "y": 167,
+          "tile": 172,
+          "attr": 3
+        },
+        {
+          "x": 135,
+          "y": 175,
+          "tile": 173,
+          "attr": 3
+        },
+        {
+          "x": 143,
+          "y": 175,
+          "tile": 174,
+          "attr": 3
+        }
+      ],
+      "rowOffset": 8,
+      "rgbaSha256": "a27a3c75136a6e87a02996bc49918e73e5646761a6670b0ad49999845b0b9b18"
+    },
+    {
+      "index": 1,
+      "f": 12,
+      "cells": [
+        {
+          "x": 127,
+          "y": 131,
+          "tile": 165,
+          "attr": 3
+        },
+        {
+          "x": 135,
+          "y": 131,
+          "tile": 166,
+          "attr": 3
+        },
+        {
+          "x": 127,
+          "y": 139,
+          "tile": 165,
+          "attr": 131
+        },
+        {
+          "x": 135,
+          "y": 139,
+          "tile": 166,
+          "attr": 131
+        },
+        {
+          "x": 127,
+          "y": 123,
+          "tile": 163,
+          "attr": 3
+        },
+        {
+          "x": 135,
+          "y": 123,
+          "tile": 164,
+          "attr": 3
+        },
+        {
+          "x": 127,
+          "y": 147,
+          "tile": 163,
+          "attr": 131
+        },
+        {
+          "x": 135,
+          "y": 147,
+          "tile": 164,
+          "attr": 131
+        }
+      ],
+      "rowOffset": 0,
+      "rgbaSha256": "8b9eef11dbc9bbac28cbbaf0afde38b00ff0d7e5287bc16f1209eeeb4b9a08fb"
+    }
+  ]
+}

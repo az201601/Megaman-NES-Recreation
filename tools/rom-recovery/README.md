@@ -94,3 +94,17 @@ python tools/rom-recovery/package-blaster-combat.py
 ```
 
 Approved trim source/manifest and MM6ding evidence are packaged with exact hashes. Do not rerun older recorders over accepted output/import quiet masters or rejected previews. No ROM/save-state distribution.
+
+## Super Cutter dispenser gameplay checkpoint
+
+After accepted Blaster runtime, `probe-super-cutter.mjs` uses the ignored fourth-ladder native snapshot and original supplied MM1USA, with explicitly controlled player positioning/protection, not patched enemy code. Verifies187source bytes including type11's AI_Generic/B6C3 entry, original HP/damage helper, generator/distance division. Nine160-update distance trials establish strict<80/32cadence, launch velocities,245pre-AI cutter states and240consecutive movement/gravity deltas; no sound requests in either verified queue path. `recover-super-cutter-art.mjs` recovers and independently renderer-matches both original OAM poses into16×32commoncells/origin8,15. Requires pinned mm1base source-label dumps and existing `.work/cutman-fourth-scroll/after-continuation.json`; regenerate that using first-through-fourth ladder probes documented above. No ROM/state/disassembly included in ZIP.
+
+```sh
+node tools/rom-recovery/probe-super-cutter.mjs
+node tools/rom-recovery/recover-super-cutter-art.mjs
+node tools/rom-recovery/test-super-cutter-integration.mjs
+SUPER_CUTTER_OVERLAY=1 node tools/rom-recovery/test-blaster-integration.mjs
+python tools/rom-recovery/package-super-cutter-combat.py
+```
+
+The optional `SUPER_CUTTER_OVERLAY=1` loads accepted Blaster then additive cutter sources into the existing407check adapter. New tests compare actual GML against native trigger/motion/pose records and exercise5HP/charged piercing/cleanup/contact/drop/freeze integration. Tests are not GMS compiler/runtime proof; use `Assets/Combat/MM5/Super Cutter Checkpoint/INSTALL-GMS14.md` for exact manual import. Do not replace building/scenery or approved audio. Source package is runtime-pending, not installed merely because tests pass.
