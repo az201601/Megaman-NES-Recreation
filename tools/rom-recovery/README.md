@@ -298,15 +298,18 @@ limited engine mocks:1,200update strategy/throw/catch run, tenfullhits, threewho
 shot_step routes, guards/contact4/deathmusic shutdown/exactlatestbaseline preservation.
 No GMS scheduler/real pause deactivation/audio/victory playtest claim.
 
-## MM6 weapon-get coroutine / victory audio approval
+## MM6 audio identification correction
 
-After `probe-mm6-enemy-hit.mjs`, run `probe-mm6-weapon-get.mjs`: one disclosed native
-coroutine0 restart at80C5/banks3C3D/stage0; original453-frame weapon-get routine and
-PPU afterward, final RTS intercepted only to end fixture safely. Not a natural kill.
-`recover-mm6-victory-audio.mjs` uses natural playable-stage snapshot for isolated
-native13/10/61/27 full-tail auditions, exact-silence prerequisite/fullAPU/2.125music/
-2xSFX/no clipping. `test-mm6-victory-audio.mjs` checks5USA spans, WAV hashes/formats/
-natural tails, mailbox+driver dispatches and observed weapon-get cue timing.
-Audio files/evidence/limitations at Cut Man/Victory. Listening approval pending;
-27already approved as blocked-hit identity,61confirmed additional VICTORY effect.
-No runtime imports or completed victory controller are implied.
+User approved ONLY stage-clear13. Previous453-frame3C80C5 fixture was the boss
+introduction after stage selection, NOT weapon-get.10 is rejected as weapon-get;
+61effect identity unverified (possible Wily lightning is not confirmed);27typing
+belongs to that intro, not proof of weapon-get text behavior. Those victory timing
+and acquisition claims are withdrawn. Files moved from Review to Research.
+
+`probe-mm6-stage-intro.mjs` (renamed) now labels its controlled coroutine fixture
+and outputs correctly. `recover-mm6-victory-audio.mjs` reproduces ONLY approved13
+and asserts its exact approvedhash. `test-mm6-audio-identification.mjs` checks raw
+export integrity and explicitapproval/rejectionrecords, not missingweapongetidentity.
+Corrected status/evidence: `../../Assets/Bosses/MM1/Cut Man/Victory/README.md`.
+Trace actualpostboss path/callers and visually verifyaward screen before exporting
+replacement music/effects. No victory runtime imports/controller/package exist yet.

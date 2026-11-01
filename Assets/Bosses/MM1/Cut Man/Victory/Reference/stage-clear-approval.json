@@ -1,0 +1,13 @@
+{
+  "status": "User listening approved; runtime integration pending",
+  "userConfirmation": "only the stage clear music is correct",
+  "file": "Audio/Approved/snd_mm6_stage_clear.wav",
+  "sha256": "7cee112f16574979b772e94ea175a5957987dfd33a3456d9336921df580020ad",
+  "source": "Audio/Review/mm6-stage-clear-review.wav",
+  "processing": "Byte-identical approved review take. No further gain or trimming.",
+  "withdrawn": [
+    "Original10 export is stage-intro music, not weapon-get.",
+    "Original61 export has unverified effect identity, not approved acquisition.",
+    "Original27 stage-intro context does not prove weapon-get typing."
+  ]
+}

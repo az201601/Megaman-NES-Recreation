@@ -734,7 +734,10 @@ originalrastersequence. NO GMSruntimeclaim. Not packaged/installable: final-hit
 MM6victoryowner/control-lock/effects/music/acquisition/weapon-screen/unlock/return
 still missing; installing combat-only now would leave stage unfinished at finalhit.
 
-## MM6 weapon-get path traced; victory audio auditions prepared
+## MM6 screen/audio investigation — later WITHDRAWN misidentification
+
+**Correction below supersedes this historical entry: the453-frame path was stage
+intro, NOT weapon-get. Its10/61/27 victory labels and timing claims are withdrawn.**
 
 Original suppliedMM6 controlled native coroutine0 weapon-get entry80C5 (banks3C/3D,
 Blizzard variant51=0, native scheduler entry fields) runs453frames to its own final
@@ -757,3 +760,17 @@ Controlled entry must use native scheduler, not rawPC redirect at idle33=FF. Fin
 weapon-get fixture unsuitable for isolated audio here; successful takes use original
 natural playable-stage snapshot with F0/uncaptured35 settle and1second exact silence.
 Final-hit owner/MM5control/auto-walk/effects/profile/unlock/return still pending.
+
+
+## User rejects wrong weapon-get identification; stage-clear approved
+
+User says only stageclear correct;10 is bossintro after selection.61 may be Wily
+lightning but user uncertain. Record13 stageclear approved, exactbyte copy at
+Victory/Audio/Approved/snd_mm6_stage_clear.wav and separateapprovalJSON.10 moved to
+Research/stage-intro;61unverified noacquisitionlabel;27sourceintrotyping notweaponget.
+Rejected26 staysremoved/approvedthrow25 unchanged. The453-frame3C80C5fixture is
+stageintro: earlierweaponget/flash/texttiming claims withdrawn. Tool renamed
+probe-mm6-stage-intro; tests renamedtest-mm6-audio-identification; extraction now
+reproduces13ONLY and enforcesapprovedhash. README/reportcorrected; no runtime
+resources changed. Actualpostboss weapongetmusic/effects/context UNRESOLVED: trace
+realfinal-hit callers and visually verifyaward screen before proposing replacement.

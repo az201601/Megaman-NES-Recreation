@@ -1,6 +1,6 @@
 {
   "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
-  "status": "Auditions only, not approved or installed",
+  "status": "Stage-clear13 user approved;10 rejected as weapon-get;61 identity unverified and withdrawn;27 stage-intro context only",
   "method": "Original full-APU48kmono16bit MM6 native DC mailbox from naturally booted playable-stage snapshot (same neutral fixture used by accepted MM6 combat audio). F0 stop then uncaptured native35 warmup; final1second exact silence checked. Only requested command dispatch allowed/asserted. No ROM patches/channel mutes/filtering/normalization/stitched cues. Command lead retained, exact-zero-only trailing trim with10ms padding when complete. Accepted SFX2x/music2.125 gain; no clipping.",
   "files": [
     {
@@ -25,11 +25,12 @@
           "frame": 0,
           "command": 19
         }
-      ]
+      ],
+      "approval": "User approved: only the stage clear music is correct"
     },
     {
       "id": "0x10",
-      "file": "Audio/Review/mm6-weapon-get-music-review.wav",
+      "file": "Audio/Research/mm6-stage-intro-reference.wav",
       "framesCaptured": 1200,
       "endsNaturally": true,
       "firstSample": 1184,
@@ -49,11 +50,12 @@
           "frame": 0,
           "command": 16
         }
-      ]
+      ],
+      "approval": "Rejected for weapon-get: user identifies stage-selected boss intro"
     },
     {
       "id": "0x61",
-      "file": "Audio/Review/mm6-weapon-acquisition-flash-review.wav",
+      "file": "Audio/Research/mm6-cue61-unidentified-reference.wav",
       "framesCaptured": 300,
       "endsNaturally": true,
       "firstSample": 1209,
@@ -73,11 +75,12 @@
           "frame": 0,
           "command": 97
         }
-      ]
+      ],
+      "approval": "Withdrawn; true effect identity unverified, do not use for victory"
     },
     {
       "id": "0x27",
-      "file": "Audio/Review/mm6-weapon-screen-text-tick-review.wav",
+      "file": "Audio/Research/mm6-stage-intro-text-tick-reference.wav",
       "framesCaptured": 240,
       "endsNaturally": true,
       "firstSample": 1192,
@@ -97,16 +100,24 @@
           "frame": 0,
           "command": 39
         }
-      ]
+      ],
+      "approval": "Research only: stage-intro typing, not weapon-get evidence"
     }
   ],
-  "weaponGetNativeTrace": {
+  "limitations": [
+    "Controlled isolated driver exports verify bytes, not scene identity or listening approval.",
+    "3C:80C5 is the wrong scene for weapon-get; none of its timings/flash/text cues may define the requested victory sequence.",
+    "61 possible Wily lightning identity is user uncertainty, not a confirmed finding.",
+    "No runtime imports changed; accepted stage-clear13 and approved Cut Man throw25 are preserved."
+  ],
+  "correction": "The453-frame3C:80C5 fixture is the stage-selected boss introduction, NOT the post-boss weapon-get sequence. Original cue calls and PCM hashes were verified, but their intended victory context was misidentified. User identified10 as boss-intro music;61 may be castle lightning but is NOT confirmed.",
+  "stageIntroNativeTrace": {
     "method": "Naturally booted MM6 playable-stage snapshot. Release all buttons. One controlled entry: map original banks3C/3D and matching4A/4B/4C shadows, stage51=0(Blizzard), native task0 restart at80C5 via21/29/2D/34/38. Original code/ROM/CHR/palettes/rendering after setup; no audio injections. At final8275 return, end fixture coroutine through nativeC5E6 instead of returning into a nonexistent fixture caller. Not natural boss kill/whole victory.",
     "frames": 453,
     "events": [
       {
         "frame": 0,
-        "kind": "weapon-get-code",
+        "kind": "stage-intro-code",
         "pc": "80c5"
       },
       {
@@ -116,7 +127,7 @@
       },
       {
         "frame": 51,
-        "kind": "weapon-get-code",
+        "kind": "stage-intro-code",
         "pc": "815d"
       },
       {
@@ -126,7 +137,7 @@
       },
       {
         "frame": 71,
-        "kind": "weapon-get-code",
+        "kind": "stage-intro-code",
         "pc": "8164"
       },
       {
@@ -136,7 +147,7 @@
       },
       {
         "frame": 96,
-        "kind": "weapon-get-code",
+        "kind": "stage-intro-code",
         "pc": "8175"
       },
       {
@@ -196,21 +207,14 @@
       },
       {
         "frame": 372,
-        "kind": "weapon-get-code",
+        "kind": "stage-intro-code",
         "pc": "8256"
       },
       {
         "frame": 452,
-        "kind": "weapon-get-code",
+        "kind": "stage-intro-code",
         "pc": "8275"
       }
     ]
-  },
-  "limitations": [
-    "Controlled isolated export, not live music+effects mixture or GMS playback.",
-    "Finished weapon-get task fixture does not produce sound here; isolated exports deliberately use the original playable-stage snapshot instead.",
-    "13 source identifies stage-clear cue; weapon-get10 and effects61/27 independently dispatched by original weapon-get fixture.",
-    "If endsNaturally=false, file is a finite audition window, not a verified runtime loop or complete track.",
-    "No approval for additional effects/music implied."
-  ]
+  }
 }
