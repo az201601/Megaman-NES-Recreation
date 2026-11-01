@@ -194,3 +194,24 @@ python tools/rom-recovery/package-big-eye-combat.py
 ```
 
 Follow `Assets/Combat/MM5/Big Eye Checkpoint/INSTALL-GMS14.md`. Source/resources prepared; GMS compilation/installedgame/newcue acceptance pending. No ROM/savestates/fulltail/oldscene/audio replacements in ZIP.
+
+## MM5 fall reference + Cut Man Free Fall Correction
+
+`probe-mm5-connected-drop.mjs`: controlled valid Napalm room-endpoint page3→4 original metadata, fallingstate1/no buttons/no ladder,60native downscroll steps and continuedfall. `probe-mm5-fall-boundary.mjs`: controlled below-floor placement, unconnected pit/fullHP/flash0+60, native state7/musicstopF0/death1D/counter012C/life2→1. `probe-mm5-death-effects.mjs`: controlled single spikeF0terrain-class result versus actual lethal-contact/health1 and unconnectedpit; original spike/lethal-contact share8332/16particles, pit usesE02B/0particles; flash guard verified. Natural specific-spike approach/masks not claimed. `test-mm5-fall-reference.mjs` validates persisted traces/95ROMbytes. Recreate initialized snapshots via mm5-start then mm5-stage; lethal-contact uses mm5-hit snapshot. ROM/source references remain excluded from installZIP.
+
+`test-cutman-free-fall.mjs`: actual patch GML/limited mocks,5934valid worldXmapping checks against14independent roomrects,11nonseam drops, all60nativevertical samples/alignmentframe/release62/retainedfall/charge/Start/refill/hurt/pits/gate+ladder sourcepreservation. `test-pit-death-integration.mjs`: actual shared combat scripts, pit fullHP/protection0+60/onecue/0particles/300timer/one-life/zero-sparetitle; ordinary lethaldamage16particles/die+drawpreservation/builtin guards. `FALL_OVERLAY=1` loads accepted7enemy overlays then patch sources in integration adapter. No GMS compiler/event/runtime identity claim.
+
+```sh
+node tools/rom-recovery/test-mm5-fall-reference.mjs
+node tools/rom-recovery/test-cutman-free-fall.mjs
+node tools/rom-recovery/test-pit-death-integration.mjs
+FALL_OVERLAY=1 node tools/rom-recovery/test-big-eye-integration.mjs
+FALL_OVERLAY=1 node tools/rom-recovery/test-flying-shell-integration.mjs
+FALL_OVERLAY=1 node tools/rom-recovery/test-octopus-battery-integration.mjs
+FALL_OVERLAY=1 node tools/rom-recovery/test-flea-integration.mjs
+FALL_OVERLAY=1 node tools/rom-recovery/test-super-cutter-integration.mjs
+FALL_OVERLAY=1 node tools/rom-recovery/test-blaster-integration.mjs
+python tools/rom-recovery/package-cutman-free-fall.py
+```
+
+Follow `Assets/Cut Man/Stage/Free Fall Correction/INSTALL-GMS14.md`.14file deterministicZIP/manifest/CRC/exactcopies. No newart/audio/object/geometry/enemy resources; don't replace accepted combat-owned cameraEndStep. HUDhealth0/opening-title retry/horizontal camera interpolation are explicit project adaptations. Cut Man spike collision not added. Installed acceptance pending.
