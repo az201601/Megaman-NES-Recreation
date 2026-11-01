@@ -6,7 +6,7 @@ Entrance resources have not been modified.
 
 ## Implemented in this checkpoint
 
-Three GMS1.4.1760-compatible scripts:
+Initial GMS1.4.1760-compatible strategy scripts:
 
 - `scr_mm1_cutman_boss_decide`: all21 native strategy IDs5..25, including walk,
   initial jump choice/trajectory speed, short follow-up jump, delayed airborne
@@ -84,9 +84,9 @@ positive Y speed means UP (not GameMaker's down-positive convention).
 must allocate/aim the cutter and only mark it out if creation succeeds; the kernel
 does not prematurely increment `cm_cutter` or play a sound.
 
-Required but **not yet implemented** `scr_mm1_cutman_boss_motion()` must update
+`scr_mm1_cutman_boss_motion()` now implements the project-terrain adapter: update
 facing first, sweep existing invisible geometry, update positions/speeds and
-`cm_wall`, then return native-compatible landing status. It must be invoked exactly
+`cm_wall`, then return vertical collision status. It must be invoked exactly
 where the kernel calls it, not as an unconditional extra physics pass each frame.
 
 `cm_animation_frame` and `cm_draw_hurt` are animation outputs. The header passed to
@@ -130,3 +130,57 @@ are recorded separately in `Reference/rolling-cutter-throw-approval.json` so
 regenerating the extraction report cannot erase the approval. Runtime integration
 and installation remain pending. Keep already-approved combat sounds.
 The MM6 clear/weapon-get music is a separate future approval, not included here.
+
+
+## Motion and cutter-manager checkpoint
+
+Implemented additional scripts:
+
+- `scr_mm1_cutman_boss_motion`: swept8x12 body against existing invisible
+  `obj_stage_solid` geometry; unsigned16 subpixel speed, upward-positive native
+  convention, gravity64/256, terminal downward12, collision speed reset−192/256.
+  Updates world x/y and local integer cm_x/cm_y. This is explicitly rectangular
+  project collision, not a claim of identical NES corner/overhang point probes.
+- `scr_mm1_cutman_cutter_aim`: original integer two-pass division and carry-based
+  vertical sign handling, not normalized-vector aiming. Retains the original
+  negative-byte complement bias and division-by-zero arithmetic edge result.
+- `scr_mm1_cutman_cutter_manage`: original outbound thresholds X24/232,Y24/216,
+  reverse and return state, every-fourth-shared-phase homing, speed+4/256 per
+  homing update, catch check and boss head-cutter/fire-state clearing. Projectile
+  movement itself is deliberately separate, not accidentally double-stepped here.
+
+`node tools/rom-recovery/test-cutman-cutter.mjs` passes24,000 original6502-vs-GML
+F8C6 aim cases and18,000 original6502-vs-GML cutter-manager cases. Manager fixture
+runs DC9D..DD52 with native boss lifecycle nonzero to skip only the following
+strategy; the original manager and aim helper execute, without physics stubs in
+those routines. Direct fixtures are not whole-fight traces. Report:
+`Reference/cutter-differential.json`.
+
+A separate800-original-update replay from native entrance frame473, all buttons
+released and only player protection refreshed, records47 real aim calls. All have
+native scratch4F=0, which is the aim script's explicit contract. This is evidence
+for that trace, not proof of every possible global memory state. Source labels
+alone are insufficient: original C5D5 stores one scratch byte at11 while using4F
+in division. The port preserves the observed zero-low-byte denominator arithmetic
+rather than silently replacing it with an idealized slope.
+
+USA-ROM instructions at bank5:9BF7 and9E3F independently establish collision
+lookup tables FB83 and FAB5. Modified-source labels FBB7/FAE9 would produce WRONG
+bounds. Read through verified original operands: Cut Man poses63/64/65/66/67/68/
+70/71/87 all have body halfwidth8/halfheight12.13 actual-GML project-solid fixtures
+check both directions, four subpixel starts, swept16-pixel wall approach, full jump
+and landing, ceiling, gravity and terminal fall. No GMS runner/physics acceptance.
+
+Cutter field contract: `cc_x/cc_y` integer local positions; `cc_speed_x/cc_speed_y`
+unsigned16 speeds; `cc_face_right`; `cc_base` return major-axis speed. Aim input
+`cc_dx` absolute X distance, `cc_dy_byte` wrapped vertical subtraction and
+`cc_upward` native subtraction carry; aim mutates dyByte to absolute biased native
+value. Manager receives shared active phase as argument0, runs BEFORE strategy
+selection, sets `cc_caught` and resets cm_cutter/cm_fire on catch. Integration must
+allocate/aim a throw at the native offset and move/render the projectile exactly
+once in the original-compatible update order; neither is implemented by merely
+calling manage. Body motion helper must only run where decide calls it.
+
+Still no live actor/Create/Draw/central-combat replacements or installable ZIP.
+Sprites/cutter projectile movement/allocation, contact/shot integration and final-hit
+MM6 victory remain unfinished. Accepted entrance and audio bytes are unchanged.

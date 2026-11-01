@@ -689,3 +689,17 @@ as Combat/Audio/Approved/snd_mm1_cutman_rolling_cutter_throw.wav, SHA256
 Separate approval record prevents extraction regeneration from losing acceptance.
 No gain/trim/content changes, no runtime playback/import changes yet. Native25 only;
 rejected26 stays removed. MM6 victory music still needs its own approval.
+
+## Cut Man motion and Rolling Cutter manager implemented, still not live-integrated
+
+Added actual GML swept8x12 motion adapter and integer cutter aim/manager scripts.
+24,000 original6502-vs-GML aim cases,18,000 native-manager cases,13 project-solid
+motion fixtures pass. Native800-update protected-player replay records47 original
+F8C6 calls, all scratch4F=0; explicit scope/integer quirks in Combat README/report.
+Original USA bank5 collision operands verify FB83/FAB5 (modified-source labels are
+shifted/wrong for USA); poses resolve8x12. Full jump/floor/ceiling/wall/subpixel/
+terminal-fall fixtures are project collision tests, not identical NES corner probes.
+Approved throw WAV hash asserted unchanged. No live actor or central combat edits,
+no installable ZIP yet. Remaining: combat sprites/frame mapping, actual cutter
+allocation/movement/update order, shots/contact, MM6 final-hit/victory/weapon screen
+and complete incremental installation/playtest package. Entrance remains untouched.
