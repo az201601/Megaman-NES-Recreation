@@ -37,10 +37,10 @@ if (decrease) screw_timer = (screw_timer - 1) & 255;
 if (burst)
 {
     owner = instance_find(obj_mm5_combat, 0);
-    // Same native2D projectile/CHR/palette as approved Blaster bullet, no new actor type.
+    // Same native2D movement; child Draw uses the actual corridor salmon palette.
     for (i = 0; i < 5; i += 1)
     {
-        bullet = instance_create(x, y + muzzle_y, obj_mm1_blaster_bullet);
+        bullet = instance_create(x, y + muzzle_y, obj_mm1_screw_bomber_bullet);
         bullet.blaster_bullet_band = screw_band;
         bullet.blaster_bullet_born_tick = owner.combat_tick;
         bullet.blaster_bullet_vx = 0;

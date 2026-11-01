@@ -1,5 +1,7 @@
 {
-  "method": "Supplied original USA/JSNES2.1.0; controlled type05/16 fixture from gameplay probe. Ten distinct native OAM/CHR/palette poses matched at opaque pixels to native rendered frame. Mesen0.9.9RGB conversion, not Mesen executable.16x16commoncell; floor/ceiling separately recovered including native flips; two-cell closed pose is top8rows for floor, bottom8rows for ceiling (same native object-origin offset), other8transparent. No painting or generic sprite flips substituted. Native always-vulnerable body observed with real B presses, including closed cooldown; no guessed closed-shell block behavior.",
+  "method": "CORRECTED: supplied USA/JSNES2.1.0 fresh boot. One disclosed page20 placement + PC C219 native death-handler redirect, then700native frames to checkpoint restart. Original restart loads corridor graphics and palette. Right-only approaches stop at5296/5536/5672, neutral320updates each, protection100 only; no enemy/type/CHR/palette edits. All THREE original corridor encounters spawn naturally after checkpoint setup. Fifteen poses native-render matched; repeated floor independently matches first floor. Not natural whole-stage traversal, hardware/Mesen executable or GMS runtime certification.",
+  "correction": "Previous extraction substituted types05/16 atX824 in opening-area graphics. AI/OAM IDs were real but underlying CHR and palette were WRONG. Matching the same faulty fixture did not validate sprite identity. Superseded all ten previous art hashes. Existing damage observations below remain separate controlled AI-fixture evidence, not artwork evidence.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
   "cell": [
     16,
     16
@@ -8,313 +10,639 @@
     8,
     7
   ],
+  "roomGraphicsIndex": 55,
+  "spritePalette3": [
+    48,
+    38,
+    15
+  ],
   "bulletReuse": {
-    "resource": "spr_mm1_blaster_bullet",
+    "resource": "spr_mm1_screw_bomber_bullet",
     "tile": 106,
     "palette": 3,
-    "rgbaSha256": "b7c6cd39f545fd051d72695c8ea643191d950ebb881637ffa4885e71851a69d7",
-    "method": "Native tile/palette RGBA for BOTH fixtures exactly equal accepted Blaster bullet asset; reuse existing actor as well as sprite."
+    "rgbaSha256": "8cf83e02e157fa897ae468503033a4b6b0524a0d978cf795fe7f3d05587560f4",
+    "method": "Actual original corridor tile6A/palette3 agrees at all three encounters. Shape matches Blaster, but colour is native26 rather than opening-area14. Dedicated child object/Draw keeps accepted Blaster unchanged."
   },
+  "encounters": [
+    {
+      "type": 5,
+      "worldX": 5336,
+      "baseY": 160,
+      "stopX": 5296,
+      "label": "floor",
+      "approachFrames": 44,
+      "slot": 16,
+      "poses": [
+        {
+          "index": 4,
+          "frame": 3,
+          "rgbaSha256": "3554307cd0dafd58c2567cbcf15f2e9554f1e6192420f7b10b0aaeba0c4511ad"
+        },
+        {
+          "index": 2,
+          "frame": 7,
+          "rgbaSha256": "a5ec9e4d87b1c151ffe33f675d8823ac611bbc7a3f71e688e2e959bf5decd9aa"
+        },
+        {
+          "index": 3,
+          "frame": 13,
+          "rgbaSha256": "ed8594936131a19aca857eb332652739477be232260b073eab6777917bd9182c"
+        },
+        {
+          "index": 1,
+          "frame": 68,
+          "rgbaSha256": "2184512a5dda99052b82e8509c04c3368d887241cc1bdfb37bc6e20842cb569c"
+        },
+        {
+          "index": 0,
+          "frame": 72,
+          "rgbaSha256": "13ee0948ddfb7c0b02e9a3b1fe246d3e936478d8e82e4a14788941d072f2a2aa"
+        }
+      ]
+    },
+    {
+      "type": 22,
+      "worldX": 5576,
+      "baseY": 96,
+      "stopX": 5536,
+      "label": "ceiling",
+      "approachFrames": 177,
+      "slot": 17,
+      "poses": [
+        {
+          "index": 4,
+          "frame": 3,
+          "rgbaSha256": "2d159a4ecb7a4a56fc47195c1bb50a4076beaafc9d5f397034884e7292c0c7a6"
+        },
+        {
+          "index": 2,
+          "frame": 9,
+          "rgbaSha256": "441b4fdb52591e1a3f38a5859e52a5b2706db492b33e4d4f4a9229a9869cd7a8"
+        },
+        {
+          "index": 3,
+          "frame": 13,
+          "rgbaSha256": "44e95064b99119af52f9785dda8558d087ced5e59b82b11073b0c47355958e62"
+        },
+        {
+          "index": 1,
+          "frame": 68,
+          "rgbaSha256": "09be6a2adce09f983d19e423d6109fbaa0aa2ae6f98c3e8b03c6aa004b278dac"
+        },
+        {
+          "index": 0,
+          "frame": 72,
+          "rgbaSha256": "589a6eb8e54df73f0d22c4d563dc0e7764a096b9a270488189c02e6e18eb0063"
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "worldX": 5712,
+      "baseY": 160,
+      "stopX": 5672,
+      "label": "floor-repeat",
+      "approachFrames": 101,
+      "slot": 16,
+      "poses": [
+        {
+          "index": 3,
+          "frame": 2,
+          "rgbaSha256": "ed8594936131a19aca857eb332652739477be232260b073eab6777917bd9182c"
+        },
+        {
+          "index": 4,
+          "frame": 4,
+          "rgbaSha256": "3554307cd0dafd58c2567cbcf15f2e9554f1e6192420f7b10b0aaeba0c4511ad"
+        },
+        {
+          "index": 2,
+          "frame": 8,
+          "rgbaSha256": "a5ec9e4d87b1c151ffe33f675d8823ac611bbc7a3f71e688e2e959bf5decd9aa"
+        },
+        {
+          "index": 1,
+          "frame": 69,
+          "rgbaSha256": "2184512a5dda99052b82e8509c04c3368d887241cc1bdfb37bc6e20842cb569c"
+        },
+        {
+          "index": 0,
+          "frame": 73,
+          "rgbaSha256": "13ee0948ddfb7c0b02e9a3b1fe246d3e936478d8e82e4a14788941d072f2a2aa"
+        }
+      ]
+    }
+  ],
   "frames": [
     {
       "type": 5,
       "index": 0,
-      "frame": 103,
+      "frame": 72,
+      "slot": 16,
+      "enemyY": 160,
+      "left": 151,
+      "top": 153,
       "cells": [
-        {
-          "i": 6,
-          "x": 120,
-          "y": 152,
-          "tile": 207,
-          "attr": 3
-        },
-        {
-          "i": 7,
-          "x": 128,
-          "y": 152,
-          "tile": 188,
-          "attr": 3
-        }
-      ],
-      "top": 152,
-      "rgbaSha256": "23f1ac44f2211d9f3bafd175a3d71e8399785bd9428a788ee66e17107e9c4995"
-    },
-    {
-      "type": 5,
-      "index": 1,
-      "frame": 2,
-      "cells": [
-        {
-          "i": 22,
-          "x": 120,
-          "y": 144,
-          "tile": 193,
-          "attr": 3
-        },
-        {
-          "i": 23,
-          "x": 128,
-          "y": 144,
-          "tile": 194,
-          "attr": 3
-        },
         {
           "i": 24,
-          "x": 120,
+          "x": 151,
           "y": 152,
           "tile": 195,
           "attr": 3
         },
         {
           "i": 25,
-          "x": 128,
+          "x": 159,
           "y": 152,
           "tile": 196,
           "attr": 3
         }
       ],
-      "top": 144,
-      "rgbaSha256": "02865f1a58e5c6c66fdb0b2b5afd516c4de7e43fb95933e2ff880df0b86cabcd"
+      "patterns": [
+        {
+          "tile": 195,
+          "hex": "211f0503050305073f1f060306030607",
+          "romOffset": 40768
+        },
+        {
+          "tile": 196,
+          "hex": "84f820c020c020e0fcf8e0c0e0c0e0e0",
+          "romOffset": 40784
+        }
+      ],
+      "opaquePixels": 54,
+      "rgbaSha256": "13ee0948ddfb7c0b02e9a3b1fe246d3e936478d8e82e4a14788941d072f2a2aa"
+    },
+    {
+      "type": 5,
+      "index": 1,
+      "frame": 68,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 151,
+      "top": 145,
+      "cells": [
+        {
+          "i": 22,
+          "x": 151,
+          "y": 144,
+          "tile": 193,
+          "attr": 3
+        },
+        {
+          "i": 23,
+          "x": 159,
+          "y": 144,
+          "tile": 194,
+          "attr": 3
+        },
+        {
+          "i": 24,
+          "x": 151,
+          "y": 152,
+          "tile": 195,
+          "attr": 3
+        },
+        {
+          "i": 25,
+          "x": 159,
+          "y": 152,
+          "tile": 196,
+          "attr": 3
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 193,
+          "hex": "00001f2973bb9a7300001f377fdeff7f",
+          "romOffset": 40736
+        },
+        {
+          "tile": 194,
+          "hex": "0000f884ce5d59ce0000f8fcfefbfffe",
+          "romOffset": 40752
+        },
+        {
+          "tile": 195,
+          "hex": "211f0503050305073f1f060306030607",
+          "romOffset": 40768
+        },
+        {
+          "tile": 196,
+          "hex": "84f820c020c020e0fcf8e0c0e0c0e0e0",
+          "romOffset": 40784
+        }
+      ],
+      "opaquePixels": 136,
+      "rgbaSha256": "2184512a5dda99052b82e8509c04c3368d887241cc1bdfb37bc6e20842cb569c"
     },
     {
       "type": 5,
       "index": 2,
       "frame": 7,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 155,
+      "top": 145,
       "cells": [
         {
-          "i": 1,
-          "x": 120,
+          "i": 6,
+          "x": 155,
           "y": 144,
           "tile": 191,
           "attr": 3
         },
         {
-          "i": 2,
-          "x": 128,
+          "i": 7,
+          "x": 163,
           "y": 144,
           "tile": 192,
           "attr": 3
         },
         {
-          "i": 3,
-          "x": 124,
+          "i": 8,
+          "x": 159,
           "y": 152,
           "tile": 206,
           "attr": 3
         }
       ],
-      "top": 144,
-      "rgbaSha256": "761061c67567556c2604fffc66c338b613aa390bc5a67a536f60205af763d201"
+      "patterns": [
+        {
+          "tile": 191,
+          "hex": "1f2e6faba96f261f1f377ffdff7f3f1f",
+          "romOffset": 40704
+        },
+        {
+          "tile": 192,
+          "hex": "f8143a2e263a14f8f8fcfef6fefefcf8",
+          "romOffset": 40720
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "a5ec9e4d87b1c151ffe33f675d8823ac611bbc7a3f71e688e2e959bf5decd9aa"
     },
     {
       "type": 5,
       "index": 3,
-      "frame": 12,
+      "frame": 13,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 152,
+      "top": 145,
       "cells": [
         {
-          "i": 22,
-          "x": 120,
+          "i": 6,
+          "x": 152,
           "y": 144,
           "tile": 189,
           "attr": 3
         },
         {
-          "i": 23,
-          "x": 128,
+          "i": 7,
+          "x": 160,
           "y": 144,
           "tile": 190,
           "attr": 3
         },
         {
-          "i": 24,
-          "x": 124,
+          "i": 8,
+          "x": 156,
           "y": 152,
           "tile": 206,
           "attr": 3
         }
       ],
-      "top": 144,
-      "rgbaSha256": "5e34b08bbd15d0fa1f6808edaf57a1296287f9b29c026f18a915e278a0816e45"
+      "patterns": [
+        {
+          "tile": 189,
+          "hex": "1f2c5c6c645c281f1f3b7f777f7f3f1f",
+          "romOffset": 40672
+        },
+        {
+          "tile": 190,
+          "hex": "f864f6d595f664f8f8fcfebffffefcf8",
+          "romOffset": 40688
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "ed8594936131a19aca857eb332652739477be232260b073eab6777917bd9182c"
     },
     {
       "type": 5,
       "index": 4,
-      "frame": 17,
+      "frame": 3,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 157,
+      "top": 145,
       "cells": [
         {
           "i": 1,
-          "x": 120,
+          "x": 157,
           "y": 144,
           "tile": 207,
           "attr": 3
         },
         {
           "i": 2,
-          "x": 128,
+          "x": 165,
           "y": 144,
           "tile": 188,
           "attr": 3
         },
         {
           "i": 3,
-          "x": 124,
+          "x": 161,
           "y": 152,
           "tile": 206,
           "attr": 3
         }
       ],
-      "top": 144,
-      "rgbaSha256": "53e3064bc9663df8d57dd6b3be2533fb185808e4ee22b665d8c2afce16cc34c1"
+      "patterns": [
+        {
+          "tile": 207,
+          "hex": "1f2973bb9a73211f1f377fdeff7f3f1f",
+          "romOffset": 40960
+        },
+        {
+          "tile": 188,
+          "hex": "f884ce5d59ce84f8f8fcfefbfffefcf8",
+          "romOffset": 40656
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 146,
+      "rgbaSha256": "3554307cd0dafd58c2567cbcf15f2e9554f1e6192420f7b10b0aaeba0c4511ad"
     },
     {
       "type": 22,
       "index": 0,
-      "frame": 103,
+      "frame": 72,
+      "slot": 17,
+      "enemyY": 96,
+      "left": 151,
+      "top": 89,
       "cells": [
         {
-          "i": 6,
-          "x": 120,
-          "y": 96,
-          "tile": 188,
-          "attr": 195
-        },
-        {
-          "i": 7,
-          "x": 128,
-          "y": 96,
-          "tile": 207,
-          "attr": 195
-        }
-      ],
-      "top": 88,
-      "rgbaSha256": "264a8cf478c4d97bcdd1fc2ad22471a42b65100b3ee8a66678cd7ab7359af72c"
-    },
-    {
-      "type": 22,
-      "index": 1,
-      "frame": 2,
-      "cells": [
-        {
-          "i": 22,
-          "x": 120,
+          "i": 5,
+          "x": 151,
           "y": 96,
           "tile": 196,
           "attr": 195
         },
         {
-          "i": 23,
-          "x": 128,
+          "i": 6,
+          "x": 159,
+          "y": 96,
+          "tile": 195,
+          "attr": 195
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 196,
+          "hex": "84f820c020c020e0fcf8e0c0e0c0e0e0",
+          "romOffset": 40784
+        },
+        {
+          "tile": 195,
+          "hex": "211f0503050305073f1f060306030607",
+          "romOffset": 40768
+        }
+      ],
+      "opaquePixels": 54,
+      "rgbaSha256": "589a6eb8e54df73f0d22c4d563dc0e7764a096b9a270488189c02e6e18eb0063"
+    },
+    {
+      "type": 22,
+      "index": 1,
+      "frame": 68,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 151,
+      "top": 97,
+      "cells": [
+        {
+          "i": 5,
+          "x": 151,
+          "y": 96,
+          "tile": 196,
+          "attr": 195
+        },
+        {
+          "i": 6,
+          "x": 159,
           "y": 96,
           "tile": 195,
           "attr": 195
         },
         {
-          "i": 24,
-          "x": 120,
+          "i": 7,
+          "x": 151,
           "y": 104,
           "tile": 194,
           "attr": 195
         },
         {
-          "i": 25,
-          "x": 128,
+          "i": 8,
+          "x": 159,
           "y": 104,
           "tile": 193,
           "attr": 195
         }
       ],
-      "top": 96,
-      "rgbaSha256": "435aeb7204bfe42e5955436baf61c1ce1663a411a11bc78b35314e0b48d09bc3"
+      "patterns": [
+        {
+          "tile": 196,
+          "hex": "84f820c020c020e0fcf8e0c0e0c0e0e0",
+          "romOffset": 40784
+        },
+        {
+          "tile": 195,
+          "hex": "211f0503050305073f1f060306030607",
+          "romOffset": 40768
+        },
+        {
+          "tile": 194,
+          "hex": "0000f884ce5d59ce0000f8fcfefbfffe",
+          "romOffset": 40752
+        },
+        {
+          "tile": 193,
+          "hex": "00001f2973bb9a7300001f377fdeff7f",
+          "romOffset": 40736
+        }
+      ],
+      "opaquePixels": 136,
+      "rgbaSha256": "09be6a2adce09f983d19e423d6109fbaa0aa2ae6f98c3e8b03c6aa004b278dac"
     },
     {
       "type": 22,
       "index": 2,
-      "frame": 7,
+      "frame": 9,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 154,
+      "top": 97,
       "cells": [
         {
-          "i": 1,
-          "x": 120,
+          "i": 23,
+          "x": 154,
           "y": 104,
           "tile": 192,
           "attr": 195
         },
         {
-          "i": 2,
-          "x": 128,
+          "i": 24,
+          "x": 162,
           "y": 104,
           "tile": 191,
           "attr": 195
         },
         {
-          "i": 3,
-          "x": 124,
+          "i": 25,
+          "x": 158,
           "y": 96,
           "tile": 206,
           "attr": 195
         }
       ],
-      "top": 96,
-      "rgbaSha256": "1f7c36face8ff8f84608a4b24db9b19db94f653f537d438bebc7da7b482e7f4b"
+      "patterns": [
+        {
+          "tile": 192,
+          "hex": "f8143a2e263a14f8f8fcfef6fefefcf8",
+          "romOffset": 40720
+        },
+        {
+          "tile": 191,
+          "hex": "1f2e6faba96f261f1f377ffdff7f3f1f",
+          "romOffset": 40704
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "441b4fdb52591e1a3f38a5859e52a5b2706db492b33e4d4f4a9229a9869cd7a8"
     },
     {
       "type": 22,
       "index": 3,
-      "frame": 12,
+      "frame": 13,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 152,
+      "top": 97,
       "cells": [
         {
-          "i": 22,
-          "x": 120,
+          "i": 23,
+          "x": 152,
           "y": 104,
           "tile": 190,
           "attr": 195
         },
         {
-          "i": 23,
-          "x": 128,
+          "i": 24,
+          "x": 160,
           "y": 104,
           "tile": 189,
           "attr": 195
         },
         {
-          "i": 24,
-          "x": 124,
+          "i": 25,
+          "x": 156,
           "y": 96,
           "tile": 206,
           "attr": 195
         }
       ],
-      "top": 96,
-      "rgbaSha256": "97f1160263c919c7f4dd0563ee95f6a92dc4003e4c6699a287ebfedc2669c9f9"
+      "patterns": [
+        {
+          "tile": 190,
+          "hex": "f864f6d595f664f8f8fcfebffffefcf8",
+          "romOffset": 40688
+        },
+        {
+          "tile": 189,
+          "hex": "1f2c5c6c645c281f1f3b7f777f7f3f1f",
+          "romOffset": 40672
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "44e95064b99119af52f9785dda8558d087ced5e59b82b11073b0c47355958e62"
     },
     {
       "type": 22,
       "index": 4,
-      "frame": 17,
+      "frame": 3,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 157,
+      "top": 97,
       "cells": [
         {
-          "i": 1,
-          "x": 120,
+          "i": 22,
+          "x": 157,
           "y": 104,
           "tile": 188,
           "attr": 195
         },
         {
-          "i": 2,
-          "x": 128,
+          "i": 23,
+          "x": 165,
           "y": 104,
           "tile": 207,
           "attr": 195
         },
         {
-          "i": 3,
-          "x": 124,
+          "i": 24,
+          "x": 161,
           "y": 96,
           "tile": 206,
           "attr": 195
         }
       ],
-      "top": 96,
-      "rgbaSha256": "fff1d0380b6fed8038bca563f41219056b6af094cabb8c27af656f92fe40fbab"
+      "patterns": [
+        {
+          "tile": 188,
+          "hex": "f884ce5d59ce84f8f8fcfefbfffefcf8",
+          "romOffset": 40656
+        },
+        {
+          "tile": 207,
+          "hex": "1f2973bb9a73211f1f377fdeff7f3f1f",
+          "romOffset": 40960
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 146,
+      "rgbaSha256": "2d159a4ecb7a4a56fc47195c1bb50a4076beaafc9d5f397034884e7292c0c7a6"
     }
   ],
   "hits": [

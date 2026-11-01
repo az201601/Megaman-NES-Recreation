@@ -2,7 +2,9 @@
 
 Back up your working project and stop the runner. Requires the seven accepted enemies through Big Eye, existing Blaster bullet/fire resources, and accepted Free Fall Correction. **Keep your latest camera/gate code, including Jumping Gate Entry if installed. Do not reinstall older stage/combat checkpoints.** This ZIP is a manual source/resource patch, not an importable GMX. Complete every step before running.
 
-## 1. TWO new sprites
+**Already installed the earlier Screw package? Use `SPRITE-CORRECTION-GMS14.md` and its smaller correction ZIP instead. Do not reappend manager initialization. The earlier scrambled strips are superseded.**
+
+## 1. THREE new sprites
 
 Resource folder **Sprites → Enemies → MM1 → Screw Bomber**.
 
@@ -11,12 +13,14 @@ Resource folder **Sprites → Enemies → MM1 → Screw Bomber**.
 | `spr_mm1_screw_bomber_floor` | `Art/spr_mm1_screw_bomber_floor_strip5.png` |
 | `spr_mm1_screw_bomber_ceiling` | `Art/spr_mm1_screw_bomber_ceiling_strip5.png` |
 
-For EACH sprite:
+For EACH of the two body sprites:
 1. Create the exact resource name above. Edit Sprite → File → Create from Strip; select its matching PNG.
 2. **Number of images5; Images per row5; Image width16; Image height16**. Every cell/pixel offset and horizontal/vertical separation **0**.
 3. Confirm FIVE16×16subimages, not one80×16image. Closed first, emergence second, three rotating poses next.
 4. Green check to leave editor; set **Origin X8,Y7** manually. Do not Centre afterward, crop transparent rows, resize/repaint or flip the ceiling strip again. Closed floor has bottom8rows transparent; closed ceiling has TOP8rows transparent—intentional native mounting alignment.
 5. Keep transparency/default mask settings; no smoothing/Remove Background. Save. Numeric combat bounds do not use sprite masks.
+
+Also create **`spr_mm1_screw_bomber_bullet`** in the same folder. Load Sprite → **`Art/spr_mm1_screw_bomber_bullet.png`**, ONE8×8subimage, **Origin X4,Y3**. Keep PNG transparency. Do not overwrite Blaster or Flying Shell bullet sprites.
 
 ## 2. FIVE new Script resources
 
@@ -30,7 +34,7 @@ Folder **Scripts → Enemies → MM1 → Screw Bomber**. For each name create a 
 
 Do not create scripts from Objects/ or Hooks/. These scripts are not object Step events.
 
-## 3. ONE new object — Create and ordinary Draw ONLY
+## 3. TWO new objects — Create and ordinary Draw ONLY
 
 Folder **Objects → Enemies → MM1 → Screw Bomber**.
 
@@ -40,7 +44,16 @@ Folder **Objects → Enemies → MM1 → Screw Bomber**.
 4. Add ordinary **Draw → Execute Code**, paste whole `Objects/obj_mm1_screw_bomber_draw.gml`. NOT Draw GUI/Begin/End.
 5. Save. **No Step, Begin Step, End Step, Collision or Destroy events. No manual room instances or generator object.** Existing central combat owner updates it once.
 
-There is **NO new bullet object/sprite/sound**. Code instantiates your existing **`obj_mm1_blaster_bullet`**, whose numeric movement/contact/cleanup/Draw already match this native2D bullet. Its existing `spr_mm1_blaster_bullet` is an exact native tile/palette RGBA match in both Screw fixtures. Do not change Blaster bullet events, the Shell bullet parent, or any accepted actor.
+### Bullet: `obj_mm1_screw_bomber_bullet`
+
+Same Objects folder. Create **`obj_mm1_screw_bomber_bullet`**:
+1. Sprite `<no sprite>`; Visible checked; Solid/Persistent unchecked.
+2. **Parent = existing `obj_mm1_blaster_bullet`**. This is required to join the accepted central movement/contact/cleanup pass exactly once.
+3. **Create → Execute Code:** whole `Objects/obj_mm1_screw_bomber_bullet_create.gml`. Fields initialized explicitly; no inherited-event action.
+4. **Ordinary Draw → Execute Code:** whole `Objects/obj_mm1_screw_bomber_bullet_draw.gml`.
+5. No Step/Begin Step/End Step/Collision/Destroy events, no manual room instances. Do not edit the existing Blaster bullet events or add a second movement pass.
+
+The dedicated child keeps the actual corridor salmon/white palette without changing Blaster's accepted magenta bullet. Same numeric native2D movement/contact as Blaster; own Draw only. **No new sound.**
 
 Fire uses existing **`snd_mm1_blaster_fire`** ONCE per five-shot fan. This is the same native$15cue; no fake distinct Screw effect, five overlapping WAVs or gain changes. Successful hits use existing `snd_mm6_enemy_hit`. **No blocked-hit ding**: Screw Bomber is vulnerable even retracted. Leave all accepted audio/charge/music/Included Files untouched.
 
