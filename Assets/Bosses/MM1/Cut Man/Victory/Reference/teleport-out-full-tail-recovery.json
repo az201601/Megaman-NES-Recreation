@@ -1,0 +1,36 @@
+{
+  "status": "Full natural-tail listening review; earlier40-update scene-length excerpt was incomplete for user. No production integration before approval.",
+  "file": "Audio/Review/mm6-teleport-out-full-tail-review.wav",
+  "sha256": "5a12555f17d03bcfbc4227e76eb6e6e53e61270e16f88a42014362cb82bb91af",
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "command": "3A",
+  "nativeDispatch": [
+    {
+      "frame": 1359,
+      "kind": "audio-dispatch",
+      "command": 58
+    },
+    {
+      "frame": 1399,
+      "kind": "audio-dispatch",
+      "command": 240
+    }
+  ],
+  "isolatedDispatch": [
+    {
+      "frame": 0,
+      "command": 58
+    }
+  ],
+  "gain": 2,
+  "peak": 0.442413330078125,
+  "samples": 40975,
+  "seconds": 0.8536458333333333,
+  "lastNonzero": 40494,
+  "method": "Unmodified original MM6 driver/full APU, mono average of original stereo, established F0+35 silent warmup then isolated native mailbox3A. Unlike the earlier scene-length preview, omit the native scene F0 at40updates and allow3A to finish naturally. Capture180updates; keep onset through last nonzero plus10ms exact-silent tail, no pitch/time edits.2x gain matches standing SFX-level direction, not MM5 weapon music gain1.",
+  "limits": [
+    "Disclosed isolated native sound-command fixture,not a natural recording of whole scene.",
+    "MM6 teleport-out cue matched by native dispatch,not arrival2D.",
+    "Listening/GMS integration acceptance pending."
+  ]
+}
