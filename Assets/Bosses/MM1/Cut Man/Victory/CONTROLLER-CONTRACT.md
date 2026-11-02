@@ -81,3 +81,30 @@ install this checkpoint by itself: it would stop at the defeat phase.
 Tests now also execute actual `player_begin`, `player_move`, `player_tick`, the
 real lethal-hit transaction and central late-hazard guards. Native entrance probe
 was regenerated, unblocking the16-group live combat adapter regression; it passes.
+
+## Phase/movement coordinator now wired in draft source
+
+`player_step` combines the existing phase core with the already implemented
+`player_tick`/`player_move` helpers, using the shared combat clock. Its hook replaces
+the old lock-only Step hook; it must be called after combat begin and before all
+normal player input. Do NOT also advance phases/movement from camera/actor Step.
+The canonical combat/handoff scripts remain the only final-hit transaction.
+
+Owner Create/init now defines completion flags and serialized phase-entry requests.
+Handoff publishes event1 once. Coordinator publishes subsequent entry events with
+`cmv_entry_serial`, clears each incoming animator's stale completion flag, and
+runs MM5 gravity/walking once in phases1..5. Centre crossing commits X before a
+same-call acquisition transition; otherwise the MM5 stride can overshoot by1px.
+Frozen/duplicate calls do not move, advance waits or replay an entry event.
+
+The receiving defeat/acquisition/teleport/audio/custom-screen implementation still
+must consume each entry serial and set its own completion flag. The coordinator
+does NOT fabricate those flags, play placeholder audio, grant inventory or change
+rooms. Without that receiver it intentionally waits at defeat, so this remains
+uninstallable. This extends, rather than replaces, the earlier player bridge.
+
+`test-cutman-victory-coordinator.mjs` runs the actual phase/player/motion scripts
+with the real wall/support helper GML against rectangular geometry. Defeat-FX
+completion is a disclosed mocked signal. Airborne momentum settles, clear waits
+advance, off-centre walking reaches exactly3200, duplicate/frozen updates do not
+move, acquisition entry is serialized once and cancellation cannot award a weapon.

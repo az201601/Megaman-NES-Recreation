@@ -4,6 +4,8 @@ var boss, player;
 boss = argument0;
 if (!instance_exists(boss) || !boss.cm_defeat_pending || boss.cmv_phase != 0) return false;
 with (boss) scr_mm1_cutman_victory_start(3200);
+boss.cmv_entry_event = 1;
+boss.cmv_entry_serial += 1;
 player = instance_find(obj_mm5_megaman, 0);
 if (instance_exists(player))
     with (player) scr_mm1_cutman_victory_player_begin();

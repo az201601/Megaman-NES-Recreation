@@ -361,3 +361,17 @@ checks plus actual central End Frame early-exit checks;261 hit/balance checks;
 previous ENOENT block. Limited mocks are not GMS runtime acceptance. All visuals,
 phase-coordinator/audio playback, custom screen/demo/music, persistence/selection
 and final install package remain outstanding. No user installation action yet.
+
+## Coordinator checkpoint
+
+The draft player Step hook now calls `victory_player_step`, connecting the phase
+core to the existing MM5 forced-motion bridge. This fills the missing phase/motion
+caller from the previous checkpoint. New actual-GML combined test passes through
+physical airborne landing, two active-clock waits and centre walking to acquisition
+entry, including freeze/duplicate guards and abort. A same-call centre-snap bug
+was caught and fixed before handing off to the acquisition animator.
+
+The existing11 movement,20 phase,16 live combat-adapter groups and lethal-handoff/
+late-hazard guards pass again after regenerating the missing entrance fixture.
+Still NOT installed/packaged: effect/art/audio entry receiver, actual animation
+completion, custom screen/demo/music, persistent award/return and final cleanup.
