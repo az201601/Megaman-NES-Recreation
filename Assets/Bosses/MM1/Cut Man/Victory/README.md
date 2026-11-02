@@ -321,3 +321,21 @@ by a trace that releases player buttons on lethal hit.
 Evidence: `Reference/mm6-whole-victory.json`, seven native screenshots;
 `test-mm6-whole-victory.mjs` validates both traces, actual lethal/caller ROM bytes,
 scene order and screenshots. No ROM/save state distributed. No GMS runtime claim.
+
+## Implementation started: phase-owner core (not installed)
+
+`Scripts/scr_mm1_cutman_victory_{init,start,step,busy}.gml` implements the phase
+contract in `CONTROLLER-CONTRACT.md`: defeat completion ->240 active updates ->
+clear music entry ->240 active updates -> centre crossing/support -> acquisition
+completion -> teleport completion -> custom screen/demo completion -> one reward/
+return request. Duplicate ticks, freeze and cancellation have explicit ownership.
+No audio, guessed animation art or fabricated custom music is imported by the core.
+
+`test-cutman-victory-controller.mjs`:20 grouped actual-GML checks PASS.
+`test-cutman-boss-hit.mjs`:261 existing actual-GML balance/latch checks PASS.
+Attempted live-adapter regression is currently BLOCKED by missing ignored native
+fixture `.work/cutman-boss-entrance/frame-473.json`; not reported as passing.
+Combat is STILL uninstalled. Live handoff/player movement/charge and pause locks,
+defeat/acquisition/teleport art, audio ownership, screen/demo/music, persistent
+unlock and final installation package remain unfinished. Accepted entrance files
+unchanged. This core is not a complete victory controller installation.
