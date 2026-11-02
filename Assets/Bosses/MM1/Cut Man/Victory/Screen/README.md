@@ -218,3 +218,16 @@ and stage-select return. No GMS compile/render/audio acceptance is claimed.
 runtime validation remain pending. The approved MM5 audio resource is still the
 unboosted finite11.482s take, not a proven full-cycle loop; the new13.57s screen
 is longer, so full-duration music playback needs verification before packaging.
+
+### Extended MM5 music recovered for listening approval
+
+`Audio/Review/mm5-weapon-get-extended-native-review.wav` now covers15.392s,
+including continuous music through the13.57s approved screen. Every one of the
+551145 approved stereo PCM samples is byte-identical at the start; original
+peak0.41943359375 is unchanged. No amplification/stretching/PCM loop or padding.
+The native driver continues after suppressing the later menu13 command at its
+entry (documented CPU instrumentation); nativeF0 stops it after900updates with
+24tail updates. This is a finite continuation, not a proved seamless loop.
+See `Reference/mm5-weapon-get-extended-recovery.json` and
+`test-mm5-weapon-get-extended.mjs`. The production resource remains untouched
+until listening approval of the extended take, per the standing audio direction.
