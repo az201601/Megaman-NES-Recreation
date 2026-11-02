@@ -577,3 +577,10 @@ face and eyes; unrelated magenta cannon accent is grey. Original blue source art
 is retained separately, not drawn. Future weapons require their own matching
 portrait palette rather than default blue. Music and other layout remain unchanged.
 Actual-GML raster test passes revised preview,removed-row and palette-only checks.
+
+### Top boss-name box removed
+
+User approved the revised screen, then requested removing the unnecessary Cut Man
+text box. Removed both boss-name text and its full inset plaque, restoring the
+mechanical frame behind it. No top boss-name box for later weapons either. Main
+YOU GOT/ROLLING CUTTER, grey/white portrait, bottom acquired plaque and music stay.

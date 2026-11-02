@@ -8,7 +8,8 @@ This is the **reveal/name-card state**, not the later weapon demonstration.
 Native logical size256x240, with a4x nearest-neighbour review image. Adaptation:
 
 - MM6 pipe/window frame art, rearranged into shorter top/bottom bands and recoloured
-  blue/steel. Custom inset Cut Man/weapon-acquired nameplates. This palette/layout
+  blue/steel. Custom bottom weapon-acquired nameplate only. Top Cut Man text
+  AND its entire box removed; uninterrupted mechanical frame restored. This palette/layout
   is custom, not asserted to be original MM6 colours or timing.
 - Original MM6 large Mega Man from a controlled original award scene. The figure
   is background-rendered, NOT an OAM actor: native rendered64x96 region at176,72
@@ -58,3 +59,7 @@ Remaining after visual approval: animated reveal/typing, native-MM6-style demo
 adapted to actual Rolling Cutter, music lifetime/full-cycle handling at approved
 original volume, once-only screen completion/return, complete installation package.
 Do not set screenDone on a timer to bypass the unfinished demonstration.
+
+Latest user review: grey/white portrait and removal of menu row approved.
+Top Cut Man nameplate subsequently removed on request; no boss-name box on this
+or future weapon-get screens. Main weapon title and bottom acquired plaque stay.

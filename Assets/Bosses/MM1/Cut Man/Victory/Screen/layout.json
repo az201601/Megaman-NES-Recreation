@@ -1,6 +1,6 @@
 {
-  "status": "Overall layout approved; revised to remove menu icon/name and apply weapon-specific portrait colours. Revision appearance/runtime acceptance pending.",
-  "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; inset Cut Man/acquired plaques; MM6 large Mega Man adapted to Rolling Cutter grey/white; original MM5 sprite font. No weapon-menu symbol,abbreviation or card for any weapon. No score/CLEAR POINTS.",
+  "status": "Layout/weapon-colour revision approved; top Cut Man nameplate removed per latest request. Not installed.",
+  "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; bottom acquired plaque; no top boss-name box; MM6 large Mega Man adapted to Rolling Cutter grey/white; original MM5 sprite font. No weapon-menu symbol,abbreviation or card for any weapon. No score/CLEAR POINTS.",
   "portrait": {
     "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
     "method": "Native MM6 award320 snapshot advanced1frame,original rendered background figure isolated against its solid black backdrop (black made transparent). Opaque pixels independently checked against uncropped native rendering. Not an OAM reconstruction. No ROM/CHR/palette patch.",
@@ -23,7 +23,7 @@
       ]
     },
     "spr_mm1_weapon_get_frame.png": {
-      "sha256": "e7957e9bc2e2f85b87ca82762c253d02e7cf56cf89995c41f328ac18b56c885f",
+      "sha256": "7d74fd951a69e186ad67ede6487d64b004b7e1925e3322992f8b6da80682e7be",
       "width": 256,
       "height": 240,
       "origin": [
@@ -61,17 +61,8 @@
     "displayAsset": "spr_mm1_weapon_get_rolling_cutter_megaman.png"
   },
   "menuWeaponRow": false,
+  "bossNamePlate": false,
   "texts": [
-    {
-      "text": "CUT MAN",
-      "x": 100,
-      "y": 22,
-      "color": [
-        100,
-        176,
-        255
-      ]
-    },
     {
       "text": "YOU GOT",
       "x": 24,
@@ -126,7 +117,7 @@
   },
   "preview": {
     "file": "custom-rolling-cutter-screen-preview.png",
-    "sha256": "06abd251c17cdeda7191f6c19e5270ebb0f10258051b6bdc09a1b57dc7273cd1"
+    "sha256": "538a60ab73b4b1f85a13bc5db113c0083f4d1e2f014a18a28e2463fa871bc5ba"
   },
   "limitations": [
     "Blue/steel frame layout/palette and plaques are custom design,not native MM6 accuracy claims.",
