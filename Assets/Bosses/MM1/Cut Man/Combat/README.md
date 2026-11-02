@@ -292,3 +292,11 @@ player-control lock/auto-walk, defeat effects, MM6 music approval, acquisition/
 weapon screen and Rolling Cutter unlock/return-selection, followed by a complete
 incremental package and installed GMS playtest. Do not import this partial adapter
 checkpoint or replace the working E-Tank/entrance files yet.
+
+## Victory handoff source update (still NOT installable)
+
+Lethal `boss_hit` now calls the once-only victory transaction; Create initializes
+victory fields. End Frame checks victory before world updates and after shots,
+preventing late hazards/spawns on the lethal update. See Victory/CONTROLLER-CONTRACT.
+The phase/effects coordinator and full screen/reward integration remain missing;
+installing only this checkpoint would hold at defeat. Entrance unchanged.

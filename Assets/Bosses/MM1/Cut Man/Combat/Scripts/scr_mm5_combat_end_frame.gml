@@ -4,6 +4,9 @@ var p, i, enemy, shot, item, boom, half_y, inside, spawn;
 scr_mm5_combat_begin();
 p = instance_find(obj_mm5_megaman, 0);
 if (!instance_exists(p)) { combat_begin_done = false; exit; }
+
+// Victory owns this update: no late hazards, drops, refills or stage spawns.
+if (scr_mm1_cutman_victory_busy()) { combat_begin_done = false; exit; }
 if (combat_dead || combat_refilling || p.mm5_startup_active)
 { combat_begin_done = false; exit; }
 if (scr_mm1_cutman_route_busy())
@@ -59,6 +62,9 @@ scr_mm1_screw_bomber_world_step(p);
 scr_mm1_cutman_boss_world_step(p);
 // Shots can kill before body contacts are considered.
 with (obj_mm5_buster_shot) scr_mm5_combat_shot_step();
+
+// Victory owns this update: no late hazards, drops, refills or stage spawns.
+if (scr_mm1_cutman_victory_busy()) { combat_begin_done = false; exit; }
 // Complete explosions and roll exactly ONCE, never on offscreen cleanup/Destroy.
 for (i = instance_number(obj_mm5_enemy_explosion) - 1; i >= 0; i -= 1)
 {

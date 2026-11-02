@@ -26,6 +26,7 @@ if (actor.boss_health == 0)
     actor.cm_throw_requested = false;
     actor.cm_speed_x = 0;
     actor.cm_speed_y = 0;
+    scr_mm1_cutman_victory_handoff(actor);
 }
 else actor.cm_blink = 63;
 return true;

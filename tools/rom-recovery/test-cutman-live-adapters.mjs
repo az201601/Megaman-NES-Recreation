@@ -6,7 +6,7 @@ const compile=s=>new Function('c','with(c){'+s.replace(/\bmod\b/g,'%').replace(/
 const createSource=read('Objects/obj_mm1_cutman_boss_create.gml'),world=compile(read('Scripts/scr_mm1_cutman_boss_world_step.gml')),contact=compile(read('Scripts/scr_mm1_cutman_boss_contact.gml')),post=compile(read('Scripts/scr_mm1_cutman_boss_post_frame.gml')),draw=compile(read('Objects/obj_mm1_cutman_boss_draw.gml'));
 const names=['scr_mm1_cutman_boss_face','scr_mm1_cutman_boss_motion','scr_mm1_cutman_boss_decide','scr_mm1_cutman_boss_animate','scr_mm1_cutman_cutter_manage','scr_mm1_cutman_cutter_aim','scr_mm1_cutman_cutter_throw','scr_mm1_cutman_cutter_move','scr_mm1_cutman_animation_header','scr_mm1_cutman_animation_sprite'];
 const actor={x:3264,y:900,sprite_index:0,image_index:0,image_speed:0,depth:0,spr_mm1_cutman_boss_entrance:1};
-for(const match of createSource.matchAll(/^((?:cm_|cc_|boss_)\w+)\s*=/gm))actor[match[1]]=0;
+for(const match of createSource.matchAll(/^((?:cm_|cc_|boss_|cmv_)\w+)\s*=/gm))actor[match[1]]=0;
 compile(createSource)(actor);
 const nativeHandoff=JSON.parse(fs.readFileSync(new URL('./.work/cutman-boss-entrance/frame-473.json',import.meta.url))).cpu.mem;
 for(const[key,address]of [['cm_state',0x3e],['cm_pose',0x401],['cm_anim',0x441],['cm_fire',0x641]])assert.equal(actor[key],nativeHandoff[address],`native handoff ${key}`);
@@ -43,7 +43,7 @@ for(let frame=0;frame<1200;frame++){
 }
 assert.ok(actor.plays.length>0,'Original decision path must actually throw');assert.ok(catches>0,'Return management must catch live simulated cutters');checks++;
 let shotExists=true;const hit=compile(read('Scripts/scr_mm1_cutman_boss_hit.gml'));
-const hitContext={argument0:actor,argument1:{object_index:3},obj_mm5_buster_full:3,snd_mm6_enemy_hit:53,max:Math.max,instance_exists:o=>o===actor||(o===hitContext.argument1&&shotExists),instance_destroy:()=>{shotExists=false},audio_play_sound:()=>{}};
+const hitContext={argument0:actor,argument1:{object_index:3},obj_mm5_buster_full:3,snd_mm6_enemy_hit:53,scr_mm1_cutman_victory_handoff:()=>{},max:Math.max,instance_exists:o=>o===actor||(o===hitContext.argument1&&shotExists),instance_destroy:()=>{shotExists=false},audio_play_sound:()=>{}};
 let landedHits=0;const states=new Set();
 for(let frame=0;frame<2000&&!actor.cm_defeat_pending;frame++){
  owner.combat_tick++;world(owner);states.add(actor.cm_state);
@@ -60,7 +60,8 @@ p.x=3200;p.y=900;actor.x=3264;actor.cc_x=128;actor.cc_y=180;actor.cm_cutter=1;p.
 actor.spr_mm1_cutman_combat=34;actor.draws=[];actor.draw_sprite=(...a)=>actor.draws.push(a);actor.draw_self=()=>actor.draws.push(['intro']);const old=serial();draw(actor);draw(actor);assert.equal(serial(),old);assert.equal(actor.draws.length,4);checks++;
 // Exact latest baselines retained, with only declared integration additions.
 const end=read('Scripts/scr_mm5_combat_end_frame.gml'),oldEnd=fs.readFileSync(new URL('Assets/Combat/MM5/Cut Man E-Tank/Scripts/scr_mm5_combat_end_frame.gml',root),'utf8');
-assert.equal(end.replace('\nscr_mm1_cutman_boss_world_step(p);','').replace('\nscr_mm1_cutman_boss_contact(p);\nscr_mm1_cutman_boss_post_frame();',''),oldEnd);
+const victoryGuard='\n// Victory owns this update: no late hazards, drops, refills or stage spawns.\nif (scr_mm1_cutman_victory_busy()) { combat_begin_done = false; exit; }\n';
+assert.equal(end.replaceAll(victoryGuard,'').replace('\nscr_mm1_cutman_boss_world_step(p);','').replace('\nscr_mm1_cutman_boss_contact(p);\nscr_mm1_cutman_boss_post_frame();',''),oldEnd);
 assert.ok(end.indexOf('scr_mm1_cutman_boss_world_step(p)')<end.indexOf('with (obj_mm5_buster_shot)'));
 assert.ok(end.indexOf('with (obj_mm5_buster_shot)')<end.indexOf('scr_mm1_cutman_boss_contact(p)'));
 assert.ok(end.indexOf('scr_mm1_cutman_boss_contact(p)')<end.indexOf('scr_mm1_cutman_boss_post_frame()'));
@@ -77,7 +78,7 @@ for(const[type,damage]of[[1,1],[2,1],[3,3]]){
  q.obj_mm5_buster_mid=2;q.obj_mm5_buster_full=3;q.obj_mm1_cutman_boss=9;
  q.instance_number=t=>t===9?1:0;q.instance_find=()=>actor;q.instance_exists=o=>o===actor||(o===q&&q.alive);q.instance_destroy=()=>{q.alive=false};
  q.scr_mm5_combat_overlap=owner.scr_mm5_combat_overlap;
- q.scr_mm1_cutman_boss_hit=(a,b)=>hit({argument0:a,argument1:b,obj_mm5_buster_full:3,snd_mm6_enemy_hit:53,max:Math.max,instance_exists:q.instance_exists,instance_destroy:q.instance_destroy,audio_play_sound:()=>{}});
+ q.scr_mm1_cutman_boss_hit=(a,b)=>hit({argument0:a,argument1:b,obj_mm5_buster_full:3,snd_mm6_enemy_hit:53,scr_mm1_cutman_victory_handoff:()=>{},max:Math.max,instance_exists:q.instance_exists,instance_destroy:q.instance_destroy,audio_play_sound:()=>{}});
  shotStep(q);assert.equal(q.alive,false);assert.equal(actor.boss_health,28-damage);routedShots++;
 }
 assert.equal(routedShots,3);

@@ -339,3 +339,25 @@ Combat is STILL uninstalled. Live handoff/player movement/charge and pause locks
 defeat/acquisition/teleport art, audio ownership, screen/demo/music, persistent
 unlock and final installation package remain unfinished. Accepted entrance files
 unchanged. This core is not a complete victory controller installation.
+
+## Lethal handoff and MM5 player bridge connected in source
+
+The combat hit adapter now synchronously calls the once-only victory handoff.
+Boss Create carries initialized victory fields. The central combat End Frame exits
+on victory both before ordinary updates and immediately after the lethal shot,
+so later hazards/drops/refills/spawns cannot run on that frame. The transaction
+locks the player, clears charge/hurt/ladder and removes shots; known charge and
+boss-music owners are disposed without stopping unrelated audio.
+
+New player bridge scripts preserve actual MM5 vertical collision/gravity and wall
+helpers, with forced direction, supported landing and single-tick ownership.
+Airborne momentum is preserved; no Y tween or false grounded flag. Player Create,
+Step and pause-open hook fragments are staged, **not installed**. The movement
+bridge still needs the central phase/effects coordinator before installation.
+
+PASS:11 actual-GML player groups;20 phase groups; lethal-hit transaction/100repeat
+checks plus actual central End Frame early-exit checks;261 hit/balance checks;
+16 live combat adapter groups. Regenerated native entrance fixture resolves the
+previous ENOENT block. Limited mocks are not GMS runtime acceptance. All visuals,
+phase-coordinator/audio playback, custom screen/demo/music, persistence/selection
+and final install package remain outstanding. No user installation action yet.

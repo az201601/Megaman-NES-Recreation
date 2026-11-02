@@ -53,3 +53,31 @@ starts including exact centre/overshoot, supported versus airborne handoff, two
 240-active-update waits,10,000 frozen updates, duplicate clocks, all eight abort
 phases and one-shot reward request. This is **not** a GMS compile/playtest, nor
 proof that the missing bridges or combat are installed.
+
+## Player/hit bridge checkpoint
+
+Source now calls `scr_mm1_cutman_victory_handoff(actor)` from the actual lethal-hit
+adapter, after disabling combat. Boss Create includes the exact init field block.
+The transaction starts phase1 once, locks/cancels player fire/charge/hurt/ladder,
+preserves airborne Y/velocity, stops known charge and boss-music owners, and removes
+projectiles. Actual central End Frame checks the latch both before world updates
+and immediately after shots, avoiding same-frame terrain death/drops/spawns.
+
+`player_move` retains the accepted player controller's vertical collision block
+byte-for-byte through gravity (without keyboard-release cutting), existing wall
+helpers and walk startup/animation. No keyboard simulation, forced grounded state,
+fixed floor Y or repeated player Step. `player_tick` guards active clock/freeze.
+A short slide is only expanded where standing fits; a blocked overhang holds
+safely (arena currently has none). Momentum preservation across the final hit is
+an explicit project adaptation, not a claim about native MM6 held-input handling.
+
+Hook fragments are staged under `Hooks/`, NOT installed. The central phase/effects
+coordinator is still missing, so there is not yet a runtime call advancing this
+movement through victory. Boss defeat/acquisition/teleport art and animation-owned
+completion flags, approved-audio playback ownership, custom screen/demo/music,
+persistent reward/selection and Room End cleanup still need connection. Do not
+install this checkpoint by itself: it would stop at the defeat phase.
+
+Tests now also execute actual `player_begin`, `player_move`, `player_tick`, the
+real lethal-hit transaction and central late-hazard guards. Native entrance probe
+was regenerated, unblocking the16-group live combat adapter regression; it passes.

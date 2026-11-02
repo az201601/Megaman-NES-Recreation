@@ -51,3 +51,14 @@ cc_caught = false;
 cc_anim = 0;
 cc_draw_frame = 0;
 cc_draw_sprite = 0;
+
+// Victory fields: initialize once; do not reset on repeated lethal collisions.
+cmv_phase = 0;
+cmv_timer = 0;
+cmv_tick = -1;
+cmv_advanced = false;
+cmv_move = 0;
+cmv_snap = false;
+cmv_center = 3200;
+cmv_direction = 0;
+cmv_reward_requested = false;
