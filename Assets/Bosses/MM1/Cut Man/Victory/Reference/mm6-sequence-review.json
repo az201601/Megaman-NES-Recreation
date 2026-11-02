@@ -1,0 +1,46 @@
+{
+  "status": "Approval-only preview; user requested MM6 animation/sequence with existing custom look. Not installed and not yet approved. Previous runtime unchanged.",
+  "gif": "custom-rolling-cutter-mm6-sequence-review.gif",
+  "sha256": "89a6358bc63302c12bd9128f4bee8b8cce2af42998e4b6731872d9f061f30c2e",
+  "nativeReference": "Continuous MM6 stage0 centre-acquisition/teleport/weapon-screen trace; controlled handoff only before acquisition, no post-handoff game RAM/ROM patches. tools/rom-recovery/probe-mm6-screen-timing.mjs",
+  "sequence": {
+    "nativeAssemblyAndFlash": [
+      17,
+      164
+    ],
+    "slideRight2pxPerUpdate": [
+      164,
+      204
+    ],
+    "typingStart": 204,
+    "typingEndExclusive": 288,
+    "letterInterval": 4,
+    "portraitFadeStart": 378,
+    "largePortraitReplaced": 399,
+    "demoLoop": [
+      464,
+      704
+    ],
+    "attemptsEvery": 64,
+    "actualThrows": [
+      484,
+      612
+    ],
+    "nativeCatches": [
+      555,
+      683
+    ],
+    "end": 814
+  },
+  "adaptations": [
+    "Blue/steel custom frame and approved font/text/grey-white Cutter armour retained.",
+    "Original native pre-flash portrait animation geometry extracted from continuous rendered frames; armour families recoloured grey/white.",
+    "ROLLING CUTTER14 vs B.ATTACK8 adds6 characters/24updates.",
+    "Custom palette fade approximates native luminance transitions; not native palette-bit-exact.",
+    "MM6 replaces large portrait with small demonstrator; right-pane small actor lowered24px to keep leftward Cutter below custom name text.",
+    "MM6 stage0 shot-phase24hex and240-update loop; native Cutter busy-lock rejects intervening64-update attempts until catch.",
+    "No Beat part reward,password or score;90-update tail and20-update exitfade retained.",
+    "GIF silent; native MM5 music/original-volume and approved player25 sound are unchanged production requirements.",
+    "Approval GIF only; not actual updated GML runtime or final package."
+  ]
+}

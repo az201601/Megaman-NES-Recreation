@@ -153,3 +153,30 @@ The inventory receiver has its own once-only grant/return regression.
 `custom-rolling-cutter-demo-preview.gif` is a silent3x actual-GML raster preview
 including approved reveal, both throws and catches, plus review-only final hold.
 GIF cannot preview the implemented sound. It is not installed GMS acceptance.
+
+
+## New MM6-sequence approval GIF (supersedes custom timing direction)
+
+User requested keeping our custom look but following MM6 animation and sequence.
+`custom-rolling-cutter-mm6-sequence-review.gif` is the new **approval-only** GIF.
+It uses native MM6 centre pose animation/flash,40-update rightward slide,
+continuous4-update character typing,90-update hold,large-portrait fade/replacement,
+30-update small-player preparation,25-update fade,10-update wait,240-update
+weapon-demonstration loop,90-update tail and exit fade. Our longer weapon title
+adds24 typing updates. Blue/steel art,grey/white weapon colour and MM5 font remain.
+No Beat part/password/score scenes are added.
+
+The small demonstrator replaces the large portrait in the right pane; its
+custom vertical placement keeps a leftward Cutter clear of the custom title.
+The native Cutter busy lock means the MM6 stage0 firing attempts at64-update
+intervals produce two actual throws, not overlapping Cutters. Their original
+player-native72-sample return/catch traces are retained. Palette fades are
+custom approximations of MM6 luminance transitions, not palette-bit-exact.
+The silent GIF does not change approved music or25 sound requirements.
+
+Reproduce with `probe-mm6-enemy-hit.mjs` (stage fixture), then
+`probe-mm6-screen-timing.mjs`, then `render-mm6-style-cutter-review.py` with Pillow.
+Native timing events/ROM hash are archived in
+`Reference/mm6-screen-sequence-timing.json`; adaptations/GIF hash in
+`Reference/mm6-sequence-review.json`. This new timing is awaiting user approval;
+the previous actual-GML source is deliberately not replaced until approved.
