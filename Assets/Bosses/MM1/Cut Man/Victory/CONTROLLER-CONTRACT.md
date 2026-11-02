@@ -108,3 +108,25 @@ with the real wall/support helper GML against rectangular geometry. Defeat-FX
 completion is a disclosed mocked signal. Airborne momentum settles, clear waits
 advance, off-centre walking reaches exactly3200, duplicate/frozen updates do not
 move, acquisition entry is serialized once and cancellation cannot award a weapon.
+
+## Owned victory audio receiver
+
+`victory_audio_step` now consumes phase-entry serials from the sole coordinator.
+Event2 starts the approved clear WAV exactly once. Acquisition entry does NOT
+start its sound: the future animator raises `cmv_acquisition_sound_requested`
+at energy-circle onset, and the receiver plays it once in phase6. Event5 stops
+that voice before teleport. Events7/8 dispose owned voices even while frozen.
+Freeze/resume affects only these voices; Room End/Destroy hook is idempotent.
+No global stop-all, native16 screen-music fallback or audio-based animation ack.
+
+Future GMS sound resources (not imported yet):
+- `snd_mm6_stage_clear` from approved `snd_mm6_stage_clear.wav`.
+- `snd_mm6_weapon_acquisition` from approved
+  `snd_mm6_weapon_acquisition_review_excerpt.wav`.
+
+Preserve the approved PCM/gain: use sound volume1, do not multiply another2x.
+Both are finite nonlooped sources. The acquisition excerpt is the approved timed
+window, not a seamless loop or natural-tail claim. Custom screen music is still
+uncreated and the receiver deliberately contains no placeholder for it.
+The acquisition animator must synchronize onset/stop and report real completion;
+no animation/art integration or installed audio acceptance is implied here.

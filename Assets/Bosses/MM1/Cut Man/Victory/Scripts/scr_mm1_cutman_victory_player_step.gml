@@ -27,6 +27,8 @@ if (event != 0)
     if (event == 5) boss.cmv_teleport_done = false;
     if (event == 6) boss.cmv_screen_done = false;
 }
+// Audio serial consumption is independent of phase advancement (cancel/freeze).
+with (boss) scr_mm1_cutman_victory_audio_step(frozen);
 if (!boss.cmv_advanced) return true;
 // Crossing may enter acquisition in this same call; commit X before that handoff.
 if (boss.cmv_snap) x = boss.cmv_center;

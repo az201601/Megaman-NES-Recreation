@@ -375,3 +375,20 @@ The existing11 movement,20 phase,16 live combat-adapter groups and lethal-handof
 late-hazard guards pass again after regenerating the missing entrance fixture.
 Still NOT installed/packaged: effect/art/audio entry receiver, actual animation
 completion, custom screen/demo/music, persistent award/return and final cleanup.
+
+## Victory audio receiver implemented in source
+
+Added owned finite clear/acquisition playback, serialized once-only dispatch,
+freeze/resume and cancel/completion/Room End/Destroy cleanup. The player coordinator
+calls it even when a terminal cancellation does not advance the movement clock.
+The acquisition effect waits for an explicit **energy-circle onset** request, not
+acquisition jump entry. It is stopped before teleport. Native16 music is never
+used as a substitute for the requested custom screen music.
+
+`test-cutman-victory-audio.mjs` passes actual-GML ownership/dispatch tests and checks
+both approved WAV hashes unchanged. Combined coordinator test now also executes
+the audio receiver and confirms clear playback once before the acquisition gate.
+Existing handoff,16 combat-adapter and6 post-defeat safety cases pass.
+
+Still source-only/uninstallable: defeat/acquisition/teleport art/animation owners,
+custom weapon screen/music/demo, persistent unlock/return and full GMS playtest.

@@ -69,3 +69,12 @@ cmv_defeat_done = false;
 cmv_acquisition_done = false;
 cmv_teleport_done = false;
 cmv_screen_done = false;
+// Owned finite victory audio. Separate from accepted boss/stage PCM owners.
+cmv_audio_serial = -1;
+cmv_audio_closing = false;
+cmv_audio_paused = false;
+cmv_clear_started = false;
+cmv_acquisition_started = false;
+cmv_acquisition_sound_requested = false;
+cmv_clear_voice = -1;
+cmv_acquisition_voice = -1;

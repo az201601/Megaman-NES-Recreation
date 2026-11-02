@@ -19,9 +19,16 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  const coreStart=compile(read(path+'scr_mm1_cutman_victory_start.gml'));
  const coreStep=compile(read(path+'scr_mm1_cutman_victory_step.gml'));
  const playerStep=compile(read(path+'scr_mm1_cutman_victory_player_step.gml'));
+ const audioStep=compile(read(path+'scr_mm1_cutman_victory_audio_step.gml'));
+ const audioDispose=compile(read(path+'scr_mm1_cutman_victory_audio_dispose.gml'));
  const boss={cm_defeat_pending:true,cmv_defeat_done:true,cmv_acquisition_done:false,cmv_teleport_done:false,cmv_screen_done:false,cmv_entry_event:1,cmv_entry_serial:1};
  for(const f of read(path+'scr_mm1_cutman_victory_init.gml').matchAll(/^(cmv_\w+)\s*=/gm))boss[f[1]]=0;
  coreInit(boss);boss.argument0=3200;coreStart(boss);boss.cmv_defeat_done=true;boss.cmv_entry_serial=1;
+ boss.snd_mm6_stage_clear=13;boss.snd_mm6_weapon_acquisition=95;const audioLog=[];
+ boss.audio_play_sound=(...a)=>{audioLog.push(a);return 100+audioLog.length;};
+ boss.audio_stop_sound=()=>{};boss.audio_pause_sound=()=>{};boss.audio_resume_sound=()=>{};
+ boss.scr_mm1_cutman_victory_audio_dispose=()=>audioDispose(boss);
+ boss.scr_mm1_cutman_victory_audio_step=frozen=>{boss.argument0=frozen;return audioStep(boss);};
  boss.scr_mm1_cutman_victory_step=(...a)=>{a.forEach((v,i)=>boss['argument'+i]=v);return coreStep(boss);};
  const owner={combat_tick:0,combat_refilling:false,combat_dead:false};
  Object.assign(p,{mm5_victory_locked:true,mm5_victory_tick:-1,obj_mm1_cutman_boss:10,obj_mm5_combat:11,global:{mm5_pause_active:false},instance_exists:x=>x===boss||x===owner,instance_find:o=>o===10?boss:owner});
@@ -35,7 +42,7 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
   if(p.global.mm5_pause_active){assert.equal(p.x,x);assert.equal(p.y,y);assert.equal(boss.cmv_phase,phase);assert.equal(boss.cmv_timer,timer);}
   const movedX=p.x,movedY=p.y;assert.equal(playerStep(p),true);assert.equal(p.x,movedX);assert.equal(p.y,movedY);
  }
- assert.equal(boss.cmv_phase,6);assert.equal(p.x,3200);assert.equal(p.y,900);assert.equal(boss.cmv_entry_event,4);assert.equal(boss.cmv_entry_serial,4);assert.equal(boss.cmv_reward_requested,false);
+ assert.equal(boss.cmv_phase,6);assert.equal(p.x,3200);assert.equal(p.y,900);assert.equal(boss.cmv_entry_event,4);assert.equal(boss.cmv_entry_serial,4);assert.equal(boss.cmv_reward_requested,false);assert.deepEqual(audioLog,[[13,12,false]]);
  owner.combat_tick++;owner.combat_dead=true;assert.equal(playerStep(p),true);assert.equal(boss.cmv_phase,10);assert.equal(boss.cmv_entry_event,8);
  console.log('PASS:actual player/phase/motion integration to centred acquisition gate;airborne settles,freeze/double-call guards,cancel,no reward. Visual completion deliberately NOT fabricated.');
 }
