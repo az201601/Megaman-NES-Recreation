@@ -17,6 +17,7 @@ with (boss)
     // Body disappearance ack starts the wait; particles continue concurrently.
     scr_mm1_cutman_defeat_step(next_tick, frozen);
     scr_mm1_cutman_victory_anim_step(next_tick, frozen);
+    scr_mm1_cutman_weapon_screen_step(next_tick, frozen);
     event = scr_mm1_cutman_victory_step(next_tick, frozen, cancelled,
         cmv_defeat_done, px, supported, cmv_acquisition_done,
         cmv_teleport_done, cmv_screen_done);
@@ -34,7 +35,10 @@ if (event != 0)
 // Start at the real supported position; do not let the renderer move collision.
 if (boss.cmv_snap) x = boss.cmv_center;
 if (event != 0)
+{
     with (boss) scr_mm1_cutman_victory_anim_enter(event, other.x, other.y, next_tick);
+    with (boss) scr_mm1_cutman_weapon_screen_enter(event, next_tick);
+}
 // Audio serial consumption is independent of phase advancement (cancel/freeze).
 with (boss) scr_mm1_cutman_victory_audio_step(frozen);
 // Reward receiver retries only after actual screen completion. No screen timer.

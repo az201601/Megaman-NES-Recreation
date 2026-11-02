@@ -70,3 +70,44 @@ User confirmed “yes!” after removal of the top Cut Man box.
 `appearance-approval.json` locks the approved preview hash and exact design scope.
 Keep this layout while implementing reveal/typing,weapon demo and audio/return
 ownership. Static appearance approval is not installed/runtime acceptance.
+
+## Animated reveal/text and music connected in source
+
+The sole victory coordinator now initializes/advances the screen in phase8.
+`Scripts/scr_mm1_cutman_weapon_screen_enter.gml` creates one draw-only overlay;
+`weapon_screen_step` uses the same pause/refill-aware shared tick as phase/motion.
+`Screen/scr_mm1_cutman_weapon_screen_present.gml` is the read-only actual renderer.
+
+Custom presentation timings (NOT claimed native MM6 timings):
+- Entry: mechanical frame and bottom acquired plaque; character/name not yet shown.
+- Updates1..48: bottom-to-top reveal of original grey/white portrait,2pixels/update.
+- Update60: YOU GOT typing begins, one original MM5 glyph every4 active updates.
+- Update100: ROLLING CUTTER typing begins, same4update cadence; complete at152.
+- Update220: request the demonstration; hold the exact approved static composition.
+- Screen completion requires actual future demonstration acknowledgement. No timer,
+  music end, Start button or long wait substitutes for the unimplemented demo.
+
+`Objects/obj_mm1_cutman_weapon_screen_create.gml`: no sprite, Visible ON, Solid OFF,
+Persistent OFF, depth-30000 after accepted HUD(-10000) and pause(-20000). ONLY Create
+and Draw GUI events; no Step/input/collision clock. Draw GUI finds the boss and
+reads its screen fields; the full frame covers gameplay/HUD and also holds phase9
+until room return. Cancel/abort removes the visible overlay through phase guarding.
+These are future connected package boundaries, NOT instructions to import now.
+
+Approved MM5 original-level finite excerpt now starts once on serialized event6,
+using `snd_mm5_weapon_get` from approved `snd_mm5_weapon_get_review_excerpt.wav`.
+Default gain1, no2x boost/normalization; stop stale owned clear voice only. Freeze,
+resume,cancel,finish,Room End/Destroy include the new voice. No global stop-all,
+custom/MM6 music fallback, forced restart, or unverified loop. The11.482second
+excerpt is finite: screen progression never depends on its end. Full-cycle/loop
+handling remains a separate issue if final screen/demo duration requires it.
+
+`custom-rolling-cutter-reveal-preview.gif` is a SILENT looping3x preview of actual
+GML-rasterized states, sampled every4active updates, with an extra review-only end
+hold. It is NOT a playback acceptance recording or final demo animation.
+`test-cutman-weapon-screen-animation.mjs --export` writes its input PNGs to ignored
+`.work/weapon-screen-animation/`. The actual fully revealed GML raster matches the
+approved static image pixel-for-pixel.10000updates without a real demo never grant.
+
+Remaining: actual Rolling Cutter demonstration/acknowledgement; final return flow
+and stage-select presentation test; complete GMS installer and runtime acceptance.

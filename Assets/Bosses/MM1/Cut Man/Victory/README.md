@@ -584,3 +584,18 @@ User approved the revised screen, then requested removing the unnecessary Cut Ma
 text box. Removed both boss-name text and its full inset plaque, restoring the
 mechanical frame behind it. No top boss-name box for later weapons either. Main
 YOU GOT/ROLLING CUTTER, grey/white portrait, bottom acquired plaque and music stay.
+
+## Animated reveal/text and approved MM5 music connected in source
+
+Custom screen now has shared-tick entry/Step and a draw-only GUI overlay after the
+accepted HUD/pause depths. Grey/white portrait reveals bottom-to-top; original MM5
+letters type YOU GOT / ROLLING CUTTER; final frame is pixel-identical to approved
+static design. Approved MM5 native-level finite music starts once and participates
+in owned freeze/resume/cancel/finish cleanup, without gain changes or fake looping.
+Silent actual-GML preview: `Screen/custom-rolling-cutter-reveal-preview.gif`.
+
+Screen requests its demonstration only after the reveal/typing/hold. Actual Rolling
+Cutter demo is not implemented yet;10000active updates do not fake its completion,
+award inventory or return early. All relevant combat,phase,player,audio,art,hand-off,
+post-defeat safety and screen design/animation checks pass. Source work only,
+not a complete importable package or GMS compilation/GPU/audio acceptance.

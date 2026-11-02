@@ -94,3 +94,14 @@ cmv_acquisition_sound_ended = false;
 // Once-only persistent inventory grant and stage-selection transition.
 cmv_reward_committed = false;
 cmv_return_started = false;
+// Custom approved screen reveal and demonstration gate. Sole shared clock.
+cmv_screen_started = false;
+cmv_screen_tick = -1;
+cmv_screen_age = 0;
+cmv_screen_reveal = 0;
+cmv_screen_you_chars = 0;
+cmv_screen_weapon_chars = 0;
+cmv_screen_demo_requested = false;
+cmv_screen_demo_done = false;
+cmv_screen_music_started = false;
+cmv_screen_voice = -1;

@@ -1,5 +1,5 @@
 // Boss/owner context, called by sole player victory coordinator. argument0 frozen.
-// Finite approved WAV resources only; custom screen music is NOT substituted.
+// Finite approved WAV sources,including confirmed MM5 weapon-get at original level.
 // Acquisition animator raises cmv_acquisition_sound_requested at energy-circle
 // onset (not merely on acquisition entry/jump). It owns animation completion.
 var serial_new;
@@ -18,6 +18,7 @@ if (argument0)
     {
         if (cmv_clear_voice != -1) audio_pause_sound(cmv_clear_voice);
         if (cmv_acquisition_voice != -1) audio_pause_sound(cmv_acquisition_voice);
+        if (cmv_screen_voice != -1) audio_pause_sound(cmv_screen_voice);
         cmv_audio_paused = true;
     }
     return;
@@ -26,6 +27,7 @@ if (cmv_audio_paused)
 {
     if (cmv_clear_voice != -1) audio_resume_sound(cmv_clear_voice);
     if (cmv_acquisition_voice != -1) audio_resume_sound(cmv_acquisition_voice);
+    if (cmv_screen_voice != -1) audio_resume_sound(cmv_screen_voice);
     cmv_audio_paused = false;
 }
 if (serial_new)
@@ -35,6 +37,15 @@ if (serial_new)
     {
         cmv_clear_started = true;
         cmv_clear_voice = audio_play_sound(snd_mm6_stage_clear, 12, false);
+    }
+    if (cmv_entry_event == 6 && cmv_screen_started && !cmv_screen_music_started)
+    {
+        cmv_screen_music_started = true;
+        if (cmv_clear_voice != -1) audio_stop_sound(cmv_clear_voice);
+        cmv_clear_voice = -1;
+        // Approved original native output level. Default gain1,NOT2x/normalized.
+        // Finite scene excerpt,NOT a verified seamless loop. Never replay on Draw.
+        cmv_screen_voice = audio_play_sound(snd_mm5_weapon_get, 12, false);
     }
     // Native acquisition sound is explicitly stopped before teleport, not
     // allowed to bleed into teleport/custom-screen music.

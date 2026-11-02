@@ -271,3 +271,21 @@ its own stack; no injected14 sound command or modified ROM/code. Controlled scen
 fixture, not a natural boss kill. Independent6502 scene-to-queue test passes.
 This is a listening preview, not an approved production asset, complete music
 cycle/loop proof, or a replacement for the custom MM6-adapted screen/demo.
+
+## Approved screen reveal connected to shared owner
+
+Phase8 entry now initializes exactly one depth-30000 draw-only GUI overlay.
+Screen Step runs BEFORE core Step on the shared active tick; screen entry AFTER
+core, BEFORE audio. Custom reveal/text timings are documented in Screen/README.
+Freeze/double calls never consume a frame; final reveal matches appearance-approved
+static preview exactly. No independent instance Step or Draw-state advancement.
+At220active updates the real reveal requests the future weapon demonstration;
+it then holds. Only `cmv_screen_demo_done` from an actual demo owner may acknowledge
+`cmv_screen_done`. There is no production writer setting demoDone true yet.
+
+Serialized event6 starts approved original-volume MM5 music ONCE, finite/unlooped,
+with no gain change. Audio ownership now includes its handle for pause/resume and
+idempotent cancellation/completion/Room End/Destroy. The take remains a scene-length
+excerpt, not a proven seamless loop. No sound end or visual timeout awards weapons.
+Combined actual-GML coordinator test now runs to the fully typed reveal and holds
+at the missing-demo gate. Actual Rolling Cutter demo and installed acceptance remain.
