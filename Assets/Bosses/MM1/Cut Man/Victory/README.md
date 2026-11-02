@@ -466,3 +466,12 @@ Remaining: custom Rolling Cutter screen and MM6-style demonstration, approval an
 integration of custom music, stage-select completion presentation, final connected
 install package and GMS runtime acceptance. The current production screen gate
 still cannot complete itself, so no early unlock/return is possible.
+
+### Custom music revision2 — listening pending
+
+User found the first draft too cute/happy; it is not the production choice.
+`Audio/Custom Review/rolling-cutter-weapon-get-determined-v2.wav` is the new audition:
+D minor,144BPM, lower/sustained melody, reduced upper-register decoration, stronger
+bass/backbeat. Original composition, no borrowed ROM melody. Generator and current
+metadata now describe revision2; revision1 WAV retained only as review history.
+No production integration or playback changes; approval still required.
