@@ -1,4 +1,6 @@
 // Ordinary Draw, NOT Draw GUI. Read-only; all animation advances centrally.
+// Defeat never draws the stale boss/cutter body, even before the next update.
+if (cm_defeat_pending) { scr_mm1_cutman_defeat_draw(); exit; }
 if (!boss_visible) exit;
 if (!cm_initialized) { draw_self(); exit; }
 // Native boss OAM precedes cutter: draw cutter first so body wins overlaps.

@@ -14,6 +14,8 @@ supported = grounded;
 event = 0;
 with (boss)
 {
+    // Body disappearance ack starts the wait; particles continue concurrently.
+    scr_mm1_cutman_defeat_step(next_tick, frozen);
     event = scr_mm1_cutman_victory_step(next_tick, frozen, cancelled,
         cmv_defeat_done, px, supported, cmv_acquisition_done,
         cmv_teleport_done, cmv_screen_done);
@@ -22,6 +24,7 @@ if (event != 0)
 {
     boss.cmv_entry_event = event;
     boss.cmv_entry_serial += 1;
+    if (event == 8) boss.cmv_fx_count = 0;
     // Each renderer/scene must acknowledge its OWN current animation, not stale data.
     if (event == 4) boss.cmv_acquisition_done = false;
     if (event == 5) boss.cmv_teleport_done = false;

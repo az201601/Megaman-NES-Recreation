@@ -1,0 +1,1487 @@
+{
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "method": "Real boss-defeat snapshot498 advanced4updates; original particle slot14/type8. Art-only isolate/reposition fixture40updates, no ROM/CHR/palette patch. Opaque exported pixels matched to native renderer. Cells geometrically centred in32x32, not a measured native anchor offset.",
+  "file": "Art/spr_mm6_boss_defeat_strip6.png",
+  "sha256": "2e957bf2ec210a75b801d642af22447490585b11dd3be64119453cc30466d9e5",
+  "cell": [
+    32,
+    32
+  ],
+  "origin": [
+    16,
+    16
+  ],
+  "fixtures": [
+    {
+      "frame": 0,
+      "index": 0,
+      "opaque": 36,
+      "cells": [
+        {
+          "x": 106,
+          "y": 133,
+          "tile": 133,
+          "attr": 65
+        }
+      ],
+      "originX": 110,
+      "originY": 137
+    },
+    {
+      "frame": 1,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 109,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 109,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 109,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 117,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 117,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 125,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 125,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 125,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 121
+    },
+    {
+      "frame": 2,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 3,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 4,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 5,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 6,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 7,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 8,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 9,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 116,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 10,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 115,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 11,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 12,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 13,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 14,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 15,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 16,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 17,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 18,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 19,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 116,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 20,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 115,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 21,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 22,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 23,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 24,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 25,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 26,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 27,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 28,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 29,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 115,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 30,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 116,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 31,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 32,
+      "index": 1,
+      "opaque": 152,
+      "cells": [
+        {
+          "x": 116,
+          "y": 108,
+          "tile": 144,
+          "attr": 1
+        },
+        {
+          "x": 124,
+          "y": 108,
+          "tile": 145,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 108,
+          "tile": 144,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 116,
+          "tile": 146,
+          "attr": 1
+        },
+        {
+          "x": 132,
+          "y": 116,
+          "tile": 146,
+          "attr": 65
+        },
+        {
+          "x": 116,
+          "y": 124,
+          "tile": 144,
+          "attr": 129
+        },
+        {
+          "x": 124,
+          "y": 124,
+          "tile": 145,
+          "attr": 129
+        },
+        {
+          "x": 132,
+          "y": 124,
+          "tile": 144,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 33,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 34,
+      "index": 2,
+      "opaque": 208,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 147,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 147,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 147,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 147,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 35,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 36,
+      "index": 3,
+      "opaque": 112,
+      "cells": [
+        {
+          "x": 120,
+          "y": 111,
+          "tile": 148,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 111,
+          "tile": 148,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 119,
+          "tile": 148,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 119,
+          "tile": 148,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    },
+    {
+      "frame": 37,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 38,
+      "index": 4,
+      "opaque": 80,
+      "cells": [
+        {
+          "x": 120,
+          "y": 112,
+          "tile": 149,
+          "attr": 1
+        },
+        {
+          "x": 128,
+          "y": 112,
+          "tile": 149,
+          "attr": 65
+        },
+        {
+          "x": 120,
+          "y": 120,
+          "tile": 149,
+          "attr": 129
+        },
+        {
+          "x": 128,
+          "y": 120,
+          "tile": 149,
+          "attr": 193
+        }
+      ],
+      "originX": 128,
+      "originY": 120
+    },
+    {
+      "frame": 39,
+      "index": 5,
+      "opaque": 12,
+      "cells": [
+        {
+          "x": 124,
+          "y": 115,
+          "tile": 150,
+          "attr": 129
+        }
+      ],
+      "originX": 128,
+      "originY": 119
+    }
+  ],
+  "vectors": [
+    {
+      "speed": 5,
+      "angle": 0,
+      "vx256": 0,
+      "vy256": -336
+    },
+    {
+      "speed": 5,
+      "angle": 2,
+      "vx256": 237,
+      "vy256": -237
+    },
+    {
+      "speed": 5,
+      "angle": 4,
+      "vx256": 336,
+      "vy256": 0
+    },
+    {
+      "speed": 5,
+      "angle": 6,
+      "vx256": 237,
+      "vy256": 237
+    },
+    {
+      "speed": 5,
+      "angle": 8,
+      "vx256": 0,
+      "vy256": 336
+    },
+    {
+      "speed": 5,
+      "angle": 10,
+      "vx256": -237,
+      "vy256": 237
+    },
+    {
+      "speed": 5,
+      "angle": 12,
+      "vx256": -336,
+      "vy256": 0
+    },
+    {
+      "speed": 5,
+      "angle": 14,
+      "vx256": -237,
+      "vy256": -237
+    },
+    {
+      "speed": 9,
+      "angle": 0,
+      "vx256": 0,
+      "vy256": -192
+    },
+    {
+      "speed": 9,
+      "angle": 2,
+      "vx256": 135,
+      "vy256": -135
+    },
+    {
+      "speed": 9,
+      "angle": 4,
+      "vx256": 192,
+      "vy256": 0
+    },
+    {
+      "speed": 9,
+      "angle": 6,
+      "vx256": 135,
+      "vy256": 135
+    },
+    {
+      "speed": 9,
+      "angle": 8,
+      "vx256": 0,
+      "vy256": 192
+    },
+    {
+      "speed": 9,
+      "angle": 10,
+      "vx256": -135,
+      "vy256": 135
+    },
+    {
+      "speed": 9,
+      "angle": 12,
+      "vx256": -192,
+      "vy256": 0
+    },
+    {
+      "speed": 9,
+      "angle": 14,
+      "vx256": -135,
+      "vy256": -135
+    }
+  ],
+  "limitations": [
+    "Art fixture is not native timing proof.",
+    "Vectors read from original E61A table selectors5/9; runtime trajectory verification still required.",
+    "No integration/installed animation acceptance."
+  ]
+}

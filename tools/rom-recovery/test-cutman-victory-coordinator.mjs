@@ -12,7 +12,7 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  p.collision_rectangle=(x1,y1,x2,y2,o)=>rectangles.find(r=>r.object===o&&x2>=r.bbox_left&&x1<=r.bbox_right&&y2>=r.bbox_top&&y1<=r.bbox_bottom)??-1;
  for(const name of ['supported','can_stand','wall_blocked','wall_limit']){const f=compile(read(normal+'scr_mm5_player_'+name+'.gml'));p['scr_mm5_player_'+name]=(...args)=>{const old=[p.argument0,p.argument1,p.argument2];args.forEach((v,i)=>p['argument'+i]=v);try{return f(p);}finally{old.forEach((v,i)=>p['argument'+i]=v);}};}
  return p;};
-// Combined actual phase+motion+player-prefix adapter: fake ONLY defeat-effect ack.
+// Combined actual phase+motion+player-prefix+defeat owner. No fake completion ack.
 {
  const p=make();p.y=850;p.fall_speed=-4;
  const coreInit=compile(read(path+'scr_mm1_cutman_victory_init.gml'));
@@ -21,9 +21,13 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  const playerStep=compile(read(path+'scr_mm1_cutman_victory_player_step.gml'));
  const audioStep=compile(read(path+'scr_mm1_cutman_victory_audio_step.gml'));
  const audioDispose=compile(read(path+'scr_mm1_cutman_victory_audio_dispose.gml'));
- const boss={cm_defeat_pending:true,cmv_defeat_done:true,cmv_acquisition_done:false,cmv_teleport_done:false,cmv_screen_done:false,cmv_entry_event:1,cmv_entry_serial:1};
+ const boss={x:3264,y:900,cm_defeat_pending:true,cmv_defeat_done:true,cmv_acquisition_done:false,cmv_teleport_done:false,cmv_screen_done:false,cmv_entry_event:1,cmv_entry_serial:1};
  for(const f of read(path+'scr_mm1_cutman_victory_init.gml').matchAll(/^(cmv_\w+)\s*=/gm))boss[f[1]]=0;
- coreInit(boss);boss.argument0=3200;coreStart(boss);boss.cmv_defeat_done=true;boss.cmv_entry_serial=1;
+ coreInit(boss);boss.argument0=3200;coreStart(boss);boss.cmv_entry_serial=1;
+ const defeatStart=compile(read(path+'scr_mm1_cutman_defeat_start.gml')),defeatStep=compile(read(path+'scr_mm1_cutman_defeat_step.gml'));
+ for(const a of ['x','y','vx','vy','alive'])boss['cmv_fx_'+a]=[];
+ boss.scr_mm1_cutman_defeat_start=()=>defeatStart(boss);
+ boss.scr_mm1_cutman_defeat_step=(tick,frozen)=>{boss.argument0=tick;boss.argument1=frozen;return defeatStep(boss);};
  boss.snd_mm6_stage_clear=13;boss.snd_mm6_weapon_acquisition=95;const audioLog=[];
  boss.audio_play_sound=(...a)=>{audioLog.push(a);return 100+audioLog.length;};
  boss.audio_stop_sound=()=>{};boss.audio_pause_sound=()=>{};boss.audio_resume_sound=()=>{};
@@ -44,5 +48,5 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  }
  assert.equal(boss.cmv_phase,6);assert.equal(p.x,3200);assert.equal(p.y,900);assert.equal(boss.cmv_entry_event,4);assert.equal(boss.cmv_entry_serial,4);assert.equal(boss.cmv_reward_requested,false);assert.deepEqual(audioLog,[[13,12,false]]);
  owner.combat_tick++;owner.combat_dead=true;assert.equal(playerStep(p),true);assert.equal(boss.cmv_phase,10);assert.equal(boss.cmv_entry_event,8);
- console.log('PASS:actual player/phase/motion integration to centred acquisition gate;airborne settles,freeze/double-call guards,cancel,no reward. Visual completion deliberately NOT fabricated.');
+ console.log('PASS:actual player/phase/motion integration to centred acquisition gate;airborne settles,freeze/double-call guards,cancel,no reward. Real defeat disappearance ack; acquisition/teleport completion NOT fabricated.');
 }

@@ -25,3 +25,8 @@ cmv_acquisition_started = false;
 cmv_acquisition_sound_requested = false;
 cmv_clear_voice = -1;
 cmv_acquisition_voice = -1;
+// Boss defeat particles remain visual after body disappearance is acknowledged.
+cmv_fx_started = false;
+cmv_fx_count = 0;
+cmv_fx_age = 0;
+cmv_fx_tick = -1;

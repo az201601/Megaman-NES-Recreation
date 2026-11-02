@@ -392,3 +392,24 @@ Existing handoff,16 combat-adapter and6 post-defeat safety cases pass.
 
 Still source-only/uninstallable: defeat/acquisition/teleport art/animation owners,
 custom weapon screen/music/demo, persistent unlock/return and full GMS playtest.
+
+## Boss defeat visuals connected in draft source
+
+Recovered native MM6 burst artwork (six images,40 renderer-matched fixtures) and
+16 source vectors, verified by independently executing native6502 direction lookup.
+The visual-only burst now replaces the boss/cutter Draw on defeat; it has no
+collision, projectile instances or random drops. It advances on the shared clock,
+respects freeze/duplicates, culls offscreen and clears on abort.
+
+Corrected the disappearance signal: native pre-clear wait overlaps the moving
+particles. The implementation acknowledges body disappearance at burst startup,
+not after the last particle leaves, avoiding an extra unintended victory delay.
+The combined phase/player/audio test now uses this real acknowledgement rather
+than a mock. Native scheduling/flicker is not claimed identical.
+
+`test-cutman-defeat-effects.mjs` passes artwork hash/40fixtures/16native6502 vector
+checks and actual GML particle freeze/Draw/cull/cancel checks. Existing combat,
+lethal-handoff, audio, coordinator and post-defeat safety checks pass.
+Remaining: actual acquisition and teleport animation owners/art, custom weapon
+screen/music/demo, persistent unlock/return, complete import package and GMS test.
+Still no installable ZIP. Do not import this partial checkpoint alone.

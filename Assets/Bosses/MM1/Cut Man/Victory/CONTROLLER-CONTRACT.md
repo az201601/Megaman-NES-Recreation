@@ -130,3 +130,32 @@ window, not a seamless loop or natural-tail claim. Custom screen music is still
 uncreated and the receiver deliberately contains no placeholder for it.
 The acquisition animator must synchronize onset/stop and report real completion;
 no animation/art integration or installed audio acceptance is implied here.
+
+## Native-derived boss defeat burst connected
+
+Recovered six original MM6 burst images from the native Tomahawk defeat, using
+40 single-particle OAM/CHR/palette fixtures. Every opaque exported pixel matched
+its native rendered frame. `Art/spr_mm6_boss_defeat_strip6.png`: six32x32 cells,
+origin16,16. Future resource folder `Sprites > MM6 > Victory`, resource name
+`spr_mm6_boss_defeat`. No independently stepping/colliding projectile objects.
+
+Sixteen original direction/speed vectors (eight each table selector5/9) were read
+from supplied ROM data and independently executed through native6502 E61A in the
+test. The visual owner uses256-fixed-unit velocities with fractional GML positions.
+It is an adaptation of native update/render scheduling: no NES scanline sprite
+limit/flicker, actor allocation order or exact hitstop emulation claim.
+
+IMPORTANT corrected acknowledgement semantics: the native boss-disappearance
+starts the pre-clear wait while burst particles are STILL moving. Therefore
+`cmv_defeat_done` now means body disappearance acknowledged, NOT all particles
+finished. `defeat_step` starts the burst and acknowledges that actual body removal;
+it continues moving/culling visuals during subsequent waits/walking. Waiting for
+all particles first would incorrectly add another long pause before clear music.
+The ordinary boss Draw checks defeat BEFORE drawing body/cutter, so stale combat
+art never remains visible. Its defeat Draw is read-only, cannot hurt the player,
+never creates enemy explosion/drop objects and cannot award items.
+
+The combined coordinator test now runs the real defeat owner: its earlier mock
+completion acknowledgement has been removed. Acquisition/teleport/screen still
+lack their animation owners and deliberately do not auto-complete. No new defeat
+SFX imported; approved audio bytes and accepted entrance remain unchanged.

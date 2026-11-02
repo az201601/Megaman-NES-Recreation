@@ -1,5 +1,5 @@
 // Boss/owner context. One active-update clock; no instance Step or Draw advancement.
-// 0 tick,1 frozen(pause/refill),2 cancel(death/room abort),3 defeat FX finished,
+// 0 tick,1 frozen(pause/refill),2 cancel(death/room abort),3 boss disappearance acknowledged (particles may continue),
 // 4 player X,5 grounded,6 acquisition finished,7 teleport finished,8 screen finished.
 // Returns one entry event; caller applies it synchronously ONCE, never in Draw.
 // 2 clear music,3 walk start,4 acquisition,5 teleport,6 custom screen,7 reward/return,
