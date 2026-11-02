@@ -679,8 +679,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_handoff.gml",
-      "bytes": 814,
-      "sha256": "cd31eb17344aa8da8539a8cc326cb238c3316a9adbf669ef3ac0e6ab2a5a451e"
+      "bytes": 1010,
+      "sha256": "5ba3c3a1b546a6f3b01f2884c0b8b16cc809efb1259e09e24a7de7cf29e1374f"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_init.gml",

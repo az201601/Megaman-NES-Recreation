@@ -26,4 +26,18 @@ checklist; do not mistake source completion for installed acceptance.
 Rebuild: `python3 tools/rom-recovery/package-cutman-connected.py`.
 Check: `python3 tools/rom-recovery/test-cutman-connected-package.py`.
 
-ZIP SHA-256: `83d65b5d1645d04b196071ec8151a057bdc263e707c3d647923188b7df5a8cdc`.
+ZIP SHA-256: `9a81fcad006dc24f2dd8e58da40d4f66bfe9569f4985f2527e9c895046269e9f`.
+
+## Installed test correction — final-hit death sound
+
+During keyboard/F8-assisted victory testing the user reported the missing
+last-hit death sound. The once-only lethal handoff now plays existing
+`snd_mm5_megaman_death` after stopping boss music. It does not call player death,
+lose a life, change timing or grant rewards early. Source regressions pass;
+user retest of this correction remains pending. Older extracted packages need
+this one-line addition in `scr_mm1_cutman_victory_handoff` after
+`scr_mm1_cutman_boss_stop_combat();`:
+
+```gml
+audio_play_sound(snd_mm5_megaman_death, 15, false);
+```
