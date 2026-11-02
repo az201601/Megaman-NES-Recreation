@@ -28,7 +28,7 @@ with zipfile.ZipFile(O/'mm1-cutman-connected-combat-victory-gms14.zip') as z:
  for name in z.namelist():
   assert not name.endswith(('.nes','.zip','.gif'))
   if name.endswith('.gml'):
-   s=re.sub(r"//[^\n]*", "", z.read(name).decode());assert not re.search(r'\b(variable_global_exists|variable_instance_exists|array_create|audio_stop_all|layer_create|draw_sprite_stretched_ext)\s*\(',s),name
+   s=re.sub(r"//[^\n]*", "", z.read(name).decode());assert not re.search(r"\breturn\s*;", s), (name,"GMS1.4 requires exit for no-value early termination");assert not re.search(r'\b(variable_global_exists|variable_instance_exists|array_create|audio_stop_all|layer_create|draw_sprite_stretched_ext)\s*\(',s),name
  assert set(m['newObjects'])=={'obj_mm1_cutman_weapon_screen'}
  assert 'source package' in m['status']
 print('PASS73 archive files/hash/CRC;46 script resources with5 exact replacements;11 sprite strip dimensions/origins;5 approved sound hashes;accepted pause/E inventory baselines retained;sole player victory prefix;no ROMs/rejected audio/independent Step. GMS compile/playtest pending.')

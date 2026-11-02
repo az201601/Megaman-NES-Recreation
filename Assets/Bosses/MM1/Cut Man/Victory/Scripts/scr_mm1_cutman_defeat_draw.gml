@@ -1,5 +1,5 @@
 // Boss ordinary Draw context. Read-only; no contact/projectile/drop callbacks.
-if (!cmv_fx_started || cmv_fx_count == 0) return;
+if (!cmv_fx_started || cmv_fx_count == 0) exit;
 var i, frame;
 frame = 0;
 if (cmv_fx_age > 0) frame = 1 + (floor((cmv_fx_age - 1) / 2) mod 5);

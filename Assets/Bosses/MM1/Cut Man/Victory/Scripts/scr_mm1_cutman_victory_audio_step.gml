@@ -3,14 +3,14 @@
 // Acquisition animator raises cmv_acquisition_sound_requested at energy-circle
 // onset (not merely on acquisition entry/jump). It owns animation completion.
 var serial_new;
-if (cmv_audio_closing) return;
+if (cmv_audio_closing) exit;
 serial_new = cmv_audio_serial != cmv_entry_serial;
 // Terminal cleanup wins even on a frozen/duplicate phase update.
 if (serial_new && (cmv_entry_event == 7 || cmv_entry_event == 8))
 {
     cmv_audio_serial = cmv_entry_serial;
     scr_mm1_cutman_victory_audio_dispose();
-    return;
+    exit;
 }
 if (argument0)
 {
@@ -23,7 +23,7 @@ if (argument0)
         if (cmv_teleport_voice != -1) audio_pause_sound(cmv_teleport_voice);
         cmv_audio_paused = true;
     }
-    return;
+    exit;
 }
 if (cmv_audio_paused)
 {

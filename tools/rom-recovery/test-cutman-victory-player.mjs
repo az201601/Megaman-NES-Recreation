@@ -2,7 +2,7 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';
 const root=new URL('../../',import.meta.url),base=new URL('Assets/Bosses/MM1/Cut Man/Victory/',root);
 const read=p=>fs.readFileSync(new URL(p,base),'utf8');
-const compile=s=>new Function('s','with(s){'+s.replace(/\bmod\b/g,'%')+'}');
+const compile=s=>new Function('s','with(s){'+s.replace(/\bmod\b/g,'%').replace(/\bexit\s*;/g,'return;')+'}');
 const begin=compile(read('Scripts/scr_mm1_cutman_victory_player_begin.gml')),moveSource=read('Scripts/scr_mm1_cutman_victory_player_move.gml'),move=compile(moveSource),tick=compile(read('Scripts/scr_mm1_cutman_victory_player_tick.gml'));
 // Assert retained source boundaries, rather than only testing a reimplemented approximation.
 const baseline=fs.readFileSync(new URL('Assets/Mega Man/MM5/Controller/obj_mm5_megaman_step.gml',root),'utf8');

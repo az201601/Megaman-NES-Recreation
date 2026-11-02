@@ -1,7 +1,7 @@
 // Actual lethal-hit + victory transaction under owner mocks. Not GMS runtime.
 import fs from'node:fs';import assert from'node:assert/strict';
 const root=new URL('../../Assets/Bosses/MM1/Cut Man/',import.meta.url);
-const read=p=>fs.readFileSync(new URL(p,root),'utf8'),compile=s=>new Function('s','with(s){'+s+'}');
+const read=p=>fs.readFileSync(new URL(p,root),'utf8'),compile=s=>new Function('s','with(s){'+s.replace(/\bexit\s*;/g,'return;')+'}');
 const initSrc=read('Victory/Scripts/scr_mm1_cutman_victory_init.gml'),init=compile(initSrc),start=compile(read('Victory/Scripts/scr_mm1_cutman_victory_start.gml')),begin=compile(read('Victory/Scripts/scr_mm1_cutman_victory_player_begin.gml')),handoff=compile(read('Victory/Scripts/scr_mm1_cutman_victory_handoff.gml')),hit=compile(read('Combat/Scripts/scr_mm1_cutman_boss_hit.gml'));
 const create=read('Combat/Objects/obj_mm1_cutman_boss_create.gml');assert.ok(create.endsWith(initSrc.slice(initSrc.indexOf('cmv_phase ='))));
 const boss={...Object.fromEntries([...new Set(initSrc.match(/cmv_\w+/g))].map(k=>[k,0])),boss_intro_complete:true,cm_active:true,cm_defeat_pending:false,cm_blink:0,boss_health:1,cm_cutter:1,cm_throw_requested:true,cm_speed_x:20,cm_speed_y:30};init(boss);

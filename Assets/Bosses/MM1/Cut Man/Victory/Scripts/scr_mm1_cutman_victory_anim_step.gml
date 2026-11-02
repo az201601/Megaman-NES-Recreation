@@ -1,7 +1,7 @@
 // Boss context; sole coordinator calls BEFORE core. Shared tick,frozen.
 // Replay original rendered animation updates, not a fabricated completion timer.
-if (!cmv_anim_started || cmv_phase < 6 || cmv_phase > 7) return;
-if (argument1 || cmv_anim_tick == argument0) return;
+if (!cmv_anim_started || cmv_phase < 6 || cmv_phase > 7) exit;
+if (argument1 || cmv_anim_tick == argument0) exit;
 cmv_anim_tick = argument0;
 cmv_anim_age += 1;
 // Native1130 energy-circle onset and1349 F0: exactly219 active updates apart.

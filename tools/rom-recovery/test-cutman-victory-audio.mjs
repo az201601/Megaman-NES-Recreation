@@ -1,7 +1,7 @@
 // Actual GML ownership/dispatch tests; audio API mocked, not GMS playback acceptance.
 import fs from 'node:fs';import assert from 'node:assert/strict';import{createHash}from'node:crypto';
 const base=new URL('../../Assets/Bosses/MM1/Cut Man/Victory/',import.meta.url),read=p=>fs.readFileSync(new URL(p,base),'utf8');
-const compile=s=>new Function('s','with(s){'+s+'}'),initSource=read('Scripts/scr_mm1_cutman_victory_init.gml');
+const compile=s=>new Function('s','with(s){'+s.replace(/\bexit\s*;/g,'return;')+'}'),initSource=read('Scripts/scr_mm1_cutman_victory_init.gml');
 const init=compile(initSource),step=compile(read('Scripts/scr_mm1_cutman_victory_audio_step.gml')),dispose=compile(read('Scripts/scr_mm1_cutman_victory_audio_dispose.gml'));
 function make(){const s=Object.fromEntries([...new Set(initSource.match(/cmv_\w+/g))].map(k=>[k,0]));init(s);s.snd_mm5_weapon_get=20;s.snd_mm6_stage_clear=13;s.snd_mm6_weapon_acquisition=95;s.argument0=false;s.log=[];let voice=100;
 for(const name of ['stop','pause','resume'])s['audio_'+name+'_sound']=id=>s.log.push([name,id]);

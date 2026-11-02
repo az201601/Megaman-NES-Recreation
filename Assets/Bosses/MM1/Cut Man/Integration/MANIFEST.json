@@ -637,18 +637,18 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_defeat_draw.gml",
-      "bytes": 366,
-      "sha256": "cc0d098c513dffe3953d6d72bd66f72393a359aad87758077dd97d6b1ce617de"
+      "bytes": 364,
+      "sha256": "5ecfa556dea30dd4b835f332aba3a766b60295fc8028fd7ae7bae3b4b4f02b2c"
     },
     {
       "path": "Scripts/scr_mm1_cutman_defeat_start.gml",
-      "bytes": 1869,
-      "sha256": "dfda70cd3759628b7626e412983c50dd1c5692ac12fc867e5989fdc44f48e8a7"
+      "bytes": 1867,
+      "sha256": "0451d5f437003e117660e8cda9e471c2cba95e8797df51f346ad84cddace9d94"
     },
     {
       "path": "Scripts/scr_mm1_cutman_defeat_step.gml",
-      "bytes": 707,
-      "sha256": "80643bd9904e511bef50db7d1a2ca9b55fadf3728061d51bbf5120b645bc1678"
+      "bytes": 703,
+      "sha256": "917f648de18fd2970c37cc654dbee31c4d4396eda7281324b212d850d243b2d0"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_anim_data.gml",
@@ -657,8 +657,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_anim_draw.gml",
-      "bytes": 588,
-      "sha256": "a31ea10785e9708d421db03121159e42c2093080f58792b964bdb6c0fec20195"
+      "bytes": 586,
+      "sha256": "741b55a0c02a5ba02e5fcc1f5a892b6067b130ef965b469da625475bc5722f12"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_anim_enter.gml",
@@ -667,8 +667,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_anim_step.gml",
-      "bytes": 874,
-      "sha256": "ae781d225937764513cb434cc810d3cb55867bf684ac2c5be44b2818d442706b"
+      "bytes": 870,
+      "sha256": "adc0ce67c2879c104951179da623a65c06b4cbf680727dc3c9d830e859654c4b"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_audio_dispose.gml",
@@ -677,8 +677,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_audio_step.gml",
-      "bytes": 3666,
-      "sha256": "dc61ef15669fd0c9e991dae2a3927bdf12187efbd24b5e66b773cf4e1d544c5d"
+      "bytes": 3660,
+      "sha256": "75a1187214893f3c600cd28ccab41c9911567217864cabf0bf6d13293416d1c6"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_busy.gml",
@@ -742,13 +742,13 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_weapon_demo_step.gml",
-      "bytes": 1079,
-      "sha256": "05d215a25d260229c815ab116cf47b0f6e53a4dfd94995dfc4b5891097322942"
+      "bytes": 1077,
+      "sha256": "169cb29bef147e4f1be5edca04ac1a921ad37e9797e7135aae8bc733c2b31653"
     },
     {
       "path": "Scripts/scr_mm1_cutman_weapon_screen_enter.gml",
-      "bytes": 619,
-      "sha256": "105df461b6e953866705146b7b558d85fc83563ac90286f9afee5bb192fd3001"
+      "bytes": 617,
+      "sha256": "7bebd98d7912cf4259d2ca127dd7115d554b26e103db590f54ee613a049f95f6"
     },
     {
       "path": "Scripts/scr_mm1_cutman_weapon_screen_intro.gml",
@@ -757,13 +757,13 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_weapon_screen_present.gml",
-      "bytes": 2086,
-      "sha256": "a9b826602eb7e7e4f5edcab0229d58557f003319dabdc889400668c21c8cdafe"
+      "bytes": 2082,
+      "sha256": "c5cc1f8255ab8da6aa4b0aad70c9015bc99b455e92fc6e0c43dcbab17ef50ca9"
     },
     {
       "path": "Scripts/scr_mm1_cutman_weapon_screen_step.gml",
-      "bytes": 628,
-      "sha256": "4f3467f463f95e80aef8c281b96b07e98ee47a9e72af2493e19de37c89967c1c"
+      "bytes": 624,
+      "sha256": "98a9b4285cbcd660f25caff1a0e5ab7bbbd5afbe8f864cde651fc6ac48161b72"
     },
     {
       "path": "Scripts/scr_mm5_combat_die.gml",

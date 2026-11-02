@@ -1,7 +1,7 @@
 // Actual GML motion bridge with existing normal collision GML and geometry mocks.
 import fs from 'node:fs';import assert from 'node:assert/strict';
 const root=new URL('../../',import.meta.url),read=p=>fs.readFileSync(new URL(p,root),'utf8');
-const compile=s=>new Function('s','with(s){'+s.replace(/\bmod\b/g,'%')+'}');
+const compile=s=>new Function('s','with(s){'+s.replace(/\bmod\b/g,'%').replace(/\bexit\s*;/g,'return;')+'}');
 const path='Assets/Bosses/MM1/Cut Man/Victory/Scripts/';
 const motion=compile(read(path+'scr_mm1_cutman_victory_player_move.gml'));
 const normal='Assets/Mega Man/MM5/Controller/Collision/';

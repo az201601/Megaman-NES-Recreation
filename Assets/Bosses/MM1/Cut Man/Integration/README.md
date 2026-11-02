@@ -26,7 +26,7 @@ checklist; do not mistake source completion for installed acceptance.
 Rebuild: `python3 tools/rom-recovery/package-cutman-connected.py`.
 Check: `python3 tools/rom-recovery/test-cutman-connected-package.py`.
 
-ZIP SHA-256: `5ffa7ef1eda1d0f7ce2510ead31fdc8b8f7bc7e03ab3c1d3e8fba5dc7e7382cb`.
+ZIP SHA-256: `3617660ff799924cc49890c5919e7f8c7a83b9de025108dbe37754695f3dc232`.
 
 ## Installed test correction — final-hit death sound
 
@@ -48,3 +48,11 @@ User approved full native3A tail. Existing installs use the small
 `mm1-cutman-full-teleport-sound-patch-gms14.zip` and its exact guide, not the full
 package again. Dedicated voice starts once at283,does not cut at323,participates
 in owned pause/resume/disposal. Source tests pass; installed retest pending.
+
+## GMS1.4 parser correction
+
+User reported10 unexpected-symbol errors on reopen/run. All mapped to bare
+`return;` statements.16 no-value early returns in10 Scripts now use `exit;`;
+value returns unchanged. See `GMS14-SYNTAX-FIX.md` for a safe edit of installed
+code without importing the not-yet-applied teleport addition. Package audit
+now rejects bare returns. Source regressions pass; installed retest pending.

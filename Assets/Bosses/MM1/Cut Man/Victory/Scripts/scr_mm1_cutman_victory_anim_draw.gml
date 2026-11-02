@@ -1,5 +1,5 @@
 // Boss context; called ONLY from player Draw replacement. Read-only.
-if (!cmv_anim_started || cmv_phase < 6 || cmv_phase > 7) return;
+if (!cmv_anim_started || cmv_phase < 6 || cmv_phase > 7) exit;
 var first_cell, cell_count, i, packed_cell, draw_x, draw_y;
 first_cell = cmv_anim_offset[cmv_anim_age];
 cell_count = cmv_anim_count[cmv_anim_age];

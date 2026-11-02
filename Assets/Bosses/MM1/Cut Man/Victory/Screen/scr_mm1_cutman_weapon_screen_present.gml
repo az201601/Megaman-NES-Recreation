@@ -1,6 +1,6 @@
 // Read-only256x240 GUI. Approved MM6-adapted sequence, no animation/audio in Draw.
 var age, cx, shade, actor, ax;
-if (!cmv_screen_started || cmv_phase < 8 || cmv_phase > 9) return;
+if (!cmv_screen_started || cmv_phase < 8 || cmv_phase > 9) exit;
 age = cmv_screen_age;
 draw_set_alpha(1);
 draw_set_color(c_white);
@@ -8,7 +8,7 @@ texture_set_interpolation(false);
 if (age < 164)
 {
     draw_sprite(spr_mm1_cutter_screen_intro_strip22, cmv_screen_intro, 0, 0);
-    return;
+    exit;
 }
 draw_sprite(spr_mm1_weapon_get_frame, 0, 0, 0);
 if (age < 399)

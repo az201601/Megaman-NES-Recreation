@@ -1,6 +1,6 @@
 // Boss context. Approved MM6-adapted sequence, sole shared tick/freeze guard.
-if (!cmv_screen_started || cmv_phase != 8) return;
-if (argument1 || cmv_screen_tick == argument0) return;
+if (!cmv_screen_started || cmv_phase != 8) exit;
+if (argument1 || cmv_screen_tick == argument0) exit;
 cmv_screen_tick = argument0;
 cmv_screen_age = min(cmv_screen_age + 1, 814);
 scr_mm1_cutman_weapon_screen_intro();

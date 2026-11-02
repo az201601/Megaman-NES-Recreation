@@ -1,6 +1,6 @@
 // Boss context. Visual-only MM6 burst: no projectile instances, masks or drops.
 // Ack boss disappearance NOW; do not wait for all particles before pre-clear wait.
-if (cmv_fx_started) return;
+if (cmv_fx_started) exit;
 cmv_fx_started = true;
 cmv_fx_age = 0;
 cmv_fx_count = 16;

@@ -3,7 +3,7 @@ import fs from 'node:fs';import assert from 'node:assert/strict';
 const base=new URL('../../Assets/Bosses/MM1/Cut Man/Victory/Scripts/',import.meta.url);
 const source=name=>fs.readFileSync(new URL(`scr_mm1_cutman_victory_${name}.gml`,base),'utf8');
 const sources=['init','start','step'].map(source),fields=[...new Set(sources.join('\n').match(/\bcmv_\w+/g))];
-const [init,start,step]=sources.map(s=>new Function('s','with(s){'+s+'}'));
+const [init,start,step]=sources.map(s=>new Function('s','with(s){'+s.replace(/\bexit\s*;/g,'return;')+'}'));
 const make=()=>{const s=Object.fromEntries(fields.map(k=>[k,0]));init(s);return s;};
 const begin=s=>{s.argument0=3200;return start(s);};
 const update=(s,t,options={})=>{let a=[t,false,false,false,3100,true,false,false,false];for(const[k,v]of Object.entries(options))a[+k]=v;for(let i=0;i<9;i++)s['argument'+i]=a[i];return step(s);};

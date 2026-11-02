@@ -1,5 +1,5 @@
 // Boss context. Phase entry event,shared tick. Owns initialization only,not Draw.
-if (argument0 != 6 || cmv_screen_started) return;
+if (argument0 != 6 || cmv_screen_started) exit;
 cmv_screen_started = true;
 cmv_screen_tick = argument1;
 cmv_screen_age = 0;

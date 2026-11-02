@@ -1,7 +1,7 @@
 // Called only behind screen shared-tick guard. MM6 stage0 shot cadence and busy
 // lock, with original stationary-player Cutter samples (not boss projectile).
 var remaining, sample_age;
-if (!cmv_screen_demo_requested || cmv_screen_demo_done) return;
+if (!cmv_screen_demo_requested || cmv_screen_demo_done) exit;
 cmv_demo_age = cmv_screen_age - 464;
 cmv_demo_pose = -1;
 cmv_demo_throwing = false;

@@ -1,6 +1,6 @@
 // Boss context. Shared active tick argument0; frozen argument1. Visuals only.
-if (cmv_phase == 10) { cmv_fx_count = 0; return; }
-if (argument1 || cmv_fx_tick == argument0) return;
+if (cmv_phase == 10) { cmv_fx_count = 0; exit; }
+if (argument1 || cmv_fx_tick == argument0) exit;
 cmv_fx_tick = argument0;
 if (!cmv_fx_started) scr_mm1_cutman_defeat_start();
 else cmv_fx_age += 1;
