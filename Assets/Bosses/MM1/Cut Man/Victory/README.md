@@ -508,3 +508,36 @@ MM5 music must be identified in its actual native weapon-get scene and recovered
 from the supplied ROM; listening confirmation remains required before playback.
 The preceding defeat/clear/centre/acquisition/teleport flow, approved13/5F audio,
 no-score policy and separate E-Tank reward are unchanged.
+
+## MM5 weapon-get music scene verified — listening review
+
+`Audio/Review/mm5-weapon-get-native-scene-review.wav`: actual full native APU
+capture of command14 from supplied USA MM5. The controlled original scene visibly
+reads **YOU GOT GRAVITY HOLD.**, with the original palette-change animation/text.
+`Reference/mm5-weapon-get-native-scene.png` and
+`Reference/mm5-weapon-get-music-recovery.json` record screenshot/hash, source spans,
+setup, scene requests, driver dispatches, WAV properties and limitations.
+
+This is NOT a guessed soundtrack index, injected14 music command or synthesized
+replacement. After F0+150update silent warmup, the fixture sets30=10,6C=0,67=0,6E=1
+and restarts the native main coroutine atDDE8 (80=8/82=E8/83=DD). The original main
+sets up its own stack/subsystems and banks17/0C; the original award scene requests
+14 at1788F9 viaEC5B. No CPU-PC/bank redirection or further game-state patches.
+This controlled scene fixture is not a natural boss-defeat playthrough.
+
+The take runs from native driver14 at update26 to next-menu13 at716:690updates,
+551145 stereo samples at48kHz, about11.482seconds. No channel muting, normalization,
+gain, filtering, trimming or custom synth. It is the actual scene-length excerpt,
+NOT proof of a natural track ending or seamless loop. User listening approval is
+pending; no sound resources/runtime playback changed.
+
+Reproduce after `npm ci --prefix tools/rom-recovery --ignore-scripts`:
+```
+node tools/rom-recovery/mm5-start.mjs
+node tools/rom-recovery/mm5-stage.mjs
+node tools/rom-recovery/probe-mm5-weapon-get.mjs
+node tools/rom-recovery/test-mm5-weapon-get-music.mjs
+```
+Test independently executes the native scene's request through the6502 soundqueue,
+audits3supplied-ROM spans and validates trace/screenshot/WAV hashes and no clipping.
+Custom MM6-adapted Rolling Cutter screen/demo remains the visual production plan.

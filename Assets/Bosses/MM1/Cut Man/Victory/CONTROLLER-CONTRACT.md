@@ -259,3 +259,15 @@ MM5 music must be identified in its actual native weapon-get scene and recovered
 from the supplied ROM; listening confirmation remains required before playback.
 The preceding defeat/clear/centre/acquisition/teleport flow, approved13/5F audio,
 no-score policy and separate E-Tank reward are unchanged.
+
+### MM5 track recovered for listening, NOT integrated
+
+Actual original Gravity Hold award scene emits14 at1788F9, followed690updates
+later by13 when moving to its next menu. Full native APU stereo48kHz excerpt in
+`Audio/Review/mm5-weapon-get-native-scene-review.wav`, unmodified gain/PCM, about
+11.482seconds. Scene screenshot, complete setup/trace/source spans and hashes in
+`Reference/mm5-weapon-get-music-recovery.json`. Original coroutineDDE8 establishes
+its own stack; no injected14 sound command or modified ROM/code. Controlled scene
+fixture, not a natural boss kill. Independent6502 scene-to-queue test passes.
+This is a listening preview, not an approved production asset, complete music
+cycle/loop proof, or a replacement for the custom MM6-adapted screen/demo.
