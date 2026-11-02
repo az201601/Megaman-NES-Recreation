@@ -321,3 +321,14 @@ native YOU GET B.ATTACK screen and demonstration. `recover-mm6-weapon-award-audi
 exports scene-observed16 as a 30-second review excerpt, NOT a seamless loop.
 `test-mm6-weapon-award.mjs` checks scene-specific ROM spans and archived hashes.
 Music approval pending; no new effects exported, no natural-kill/runtime claim.
+
+## Continuous MM6 final-hit-to-selection verification
+
+`probe-mm6-whole-victory.mjs` and `--grounded`: native checkpoint warp to Tomahawk
+room1F, disclosed one-hit/HP/placement setup at360 BEFORE any projectile, then
+normal B/A input. Actual projectile lethal subtract31:9A15 at498; no post-hit game
+RAM/code/timer/scene patches. Continuous clear/centre/acquisition/teleport/award/demo,
+then native password prompt and Start2500 returns to selection. Both variants pass.
+`test-mm6-whole-victory.mjs` checks archived traces/ROM spans/screenshots.
+This closes the previous missing end-to-end gap; controlled setup, not unassisted
+stage playthrough. Our custom screen/custom music/direct-selection are adaptations.

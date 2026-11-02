@@ -1,0 +1,6374 @@
+{
+  "status": "Continuous final-projectile-hit through native stage selection verified in controlled original-ROM boss-room fixtures",
+  "scenarios": [
+    {
+      "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+      "scenario": "airborne",
+      "method": "Native checkpoint restartCD4C stage5/room1F(Tomahawk true boss). At frame360 only: bossHP=0(native one-hit health), playerHP=27, playerX=80. Native B inputs starting365; optional A480..500; release all controls upon lethal native HP write. No game RAM, code, scene or audio patches after lethal hit. Natural room graphics/collision/actors and all subsequent original-ROM transitions.",
+      "limitations": [
+        "Controlled checkpoint/one-hit/placement fixture, not an unassisted full-stage playthrough.",
+        "MM6 Tomahawk normal-stage trace; not Cut Man/MM5 runtime acceptance.",
+        "EmulateSound false: dispatch frames, not measured acoustic onset."
+      ],
+      "finished": true,
+      "frames": 2701,
+      "hit": {
+        "frame": 498,
+        "kind": "boss-write",
+        "address": "3ed",
+        "value": 255,
+        "previous": 0,
+        "x": 65,
+        "y": 129,
+        "damage": 1,
+        "pending": 0,
+        "pc": "9a18",
+        "bank": 49
+      },
+      "ordered": [
+        {
+          "frame": 498,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 0,
+          "x": 65,
+          "y": 129,
+          "damage": 1,
+          "pending": 0,
+          "pc": "9a18",
+          "bank": 49
+        },
+        {
+          "frame": 502,
+          "kind": "boss-clear",
+          "pc": "f964",
+          "slot": 22,
+          "x": 65,
+          "y": 130,
+          "hp": 255
+        },
+        {
+          "frame": 780,
+          "kind": "boss-clear",
+          "pc": "f97e",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1021,
+          "kind": "boss-clear",
+          "pc": "f9c6",
+          "slot": 0,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1076,
+          "kind": "boss-clear",
+          "pc": "f9b4",
+          "slot": 22,
+          "x": 128,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1130,
+          "kind": "whole-victory-code",
+          "pc": "91a7"
+        },
+        {
+          "frame": 1358,
+          "kind": "teleport",
+          "pc": "dfb9"
+        },
+        {
+          "frame": 1397,
+          "kind": "teleport",
+          "pc": "dff3"
+        },
+        {
+          "frame": 1419,
+          "kind": "award",
+          "pc": "bd1b"
+        },
+        {
+          "frame": 1854,
+          "kind": "award",
+          "pc": "be42"
+        },
+        {
+          "frame": 2269,
+          "kind": "award",
+          "pc": "bea9"
+        }
+      ],
+      "events": [
+        {
+          "frame": 1,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 116,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 9,
+          "kind": "audio-dispatch",
+          "command": 6
+        },
+        {
+          "frame": 13,
+          "kind": "audio-dispatch",
+          "command": 12
+        },
+        {
+          "frame": 15,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 8,
+          "pending": 0,
+          "pc": "d6f8",
+          "bank": 57
+        },
+        {
+          "frame": 92,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 147,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 0,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 92,
+          "kind": "boss-clear",
+          "pc": "f95a",
+          "slot": 8,
+          "x": 128,
+          "y": 119,
+          "hp": 0
+        },
+        {
+          "frame": 92,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 79,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 93,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 94,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 95,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 96,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 97,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 98,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 99,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 100,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 101,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 101,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 102,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 103,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 104,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 105,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 106,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 107,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 108,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 109,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 110,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 111,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 112,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 113,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 113,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 114,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 115,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 116,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 117,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 118,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 119,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 119,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 120,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 121,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 122,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 123,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 124,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 125,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 126,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 127,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 127,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 128,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 129,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 130,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 131,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 132,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 133,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 134,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 135,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 136,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 137,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 138,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 139,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 140,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 141,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 142,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 143,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 144,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 145,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 146,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 147,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 148,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 149,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 150,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 151,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 152,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 153,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 154,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 155,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 156,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 157,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 158,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 159,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 160,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 161,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 162,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 163,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 164,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 165,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 166,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 167,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 168,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 169,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 170,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 171,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 172,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 173,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 174,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 175,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 176,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 177,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 178,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 179,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 180,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 181,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 182,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 183,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 184,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 185,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 186,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 187,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 188,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 189,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 190,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 191,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 192,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 193,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 194,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 195,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 196,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 197,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 198,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 199,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 200,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 201,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 202,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 203,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 204,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 205,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 206,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 207,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 208,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 209,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 242,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef33",
+          "bank": 49
+        },
+        {
+          "frame": 242,
+          "kind": "audio-dispatch",
+          "command": 241
+        },
+        {
+          "frame": 246,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 246,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 0,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 246,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 250,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 250,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 1,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 250,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 254,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 1,
+          "previous": 1,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 254,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 2,
+          "previous": 1,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 254,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 258,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 2,
+          "previous": 2,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 258,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 3,
+          "previous": 2,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 258,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 262,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 3,
+          "previous": 3,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 262,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 4,
+          "previous": 3,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 262,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 266,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 4,
+          "previous": 4,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 266,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 5,
+          "previous": 4,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 266,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 270,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 5,
+          "previous": 5,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 270,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 6,
+          "previous": 5,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 270,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 274,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 6,
+          "previous": 6,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 274,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 7,
+          "previous": 6,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 274,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 278,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 7,
+          "previous": 7,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 278,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 8,
+          "previous": 7,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 278,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 282,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 8,
+          "previous": 8,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 282,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 9,
+          "previous": 8,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 282,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 286,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 9,
+          "previous": 9,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 286,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 10,
+          "previous": 9,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 286,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 290,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 10,
+          "previous": 10,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 290,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 11,
+          "previous": 10,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 290,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 294,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 11,
+          "previous": 11,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 294,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 12,
+          "previous": 11,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 294,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 298,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 12,
+          "previous": 12,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 298,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 13,
+          "previous": 12,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 298,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 302,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 13,
+          "previous": 13,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 302,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 14,
+          "previous": 13,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 302,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 306,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 14,
+          "previous": 14,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 306,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 15,
+          "previous": 14,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 306,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 310,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 15,
+          "previous": 15,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 310,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 16,
+          "previous": 15,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 310,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 314,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 16,
+          "previous": 16,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 314,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 17,
+          "previous": 16,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 314,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 318,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 17,
+          "previous": 17,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 318,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 18,
+          "previous": 17,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 318,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 322,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 18,
+          "previous": 18,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 322,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 19,
+          "previous": 18,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 322,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 326,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 19,
+          "previous": 19,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 326,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 20,
+          "previous": 19,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 326,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 330,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 20,
+          "previous": 20,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 330,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 21,
+          "previous": 20,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 330,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 334,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 21,
+          "previous": 21,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 334,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 22,
+          "previous": 21,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 334,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 338,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 22,
+          "previous": 22,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 338,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 23,
+          "previous": 22,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 338,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 342,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 23,
+          "previous": 23,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 342,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 24,
+          "previous": 23,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 342,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 346,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 24,
+          "previous": 24,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 346,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 25,
+          "previous": 24,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 346,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 350,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 25,
+          "previous": 25,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 350,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 26,
+          "previous": 25,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 350,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 354,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 26,
+          "previous": 26,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 354,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 27,
+          "previous": 26,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 354,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 159,
+          "previous": 147,
+          "x": 128,
+          "y": 119,
+          "damage": 0,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 354,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 355,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 27,
+          "previous": 27,
+          "x": 128,
+          "y": 119,
+          "damage": 8,
+          "pending": 0,
+          "pc": "ebef",
+          "bank": 49
+        },
+        {
+          "frame": 370,
+          "kind": "audio-dispatch",
+          "command": 66
+        },
+        {
+          "frame": 431,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 440,
+          "kind": "audio-dispatch",
+          "command": 37
+        },
+        {
+          "frame": 474,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 492,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 498,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 0,
+          "x": 65,
+          "y": 129,
+          "damage": 1,
+          "pending": 0,
+          "pc": "9a18",
+          "bank": 49
+        },
+        {
+          "frame": 498,
+          "kind": "audio-dispatch",
+          "command": 240
+        },
+        {
+          "frame": 499,
+          "kind": "audio-dispatch",
+          "command": 38
+        },
+        {
+          "frame": 500,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 159,
+          "x": 65,
+          "y": 129,
+          "damage": 0,
+          "pending": 0,
+          "pc": "e45d",
+          "bank": 49
+        },
+        {
+          "frame": 500,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 65,
+          "y": 129,
+          "damage": 0,
+          "pending": 0,
+          "pc": "e465",
+          "bank": 49
+        },
+        {
+          "frame": 502,
+          "kind": "boss-clear",
+          "pc": "f964",
+          "slot": 22,
+          "x": 65,
+          "y": 130,
+          "hp": 255
+        },
+        {
+          "frame": 537,
+          "kind": "audio-dispatch",
+          "command": 36
+        },
+        {
+          "frame": 780,
+          "kind": "boss-clear",
+          "pc": "f97e",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 780,
+          "kind": "audio-dispatch",
+          "command": 19
+        },
+        {
+          "frame": 1021,
+          "kind": "boss-clear",
+          "pc": "f999",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1021,
+          "kind": "boss-clear",
+          "pc": "f9c6",
+          "slot": 0,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1075,
+          "kind": "boss-clear",
+          "pc": "f9f5",
+          "slot": 22,
+          "x": 128,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1076,
+          "kind": "boss-clear",
+          "pc": "f9b4",
+          "slot": 22,
+          "x": 128,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1076,
+          "kind": "whole-victory-code",
+          "pc": "9145"
+        },
+        {
+          "frame": 1076,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 180,
+          "damage": 8,
+          "pending": 0,
+          "pc": "d6f8",
+          "bank": 56
+        },
+        {
+          "frame": 1076,
+          "kind": "whole-victory-code",
+          "pc": "9167"
+        },
+        {
+          "frame": 1076,
+          "kind": "audio-dispatch",
+          "command": 58
+        },
+        {
+          "frame": 1130,
+          "kind": "whole-victory-code",
+          "pc": "91a7"
+        },
+        {
+          "frame": 1130,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 1,
+          "previous": 0,
+          "x": 128,
+          "y": 120,
+          "damage": 0,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 1130,
+          "kind": "audio-dispatch",
+          "command": 95
+        },
+        {
+          "frame": 1349,
+          "kind": "whole-victory-code",
+          "pc": "91fe"
+        },
+        {
+          "frame": 1349,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 1,
+          "x": 128,
+          "y": 120,
+          "damage": 8,
+          "pending": 0,
+          "pc": "d6f8",
+          "bank": 56
+        },
+        {
+          "frame": 1349,
+          "kind": "audio-dispatch",
+          "command": 240
+        },
+        {
+          "frame": 1358,
+          "kind": "whole-victory-code",
+          "pc": "9237"
+        },
+        {
+          "frame": 1358,
+          "kind": "teleport",
+          "pc": "dfb9"
+        },
+        {
+          "frame": 1359,
+          "kind": "audio-dispatch",
+          "command": 58
+        },
+        {
+          "frame": 1397,
+          "kind": "teleport",
+          "pc": "dff3"
+        },
+        {
+          "frame": 1399,
+          "kind": "audio-dispatch",
+          "command": 240
+        },
+        {
+          "frame": 1419,
+          "kind": "award",
+          "pc": "bd1b"
+        },
+        {
+          "frame": 1419,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 4,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 1427,
+          "kind": "audio-dispatch",
+          "command": 22
+        },
+        {
+          "frame": 1429,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 4,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 1436,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 144,
+          "previous": 0,
+          "x": 128,
+          "y": 4,
+          "damage": 58,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 1525,
+          "kind": "audio-dispatch",
+          "command": 101
+        },
+        {
+          "frame": 1623,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1627,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1631,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1635,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1639,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1643,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1647,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1651,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1655,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1659,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1663,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1667,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1671,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1675,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1679,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1683,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1687,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1691,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1695,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1699,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1703,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1707,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1711,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1715,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1719,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1723,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1727,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1731,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1735,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1739,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1854,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 144,
+          "x": 128,
+          "y": 4,
+          "damage": 3,
+          "pending": 0,
+          "pc": "be19",
+          "bank": 58
+        },
+        {
+          "frame": 1854,
+          "kind": "award",
+          "pc": "be42"
+        },
+        {
+          "frame": 1958,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2022,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2086,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2150,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2269,
+          "kind": "award",
+          "pc": "bea9"
+        },
+        {
+          "frame": 2269,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 160,
+          "y": 116,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 2299,
+          "kind": "audio-dispatch",
+          "command": 21
+        },
+        {
+          "frame": 2500,
+          "kind": "audio-dispatch",
+          "command": 51
+        },
+        {
+          "frame": 2520,
+          "kind": "stage-select",
+          "pc": "f05e"
+        },
+        {
+          "frame": 2520,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 80,
+          "y": 186,
+          "damage": 93,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 2528,
+          "kind": "audio-dispatch",
+          "command": 15
+        }
+      ]
+    },
+    {
+      "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+      "scenario": "grounded",
+      "method": "Native checkpoint restartCD4C stage5/room1F(Tomahawk true boss). At frame360 only: bossHP=0(native one-hit health), playerHP=27, playerX=80. Native B inputs starting365; optional A480..500; release all controls upon lethal native HP write, then one Start at2500 to dismiss native password screen. No game RAM, code, scene or audio patches after lethal hit. Natural room graphics/collision/actors and all subsequent original-ROM transitions.",
+      "limitations": [
+        "Controlled checkpoint/one-hit/placement fixture, not an unassisted full-stage playthrough.",
+        "MM6 Tomahawk normal-stage trace; not Cut Man/MM5 runtime acceptance.",
+        "EmulateSound false: dispatch frames, not measured acoustic onset."
+      ],
+      "finished": true,
+      "frames": 2701,
+      "hit": {
+        "frame": 498,
+        "kind": "boss-write",
+        "address": "3ed",
+        "value": 255,
+        "previous": 0,
+        "x": 65,
+        "y": 180,
+        "damage": 1,
+        "pending": 0,
+        "pc": "9a18",
+        "bank": 49
+      },
+      "ordered": [
+        {
+          "frame": 498,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 0,
+          "x": 65,
+          "y": 180,
+          "damage": 1,
+          "pending": 0,
+          "pc": "9a18",
+          "bank": 49
+        },
+        {
+          "frame": 502,
+          "kind": "boss-clear",
+          "pc": "f964",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 780,
+          "kind": "boss-clear",
+          "pc": "f97e",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1021,
+          "kind": "boss-clear",
+          "pc": "f9c6",
+          "slot": 0,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1076,
+          "kind": "boss-clear",
+          "pc": "f9b4",
+          "slot": 22,
+          "x": 128,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1130,
+          "kind": "whole-victory-code",
+          "pc": "91a7"
+        },
+        {
+          "frame": 1358,
+          "kind": "teleport",
+          "pc": "dfb9"
+        },
+        {
+          "frame": 1397,
+          "kind": "teleport",
+          "pc": "dff3"
+        },
+        {
+          "frame": 1419,
+          "kind": "award",
+          "pc": "bd1b"
+        },
+        {
+          "frame": 1854,
+          "kind": "award",
+          "pc": "be42"
+        },
+        {
+          "frame": 2269,
+          "kind": "award",
+          "pc": "bea9"
+        }
+      ],
+      "events": [
+        {
+          "frame": 1,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 116,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 9,
+          "kind": "audio-dispatch",
+          "command": 6
+        },
+        {
+          "frame": 13,
+          "kind": "audio-dispatch",
+          "command": 12
+        },
+        {
+          "frame": 15,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 8,
+          "pending": 0,
+          "pc": "d6f8",
+          "bank": 57
+        },
+        {
+          "frame": 92,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 147,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 0,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 92,
+          "kind": "boss-clear",
+          "pc": "f95a",
+          "slot": 8,
+          "x": 128,
+          "y": 119,
+          "hp": 0
+        },
+        {
+          "frame": 92,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 79,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 93,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 94,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 95,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 96,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 97,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 98,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 99,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 100,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 101,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 101,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 102,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 103,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 104,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 105,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 106,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 107,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 108,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 109,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 110,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 111,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 112,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 113,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 113,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 114,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 115,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 116,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 117,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 118,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 119,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 119,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 120,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 121,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 122,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 123,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 124,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 125,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 126,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 127,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 127,
+          "kind": "audio-dispatch",
+          "command": 97
+        },
+        {
+          "frame": 128,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 129,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 130,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 131,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 132,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 133,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 134,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 135,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 136,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 137,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 138,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 139,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 140,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 141,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 142,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 143,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 144,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 145,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 146,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 147,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 148,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 149,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 150,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 151,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 152,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 153,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 154,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 155,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 156,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 157,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 158,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 159,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 160,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 161,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 162,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 163,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 164,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 165,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 166,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 167,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 168,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 169,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 170,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 171,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 172,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 173,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 174,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 175,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 176,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 177,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 178,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 179,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 180,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 181,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 182,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 183,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 184,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 185,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 186,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 187,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 188,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 189,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 190,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 191,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 192,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 193,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 194,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 195,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 196,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 197,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 198,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 199,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 200,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 201,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 202,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 203,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 204,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 205,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 206,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 207,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 208,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 209,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 10,
+          "pending": 0,
+          "pc": "990b",
+          "bank": 49
+        },
+        {
+          "frame": 242,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef33",
+          "bank": 49
+        },
+        {
+          "frame": 242,
+          "kind": "audio-dispatch",
+          "command": 241
+        },
+        {
+          "frame": 246,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 246,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 0,
+          "previous": 255,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 246,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 250,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 250,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 1,
+          "previous": 0,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 250,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 254,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 1,
+          "previous": 1,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 254,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 2,
+          "previous": 1,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 254,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 258,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 2,
+          "previous": 2,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 258,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 3,
+          "previous": 2,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 258,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 262,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 3,
+          "previous": 3,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 262,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 4,
+          "previous": 3,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 262,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 266,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 4,
+          "previous": 4,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 266,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 5,
+          "previous": 4,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 266,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 270,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 5,
+          "previous": 5,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 270,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 6,
+          "previous": 5,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 270,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 274,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 6,
+          "previous": 6,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 274,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 7,
+          "previous": 6,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 274,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 278,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 7,
+          "previous": 7,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 278,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 8,
+          "previous": 7,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 278,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 282,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 8,
+          "previous": 8,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 282,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 9,
+          "previous": 8,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 282,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 286,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 9,
+          "previous": 9,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 286,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 10,
+          "previous": 9,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 286,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 290,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 10,
+          "previous": 10,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 290,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 11,
+          "previous": 10,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 290,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 294,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 11,
+          "previous": 11,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 294,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 12,
+          "previous": 11,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 294,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 298,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 12,
+          "previous": 12,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 298,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 13,
+          "previous": 12,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 298,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 302,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 13,
+          "previous": 13,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 302,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 14,
+          "previous": 13,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 302,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 306,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 14,
+          "previous": 14,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 306,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 15,
+          "previous": 14,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 306,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 310,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 15,
+          "previous": 15,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 310,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 16,
+          "previous": 15,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 310,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 314,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 16,
+          "previous": 16,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 314,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 17,
+          "previous": 16,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 314,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 318,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 17,
+          "previous": 17,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 318,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 18,
+          "previous": 17,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 318,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 322,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 18,
+          "previous": 18,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 322,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 19,
+          "previous": 18,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 322,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 326,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 19,
+          "previous": 19,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 326,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 20,
+          "previous": 19,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 326,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 330,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 20,
+          "previous": 20,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 330,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 21,
+          "previous": 20,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 330,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 334,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 21,
+          "previous": 21,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 334,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 22,
+          "previous": 21,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 334,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 338,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 22,
+          "previous": 22,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 338,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 23,
+          "previous": 22,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 338,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 342,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 23,
+          "previous": 23,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 342,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 24,
+          "previous": 23,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 342,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 346,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 24,
+          "previous": 24,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 346,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 25,
+          "previous": 24,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 346,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 350,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 25,
+          "previous": 25,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 350,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 26,
+          "previous": 25,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 350,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 354,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 26,
+          "previous": 26,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 354,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 27,
+          "previous": 26,
+          "x": 128,
+          "y": 119,
+          "damage": 16,
+          "pending": 0,
+          "pc": "ef4b",
+          "bank": 49
+        },
+        {
+          "frame": 354,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 159,
+          "previous": 147,
+          "x": 128,
+          "y": 119,
+          "damage": 0,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 354,
+          "kind": "audio-dispatch",
+          "command": 49
+        },
+        {
+          "frame": 355,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 27,
+          "previous": 27,
+          "x": 128,
+          "y": 119,
+          "damage": 8,
+          "pending": 0,
+          "pc": "ebef",
+          "bank": 49
+        },
+        {
+          "frame": 370,
+          "kind": "audio-dispatch",
+          "command": 66
+        },
+        {
+          "frame": 431,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 440,
+          "kind": "audio-dispatch",
+          "command": 37
+        },
+        {
+          "frame": 474,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 492,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 498,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 0,
+          "x": 65,
+          "y": 180,
+          "damage": 1,
+          "pending": 0,
+          "pc": "9a18",
+          "bank": 49
+        },
+        {
+          "frame": 498,
+          "kind": "audio-dispatch",
+          "command": 240
+        },
+        {
+          "frame": 499,
+          "kind": "audio-dispatch",
+          "command": 38
+        },
+        {
+          "frame": 500,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 159,
+          "x": 65,
+          "y": 180,
+          "damage": 0,
+          "pending": 0,
+          "pc": "e45d",
+          "bank": 49
+        },
+        {
+          "frame": 500,
+          "kind": "boss-write",
+          "address": "3ed",
+          "value": 255,
+          "previous": 255,
+          "x": 65,
+          "y": 180,
+          "damage": 0,
+          "pending": 0,
+          "pc": "e465",
+          "bank": 49
+        },
+        {
+          "frame": 502,
+          "kind": "boss-clear",
+          "pc": "f964",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 780,
+          "kind": "boss-clear",
+          "pc": "f97e",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 780,
+          "kind": "audio-dispatch",
+          "command": 19
+        },
+        {
+          "frame": 1021,
+          "kind": "boss-clear",
+          "pc": "f999",
+          "slot": 22,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1021,
+          "kind": "boss-clear",
+          "pc": "f9c6",
+          "slot": 0,
+          "x": 65,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1075,
+          "kind": "boss-clear",
+          "pc": "f9f5",
+          "slot": 22,
+          "x": 128,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1076,
+          "kind": "boss-clear",
+          "pc": "f9b4",
+          "slot": 22,
+          "x": 128,
+          "y": 180,
+          "hp": 255
+        },
+        {
+          "frame": 1076,
+          "kind": "whole-victory-code",
+          "pc": "9145"
+        },
+        {
+          "frame": 1076,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 180,
+          "damage": 8,
+          "pending": 0,
+          "pc": "d6f8",
+          "bank": 56
+        },
+        {
+          "frame": 1076,
+          "kind": "whole-victory-code",
+          "pc": "9167"
+        },
+        {
+          "frame": 1076,
+          "kind": "audio-dispatch",
+          "command": 58
+        },
+        {
+          "frame": 1130,
+          "kind": "whole-victory-code",
+          "pc": "91a7"
+        },
+        {
+          "frame": 1130,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 1,
+          "previous": 0,
+          "x": 128,
+          "y": 120,
+          "damage": 0,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 1130,
+          "kind": "audio-dispatch",
+          "command": 95
+        },
+        {
+          "frame": 1349,
+          "kind": "whole-victory-code",
+          "pc": "91fe"
+        },
+        {
+          "frame": 1349,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 1,
+          "x": 128,
+          "y": 120,
+          "damage": 8,
+          "pending": 0,
+          "pc": "d6f8",
+          "bank": 56
+        },
+        {
+          "frame": 1349,
+          "kind": "audio-dispatch",
+          "command": 240
+        },
+        {
+          "frame": 1358,
+          "kind": "whole-victory-code",
+          "pc": "9237"
+        },
+        {
+          "frame": 1358,
+          "kind": "teleport",
+          "pc": "dfb9"
+        },
+        {
+          "frame": 1359,
+          "kind": "audio-dispatch",
+          "command": 58
+        },
+        {
+          "frame": 1397,
+          "kind": "teleport",
+          "pc": "dff3"
+        },
+        {
+          "frame": 1399,
+          "kind": "audio-dispatch",
+          "command": 240
+        },
+        {
+          "frame": 1419,
+          "kind": "award",
+          "pc": "bd1b"
+        },
+        {
+          "frame": 1419,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 4,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 1427,
+          "kind": "audio-dispatch",
+          "command": 22
+        },
+        {
+          "frame": 1429,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 128,
+          "y": 4,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 1436,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 144,
+          "previous": 0,
+          "x": 128,
+          "y": 4,
+          "damage": 58,
+          "pending": 0,
+          "pc": "81f4",
+          "bank": 58
+        },
+        {
+          "frame": 1525,
+          "kind": "audio-dispatch",
+          "command": 101
+        },
+        {
+          "frame": 1623,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1627,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1631,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1635,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1639,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1643,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1647,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1651,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1655,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1659,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1663,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1667,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1671,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1675,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1679,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1683,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1687,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1691,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1695,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1699,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1703,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1707,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1711,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1715,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1719,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1723,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1727,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1731,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1735,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1739,
+          "kind": "audio-dispatch",
+          "command": 55
+        },
+        {
+          "frame": 1854,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 144,
+          "x": 128,
+          "y": 4,
+          "damage": 3,
+          "pending": 0,
+          "pc": "be19",
+          "bank": 58
+        },
+        {
+          "frame": 1854,
+          "kind": "award",
+          "pc": "be42"
+        },
+        {
+          "frame": 1958,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2022,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2086,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2150,
+          "kind": "audio-dispatch",
+          "command": 35
+        },
+        {
+          "frame": 2269,
+          "kind": "award",
+          "pc": "bea9"
+        },
+        {
+          "frame": 2269,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 160,
+          "y": 116,
+          "damage": 71,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 2299,
+          "kind": "audio-dispatch",
+          "command": 21
+        },
+        {
+          "frame": 2500,
+          "kind": "audio-dispatch",
+          "command": 51
+        },
+        {
+          "frame": 2520,
+          "kind": "stage-select",
+          "pc": "f05e"
+        },
+        {
+          "frame": 2520,
+          "kind": "boss-write",
+          "address": "3a8",
+          "value": 0,
+          "previous": 0,
+          "x": 80,
+          "y": 186,
+          "damage": 93,
+          "pending": 0,
+          "pc": "808e",
+          "bank": 58
+        },
+        {
+          "frame": 2528,
+          "kind": "audio-dispatch",
+          "command": 15
+        }
+      ]
+    }
+  ],
+  "spans": [
+    {
+      "name": "Actual Tomahawk lethal damage and defeat call",
+      "bank": "0x31",
+      "address": "0x9a06",
+      "hex": "a93585dca9009d6c05bde50338e5009de5031010ad3d06c907d00320748f203eed"
+    },
+    {
+      "name": "Native clear wait and request13",
+      "bank": "0x3f",
+      "address": "0xf964",
+      "hex": "a9f0a451c0089002a93c9db1052068e4deb105d0f8ade50330f3a91385dc202bc6a9f09db105"
+    },
+    {
+      "name": "Completion calls weapon-get then password then stage selection",
+      "bank": "0x3e",
+      "address": "0xcd97",
+      "hex": "c901d01ba551e6512c5cffd00fc65120fbf620b4f2a511f0034c49cd4c41cdc902"
+    }
+  ],
+  "images": [
+    {
+      "file": "mm6-whole-airborne-final-hit.png",
+      "sha256": "c2fa15390c626912839f34e65fc5a4e0ed5c96d394f18dbf16103d4ab6a51402"
+    },
+    {
+      "file": "mm6-whole-centred.png",
+      "sha256": "1a80fdb7b2f00a5b98598ff563fb42768f8d94be94816e3ead555c6a2faace63"
+    },
+    {
+      "file": "mm6-whole-acquisition.png",
+      "sha256": "a2eba1ead5f735c06e72fc9ba1b129ac363b3989477cd07917c19eead6566276"
+    },
+    {
+      "file": "mm6-whole-teleport-exit.png",
+      "sha256": "a2de684725307007466313c61f50c0019cb24d6a08ee863318de3f173195ca6d"
+    },
+    {
+      "file": "mm6-whole-weapon-demo.png",
+      "sha256": "8ee8f5a23c2bdedf2f50c2f47e9be2419e808175754807473eaf997f8448d136"
+    },
+    {
+      "file": "mm6-whole-native-password.png",
+      "sha256": "687bff4b3b0a3875be94e6eb3b629cdafed36946c793836d01c0f4a3dd0d96ae"
+    },
+    {
+      "file": "mm6-whole-stage-selection.png",
+      "sha256": "2ae8ad292c3e7946eb22e65904ec1c03d61eba856d0802d22f10d4ba769f2cc0"
+    }
+  ]
+}

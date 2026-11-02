@@ -273,3 +273,51 @@ The earlier clear/centre byte audit still applies. A complete **natural boss kil
 through clear and centre** has NOT been captured. An attempted F95A manager fixture
 in starting-stage geometry killed/reset the player and was discarded; it must not
 be presented as successful end-to-end verification. Implementation remains pending.
+
+## COMPLETE CONTINUOUS SEQUENCE VERIFIED (supersedes remaining trace gap above)
+
+`probe-mm6-whole-victory.mjs` now uses the **actual Tomahawk true-boss room**:
+controlled native checkpoint restartCD4C, stage5/room1F. The original engine loads
+room geometry, artwork, boss entrance/HP fill, actors and scheduler. At frame360,
+BEFORE firing: bossHP=0 (native signed one-hit health), playerHP=27, playerX=80.
+Normal B button presses create real projectiles. Optional A480..500 tests airborne.
+No game RAM, code, sound, scene, timer or physics patches after the lethal hit.
+Controls released on lethal HP write; one Start2500 dismisses the native password.
+This is not an unassisted stage playthrough; it IS a continuous native final-hit
+through stage-selection trace, without stitching or post-defeat entry fixtures.
+
+Both grounded and airborne/off-centre runs pass. Airborne native last hit occurs
+frame498 at X65/Y129 (grounded run Y180), damage1 subtracts native HP0 toFF in
+**31:9A15**, not the separate genericEF99 path previously audited. Boss slot8
+becomes inactive at501; native manager proceeds throughF964 at502.
+
+| Observed event | Frame in both runs |
+| --- | ---: |
+| Lethal projectile damage | 498 |
+| Stage-clear13 request | 780 |
+| Centre walk begins, X65 | 1021 |
+| Centred X128; acquisition continuation | 1076 |
+| Energy animation / approved5F request | 1130 |
+| TeleportDFB9 | 1358 |
+| Teleport offscreenDFF3 | 1397 |
+| Award screen entryBD1B | 1419 |
+| Native weapon demonstration setupBE42 | 1854 |
+| Demo returnBEA9 | 2269 |
+| Stage-select entryF05E after Start2500 | 2520 |
+
+These are emulator-frame observations for this controlled Tomahawk fixture,
+NOT universal constants or acoustic onset measurements (sound emulation disabled;
+native dispatch logged).240-update source counters must not be labelled240 rendered
+frames: this trace includes native hitstop/scheduling. Airborne player lands during
+the post-defeat wait; walking starts after the clear-music wait.
+
+**Additional native scene:** MM6 displays its PASSWORD / STAGE SELECT / CONTINUE
+prompt after the weapon demo. Our agreed custom flow can skip that prompt and
+return directly to our stage selection; that is a deliberate adaptation.
+Our screen uses **custom music**, not native16. No custom music is created yet.
+Immediate final-hit control-lock behavior is a project requirement, not established
+by a trace that releases player buttons on lethal hit.
+
+Evidence: `Reference/mm6-whole-victory.json`, seven native screenshots;
+`test-mm6-whole-victory.mjs` validates both traces, actual lethal/caller ROM bytes,
+scene order and screenshots. No ROM/save state distributed. No GMS runtime claim.
