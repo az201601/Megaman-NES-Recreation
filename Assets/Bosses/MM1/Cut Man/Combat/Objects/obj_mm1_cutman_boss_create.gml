@@ -105,3 +105,14 @@ cmv_screen_demo_requested = false;
 cmv_screen_demo_done = false;
 cmv_screen_music_started = false;
 cmv_screen_voice = -1;
+// Demonstration playback/owned throw audio, reset once with victory owner.
+cmv_demo_age = -1;
+cmv_demo_pose = -1;
+cmv_demo_dx = 0;
+cmv_demo_dy = 0;
+cmv_demo_caught = false;
+cmv_demo_catches = 0;
+cmv_demo_throwing = false;
+cmv_demo_throw_serial = 0;
+cmv_demo_audio_serial = 0;
+cmv_demo_voice = -1;

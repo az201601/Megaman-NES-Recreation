@@ -19,6 +19,7 @@ if (argument0)
         if (cmv_clear_voice != -1) audio_pause_sound(cmv_clear_voice);
         if (cmv_acquisition_voice != -1) audio_pause_sound(cmv_acquisition_voice);
         if (cmv_screen_voice != -1) audio_pause_sound(cmv_screen_voice);
+        if (cmv_demo_voice != -1) audio_pause_sound(cmv_demo_voice);
         cmv_audio_paused = true;
     }
     return;
@@ -28,6 +29,7 @@ if (cmv_audio_paused)
     if (cmv_clear_voice != -1) audio_resume_sound(cmv_clear_voice);
     if (cmv_acquisition_voice != -1) audio_resume_sound(cmv_acquisition_voice);
     if (cmv_screen_voice != -1) audio_resume_sound(cmv_screen_voice);
+    if (cmv_demo_voice != -1) audio_resume_sound(cmv_demo_voice);
     cmv_audio_paused = false;
 }
 if (serial_new)
@@ -66,4 +68,11 @@ if (cmv_phase == 6 && cmv_acquisition_sound_requested
 {
     cmv_acquisition_started = true;
     cmv_acquisition_voice = audio_play_sound(snd_mm6_weapon_acquisition, 12, false);
+}
+// Approved native player Cutter sound25, once per actual demo throw.
+if (cmv_phase == 8 && cmv_demo_audio_serial != cmv_demo_throw_serial)
+{
+    cmv_demo_audio_serial = cmv_demo_throw_serial;
+    if (cmv_demo_voice != -1) audio_stop_sound(cmv_demo_voice);
+    cmv_demo_voice = audio_play_sound(snd_mm1_cutman_rolling_cutter_throw, 11, false);
 }

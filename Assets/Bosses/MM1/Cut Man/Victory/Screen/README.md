@@ -118,3 +118,38 @@ User approved the animated preview from ec5e129.
 `animation-approval.json` locks the GIF hash and approved presentation scope.
 Preserve reveal/typing and final approved composition while adding the actual
 Rolling Cutter demo. Demo completion and GMS installation/runtime remain pending.
+
+## Actual Cutter demonstration — source implemented, installation pending
+
+The approved reveal/typing/layout are unchanged. At update220, the shared owner
+starts a lower-left grey/white MM5 player demonstration:30-update preparation,
+throws at demo ages30 and150, native catch acknowledgements at101 and221, then a
+90-update tail. Only two native catch acknowledgements plus that tail permit
+screen completion. The existing phase9 receiver then grants Cutter once and
+returns to stage selection. No score or tanks are awarded here.
+
+This is **fixed native demonstration playback**, not a general-purpose gameplay
+Rolling Cutter AI. `Reference/player-cutter-demo.json` records a fresh USA native
+player throw after actual native weapon-menu selection, separate from boss AI.
+230 annotated player-control bytes were independently matched to USA ROM;
+2588 visible projectile pixels matched native output. Final player-occluded
+pixels are disclosed separately. Renderer-aligned positions and both original
+poses are replayed together at60Hz, translated only, not an invented curve.
+MM5 idle/shoot art changes only blue/cyan armor slots to grey/white.
+
+New scripts: `scr_mm1_cutman_weapon_demo_step` and
+`scr_mm1_cutman_weapon_demo_sample`. New Screen sprites, all origin0,0:
+`spr_mm5_cutter_demo_idle`32x32(single), `spr_mm5_cutter_demo_throw`40x40(single),
+`spr_mm1_player_rolling_cutter_demo_strip2`(two16x16 cells).
+Do not install these separately: the connected incremental package remains pending.
+
+The approved existing `snd_mm1_cutman_rolling_cutter_throw` (native25) fires
+once for each throw, through the audio owner, never Draw. Its voice participates
+in pause/resume and terminal/cancel/Room End disposal. MM5 weapon-get remains
+once-only, unboosted gain1. `test-cutman-weapon-demo.mjs` exercises actual GML
+screen/demo/audio together; coordinator regression reaches phase9/reward request.
+The inventory receiver has its own once-only grant/return regression.
+
+`custom-rolling-cutter-demo-preview.gif` is a silent3x actual-GML raster preview
+including approved reveal, both throws and catches, plus review-only final hold.
+GIF cannot preview the implemented sound. It is not installed GMS acceptance.

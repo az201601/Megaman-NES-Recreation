@@ -1,0 +1,699 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "setup": "Fresh USA boot180 Start333 Start899. Set weaponsOwnedFF and ammo6B..7228 before opening native pause. Start90,Down+12 five times,Start90. Native C selection. One B tap,neutral180updates. No post-tap RAM/ROM patches.",
+  "verifiedPlayerRoutineBytes": 230,
+  "nativeCatchUpdate": 71,
+  "originalNativeSound": 37,
+  "method": "Fixed stationary-player demonstration. Natural native USA throw/catch after native weapon menu selection. Original rendered OAM positions+poses replayed together at 60Hz, translated only; no inferred curve or boss projectile. MM5 player poses use palette-only grey/white adaptations. Not general-purpose player weapon AI.",
+  "pixelsMatched": 2588,
+  "playerOccludedPixels": 2,
+  "cell": [
+    16,
+    16
+  ],
+  "origin": [
+    8,
+    7
+  ],
+  "cutter": "spr_mm1_player_rolling_cutter_demo_strip2.png",
+  "adapted": [
+    {
+      "file": "spr_mm5_cutter_demo_idle.png",
+      "source": "Assets/Mega Man/MM5/Standing/spr_mm5_megaman_idle.png",
+      "sourceSha256": "ed1f9d684165a00867741c75f5042f1c961f03c521b992be514f1be2b45329d1",
+      "size": [
+        32,
+        32
+      ],
+      "changed": 168,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "file": "spr_mm5_cutter_demo_throw.png",
+      "source": "Assets/Mega Man/MM5/Buster/spr_mm5_megaman_idle_shoot.png",
+      "sourceSha256": "d1ae6ae11414f5136923843ec5acf43da0ceb72ca39257303e1abf985cd46436",
+      "size": [
+        40,
+        40
+      ],
+      "changed": 190,
+      "origin": [
+        0,
+        0
+      ]
+    }
+  ],
+  "path": [
+    {
+      "f": 0,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 142,
+      "nativeY": 142.1015625
+    },
+    {
+      "f": 1,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 144,
+      "nativeY": 140.3046875
+    },
+    {
+      "f": 2,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 146,
+      "nativeY": 138.609375
+    },
+    {
+      "f": 3,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 148,
+      "nativeY": 137.015625
+    },
+    {
+      "f": 4,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 150,
+      "nativeY": 135.5234375
+    },
+    {
+      "f": 5,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 152,
+      "nativeY": 134.1328125
+    },
+    {
+      "f": 6,
+      "pose": 0,
+      "dx": 24,
+      "dy": -14,
+      "nativeCatch": false,
+      "nativeX": 154,
+      "nativeY": 132.84375
+    },
+    {
+      "f": 7,
+      "pose": 0,
+      "dx": 26,
+      "dy": -16,
+      "nativeCatch": false,
+      "nativeX": 156,
+      "nativeY": 131.65625
+    },
+    {
+      "f": 8,
+      "pose": 0,
+      "dx": 28,
+      "dy": -17,
+      "nativeCatch": false,
+      "nativeX": 158,
+      "nativeY": 130.5703125
+    },
+    {
+      "f": 9,
+      "pose": 0,
+      "dx": 30,
+      "dy": -18,
+      "nativeCatch": false,
+      "nativeX": 160,
+      "nativeY": 129.5859375
+    },
+    {
+      "f": 10,
+      "pose": 0,
+      "dx": 32,
+      "dy": -19,
+      "nativeCatch": false,
+      "nativeX": 162,
+      "nativeY": 128.703125
+    },
+    {
+      "f": 11,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 164,
+      "nativeY": 127.921875
+    },
+    {
+      "f": 12,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 166,
+      "nativeY": 127.2421875
+    },
+    {
+      "f": 13,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 168,
+      "nativeY": 126.6640625
+    },
+    {
+      "f": 14,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 170,
+      "nativeY": 126.1875
+    },
+    {
+      "f": 15,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 172,
+      "nativeY": 125.8125
+    },
+    {
+      "f": 16,
+      "pose": 1,
+      "dx": 44,
+      "dy": -23,
+      "nativeCatch": false,
+      "nativeX": 174,
+      "nativeY": 125.5390625
+    },
+    {
+      "f": 17,
+      "pose": 1,
+      "dx": 46,
+      "dy": -23,
+      "nativeCatch": false,
+      "nativeX": 176,
+      "nativeY": 125.3671875
+    },
+    {
+      "f": 18,
+      "pose": 1,
+      "dx": 48,
+      "dy": -23,
+      "nativeCatch": false,
+      "nativeX": 178,
+      "nativeY": 125.296875
+    },
+    {
+      "f": 19,
+      "pose": 1,
+      "dx": 50,
+      "dy": -23,
+      "nativeCatch": false,
+      "nativeX": 180,
+      "nativeY": 125.328125
+    },
+    {
+      "f": 20,
+      "pose": 1,
+      "dx": 52,
+      "dy": -23,
+      "nativeCatch": false,
+      "nativeX": 182,
+      "nativeY": 125.4609375
+    },
+    {
+      "f": 21,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 184,
+      "nativeY": 125.6953125
+    },
+    {
+      "f": 22,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 186,
+      "nativeY": 126.03125
+    },
+    {
+      "f": 23,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 188,
+      "nativeY": 126.46875
+    },
+    {
+      "f": 24,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 190,
+      "nativeY": 127.0078125
+    },
+    {
+      "f": 25,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 192,
+      "nativeY": 127.6484375
+    },
+    {
+      "f": 26,
+      "pose": 0,
+      "dx": 64,
+      "dy": -21,
+      "nativeCatch": false,
+      "nativeX": 194,
+      "nativeY": 128.390625
+    },
+    {
+      "f": 27,
+      "pose": 0,
+      "dx": 66,
+      "dy": -20,
+      "nativeCatch": false,
+      "nativeX": 196,
+      "nativeY": 129.234375
+    },
+    {
+      "f": 28,
+      "pose": 0,
+      "dx": 68,
+      "dy": -19,
+      "nativeCatch": false,
+      "nativeX": 198,
+      "nativeY": 130.1796875
+    },
+    {
+      "f": 29,
+      "pose": 0,
+      "dx": 70,
+      "dy": -18,
+      "nativeCatch": false,
+      "nativeX": 200,
+      "nativeY": 131.2265625
+    },
+    {
+      "f": 30,
+      "pose": 0,
+      "dx": 72,
+      "dy": -17,
+      "nativeCatch": false,
+      "nativeX": 202,
+      "nativeY": 132.375
+    },
+    {
+      "f": 31,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 204,
+      "nativeY": 133.625
+    },
+    {
+      "f": 32,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 206,
+      "nativeY": 134.9765625
+    },
+    {
+      "f": 33,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 208,
+      "nativeY": 136.4296875
+    },
+    {
+      "f": 34,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 210,
+      "nativeY": 137.984375
+    },
+    {
+      "f": 35,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 212,
+      "nativeY": 139.640625
+    },
+    {
+      "f": 36,
+      "pose": 1,
+      "dx": 84,
+      "dy": -9,
+      "nativeCatch": false,
+      "nativeX": 214,
+      "nativeY": 141.3984375
+    },
+    {
+      "f": 37,
+      "pose": 1,
+      "dx": 86,
+      "dy": -7,
+      "nativeCatch": false,
+      "nativeX": 216,
+      "nativeY": 143.2578125
+    },
+    {
+      "f": 38,
+      "pose": 1,
+      "dx": 88,
+      "dy": -5,
+      "nativeCatch": false,
+      "nativeX": 218,
+      "nativeY": 145.21875
+    },
+    {
+      "f": 39,
+      "pose": 1,
+      "dx": 90,
+      "dy": -3,
+      "nativeCatch": false,
+      "nativeX": 220,
+      "nativeY": 147.28125
+    },
+    {
+      "f": 40,
+      "pose": 1,
+      "dx": 92,
+      "dy": -1,
+      "nativeCatch": false,
+      "nativeX": 222,
+      "nativeY": 149.4453125
+    },
+    {
+      "f": 41,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 224,
+      "nativeY": 151.7109375
+    },
+    {
+      "f": 42,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 221.46875,
+      "nativeY": 154.0234375
+    },
+    {
+      "f": 43,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 218.90625,
+      "nativeY": 156.14453125
+    },
+    {
+      "f": 44,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 216.3125,
+      "nativeY": 158.09375
+    },
+    {
+      "f": 45,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 213.6875,
+      "nativeY": 159.8671875
+    },
+    {
+      "f": 46,
+      "pose": 1,
+      "dx": 85,
+      "dy": 11,
+      "nativeCatch": false,
+      "nativeX": 211.03125,
+      "nativeY": 161.48046875
+    },
+    {
+      "f": 47,
+      "pose": 1,
+      "dx": 83,
+      "dy": 13,
+      "nativeCatch": false,
+      "nativeX": 208.34375,
+      "nativeY": 162.9140625
+    },
+    {
+      "f": 48,
+      "pose": 1,
+      "dx": 80,
+      "dy": 14,
+      "nativeCatch": false,
+      "nativeX": 205.625,
+      "nativeY": 164.19140625
+    },
+    {
+      "f": 49,
+      "pose": 1,
+      "dx": 77,
+      "dy": 16,
+      "nativeCatch": false,
+      "nativeX": 202.875,
+      "nativeY": 165.2734375
+    },
+    {
+      "f": 50,
+      "pose": 1,
+      "dx": 74,
+      "dy": 17,
+      "nativeCatch": false,
+      "nativeX": 200.09375,
+      "nativeY": 166.19140625
+    },
+    {
+      "f": 51,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 197.28125,
+      "nativeY": 166.94140625
+    },
+    {
+      "f": 52,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 194.4375,
+      "nativeY": 167.5390625
+    },
+    {
+      "f": 53,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 191.5625,
+      "nativeY": 167.96484375
+    },
+    {
+      "f": 54,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 188.65625,
+      "nativeY": 168.23046875
+    },
+    {
+      "f": 55,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 185.71875,
+      "nativeY": 168.31640625
+    },
+    {
+      "f": 56,
+      "pose": 0,
+      "dx": 57,
+      "dy": 20,
+      "nativeCatch": false,
+      "nativeX": 182.75,
+      "nativeY": 168.23046875
+    },
+    {
+      "f": 57,
+      "pose": 0,
+      "dx": 54,
+      "dy": 20,
+      "nativeCatch": false,
+      "nativeX": 179.75,
+      "nativeY": 167.62109375
+    },
+    {
+      "f": 58,
+      "pose": 0,
+      "dx": 51,
+      "dy": 19,
+      "nativeCatch": false,
+      "nativeX": 176.71875,
+      "nativeY": 166.87890625
+    },
+    {
+      "f": 59,
+      "pose": 0,
+      "dx": 48,
+      "dy": 18,
+      "nativeCatch": false,
+      "nativeX": 173.65625,
+      "nativeY": 166.00390625
+    },
+    {
+      "f": 60,
+      "pose": 0,
+      "dx": 45,
+      "dy": 18,
+      "nativeCatch": false,
+      "nativeX": 170.5625,
+      "nativeY": 164.9296875
+    },
+    {
+      "f": 61,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 167.4375,
+      "nativeY": 163.7890625
+    },
+    {
+      "f": 62,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 164.28125,
+      "nativeY": 162.63671875
+    },
+    {
+      "f": 63,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 161.09375,
+      "nativeY": 161.47265625
+    },
+    {
+      "f": 64,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 157.875,
+      "nativeY": 160.29296875
+    },
+    {
+      "f": 65,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": false,
+      "nativeX": 154.625,
+      "nativeY": 158.9609375
+    },
+    {
+      "f": 66,
+      "pose": 1,
+      "dx": 26,
+      "dy": 10,
+      "nativeCatch": false,
+      "nativeX": 151.34375,
+      "nativeY": 157.7109375
+    },
+    {
+      "f": 67,
+      "pose": 1,
+      "dx": 23,
+      "dy": 9,
+      "nativeCatch": false,
+      "nativeX": 148.03125,
+      "nativeY": 156.42578125
+    },
+    {
+      "f": 68,
+      "pose": 1,
+      "dx": 20,
+      "dy": 8,
+      "nativeCatch": false,
+      "nativeX": 144.6875,
+      "nativeY": 155.09375
+    },
+    {
+      "f": 69,
+      "pose": 1,
+      "dx": 16,
+      "dy": 7,
+      "nativeCatch": false,
+      "nativeX": 141.3125,
+      "nativeY": 153.6953125
+    },
+    {
+      "f": 70,
+      "pose": 1,
+      "dx": 13,
+      "dy": 5,
+      "nativeCatch": false,
+      "nativeX": 137.90625,
+      "nativeY": 152.4453125
+    },
+    {
+      "f": 71,
+      "pose": -1,
+      "dx": 0,
+      "dy": 0,
+      "nativeCatch": true,
+      "nativeX": 137.90625,
+      "nativeY": 248.4453125
+    }
+  ]
+}

@@ -599,3 +599,10 @@ Cutter demo is not implemented yet;10000active updates do not fake its completio
 award inventory or return early. All relevant combat,phase,player,audio,art,hand-off,
 post-defeat safety and screen design/animation checks pass. Source work only,
 not a complete importable package or GMS compilation/GPU/audio acceptance.
+
+### Latest: screen demonstration source connected
+
+See `Screen/README.md` for the actual player-Cutter native playback, two
+catch-gated throws, approved25 sound ownership and completion path. Reveal,
+portrait/layout and MM5 music volume remain unchanged. Source regressions pass;
+connected GMS1.4 incremental installation package/runtime acceptance still pending.

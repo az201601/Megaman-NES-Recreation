@@ -15,3 +15,14 @@ if (cmv_screen_weapon_chars > 0)
     scr_mm5_pause_text(string_copy("ROLLING CUTTER", 1, cmv_screen_weapon_chars),
         24, 112, c_white);
 scr_mm5_pause_text("WEAPON ACQUIRED", 68, 210, make_color_rgb(100, 176, 255));
+// Keep approved portrait/text unchanged; demonstration occupies lower-left space.
+if (cmv_screen_demo_requested && cmv_demo_age >= 0)
+{
+    if (cmv_demo_throwing)
+        draw_sprite(spr_mm5_cutter_demo_throw, 0, 32, 147);
+    else
+        draw_sprite(spr_mm5_cutter_demo_idle, 0, 32, 147);
+    if (cmv_demo_pose >= 0)
+        draw_sprite(spr_mm1_player_rolling_cutter_demo_strip2,
+            cmv_demo_pose, 48 + cmv_demo_dx - 8, 163 + cmv_demo_dy - 7);
+}
