@@ -1,0 +1,868 @@
+{
+  "format": 1,
+  "status": "Connected incremental source package; GMS1.4.1760 compile/playtest NOT executed. Back up and apply as one update; validate acceptance checklist.",
+  "baseline": "Accepted full Cut Man level with E-Tank, post-E entrance, one-column shutter and flashing-wall fix installed; no earlier combat/victory drafts installed.",
+  "scripts": [
+    {
+      "name": "scr_mm1_cutman_animation_header",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_animation_sprite",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_animate",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_contact",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_decide",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_face",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_hit",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_motion",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_post_frame",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_stop_combat",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_boss_world_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_cutter_aim",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_cutter_manage",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_cutter_move",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_cutter_throw",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm5_combat_die",
+      "action": "replace",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm5_combat_end_frame",
+      "action": "replace",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm5_combat_shot_step",
+      "action": "replace",
+      "folder": "Scripts > MM1 > Cut Man > Combat"
+    },
+    {
+      "name": "scr_mm1_cutman_defeat_draw",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_defeat_start",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_defeat_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_anim_data",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_anim_draw",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_anim_enter",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_anim_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_audio_dispose",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_audio_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_busy",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_handoff",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_init",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_player_begin",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_player_draw",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_player_move",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_player_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_player_tick",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_reward_return",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_start",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_victory_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_weapon_demo_sample",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_weapon_demo_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_weapon_screen_enter",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_weapon_screen_intro",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_weapon_screen_step",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm1_cutman_weapon_screen_present",
+      "action": "new",
+      "folder": "Scripts > MM1 > Cut Man > Victory"
+    },
+    {
+      "name": "scr_mm5_pause_open",
+      "action": "replace",
+      "folder": "Keep existing resource location"
+    },
+    {
+      "name": "scr_mm5_pause_inventory_init",
+      "action": "replace",
+      "folder": "Keep existing resource location"
+    }
+  ],
+  "sprites": [
+    {
+      "name": "spr_mm1_cutman_combat",
+      "file": "Sprites/spr_mm1_cutman_combat_strip34.png",
+      "cell": [
+        48,
+        64
+      ],
+      "origin": [
+        24,
+        32
+      ],
+      "frames": 34,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Combat",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm6_boss_defeat",
+      "file": "Sprites/spr_mm6_boss_defeat_strip6.png",
+      "cell": [
+        32,
+        32
+      ],
+      "origin": [
+        16,
+        16
+      ],
+      "frames": 6,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm6_inroom_victory_tiles",
+      "file": "Sprites/spr_mm6_inroom_victory_tiles_strip62.png",
+      "cell": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 62,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm1_weapon_get_frame",
+      "file": "Sprites/spr_mm1_weapon_get_frame.png",
+      "cell": [
+        256,
+        240
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm1_weapon_get_rolling_cutter_megaman",
+      "file": "Sprites/spr_mm1_weapon_get_rolling_cutter_megaman.png",
+      "cell": [
+        64,
+        96
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm1_cutter_screen_intro_strip22",
+      "file": "Sprites/spr_mm1_cutter_screen_intro_strip22.png",
+      "cell": [
+        256,
+        240
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 22,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm5_cutter_demo_idle",
+      "file": "Sprites/spr_mm5_cutter_demo_idle.png",
+      "cell": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm5_cutter_demo_throw",
+      "file": "Sprites/spr_mm5_cutter_demo_throw.png",
+      "cell": [
+        40,
+        40
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm5_cutter_demo_idle_left",
+      "file": "Sprites/spr_mm5_cutter_demo_idle_left.png",
+      "cell": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm5_cutter_demo_throw_left",
+      "file": "Sprites/spr_mm5_cutter_demo_throw_left.png",
+      "cell": [
+        40,
+        40
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    },
+    {
+      "name": "spr_mm1_player_rolling_cutter_demo_left_strip2",
+      "file": "Sprites/spr_mm1_player_rolling_cutter_demo_left_strip2.png",
+      "cell": [
+        16,
+        16
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 2,
+      "folder": "Sprites > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Preserve alpha/padding; no crop/resize/background removal; no collision use"
+    }
+  ],
+  "sounds": [
+    {
+      "name": "snd_mm1_cutman_rolling_cutter_throw",
+      "file": "Sounds/snd_mm1_cutman_rolling_cutter_throw.wav",
+      "volume": 1,
+      "loop": false,
+      "folder": "Sounds > MM1 > Bosses > Cut Man > Combat",
+      "settings": "Default audio group, uncompressed/non-streamed, non-positional; no independent playback events"
+    },
+    {
+      "name": "snd_mm6_stage_clear",
+      "file": "Sounds/snd_mm6_stage_clear.wav",
+      "volume": 1,
+      "loop": false,
+      "folder": "Sounds > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Default audio group, uncompressed/non-streamed, non-positional; no independent playback events"
+    },
+    {
+      "name": "snd_mm6_weapon_acquisition",
+      "file": "Sounds/snd_mm6_weapon_acquisition.wav",
+      "volume": 1,
+      "loop": false,
+      "folder": "Sounds > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Default audio group, uncompressed/non-streamed, non-positional; no independent playback events"
+    },
+    {
+      "name": "snd_mm5_weapon_get",
+      "file": "Sounds/snd_mm5_weapon_get.wav",
+      "volume": 1,
+      "loop": false,
+      "folder": "Sounds > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Default audio group, uncompressed/non-streamed, non-positional; no independent playback events"
+    }
+  ],
+  "preexistingScriptDependencies": [
+    "scr_mm1_big_eye_contact",
+    "scr_mm1_big_eye_hit",
+    "scr_mm1_big_eye_spawn",
+    "scr_mm1_big_eye_world_step",
+    "scr_mm1_blader_ai",
+    "scr_mm1_blaster_contact",
+    "scr_mm1_blaster_hit",
+    "scr_mm1_blaster_spawn",
+    "scr_mm1_blaster_world_step",
+    "scr_mm1_cutman_boss_music_dispose",
+    "scr_mm1_cutman_e_tank_spawn",
+    "scr_mm1_cutman_large_health_spawn",
+    "scr_mm1_cutman_route_busy",
+    "scr_mm1_cutman_spike_contact",
+    "scr_mm1_flea_contact",
+    "scr_mm1_flea_hit",
+    "scr_mm1_flea_spawn",
+    "scr_mm1_flea_world_step",
+    "scr_mm1_flying_shell_contact",
+    "scr_mm1_flying_shell_hit",
+    "scr_mm1_flying_shell_spawn",
+    "scr_mm1_flying_shell_world_step",
+    "scr_mm1_octopus_battery_contact",
+    "scr_mm1_octopus_battery_hit",
+    "scr_mm1_octopus_battery_spawn",
+    "scr_mm1_octopus_battery_world_step",
+    "scr_mm1_screw_bomber_contact",
+    "scr_mm1_screw_bomber_hit",
+    "scr_mm1_screw_bomber_spawn",
+    "scr_mm1_screw_bomber_world_step",
+    "scr_mm1_super_cutter_contact",
+    "scr_mm1_super_cutter_hit",
+    "scr_mm1_super_cutter_world_step",
+    "scr_mm5_combat_begin",
+    "scr_mm5_combat_collect",
+    "scr_mm5_combat_damage",
+    "scr_mm5_combat_hit_blader",
+    "scr_mm5_combat_locked",
+    "scr_mm5_combat_overlap",
+    "scr_mm5_combat_pickup_step",
+    "scr_mm5_combat_stop_charge",
+    "scr_mm5_enemy_drop_from_byte",
+    "scr_mm5_pause_text",
+    "scr_mm5_player_can_stand",
+    "scr_mm5_player_charge_colour",
+    "scr_mm5_player_hurt_step",
+    "scr_mm5_player_supported",
+    "scr_mm5_player_wall_blocked",
+    "scr_mm5_player_wall_limit"
+  ],
+  "requiredExistingResources": [
+    "obj_mm5_megaman",
+    "obj_mm5_combat",
+    "obj_mm5_pause_state",
+    "obj_mm1_cutman_camera",
+    "obj_mm1_cutman_boss",
+    "obj_mm1_cutman_boss_music",
+    "spr_mm1_cutman_boss_entrance",
+    "spr_mm5_pause_font",
+    "snd_mm6_enemy_hit",
+    "rm_mm1_stage_select"
+  ],
+  "newObjects": [
+    "obj_mm1_cutman_weapon_screen"
+  ],
+  "files": [
+    {
+      "path": "ACCEPTANCE.md",
+      "bytes": 3639,
+      "sha256": "e20c00a5d98989e6aa0b95abf3de4e0fbd91bc3ef4428bffdc52d60b11cc3123"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "bytes": 13915,
+      "sha256": "e45778344501ea6119b1852bd6468c59e3154f7877f2f070b6da51bef0cfc5c2"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_create.gml",
+      "bytes": 3061,
+      "sha256": "90359165412baa08668c96cf9b68fedd461988fc827d45da9b01e65001293f35"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_draw.gml",
+      "bytes": 538,
+      "sha256": "b091c24feabeef41029d3a8d9bffabd8e6d121eaec76a25175d6f171f1ec4477"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_room_end_and_destroy.gml",
+      "bytes": 118,
+      "sha256": "3d30cda4670c2963e52101452f84ba231d585bdd5b47522c87b1aade86ea0e2b"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_weapon_screen_create.gml",
+      "bytes": 121,
+      "sha256": "05ea232e874ecfb5f69c4257844f00eaa8a42b24b6bbf56a308d441412e06ef4"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_weapon_screen_draw_gui.gml",
+      "bytes": 215,
+      "sha256": "16f89c669d6f4a0a19efae0f9d26cc59f2ccdaac43d0959a8ac8b02acf44ba6e"
+    },
+    {
+      "path": "Player/obj_mm5_megaman_create_append.gml",
+      "bytes": 119,
+      "sha256": "cad6776a13a2fa451c194a802b21b6f7ca7982b350136fad01663849100f65e2"
+    },
+    {
+      "path": "Player/obj_mm5_megaman_draw_character_block.gml",
+      "bytes": 3158,
+      "sha256": "c4b107fb9a76fa06b345ad99e358faeffd24497c5b312e2161375c62042a6b54"
+    },
+    {
+      "path": "Player/obj_mm5_megaman_step_combat_prefix.gml",
+      "bytes": 303,
+      "sha256": "cf301856f69a612a2a0fa18a98d20d3d577e5dcc7835e003bb7b6e8fcb4fa754"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_animation_header.gml",
+      "bytes": 470,
+      "sha256": "cffea0328fa1ca554402d52185b5cb067669e23d50570cdda8c30fb7a366b9e7"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_animation_sprite.gml",
+      "bytes": 3727,
+      "sha256": "0bc5ba92d77c600419f88a35261645eacec9795206346d834e384bc6533feda4"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_animate.gml",
+      "bytes": 727,
+      "sha256": "69965efb3e51c82a76d548c7570a88a98361926c3fa4f25386d1fe01b1710d94"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_contact.gml",
+      "bytes": 766,
+      "sha256": "ac0dd9985ab8e2502c8f56da6d893ec815461d676c951666542fc5cd6561e9f8"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_decide.gml",
+      "bytes": 5851,
+      "sha256": "25d2aeb3611940fff367df137b37c8d1fc5616754205ba2d61122cf9f3d72a79"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_face.gml",
+      "bytes": 221,
+      "sha256": "0e274f55cfbd22b1e6be5a8131cfd30100389a0df353716126aa812d2358986f"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_hit.gml",
+      "bytes": 1210,
+      "sha256": "3366e1fdf3401318d0e130a907577eb159c161855b432af2ece4daa6ed440cdc"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_motion.gml",
+      "bytes": 2357,
+      "sha256": "1575512bdb4a4f7f849a734d2fe56d6502fda4ee38f23ee96b769c535643efbf"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_post_frame.gml",
+      "bytes": 812,
+      "sha256": "f933a2c2376393560782d4bc15ffd3f2a8ae8d56d5baac3355e3d32aa76b7e1e"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_stop_combat.gml",
+      "bytes": 529,
+      "sha256": "fb2fda15a6f54c0fe0136168e9ce019148103502cd6c8d65ab5560f77ebf941e"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_world_step.gml",
+      "bytes": 1241,
+      "sha256": "703d3e518555bfaef1a0f89862be257fc04ef67fbe8de0572eb3fe50519b4926"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_cutter_aim.gml",
+      "bytes": 960,
+      "sha256": "4bfc158ffc1dc36fb67c9d2c5d59fed3bcd49135e40799418287199fc32e9750"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_cutter_manage.gml",
+      "bytes": 1169,
+      "sha256": "9d42d0f0b048ce5a6532830331709ec1c4e93cf52ad76170a509942fd012dbca"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_cutter_move.gml",
+      "bytes": 965,
+      "sha256": "cb4990814a8a1ad84c015ce8d5244e17dee8adfb4b52a5d8b11d719c5bb734e2"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_cutter_throw.gml",
+      "bytes": 805,
+      "sha256": "5d70f94dcb27f529aac45f76f114ff9f99c60275e2173859c3268f2ba08be050"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_defeat_draw.gml",
+      "bytes": 366,
+      "sha256": "cc0d098c513dffe3953d6d72bd66f72393a359aad87758077dd97d6b1ce617de"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_defeat_start.gml",
+      "bytes": 1869,
+      "sha256": "dfda70cd3759628b7626e412983c50dd1c5692ac12fc867e5989fdc44f48e8a7"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_defeat_step.gml",
+      "bytes": 707,
+      "sha256": "80643bd9904e511bef50db7d1a2ca9b55fadf3728061d51bbf5120b645bc1678"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_anim_data.gml",
+      "bytes": 232152,
+      "sha256": "eaf0930f948dc9315843632b376768ce7291b759ce328f144ddecc5443775262"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_anim_draw.gml",
+      "bytes": 588,
+      "sha256": "a31ea10785e9708d421db03121159e42c2093080f58792b964bdb6c0fec20195"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_anim_enter.gml",
+      "bytes": 691,
+      "sha256": "f34d1f05e1e75a8e2f2e50c664cc885b80f5d4c06791293e0b59e523f321de5f"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_anim_step.gml",
+      "bytes": 874,
+      "sha256": "ae781d225937764513cb434cc810d3cb55867bf684ac2c5be44b2818d442706b"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_audio_dispose.gml",
+      "bytes": 568,
+      "sha256": "b35b672c28da4ba16ed7c4e26b7e233895e2f409ed4d19070717a9099cfa07d0"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_audio_step.gml",
+      "bytes": 3210,
+      "sha256": "ff82dcec8bd185e1106f79c1dced5afd134af1c457f7deede4a1d229b2fa4c03"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_busy.gml",
+      "bytes": 291,
+      "sha256": "7d853422f831e0ada2aa7164f74326d2faf4e02328a0040c817e040898781391"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_handoff.gml",
+      "bytes": 814,
+      "sha256": "cd31eb17344aa8da8539a8cc326cb238c3316a9adbf669ef3ac0e6ab2a5a451e"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_init.gml",
+      "bytes": 2075,
+      "sha256": "b85d8b033c586695bf7de73ee21644cd24b66ab23cff9d516a96e1da55fd8254"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_player_begin.gml",
+      "bytes": 711,
+      "sha256": "0dfb3d4cbcaf32685b4d954b13d106557c7d925422a0fcd88ea0f2f522dc6d06"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_player_draw.gml",
+      "bytes": 485,
+      "sha256": "e074c5ca3ae7343710f877c8c5c088ac337bd4ec1b14991a49700ec6d45c02f0"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_player_move.gml",
+      "bytes": 6004,
+      "sha256": "e001020d3d7e8c8adb5a97efa18548bc829fb7816edbb2646e3e28401be7047e"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_player_step.gml",
+      "bytes": 2401,
+      "sha256": "c6b2924f2cdd4b3537fca23fa90a6c100c68f86fcade10a7e2bc47d9b984bc45"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_player_tick.gml",
+      "bytes": 384,
+      "sha256": "e9c4b5c216089b2a1c0c1e0c48900e475abef3a4c063fc163c86eeffeab3429a"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_reward_return.gml",
+      "bytes": 1132,
+      "sha256": "332f566e3512eba9669c4f0781f4405cfad4b96c19534b874a12e89f43dcd07e"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_start.gml",
+      "bytes": 390,
+      "sha256": "0d851ad1fcfae5e1a5a82a74db414a4ad23f231dd9501cd79380a6ae4eb4a78b"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_victory_step.gml",
+      "bytes": 2599,
+      "sha256": "5be8867001b298342b23b8e2d44c30ee2d3467aff2b9a15f0319cad9380005f5"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_weapon_demo_sample.gml",
+      "bytes": 7399,
+      "sha256": "ea92f9924ac9904ac9fd28e387039c7ff26179b5fbc9694c07615f7851bb0000"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_weapon_demo_step.gml",
+      "bytes": 1079,
+      "sha256": "05d215a25d260229c815ab116cf47b0f6e53a4dfd94995dfc4b5891097322942"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_weapon_screen_enter.gml",
+      "bytes": 619,
+      "sha256": "105df461b6e953866705146b7b558d85fc83563ac90286f9afee5bb192fd3001"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_weapon_screen_intro.gml",
+      "bytes": 3604,
+      "sha256": "70eb5c296ecc4d36650f39a39c66839a6201649a66020db4d718a5550b3b78dc"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_weapon_screen_present.gml",
+      "bytes": 2086,
+      "sha256": "a9b826602eb7e7e4f5edcab0229d58557f003319dabdc889400668c21c8cdafe"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_weapon_screen_step.gml",
+      "bytes": 628,
+      "sha256": "4f3467f463f95e80aef8c281b96b07e98ee47a9e72af2493e19de37c89967c1c"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_die.gml",
+      "bytes": 892,
+      "sha256": "27293564b2856d83715622b2f303a7e6637b2176384274d15333fd2b6898bc44"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 6734,
+      "sha256": "37af2dabc0174a1dd82dfb2bab4237eb2df0db5ed502fc0f25a33f06ca1391db"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 4760,
+      "sha256": "77dc7b8c4ed45ebc99972dfc2647f3c30546de94f2f598946689563dff190e24"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_inventory_init.gml",
+      "bytes": 910,
+      "sha256": "669b850099397605b2b11ae7a3a0bdc17fbab55c5481df9f96dd4662255d06aa"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_open.gml",
+      "bytes": 2377,
+      "sha256": "aaff6223256c4db9c27e5653db5de147d497187e536d69e91d25f12bad0c9702"
+    },
+    {
+      "path": "Sounds/snd_mm1_cutman_rolling_cutter_throw.wav",
+      "bytes": 181798,
+      "sha256": "6d9db536caa473457109f7677b6620aa81f6481bcdb1b0d64a1c9c3eeb9d355e"
+    },
+    {
+      "path": "Sounds/snd_mm5_weapon_get.wav",
+      "bytes": 2955276,
+      "sha256": "381c486d0c9e253414a6ab061c416bf6f2d85aa095de41efd075c2ad9e01d858"
+    },
+    {
+      "path": "Sounds/snd_mm6_stage_clear.wav",
+      "bytes": 321760,
+      "sha256": "7cee112f16574979b772e94ea175a5957987dfd33a3456d9336921df580020ad"
+    },
+    {
+      "path": "Sounds/snd_mm6_weapon_acquisition.wav",
+      "bytes": 349924,
+      "sha256": "c72f2ebd5e6dfe4f441213f11e4abe9cfaa9def2fccdfdc9464a8479e42d2847"
+    },
+    {
+      "path": "Sprites/spr_mm1_cutman_combat_strip34.png",
+      "bytes": 14370,
+      "sha256": "64cc1dac9d8cf5d53cfdfdfc42b9795476e97483c45f3955d11d1ce27bc4b4ec"
+    },
+    {
+      "path": "Sprites/spr_mm1_cutter_screen_intro_strip22.png",
+      "bytes": 48935,
+      "sha256": "a20af5ad214be97fdd03783651181061aa76b5171fc9c21ddf9068554ff73acf"
+    },
+    {
+      "path": "Sprites/spr_mm1_player_rolling_cutter_demo_left_strip2.png",
+      "bytes": 207,
+      "sha256": "c8775459204fb06aaabb967e38d70a4248c056d65ef2aab462ced747a19a4300"
+    },
+    {
+      "path": "Sprites/spr_mm1_weapon_get_frame.png",
+      "bytes": 8856,
+      "sha256": "7d74fd951a69e186ad67ede6487d64b004b7e1925e3322992f8b6da80682e7be"
+    },
+    {
+      "path": "Sprites/spr_mm1_weapon_get_rolling_cutter_megaman.png",
+      "bytes": 1872,
+      "sha256": "c7b8282d82c1a02f61e1eeb4bdf777014319196f7c4155d75ed53304b986e036"
+    },
+    {
+      "path": "Sprites/spr_mm5_cutter_demo_idle.png",
+      "bytes": 512,
+      "sha256": "f0ffeb9fbb4c7fb548f75ab3669157ea6128a285acef2c3b1aff84d6a09bc879"
+    },
+    {
+      "path": "Sprites/spr_mm5_cutter_demo_idle_left.png",
+      "bytes": 414,
+      "sha256": "6ea4996f57fc0785aeaae883aecbab09a8abfa4093e015c398b5573b64ffbacf"
+    },
+    {
+      "path": "Sprites/spr_mm5_cutter_demo_throw.png",
+      "bytes": 625,
+      "sha256": "93becb33b6be08ecc1bb646a6204c60f60360a953b30fde8fd3d0f02edbb596d"
+    },
+    {
+      "path": "Sprites/spr_mm5_cutter_demo_throw_left.png",
+      "bytes": 472,
+      "sha256": "16cb029f8b617948f566bdc83b2ae216ade9befbc7164eb3f74a394cd650a9dd"
+    },
+    {
+      "path": "Sprites/spr_mm6_boss_defeat_strip6.png",
+      "bytes": 741,
+      "sha256": "2e957bf2ec210a75b801d642af22447490585b11dd3be64119453cc30466d9e5"
+    },
+    {
+      "path": "Sprites/spr_mm6_inroom_victory_tiles_strip62.png",
+      "bytes": 2578,
+      "sha256": "c10d350a21b4196e31b83be179c6964643e291a4a321af35c1e102a2b7715fde"
+    }
+  ],
+  "limitations": [
+    "No actual GMS installation/compiler/runtime available in this repository (no .project.gmx).",
+    "Rolling Cutter screen demonstration uses fixed native player playback; general equipped-weapon gameplay AI is not part of this package.",
+    "Cutter ownership/energy and Cut Man completion persist in the accepted session state, not a new disk-save system.",
+    "Existing stage-select room must exist as rm_mm1_stage_select; do not create an empty substitute room.",
+    "Stage-select cleared-marker art is not added."
+  ]
+}

@@ -1,3 +1,10 @@
+> **Current connected package:** see `../Integration/INSTALL-GMS14.md` and
+> `../Integration/mm1-cutman-connected-combat-victory-gms14.zip`. The historical
+> checkpoint notes below (including “not installable”/“missing screen”) describe
+> earlier source milestones, not the current package. Apply the connected guide
+> as one update to the accepted post-entrance baseline. Source/package tests pass;
+> GMS1.4 compilation and installed runtime acceptance remain pending.
+
 # Victory owner — connected draft source contract
 
 **Source only. Do not import yet.** The uninstalled combat adapters still need
