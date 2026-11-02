@@ -496,3 +496,15 @@ byte-identical copy of the audition, SHA-256 locked by
 This supersedes the pending approval status above; revisions1/2 remain rejected.
 Future sound resource `snd_mm1_rolling_cutter_weapon_get`. Actual custom-screen
 playback/demo integration and installed acceptance remain pending.
+
+## Current production direction — MM5 music / custom MM6-adapted screen
+
+User reversed the custom-music choice. Use original **Mega Man5 GET weapon music**
+with a **custom adaptation of Mega Man6's weapon-get screen**, keeping the Rolling
+Cutter demonstration. The original custom action track is superseded and must
+not be integrated. Retain its files only as review/approval history.
+`Reference/weapon-screen-production-direction.json` is the current specification.
+MM5 music must be identified in its actual native weapon-get scene and recovered
+from the supplied ROM; listening confirmation remains required before playback.
+The preceding defeat/clear/centre/acquisition/teleport flow, approved13/5F audio,
+no-score policy and separate E-Tank reward are unchanged.

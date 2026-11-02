@@ -247,3 +247,15 @@ offline NES-style software synth, not APU/hardware emulation. Metadata/hash and
 score are in `Reference/custom-weapon-get-music-draft.json`.
 Listening approval is required before production playback. No existing approved
 WAV bytes, gains or sound resources changed. Screen/demo still unimplemented.
+
+## Current production direction — MM5 music / custom MM6-adapted screen
+
+User reversed the custom-music choice. Use original **Mega Man5 GET weapon music**
+with a **custom adaptation of Mega Man6's weapon-get screen**, keeping the Rolling
+Cutter demonstration. The original custom action track is superseded and must
+not be integrated. Retain its files only as review/approval history.
+`Reference/weapon-screen-production-direction.json` is the current specification.
+MM5 music must be identified in its actual native weapon-get scene and recovered
+from the supplied ROM; listening confirmation remains required before playback.
+The preceding defeat/clear/centre/acquisition/teleport flow, approved13/5F audio,
+no-score policy and separate E-Tank reward are unchanged.
