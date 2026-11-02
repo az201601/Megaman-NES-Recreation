@@ -15,3 +15,11 @@ s.argument0=true;entry(s,8,10);assert.equal(s.cmv_audio_closing,true);assert.equ
 {const s=make();s.argument0=true;entry(s,2,3);assert.equal(s.log.length,0);s.argument0=false;step(s);assert.equal(s.log.filter(e=>e[0]==='play').length,1);}
 for(const file of ['Reference/stage-clear-approval.json','Reference/weapon-acquisition-approval.json','Reference/custom-weapon-get-music-approval.json','Reference/mm5-weapon-get-music-approval.json','Reference/mm5-weapon-get-extended-approval.json']){const a=JSON.parse(read(file));assert.equal(createHash('sha256').update(fs.readFileSync(new URL(a.file,base))).digest('hex'),a.sha256);}
 console.log('PASS:actual-GML once-only clear/acquisition audio,animation-onset gate,teleport stop,freeze/resume,cancel/finish/idempotent cleanup,no native16 substitution;approved WAV hashes unchanged.');
+
+// Full teleport tail starts once at native animation283, never cut at323.
+{const s=make();s.snd_mm6_megaman_teleport_out=58;s.cmv_anim_age=282;entry(s,5,7);assert.equal(s.log.length,0);
+s.cmv_anim_age=283;step(s);assert.deepEqual(s.log,[['play',58,12,false]]);for(let i=0;i<100;i++)step(s);assert.equal(s.log.length,1);
+s.argument0=true;step(s);assert.deepEqual(s.log.at(-1),['pause',100]);s.argument0=false;step(s);assert.deepEqual(s.log.at(-1),['resume',100]);
+s.cmv_anim_age=323;step(s);assert.ok(!s.log.some(e=>e[0]==='stop'));s.cmv_anim_age=342;step(s);assert.equal(s.log.filter(e=>e[0]==='play').length,1);
+entry(s,8,10);assert.equal(s.cmv_teleport_voice,-1);assert.deepEqual(s.log.at(-1),['stop',100]);const count=s.log.length;dispose(s);assert.equal(s.log.length,count);}
+console.log('PASS:full-tail teleport cue once at283,freeze/resume,no native323 cutoff,owned cancel cleanup.');

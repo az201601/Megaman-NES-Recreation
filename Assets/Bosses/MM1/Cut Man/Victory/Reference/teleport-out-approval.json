@@ -1,0 +1,11 @@
+{
+  "status": "approved",
+  "userConfirmation": "yes",
+  "file": "Audio/Approved/snd_mm6_megaman_teleport_out.wav",
+  "source": "Audio/Review/mm6-teleport-out-full-tail-review.wav",
+  "sha256": "5a12555f17d03bcfbc4227e76eb6e6e53e61270e16f88a42014362cb82bb91af",
+  "resource": "snd_mm6_megaman_teleport_out",
+  "scope": "Full natural tail of native MM6 teleport-out3A, not earlier40-update cutoff. Byte-identical reviewed2x-SFX-level WAV;resource volume1,unlooped.",
+  "onset": "cmv_anim_age283 (native1359), one active update after teleport phase entry; no sceneF0 at age323.",
+  "limits": "Listening approval recorded; installed timing/playback retest pending."
+}

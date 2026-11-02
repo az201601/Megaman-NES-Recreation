@@ -20,6 +20,7 @@ if (argument0)
         if (cmv_acquisition_voice != -1) audio_pause_sound(cmv_acquisition_voice);
         if (cmv_screen_voice != -1) audio_pause_sound(cmv_screen_voice);
         if (cmv_demo_voice != -1) audio_pause_sound(cmv_demo_voice);
+        if (cmv_teleport_voice != -1) audio_pause_sound(cmv_teleport_voice);
         cmv_audio_paused = true;
     }
     return;
@@ -30,6 +31,7 @@ if (cmv_audio_paused)
     if (cmv_acquisition_voice != -1) audio_resume_sound(cmv_acquisition_voice);
     if (cmv_screen_voice != -1) audio_resume_sound(cmv_screen_voice);
     if (cmv_demo_voice != -1) audio_resume_sound(cmv_demo_voice);
+    if (cmv_teleport_voice != -1) audio_resume_sound(cmv_teleport_voice);
     cmv_audio_paused = false;
 }
 if (serial_new)
@@ -76,3 +78,7 @@ if (cmv_phase == 8 && cmv_demo_audio_serial != cmv_demo_throw_serial)
     if (cmv_demo_voice != -1) audio_stop_sound(cmv_demo_voice);
     cmv_demo_voice = audio_play_sound(snd_mm1_cutman_rolling_cutter_throw, 11, false);
 }
+// Native departure1359 is one update after phase7 entry1358. Retain full tail;
+// do NOT reproduce native F0 at1399 that cut the first review short.
+if (cmv_phase == 7 && cmv_anim_age >= 283 && cmv_teleport_voice == -1)
+    cmv_teleport_voice = audio_play_sound(snd_mm6_megaman_teleport_out, 12, false);

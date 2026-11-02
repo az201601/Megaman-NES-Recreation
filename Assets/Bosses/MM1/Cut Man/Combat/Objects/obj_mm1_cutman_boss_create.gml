@@ -118,3 +118,5 @@ cmv_demo_audio_serial = 0;
 cmv_demo_voice = -1;
 cmv_demo_active = -1;
 cmv_screen_intro = 0;
+// Full-tail teleport-out sound owner.
+cmv_teleport_voice = -1;

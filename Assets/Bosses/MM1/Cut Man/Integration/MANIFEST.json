@@ -433,6 +433,14 @@
       "loop": false,
       "folder": "Sounds > MM1 > Bosses > Cut Man > Victory",
       "settings": "Default audio group, uncompressed/non-streamed, non-positional; no independent playback events"
+    },
+    {
+      "name": "snd_mm6_megaman_teleport_out",
+      "file": "Sounds/snd_mm6_megaman_teleport_out.wav",
+      "volume": 1,
+      "loop": false,
+      "folder": "Sounds > MM1 > Bosses > Cut Man > Victory",
+      "settings": "Default audio group, uncompressed/non-streamed, non-positional; no independent playback events"
     }
   ],
   "preexistingScriptDependencies": [
@@ -509,13 +517,13 @@
     },
     {
       "path": "INSTALL-GMS14.md",
-      "bytes": 13915,
-      "sha256": "e45778344501ea6119b1852bd6468c59e3154f7877f2f070b6da51bef0cfc5c2"
+      "bytes": 14038,
+      "sha256": "3ea1d97e6b185b231eb30efa1d8d7e62ef717ab80e750ca489b773c2c58cdddb"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_create.gml",
-      "bytes": 3061,
-      "sha256": "90359165412baa08668c96cf9b68fedd461988fc827d45da9b01e65001293f35"
+      "bytes": 3125,
+      "sha256": "6c9bab6ac6b65f6301ed9caaa6193eacb8a118b5024567df063d1c8ff751916d"
     },
     {
       "path": "Objects/obj_mm1_cutman_boss_draw.gml",
@@ -664,13 +672,13 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_audio_dispose.gml",
-      "bytes": 568,
-      "sha256": "b35b672c28da4ba16ed7c4e26b7e233895e2f409ed4d19070717a9099cfa07d0"
+      "bytes": 661,
+      "sha256": "3bdbae8424f82f75efb841dfaa7dc564381ee3c5aceff5c67fcc1eac8908d1b2"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_audio_step.gml",
-      "bytes": 3210,
-      "sha256": "ff82dcec8bd185e1106f79c1dced5afd134af1c457f7deede4a1d229b2fa4c03"
+      "bytes": 3666,
+      "sha256": "dc61ef15669fd0c9e991dae2a3927bdf12187efbd24b5e66b773cf4e1d544c5d"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_busy.gml",
@@ -684,8 +692,8 @@
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_init.gml",
-      "bytes": 2075,
-      "sha256": "b85d8b033c586695bf7de73ee21644cd24b66ab23cff9d516a96e1da55fd8254"
+      "bytes": 2139,
+      "sha256": "8a6d75eb4bb23d468555f6dd0dcda57406ee7042b031bd99919ad1b57019fc41"
     },
     {
       "path": "Scripts/scr_mm1_cutman_victory_player_begin.gml",
@@ -791,6 +799,11 @@
       "path": "Sounds/snd_mm5_weapon_get.wav",
       "bytes": 2955276,
       "sha256": "381c486d0c9e253414a6ab061c416bf6f2d85aa095de41efd075c2ad9e01d858"
+    },
+    {
+      "path": "Sounds/snd_mm6_megaman_teleport_out.wav",
+      "bytes": 81994,
+      "sha256": "5a12555f17d03bcfbc4227e76eb6e6e53e61270e16f88a42014362cb82bb91af"
     },
     {
       "path": "Sounds/snd_mm6_stage_clear.wav",

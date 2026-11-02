@@ -56,7 +56,7 @@ Do not assign these sprites as player masks, stage scenery or room instances.
 The existing boss's entrance sprite stays its default. Draw selects the combat
 frames explicitly. Intro22 is a finite animation atlas, not another Step clock.
 
-For all four Sounds: default audio group, uncompressed/non-streamed,
+For all five Sounds: default audio group, uncompressed/non-streamed,
 non-positional, default volume1, no independent playback event. Code owns
 once-only playback and cleanup. `snd_mm5_weapon_get.wav` is the approved extended
 15.392s original-level take. Do NOT normalize, boost, stretch or enable looping.
@@ -227,3 +227,4 @@ Sprites use the Combat/Victory folders recorded per-resource in MANIFEST.json.
 | `snd_mm6_stage_clear` | `Sounds/snd_mm6_stage_clear.wav` | Sounds > MM1 > Bosses > Cut Man > Victory |
 | `snd_mm6_weapon_acquisition` | `Sounds/snd_mm6_weapon_acquisition.wav` | Sounds > MM1 > Bosses > Cut Man > Victory |
 | `snd_mm5_weapon_get` | `Sounds/snd_mm5_weapon_get.wav` | Sounds > MM1 > Bosses > Cut Man > Victory |
+| `snd_mm6_megaman_teleport_out` | `Sounds/snd_mm6_megaman_teleport_out.wav` | Sounds > MM1 > Bosses > Cut Man > Victory |

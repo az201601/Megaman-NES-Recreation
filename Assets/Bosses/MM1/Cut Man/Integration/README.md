@@ -26,7 +26,7 @@ checklist; do not mistake source completion for installed acceptance.
 Rebuild: `python3 tools/rom-recovery/package-cutman-connected.py`.
 Check: `python3 tools/rom-recovery/test-cutman-connected-package.py`.
 
-ZIP SHA-256: `9a81fcad006dc24f2dd8e58da40d4f66bfe9569f4985f2527e9c895046269e9f`.
+ZIP SHA-256: `5ffa7ef1eda1d0f7ce2510ead31fdc8b8f7bc7e03ab3c1d3e8fba5dc7e7382cb`.
 
 ## Installed test correction — final-hit death sound
 
@@ -41,3 +41,10 @@ this one-line addition in `scr_mm1_cutman_victory_handoff` after
 ```gml
 audio_play_sound(snd_mm5_megaman_death, 15, false);
 ```
+
+## Approved full teleport cue patch
+
+User approved full native3A tail. Existing installs use the small
+`mm1-cutman-full-teleport-sound-patch-gms14.zip` and its exact guide, not the full
+package again. Dedicated voice starts once at283,does not cut at323,participates
+in owned pause/resume/disposal. Source tests pass; installed retest pending.

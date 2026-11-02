@@ -36,7 +36,7 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  boss.instance_exists=o=>o===12&&overlayCreated>0;boss.instance_create=(x,y,o)=>{assert.equal(o,12);overlayCreated++;return 100;};
  boss.scr_mm1_cutman_weapon_demo_step=()=>{}; // Screen completion isolated in dedicated demo test.
  for(const name of ['enter','step','intro']){const f=compile(read(path+'scr_mm1_cutman_weapon_screen_'+name+'.gml'));boss['scr_mm1_cutman_weapon_screen_'+name]=(...a)=>{a.forEach((v,i)=>boss['argument'+i]=v);return f(boss);};}
- boss.snd_mm5_weapon_get=20;
+ boss.snd_mm5_weapon_get=20;boss.snd_mm6_megaman_teleport_out=58;
  boss.snd_mm6_stage_clear=13;boss.snd_mm6_weapon_acquisition=95;const audioLog=[];
  boss.audio_play_sound=(...a)=>{audioLog.push(a);return 100+audioLog.length;};
  boss.audio_stop_sound=()=>{};boss.audio_pause_sound=()=>{};boss.audio_resume_sound=()=>{};
