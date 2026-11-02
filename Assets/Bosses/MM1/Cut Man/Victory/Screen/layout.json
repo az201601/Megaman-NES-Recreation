@@ -1,6 +1,6 @@
 {
-  "status": "First visual design draft. Not appearance-approved or installed.",
-  "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; inset Cut Man/acquired plaques; original MM6 large Mega Man; original MM5 sprite font and accepted Rolling Cutter icon. No score/CLEAR POINTS.",
+  "status": "Overall layout approved; revised to remove menu icon/name and apply weapon-specific portrait colours. Revision appearance/runtime acceptance pending.",
+  "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; inset Cut Man/acquired plaques; MM6 large Mega Man adapted to Rolling Cutter grey/white; original MM5 sprite font. No weapon-menu symbol,abbreviation or card for any weapon. No score/CLEAR POINTS.",
   "portrait": {
     "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
     "method": "Native MM6 award320 snapshot advanced1frame,original rendered background figure isolated against its solid black backdrop (black made transparent). Opaque pixels independently checked against uncropped native rendering. Not an OAM reconstruction. No ROM/CHR/palette patch.",
@@ -23,9 +23,18 @@
       ]
     },
     "spr_mm1_weapon_get_frame.png": {
-      "sha256": "ba0340efa07f5f97a1d024f0860962c9cc77638b56c94690e691fcbbf7829d17",
+      "sha256": "e7957e9bc2e2f85b87ca82762c253d02e7cf56cf89995c41f328ac18b56c885f",
       "width": 256,
       "height": 240,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    "spr_mm1_weapon_get_rolling_cutter_megaman.png": {
+      "sha256": "c7b8282d82c1a02f61e1eeb4bdf777014319196f7c4155d75ed53304b986e036",
+      "width": 64,
+      "height": 96,
       "origin": [
         0,
         0
@@ -41,11 +50,17 @@
       8
     ]
   },
-  "icon": {
-    "file": "Assets/Mega Man/MM5/Pause Menu/Adapted Weapon Icons/Selected/spr_mm1_menu_rolling_cutter_selected.png",
-    "sha256": "792a0609cfe5bf4e6bf408d9fb6b4bac4c29e5dd6e626fcb3af282ead7ff40e8",
-    "credit": "Sprites by KindlyPatrick"
+  "weapon": "rolling_cutter",
+  "portraitPalette": {
+    "mapping": {
+      "155fd9": "666666",
+      "64b0ff": "fffeff",
+      "b71e7b": "adadad"
+    },
+    "policy": "Weapon-specific armour and cannon accent only; preserve face/eyes/geometry/alpha. Grey/white custom adaptation matching Rolling Cutter theme,not a native MM6 weapon palette.",
+    "displayAsset": "spr_mm1_weapon_get_rolling_cutter_megaman.png"
   },
+  "menuWeaponRow": false,
   "texts": [
     {
       "text": "CUT MAN",
@@ -78,16 +93,6 @@
       ]
     },
     {
-      "text": "R.CUTTER",
-      "x": 56,
-      "y": 150,
-      "color": [
-        255,
-        255,
-        255
-      ]
-    },
-    {
       "text": "WEAPON ACQUIRED",
       "x": 68,
       "y": 210,
@@ -101,10 +106,6 @@
   "portraitDraw": [
     176,
     72
-  ],
-  "iconDraw": [
-    25,
-    144
   ],
   "framePalette": {
     "179,243,204": [
@@ -125,7 +126,7 @@
   },
   "preview": {
     "file": "custom-rolling-cutter-screen-preview.png",
-    "sha256": "74217d82ccacec67b3a7860d9779892e6281d4712d80558a289a015411df1f43"
+    "sha256": "06abd251c17cdeda7191f6c19e5270ebb0f10258051b6bdc09a1b57dc7273cd1"
   },
   "limitations": [
     "Blue/steel frame layout/palette and plaques are custom design,not native MM6 accuracy claims.",

@@ -1,6 +1,8 @@
-# Custom Rolling Cutter weapon-get screen — first visual draft
+# Custom Rolling Cutter weapon-get screen — revised visual draft
 
-Not appearance-approved, installed, animated or complete. No partial installer.
+Overall layout approved by user. Requested row-removal and weapon-colour revision
+implemented; revised appearance/runtime acceptance pending. Not installed, animated
+or complete. No partial installer.
 
 This is the **reveal/name-card state**, not the later weapon demonstration.
 Native logical size256x240, with a4x nearest-neighbour review image. Adaptation:
@@ -12,11 +14,16 @@ Native logical size256x240, with a4x nearest-neighbour review image. Adaptation:
   is background-rendered, NOT an OAM actor: native rendered64x96 region at176,72
   isolated against the original black backdrop.1632 nonblack pixels preserved and
   individually checked against native rendering. Black backdrop becomes alpha.
-  No generated/repainted character pixels; the native blue reveal pose is retained.
+  Original geometry/alpha retained. Displayed variant uses Rolling Cutter armour
+  colours: dark blue -> grey666666, light blue -> whiteFFFEFF, cannon magenta ->
+  light greyADADAD. Face/eye/white-highlight pixels remain unchanged. This is a
+  custom weapon-specific adaptation, not an original MM6 weapon palette claim.
 - Accepted original38-cell MM5 sprite alphabet, including white/cyan tint correction.
   No new font, invented letters, antialiasing or interpolated scaling.
-- Accepted selected Rolling Cutter menu icon; **Sprites by KindlyPatrick**.
-- YOU GOT / ROLLING CUTTER, with R.CUTTER card. No score/CLEAR POINTS.
+- YOU GOT / ROLLING CUTTER only. The small weapon icon, R.CUTTER menu name and
+  their card are removed, per user request. No such menu row on future weapons.
+- Each future weapon screen must use that weapon's portrait palette; do not leave
+  the displayed Mega Man in default blue. No score/CLEAR POINTS.
 - Approved original-volume MM5 weapon-get music remains the audio plan. This Draw
   does not start/modify any audio, and does not grant inventory or complete phases.
 
@@ -24,10 +31,12 @@ Native logical size256x240, with a4x nearest-neighbour review image. Adaptation:
 
 `spr_mm1_weapon_get_frame.png`:256x240, one image, origin0,0.
 Future folder `Sprites > MM1 > Cut Man > Weapon Get`.
-`spr_mm6_weapon_get_megaman.png`:64x96, one image, origin0,0.
-Future folder `Sprites > MM6 > Weapon Get`.
-Reuse existing `spr_mm5_pause_font` and `spr_mm1_menu_rolling_cutter_selected`.
-`single scr_mm1_cutman_weapon_screen_draw.gml`: eventual resource under
+`spr_mm1_weapon_get_rolling_cutter_megaman.png`:64x96, one image, origin0,0.
+Future folder `Sprites > MM1 > Cut Man > Weapon Get`.
+`spr_mm6_weapon_get_megaman.png` is the preserved blue native source/reference,
+not the displayed Rolling Cutter variant. Reuse only existing `spr_mm5_pause_font`;
+no menu icon resource dependency.
+`scr_mm1_cutman_weapon_screen_draw.gml`: eventual resource under
 `Scripts > MM1 > Cut Man > Weapon Get`, read-only256x240 GUI renderer.
 The final screen GUI owner must render after stage/HUD; no hook is installed yet.
 

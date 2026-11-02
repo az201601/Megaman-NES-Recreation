@@ -565,3 +565,15 @@ to the preview in `test-cutman-weapon-screen-design.mjs`. Appearance approval is
 pending. No runtime hook/audio/reward advancement is installed by this visual
 checkpoint. It does not replace the unfinished animation/demonstration with timers.
 MM5 music at original unboosted volume remains the production audio choice.
+
+### Weapon-screen layout approved with requested revisions
+
+User approved the overall screen layout, requested removal of the weapon symbol
+and weapon-menu abbreviation row for this and future weapons, and requested the
+displayed Mega Man match the acquired weapon palette. Updated preview/Draw have
+no icon, R.CUTTER or card. Main ROLLING CUTTER acquisition title stays. Displayed
+portrait is now grey/white for Cutter, preserving exact native silhouette, alpha,
+face and eyes; unrelated magenta cannon accent is grey. Original blue source art
+is retained separately, not drawn. Future weapons require their own matching
+portrait palette rather than default blue. Music and other layout remain unchanged.
+Actual-GML raster test passes revised preview,removed-row and palette-only checks.
