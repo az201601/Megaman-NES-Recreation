@@ -111,3 +111,10 @@ approved static image pixel-for-pixel.10000updates without a real demo never gra
 
 Remaining: actual Rolling Cutter demonstration/acknowledgement; final return flow
 and stage-select presentation test; complete GMS installer and runtime acceptance.
+
+### Reveal and typing approved
+
+User approved the animated preview from ec5e129.
+`animation-approval.json` locks the GIF hash and approved presentation scope.
+Preserve reveal/typing and final approved composition while adding the actual
+Rolling Cutter demo. Demo completion and GMS installation/runtime remain pending.
