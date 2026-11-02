@@ -1,0 +1,135 @@
+{
+  "status": "First visual design draft. Not appearance-approved or installed.",
+  "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; inset Cut Man/acquired plaques; original MM6 large Mega Man; original MM5 sprite font and accepted Rolling Cutter icon. No score/CLEAR POINTS.",
+  "portrait": {
+    "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+    "method": "Native MM6 award320 snapshot advanced1frame,original rendered background figure isolated against its solid black backdrop (black made transparent). Opaque pixels independently checked against uncropped native rendering. Not an OAM reconstruction. No ROM/CHR/palette patch.",
+    "matched": 1632,
+    "rect": [
+      176,
+      72,
+      64,
+      96
+    ]
+  },
+  "assets": {
+    "spr_mm6_weapon_get_megaman.png": {
+      "sha256": "b794d6e551f390c17d31658862b97ba56f57110919d9606ecdf2b7e3450f1ae2",
+      "width": 64,
+      "height": 96,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    "spr_mm1_weapon_get_frame.png": {
+      "sha256": "ba0340efa07f5f97a1d024f0860962c9cc77638b56c94690e691fcbbf7829d17",
+      "width": 256,
+      "height": 240,
+      "origin": [
+        0,
+        0
+      ]
+    }
+  },
+  "font": {
+    "file": "Assets/Mega Man/MM5/Pause Menu/Import Pack/Sprites/spr_mm5_pause_font_strip38.png",
+    "sha256": "fdceb874f20ac94669c8c1d1d15e56bae5c2701dfc54527d3f78ebfcda3d3848",
+    "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .",
+    "cell": [
+      8,
+      8
+    ]
+  },
+  "icon": {
+    "file": "Assets/Mega Man/MM5/Pause Menu/Adapted Weapon Icons/Selected/spr_mm1_menu_rolling_cutter_selected.png",
+    "sha256": "792a0609cfe5bf4e6bf408d9fb6b4bac4c29e5dd6e626fcb3af282ead7ff40e8",
+    "credit": "Sprites by KindlyPatrick"
+  },
+  "texts": [
+    {
+      "text": "CUT MAN",
+      "x": 100,
+      "y": 22,
+      "color": [
+        100,
+        176,
+        255
+      ]
+    },
+    {
+      "text": "YOU GOT",
+      "x": 24,
+      "y": 88,
+      "color": [
+        100,
+        176,
+        255
+      ]
+    },
+    {
+      "text": "ROLLING CUTTER",
+      "x": 24,
+      "y": 112,
+      "color": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "text": "R.CUTTER",
+      "x": 56,
+      "y": 150,
+      "color": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "text": "WEAPON ACQUIRED",
+      "x": 68,
+      "y": 210,
+      "color": [
+        100,
+        176,
+        255
+      ]
+    }
+  ],
+  "portraitDraw": [
+    176,
+    72
+  ],
+  "iconDraw": [
+    25,
+    144
+  ],
+  "framePalette": {
+    "179,243,204": [
+      218,
+      234,
+      245
+    ],
+    "69,224,130": [
+      218,
+      234,
+      245
+    ],
+    "0,143,50": [
+      132,
+      152,
+      171
+    ]
+  },
+  "preview": {
+    "file": "custom-rolling-cutter-screen-preview.png",
+    "sha256": "74217d82ccacec67b3a7860d9779892e6281d4712d80558a289a015411df1f43"
+  },
+  "limitations": [
+    "Blue/steel frame layout/palette and plaques are custom design,not native MM6 accuracy claims.",
+    "Still image shows reveal/name-card state,not completed demonstration or runtime animation.",
+    "Music remains approved MM5 at original unboosted volume; no new audio created/integrated here."
+  ]
+}

@@ -551,3 +551,17 @@ normalization. Approved review copy is byte-identical at
 `Reference/mm5-weapon-get-music-approval.json`. Sound volume1 for this source.
 The11.482second excerpt is not yet a verified complete-cycle/seamless loop;
 actual screen/demo/playback integration and installed acceptance remain pending.
+
+## First custom weapon-screen visual draft
+
+`Screen/` now contains the custom256x240 reveal/name-card design and crisp4x review:
+blue/steel MM6-derived mechanical frame, inset Cut Man/acquired plaques, original
+large MM6 Mega Man, accepted MM5 font and approved adapted Rolling Cutter icon.
+No score/CLEAR POINTS. The character is a native rendered background figure,
+not an OAM sprite extraction;1632 retained pixels checked against native output.
+
+The read-only staged GML renderer plus accepted font GML rasterizes pixel-identical
+to the preview in `test-cutman-weapon-screen-design.mjs`. Appearance approval is
+pending. No runtime hook/audio/reward advancement is installed by this visual
+checkpoint. It does not replace the unfinished animation/demonstration with timers.
+MM5 music at original unboosted volume remains the production audio choice.
