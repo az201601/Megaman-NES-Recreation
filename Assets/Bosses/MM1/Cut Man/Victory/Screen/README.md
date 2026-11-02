@@ -180,3 +180,10 @@ Native timing events/ROM hash are archived in
 `Reference/mm6-screen-sequence-timing.json`; adaptations/GIF hash in
 `Reference/mm6-sequence-review.json`. This new timing is awaiting user approval;
 the previous actual-GML source is deliberately not replaced until approved.
+
+### MM6-sequence approval recorded
+
+User accepted the new GIF with **“yes”**. `mm6-sequence-approval.json` locks
+the exact approved GIF hash and scope. This replaces the earlier custom timing
+approval, not our custom appearance or approved audio. Updated runtime timing
+integration and connected GMS installation/runtime acceptance remain pending.

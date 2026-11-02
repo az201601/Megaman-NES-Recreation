@@ -1,0 +1,10 @@
+{
+  "status": "approved",
+  "userConfirmation": "yes",
+  "file": "custom-rolling-cutter-mm6-sequence-review.gif",
+  "sha256": "89a6358bc63302c12bd9128f4bee8b8cce2af42998e4b6731872d9f061f30c2e",
+  "scope": "Custom blue/steel appearance and grey/white Cutter colours retained; MM6-adapted animation and sequence as shown in this GIF. Supersedes previous custom reveal/demo timing.",
+  "review": "Reference/mm6-sequence-review.json",
+  "unchangedAudio": "Approved original-level MM5 weapon-get music and native player Cutter sound25 once per actual throw. GIF is silent.",
+  "limits": "Approval of appearance/sequence preview, not updated GML or installed GMS runtime acceptance."
+}
