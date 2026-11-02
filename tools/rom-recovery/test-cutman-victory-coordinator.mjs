@@ -28,6 +28,10 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  for(const a of ['x','y','vx','vy','alive'])boss['cmv_fx_'+a]=[];
  boss.scr_mm1_cutman_defeat_start=()=>defeatStart(boss);
  boss.scr_mm1_cutman_defeat_step=(tick,frozen)=>{boss.argument0=tick;boss.argument1=frozen;return defeatStep(boss);};
+ for(const a of ['offset','count','cell'])boss['cmv_anim_'+a]=[];
+ boss.other=p;
+ for(const name of ['data','enter','step','draw']){const f=compile(read(path+'scr_mm1_cutman_victory_anim_'+name+'.gml'));boss['scr_mm1_cutman_victory_anim_'+name]=(...a)=>{a.forEach((v,i)=>boss['argument'+i]=v);return f(boss);};}
+
  boss.snd_mm6_stage_clear=13;boss.snd_mm6_weapon_acquisition=95;const audioLog=[];
  boss.audio_play_sound=(...a)=>{audioLog.push(a);return 100+audioLog.length;};
  boss.audio_stop_sound=()=>{};boss.audio_pause_sound=()=>{};boss.audio_resume_sound=()=>{};
@@ -47,6 +51,18 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
   const movedX=p.x,movedY=p.y;assert.equal(playerStep(p),true);assert.equal(p.x,movedX);assert.equal(p.y,movedY);
  }
  assert.equal(boss.cmv_phase,6);assert.equal(p.x,3200);assert.equal(p.y,900);assert.equal(boss.cmv_entry_event,4);assert.equal(boss.cmv_entry_serial,4);assert.equal(boss.cmv_reward_requested,false);assert.deepEqual(audioLog,[[13,12,false]]);
+ assert.equal(boss.cmv_anim_x,3200);assert.equal(boss.cmv_anim_y,900);assert.equal(boss.cmv_anim_age,0);
+ for(let age=1;age<=343;age++){
+  p.global.mm5_pause_active=false;owner.combat_tick=1000+age;playerStep(p);
+  assert.equal(p.x,3200);assert.equal(p.y,900,'animation never moves supported collision body');
+  assert.equal(boss.cmv_phase,age<282?6:age<343?7:8);
+  const snapshot=JSON.stringify([boss.cmv_phase,boss.cmv_anim_age,boss.cmv_entry_serial,audioLog]);playerStep(p);assert.equal(JSON.stringify([boss.cmv_phase,boss.cmv_anim_age,boss.cmv_entry_serial,audioLog]),snapshot);
+  if(age===53)assert.equal(audioLog.length,1);if(age===54)assert.deepEqual(audioLog,[[13,12,false],[95,12,false]]);
+  if(age===272)assert.notEqual(boss.cmv_acquisition_voice,-1);if(age===273)assert.equal(boss.cmv_acquisition_voice,-1,'native F0 before descent/teleport');
+  p.global.mm5_pause_active=true;owner.combat_tick=2000+age;const before=boss.cmv_anim_age;playerStep(p);assert.equal(boss.cmv_anim_age,before);
+ }
+ assert.equal(boss.cmv_entry_event,6);assert.equal(boss.cmv_reward_requested,false);
+ p.global.mm5_pause_active=false;for(let t=3000;t<4000;t++){owner.combat_tick=t;playerStep(p);}assert.equal(boss.cmv_phase,8,'no fake screen completion/reward');
  owner.combat_tick++;owner.combat_dead=true;assert.equal(playerStep(p),true);assert.equal(boss.cmv_phase,10);assert.equal(boss.cmv_entry_event,8);
- console.log('PASS:actual player/phase/motion integration to centred acquisition gate;airborne settles,freeze/double-call guards,cancel,no reward. Real defeat disappearance ack; acquisition/teleport completion NOT fabricated.');
+ console.log('PASS:actual player/phase/motion integration through centred acquisition/teleport to custom-screen gate;airborne settles,freeze/double-call guards,cancel,no reward. Real defeat disappearance ack; real native-frame acquisition/teleport ack; custom-screen completion NOT fabricated.');
 }

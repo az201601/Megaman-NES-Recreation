@@ -1,8 +1,8 @@
-# Victory owner — first implementation checkpoint
+# Victory owner — connected draft source contract
 
 **Source only. Do not import yet.** The uninstalled combat adapters still need
-this owner connected to player physics, visuals, queued audio and the custom
-weapon screen. There is deliberately no installation ZIP for this checkpoint.
+the final custom weapon screen/music/demo and persistent unlock/return. Player
+physics, defeat, acquisition/teleport and approved finite audio now have owners. There is deliberately no installation ZIP for this checkpoint.
 Accepted entrance/flash/shutter/E-Tank source is unchanged.
 
 ## Resource folder boundary
@@ -23,7 +23,8 @@ structs, no GMS2 APIs and no obsolete variable-existence functions.
   Actors/effects must not run competing Step clocks. Draw is read-only.
 - Start event1 stops boss/charge audio through their OWN disposal helpers,
   removes existing shots without drops, and starts boss defeat effects.
-- Only a real finished-defeat-effect signal starts the first240-update wait.
+- Only actual boss-body disappearance acknowledgement starts the first240-update wait;
+  particles continue during that wait.
   Event2 starts approved stage-clear music once; another240 active updates precede
   event3 (centre walking). Native rendered offsets are not hardcoded timers.
 - Movement bridge may act on `cmv_move`/`cmv_snap` **only when `cmv_advanced` is true**.
@@ -113,9 +114,9 @@ move, acquisition entry is serialized once and cancellation cannot award a weapo
 
 `victory_audio_step` now consumes phase-entry serials from the sole coordinator.
 Event2 starts the approved clear WAV exactly once. Acquisition entry does NOT
-start its sound: the future animator raises `cmv_acquisition_sound_requested`
-at energy-circle onset, and the receiver plays it once in phase6. Event5 stops
-that voice before teleport. Events7/8 dispose owned voices even while frozen.
+start its sound: the connected animator raises `cmv_acquisition_sound_requested`
+at energy-circle onset, and the receiver plays it once in phase6. Native F0
+ends it219 active updates later, before descent; event5 also stops it defensively. Events7/8 dispose owned voices even while frozen.
 Freeze/resume affects only these voices; Room End/Destroy hook is idempotent.
 No global stop-all, native16 screen-music fallback or audio-based animation ack.
 
@@ -129,7 +130,8 @@ Both are finite nonlooped sources. The acquisition excerpt is the approved timed
 window, not a seamless loop or natural-tail claim. Custom screen music is still
 uncreated and the receiver deliberately contains no placeholder for it.
 The acquisition animator must synchronize onset/stop and report real completion;
-no animation/art integration or installed audio acceptance is implied here.
+the source animator now owns this synchronization. Installed audio/GPU acceptance
+is still pending.
 
 ## Native-derived boss defeat burst connected
 
@@ -156,6 +158,51 @@ art never remains visible. Its defeat Draw is read-only, cannot hurt the player,
 never creates enemy explosion/drop objects and cannot award items.
 
 The combined coordinator test now runs the real defeat owner: its earlier mock
-completion acknowledgement has been removed. Acquisition/teleport/screen still
-lack their animation owners and deliberately do not auto-complete. No new defeat
+completion acknowledgement has been removed. At that earlier checkpoint acquisition/teleport/screen still lacked owners. The
+next checkpoint below connects acquisition/teleport; the custom screen remains open. No new defeat
 SFX imported; approved audio bytes and accepted entrance remain unchanged.
+
+## In-room acquisition and teleport source owner connected
+
+`recover-mm6-inroom-victory.mjs` continuously replays the verified original-ROM
+1021 snapshot through1418, without game-RAM, ROM, CHR or palette edits. It exports
+frames1076..1418:343 updates,62 unique8x8 tiles. Exact native OAM HUD bars are
+excluded; scenery is never copied. Flips, palette, overlapping OAM order and
+per-scanline sprite-overflow masking are retained.212027 visible opaque pixels
+matched native output inside JSNES's default8pixel TV crop; exported source edges
+remain uncropped. Not a run of Mesen.exe or GMS acceptance.
+
+Future sprite resource: `Sprites > MM6 > Victory > spr_mm6_inroom_victory_tiles`,
+`Art/spr_mm6_inroom_victory_tiles_strip62.png`:62 cells of8x8, origin0,0, alpha,
+no smoothing/resizing/cropping. This small tile strip plus packed draw data avoids
+343 oversized fullscreen sprites. Script resources remain under the MM1 Cut Man
+Victory folder: `victory_anim_data`, `victory_anim_enter`, `victory_anim_step`,
+`victory_anim_draw`, `victory_player_draw` (all full `scr_mm1_cutman_` prefixes).
+These are staging boundaries, NOT a partial-install request.
+
+The sole coordinator calls animation Step before core phase Step, and entry after
+core, before audio. Entry4 records the actual centred, supported player anchor.
+MM6 reference128,180 maps to that anchor (normally3200,900; floor912), without
+moving the collision body or forcing Y. Native MM6 acquisition/teleport poses
+replace the MM5 character Draw during this scripted interval only. No second
+player/physics/projectile object; normal MM5 art/motion remains in phases1..5.
+
+- Phase6 displays native1076..1357, indices0..281.
+- Energy-circle sound request at index54/native1130; approved5F only.
+- Stop at index273/native1349:219 active updates after onset, before descent.
+- At index282 the animator acknowledges acquisition; event5 enters teleport at
+  that same continuous index/native1358, not a restarted animation.
+- Phase7 displays indices282..342/native1358..1418, including the genuine blank
+  pre-screen tail after beam departure. Next update acknowledges teleport and
+  requests the custom screen. No guessed timer replaces a missing animation.
+- Freeze/duplicate ticks do not consume a frame; Draw never advances animation.
+- The player Draw guard suppresses only the ordinary character block, keeping
+  HUD/debug/startup. Custom-screen phases keep the arena player hidden.
+
+Native3A jump/teleport dispatches are recorded for research but NOT imported or
+played: only5F received approval for this part. Approved WAV bytes unchanged.
+Custom-screen completion stays false: no reward or scene return fabricated.
+`test-cutman-inroom-victory.mjs` checks every packed GML Draw frame against the
+recovered commands. The combined coordinator test now runs actual acquisition,
+teleport, audio, phase and collision code through phase8, then holds1000 updates
+without invented screen completion. GMS compilation/rendering/listening pending.

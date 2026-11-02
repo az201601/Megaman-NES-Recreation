@@ -1,10 +1,17 @@
-# Cut Man victory — approved scope and initial MM6 research
+# Cut Man victory — connected source work and research history
 
-**Status: research checkpoint, NOT an installable victory implementation.**
+**Current status: connected combat/victory draft source, NOT an installable package.**
+
+Defeat, centre walking/landing, native-derived in-room acquisition and teleport
+have source owners and executable GML-adapter tests. Custom Rolling Cutter
+screen/music/demo, persistent unlock/return and GMS runtime acceptance remain.
+Sections below retain the chronological research/implementation history; later
+corrections supersede earlier candidates and remaining-work lists.
 
 The user approved implementing the final hit as part of the upcoming Cut Man fight:
 MM6-based defeat/clear sequence, automatic movement to the room centre, weapon-get
-animation, then an adapted new-weapon screen and MM6 music. Award Rolling Cutter.
+animation, then a custom new-weapon screen and custom music, retaining an MM6-style
+new-weapon demonstration. Award Rolling Cutter.
 Do not introduce score, CLEAR POINTS, or an MM1 victory flow.
 
 The accepted entrance/flash/one-column shutter and E-Tank implementation remain
@@ -67,7 +74,7 @@ JSNES. Only E468's frame/engine work is intercepted and replaced with disclosed
 jump/fire/start bits. This tests the branch logic and crossing cases, **not** native
 walking speed, elapsed game frames, collisions, audio or full cutscene playback.
 
-## Remaining work before shipping
+## Historical initial work plan (later checkpoints below supersede this list)
 
 1. Finish original MM1 Cut Man AI/poses/Rolling Cutter/contact and chosen MM5 Buster
    integration. A zero-HP transition must be latched exactly once so simultaneous
@@ -413,3 +420,29 @@ lethal-handoff, audio, coordinator and post-defeat safety checks pass.
 Remaining: actual acquisition and teleport animation owners/art, custom weapon
 screen/music/demo, persistent unlock/return, complete import package and GMS test.
 Still no installable ZIP. Do not import this partial checkpoint alone.
+
+## In-room acquisition and teleport connected (supersedes prior remaining list)
+
+Native continuous replay yielded343 rendered updates and62 original8x8 tiles.
+212027 opaque pixels matched native renderer output inside its TV crop; full
+source edges remain uncropped. Native sprite-overflow flicker is retained, and
+no HUD/background scenery is baked into the transparent artwork.
+
+The real animation owner now handles the acquisition jump, energy circles,
+descent/landing, teleport beam and blank pre-screen tail. The actual supported
+player anchor stays fixed; only the scripted Draw follows native frames. The
+ordinary MM5 body is suppressed during the scene, not duplicated underneath it.
+Approved5F starts at native circle onset, stops219 active updates later at the
+native F0 point before descent, and remains byte-identical. No unapproved native
+3A sound has been added. No audio-based completion assumption.
+
+Tests pass:343 actual-GML draw fixtures; combined player/collision/phase/audio
+sequence through real acquisition/teleport acknowledgement to custom-screen
+request; freeze/duplicate guards;1000-update screen hold without reward; existing
+combat/lethal-hit/post-defeat harmlessness regressions. Native reference and
+recovery tool included; no ROM or savestates distributed.
+
+Still remaining: custom Rolling Cutter screen and custom music with MM6-style
+weapon demonstration, persistent unlock/completion and stage-selection return,
+final connected package/incremental installation instructions, GMS1.4 runtime
+acceptance. Do not install this source checkpoint in isolation.

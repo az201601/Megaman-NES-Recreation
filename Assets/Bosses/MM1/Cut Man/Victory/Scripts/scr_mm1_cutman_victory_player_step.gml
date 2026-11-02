@@ -16,6 +16,7 @@ with (boss)
 {
     // Body disappearance ack starts the wait; particles continue concurrently.
     scr_mm1_cutman_defeat_step(next_tick, frozen);
+    scr_mm1_cutman_victory_anim_step(next_tick, frozen);
     event = scr_mm1_cutman_victory_step(next_tick, frozen, cancelled,
         cmv_defeat_done, px, supported, cmv_acquisition_done,
         cmv_teleport_done, cmv_screen_done);
@@ -30,11 +31,13 @@ if (event != 0)
     if (event == 5) boss.cmv_teleport_done = false;
     if (event == 6) boss.cmv_screen_done = false;
 }
+// Start at the real supported position; do not let the renderer move collision.
+if (boss.cmv_snap) x = boss.cmv_center;
+if (event != 0)
+    with (boss) scr_mm1_cutman_victory_anim_enter(event, other.x, other.y, next_tick);
 // Audio serial consumption is independent of phase advancement (cancel/freeze).
 with (boss) scr_mm1_cutman_victory_audio_step(frozen);
 if (!boss.cmv_advanced) return true;
-// Crossing may enter acquisition in this same call; commit X before that handoff.
-if (boss.cmv_snap) x = boss.cmv_center;
 // Before acquisition, continue real MM5 gravity under locked input. No snap Y.
 if (boss.cmv_phase <= 5)
     scr_mm1_cutman_victory_player_tick(next_tick, false, boss.cmv_move);

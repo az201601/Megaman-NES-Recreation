@@ -44,7 +44,14 @@ if (serial_new)
         cmv_acquisition_voice = -1;
     }
 }
-if (cmv_phase == 6 && cmv_acquisition_sound_requested && !cmv_acquisition_started)
+// Native F0 is before descent/landing, not delayed until teleport entry.
+if (cmv_acquisition_sound_ended && cmv_acquisition_voice != -1)
+{
+    audio_stop_sound(cmv_acquisition_voice);
+    cmv_acquisition_voice = -1;
+}
+if (cmv_phase == 6 && cmv_acquisition_sound_requested
+    && !cmv_acquisition_sound_ended && !cmv_acquisition_started)
 {
     cmv_acquisition_started = true;
     cmv_acquisition_voice = audio_play_sound(snd_mm6_weapon_acquisition, 12, false);

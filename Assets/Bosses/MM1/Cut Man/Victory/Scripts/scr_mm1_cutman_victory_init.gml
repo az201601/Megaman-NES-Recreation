@@ -30,3 +30,11 @@ cmv_fx_started = false;
 cmv_fx_count = 0;
 cmv_fx_age = 0;
 cmv_fx_tick = -1;
+// Native-derived in-room acquisition/teleport scene, owned by shared clock.
+cmv_anim_loaded = false;
+cmv_anim_started = false;
+cmv_anim_age = 0;
+cmv_anim_tick = -1;
+cmv_anim_x = 0;
+cmv_anim_y = 0;
+cmv_acquisition_sound_ended = false;
