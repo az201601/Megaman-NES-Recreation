@@ -231,3 +231,16 @@ entry (documented CPU instrumentation); nativeF0 stops it after900updates with
 See `Reference/mm5-weapon-get-extended-recovery.json` and
 `test-mm5-weapon-get-extended.mjs`. The production resource remains untouched
 until listening approval of the extended take, per the standing audio direction.
+
+
+### Extended music approved and selected
+
+User accepted the extended take with **“sure”**. The canonical source for existing
+`snd_mm5_weapon_get` is now `Audio/Approved/snd_mm5_weapon_get.wav`:byte-identical
+to the reviewed15.392s native take. Keep default volume1 and once-only/unlooped
+playback; the existing audio owner stops it on completion/abort/Room End.
+`Reference/mm5-weapon-get-music-approval.json` points to this source;
+`mm5-weapon-get-extended-approval.json` records exact scope/hash. The former
+11.482s approved excerpt remains unchanged as a historical prefix reference.
+This removes the source-duration blocker, not the outstanding connected GMS
+installation/package and runtime acceptance work. Do not install piecemeal.

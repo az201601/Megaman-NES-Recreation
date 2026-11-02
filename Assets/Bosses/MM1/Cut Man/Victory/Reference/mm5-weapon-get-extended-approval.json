@@ -1,0 +1,13 @@
+{
+  "status": "approved",
+  "userConfirmation": "sure",
+  "file": "Audio/Approved/snd_mm5_weapon_get.wav",
+  "source": "Audio/Review/mm5-weapon-get-extended-native-review.wav",
+  "sha256": "381c486d0c9e253414a6ab061c416bf6f2d85aa095de41efd075c2ad9e01d858",
+  "seconds": 15.391833333333333,
+  "resource": "snd_mm5_weapon_get",
+  "volume": 1,
+  "loop": false,
+  "scope": "Extended playback of same original MM5 GET weapon track at previously approved unboosted volume, covering approved MM6-adapted screen.",
+  "limits": "Audio approval and source selection only; connected GMS package/runtime acceptance pending."
+}
