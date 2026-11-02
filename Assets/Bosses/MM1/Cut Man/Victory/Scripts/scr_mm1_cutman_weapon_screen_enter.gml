@@ -3,6 +3,7 @@ if (argument0 != 6 || cmv_screen_started) return;
 cmv_screen_started = true;
 cmv_screen_tick = argument1;
 cmv_screen_age = 0;
+cmv_screen_intro = 0;
 cmv_screen_reveal = 0;
 cmv_screen_you_chars = 0;
 cmv_screen_weapon_chars = 0;

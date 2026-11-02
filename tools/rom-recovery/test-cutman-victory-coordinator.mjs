@@ -35,7 +35,7 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
  Object.assign(boss,{floor:Math.floor,min:Math.min,clamp:(x,a,b)=>Math.max(a,Math.min(b,x)),obj_mm1_cutman_weapon_screen:12});let overlayCreated=0;
  boss.instance_exists=o=>o===12&&overlayCreated>0;boss.instance_create=(x,y,o)=>{assert.equal(o,12);overlayCreated++;return 100;};
  boss.scr_mm1_cutman_weapon_demo_step=()=>{}; // Screen completion isolated in dedicated demo test.
- for(const name of ['enter','step']){const f=compile(read(path+'scr_mm1_cutman_weapon_screen_'+name+'.gml'));boss['scr_mm1_cutman_weapon_screen_'+name]=(...a)=>{a.forEach((v,i)=>boss['argument'+i]=v);return f(boss);};}
+ for(const name of ['enter','step','intro']){const f=compile(read(path+'scr_mm1_cutman_weapon_screen_'+name+'.gml'));boss['scr_mm1_cutman_weapon_screen_'+name]=(...a)=>{a.forEach((v,i)=>boss['argument'+i]=v);return f(boss);};}
  boss.snd_mm5_weapon_get=20;
  boss.snd_mm6_stage_clear=13;boss.snd_mm6_weapon_acquisition=95;const audioLog=[];
  boss.audio_play_sound=(...a)=>{audioLog.push(a);return 100+audioLog.length;};
@@ -67,13 +67,13 @@ const make=()=>{const p={x:3120,y:900,feet_offset:12,head_offset:12,fall_speed:0
   p.global.mm5_pause_active=true;owner.combat_tick=2000+age;const before=boss.cmv_anim_age;playerStep(p);assert.equal(boss.cmv_anim_age,before);
  }
  assert.equal(boss.cmv_entry_event,6);assert.equal(boss.cmv_reward_requested,false);assert.equal(overlayCreated,1);assert.equal(boss.cmv_screen_age,0);assert.deepEqual(audioLog.at(-1),[20,12,false]);
- p.global.mm5_pause_active=false;for(let t=3000;t<4000;t++){owner.combat_tick=t;playerStep(p);}assert.equal(boss.cmv_phase,8,'no fake screen completion/reward');assert.equal(boss.cmv_screen_age,220);assert.equal(boss.cmv_screen_demo_requested,true);assert.equal(boss.cmv_screen_done,false);assert.equal(overlayCreated,1);
+ p.global.mm5_pause_active=false;for(let t=3000;t<4000;t++){owner.combat_tick=t;playerStep(p);}assert.equal(boss.cmv_phase,8,'no fake screen completion/reward');assert.equal(boss.cmv_screen_age,814);assert.equal(boss.cmv_screen_demo_requested,true);assert.equal(boss.cmv_screen_done,false);assert.equal(overlayCreated,1);
  // Now attach actual demo owner after isolated no-owner hold, exercising real
  // native catch acknowledgements through phase9/reward request (not a fake flag).
  boss.scr_mm1_cutman_victory_reward_return=()=>{assert.equal(boss.cmv_phase,9);assert.equal(boss.cmv_screen_done,true);}; // Inventory grant independently tested by reward suite.
- boss.snd_mm1_cutman_rolling_cutter_throw=37;
+ boss.snd_mm1_cutman_rolling_cutter_throw=37;boss.cmv_screen_age=399; // Replay from approved demo preparation after isolated missing-owner hold.
  for(const name of ['step','sample']){const f=compile(read(path+'scr_mm1_cutman_weapon_demo_'+name+'.gml'));boss['scr_mm1_cutman_weapon_demo_'+name]=(...a)=>{const old=[boss.argument0,boss.argument1];a.forEach((v,i)=>boss['argument'+i]=v);try{return f(boss);}finally{[boss.argument0,boss.argument1]=old;}};}
- for(let t=4000;t<4312;t++){owner.combat_tick=t;playerStep(p);}
+ for(let t=4000;t<4415;t++){owner.combat_tick=t;playerStep(p);}
  assert.equal(boss.cmv_phase,9);assert.equal(boss.cmv_entry_event,7);assert.equal(boss.cmv_reward_requested,true);assert.equal(boss.cmv_demo_catches,2);assert.equal(audioLog.filter(a=>a[0]===37).length,2);assert.equal(boss.cmv_demo_voice,-1);
  owner.combat_tick++;playerStep(p);assert.equal(boss.cmv_entry_event,7);
  console.log('PASS:actual player/phase/motion integration through centred acquisition/teleport to custom-screen gate;airborne settles,freeze/double-call guards,cancel,no reward. Real defeat disappearance ack; real native-frame acquisition/teleport ack; real reveal/text+MM5 music;actual demo catches drive phase9/reward request;two25 sounds;terminal cleanup.');

@@ -3,7 +3,10 @@ Requires probe-mm6-screen-timing.mjs and Pillow. Does not replace approved runti
 """
 from pathlib import Path
 from PIL import Image, ImageEnhance
-import json, hashlib
+import json, hashlib, sys
+export_runtime = "--runtime-art" in sys.argv
+ref_dir=Path(__file__).resolve().parent/".work/mm6-approved-raster"
+if export_runtime:ref_dir.mkdir(parents=True,exist_ok=True)
 root=Path(__file__).resolve().parents[2]
 base=root/'Assets/Bosses/MM1/Cut Man/Victory'
 work=root/'tools/rom-recovery/.work/mm6-victory'
@@ -48,6 +51,7 @@ def native_pose(age):
  tile.putdata(data)
  return tile,cx,bg
 frames=[];throw_ages=[];catch_ages=[];active=None
+intro_frames=[];intro_indices=[]
 for age in range(end+1):
  canvas=frame.copy()
  if age<17:canvas=Image.new('RGBA',(256,240),(0,0,0,255))
@@ -89,6 +93,12 @@ for age in range(end+1):
    canvas.alpha_composite(cell,(208-sample['dx']-8,144+sample['dy']-7))
  if age>=loop_end+90:
   canvas=ImageEnhance.Brightness(canvas).enhance(max(0,1-((age-loop_end-90)//5+1)/4))
+ if age<164 and age%2==0:
+  key=canvas.tobytes()
+  found=next((i for i,p in enumerate(intro_frames) if p.tobytes()==key),None)
+  if found is None:found=len(intro_frames);intro_frames.append(canvas.copy())
+  intro_indices.append(found)
+ if export_runtime and age%2==0:canvas.save(ref_dir/f"{age//2:03d}.png")
  if age%2==0 or age==end:frames.append(canvas.convert('RGB').resize((768,720),Image.Resampling.NEAREST))
 assert throw_ages==[484,612],throw_ages
 assert catch_ages==[555,683],catch_ages
@@ -97,5 +107,20 @@ out=base/'Screen/custom-rolling-cutter-mm6-sequence-review.gif'
 durations=[30 if i%3!=2 else 40 for i in range(len(frames))];durations[-1]=900
 frames[0].save(out,save_all=True,append_images=frames[1:],duration=durations,loop=0,optimize=False)
 report={'status':'Approval-only preview; user requested MM6 animation/sequence with existing custom look. Not installed and not yet approved. Previous runtime unchanged.', 'gif':out.name,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'nativeReference':'Continuous MM6 stage0 centre-acquisition/teleport/weapon-screen trace; controlled handoff only before acquisition, no post-handoff game RAM/ROM patches. tools/rom-recovery/probe-mm6-screen-timing.mjs','sequence':{'nativeAssemblyAndFlash':[17,164],'slideRight2pxPerUpdate':[164,204],'typingStart':text_start,'typingEndExclusive':text_end,'letterInterval':4,'portraitFadeStart':fade_start,'largePortraitReplaced':small_start,'demoLoop':[loop_start,loop_end],'attemptsEvery':64,'actualThrows':throw_ages,'nativeCatches':catch_ages,'end':end},'adaptations':['Blue/steel custom frame and approved font/text/grey-white Cutter armour retained.','Original native pre-flash portrait animation geometry extracted from continuous rendered frames; armour families recoloured grey/white.','ROLLING CUTTER14 vs B.ATTACK8 adds6 characters/24updates.','Custom palette fade approximates native luminance transitions; not native palette-bit-exact.','MM6 replaces large portrait with small demonstrator; right-pane small actor lowered24px to keep leftward Cutter below custom name text.','MM6 stage0 shot-phase24hex and240-update loop; native Cutter busy-lock rejects intervening64-update attempts until catch.','No Beat part reward,password or score;90-update tail and20-update exitfade retained.','GIF silent; native MM5 music/original-volume and approved player25 sound are unchanged production requirements.','Approval GIF only; not actual updated GML runtime or final package.']}
+approval=base/'Screen/mm6-sequence-approval.json'
+if approval.exists():
+ approved=json.loads(approval.read_text());assert approved['sha256']==report['sha256'];report['status']='Approved preview; MM6 runtime sequence integration in progress, GMS runtime acceptance pending.';report['userConfirmation']=approved['userConfirmation']
 (base/'Reference/mm6-sequence-review.json').write_text(json.dumps(report,indent=2)+'\n')
 print(out, out.stat().st_size,'bytes',len(frames),'frames',throw_ages,catch_ages)
+
+import sys
+if '--runtime-art' in sys.argv:
+ strip=Image.new('RGBA',(256*len(intro_frames),240))
+ for i,p in enumerate(intro_frames):strip.paste(p,(i*256,0))
+ name=f'spr_mm1_cutter_screen_intro_strip{len(intro_frames)}'
+ strip.save(base/'Screen'/f'{name}.png')
+ g='// Generated from the exact approved review renderer. Two-update samples.\ncmv_screen_intro = 0;\nswitch (floor(cmv_screen_age / 2))\n{\n'
+ for i,k in enumerate(intro_indices):g+=f'    case {i}: cmv_screen_intro = {k}; break;\n'
+ (base/'Scripts/scr_mm1_cutman_weapon_screen_intro.gml').write_text(g+'}\n')
+ (base/'Reference/mm6-screen-runtime-art.json').write_text(json.dumps({'sprite':name,'frames':len(intro_frames),'cell':[256,240],'origin':[0,0],'indices':intro_indices,'sha256':hashlib.sha256((base/'Screen'/f'{name}.png').read_bytes()).hexdigest(),'method':'Deduplicated initial0..163 two-update rasters from the approved review generator; character assembly/flash only, no audio or clocks. After164 the runtime draws individual sprites, original font and native Cutter samples.'},indent=2)+'\n')
+ print('Runtime intro',name,len(intro_frames))

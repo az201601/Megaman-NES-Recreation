@@ -1,5 +1,5 @@
 {
-  "status": "User approved MM6-sequence GIF while retaining custom visual style. Updated runtime integration and GMS installation acceptance pending.",
+  "status": "Approved preview; MM6 runtime sequence integration in progress, GMS runtime acceptance pending.",
   "gif": "custom-rolling-cutter-mm6-sequence-review.gif",
   "sha256": "89a6358bc63302c12bd9128f4bee8b8cce2af42998e4b6731872d9f061f30c2e",
   "nativeReference": "Continuous MM6 stage0 centre-acquisition/teleport/weapon-screen trace; controlled handoff only before acquisition, no post-handoff game RAM/ROM patches. tools/rom-recovery/probe-mm6-screen-timing.mjs",

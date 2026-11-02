@@ -63,3 +63,5 @@ cmv_demo_throwing = false;
 cmv_demo_throw_serial = 0;
 cmv_demo_audio_serial = 0;
 cmv_demo_voice = -1;
+cmv_demo_active = -1;
+cmv_screen_intro = 0;

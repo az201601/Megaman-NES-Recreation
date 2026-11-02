@@ -187,3 +187,34 @@ User accepted the new GIF with **“yes”**. `mm6-sequence-approval.json` locks
 the exact approved GIF hash and scope. This replaces the earlier custom timing
 approval, not our custom appearance or approved audio. Updated runtime timing
 integration and connected GMS installation/runtime acceptance remain pending.
+
+
+### Approved MM6 sequence integrated in source
+
+The current screen Enter/Step/Draw now implements the approved sequence through
+update814. The initial164 updates use22 deduplicated256x240 intro subimages,
+from the exact approved generator (assembly/flash, not an independent timer).
+`spr_mm1_cutter_screen_intro_strip22` has origin0,0;22 cells256x240, no scaling.
+After that, live Draw uses separate sprites/font,40-update slide,continuous
+4-update typing,90-update hold,portrait fade/replacement,small-player preparation
+and fade,240-update MM6 cadence,90-update tail and20-update exit fade.
+
+New `scr_mm1_cutman_weapon_screen_intro` selects shared-clock intro frames.
+New origin0,0 mirrored resources:`spr_mm5_cutter_demo_idle_left`32x32,
+`spr_mm5_cutter_demo_throw_left`40x40, and
+`spr_mm1_player_rolling_cutter_demo_left_strip2`two16x16 cells. The mirrored
+resources exactly retain the approved GIF's alignment, not a collision mask.
+The native busy-lock produces actual throws at484/612 and catches555/683.
+Only both native catches plus completed exit fade acknowledge screen completion.
+Approved25 audio remains once per actual throw, with owned pause/resume/disposal.
+
+Actual-GML raster compared across408 approved samples:maximum component delta1
+(original MM5 off-white glyphs/integer tint rounding), no layout/geometry/timing
+differences. Actual-GML coordinator reaches phase9/reward request with two real
+catch acknowledgements. The separate reward suite verifies once-only inventory
+and stage-select return. No GMS compile/render/audio acceptance is claimed.
+
+**Do not install these files piecemeal.** Connected incremental GMS package and
+runtime validation remain pending. The approved MM5 audio resource is still the
+unboosted finite11.482s take, not a proven full-cycle loop; the new13.57s screen
+is longer, so full-duration music playback needs verification before packaging.
