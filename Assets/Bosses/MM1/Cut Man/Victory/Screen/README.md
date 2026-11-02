@@ -63,3 +63,10 @@ Do not set screenDone on a timer to bypass the unfinished demonstration.
 Latest user review: grey/white portrait and removal of menu row approved.
 Top Cut Man nameplate subsequently removed on request; no boss-name box on this
 or future weapon-get screens. Main weapon title and bottom acquired plaque stay.
+
+## Final static appearance approved
+
+User confirmed “yes!” after removal of the top Cut Man box.
+`appearance-approval.json` locks the approved preview hash and exact design scope.
+Keep this layout while implementing reveal/typing,weapon demo and audio/return
+ownership. Static appearance approval is not installed/runtime acceptance.

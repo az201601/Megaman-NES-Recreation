@@ -1,5 +1,5 @@
 {
-  "status": "Layout/weapon-colour revision approved; top Cut Man nameplate removed per latest request. Not installed.",
+  "status": "Final revised static appearance approved by user. Animation/demo/GMS runtime and installation pending.",
   "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; bottom acquired plaque; no top boss-name box; MM6 large Mega Man adapted to Rolling Cutter grey/white; original MM5 sprite font. No weapon-menu symbol,abbreviation or card for any weapon. No score/CLEAR POINTS.",
   "portrait": {
     "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
