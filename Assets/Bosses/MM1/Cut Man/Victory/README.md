@@ -475,3 +475,14 @@ D minor,144BPM, lower/sustained melody, reduced upper-register decoration, stron
 bass/backbeat. Original composition, no borrowed ROM melody. Generator and current
 metadata now describe revision2; revision1 WAV retained only as review history.
 No production integration or playback changes; approval still required.
+
+### Custom music revision3 — driving action direction
+
+User rejected revision2, then explicitly chose **driving action theme** when asked
+about direction. Revision3 is a new riff-led composition rather than another
+minor-key retune: repeated sixteenth-note hook, choppy low root/fifth backing,
+syncopated bass and more prominent noise drums/fills.160BPM,8bars,12seconds.
+`Audio/Custom Review/rolling-cutter-weapon-get-action-v3.wav` is audition-only;
+metadata/score in `Reference/custom-weapon-get-music-action-v3.json`, reproducible
+via `compose-rolling-cutter-action.mjs`. Revisions1/2 remain rejected review history.
+No custom music has been approved or integrated; gameplay/approved audio unchanged.
