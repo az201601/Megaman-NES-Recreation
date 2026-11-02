@@ -300,3 +300,18 @@ victory fields. End Frame checks victory before world updates and after shots,
 preventing late hazards/spawns on the lethal update. See Victory/CONTROLLER-CONTRACT.
 The phase/effects coordinator and full screen/reward integration remain missing;
 installing only this checkpoint would hold at defeat. Entrance unchanged.
+
+## Required fix: no post-defeat projectile damage
+
+User explicitly requires that lingering boss projectiles cannot hurt Mega Man
+once the boss is defeated; do not reproduce the reported MM1 behavior. The
+lethal-hit latch immediately disables Cut Man and clears the active cutter, before
+victory effects/audio. Contact rejects `cm_defeat_pending` independently of active
+or cutter flags, and the central shot pass exits before subsequent contacts.
+This is permanent encounter shutdown, not temporary player invulnerability.
+
+`test-cutman-post-defeat-safety.mjs` executes actual hit/contact GML for normal,
+partial and full shots with overlapping boss/body/cutter. Same-update and600 later
+contact passes cause zero damage, even with artificially stale cutter/active flags.
+Six cases PASS. Source regression only; still requires installed GMS acceptance.
+Apply the same ownership rule to every later boss's projectiles.
