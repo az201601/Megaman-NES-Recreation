@@ -446,3 +446,23 @@ Still remaining: custom Rolling Cutter screen and custom music with MM6-style
 weapon demonstration, persistent unlock/completion and stage-selection return,
 final connected package/incremental installation instructions, GMS1.4 runtime
 acceptance. Do not install this source checkpoint in isolation.
+
+## Reward/return receiver and custom music audition draft
+
+The coordinator now has a guarded phase9 receiver for actual future screen/demo
+completion. It unlocks accepted R.CUTTER slot1 with28energy only when newly owned,
+marks session completion and requests the established stage-select room once.
+No tanks/lives/E-perch/other weapons change; repeat clear does not refill Cutter.
+Missing persistent inventory holds safely; no reset-on-victory. The proposed
+new-game-only flag append is tested against accepted full inventory initialization.
+No disk-save format or stage-select cleared marker is claimed implemented.
+
+Custom original music draft: `Audio/Custom Review/rolling-cutter-weapon-get-original-draft.wav`,
+12.8seconds/8bars/150BPM, pulse/pulse/triangle/noise. Deterministic offline NES-style
+synth and original score, not ROM music. Awaiting listening approval; NOT wired
+into audio. Existing approved tracks/effects unchanged.
+
+Remaining: custom Rolling Cutter screen and MM6-style demonstration, approval and
+integration of custom music, stage-select completion presentation, final connected
+install package and GMS runtime acceptance. The current production screen gate
+still cannot complete itself, so no early unlock/return is possible.

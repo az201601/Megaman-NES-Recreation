@@ -38,3 +38,6 @@ cmv_anim_tick = -1;
 cmv_anim_x = 0;
 cmv_anim_y = 0;
 cmv_acquisition_sound_ended = false;
+// Once-only persistent inventory grant and stage-selection transition.
+cmv_reward_committed = false;
+cmv_return_started = false;

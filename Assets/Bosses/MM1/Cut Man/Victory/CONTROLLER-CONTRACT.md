@@ -206,3 +206,44 @@ Custom-screen completion stays false: no reward or scene return fabricated.
 recovered commands. The combined coordinator test now runs actual acquisition,
 teleport, audio, phase and collision code through phase8, then holds1000 updates
 without invented screen completion. GMS compilation/rendering/listening pending.
+
+## Persistent-session reward/return receiver staged and gated
+
+`scr_mm1_cutman_victory_reward_return(cancelled)` is now called by the sole
+coordinator in phase9 ONLY. It additionally requires screen completion and the
+once-only reward request, rejects cancellation, and waits safely for the existing
+`obj_mm5_pause_state`/ready inventory. It never creates or resets the inventory.
+Actual custom-screen completion remains unimplemented/false, so this receiver
+cannot grant anything prematurely in the current draft.
+
+On the first grant: existing `global.mm5_pause_owned[1]` (R.CUTTER) becomes true;
+a newly owned Cutter receives28 energy; `global.mm1_cutman_cleared` becomes true.
+An already owned Cutter retains its current energy (no repeat-clear refill).
+No E/W/M tanks, lives, other weapons/energy, Balancer, or E-perch flag change.
+`cmv_return_started` is latched before owned-audio disposal and the request to
+`rm_mm1_stage_select` (the established room name in docs/mm1-observation-plan.md).
+Duplicate coordinator calls cannot grant/transition again.
+
+Future new-game-only boundary: append
+`Hooks/scr_mm5_pause_inventory_init_victory_append.gml` after the accepted E-Tank
+flag in `scr_mm5_pause_inventory_init`. Stage-entry false exits above the append;
+only explicit new game clears the completion flag. No accepted E-Tank source was
+replaced in this checkpoint. This is persistent SESSION state using the accepted
+persistent inventory object, NOT a new disk-save system or stage-select cleared
+marker implementation. Stage-select visual acknowledgement remains to connect.
+
+`test-cutman-victory-reward.mjs` executes actual GML grant/return and the exact
+append combined with accepted full inventory initialization. It covers every
+pre-screen phase, abort/cancel, missing-state retry,600 duplicate calls, preserved
+inventory/lives/tanks, no repeat refill, new-game vs stage-entry reset.
+
+## Custom music audition draft (not integrated)
+
+`Audio/Custom Review/rolling-cutter-weapon-get-original-draft.wav` is an original
+8bar/12.8second150BPM four-voice composition, generated deterministically by
+`compose-rolling-cutter-screen.mjs`. Two pulses, triangle bass and noise percussion;
+no native16 fallback, ROM music transcription or sampled ROM audio. This is an
+offline NES-style software synth, not APU/hardware emulation. Metadata/hash and
+score are in `Reference/custom-weapon-get-music-draft.json`.
+Listening approval is required before production playback. No existing approved
+WAV bytes, gains or sound resources changed. Screen/demo still unimplemented.

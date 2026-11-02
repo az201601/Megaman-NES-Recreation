@@ -1,0 +1,149 @@
+{
+  "status": "Original custom composition DRAFT. Listening approval required; NOT integrated.",
+  "file": "Audio/Custom Review/rolling-cutter-weapon-get-original-draft.wav",
+  "sha256": "1f2f7854a948f951986dbec51891ec2e296d112c5d58719ba5b04de7a4160c80",
+  "composition": "Eight original bars in D major,150BPM; pulse lead,quiet pulse arpeggio,triangle bass,15bit-LFSR noise percussion. No ROM notes/music/samples copied.",
+  "method": "Offline deterministic four-voice synth. Pulse/triangle frequencies quantized to NES-like periods; envelopes are a custom software instrument, not an APU emulation or hardware recording.",
+  "sampleRate": 48000,
+  "channels": 1,
+  "bits": 16,
+  "bpm": 150,
+  "bars": 8,
+  "seconds": 12.8,
+  "peak": 0.62,
+  "loop": "One complete8bar phrase. Bar8 dominant returns to bar1 tonic. Sample-accurate musical length; not a claim of a native seamless streaming loop.",
+  "melody": [
+    [
+      74,
+      78,
+      81,
+      78,
+      83,
+      81,
+      78,
+      76
+    ],
+    [
+      78,
+      81,
+      85,
+      83,
+      81,
+      78,
+      76,
+      73
+    ],
+    [
+      74,
+      79,
+      83,
+      81,
+      79,
+      78,
+      76,
+      74
+    ],
+    [
+      73,
+      76,
+      81,
+      85,
+      83,
+      81,
+      76,
+      -1
+    ],
+    [
+      78,
+      81,
+      85,
+      88,
+      85,
+      83,
+      81,
+      78
+    ],
+    [
+      79,
+      83,
+      86,
+      85,
+      83,
+      81,
+      79,
+      78
+    ],
+    [
+      76,
+      79,
+      83,
+      81,
+      79,
+      76,
+      74,
+      73
+    ],
+    [
+      76,
+      81,
+      85,
+      83,
+      81,
+      76,
+      73,
+      69
+    ]
+  ],
+  "chords": [
+    [
+      62,
+      66,
+      69
+    ],
+    [
+      59,
+      62,
+      66
+    ],
+    [
+      55,
+      59,
+      62
+    ],
+    [
+      57,
+      61,
+      64
+    ],
+    [
+      54,
+      57,
+      61
+    ],
+    [
+      55,
+      59,
+      62
+    ],
+    [
+      52,
+      55,
+      59
+    ],
+    [
+      57,
+      61,
+      64
+    ]
+  ],
+  "bass": [
+    38,
+    35,
+    31,
+    33,
+    30,
+    31,
+    28,
+    33
+  ]
+}

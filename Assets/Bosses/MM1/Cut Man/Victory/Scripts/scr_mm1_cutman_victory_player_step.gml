@@ -37,6 +37,10 @@ if (event != 0)
     with (boss) scr_mm1_cutman_victory_anim_enter(event, other.x, other.y, next_tick);
 // Audio serial consumption is independent of phase advancement (cancel/freeze).
 with (boss) scr_mm1_cutman_victory_audio_step(frozen);
+// Reward receiver retries only after actual screen completion. No screen timer.
+// A missing persistent state holds safely rather than resetting the inventory.
+if (boss.cmv_phase == 9)
+    with (boss) scr_mm1_cutman_victory_reward_return(cancelled);
 if (!boss.cmv_advanced) return true;
 // Before acquisition, continue real MM5 gravity under locked input. No snap Y.
 if (boss.cmv_phase <= 5)
