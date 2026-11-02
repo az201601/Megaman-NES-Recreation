@@ -1,0 +1,10 @@
+{
+  "status": "User confirmed track identity and chose original unboosted volume; playback integration pending",
+  "identityConfirmation": "it is that but seems a bit quiet did you quieten it do wn?",
+  "volumeConfirmation": "no we will use the original volume..",
+  "file": "Audio/Approved/snd_mm5_weapon_get_review_excerpt.wav",
+  "source": "Audio/Review/mm5-weapon-get-native-scene-review.wav",
+  "sha256": "db43f2417cc02b391cbfcdf92d53d8a0b1ffe6a54d3cf673cdfc3c26c0903c0f",
+  "processing": "Byte-identical native APU review excerpt. Original raw emulator output level; no gain, normalization, trimming, resampling or2x boost. Future sound volume1 for this source.",
+  "limitation": "11.482second native scene excerpt, not a verified complete-cycle/seamless loop. Track identity/volume approval does not establish looping or installed playback acceptance."
+}

@@ -541,3 +541,13 @@ node tools/rom-recovery/test-mm5-weapon-get-music.mjs
 Test independently executes the native scene's request through the6502 soundqueue,
 audits3supplied-ROM spans and validates trace/screenshot/WAV hashes and no clipping.
 Custom MM6-adapted Rolling Cutter screen/demo remains the visual production plan.
+
+### MM5 music identity and original volume confirmed
+
+User confirmed this is the requested track, then chose “no we will use the
+original volume..”. Preserve raw native APU preview level: no2x boost, gain or
+normalization. Approved review copy is byte-identical at
+`Audio/Approved/snd_mm5_weapon_get_review_excerpt.wav`; approval/hash in
+`Reference/mm5-weapon-get-music-approval.json`. Sound volume1 for this source.
+The11.482second excerpt is not yet a verified complete-cycle/seamless loop;
+actual screen/demo/playback integration and installed acceptance remain pending.

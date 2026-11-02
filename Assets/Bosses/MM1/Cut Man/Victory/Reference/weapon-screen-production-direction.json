@@ -1,5 +1,5 @@
 {
-  "status": "Current user-directed production plan; MM5 track recovery/scene identification/listening verification pending",
+  "status": "Current production plan. MM5 track identity and original volume confirmed; screen/demo/playback integration pending.",
   "userDirection": "you know what i change my mind.. can we do megaman 5 get X weapon music and do an adaptation of megaman 6's screen but custom",
   "music": "Original Mega Man5 weapon-acquisition / GET [weapon] music, recovered from supplied USA ROM. Not a new original composition and not MM6 track16.",
   "screen": "Custom adaptation of Mega Man6 weapon-get screen for YOU GOT ROLLING CUTTER, retaining MM6-style new-weapon demonstration. Not a verbatim MM6 screen or native MM6 weapon name.",
@@ -12,5 +12,6 @@
     "All boss-owned attacks permanently harmless immediately at lethal hit"
   ],
   "supersedes": "Original custom action music approval; retained only as historical review material.",
-  "verification": "Identify the MM5 track in its actual weapon-get scene; do not guess track ID from soundtrack numbering or integrate before listening confirmation."
+  "verification": "Native MM5 Gravity Hold award scene identified command14. User confirmed track and chose unboosted original level. Complete-cycle/loop recovery and GMS playback remain separate acceptance steps.",
+  "musicApproval": "Reference/mm5-weapon-get-music-approval.json"
 }
