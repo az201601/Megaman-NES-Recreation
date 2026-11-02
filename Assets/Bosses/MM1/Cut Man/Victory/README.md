@@ -486,3 +486,13 @@ syncopated bass and more prominent noise drums/fills.160BPM,8bars,12seconds.
 metadata/score in `Reference/custom-weapon-get-music-action-v3.json`, reproducible
 via `compose-rolling-cutter-action.mjs`. Revisions1/2 remain rejected review history.
 No custom music has been approved or integrated; gameplay/approved audio unchanged.
+
+### Custom weapon-get music approved
+
+User approved revision3 driving-action take: “oksy we will do this on e”.
+Production source `Audio/Approved/snd_mm1_rolling_cutter_weapon_get.wav` is a
+byte-identical copy of the audition, SHA-256 locked by
+`Reference/custom-weapon-get-music-approval.json`. No gain/trim/resampling changes.
+This supersedes the pending approval status above; revisions1/2 remain rejected.
+Future sound resource `snd_mm1_rolling_cutter_weapon_get`. Actual custom-screen
+playback/demo integration and installed acceptance remain pending.
