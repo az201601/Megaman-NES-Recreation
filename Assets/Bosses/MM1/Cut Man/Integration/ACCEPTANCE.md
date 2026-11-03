@@ -1,7 +1,11 @@
 # Connected Cut Man — installed acceptance checklist
 
-Source/package tests pass separately. Every checkbox below remains **pending**
-until exercised in GameMaker Studio1.4.1760. Stop on the first failure.
+Source/package tests pass separately. The user has now confirmed the installed
+victory sequence finishes, returns to stage selection and retains R.CUTTER in
+the pause menu after stage re-entry; full teleport-out sound also confirmed and
+F8 test block removed. See INSTALLED-VICTORY-ACCEPTANCE.json. Other checkboxes
+remain pending unless individually reported; this is not blanket acceptance of
+all combat/pause/death cases. Stop on the first failure.
 
 ## Compile and baseline
 - [ ] Back up the accepted post-entrance project; apply entire guide, fresh run.
