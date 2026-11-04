@@ -1,0 +1,245 @@
+{
+  "method": "Original natural MM5 hit, preserved native auxiliary effect slot5. Native OAM tile56hex/palette/flip converted using Mesen colour adapter; an opaque-pixel-matched8x8frame. Three top-left offsets(-4,-23),(8,-19),(-16,-19) relative to auxiliary centre; X follows hurt player, Y stays at hit-time Y. Present8updates; no redraw.",
+  "trace": [
+    {
+      "frame": 1,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "cells": [
+        {
+          "x": 124,
+          "y": 121,
+          "tile": 86,
+          "attr": 65,
+          "dx": -4,
+          "dy": -23
+        },
+        {
+          "x": 136,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": 8,
+          "dy": -19
+        },
+        {
+          "x": 112,
+          "y": 125,
+          "tile": 86,
+          "attr": 65,
+          "dx": -16,
+          "dy": -19
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "cells": []
+    },
+    {
+      "frame": 10,
+      "cells": []
+    }
+  ]
+}

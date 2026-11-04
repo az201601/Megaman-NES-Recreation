@@ -1,0 +1,1583 @@
+{
+  "method": "Original USA divide helperF207 and selection loopAE7F executed instruction-by-instruction for all256 possible input bytes with bank1D mapped. No RNG uniformity claim; not a natural kill-frequency trial.",
+  "spans": [
+    {
+      "bank": 29,
+      "address": 44633,
+      "hex": "bd4005c904d0f8a52f30f4a5e665e76500e59d85e66501e5e5659285e78500a93285012007f2a004a503d91baf90068810f84cc4f2b920af2098eaa9009d08049d2004b925af9d6804a9ff9d8004201eeaa9b79d0003a9cc9d8805a9ad9da00560",
+      "offset": 241257
+    },
+    {
+      "bank": 29,
+      "address": 44827,
+      "hex": "0e0a0803027774757876132313232300000a020a02000000000000000000242400000000242424242424242424bac4d8d8dcdcce0808080808080808aeaeaeaeaeaeaeafafafafafafafaf",
+      "offset": 241451
+    },
+    {
+      "bank": 31,
+      "address": 61959,
+      "hex": "a90085028503a5000501d003850260a00806022600260338a503e50190048503e60288d0ec60",
+      "offset": 258583
+    }
+  ],
+  "thresholds": [
+    14,
+    10,
+    8,
+    3,
+    2
+  ],
+  "animations": [
+    119,
+    116,
+    117,
+    120,
+    118
+  ],
+  "counts": {
+    "none": 180,
+    "small_health": 28,
+    "large_health": 10,
+    "small_weapon": 20,
+    "large_weapon": 12,
+    "extra_life": 6
+  },
+  "rolls": [
+    {
+      "roll": 0,
+      "remainder": 0,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 1,
+      "remainder": 1,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 2,
+      "remainder": 2,
+      "index": 3,
+      "kind": "extra_life"
+    },
+    {
+      "roll": 3,
+      "remainder": 3,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 4,
+      "remainder": 4,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 5,
+      "remainder": 5,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 6,
+      "remainder": 6,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 7,
+      "remainder": 7,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 8,
+      "remainder": 8,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 9,
+      "remainder": 9,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 10,
+      "remainder": 10,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 11,
+      "remainder": 11,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 12,
+      "remainder": 12,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 13,
+      "remainder": 13,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 14,
+      "remainder": 14,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 15,
+      "remainder": 15,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 16,
+      "remainder": 16,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 17,
+      "remainder": 17,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 18,
+      "remainder": 18,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 19,
+      "remainder": 19,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 20,
+      "remainder": 20,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 21,
+      "remainder": 21,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 22,
+      "remainder": 22,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 23,
+      "remainder": 23,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 24,
+      "remainder": 24,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 25,
+      "remainder": 25,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 26,
+      "remainder": 26,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 27,
+      "remainder": 27,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 28,
+      "remainder": 28,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 29,
+      "remainder": 29,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 30,
+      "remainder": 30,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 31,
+      "remainder": 31,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 32,
+      "remainder": 32,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 33,
+      "remainder": 33,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 34,
+      "remainder": 34,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 35,
+      "remainder": 35,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 36,
+      "remainder": 36,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 37,
+      "remainder": 37,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 38,
+      "remainder": 38,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 39,
+      "remainder": 39,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 40,
+      "remainder": 40,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 41,
+      "remainder": 41,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 42,
+      "remainder": 42,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 43,
+      "remainder": 43,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 44,
+      "remainder": 44,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 45,
+      "remainder": 45,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 46,
+      "remainder": 46,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 47,
+      "remainder": 47,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 48,
+      "remainder": 48,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 49,
+      "remainder": 49,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 50,
+      "remainder": 0,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 51,
+      "remainder": 1,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 52,
+      "remainder": 2,
+      "index": 3,
+      "kind": "extra_life"
+    },
+    {
+      "roll": 53,
+      "remainder": 3,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 54,
+      "remainder": 4,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 55,
+      "remainder": 5,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 56,
+      "remainder": 6,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 57,
+      "remainder": 7,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 58,
+      "remainder": 8,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 59,
+      "remainder": 9,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 60,
+      "remainder": 10,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 61,
+      "remainder": 11,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 62,
+      "remainder": 12,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 63,
+      "remainder": 13,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 64,
+      "remainder": 14,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 65,
+      "remainder": 15,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 66,
+      "remainder": 16,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 67,
+      "remainder": 17,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 68,
+      "remainder": 18,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 69,
+      "remainder": 19,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 70,
+      "remainder": 20,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 71,
+      "remainder": 21,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 72,
+      "remainder": 22,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 73,
+      "remainder": 23,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 74,
+      "remainder": 24,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 75,
+      "remainder": 25,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 76,
+      "remainder": 26,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 77,
+      "remainder": 27,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 78,
+      "remainder": 28,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 79,
+      "remainder": 29,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 80,
+      "remainder": 30,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 81,
+      "remainder": 31,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 82,
+      "remainder": 32,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 83,
+      "remainder": 33,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 84,
+      "remainder": 34,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 85,
+      "remainder": 35,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 86,
+      "remainder": 36,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 87,
+      "remainder": 37,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 88,
+      "remainder": 38,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 89,
+      "remainder": 39,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 90,
+      "remainder": 40,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 91,
+      "remainder": 41,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 92,
+      "remainder": 42,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 93,
+      "remainder": 43,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 94,
+      "remainder": 44,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 95,
+      "remainder": 45,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 96,
+      "remainder": 46,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 97,
+      "remainder": 47,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 98,
+      "remainder": 48,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 99,
+      "remainder": 49,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 100,
+      "remainder": 0,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 101,
+      "remainder": 1,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 102,
+      "remainder": 2,
+      "index": 3,
+      "kind": "extra_life"
+    },
+    {
+      "roll": 103,
+      "remainder": 3,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 104,
+      "remainder": 4,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 105,
+      "remainder": 5,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 106,
+      "remainder": 6,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 107,
+      "remainder": 7,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 108,
+      "remainder": 8,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 109,
+      "remainder": 9,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 110,
+      "remainder": 10,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 111,
+      "remainder": 11,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 112,
+      "remainder": 12,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 113,
+      "remainder": 13,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 114,
+      "remainder": 14,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 115,
+      "remainder": 15,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 116,
+      "remainder": 16,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 117,
+      "remainder": 17,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 118,
+      "remainder": 18,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 119,
+      "remainder": 19,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 120,
+      "remainder": 20,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 121,
+      "remainder": 21,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 122,
+      "remainder": 22,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 123,
+      "remainder": 23,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 124,
+      "remainder": 24,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 125,
+      "remainder": 25,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 126,
+      "remainder": 26,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 127,
+      "remainder": 27,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 128,
+      "remainder": 28,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 129,
+      "remainder": 29,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 130,
+      "remainder": 30,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 131,
+      "remainder": 31,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 132,
+      "remainder": 32,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 133,
+      "remainder": 33,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 134,
+      "remainder": 34,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 135,
+      "remainder": 35,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 136,
+      "remainder": 36,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 137,
+      "remainder": 37,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 138,
+      "remainder": 38,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 139,
+      "remainder": 39,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 140,
+      "remainder": 40,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 141,
+      "remainder": 41,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 142,
+      "remainder": 42,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 143,
+      "remainder": 43,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 144,
+      "remainder": 44,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 145,
+      "remainder": 45,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 146,
+      "remainder": 46,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 147,
+      "remainder": 47,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 148,
+      "remainder": 48,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 149,
+      "remainder": 49,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 150,
+      "remainder": 0,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 151,
+      "remainder": 1,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 152,
+      "remainder": 2,
+      "index": 3,
+      "kind": "extra_life"
+    },
+    {
+      "roll": 153,
+      "remainder": 3,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 154,
+      "remainder": 4,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 155,
+      "remainder": 5,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 156,
+      "remainder": 6,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 157,
+      "remainder": 7,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 158,
+      "remainder": 8,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 159,
+      "remainder": 9,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 160,
+      "remainder": 10,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 161,
+      "remainder": 11,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 162,
+      "remainder": 12,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 163,
+      "remainder": 13,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 164,
+      "remainder": 14,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 165,
+      "remainder": 15,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 166,
+      "remainder": 16,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 167,
+      "remainder": 17,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 168,
+      "remainder": 18,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 169,
+      "remainder": 19,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 170,
+      "remainder": 20,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 171,
+      "remainder": 21,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 172,
+      "remainder": 22,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 173,
+      "remainder": 23,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 174,
+      "remainder": 24,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 175,
+      "remainder": 25,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 176,
+      "remainder": 26,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 177,
+      "remainder": 27,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 178,
+      "remainder": 28,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 179,
+      "remainder": 29,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 180,
+      "remainder": 30,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 181,
+      "remainder": 31,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 182,
+      "remainder": 32,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 183,
+      "remainder": 33,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 184,
+      "remainder": 34,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 185,
+      "remainder": 35,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 186,
+      "remainder": 36,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 187,
+      "remainder": 37,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 188,
+      "remainder": 38,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 189,
+      "remainder": 39,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 190,
+      "remainder": 40,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 191,
+      "remainder": 41,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 192,
+      "remainder": 42,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 193,
+      "remainder": 43,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 194,
+      "remainder": 44,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 195,
+      "remainder": 45,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 196,
+      "remainder": 46,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 197,
+      "remainder": 47,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 198,
+      "remainder": 48,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 199,
+      "remainder": 49,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 200,
+      "remainder": 0,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 201,
+      "remainder": 1,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 202,
+      "remainder": 2,
+      "index": 3,
+      "kind": "extra_life"
+    },
+    {
+      "roll": 203,
+      "remainder": 3,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 204,
+      "remainder": 4,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 205,
+      "remainder": 5,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 206,
+      "remainder": 6,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 207,
+      "remainder": 7,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 208,
+      "remainder": 8,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 209,
+      "remainder": 9,
+      "index": 1,
+      "kind": "large_health"
+    },
+    {
+      "roll": 210,
+      "remainder": 10,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 211,
+      "remainder": 11,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 212,
+      "remainder": 12,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 213,
+      "remainder": 13,
+      "index": 0,
+      "kind": "small_weapon"
+    },
+    {
+      "roll": 214,
+      "remainder": 14,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 215,
+      "remainder": 15,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 216,
+      "remainder": 16,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 217,
+      "remainder": 17,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 218,
+      "remainder": 18,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 219,
+      "remainder": 19,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 220,
+      "remainder": 20,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 221,
+      "remainder": 21,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 222,
+      "remainder": 22,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 223,
+      "remainder": 23,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 224,
+      "remainder": 24,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 225,
+      "remainder": 25,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 226,
+      "remainder": 26,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 227,
+      "remainder": 27,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 228,
+      "remainder": 28,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 229,
+      "remainder": 29,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 230,
+      "remainder": 30,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 231,
+      "remainder": 31,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 232,
+      "remainder": 32,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 233,
+      "remainder": 33,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 234,
+      "remainder": 34,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 235,
+      "remainder": 35,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 236,
+      "remainder": 36,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 237,
+      "remainder": 37,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 238,
+      "remainder": 38,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 239,
+      "remainder": 39,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 240,
+      "remainder": 40,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 241,
+      "remainder": 41,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 242,
+      "remainder": 42,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 243,
+      "remainder": 43,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 244,
+      "remainder": 44,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 245,
+      "remainder": 45,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 246,
+      "remainder": 46,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 247,
+      "remainder": 47,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 248,
+      "remainder": 48,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 249,
+      "remainder": 49,
+      "index": -1,
+      "kind": "none"
+    },
+    {
+      "roll": 250,
+      "remainder": 0,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 251,
+      "remainder": 1,
+      "index": 4,
+      "kind": "large_weapon"
+    },
+    {
+      "roll": 252,
+      "remainder": 2,
+      "index": 3,
+      "kind": "extra_life"
+    },
+    {
+      "roll": 253,
+      "remainder": 3,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 254,
+      "remainder": 4,
+      "index": 2,
+      "kind": "small_health"
+    },
+    {
+      "roll": 255,
+      "remainder": 5,
+      "index": 2,
+      "kind": "small_health"
+    }
+  ]
+}

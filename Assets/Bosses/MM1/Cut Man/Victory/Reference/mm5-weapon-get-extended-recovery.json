@@ -1,0 +1,44 @@
+{
+  "status": "Extended original-level take approved by user sure and copied byte-identically to production source. Connected GMS installation/runtime acceptance pending.",
+  "romSha256": "32bd2b4ecd2129aa5337afe9171696ef35646d3fd597339aebba19221764521c",
+  "file": "Audio/Review/mm5-weapon-get-extended-native-review.wav",
+  "sha256": "381c486d0c9e253414a6ab061c416bf6f2d85aa095de41efd075c2ad9e01d858",
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "samples": 738808,
+  "seconds": 15.391833333333333,
+  "peak": 0.41943359375,
+  "warmPeak": 0,
+  "approvedPrefixSamples": 551145,
+  "approvedPrefixPcmSha256": "bf639448f10ad437ae5274e12fefb8f5d4c436c5defd61cafd6be5e2031e22a8",
+  "screenDuration": 13.566666666666666,
+  "lateMusicRms": 0.06920579764104975,
+  "finalTailRms": 0,
+  "events": [
+    {
+      "frame": 26,
+      "command": 20,
+      "action": "native scene track14 dispatch"
+    },
+    {
+      "frame": 716,
+      "command": 19,
+      "action": "suppressed later-screen command; original driver continues track14",
+      "samples": 551145
+    },
+    {
+      "frame": 926,
+      "command": 240,
+      "action": "native F0 stop after900 updates"
+    }
+  ],
+  "rts": "e041",
+  "method": "Same naturally booted stage/native main restart/warmup as approved recording. Original scene issues14. At FF9C later non14/nonfinalF0 commands are skipped with original fixed-bank RTS (CPU instrumentation, not native scene behaviour). Native driver/APU runs continuously900updates, then native queue F0 plus24tail updates. No gain,normalization,filtering,time stretching,resampling,PCM concatenation or manual looping. All551145 approved stereo PCM samples are byte-identical prefix.",
+  "limits": [
+    "Controlled scene fixture and disclosed later-command suppression, not unmodified complete scene playback.",
+    "Finite extension sufficient for approved screen, not seamless-loop or full-song-cycle proof.",
+    "JSNES2.1.0 native APU,not installed GMS/hardware acceptance.",
+    "Approved production excerpt untouched pending extended-take listening approval."
+  ]
+}

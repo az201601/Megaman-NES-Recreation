@@ -1,0 +1,15 @@
+{
+  "status": "Extended native take approved by user; source production resource selected, GMS installation/runtime acceptance pending.",
+  "identityConfirmation": "it is that but seems a bit quiet did you quieten it do wn?",
+  "volumeConfirmation": "no we will use the original volume..",
+  "file": "Audio/Approved/snd_mm5_weapon_get.wav",
+  "source": "Audio/Review/mm5-weapon-get-extended-native-review.wav",
+  "sha256": "381c486d0c9e253414a6ab061c416bf6f2d85aa095de41efd075c2ad9e01d858",
+  "processing": "Byte-identical15.392s extended native APU take at original volume. All551145 formerly approved stereo PCM samples remain byte-identical prefix. No amplification,normalization,stretching,resampling or manual PCM looping. Sound resource snd_mm5_weapon_get, volume1, play once, not looped.",
+  "limitation": "Finite continuation covers approved13.57s sequence. Not seamless-loop/full-cycle proof or installed GMS acceptance.",
+  "historicalExcerpt": {
+    "file": "Audio/Approved/snd_mm5_weapon_get_review_excerpt.wav",
+    "sha256": "db43f2417cc02b391cbfcdf92d53d8a0b1ffe6a54d3cf673cdfc3c26c0903c0f"
+  },
+  "extensionConfirmation": "sure"
+}

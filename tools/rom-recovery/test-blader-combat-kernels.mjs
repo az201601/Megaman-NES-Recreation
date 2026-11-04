@@ -1,0 +1,14 @@
+// Execute actual GMS1.4 pure kernels through a small syntax adapter; no engine mock.
+// No rendering, collision, events or installation claims.
+import fs from'node:fs';import assert from'node:assert/strict';import vm from'node:vm';
+const root=new URL('../../',import.meta.url),base=new URL('Assets/Combat/MM5/Blader Checkpoint/Scripts/',root),read=n=>fs.readFileSync(new URL(n+'.gml',base),'utf8');
+function compile(name){const src=read(name).replace(/\$([0-9A-Fa-f]+)/g,'0x$1').replace(/\bmod\b/g,'%');return new vm.Script('(function(){'+src+'}).call(this)');}
+const math={floor:Math.floor,abs:Math.abs},ai=compile('scr_mm1_blader_ai'),drop=compile('scr_mm5_enemy_drop_from_byte'),recoil=compile('scr_mm5_recoil_dx'),refill=compile('scr_mm5_health_refill_tick');
+const t=JSON.parse(fs.readFileSync(new URL('Assets/Enemies/MM1/Blader/Reference/native-blader-trace.json',root)));let updates=0;
+for(const rows of Object.values(t.branches))for(const r of rows){if(!r.entry)continue;const b=r.entry,a=r.after,signed=b.vyRaw>=32768?b.vyRaw-65536:b.vyRaw,context={...math,argument0:b.px,argument1:b.py+1920,x:b.x,y:b.y+1920,blader_band_y:1920,blader_timer:b.timer,blader_vx256:b.vx*256,blader_vy256:-signed,blader_direction:b.flags&64?1:-1};ai.runInNewContext(context);assert.equal(context.x,a.x);assert.equal(context.y,a.y+1920);assert.equal(context.blader_timer,a.timer);assert.equal(context.blader_vx256,a.vx*256);assert.equal(((-context.blader_vy256)%65536+65536)%65536,a.vyRaw);assert.equal(context.blader_direction,a.flags&64?1:-1);updates++;}
+const rolls=JSON.parse(fs.readFileSync(new URL('Assets/Pickups/MM5/Recovered/drop-selection.json',root))).rolls,ids={large_weapon:0x76,extra_life:0x78,small_health:0x75,large_health:0x74,small_weapon:0x77,none:-1};for(const r of rolls)assert.equal(drop.runInNewContext({argument0:r.roll}),ids[r.kind]);
+for(const face of[-1,1])for(const input of[-1,0,1])assert.equal(recoil.runInNewContext({argument0:face,argument1:input}),-face*(input===face?0.25:0.5));
+for(const health of[0,5,27,28])for(const amount of[2,10]){const c={mm5_health:health,mm5_refill_left:Math.min(amount,28-health),mm5_refill_wait:0},sounds=[];let resume=0;while(c.mm5_refill_left>0||c.mm5_refill_wait>0){if(refill.runInNewContext(c))sounds.push(resume);resume++;assert.ok(resume<100);}assert.equal(c.mm5_health,Math.min(28,health+amount));for(let i=1;i<sounds.length;i++)assert.equal(sounds[i]-sounds[i-1],4);if(sounds.length)assert.equal(resume,sounds.at(-1)+5);}
+// Native immediate-resume frame is four AFTER last increment; loop above counts
+// the unblocked resume iteration as one extra sampled iteration, not frozen time.
+assert.ok(updates>1000);console.log(`PASS actual four GML kernels: ${updates} original AI entry/outcome pairs, all256 drop bytes,6 recoil inputs and8 refill cap/cadence branches. No GMS compiler/runtime or gameplay integration claim.`);

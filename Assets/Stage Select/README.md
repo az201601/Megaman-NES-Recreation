@@ -68,3 +68,7 @@ In the sampled highlight phase, Cut Man's name is white and the other names are 
 ## Next implementation step
 
 Import and verify the two frame subimages and six portraits before replacing the temporary stage-select drawing code. Do not add scoring resources: the recreation intentionally has no points system. Preserve the modular assets rather than flattening the preview into the final menu.
+
+## Approved Mesen palette migration
+
+Current PNGs now use the user-approved Mesen0.9.9 default2C02 palette, rather than the original JSNES RGB palette described above. Pixels, frame arrangement and alpha are unchanged, including the borderless solid-blue background. The old RGB text-colour observations above are historical, not new target tint values. See `Assets/Palette Review/Mesen 0.9.9/MM1-STAGE-SELECT-IMPORT.md`. Actual Draw-code tint adjustment remains separate; no controller, audio or timing changes.

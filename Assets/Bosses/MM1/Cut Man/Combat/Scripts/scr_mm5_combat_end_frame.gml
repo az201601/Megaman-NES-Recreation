@@ -1,0 +1,152 @@
+// Controller context. Called ONLY by camera End Step AFTER final view placement.
+// Projectile End Steps are guarded, so their instance event order cannot double-move.
+var p, i, enemy, shot, item, boom, half_y, inside, spawn;
+scr_mm5_combat_begin();
+p = instance_find(obj_mm5_megaman, 0);
+if (!instance_exists(p)) { combat_begin_done = false; exit; }
+
+// Victory owns this update: no late hazards, drops, refills or stage spawns.
+if (scr_mm1_cutman_victory_busy()) { combat_begin_done = false; exit; }
+if (combat_dead || combat_refilling || p.mm5_startup_active)
+{ combat_begin_done = false; exit; }
+if (scr_mm1_cutman_route_busy())
+{
+    if (!combat_route_was_busy)
+    {
+        with (obj_mm1_blader) instance_destroy();
+        with (obj_mm1_blaster) instance_destroy();
+        with (obj_mm1_blaster_bullet) instance_destroy();
+        with (obj_mm1_super_cutter) instance_destroy();
+        with (obj_mm1_flea) instance_destroy();
+        with (obj_mm1_screw_bomber) instance_destroy();
+        for (i = 0; i < screw_spawn_count; i += 1) screw_spawn_armed[i] = true;
+        with (obj_mm1_big_eye) instance_destroy();
+        for (i = 0; i < big_eye_spawn_count; i += 1) big_eye_spawn_armed[i] = true;
+        with (obj_mm1_octopus_battery) instance_destroy();
+        with (obj_mm1_flying_shell) instance_destroy();
+        for (i = 0; i < shell_spawn_count; i += 1) { shell_spawn_wait[i] = 0; shell_spawn_wait_tick[i] = -1; }
+        for (i = 0; i < battery_spawn_count; i += 1) battery_spawn_armed[i] = true;
+        for (i = 0; i < flea_spawn_count; i += 1) flea_spawn_armed[i] = true;
+        for (i = 0; i < super_spawn_count; i += 1) super_spawn_timer[i] = 0;
+        for (i = 0; i < blaster_spawn_count; i += 1) blaster_spawn_armed[i] = true;
+        cutman_health_armed = true;
+        with (obj_mm5_pickup) instance_destroy();
+        with (obj_mm5_enemy_explosion) instance_destroy();
+        for (i = 0; i < combat_spawn_count; i += 1) combat_spawn_armed[i] = true;
+    }
+    combat_route_was_busy = true;
+    combat_begin_done = false;
+    exit;
+}
+combat_route_was_busy = false;
+// Existing enemies move first, using final player position; new spawns wait one update.
+for (i = instance_number(obj_mm1_blader) - 1; i >= 0; i -= 1)
+{
+    enemy = instance_find(obj_mm1_blader, i);
+    if (enemy.blader_born_tick == combat_tick) continue;
+    with (enemy)
+    {
+        scr_mm1_blader_ai(p.x, p.y);
+        blader_age += 1;
+        if (x < view_xview[0] || x >= view_xview[0] + 256
+            || blader_band_y != view_yview[0]) instance_destroy();
+    }
+}
+scr_mm1_blaster_world_step();
+scr_mm1_super_cutter_world_step(p);
+scr_mm1_flea_world_step(p);
+scr_mm1_octopus_battery_world_step();
+scr_mm1_flying_shell_world_step();
+scr_mm1_big_eye_world_step(p);
+scr_mm1_screw_bomber_world_step(p);
+scr_mm1_cutman_boss_world_step(p);
+// Shots can kill before body contacts are considered.
+with (obj_mm5_buster_shot) scr_mm5_combat_shot_step();
+
+// Victory owns this update: no late hazards, drops, refills or stage spawns.
+if (scr_mm1_cutman_victory_busy()) { combat_begin_done = false; exit; }
+// Complete explosions and roll exactly ONCE, never on offscreen cleanup/Destroy.
+for (i = instance_number(obj_mm5_enemy_explosion) - 1; i >= 0; i -= 1)
+{
+    boom = instance_find(obj_mm5_enemy_explosion, i);
+    if (boom.explosion_born_tick == combat_tick) continue;
+    boom.explosion_age += 1;
+    if (boom.explosion_age >= 13 && !boom.explosion_drop_done)
+    {
+        boom.explosion_drop_done = true;
+        spawn = scr_mm5_enemy_drop_from_byte(irandom(255));
+        if (spawn != -1)
+        {
+            item = instance_create(boom.x, boom.y, obj_mm5_pickup);
+            item.pickup_kind = spawn;
+            item.pickup_born_tick = combat_tick;
+        }
+        with (boom) instance_destroy();
+    }
+}
+// Contact is blocked during recoil AND subsequent timer; never use sprite masks.
+half_y = 20;
+if (p.sliding) half_y = 13;
+for (i = instance_number(obj_mm1_blader) - 1; i >= 0; i -= 1)
+{
+    enemy = instance_find(obj_mm1_blader, i);
+    if (scr_mm5_combat_overlap(p.x, p.y, enemy.x, enemy.y, 16, half_y))
+        scr_mm5_combat_damage(p, 3);
+}
+scr_mm1_blaster_contact(p);
+scr_mm1_super_cutter_contact(p);
+scr_mm1_flea_contact(p);
+scr_mm1_octopus_battery_contact(p);
+scr_mm1_flying_shell_contact(p);
+scr_mm1_big_eye_contact(p);
+scr_mm1_screw_bomber_contact(p);
+scr_mm1_cutman_boss_contact(p);
+scr_mm1_cutman_boss_post_frame();
+// MM5 terrain hazards are resolved after entity contact; recoil/flashing protects.
+if (scr_mm1_cutman_spike_contact(p))
+{ combat_begin_done = false; exit; }
+// Collection after contact: a newly hurt player cannot immediately negate that hit.
+if (!combat_dead)
+for (i = instance_number(obj_mm5_pickup) - 1; i >= 0; i -= 1)
+{
+    item = instance_find(obj_mm5_pickup, i);
+    if (item.pickup_born_tick == combat_tick) continue;
+    with (item) scr_mm5_combat_pickup_step();
+    if (!instance_exists(item)) continue;
+    half_y = 20;
+    if (p.sliding) half_y = 13;
+    if (scr_mm5_combat_overlap(p.x, p.y, item.x, item.y, 16, half_y))
+    {
+        scr_mm5_combat_collect(item, p);
+        if (combat_refilling) break;
+    }
+}
+// Native renderer tests PRE-decrement counter bit1, then stores decremented timer.
+p.mm5_blink_sample = p.mm5_invulnerable;
+if (p.mm5_invulnerable > 0) p.mm5_invulnerable -= 1;
+// Spawn when the original record enters the256px view. Anchor re-arms offscreen;
+// active record ID prevents duplicates while its enemy pursues inside the view.
+if (!combat_dead && !combat_refilling)
+for (i = 0; i < combat_spawn_count; i += 1)
+{
+    inside = combat_spawn_band[i] == view_yview[0]
+        && combat_spawn_x[i] >= view_xview[0]
+        && combat_spawn_x[i] <= view_xview[0] + 255;
+    if (!inside) { combat_spawn_armed[i] = true; continue; }
+    if (!combat_spawn_armed[i] || instance_exists(combat_spawn_id[i])) continue;
+    enemy = instance_create(combat_spawn_x[i], combat_spawn_y[i], obj_mm1_blader);
+    enemy.blader_band_y = combat_spawn_band[i];
+    enemy.blader_spawn_index = i;
+    enemy.blader_born_tick = combat_tick;
+    combat_spawn_id[i] = enemy;
+    combat_spawn_armed[i] = false;
+}
+if (!combat_dead && !combat_refilling) scr_mm1_blaster_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_flea_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_octopus_battery_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_flying_shell_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_big_eye_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_screw_bomber_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_cutman_large_health_spawn();
+if (!combat_dead && !combat_refilling) scr_mm1_cutman_e_tank_spawn();
+combat_begin_done = false;

@@ -1,0 +1,399 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "method": "Original-USA native second-door entrance with all five audio channels enabled. Same disclosed checkpoint/controlled approach snapshot as entrance probe; then Right only650updates. NO forced sound requests, queue injection, sound suppression, actor/CHR edits or additional PC redirects. Captures original C477 request and opcode-qualified9003 driver dispatch. Original initializer issues26hex; original driver26 data beginsBBDC priorityA0/channelmask0A. This is Cut Man scissors sound, NOT a separate materialize/teleport/appear effect. Existing standalone WAV is the isolated26 driver take; only name/description corrected.",
+  "scissorsData": {
+    "cpu": "BBDC",
+    "offset": 80876,
+    "hex": "a00a01b0033f801e0004033a800301b0033f80320004033a80030401debb06"
+  },
+  "requests": [
+    {
+      "frame": 51,
+      "id": 36,
+      "sample": 40066
+    },
+    {
+      "frame": 75,
+      "id": 254,
+      "sample": 59205
+    },
+    {
+      "frame": 171,
+      "id": 13,
+      "sample": 135914
+    },
+    {
+      "frame": 354,
+      "id": 36,
+      "sample": 282133
+    },
+    {
+      "frame": 378,
+      "id": 254,
+      "sample": 301206
+    },
+    {
+      "frame": 379,
+      "id": 38,
+      "sample": 302161
+    },
+    {
+      "frame": 388,
+      "id": 24,
+      "sample": 309303
+    },
+    {
+      "frame": 396,
+      "id": 24,
+      "sample": 315688
+    },
+    {
+      "frame": 404,
+      "id": 24,
+      "sample": 322094
+    },
+    {
+      "frame": 412,
+      "id": 24,
+      "sample": 328477
+    },
+    {
+      "frame": 420,
+      "id": 24,
+      "sample": 334857
+    },
+    {
+      "frame": 428,
+      "id": 24,
+      "sample": 341263
+    },
+    {
+      "frame": 436,
+      "id": 24,
+      "sample": 347646
+    },
+    {
+      "frame": 438,
+      "id": 254,
+      "sample": 349240
+    },
+    {
+      "frame": 440,
+      "id": 254,
+      "sample": 350819
+    },
+    {
+      "frame": 442,
+      "id": 254,
+      "sample": 352412
+    },
+    {
+      "frame": 444,
+      "id": 254,
+      "sample": 354030
+    },
+    {
+      "frame": 446,
+      "id": 254,
+      "sample": 355628
+    },
+    {
+      "frame": 448,
+      "id": 254,
+      "sample": 357211
+    },
+    {
+      "frame": 450,
+      "id": 254,
+      "sample": 358810
+    },
+    {
+      "frame": 452,
+      "id": 254,
+      "sample": 360422
+    },
+    {
+      "frame": 454,
+      "id": 254,
+      "sample": 362015
+    },
+    {
+      "frame": 456,
+      "id": 254,
+      "sample": 363615
+    },
+    {
+      "frame": 458,
+      "id": 254,
+      "sample": 365214
+    },
+    {
+      "frame": 460,
+      "id": 254,
+      "sample": 366807
+    },
+    {
+      "frame": 462,
+      "id": 254,
+      "sample": 368397
+    },
+    {
+      "frame": 464,
+      "id": 254,
+      "sample": 369996
+    },
+    {
+      "frame": 466,
+      "id": 254,
+      "sample": 371589
+    },
+    {
+      "frame": 468,
+      "id": 254,
+      "sample": 373189
+    },
+    {
+      "frame": 470,
+      "id": 254,
+      "sample": 374788
+    },
+    {
+      "frame": 472,
+      "id": 254,
+      "sample": 376381
+    },
+    {
+      "frame": 522,
+      "id": 38,
+      "sample": 416360
+    },
+    {
+      "frame": 553,
+      "id": 25,
+      "sample": 441139
+    },
+    {
+      "frame": 557,
+      "id": 22,
+      "sample": 444253
+    },
+    {
+      "frame": 567,
+      "id": 38,
+      "sample": 452336
+    },
+    {
+      "frame": 583,
+      "id": 37,
+      "sample": 465191
+    }
+  ],
+  "dispatch": [
+    {
+      "frame": 1,
+      "id": 25,
+      "sample": 84
+    },
+    {
+      "frame": 52,
+      "id": 36,
+      "sample": 40831
+    },
+    {
+      "frame": 76,
+      "id": 254,
+      "sample": 60004
+    },
+    {
+      "frame": 172,
+      "id": 13,
+      "sample": 136672
+    },
+    {
+      "frame": 355,
+      "id": 36,
+      "sample": 282835
+    },
+    {
+      "frame": 379,
+      "id": 254,
+      "sample": 302005
+    },
+    {
+      "frame": 380,
+      "id": 38,
+      "sample": 302798
+    },
+    {
+      "frame": 389,
+      "id": 24,
+      "sample": 310020
+    },
+    {
+      "frame": 397,
+      "id": 24,
+      "sample": 316370
+    },
+    {
+      "frame": 405,
+      "id": 24,
+      "sample": 322770
+    },
+    {
+      "frame": 413,
+      "id": 24,
+      "sample": 329179
+    },
+    {
+      "frame": 421,
+      "id": 24,
+      "sample": 335539
+    },
+    {
+      "frame": 429,
+      "id": 24,
+      "sample": 341939
+    },
+    {
+      "frame": 437,
+      "id": 24,
+      "sample": 348338
+    },
+    {
+      "frame": 439,
+      "id": 254,
+      "sample": 349901
+    },
+    {
+      "frame": 441,
+      "id": 254,
+      "sample": 351494
+    },
+    {
+      "frame": 443,
+      "id": 254,
+      "sample": 353120
+    },
+    {
+      "frame": 445,
+      "id": 254,
+      "sample": 354710
+    },
+    {
+      "frame": 447,
+      "id": 254,
+      "sample": 356300
+    },
+    {
+      "frame": 449,
+      "id": 254,
+      "sample": 357908
+    },
+    {
+      "frame": 451,
+      "id": 254,
+      "sample": 359493
+    },
+    {
+      "frame": 453,
+      "id": 254,
+      "sample": 361101
+    },
+    {
+      "frame": 455,
+      "id": 254,
+      "sample": 362705
+    },
+    {
+      "frame": 457,
+      "id": 254,
+      "sample": 364294
+    },
+    {
+      "frame": 459,
+      "id": 254,
+      "sample": 365893
+    },
+    {
+      "frame": 461,
+      "id": 254,
+      "sample": 367508
+    },
+    {
+      "frame": 463,
+      "id": 254,
+      "sample": 369076
+    },
+    {
+      "frame": 465,
+      "id": 254,
+      "sample": 370675
+    },
+    {
+      "frame": 467,
+      "id": 254,
+      "sample": 372275
+    },
+    {
+      "frame": 469,
+      "id": 254,
+      "sample": 373868
+    },
+    {
+      "frame": 471,
+      "id": 254,
+      "sample": 375468
+    },
+    {
+      "frame": 473,
+      "id": 254,
+      "sample": 377081
+    },
+    {
+      "frame": 523,
+      "id": 38,
+      "sample": 417000
+    },
+    {
+      "frame": 554,
+      "id": 25,
+      "sample": 441773
+    },
+    {
+      "frame": 558,
+      "id": 22,
+      "sample": 444958
+    },
+    {
+      "frame": 568,
+      "id": 38,
+      "sample": 452963
+    },
+    {
+      "frame": 584,
+      "id": 37,
+      "sample": 465715
+    }
+  ],
+  "bossCalls": [
+    {
+      "frame": 522,
+      "pc": "df64"
+    },
+    {
+      "frame": 567,
+      "pc": "df64"
+    },
+    {
+      "frame": 583,
+      "pc": "dfb4"
+    }
+  ],
+  "throwHandler": {
+    "cpu": "DFB4",
+    "offset": 122820,
+    "hex": "a9252077c4",
+    "sound": 37
+  },
+  "identification": "26hex is the short initialization/stand-and-make-noise cue, NOT Rolling Cutter throw. Native CutmanThrowScissor atDFB4 requests25hex; both calls also verified during original execution."
+}

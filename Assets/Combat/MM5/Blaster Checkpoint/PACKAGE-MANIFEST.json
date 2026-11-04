@@ -1,0 +1,137 @@
+{
+  "scope": "Additive Blaster manual installer for accepted Blader combat and louder audio. User GMS import/compile/runtime pending. No ROM/savestates/untrimmed previews. Original quiet/rejected audio excluded.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_blaster_bullet.png",
+      "source": "Assets/Enemies/MM1/Blaster/spr_mm1_blaster_bullet.png",
+      "bytes": 170,
+      "sha256": "8edb28fb3eeb0ffad9b53048da4b70ee3a5028af2226b7936f08886a747b4244"
+    },
+    {
+      "path": "Art/spr_mm1_blaster_strip4.png",
+      "source": "Assets/Enemies/MM1/Blaster/spr_mm1_blaster_strip4.png",
+      "bytes": 502,
+      "sha256": "ff38392f1cf4fadcb02390e682c06d04182d1a799136d35a2962bb45fa36de16"
+    },
+    {
+      "path": "Audio/snd_mm1_blaster_fire.wav",
+      "source": "Assets/Audio/Mega Man/MM1/Blaster/Approved/snd_mm1_blaster_fire.wav",
+      "bytes": 27244,
+      "sha256": "2d1b7b758c7ec436fa1004083b78e04fd665e5fbbeddd116f3f55d397a47c0e8"
+    },
+    {
+      "path": "Audio/snd_mm6_blocked_hit.wav",
+      "source": "Assets/Audio/Mega Man/MM6/Combat/Blocked Hit/mm6-blocked-hit-balanced-review.wav",
+      "bytes": 18292,
+      "sha256": "aedf7b02d3eae36f69da8d420b47544dcf7828ab39f8df285e44473eae396d9d"
+    },
+    {
+      "path": "Hooks/obj_mm5_buster_shot_create_blaster_append.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Hooks/obj_mm5_buster_shot_create_blaster_append.gml",
+      "bytes": 110,
+      "sha256": "4354c500cc380994b355b7ccef46d3a666856f7640d7126d2a922ec0622e959e"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_blaster_append.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Hooks/obj_mm5_combat_create_blaster_append.gml",
+      "bytes": 2353,
+      "sha256": "7ea4e3f304e849358deb27071ffc0f3d05e075fbe55a14a3f2e770d91f108185"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/INSTALL-GMS14.md",
+      "bytes": 10304,
+      "sha256": "e14e9d3a1bce3acf43b58b767a329540a17bd6e0bee5bceb6ae761b61bc98354"
+    },
+    {
+      "path": "Objects/obj_mm1_blaster_bullet_create.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Objects/obj_mm1_blaster_bullet_create.gml",
+      "bytes": 126,
+      "sha256": "7287d01b0781ec9eb4c61e12540c55f3515107981683468c4eefb87dff0dd4ce"
+    },
+    {
+      "path": "Objects/obj_mm1_blaster_bullet_draw.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Objects/obj_mm1_blaster_bullet_draw.gml",
+      "bytes": 60,
+      "sha256": "57b40a65aace505e1300d359a8c91dc84135998ba0f4b6f98b8f2ec7838b1f23"
+    },
+    {
+      "path": "Objects/obj_mm1_blaster_create.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Objects/obj_mm1_blaster_create.gml",
+      "bytes": 274,
+      "sha256": "362fee4a65c8783aae518a83954ee3cd5ea43699f1d07008b390773383d04a0c"
+    },
+    {
+      "path": "Objects/obj_mm1_blaster_draw.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Objects/obj_mm1_blaster_draw.gml",
+      "bytes": 182,
+      "sha256": "8d58d29078556eca83d271c698692aac28c5664dc203d0770794bd0d1af727d5"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/README.md",
+      "bytes": 2069,
+      "sha256": "51199ee007abae732f6922c8c7badefbee8948513be45cc7bdc466f846dc30b7"
+    },
+    {
+      "path": "Reference/fire-trim.json",
+      "source": "Assets/Audio/Mega Man/MM1/Blaster/Approved/trim.json",
+      "bytes": 982,
+      "sha256": "084d41e5fd68068062da2f83b0642fdb3b7fa145244e8e86f569934bdb4af8bb"
+    },
+    {
+      "path": "Reference/mm6-ding-recovery.json",
+      "source": "Assets/Audio/Mega Man/MM6/Combat/Blocked Hit/recovery.json",
+      "bytes": 1847,
+      "sha256": "4e5738ed249e67da991bb16362d4e076826323fee6a1b656e4cdc4ed238825b2"
+    },
+    {
+      "path": "Reference/native-blaster-gameplay.json",
+      "source": "Assets/Enemies/MM1/Blaster/Reference/native-blaster-gameplay.json",
+      "bytes": 77158,
+      "sha256": "3e7fbe82b4a1ed2c3c5c270106f6b65989b5e291a292e593745a0adb1b032d20"
+    },
+    {
+      "path": "Scripts/scr_mm1_blaster_contact.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm1_blaster_contact.gml",
+      "bytes": 775,
+      "sha256": "09488e982bb23b07241543ea21bd01c14b8a347f6e5248cb117eb36e0b78505f"
+    },
+    {
+      "path": "Scripts/scr_mm1_blaster_hit.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm1_blaster_hit.gml",
+      "bytes": 1077,
+      "sha256": "b40fd5a1fd9066a6f1b73d4690bb3132c87717d814730a5a5b1cdc81140d4a69"
+    },
+    {
+      "path": "Scripts/scr_mm1_blaster_spawn.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm1_blaster_spawn.gml",
+      "bytes": 788,
+      "sha256": "6e8f17b447a02b7a62cbb9b5aecf3a9a6307bb450fc56b1a8adcff1c4e45cb59"
+    },
+    {
+      "path": "Scripts/scr_mm1_blaster_step.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm1_blaster_step.gml",
+      "bytes": 1720,
+      "sha256": "fd5590b3b053d8243e26106b38e9cb8ae1b71514ed87fdcc7aa98e45c411f4bf"
+    },
+    {
+      "path": "Scripts/scr_mm1_blaster_world_step.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm1_blaster_world_step.gml",
+      "bytes": 970,
+      "sha256": "d3a2ed24d9a9bba69665f1ebbab6644e1b8a7484db4bd64253e94da035b14cc8"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 4424,
+      "sha256": "02e6e0bb02ef79f411bd2ef81b8e1095a9ec5bd9064fe32ec4dddcb26dc45112"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Blaster Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 1740,
+      "sha256": "8cbf5c419264dd7e6fb8461e8dad3ccc1263ff90eb144ba6ee6499063cb5d3bc"
+    }
+  ]
+}

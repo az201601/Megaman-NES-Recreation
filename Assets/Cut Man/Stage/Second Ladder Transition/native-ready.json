@@ -1,0 +1,29 @@
+{
+  "source": "Original MM1 from controlled before-trigger snapshot. TriggerUp age0/released1, independent freshUp probes123..128; no extra patches.",
+  "results": [
+    {
+      "pressAge": 123,
+      "finalY": 229
+    },
+    {
+      "pressAge": 124,
+      "finalY": 229
+    },
+    {
+      "pressAge": 125,
+      "finalY": 229
+    },
+    {
+      "pressAge": 126,
+      "finalY": 228.25
+    },
+    {
+      "pressAge": 127,
+      "finalY": 228.25
+    },
+    {
+      "pressAge": 128,
+      "finalY": 228.25
+    }
+  ]
+}

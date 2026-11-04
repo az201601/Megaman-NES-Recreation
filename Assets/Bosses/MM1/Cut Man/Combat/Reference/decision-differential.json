@@ -1,0 +1,412 @@
+{
+  "method": "12000 single-decision comparisons against supplied MM1-USA original 6502 strategy routines and helpers EDC2/EDD5/C5A0/C5AC/EF16. EDFB physics and DF8F projectile creation are disclosed stubs. No native dispatcher/cutter/animation/render/audio simulation.",
+  "checks": 12000,
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "sourceSha256": "25d2aeb3611940fff367df137b37c8d1fc5616754205ba2d61122cf9f3d72a79",
+  "adaptations": [
+    "Rejected standalone cue26 is suppressed.",
+    "Throw is a request, not projectile creation.",
+    "Physics delegated to an unimplemented integration helper; do not import as complete fight."
+  ],
+  "evidence": [
+    {
+      "state": 5,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 1,
+        "cm_cutter": 0,
+        "cm_seed": 5,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 18,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 6,
+      "effective": 6,
+      "result": {
+        "cm_state": 6,
+        "cm_delay": 1,
+        "cm_cutter": 0,
+        "cm_seed": 143,
+        "cm_pose": 63,
+        "cm_anim": 0,
+        "cm_fire": 0,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 288,
+        "cm_speed_y": 427,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 7,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 63,
+        "cm_cutter": 2,
+        "cm_seed": 41,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 6,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": false,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 8,
+      "effective": 8,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 1,
+        "cm_cutter": 2,
+        "cm_seed": 83,
+        "cm_pose": 70,
+        "cm_anim": 16,
+        "cm_fire": 24,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 464,
+        "cm_speed_y": 399,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 9,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 63,
+        "cm_cutter": 2,
+        "cm_seed": 141,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 26,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 10,
+      "effective": 10,
+      "result": {
+        "cm_state": 5,
+        "cm_delay": 1,
+        "cm_cutter": 0,
+        "cm_seed": 87,
+        "cm_pose": 70,
+        "cm_anim": 1,
+        "cm_fire": 12,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 108,
+        "cm_speed_y": 123,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 11,
+      "effective": 25,
+      "result": {
+        "cm_state": 11,
+        "cm_delay": 63,
+        "cm_cutter": 1,
+        "cm_seed": 49,
+        "cm_pose": 87,
+        "cm_anim": 16,
+        "cm_fire": 14,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 214,
+        "cm_speed_y": 685,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 12,
+      "effective": 12,
+      "result": {
+        "cm_state": 22,
+        "cm_delay": 21,
+        "cm_cutter": 0,
+        "cm_seed": 155,
+        "cm_pose": 87,
+        "cm_anim": 16,
+        "cm_fire": 0,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 568,
+        "cm_speed_y": 119,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 13,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 18,
+        "cm_cutter": 0,
+        "cm_seed": 21,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 2,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 14,
+      "effective": 14,
+      "result": {
+        "cm_state": 5,
+        "cm_delay": 1,
+        "cm_cutter": 2,
+        "cm_seed": 31,
+        "cm_pose": 67,
+        "cm_anim": 16,
+        "cm_fire": 20,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 252,
+        "cm_speed_y": 747,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 15,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 18,
+        "cm_cutter": 1,
+        "cm_seed": 57,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 22,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": false,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 16,
+      "effective": 16,
+      "result": {
+        "cm_state": 17,
+        "cm_delay": 0,
+        "cm_cutter": 0,
+        "cm_seed": 227,
+        "cm_pose": 67,
+        "cm_anim": 0,
+        "cm_fire": 0,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 112,
+        "cm_speed_y": 1047,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 17,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 18,
+        "cm_cutter": 2,
+        "cm_seed": 157,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 10,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 18,
+      "effective": 18,
+      "result": {
+        "cm_state": 18,
+        "cm_delay": 17,
+        "cm_cutter": 2,
+        "cm_seed": 231,
+        "cm_pose": 63,
+        "cm_anim": 32,
+        "cm_fire": 28,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 316,
+        "cm_speed_y": 339,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 19,
+      "effective": 25,
+      "result": {
+        "cm_state": 19,
+        "cm_delay": 1,
+        "cm_cutter": 1,
+        "cm_seed": 65,
+        "cm_pose": 87,
+        "cm_anim": 16,
+        "cm_fire": 30,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 230,
+        "cm_speed_y": 605,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 20,
+      "effective": 20,
+      "result": {
+        "cm_state": 20,
+        "cm_delay": 62,
+        "cm_cutter": 0,
+        "cm_seed": 43,
+        "cm_pose": 67,
+        "cm_anim": 1,
+        "cm_fire": 16,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 592,
+        "cm_speed_y": 1615,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 21,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 1,
+        "cm_cutter": 1,
+        "cm_seed": 37,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 18,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": false,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 22,
+      "effective": 22,
+      "result": {
+        "cm_state": 22,
+        "cm_delay": 17,
+        "cm_cutter": 0,
+        "cm_seed": 175,
+        "cm_pose": 63,
+        "cm_anim": 16,
+        "cm_fire": 4,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": true,
+        "cm_speed_x": 316,
+        "cm_speed_y": 1571,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 23,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 63,
+        "cm_cutter": 2,
+        "cm_seed": 73,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 6,
+        "cm_y": 100,
+        "cm_face_right": true,
+        "cm_move_right": false,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 24,
+      "effective": 24,
+      "result": {
+        "cm_state": 24,
+        "cm_delay": 62,
+        "cm_cutter": 0,
+        "cm_seed": 115,
+        "cm_pose": 70,
+        "cm_anim": 0,
+        "cm_fire": 24,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 0,
+        "cm_speed_y": 7,
+        "cm_throw_requested": false
+      }
+    },
+    {
+      "state": 25,
+      "effective": 25,
+      "result": {
+        "cm_state": 14,
+        "cm_delay": 18,
+        "cm_cutter": 1,
+        "cm_seed": 173,
+        "cm_pose": 87,
+        "cm_anim": 0,
+        "cm_fire": 26,
+        "cm_y": 100,
+        "cm_face_right": false,
+        "cm_move_right": true,
+        "cm_speed_x": 288,
+        "cm_speed_y": 320,
+        "cm_throw_requested": false
+      }
+    }
+  ]
+}

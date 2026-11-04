@@ -1,3 +1,5 @@
+// Artwork colours: approved Mesen0.9.9 default palette; emulation remains JSNES.
+import {mesenRgbFromJsnes} from './mesen-palette.mjs';
 // Extract only the MM5 player's nine OAM components in the saved idle scene.
 import {NES} from 'jsnes';
 import {PNG} from 'pngjs';
@@ -17,7 +19,7 @@ for (let i=9;i>=1;i--) {
     const c = tile.pix[(n.ppu.vertFlip[i]?7-y:y)*8+(n.ppu.horiFlip[i]?7-x:x)];
     const dx=n.ppu.sprX[i]+x-ox,dy=n.ppu.sprY[i]+1+y-oy;
     if (!c || dx<0 || dx>=32 || dy<0 || dy>=32) continue;
-    const v=n.ppu.sprPalette[n.ppu.sprCol[i]+c];
+    const v=mesenRgbFromJsnes(n.ppu.sprPalette[n.ppu.sprCol[i]+c]);
     p.data.set([v&255,(v>>8)&255,(v>>16)&255,255],(dy*32+dx)*4);
   }
 }

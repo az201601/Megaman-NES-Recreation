@@ -1,0 +1,206 @@
+{
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "method": "Controlled native coroutine0 entry at3B:BD1B, from natural playable snapshot; banks3A/3B, stage0, acquisition flag06A5=0. No patched ROM/code/audio injections. Final RTS ended via C5E6 because fixture has no caller. Not natural boss defeat.",
+  "sceneVerification": "Inspected native rendered frame320: YOU GET B.ATTACK and Mega Man, not boss statistics or castle intro. Later native weapon demonstration.",
+  "approval": "User listening approved: this is the one; runtime loop preparation/integration pending",
+  "limitations": [
+    "Controlled scene entry, not natural final-hit/caller trace.",
+    "Music capture is a 30-second excerpt of a continuing track; not a seamless runtime loop.",
+    "65 and37 observed in this scene but not exported/approved as new effects.",
+    "No runtime integration or complete victory controller."
+  ],
+  "frames": 782,
+  "events": [
+    {
+      "frame": 0,
+      "kind": "weapon-award-code",
+      "pc": "bd1b"
+    },
+    {
+      "frame": 8,
+      "kind": "weapon-award-code",
+      "pc": "bd33"
+    },
+    {
+      "frame": 8,
+      "kind": "audio-dispatch",
+      "command": 22
+    },
+    {
+      "frame": 97,
+      "kind": "weapon-award-code",
+      "pc": "bd9d"
+    },
+    {
+      "frame": 97,
+      "kind": "audio-dispatch",
+      "command": 101
+    },
+    {
+      "frame": 195,
+      "kind": "weapon-award-code",
+      "pc": "bdf0"
+    },
+    {
+      "frame": 195,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 199,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 203,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 207,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 211,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 215,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 219,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 223,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 227,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 231,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 235,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 239,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 243,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 247,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 251,
+      "kind": "audio-dispatch",
+      "command": 55
+    },
+    {
+      "frame": 366,
+      "kind": "weapon-award-code",
+      "pc": "be42"
+    },
+    {
+      "frame": 452,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 516,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 580,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 644,
+      "kind": "audio-dispatch",
+      "command": 35
+    },
+    {
+      "frame": 781,
+      "kind": "weapon-award-code",
+      "pc": "bea9"
+    }
+  ],
+  "files": [
+    {
+      "id": "0x16",
+      "file": "Audio/Review/mm6-weapon-award-music-review.wav",
+      "framesCaptured": 1800,
+      "endsNaturally": false,
+      "firstSample": 1172,
+      "lastNonzero": 1437863,
+      "seconds": 29.9555,
+      "gain": 2.125,
+      "peak": 0.8445720672607422,
+      "sha256": "53935979892fb2e30dc1cebb54b3aa7c09b0135bc7bed3a28efdf70d3993f519",
+      "dispatch": [
+        {
+          "frame": 0,
+          "command": 22
+        }
+      ],
+      "driverDispatch": [
+        {
+          "frame": 0,
+          "command": 22
+        }
+      ]
+    },
+    {
+      "file": "Reference/mm6-weapon-award-you-get.png",
+      "sha256": "b5c4eee6d459bfec69f08477f38863931d54612bc7a6f1289804f2e9260042a3"
+    }
+  ],
+  "spans": [
+    {
+      "name": "Award entry flag check",
+      "bank": "3b",
+      "address": "0xbd1b",
+      "hex": "ada50630faa551"
+    },
+    {
+      "name": "Music16 request",
+      "bank": "3b",
+      "address": "0xbd33",
+      "hex": "a91685dc202bc6"
+    },
+    {
+      "name": "Effect65 request",
+      "bank": "3b",
+      "address": "0xbd9d",
+      "hex": "a96585dc"
+    },
+    {
+      "name": "Stage-specific award text selection",
+      "bank": "3b",
+      "address": "0xbdf0",
+      "hex": "a5511869606da5062028cb00"
+    }
+  ]
+}

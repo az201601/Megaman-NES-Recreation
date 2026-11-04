@@ -1,0 +1,95 @@
+{
+  "scope": "Additive Flea manual installer after accepted Blader/Blaster/Super Cutter combat. User GMS import/compile/runtime pending. No ROM/savestates/audio/building replacements.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_flea_strip2.png",
+      "source": "Assets/Enemies/MM1/Flea/spr_mm1_flea_strip2.png",
+      "bytes": 428,
+      "sha256": "910add30dc2180ca6dabd7b1c02f9a4c36a768f29d6432a9a1db179e2be9d3b9"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_flea_append.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Hooks/obj_mm5_combat_create_flea_append.gml",
+      "bytes": 480,
+      "sha256": "872a43b67f77135581f02093519afe737918110f43439cc77cd73a0a890fbcdc"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/INSTALL-GMS14.md",
+      "bytes": 7557,
+      "sha256": "9d9192e8e2ef6ace08337843eba088419c42b370ecc4f93049a6a62378295243"
+    },
+    {
+      "path": "Objects/obj_mm1_flea_create.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Objects/obj_mm1_flea_create.gml",
+      "bytes": 246,
+      "sha256": "09febf41cddd378fc33fcaef6f1e019ce2a3d1a3f978ca3300ad07b0f3e2fd6d"
+    },
+    {
+      "path": "Objects/obj_mm1_flea_draw.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Objects/obj_mm1_flea_draw.gml",
+      "bytes": 212,
+      "sha256": "42cc0ca6343e26824e9bab13fada9b8b5d23b0c2d32f933434934598a86591bd"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/README.md",
+      "bytes": 4738,
+      "sha256": "bdd4d3bdc7443b21035fd8aaefb1dbc431b54ef83acbdd8c0ec340cbe613d879"
+    },
+    {
+      "path": "Reference/native-flea-art.json",
+      "source": "Assets/Enemies/MM1/Flea/Reference/native-flea-art.json",
+      "bytes": 1963,
+      "sha256": "3aad36836ad2638203ee16ef713e18ee6608607e0811bcb9540db29427ccc77a"
+    },
+    {
+      "path": "Reference/native-flea-gameplay.json",
+      "source": "Assets/Enemies/MM1/Flea/Reference/native-flea-gameplay.json",
+      "bytes": 757149,
+      "sha256": "7d77f464a690303827e6bfb2e7e76461f20af1d4854b26516a73107b326c7979"
+    },
+    {
+      "path": "Scripts/scr_mm1_flea_contact.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm1_flea_contact.gml",
+      "bytes": 426,
+      "sha256": "58fccc7f9d3803c743406949fcd22e09f10db072be5ccdc39ce24ad1febba0c9"
+    },
+    {
+      "path": "Scripts/scr_mm1_flea_hit.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm1_flea_hit.gml",
+      "bytes": 663,
+      "sha256": "ad266215d7ab80cb205082314ab8b1c8473e4601d9d006183b2df24d98febde4"
+    },
+    {
+      "path": "Scripts/scr_mm1_flea_spawn.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm1_flea_spawn.gml",
+      "bytes": 640,
+      "sha256": "f4260a68fbac711acac05f10c1ad1daed48ba08f6168ec7dd3a86115c942d32e"
+    },
+    {
+      "path": "Scripts/scr_mm1_flea_step.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm1_flea_step.gml",
+      "bytes": 2765,
+      "sha256": "72ba9a35f83efa1f66d50b651a05b7cb77c5ee8c047ae3d99f637347694c2c41"
+    },
+    {
+      "path": "Scripts/scr_mm1_flea_world_step.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm1_flea_world_step.gml",
+      "bytes": 797,
+      "sha256": "ba411a12a0d82cd33698b60c9ccfd40f1cf3bedee6eb32c9986bb9b18bb3b232"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 4866,
+      "sha256": "fb53424296c9b0e19bd66b0396d23937ea0548569dbb1df40b5dabf1d50a574e"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Flea Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 2673,
+      "sha256": "bc5072adcbc99e291d99276563ffad828c135f06c9c856c53b95c8bf3510a8f0"
+    }
+  ]
+}

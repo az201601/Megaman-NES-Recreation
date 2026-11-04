@@ -1,0 +1,51 @@
+{
+  "source": "Supplied MM1 USA; natural Right + A pressed1/released25 every70 updates; starts from mm1-hurtwalk stage snapshot. JSNES2.1.0 + pinned Mesen0.9.9 RGB, NOT Mesen execution. No RAM/ROM patches.",
+  "images": "256x208 crops: original frame rows32..239; original top HUD/score excluded. Reference only, not scenery/import art.",
+  "rows": [
+    {
+      "update": 1,
+      "healthBefore": 28,
+      "healthAfter": 28
+    },
+    {
+      "update": 40,
+      "healthBefore": 28,
+      "healthAfter": 28
+    },
+    {
+      "update": 70,
+      "healthBefore": 28,
+      "healthAfter": 28
+    },
+    {
+      "update": 100,
+      "healthBefore": 28,
+      "healthAfter": 28
+    },
+    {
+      "update": 109,
+      "healthBefore": 28,
+      "healthAfter": 28
+    },
+    {
+      "update": 110,
+      "healthBefore": 28,
+      "healthAfter": 25
+    },
+    {
+      "update": 140,
+      "healthBefore": 25,
+      "healthAfter": 25
+    },
+    {
+      "update": 180,
+      "healthBefore": 25,
+      "healthAfter": 25
+    },
+    {
+      "update": 222,
+      "healthBefore": 25,
+      "healthAfter": 22
+    }
+  ]
+}

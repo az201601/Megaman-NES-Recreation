@@ -1,0 +1,1409 @@
+{
+  "romSha256": "32bd2b4ecd2129aa5337afe9171696ef35646d3fd597339aebba19221764521c",
+  "method": "Original supplied USA/JSNES2.1.0 fresh Napalm boot. Every original player terrain query C737 class replaced withF0. Player Y120/high0/verticalspeed0 pinned eachframe to exclude pit; initialflash0/1/2/60, HP28. Original guard/marker/death/particle/audio code unpatched. Hurt-guard trial additionally sets state6 immediately at8044 for3guard samples, restores normalstate0 each frame; fourth sample released. This isolates the guard, NOT a natural recoil animation/spike traversal or collision-mask test. Flash decrements at original engine position; assertions use actual guard-time counter, not assumed initial-timer frame mapping.",
+  "spans": [
+    {
+      "bank": 28,
+      "pc": 32836,
+      "offset": 229460,
+      "hex": "a536f00eadb805d009a530c906b00320a582a900853660"
+    },
+    {
+      "bank": 28,
+      "pc": 33445,
+      "offset": 230069,
+      "hex": "a5172940d0f9a536c9f0f004c6b0302c4c3283"
+    },
+    {
+      "bank": 30,
+      "pc": 50999,
+      "offset": 247623,
+      "hex": "e000d00ca536d008a542c9d090028536a5f1"
+    }
+  ],
+  "trials": [
+    {
+      "mode": "unprotected",
+      "initialFlash": 0,
+      "queries": 3,
+      "guards": [
+        {
+          "frame": 1,
+          "marker": 240,
+          "flash": 0,
+          "state": 1,
+          "hp": 28
+        }
+      ],
+      "deaths": [
+        {
+          "frame": 1,
+          "flash": 0,
+          "state": 1
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        },
+        {
+          "frame": 1,
+          "type": 3
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 1,
+          "id": 240
+        },
+        {
+          "frame": 1,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 7,
+          "flash": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "mode": "flash1",
+      "initialFlash": 1,
+      "queries": 4,
+      "guards": [
+        {
+          "frame": 1,
+          "marker": 240,
+          "flash": 1,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 2,
+          "marker": 240,
+          "flash": 0,
+          "state": 1,
+          "hp": 28
+        }
+      ],
+      "deaths": [
+        {
+          "frame": 2,
+          "flash": 0,
+          "state": 1
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        },
+        {
+          "frame": 2,
+          "type": 3
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 2,
+          "id": 240
+        },
+        {
+          "frame": 2,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 1,
+          "flash": 0,
+          "health": 28
+        },
+        {
+          "frame": 2,
+          "state": 7,
+          "flash": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "mode": "flash2",
+      "initialFlash": 2,
+      "queries": 5,
+      "guards": [
+        {
+          "frame": 1,
+          "marker": 240,
+          "flash": 2,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 2,
+          "marker": 240,
+          "flash": 1,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 3,
+          "marker": 240,
+          "flash": 0,
+          "state": 1,
+          "hp": 28
+        }
+      ],
+      "deaths": [
+        {
+          "frame": 3,
+          "flash": 0,
+          "state": 1
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        },
+        {
+          "frame": 3,
+          "type": 3
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 3,
+          "id": 240
+        },
+        {
+          "frame": 3,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 1,
+          "flash": 1,
+          "health": 28
+        },
+        {
+          "frame": 2,
+          "state": 1,
+          "flash": 0,
+          "health": 28
+        },
+        {
+          "frame": 3,
+          "state": 7,
+          "flash": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "mode": "flash60",
+      "initialFlash": 60,
+      "queries": 123,
+      "guards": [
+        {
+          "frame": 1,
+          "marker": 240,
+          "flash": 60,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 2,
+          "marker": 240,
+          "flash": 59,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 3,
+          "marker": 240,
+          "flash": 58,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 4,
+          "marker": 240,
+          "flash": 57,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 5,
+          "marker": 240,
+          "flash": 56,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 6,
+          "marker": 240,
+          "flash": 55,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 7,
+          "marker": 240,
+          "flash": 54,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 8,
+          "marker": 240,
+          "flash": 53,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 9,
+          "marker": 240,
+          "flash": 52,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 10,
+          "marker": 240,
+          "flash": 51,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 11,
+          "marker": 240,
+          "flash": 50,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 12,
+          "marker": 240,
+          "flash": 49,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 13,
+          "marker": 240,
+          "flash": 48,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 14,
+          "marker": 240,
+          "flash": 47,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 15,
+          "marker": 240,
+          "flash": 46,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 16,
+          "marker": 240,
+          "flash": 45,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 17,
+          "marker": 240,
+          "flash": 44,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 18,
+          "marker": 240,
+          "flash": 43,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 19,
+          "marker": 240,
+          "flash": 42,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 20,
+          "marker": 240,
+          "flash": 41,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 21,
+          "marker": 240,
+          "flash": 40,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 22,
+          "marker": 240,
+          "flash": 39,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 23,
+          "marker": 240,
+          "flash": 38,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 24,
+          "marker": 240,
+          "flash": 37,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 25,
+          "marker": 240,
+          "flash": 36,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 26,
+          "marker": 240,
+          "flash": 35,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 27,
+          "marker": 240,
+          "flash": 34,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 28,
+          "marker": 240,
+          "flash": 33,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 29,
+          "marker": 240,
+          "flash": 32,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 30,
+          "marker": 240,
+          "flash": 31,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 31,
+          "marker": 240,
+          "flash": 30,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 32,
+          "marker": 240,
+          "flash": 29,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 33,
+          "marker": 240,
+          "flash": 28,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 34,
+          "marker": 240,
+          "flash": 27,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 35,
+          "marker": 240,
+          "flash": 26,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 36,
+          "marker": 240,
+          "flash": 25,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 37,
+          "marker": 240,
+          "flash": 24,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 38,
+          "marker": 240,
+          "flash": 23,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 39,
+          "marker": 240,
+          "flash": 22,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 40,
+          "marker": 240,
+          "flash": 21,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 41,
+          "marker": 240,
+          "flash": 20,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 42,
+          "marker": 240,
+          "flash": 19,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 43,
+          "marker": 240,
+          "flash": 18,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 44,
+          "marker": 240,
+          "flash": 17,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 45,
+          "marker": 240,
+          "flash": 16,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 46,
+          "marker": 240,
+          "flash": 15,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 47,
+          "marker": 240,
+          "flash": 14,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 48,
+          "marker": 240,
+          "flash": 13,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 49,
+          "marker": 240,
+          "flash": 12,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 50,
+          "marker": 240,
+          "flash": 11,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 51,
+          "marker": 240,
+          "flash": 10,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 52,
+          "marker": 240,
+          "flash": 9,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 53,
+          "marker": 240,
+          "flash": 8,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 54,
+          "marker": 240,
+          "flash": 7,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 55,
+          "marker": 240,
+          "flash": 6,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 56,
+          "marker": 240,
+          "flash": 5,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 57,
+          "marker": 240,
+          "flash": 4,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 58,
+          "marker": 240,
+          "flash": 3,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 59,
+          "marker": 240,
+          "flash": 2,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 60,
+          "marker": 240,
+          "flash": 1,
+          "state": 1,
+          "hp": 28
+        },
+        {
+          "frame": 61,
+          "marker": 240,
+          "flash": 0,
+          "state": 1,
+          "hp": 28
+        }
+      ],
+      "deaths": [
+        {
+          "frame": 61,
+          "flash": 0,
+          "state": 1
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        },
+        {
+          "frame": 61,
+          "type": 3
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 61,
+          "id": 240
+        },
+        {
+          "frame": 61,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 1,
+          "flash": 59,
+          "health": 28
+        },
+        {
+          "frame": 2,
+          "state": 1,
+          "flash": 58,
+          "health": 28
+        },
+        {
+          "frame": 3,
+          "state": 1,
+          "flash": 57,
+          "health": 28
+        },
+        {
+          "frame": 4,
+          "state": 1,
+          "flash": 56,
+          "health": 28
+        },
+        {
+          "frame": 5,
+          "state": 1,
+          "flash": 55,
+          "health": 28
+        },
+        {
+          "frame": 6,
+          "state": 1,
+          "flash": 54,
+          "health": 28
+        },
+        {
+          "frame": 7,
+          "state": 1,
+          "flash": 53,
+          "health": 28
+        },
+        {
+          "frame": 8,
+          "state": 1,
+          "flash": 52,
+          "health": 28
+        },
+        {
+          "frame": 9,
+          "state": 1,
+          "flash": 51,
+          "health": 28
+        },
+        {
+          "frame": 10,
+          "state": 1,
+          "flash": 50,
+          "health": 28
+        },
+        {
+          "frame": 11,
+          "state": 1,
+          "flash": 49,
+          "health": 28
+        },
+        {
+          "frame": 12,
+          "state": 1,
+          "flash": 48,
+          "health": 28
+        },
+        {
+          "frame": 13,
+          "state": 1,
+          "flash": 47,
+          "health": 28
+        },
+        {
+          "frame": 14,
+          "state": 1,
+          "flash": 46,
+          "health": 28
+        },
+        {
+          "frame": 15,
+          "state": 1,
+          "flash": 45,
+          "health": 28
+        },
+        {
+          "frame": 16,
+          "state": 1,
+          "flash": 44,
+          "health": 28
+        },
+        {
+          "frame": 17,
+          "state": 1,
+          "flash": 43,
+          "health": 28
+        },
+        {
+          "frame": 18,
+          "state": 1,
+          "flash": 42,
+          "health": 28
+        },
+        {
+          "frame": 19,
+          "state": 1,
+          "flash": 41,
+          "health": 28
+        },
+        {
+          "frame": 20,
+          "state": 1,
+          "flash": 40,
+          "health": 28
+        },
+        {
+          "frame": 21,
+          "state": 1,
+          "flash": 39,
+          "health": 28
+        },
+        {
+          "frame": 22,
+          "state": 1,
+          "flash": 38,
+          "health": 28
+        },
+        {
+          "frame": 23,
+          "state": 1,
+          "flash": 37,
+          "health": 28
+        },
+        {
+          "frame": 24,
+          "state": 1,
+          "flash": 36,
+          "health": 28
+        },
+        {
+          "frame": 25,
+          "state": 1,
+          "flash": 35,
+          "health": 28
+        },
+        {
+          "frame": 26,
+          "state": 1,
+          "flash": 34,
+          "health": 28
+        },
+        {
+          "frame": 27,
+          "state": 1,
+          "flash": 33,
+          "health": 28
+        },
+        {
+          "frame": 28,
+          "state": 1,
+          "flash": 32,
+          "health": 28
+        },
+        {
+          "frame": 29,
+          "state": 1,
+          "flash": 31,
+          "health": 28
+        },
+        {
+          "frame": 30,
+          "state": 1,
+          "flash": 30,
+          "health": 28
+        },
+        {
+          "frame": 31,
+          "state": 1,
+          "flash": 29,
+          "health": 28
+        },
+        {
+          "frame": 32,
+          "state": 1,
+          "flash": 28,
+          "health": 28
+        },
+        {
+          "frame": 33,
+          "state": 1,
+          "flash": 27,
+          "health": 28
+        },
+        {
+          "frame": 34,
+          "state": 1,
+          "flash": 26,
+          "health": 28
+        },
+        {
+          "frame": 35,
+          "state": 1,
+          "flash": 25,
+          "health": 28
+        },
+        {
+          "frame": 36,
+          "state": 1,
+          "flash": 24,
+          "health": 28
+        },
+        {
+          "frame": 37,
+          "state": 1,
+          "flash": 23,
+          "health": 28
+        },
+        {
+          "frame": 38,
+          "state": 1,
+          "flash": 22,
+          "health": 28
+        },
+        {
+          "frame": 39,
+          "state": 1,
+          "flash": 21,
+          "health": 28
+        },
+        {
+          "frame": 40,
+          "state": 1,
+          "flash": 20,
+          "health": 28
+        },
+        {
+          "frame": 41,
+          "state": 1,
+          "flash": 19,
+          "health": 28
+        },
+        {
+          "frame": 42,
+          "state": 1,
+          "flash": 18,
+          "health": 28
+        },
+        {
+          "frame": 43,
+          "state": 1,
+          "flash": 17,
+          "health": 28
+        },
+        {
+          "frame": 44,
+          "state": 1,
+          "flash": 16,
+          "health": 28
+        },
+        {
+          "frame": 45,
+          "state": 1,
+          "flash": 15,
+          "health": 28
+        },
+        {
+          "frame": 46,
+          "state": 1,
+          "flash": 14,
+          "health": 28
+        },
+        {
+          "frame": 47,
+          "state": 1,
+          "flash": 13,
+          "health": 28
+        },
+        {
+          "frame": 48,
+          "state": 1,
+          "flash": 12,
+          "health": 28
+        },
+        {
+          "frame": 49,
+          "state": 1,
+          "flash": 11,
+          "health": 28
+        },
+        {
+          "frame": 50,
+          "state": 1,
+          "flash": 10,
+          "health": 28
+        },
+        {
+          "frame": 51,
+          "state": 1,
+          "flash": 9,
+          "health": 28
+        },
+        {
+          "frame": 52,
+          "state": 1,
+          "flash": 8,
+          "health": 28
+        },
+        {
+          "frame": 53,
+          "state": 1,
+          "flash": 7,
+          "health": 28
+        },
+        {
+          "frame": 54,
+          "state": 1,
+          "flash": 6,
+          "health": 28
+        },
+        {
+          "frame": 55,
+          "state": 1,
+          "flash": 5,
+          "health": 28
+        },
+        {
+          "frame": 56,
+          "state": 1,
+          "flash": 4,
+          "health": 28
+        },
+        {
+          "frame": 57,
+          "state": 1,
+          "flash": 3,
+          "health": 28
+        },
+        {
+          "frame": 58,
+          "state": 1,
+          "flash": 2,
+          "health": 28
+        },
+        {
+          "frame": 59,
+          "state": 1,
+          "flash": 1,
+          "health": 28
+        },
+        {
+          "frame": 60,
+          "state": 1,
+          "flash": 0,
+          "health": 28
+        },
+        {
+          "frame": 61,
+          "state": 7,
+          "flash": 0,
+          "health": 0
+        }
+      ]
+    },
+    {
+      "mode": "hurt-guard",
+      "initialFlash": 0,
+      "queries": 8,
+      "guards": [
+        {
+          "frame": 1,
+          "marker": 240,
+          "flash": 0,
+          "state": 6,
+          "hp": 28
+        },
+        {
+          "frame": 2,
+          "marker": 240,
+          "flash": 0,
+          "state": 6,
+          "hp": 28
+        },
+        {
+          "frame": 3,
+          "marker": 240,
+          "flash": 0,
+          "state": 6,
+          "hp": 28
+        },
+        {
+          "frame": 4,
+          "marker": 240,
+          "flash": 0,
+          "state": 0,
+          "hp": 28
+        }
+      ],
+      "deaths": [
+        {
+          "frame": 4,
+          "flash": 0,
+          "state": 0
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        },
+        {
+          "frame": 4,
+          "type": 3
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 4,
+          "id": 240
+        },
+        {
+          "frame": 4,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 6,
+          "flash": 0,
+          "health": 28
+        },
+        {
+          "frame": 2,
+          "state": 6,
+          "flash": 0,
+          "health": 28
+        },
+        {
+          "frame": 3,
+          "state": 6,
+          "flash": 0,
+          "health": 28
+        },
+        {
+          "frame": 4,
+          "state": 7,
+          "flash": 0,
+          "health": 0
+        }
+      ]
+    }
+  ]
+}

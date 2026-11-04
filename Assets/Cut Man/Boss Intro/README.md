@@ -51,3 +51,7 @@ Import `Assets/Audio/Cut Man/Boss Intro/snd_mm1_cutman_boss_intro.wav` as descri
 ## Current implementation status
 
 Import assets first. The user's current stage-select code is not changed yet. The next instructions must create `obj_mm1_cutman_boss_intro` and `rm_mm1_cutman_boss_intro` in Objects/Rooms > Cut Man > Boss Intro, then implement Cut Man-only confirmation and the measured intro sequence with its audio. No score variables, points display, or points sound should be added.
+
+## Approved Mesen colour update
+
+Current strips/reference preview use approved Mesen0.9.9 default2C02 colours, replacing the original JSNES RGB output described above. Palette matching only, not direct Mesen capture. Geometry, alpha and frame order unchanged. This introduction is already implemented and user-tested; the original implementation-status section is historical. Do not recreate objects/events or alter music/timing. Replacement guide: `Assets/Palette Review/Mesen 0.9.9/MM1-CUTMAN-INTRO-IMPORT.md`.

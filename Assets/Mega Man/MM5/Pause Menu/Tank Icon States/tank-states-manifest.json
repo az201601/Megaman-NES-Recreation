@@ -1,0 +1,19 @@
+{
+  "classification": "Custom selected NES palette on original MM5 E/M geometry and M-letter-only flipped W; NOT native selected palette extraction",
+  "colorMap": {
+    "000000ff": 15,
+    "666666ff": 17,
+    "adadadff": 33,
+    "fffeffff": 48
+  },
+  "frames": [
+    "E grey",
+    "E selected",
+    "W grey",
+    "W selected",
+    "M grey",
+    "M selected"
+  ],
+  "startRule": "User requests Start on selected tank uses one. Controller/inventory not implemented by art package.",
+  "status": "Selected colours ready for review; unchanged original grey states"
+}

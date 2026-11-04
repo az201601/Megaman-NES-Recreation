@@ -1,0 +1,221 @@
+{
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "source": {
+    "repository": "refreshing-lemonade/megaman6-disassembly",
+    "revision": "f0763c46fad2bbcb45e4b8a2f759a10ee3c7c421",
+    "file": "bank38_3F.asm"
+  },
+  "method": "Exact USA ROM instruction bytes plus isolated native 6502 center routine; E468 frame/physics helper replaced by disclosed stride fixture. No ROM modifications.",
+  "limitations": [
+    "Not a natural boss kill or complete end-to-end victory trace.",
+    "Wait constants are instruction evidence, not rendered/audio onset measurements.",
+    "No extracted music identification by listening yet.",
+    "No airborne/slide/hurt/full MM5 runtime test.",
+    "Weapon-get screen path, sprites and music still require separate verification."
+  ],
+  "spans": [
+    {
+      "name": "Boss HP subtract and surviving-hit branch (native signed HP convention)",
+      "bank": "3f",
+      "address": "ef99",
+      "bytes": "a93585dcbde50338e5009de5031011"
+    },
+    {
+      "name": "Normal boss defeat pre-clear wait 240; later stages 60",
+      "bank": "3f",
+      "address": "f964",
+      "bytes": "a9f0a451c0089002a93c9db105"
+    },
+    {
+      "name": "Stage-clear request 13 and subsequent 240-update wait initialization",
+      "bank": "3f",
+      "address": "f97e",
+      "bytes": "a91385dc202bc6a9f09db105"
+    },
+    {
+      "name": "Clear forced input during post-music wait",
+      "bank": "3f",
+      "address": "f98a",
+      "bytes": "a90085402030d42068e4deb105d0f1"
+    },
+    {
+      "name": "Center branch and forced right walk",
+      "bank": "3f",
+      "address": "f9ce",
+      "bytes": "ad8604c980b011a901202ad42068e4ad8604c98090f1b00f"
+    },
+    {
+      "name": "Forced left walk, crossing test, center snap",
+      "bank": "3f",
+      "address": "f9e6",
+      "bytes": "a902202ad42068e4ad8604c980b0f1a9808d8604"
+    },
+    {
+      "name": "Forced controls clear live input then install direction",
+      "bank": "3e",
+      "address": "d42a",
+      "bytes": "48a9008540688599a540294005998540a9008542859a60"
+    },
+    {
+      "name": "Native defeat preparation requests 0C (not clear track 13)",
+      "bank": "3f",
+      "address": "fa0b",
+      "bytes": "a90c85dca551c90fd004a91885dc"
+    },
+    {
+      "name": "After centring: neutral forced input until player Y >= B4",
+      "bank": "3f",
+      "address": "f9a5",
+      "bytes": "a900202ad42068e4adcb04c9b490f1"
+    }
+  ],
+  "centerTrials": [
+    {
+      "start": 24,
+      "fixtureStride": 1,
+      "updates": 104,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 64,
+      "fixtureStride": 1,
+      "updates": 64,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 127,
+      "fixtureStride": 1,
+      "updates": 1,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 128,
+      "fixtureStride": 1,
+      "updates": 1,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 129,
+      "fixtureStride": 1,
+      "updates": 2,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 192,
+      "fixtureStride": 1,
+      "updates": 65,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 232,
+      "fixtureStride": 1,
+      "updates": 105,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 24,
+      "fixtureStride": 2,
+      "updates": 52,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 64,
+      "fixtureStride": 2,
+      "updates": 32,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 127,
+      "fixtureStride": 2,
+      "updates": 1,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 128,
+      "fixtureStride": 2,
+      "updates": 1,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 129,
+      "fixtureStride": 2,
+      "updates": 1,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 192,
+      "fixtureStride": 2,
+      "updates": 33,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 232,
+      "fixtureStride": 2,
+      "updates": 53,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 24,
+      "fixtureStride": 3,
+      "updates": 35,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 64,
+      "fixtureStride": 3,
+      "updates": 22,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 127,
+      "fixtureStride": 3,
+      "updates": 1,
+      "firstDirection": 1,
+      "resultX": 128
+    },
+    {
+      "start": 128,
+      "fixtureStride": 3,
+      "updates": 1,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 129,
+      "fixtureStride": 3,
+      "updates": 1,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 192,
+      "fixtureStride": 3,
+      "updates": 22,
+      "firstDirection": 2,
+      "resultX": 128
+    },
+    {
+      "start": 232,
+      "fixtureStride": 3,
+      "updates": 35,
+      "firstDirection": 2,
+      "resultX": 128
+    }
+  ]
+}

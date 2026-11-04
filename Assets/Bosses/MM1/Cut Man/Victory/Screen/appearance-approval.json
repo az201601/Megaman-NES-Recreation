@@ -1,0 +1,16 @@
+{
+  "status": "User appearance approved; animation/demo/runtime installation still pending",
+  "userConfirmation": "yes!",
+  "approvedPreviewCommit": "24f990d",
+  "previewSha256": "538a60ab73b4b1f85a13bc5db113c0083f4d1e2f014a18a28e2463fa871bc5ba",
+  "approvedDesign": [
+    "Blue/steel MM6-adapted mechanical frame",
+    "No top boss-name text or box",
+    "No weapon-menu icon/name/card row",
+    "YOU GOT / ROLLING CUTTER main title",
+    "Weapon-specific grey/white Mega Man portrait for Rolling Cutter",
+    "Bottom WEAPON ACQUIRED plaque"
+  ],
+  "audio": "Previously approved MM5 weapon-get music at original unboosted volume",
+  "scope": "Appearance approval only; not completion or acceptance of animated reveal,weapon demonstration,GMS playback,inventory transition or install package."
+}

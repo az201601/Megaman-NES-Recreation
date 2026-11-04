@@ -1,3 +1,5 @@
+// Artwork colours: approved Mesen0.9.9 default palette; emulation remains JSNES.
+import {mesenRgbFromJsnes} from './mesen-palette.mjs';
 // Extract normal MM5 walk loop and airborne artwork from live OAM/pattern data.
 // Requires mm5-stage.json. No image generation or scenery pixels are used.
 import {NES,Controller} from 'jsnes';
@@ -27,7 +29,7 @@ function render(n,referenceY,height){
    const dx=n.ppu.sprX[i]+x-referenceX+16;
    const dy=n.ppu.sprY[i]+1+y-referenceY+16;
    assert.ok(dx>=0&&dx<32&&dy>=0&&dy<height,'Opaque sprite pixel would be clipped');
-   const v=n.ppu.sprPalette[n.ppu.sprCol[i]+c];
+   const v=mesenRgbFromJsnes(n.ppu.sprPalette[n.ppu.sprCol[i]+c]);
    p.data.set([v&255,(v>>8)&255,(v>>16)&255,255],(dy*32+dx)*4);pixels++;
   }
  }

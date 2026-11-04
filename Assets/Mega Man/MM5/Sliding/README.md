@@ -14,3 +14,7 @@ Extracted from live original USA MM5 ROM OAM, CHR tiles and sprite palette after
 6. Keep default object sprite, Create/Step/Draw, collision masks and audio unchanged.
 
 User has confirmed the five slide Create variables installed. Sprite import is next; slide movement is NOT installed. Normal sprite collisions cannot simply be substituted for the accepted explicit controller probes. MM5 shifts its native slide reference Y by2; the movement integration must handle that deliberately, not compensate by arbitrarily changing this sprite origin. Separate dust effects/audio remain a later check, not baked into the player pose.
+
+## Approved Mesen colour update
+
+User approved the Mesen0.9.9 default-palette standing preview. Current PNGs now use that palette; geometry, padding, frame layouts and origins are unchanged. Extraction tools retain the same palette. This is palette matching, not a direct Mesen capture. See `Assets/Palette Review/Mesen 0.9.9/MM5-PLAYER-IMPORT.md` for batch replacement instructions.

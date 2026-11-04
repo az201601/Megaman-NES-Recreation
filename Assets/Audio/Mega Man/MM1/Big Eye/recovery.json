@@ -1,0 +1,47 @@
+{
+  "method": "Supplied MM1USA/JSNES2.1.0 initializedPAPU48kstereoPCM16, original frame-boundary BigEye snapshot from documented controlled Down handoff. NativeFFstop queued once at emptyD554; no channel muting. Neutral protected player pinnedX4704/Y36/verticalspeed0, original BigEye landing naturally issues29hex; after that landing the now-grounded slot16 wait is held255 to prevent a second landing contaminating the tail; one request and one opcode-qualified driver dispatch. Full APU,2xPCM gain, exactzero-only trim2mslead/10mstrail. No fades/filter/synth/pitch/timechanges; accepted effects untouched. New take awaits listening approval.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "take": {
+    "first": {
+      "f": 51,
+      "sample": 40097
+    },
+    "totalRequests": 1,
+    "totalCueDispatches": 1,
+    "requests": [
+      {
+        "f": 51,
+        "sample": 40097
+      }
+    ],
+    "dispatch": [
+      {
+        "f": 52,
+        "id": 41,
+        "sample": 40774
+      }
+    ],
+    "controls": [
+      {
+        "f": 1,
+        "kind": "nativeFFstop"
+      }
+    ],
+    "trimStart": 4574,
+    "trimEnd": 13226,
+    "firstNonzero": 4670,
+    "lastNonzero": 12745
+  },
+  "files": [
+    {
+      "name": "mm1-big-eye-land-balanced.wav",
+      "sha256": "34375211f5b4599484e8b8977303bcddb53ada86ae15f8683071f30e21c89cd2",
+      "frames": 8652
+    },
+    {
+      "name": "mm1-big-eye-land-full-tail-balanced.wav",
+      "sha256": "c6082b885954af2870eb88759adbfd338acf926947fc00cfc8d82cc917b11b6e",
+      "frames": 54953
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "scope": "Free-fall lower connections/pit-only no-particle death; requires accepted Second Gate+seven enemies. Manual GMS1.4 install/compile/runtime pending. No ROM/states/art/audio/geometry/enemy replacements.",
+  "files": [
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/INSTALL-GMS14.md",
+      "bytes": 7395,
+      "sha256": "7638d7ccbeff2e8c935f66dd05ecedba55809f5b746f4d04afac033057d3af4f"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/README.md",
+      "bytes": 2994,
+      "sha256": "979260584467ee386bc3dce2e125146e9907d258643cecb414f9e58d483f5a62"
+    },
+    {
+      "path": "Reference/native-mm5-death-effects.json",
+      "source": "docs/mm5-fall-reference/native-mm5-death-effects.json",
+      "bytes": 11046,
+      "sha256": "28a809c10e7c180f41ce7a84c547afa4c0ca81ac14ae96ffc01ed79ccf3e876a"
+    },
+    {
+      "path": "Reference/native-mm5-falls.json",
+      "source": "docs/mm5-fall-reference/native-mm5-falls.json",
+      "bytes": 273203,
+      "sha256": "cc7b2537ab657a98b0bc88a806f2d521fff0864832eb27ad697ef2dd800d9898"
+    },
+    {
+      "path": "obj_mm1_cutman_camera_begin_step.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/obj_mm1_cutman_camera_begin_step.gml",
+      "bytes": 8126,
+      "sha256": "a21984b9f6888d5a5d8a0813ca578cabccbbfea0ff345e4cadae1935adfd8569"
+    },
+    {
+      "path": "obj_mm1_cutman_camera_create_append.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/obj_mm1_cutman_camera_create_append.gml",
+      "bytes": 146,
+      "sha256": "db1e77aee8f8c0539bffbd2b2215e9c8e71bd0deaab60445c892ad641ab0e56c"
+    },
+    {
+      "path": "obj_mm5_combat_create_pit_append.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/obj_mm5_combat_create_pit_append.gml",
+      "bytes": 82,
+      "sha256": "5ac8e0b67662281dd720f2c76b0b518dc612eecf0aa149840f90aa123a6be942"
+    },
+    {
+      "path": "obj_mm5_combat_draw.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/obj_mm5_combat_draw.gml",
+      "bytes": 451,
+      "sha256": "7af27a29508c55ddab51447902bd61b9f8f9cffb847773538ac925cee5db2aa2"
+    },
+    {
+      "path": "scr_mm1_cutman_fall_check.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/scr_mm1_cutman_fall_check.gml",
+      "bytes": 1864,
+      "sha256": "ac3709924d2324aee722d522f6cd7d4abea3b62cd45661621dfe942cf3b85657"
+    },
+    {
+      "path": "scr_mm1_cutman_fall_step.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/scr_mm1_cutman_fall_step.gml",
+      "bytes": 1279,
+      "sha256": "1cfeb567336b0431d0134b7bc85f1836ec9143c04e2cd6222bb071b720ca3352"
+    },
+    {
+      "path": "scr_mm1_cutman_room_below.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/scr_mm1_cutman_room_below.gml",
+      "bytes": 627,
+      "sha256": "4d4956e60d72883bb8984b00262c422c672bb0c2c98d296db53fefe9608d2fe2"
+    },
+    {
+      "path": "scr_mm5_combat_die.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/scr_mm5_combat_die.gml",
+      "bytes": 857,
+      "sha256": "97536e9253d8efe65d283f1c3471b5d494201a279006dea1a50ab51002c232b3"
+    },
+    {
+      "path": "scr_mm5_combat_pit_die.gml",
+      "source": "Assets/Cut Man/Stage/Free Fall Correction/scr_mm5_combat_pit_die.gml",
+      "bytes": 351,
+      "sha256": "85fa3d84e818c16a8a3688257c21943c04d63556bc4bd5dd921a67c3106f643b"
+    }
+  ]
+}

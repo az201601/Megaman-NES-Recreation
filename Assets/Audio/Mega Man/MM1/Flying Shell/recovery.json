@@ -1,0 +1,190 @@
+{
+  "method": "Supplied MM1USA/JSNES2.1.0 default stereo full APU48kHzPCM16. Identical ninthladder frame-boundary original-game snapshots including normally initialized PAPU; nativeFF queued once at firstD554(empty queue) to stop already initialized music; no sound/channel muting or fake firing commands. Actual unchanged enemy creates8bullets/issues8native15requests; chosen burst after300protected neutral updates, playerY36/verticalspeed0/protection100. Comparison control ONLY reduces8same15requests to1at native dispatchD554; actual take not reduced. Compare exact active PCM after silence-only onset/tail removal; this is not automatically waveform equivalence with a different approved Blaster capture. Deliver actual8dispatch take,2xPCM gain,2msleading/10mstrailing exactzero padding, no fades/filter/normalization/pitch/time changes, full-tail audit copy retained. No new audio approval implied.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "sameActivePcm": false,
+  "activeFrames": [
+    6568,
+    6592
+  ],
+  "takes": [
+    {
+      "single": false,
+      "first": {
+        "f": 345,
+        "sample": 274976
+      },
+      "requests": [
+        {
+          "f": 345,
+          "sample": 274976
+        },
+        {
+          "f": 345,
+          "sample": 274984
+        },
+        {
+          "f": 345,
+          "sample": 274992
+        },
+        {
+          "f": 345,
+          "sample": 275000
+        },
+        {
+          "f": 345,
+          "sample": 275009
+        },
+        {
+          "f": 345,
+          "sample": 275018
+        },
+        {
+          "f": 345,
+          "sample": 275027
+        },
+        {
+          "f": 345,
+          "sample": 275037
+        }
+      ],
+      "dispatch": [
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275594
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275618
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275643
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275667
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275692
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275716
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275741
+        },
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275765
+        }
+      ],
+      "controls": [
+        {
+          "f": 1,
+          "kind": "nativeFFstop"
+        }
+      ],
+      "trimStart": 4514,
+      "trimEnd": 11658,
+      "firstNonzero": 4610,
+      "lastNonzero": 11177
+    },
+    {
+      "single": true,
+      "first": {
+        "f": 345,
+        "sample": 274976
+      },
+      "requests": [
+        {
+          "f": 345,
+          "sample": 274976
+        },
+        {
+          "f": 345,
+          "sample": 274984
+        },
+        {
+          "f": 345,
+          "sample": 274992
+        },
+        {
+          "f": 345,
+          "sample": 275000
+        },
+        {
+          "f": 345,
+          "sample": 275009
+        },
+        {
+          "f": 345,
+          "sample": 275018
+        },
+        {
+          "f": 345,
+          "sample": 275027
+        },
+        {
+          "f": 345,
+          "sample": 275037
+        }
+      ],
+      "dispatch": [
+        {
+          "f": 346,
+          "id": 21,
+          "sample": 275594
+        }
+      ],
+      "controls": [
+        {
+          "f": 1,
+          "kind": "nativeFFstop"
+        },
+        {
+          "f": 29,
+          "kind": "comparisonOnly_keepFirstOfEight"
+        },
+        {
+          "f": 117,
+          "kind": "comparisonOnly_keepFirstOfEight"
+        },
+        {
+          "f": 205,
+          "kind": "comparisonOnly_keepFirstOfEight"
+        },
+        {
+          "f": 346,
+          "kind": "comparisonOnly_keepFirstOfEight"
+        }
+      ],
+      "trimStart": 4514,
+      "trimEnd": 11682,
+      "firstNonzero": 4610,
+      "lastNonzero": 11201
+    }
+  ],
+  "files": [
+    {
+      "name": "mm1-flying-shell-native-burst-balanced.wav",
+      "sha256": "c40b2aa7a51f4ee464bce68d8e6564107bc90f1a40e4785f96b92112ea57fcd5",
+      "frames": 7144
+    },
+    {
+      "name": "mm1-flying-shell-native-burst-full-tail-balanced.wav",
+      "sha256": "81bb7af26052e9ca201b4b1bd2ef47397e0a15d5a491fc007b631c1c51f795a3",
+      "frames": 54894
+    }
+  ]
+}

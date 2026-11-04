@@ -1,0 +1,539 @@
+{
+  "method": "Supplied USA original natural Right approach; capture unmodified SpawnObject arguments/record bytes. Original source bytes checked for HP initialization and damage subtraction. Native20HP minus20normal damage means one normal hit; hybrid1HP/1normal/3fullcharge preserves kill threshold, not native MM1 health encoding.",
+  "tables": {
+    "initialLife": 20,
+    "normalBusterDamage": 20,
+    "bodyDamage": 3,
+    "typeHalfWidth": 8,
+    "typeHalfHeight": 8
+  },
+  "spans": [
+    {
+      "offset": 121385,
+      "hex": "a914"
+    },
+    {
+      "offset": 121387,
+      "hex": "9dc006"
+    },
+    {
+      "offset": 98008,
+      "hex": "a55f"
+    },
+    {
+      "offset": 98010,
+      "hex": "0a"
+    },
+    {
+      "offset": 98011,
+      "hex": "a8"
+    },
+    {
+      "offset": 98012,
+      "hex": "b944bf"
+    },
+    {
+      "offset": 98015,
+      "hex": "8504"
+    },
+    {
+      "offset": 98017,
+      "hex": "b945bf"
+    },
+    {
+      "offset": 98020,
+      "hex": "8505"
+    },
+    {
+      "offset": 98022,
+      "hex": "bce006"
+    },
+    {
+      "offset": 98025,
+      "hex": "38"
+    },
+    {
+      "offset": 98026,
+      "hex": "bdc006"
+    },
+    {
+      "offset": 98029,
+      "hex": "f104"
+    },
+    {
+      "offset": 98031,
+      "hex": "9008"
+    },
+    {
+      "offset": 98033,
+      "hex": "f006"
+    },
+    {
+      "offset": 98035,
+      "hex": "9dc006"
+    },
+    {
+      "offset": 98038,
+      "hex": "a901"
+    },
+    {
+      "offset": 98040,
+      "hex": "60"
+    },
+    {
+      "offset": 130145,
+      "hex": "14"
+    },
+    {
+      "offset": 130713,
+      "hex": "03"
+    },
+    {
+      "offset": 129864,
+      "hex": "08"
+    },
+    {
+      "offset": 130070,
+      "hex": "08"
+    },
+    {
+      "offset": 90693,
+      "hex": "b989fe"
+    }
+  ],
+  "spawns": [
+    {
+      "frame": 21,
+      "type": 0,
+      "index": 0,
+      "worldX": 272,
+      "y": 76,
+      "camera": 17,
+      "recordPointer": 42088,
+      "record": [
+        1,
+        16,
+        76,
+        0
+      ]
+    }
+  ],
+  "records": [
+    {
+      "index": 0,
+      "page": 1,
+      "x": 16,
+      "y": 76,
+      "type": 0
+    },
+    {
+      "index": 1,
+      "page": 1,
+      "x": 64,
+      "y": 140,
+      "type": 0
+    },
+    {
+      "index": 2,
+      "page": 1,
+      "x": 80,
+      "y": 92,
+      "type": 0
+    },
+    {
+      "index": 3,
+      "page": 2,
+      "x": 56,
+      "y": 76,
+      "type": 0
+    },
+    {
+      "index": 4,
+      "page": 2,
+      "x": 112,
+      "y": 140,
+      "type": 0
+    },
+    {
+      "index": 5,
+      "page": 2,
+      "x": 128,
+      "y": 92,
+      "type": 0
+    },
+    {
+      "index": 6,
+      "page": 3,
+      "x": 56,
+      "y": 72,
+      "type": 11
+    },
+    {
+      "index": 7,
+      "page": 3,
+      "x": 184,
+      "y": 120,
+      "type": 11
+    },
+    {
+      "index": 8,
+      "page": 4,
+      "x": 120,
+      "y": 88,
+      "type": 11
+    },
+    {
+      "index": 9,
+      "page": 4,
+      "x": 152,
+      "y": 56,
+      "type": 34
+    },
+    {
+      "index": 10,
+      "page": 4,
+      "x": 216,
+      "y": 152,
+      "type": 11
+    },
+    {
+      "index": 11,
+      "page": 5,
+      "x": 72,
+      "y": 184,
+      "type": 23
+    },
+    {
+      "index": 12,
+      "page": 5,
+      "x": 120,
+      "y": 120,
+      "type": 11
+    },
+    {
+      "index": 13,
+      "page": 5,
+      "x": 184,
+      "y": 56,
+      "type": 34
+    },
+    {
+      "index": 14,
+      "page": 6,
+      "x": 120,
+      "y": 216,
+      "type": 23
+    },
+    {
+      "index": 15,
+      "page": 6,
+      "x": 152,
+      "y": 40,
+      "type": 11
+    },
+    {
+      "index": 16,
+      "page": 6,
+      "x": 184,
+      "y": 88,
+      "type": 34
+    },
+    {
+      "index": 17,
+      "page": 7,
+      "x": 144,
+      "y": 180,
+      "type": 28
+    },
+    {
+      "index": 18,
+      "page": 8,
+      "x": 56,
+      "y": 184,
+      "type": 2
+    },
+    {
+      "index": 19,
+      "page": 8,
+      "x": 88,
+      "y": 152,
+      "type": 2
+    },
+    {
+      "index": 20,
+      "page": 8,
+      "x": 120,
+      "y": 120,
+      "type": 2
+    },
+    {
+      "index": 21,
+      "page": 9,
+      "x": 72,
+      "y": 168,
+      "type": 4
+    },
+    {
+      "index": 22,
+      "page": 9,
+      "x": 104,
+      "y": 104,
+      "type": 4
+    },
+    {
+      "index": 23,
+      "page": 9,
+      "x": 184,
+      "y": 136,
+      "type": 33
+    },
+    {
+      "index": 24,
+      "page": 10,
+      "x": 72,
+      "y": 72,
+      "type": 33
+    },
+    {
+      "index": 25,
+      "page": 10,
+      "x": 88,
+      "y": 136,
+      "type": 4
+    },
+    {
+      "index": 26,
+      "page": 10,
+      "x": 120,
+      "y": 104,
+      "type": 33
+    },
+    {
+      "index": 27,
+      "page": 10,
+      "x": 216,
+      "y": 136,
+      "type": 33
+    },
+    {
+      "index": 28,
+      "page": 11,
+      "x": 120,
+      "y": 168,
+      "type": 33
+    },
+    {
+      "index": 29,
+      "page": 11,
+      "x": 136,
+      "y": 184,
+      "type": 4
+    },
+    {
+      "index": 30,
+      "page": 11,
+      "x": 184,
+      "y": 104,
+      "type": 33
+    },
+    {
+      "index": 31,
+      "page": 11,
+      "x": 216,
+      "y": 72,
+      "type": 33
+    },
+    {
+      "index": 32,
+      "page": 12,
+      "x": 40,
+      "y": 72,
+      "type": 33
+    },
+    {
+      "index": 33,
+      "page": 12,
+      "x": 56,
+      "y": 120,
+      "type": 4
+    },
+    {
+      "index": 34,
+      "page": 12,
+      "x": 56,
+      "y": 168,
+      "type": 33
+    },
+    {
+      "index": 35,
+      "page": 12,
+      "x": 136,
+      "y": 136,
+      "type": 33
+    },
+    {
+      "index": 36,
+      "page": 12,
+      "x": 200,
+      "y": 40,
+      "type": 4
+    },
+    {
+      "index": 37,
+      "page": 13,
+      "x": 144,
+      "y": 180,
+      "type": 28
+    },
+    {
+      "index": 38,
+      "page": 15,
+      "x": 40,
+      "y": 184,
+      "type": 64
+    },
+    {
+      "index": 39,
+      "page": 15,
+      "x": 96,
+      "y": 76,
+      "type": 0
+    },
+    {
+      "index": 40,
+      "page": 15,
+      "x": 144,
+      "y": 140,
+      "type": 0
+    },
+    {
+      "index": 41,
+      "page": 15,
+      "x": 160,
+      "y": 92,
+      "type": 0
+    },
+    {
+      "index": 42,
+      "page": 16,
+      "x": 248,
+      "y": 128,
+      "type": 10
+    },
+    {
+      "index": 43,
+      "page": 17,
+      "x": 248,
+      "y": 128,
+      "type": 10
+    },
+    {
+      "index": 44,
+      "page": 18,
+      "x": 224,
+      "y": 172,
+      "type": 9
+    },
+    {
+      "index": 45,
+      "page": 20,
+      "x": 216,
+      "y": 160,
+      "type": 5
+    },
+    {
+      "index": 46,
+      "page": 21,
+      "x": 200,
+      "y": 96,
+      "type": 22
+    },
+    {
+      "index": 47,
+      "page": 22,
+      "x": 80,
+      "y": 160,
+      "type": 5
+    }
+  ],
+  "bladers": [
+    {
+      "index": 0,
+      "page": 1,
+      "x": 16,
+      "y": 76,
+      "type": 0
+    },
+    {
+      "index": 1,
+      "page": 1,
+      "x": 64,
+      "y": 140,
+      "type": 0
+    },
+    {
+      "index": 2,
+      "page": 1,
+      "x": 80,
+      "y": 92,
+      "type": 0
+    },
+    {
+      "index": 3,
+      "page": 2,
+      "x": 56,
+      "y": 76,
+      "type": 0
+    },
+    {
+      "index": 4,
+      "page": 2,
+      "x": 112,
+      "y": 140,
+      "type": 0
+    },
+    {
+      "index": 5,
+      "page": 2,
+      "x": 128,
+      "y": 92,
+      "type": 0
+    },
+    {
+      "index": 39,
+      "page": 15,
+      "x": 96,
+      "y": 76,
+      "type": 0
+    },
+    {
+      "index": 40,
+      "page": 15,
+      "x": 144,
+      "y": 140,
+      "type": 0
+    },
+    {
+      "index": 41,
+      "page": 15,
+      "x": 160,
+      "y": 92,
+      "type": 0
+    }
+  ],
+  "first": {
+    "frame": 21,
+    "type": 0,
+    "index": 0,
+    "worldX": 272,
+    "y": 76,
+    "camera": 17,
+    "recordPointer": 42088,
+    "record": [
+      1,
+      16,
+      76,
+      0
+    ]
+  }
+}

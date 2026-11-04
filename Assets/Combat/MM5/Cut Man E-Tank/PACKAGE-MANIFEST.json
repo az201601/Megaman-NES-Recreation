@@ -1,0 +1,120 @@
+{
+  "scope": "Approved Cut Man E1168,1048/band960; cap9/leavefull/oncepernewgame/no-death-farming. Native MM5 E worldart, reuse pickup24/refill26 audio. E Start fullheal in frozen pause, W/M deferred. Exact folders/event/script replacements in guide. Preserve active spikes/health/eight enemies/doors/terrain/player/death. Source/model/native checks, NOT installed GMS acceptance.",
+  "files": [
+    {
+      "path": "Art/spr_mm5_pickup_e_tank_strip2.png",
+      "bytes": 315,
+      "sha256": "b58b636e5be905a201c39608a96680a41df3e11506a4d9fa9bcf93dbdba02205"
+    },
+    {
+      "path": "HEALTH-COMMIT-FIX.md",
+      "bytes": 2337,
+      "sha256": "6d2c74b6822ece562f71dbf9747f9fbaa7a3681d6680270d6590a6a1215616bd"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_e_tank_append.gml",
+      "bytes": 177,
+      "sha256": "cb437de0401bc82618253f32b43670b8a8f7bc848c9c1ac5ee48afbef9837161"
+    },
+    {
+      "path": "Hooks/obj_mm5_pause_menu_create_e_tank_append.gml",
+      "bytes": 219,
+      "sha256": "b597118698bf77edf44f220765000ff00e0739c9e75016113820d14b06484179"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "bytes": 11276,
+      "sha256": "562250ba02160ad799ae26bde0c66af538fe62e558ee06f82d5b3ebdfa39529c"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_e_tank_create.gml",
+      "bytes": 207,
+      "sha256": "6170aacf89a2027b7130a4eb35bf0ee3001e8849d48f79f65b53b446560baafd"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_e_tank_draw.gml",
+      "bytes": 196,
+      "sha256": "45eb1de860aadfb72cff4b1972c31c81457ea0b5960e5d961b0647f3c0f6be3d"
+    },
+    {
+      "path": "Objects/obj_mm5_pause_menu_draw_gui.gml",
+      "bytes": 3072,
+      "sha256": "cffba711d00a003e9879a70ecb4c8143bece356a28188a7a34a2c3ab16dcf919"
+    },
+    {
+      "path": "Objects/obj_mm5_pause_menu_step.gml",
+      "bytes": 2226,
+      "sha256": "3e2008b2f0ff3c445d275012c44dffb9627da4b260c22b2a3dda075d888c520b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2515,
+      "sha256": "03bc7f3069f87988fa17d40f4d988f8c9b228d5bfba4bdf471a00c12b9492f24"
+    },
+    {
+      "path": "Reference/e-tank-preview-8x.png",
+      "bytes": 575,
+      "sha256": "8be39b0af3631f0e83bcd7022eb8e1e510ec264cffc863e62073b5ee3962a0e9"
+    },
+    {
+      "path": "Reference/native-e-tank-world-crop.png",
+      "bytes": 489,
+      "sha256": "204c003e9c7a20c5f6c9179bf02fba3bc991ae25fe532955c1eaec7887c7463f"
+    },
+    {
+      "path": "Reference/native-mm5-e-tank.json",
+      "bytes": 110278,
+      "sha256": "92e345e02a242c0917275e3c5866b6dafabc4510771685467dff9e80c0c85a29"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_e_tank_spawn.gml",
+      "bytes": 676,
+      "sha256": "a824069133a2f7a85cdec9ba3c3470cc03cf499ca8e885ee6b2ffcc42aceb610"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_begin.gml",
+      "bytes": 1424,
+      "sha256": "8f5b6d69b934b08942ac396c138aa06512e1b4a0865585c3e3d02ab616ba87aa"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_collect.gml",
+      "bytes": 1711,
+      "sha256": "41bd0529fd2a773bdd796273934f8cd07ac884f84ecea7f5d6b08118e95c70d1"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 6331,
+      "sha256": "1afb2c39df2fa104378d64937cd9daac1acb0e39b8e4d82b326fa79fd5c2751e"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_pickup_step.gml",
+      "bytes": 1467,
+      "sha256": "f9a339a83bb86de9c92d3e36aa5a6b61bfcb4f6dbd30dd43f282dd97c2248fd4"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_e_tank_commit.gml",
+      "bytes": 365,
+      "sha256": "2e80ac742f3eb5dbccbf1f44b17b78daa744f86d409df57307132db03a192d75"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_e_tank_tick.gml",
+      "bytes": 467,
+      "sha256": "eb2d4a02ca53779766197013016fc87cd610a7921f65786b146d7f00ae579609"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_e_tank_use.gml",
+      "bytes": 607,
+      "sha256": "4b1c560ae4548894e29acb26a49da5819a4f62599fc787e14c97dbed09ece5d5"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_inventory_init.gml",
+      "bytes": 809,
+      "sha256": "9324e44e6acf8cd40860e94d329231fd701ee3d021b49a31aec20c7bf5000199"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_restore.gml",
+      "bytes": 1666,
+      "sha256": "a5c0f4ef1538c81727916aa6d97bb383f689b6a6c4e1206f298030c76ffc286a"
+    }
+  ]
+}

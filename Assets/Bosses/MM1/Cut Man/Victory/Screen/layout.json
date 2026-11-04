@@ -1,0 +1,127 @@
+{
+  "status": "Final revised static appearance approved by user. Animation/demo/GMS runtime and installation pending.",
+  "design": "Custom blue/steel mechanical frame adapted from original MM6 pipe/window art; bottom acquired plaque; no top boss-name box; MM6 large Mega Man adapted to Rolling Cutter grey/white; original MM5 sprite font. No weapon-menu symbol,abbreviation or card for any weapon. No score/CLEAR POINTS.",
+  "portrait": {
+    "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+    "method": "Native MM6 award320 snapshot advanced1frame,original rendered background figure isolated against its solid black backdrop (black made transparent). Opaque pixels independently checked against uncropped native rendering. Not an OAM reconstruction. No ROM/CHR/palette patch.",
+    "matched": 1632,
+    "rect": [
+      176,
+      72,
+      64,
+      96
+    ]
+  },
+  "assets": {
+    "spr_mm6_weapon_get_megaman.png": {
+      "sha256": "b794d6e551f390c17d31658862b97ba56f57110919d9606ecdf2b7e3450f1ae2",
+      "width": 64,
+      "height": 96,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    "spr_mm1_weapon_get_frame.png": {
+      "sha256": "7d74fd951a69e186ad67ede6487d64b004b7e1925e3322992f8b6da80682e7be",
+      "width": 256,
+      "height": 240,
+      "origin": [
+        0,
+        0
+      ]
+    },
+    "spr_mm1_weapon_get_rolling_cutter_megaman.png": {
+      "sha256": "c7b8282d82c1a02f61e1eeb4bdf777014319196f7c4155d75ed53304b986e036",
+      "width": 64,
+      "height": 96,
+      "origin": [
+        0,
+        0
+      ]
+    }
+  },
+  "font": {
+    "file": "Assets/Mega Man/MM5/Pause Menu/Import Pack/Sprites/spr_mm5_pause_font_strip38.png",
+    "sha256": "fdceb874f20ac94669c8c1d1d15e56bae5c2701dfc54527d3f78ebfcda3d3848",
+    "alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .",
+    "cell": [
+      8,
+      8
+    ]
+  },
+  "weapon": "rolling_cutter",
+  "portraitPalette": {
+    "mapping": {
+      "155fd9": "666666",
+      "64b0ff": "fffeff",
+      "b71e7b": "adadad"
+    },
+    "policy": "Weapon-specific armour and cannon accent only; preserve face/eyes/geometry/alpha. Grey/white custom adaptation matching Rolling Cutter theme,not a native MM6 weapon palette.",
+    "displayAsset": "spr_mm1_weapon_get_rolling_cutter_megaman.png"
+  },
+  "menuWeaponRow": false,
+  "bossNamePlate": false,
+  "texts": [
+    {
+      "text": "YOU GOT",
+      "x": 24,
+      "y": 88,
+      "color": [
+        100,
+        176,
+        255
+      ]
+    },
+    {
+      "text": "ROLLING CUTTER",
+      "x": 24,
+      "y": 112,
+      "color": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "text": "WEAPON ACQUIRED",
+      "x": 68,
+      "y": 210,
+      "color": [
+        100,
+        176,
+        255
+      ]
+    }
+  ],
+  "portraitDraw": [
+    176,
+    72
+  ],
+  "framePalette": {
+    "179,243,204": [
+      218,
+      234,
+      245
+    ],
+    "69,224,130": [
+      218,
+      234,
+      245
+    ],
+    "0,143,50": [
+      132,
+      152,
+      171
+    ]
+  },
+  "preview": {
+    "file": "custom-rolling-cutter-screen-preview.png",
+    "sha256": "538a60ab73b4b1f85a13bc5db113c0083f4d1e2f014a18a28e2463fa871bc5ba"
+  },
+  "limitations": [
+    "Blue/steel frame layout/palette and plaques are custom design,not native MM6 accuracy claims.",
+    "Still image shows reveal/name-card state,not completed demonstration or runtime animation.",
+    "Music remains approved MM5 at original unboosted volume; no new audio created/integrated here."
+  ]
+}

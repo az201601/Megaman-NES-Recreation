@@ -1,0 +1,116 @@
+{
+  "credit": "Sprites by KindlyPatrick",
+  "status": "Grey and selected states approved, including corrected grey Cutter. GMS user installation not confirmed.",
+  "paletteSource": "Mesen0.9.9 default2C02, pinned local palette",
+  "classification": "Custom palette adaptation of supplied artwork, NOT original GB/NES selected sprites",
+  "dimensions": [
+    16,
+    16
+  ],
+  "statesOrder": "Per weapon: gray,selected; seven weapons in listed order",
+  "icons": [
+    {
+      "id": "rolling_cutter",
+      "label": "R. CUTTER",
+      "accentNES": 61,
+      "sourceColumn": 8,
+      "sourceColorToNES": {
+        "112,112,112": 0,
+        "184,184,184": 61,
+        "255,255,255": 48,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 0,
+      "selectedFrame": 1
+    },
+    {
+      "id": "ice_slasher",
+      "label": "I. SLASHER",
+      "accentNES": 49,
+      "sourceColumn": 2,
+      "sourceColorToNES": {
+        "87,145,248": 33,
+        "255,255,255": 48,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 2,
+      "selectedFrame": 3
+    },
+    {
+      "id": "hyper_bomb",
+      "label": "H. BOMB",
+      "accentNES": 27,
+      "sourceColumn": 1,
+      "sourceColorToNES": {
+        "0,144,56": 27,
+        "176,248,200": 59,
+        "255,255,255": 48,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 4,
+      "selectedFrame": 5
+    },
+    {
+      "id": "fire_storm",
+      "label": "F. STORM",
+      "accentNES": 39,
+      "sourceColumn": 3,
+      "sourceColorToNES": {
+        "216,40,0": 22,
+        "248,151,56": 39,
+        "248,216,168": 55,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 6,
+      "selectedFrame": 7
+    },
+    {
+      "id": "thunder_beam",
+      "label": "T. BEAM",
+      "accentNES": 39,
+      "sourceColumn": 5,
+      "sourceColorToNES": {
+        "112,112,112": 0,
+        "240,183,56": 39,
+        "255,255,255": 48,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 8,
+      "selectedFrame": 9
+    },
+    {
+      "id": "super_arm",
+      "label": "S. ARM",
+      "accentNES": 39,
+      "sourceColumn": 7,
+      "sourceColorToNES": {
+        "200,72,8": 22,
+        "248,216,168": 55,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 10,
+      "selectedFrame": 11
+    },
+    {
+      "id": "magnet_beam",
+      "label": "M. BEAM",
+      "accentNES": 33,
+      "sourceColumn": 9,
+      "sourceColorToNES": {
+        "0,113,232": 17,
+        "55,185,248": 33,
+        "255,255,255": 48,
+        "0,0,0": 15
+      },
+      "uniqueColors": 4,
+      "grayFrame": 12,
+      "selectedFrame": 13
+    }
+  ]
+}

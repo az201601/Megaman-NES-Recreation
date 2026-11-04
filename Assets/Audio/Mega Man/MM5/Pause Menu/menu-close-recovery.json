@@ -1,0 +1,25 @@
+{
+  "source": "Supplied Mega Man5 USA ROM, actual fresh Start/A confirms Buster and closes pause menu",
+  "closeKey": "START",
+  "renderer": "JSNES2.1.0 full APU, NOT a Mesen execution/capture",
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "requests": [
+    {
+      "frame": 10,
+      "command": 40
+    }
+  ],
+  "musicStop": "Original F0 command via sound ring; warm tail verified zero",
+  "warmPeak": 0,
+  "first": 9626,
+  "last": 36780,
+  "start": 9386,
+  "end": 37021,
+  "sampleFrames": 27635,
+  "seconds": 0.5757291666666666,
+  "peakPCM": 6223,
+  "processing": "PCM16 conversion; trim only PCM-zero silence, retain5ms silent margin each side. No normalization, fades, synthesis or isolated channels.",
+  "scope": "Weapon-confirm closing effect. Opening sound and music absent from recording."
+}

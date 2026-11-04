@@ -1,0 +1,35 @@
+{
+  "scope": "Jumping entry at both gates after accepted Free Fall Correction; one new script/two full replacements; no art/audio/room/enemy changes. GMS compile/installed playtest pending.",
+  "files": [
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Cut Man/Stage/Jumping Gate Entry/INSTALL-GMS14.md",
+      "bytes": 4936,
+      "sha256": "97cc4a09fe5698a94ff6cb7330e2f92f25977697730345cc6a4a8644528254c2"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Cut Man/Stage/Jumping Gate Entry/README.md",
+      "bytes": 1940,
+      "sha256": "495660b606ea015b6df050e779bdb20c4211fd15915def49bdcc93fea4aeb1da"
+    },
+    {
+      "path": "obj_mm1_cutman_camera_begin_step.gml",
+      "source": "Assets/Cut Man/Stage/Jumping Gate Entry/obj_mm1_cutman_camera_begin_step.gml",
+      "bytes": 8281,
+      "sha256": "d8e4e417519b1dd766f6ecb7d7860fda9cf13deda2d8d252c9840a9052cdd3c1"
+    },
+    {
+      "path": "scr_mm1_cutman_gate_air_step.gml",
+      "source": "Assets/Cut Man/Stage/Jumping Gate Entry/scr_mm1_cutman_gate_air_step.gml",
+      "bytes": 1668,
+      "sha256": "896cfc8fce8b8f38de666497196988382372649aec6711a280aa7530a38abf0f"
+    },
+    {
+      "path": "scr_mm1_cutman_gate_start.gml",
+      "source": "Assets/Cut Man/Stage/Jumping Gate Entry/scr_mm1_cutman_gate_start.gml",
+      "bytes": 1993,
+      "sha256": "66a26b69a9236ea709c994adeb588966d9394105e28a7cceb51f900e92fb8475"
+    }
+  ]
+}

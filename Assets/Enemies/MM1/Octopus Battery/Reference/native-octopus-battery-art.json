@@ -1,0 +1,124 @@
+{
+  "method": "Supplied MM1USA/JSNES2.1.0 original live OAM/CHR/palette, controlled firsthorizontal snapshot from probe-octopus-battery.mjs. PlayerX2424/Y36/verticalspeed0/protection100 everyframe; neutral input. All3poses independently opaque-pixel matched to native rendering. Mesen0.9.9RGB conversion, not Mesen.exe. Original symmetric16x16 poses; no invented pixels or procedural eye shapes.",
+  "cell": [
+    16,
+    16
+  ],
+  "origin": [
+    8,
+    7
+  ],
+  "phaseToPose": [
+    0,
+    1,
+    2,
+    1
+  ],
+  "poses": [
+    {
+      "index": 0,
+      "frame": 3,
+      "cells": [
+        {
+          "i": 35,
+          "x": 182,
+          "y": 128,
+          "tile": 128,
+          "attr": 3
+        },
+        {
+          "i": 36,
+          "x": 190,
+          "y": 128,
+          "tile": 128,
+          "attr": 67
+        },
+        {
+          "i": 37,
+          "x": 182,
+          "y": 136,
+          "tile": 128,
+          "attr": 131
+        },
+        {
+          "i": 38,
+          "x": 190,
+          "y": 136,
+          "tile": 128,
+          "attr": 195
+        }
+      ],
+      "rgbaSha256": "d86a24709be51acb7753819e8642693e6c77bcc1eeb2b279d345355e72f45ddf"
+    },
+    {
+      "index": 1,
+      "frame": 44,
+      "cells": [
+        {
+          "i": 19,
+          "x": 72,
+          "y": 159,
+          "tile": 129,
+          "attr": 3
+        },
+        {
+          "i": 18,
+          "x": 80,
+          "y": 159,
+          "tile": 129,
+          "attr": 67
+        },
+        {
+          "i": 21,
+          "x": 72,
+          "y": 167,
+          "tile": 130,
+          "attr": 3
+        },
+        {
+          "i": 20,
+          "x": 80,
+          "y": 167,
+          "tile": 130,
+          "attr": 67
+        }
+      ],
+      "rgbaSha256": "c0dc44d441ff5e03b2748149842e7eb7c0887773aec61670274008160296a295"
+    },
+    {
+      "index": 2,
+      "frame": 1,
+      "cells": [
+        {
+          "i": 10,
+          "x": 167,
+          "y": 95,
+          "tile": 131,
+          "attr": 3
+        },
+        {
+          "i": 11,
+          "x": 175,
+          "y": 95,
+          "tile": 131,
+          "attr": 67
+        },
+        {
+          "i": 12,
+          "x": 167,
+          "y": 103,
+          "tile": 132,
+          "attr": 3
+        },
+        {
+          "i": 13,
+          "x": 175,
+          "y": 103,
+          "tile": 132,
+          "attr": 67
+        }
+      ],
+      "rgbaSha256": "dcffd0e26a39c5480a6da2f6444b481af927b4b3f81f618427014cfc182e6557"
+    }
+  ]
+}

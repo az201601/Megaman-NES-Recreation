@@ -1,0 +1,19 @@
+{
+  "source": "Assets/Mega Man/MM5/HUD/spr_mm5_health_meter_strip29.png",
+  "sourceSha256": "fbc7c35e9326346893bcd6746a1a2984911d92f278b78de5760ddac42663ad43",
+  "sha256": "a06c93d35f0791ac215307d6d5dcb542b161ff6ed31fd50b89456ce468780200",
+  "cell": [
+    8,
+    56
+  ],
+  "frames": 29,
+  "origin": [
+    0,
+    0
+  ],
+  "mapping": {
+    "f7d8a5": "666666"
+  },
+  "count": 1624,
+  "method": "Accepted MM5 health meter geometry,black outline,white highlights and empty states retained;only fill armour colour changes to grey. Draw GUI x8,y25 beside unchanged health at24,25. Current equipped energy0..28,not a separate display cache."
+}

@@ -1,0 +1,9884 @@
+{
+  "source": "MM1 USA stage0 bank0; 32x32 blocks column-major, classes/palettes from original tables. Original PPU upload checks cover all4screens; pages2/3 via controlled height/protection traversal, not natural playthrough.",
+  "world": {
+    "width": 1024,
+    "height": 240,
+    "firstPage": 0,
+    "lastPage": 3
+  },
+  "sky": [
+    72,
+    205,
+    222,
+    255
+  ],
+  "atlas": {
+    "width": 128,
+    "height": 32,
+    "uniqueTiles": 13,
+    "placements": 462
+  },
+  "solids": [
+    {
+      "x": 960,
+      "y": 0,
+      "width": 16,
+      "height": 32
+    },
+    {
+      "x": 992,
+      "y": 0,
+      "width": 32,
+      "height": 240
+    },
+    {
+      "x": 832,
+      "y": 64,
+      "width": 16,
+      "height": 96
+    },
+    {
+      "x": 864,
+      "y": 64,
+      "width": 16,
+      "height": 32
+    },
+    {
+      "x": 912,
+      "y": 64,
+      "width": 80,
+      "height": 32
+    },
+    {
+      "x": 0,
+      "y": 96,
+      "width": 80,
+      "height": 16
+    },
+    {
+      "x": 96,
+      "y": 96,
+      "width": 64,
+      "height": 16
+    },
+    {
+      "x": 176,
+      "y": 96,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "x": 224,
+      "y": 96,
+      "width": 112,
+      "height": 16
+    },
+    {
+      "x": 352,
+      "y": 96,
+      "width": 64,
+      "height": 16
+    },
+    {
+      "x": 432,
+      "y": 96,
+      "width": 16,
+      "height": 16
+    },
+    {
+      "x": 480,
+      "y": 96,
+      "width": 32,
+      "height": 16
+    },
+    {
+      "x": 960,
+      "y": 96,
+      "width": 32,
+      "height": 144
+    },
+    {
+      "x": 528,
+      "y": 112,
+      "width": 32,
+      "height": 16
+    },
+    {
+      "x": 608,
+      "y": 128,
+      "width": 64,
+      "height": 112
+    },
+    {
+      "x": 704,
+      "y": 144,
+      "width": 32,
+      "height": 96
+    },
+    {
+      "x": 864,
+      "y": 144,
+      "width": 48,
+      "height": 16
+    },
+    {
+      "x": 576,
+      "y": 160,
+      "width": 32,
+      "height": 80
+    },
+    {
+      "x": 944,
+      "y": 160,
+      "width": 16,
+      "height": 80
+    },
+    {
+      "x": 736,
+      "y": 176,
+      "width": 32,
+      "height": 64
+    },
+    {
+      "x": 0,
+      "y": 192,
+      "width": 576,
+      "height": 48
+    },
+    {
+      "x": 768,
+      "y": 192,
+      "width": 176,
+      "height": 48
+    }
+  ],
+  "ladders": [
+    {
+      "x": 976,
+      "y": 0,
+      "width": 16,
+      "height": 64
+    },
+    {
+      "x": 848,
+      "y": 64,
+      "width": 16,
+      "height": 96
+    },
+    {
+      "x": 80,
+      "y": 96,
+      "width": 16,
+      "height": 96
+    },
+    {
+      "x": 160,
+      "y": 96,
+      "width": 16,
+      "height": 32
+    },
+    {
+      "x": 336,
+      "y": 96,
+      "width": 16,
+      "height": 96
+    },
+    {
+      "x": 416,
+      "y": 96,
+      "width": 16,
+      "height": 32
+    }
+  ],
+  "tops": [
+    {
+      "x": 848,
+      "y": 64,
+      "width": 16,
+      "height": 1
+    },
+    {
+      "x": 80,
+      "y": 96,
+      "width": 16,
+      "height": 1
+    },
+    {
+      "x": 160,
+      "y": 96,
+      "width": 16,
+      "height": 1
+    },
+    {
+      "x": 336,
+      "y": 96,
+      "width": 16,
+      "height": 1
+    },
+    {
+      "x": 416,
+      "y": 96,
+      "width": 16,
+      "height": 1
+    }
+  ],
+  "objects": [
+    {
+      "x": 128,
+      "y": 64,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 128,
+      "y": 160,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 160,
+      "y": 128,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 160,
+      "y": 160,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 384,
+      "y": 64,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 384,
+      "y": 160,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 416,
+      "y": 128,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 416,
+      "y": 160,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "x": 640,
+      "y": 96,
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "existingScreenDifference": "Only256pixels of firstscreen blacktop scanline in old framebuffer capture. Native CHR decode renders cyan sky there, rather than retaining emulator/capture border artifact.",
+  "cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 64,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 144,
+      "y": 64,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 160,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 80,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 144,
+      "y": 80,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 160,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 96,
+      "room": 0,
+      "block": 11,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 96,
+      "room": 0,
+      "block": 11,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 96,
+      "room": 0,
+      "block": 104,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 96,
+      "room": 0,
+      "block": 104,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 96,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 96,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 112,
+      "room": 0,
+      "block": 11,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 112,
+      "room": 0,
+      "block": 11,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 112,
+      "room": 0,
+      "block": 104,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 112,
+      "room": 0,
+      "block": 104,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 112,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 112,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 128,
+      "room": 0,
+      "block": 6,
+      "raw": 35,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 128,
+      "room": 0,
+      "block": 6,
+      "raw": 35,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 128,
+      "room": 0,
+      "block": 9,
+      "raw": 35,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 128,
+      "room": 0,
+      "block": 9,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 128,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 128,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 128,
+      "room": 0,
+      "block": 7,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 128,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 128,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 176,
+      "y": 128,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 192,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 144,
+      "room": 0,
+      "block": 6,
+      "raw": 36,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 144,
+      "room": 0,
+      "block": 6,
+      "raw": 36,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 144,
+      "room": 0,
+      "block": 9,
+      "raw": 36,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 144,
+      "room": 0,
+      "block": 9,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 144,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 144,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 144,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 144,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 144,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 176,
+      "y": 144,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 192,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 160,
+      "room": 0,
+      "block": 7,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 160,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 160,
+      "room": 0,
+      "block": 10,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 160,
+      "room": 0,
+      "block": 10,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 160,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 160,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 160,
+      "room": 0,
+      "block": 14,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 160,
+      "room": 0,
+      "block": 14,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 144,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 160,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 176,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 192,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 176,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 176,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 176,
+      "room": 0,
+      "block": 10,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 176,
+      "room": 0,
+      "block": 10,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 176,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 176,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 176,
+      "room": 0,
+      "block": 14,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 176,
+      "room": 0,
+      "block": 14,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 144,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 160,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 176,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 192,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 0,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 16,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 32,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 48,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 64,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 80,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 96,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 112,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 128,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 144,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 160,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 176,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 192,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 208,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 224,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 240,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 0,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 16,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 32,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 48,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 64,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 400,
+      "y": 64,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 416,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 64,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 80,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 400,
+      "y": 80,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 416,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 80,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 96,
+      "room": 0,
+      "block": 11,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 96,
+      "room": 0,
+      "block": 11,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 96,
+      "room": 0,
+      "block": 4,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 96,
+      "room": 0,
+      "block": 104,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 96,
+      "room": 0,
+      "block": 104,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 96,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 96,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 96,
+      "room": 0,
+      "block": 16,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 112,
+      "room": 0,
+      "block": 11,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 112,
+      "room": 0,
+      "block": 11,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 112,
+      "room": 0,
+      "block": 4,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 112,
+      "room": 0,
+      "block": 104,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 112,
+      "room": 0,
+      "block": 104,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 112,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 112,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 112,
+      "room": 0,
+      "block": 16,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 128,
+      "room": 0,
+      "block": 6,
+      "raw": 35,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 128,
+      "room": 0,
+      "block": 6,
+      "raw": 35,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 128,
+      "room": 0,
+      "block": 9,
+      "raw": 35,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 128,
+      "room": 0,
+      "block": 9,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 128,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 128,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 128,
+      "room": 0,
+      "block": 7,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 128,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 128,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 432,
+      "y": 128,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 448,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 128,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 144,
+      "room": 0,
+      "block": 6,
+      "raw": 36,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 144,
+      "room": 0,
+      "block": 6,
+      "raw": 36,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 144,
+      "room": 0,
+      "block": 9,
+      "raw": 36,
+      "class": 0,
+      "palette": 3,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 144,
+      "room": 0,
+      "block": 9,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 144,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 144,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 144,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 144,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 144,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 432,
+      "y": 144,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 448,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 144,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 160,
+      "room": 0,
+      "block": 7,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 160,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 160,
+      "room": 0,
+      "block": 10,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 160,
+      "room": 0,
+      "block": 10,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 160,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 160,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 160,
+      "room": 0,
+      "block": 14,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 160,
+      "room": 0,
+      "block": 14,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 400,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 416,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 432,
+      "y": 160,
+      "room": 0,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 448,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 160,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 176,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 176,
+      "room": 0,
+      "block": 7,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 176,
+      "room": 0,
+      "block": 10,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 176,
+      "room": 0,
+      "block": 10,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 176,
+      "room": 0,
+      "block": 12,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 176,
+      "room": 0,
+      "block": 12,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 176,
+      "room": 0,
+      "block": 14,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 176,
+      "room": 0,
+      "block": 14,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 400,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 416,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 432,
+      "y": 176,
+      "room": 0,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 448,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 176,
+      "room": 0,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 192,
+      "room": 0,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 208,
+      "room": 0,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 256,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 272,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 288,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 304,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 320,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 336,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 352,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 368,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 384,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 400,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 416,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 432,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 448,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 464,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 480,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 496,
+      "y": 224,
+      "room": 0,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 0,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 16,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 32,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 48,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 64,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 80,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 96,
+      "room": 1,
+      "block": 19,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 96,
+      "room": 1,
+      "block": 19,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 96,
+      "room": 1,
+      "block": 20,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 96,
+      "room": 1,
+      "block": 20,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 96,
+      "room": 1,
+      "block": 15,
+      "raw": 56,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 656,
+      "y": 96,
+      "room": 1,
+      "block": 15,
+      "raw": 57,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 672,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 96,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 112,
+      "room": 1,
+      "block": 19,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 112,
+      "room": 1,
+      "block": 19,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 112,
+      "room": 1,
+      "block": 20,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 112,
+      "room": 1,
+      "block": 20,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 112,
+      "room": 1,
+      "block": 15,
+      "raw": 58,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 656,
+      "y": 112,
+      "room": 1,
+      "block": 15,
+      "raw": 59,
+      "class": 0,
+      "palette": 0,
+      "object": true
+    },
+    {
+      "x": 672,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 112,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 128,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 128,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 128,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 128,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 128,
+      "room": 1,
+      "block": 21,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 128,
+      "room": 1,
+      "block": 21,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 128,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 144,
+      "room": 1,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 144,
+      "room": 1,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 144,
+      "room": 1,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 144,
+      "room": 1,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 144,
+      "room": 1,
+      "block": 21,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 144,
+      "room": 1,
+      "block": 21,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 144,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 160,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 160,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 160,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 160,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 160,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 160,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 160,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 160,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 160,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 160,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 160,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 160,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 160,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 160,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 160,
+      "room": 1,
+      "block": 21,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 160,
+      "room": 1,
+      "block": 21,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 176,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 176,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 176,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 176,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 176,
+      "room": 1,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 176,
+      "room": 1,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 176,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 176,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 176,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 176,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 176,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 176,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 176,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 176,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 176,
+      "room": 1,
+      "block": 21,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 176,
+      "room": 1,
+      "block": 21,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 192,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 192,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 192,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 192,
+      "room": 1,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 192,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 192,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 192,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 208,
+      "room": 1,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 208,
+      "room": 1,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 208,
+      "room": 1,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 208,
+      "room": 1,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 208,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 208,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 208,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 512,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 528,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 544,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 560,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 576,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 592,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 608,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 624,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 640,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 656,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 672,
+      "y": 224,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 688,
+      "y": 224,
+      "room": 1,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 704,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 720,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 736,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 752,
+      "y": 224,
+      "room": 1,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 0,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 0,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 0,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 0,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 0,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 0,
+      "room": 2,
+      "block": 22,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 0,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 0,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 0,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 16,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 16,
+      "room": 2,
+      "block": 23,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 16,
+      "room": 2,
+      "block": 23,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 16,
+      "room": 2,
+      "block": 23,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 16,
+      "room": 2,
+      "block": 23,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 16,
+      "room": 2,
+      "block": 22,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 16,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 16,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 16,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 32,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 32,
+      "room": 2,
+      "block": 26,
+      "raw": 52,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 32,
+      "room": 2,
+      "block": 26,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 32,
+      "room": 2,
+      "block": 29,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 32,
+      "room": 2,
+      "block": 29,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 32,
+      "room": 2,
+      "block": 33,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 32,
+      "room": 2,
+      "block": 33,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 32,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 32,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 48,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 48,
+      "room": 2,
+      "block": 26,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 48,
+      "room": 2,
+      "block": 26,
+      "raw": 52,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 48,
+      "room": 2,
+      "block": 29,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 48,
+      "room": 2,
+      "block": 29,
+      "raw": 60,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 48,
+      "room": 2,
+      "block": 33,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 48,
+      "room": 2,
+      "block": 33,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 48,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 48,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 64,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 64,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 64,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 64,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 64,
+      "room": 2,
+      "block": 22,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 64,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 64,
+      "room": 2,
+      "block": 105,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 64,
+      "room": 2,
+      "block": 105,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 64,
+      "room": 2,
+      "block": 31,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 64,
+      "room": 2,
+      "block": 31,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 64,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 64,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 64,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 64,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 64,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 64,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 80,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 80,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 80,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 80,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 80,
+      "room": 2,
+      "block": 22,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 80,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 80,
+      "room": 2,
+      "block": 105,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 80,
+      "room": 2,
+      "block": 105,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 80,
+      "room": 2,
+      "block": 31,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 80,
+      "room": 2,
+      "block": 31,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 80,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 80,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 80,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 80,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 80,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 80,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 96,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 96,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 96,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 96,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 96,
+      "room": 2,
+      "block": 22,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 96,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 96,
+      "room": 2,
+      "block": 108,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 96,
+      "room": 2,
+      "block": 108,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 96,
+      "room": 2,
+      "block": 46,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 96,
+      "room": 2,
+      "block": 46,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 96,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 96,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 96,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 96,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 96,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 96,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 112,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 112,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 112,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 112,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 112,
+      "room": 2,
+      "block": 22,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 112,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 112,
+      "room": 2,
+      "block": 108,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 112,
+      "room": 2,
+      "block": 108,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 112,
+      "room": 2,
+      "block": 46,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 112,
+      "room": 2,
+      "block": 46,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 112,
+      "room": 2,
+      "block": 23,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 112,
+      "room": 2,
+      "block": 23,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 112,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 112,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 112,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 112,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 128,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 128,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 128,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 128,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 128,
+      "room": 2,
+      "block": 22,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 128,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 128,
+      "room": 2,
+      "block": 24,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 128,
+      "room": 2,
+      "block": 24,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 128,
+      "room": 2,
+      "block": 27,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 128,
+      "room": 2,
+      "block": 27,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 128,
+      "room": 2,
+      "block": 30,
+      "raw": 52,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 128,
+      "room": 2,
+      "block": 30,
+      "raw": 60,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 128,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 128,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 128,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 128,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 144,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 144,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 144,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 144,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 144,
+      "room": 2,
+      "block": 22,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 144,
+      "room": 2,
+      "block": 22,
+      "raw": 130,
+      "class": 2,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 144,
+      "room": 2,
+      "block": 24,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 144,
+      "room": 2,
+      "block": 24,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 144,
+      "room": 2,
+      "block": 27,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 144,
+      "room": 2,
+      "block": 27,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 144,
+      "room": 2,
+      "block": 30,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 144,
+      "room": 2,
+      "block": 30,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 144,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 144,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 144,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 144,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 160,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 160,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 160,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 160,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 160,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 160,
+      "room": 2,
+      "block": 23,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 160,
+      "room": 2,
+      "block": 25,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 160,
+      "room": 2,
+      "block": 25,
+      "raw": 43,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 160,
+      "room": 2,
+      "block": 28,
+      "raw": 37,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 160,
+      "room": 2,
+      "block": 28,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 160,
+      "room": 2,
+      "block": 31,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 160,
+      "room": 2,
+      "block": 31,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 160,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 160,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 160,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 160,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 176,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 176,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 176,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 176,
+      "room": 2,
+      "block": 1,
+      "raw": 1,
+      "class": 0,
+      "palette": 1,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 176,
+      "room": 2,
+      "block": 23,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 176,
+      "room": 2,
+      "block": 23,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 176,
+      "room": 2,
+      "block": 25,
+      "raw": 53,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 176,
+      "room": 2,
+      "block": 25,
+      "raw": 60,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 176,
+      "room": 2,
+      "block": 28,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 176,
+      "room": 2,
+      "block": 28,
+      "raw": 38,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 176,
+      "room": 2,
+      "block": 31,
+      "raw": 44,
+      "class": 0,
+      "palette": 2,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 176,
+      "room": 2,
+      "block": 31,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 176,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 176,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 176,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 176,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 192,
+      "room": 2,
+      "block": 2,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 192,
+      "room": 2,
+      "block": 32,
+      "raw": 98,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 192,
+      "room": 2,
+      "block": 32,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 192,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 192,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 192,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 192,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 208,
+      "room": 2,
+      "block": 2,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 208,
+      "room": 2,
+      "block": 32,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 208,
+      "room": 2,
+      "block": 32,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 208,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 208,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 208,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 208,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 768,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 784,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 800,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 816,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 832,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 848,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 864,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 880,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 896,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 912,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 928,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 944,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 960,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 976,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 992,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 105,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    },
+    {
+      "x": 1008,
+      "y": 224,
+      "room": 2,
+      "block": 3,
+      "raw": 104,
+      "class": 1,
+      "palette": 0,
+      "object": false
+    }
+  ]
+}

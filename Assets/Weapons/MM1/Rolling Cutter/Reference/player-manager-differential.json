@@ -1,0 +1,27 @@
+{
+  "status": "Native player manager source foundation; NOT installable equipped-weapon package.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "checks": 16000,
+  "method": "Actual GML vs unmodified USA bank5 A393..A464 with original F8C6/F94C division helpers, nonempty player weapon slot5, other slots empty.16k varied target/shot positions, initial speed,air/ladder sprite ids,counter0..50 and return acceleration. No manager/aim helper stubs. Native scratch4F=0 contract.",
+  "scope": [
+    "outgoing42-update vertical deceleration",
+    "accelerating return homing with current player position",
+    "native adjusted-byte catch bounds",
+    "active shot clears only on catch"
+  ],
+  "limits": [
+    "No world movement/render/collision/audio/energy/pause-menu/colour integration acceptance yet.",
+    "Uses direct native routine fixtures, not complete stage playthrough.",
+    "Standalone manager does not port player sprite/fire-delay mutations; MM5 animation policy remains separate."
+  ],
+  "scripts": [
+    {
+      "name": "scr_mm1_player_cutter_aim",
+      "sha256": "ef81e10ee858d5b0647f2f633d6cf9bbd230758944b776166f736f902378d745"
+    },
+    {
+      "name": "scr_mm1_player_cutter_manage",
+      "sha256": "9a323b877ad4c4ddbb97f50e22b63a80defccb8007c0118bed5a697b7c2197cf"
+    }
+  ]
+}

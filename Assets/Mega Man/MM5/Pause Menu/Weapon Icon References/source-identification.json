@@ -1,0 +1,92 @@
+{
+  "credit": "KindlyPatrick, as written on user-supplied sheet",
+  "source": "User attachment image-1.png",
+  "classification": "External supplied reference; game/ROM provenance NOT verified",
+  "status": "Review only, no game assets replaced",
+  "icons": [
+    {
+      "label": "R. CUTTER",
+      "sourceRect": [
+        149,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 8,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    },
+    {
+      "label": "I. SLASHER",
+      "sourceRect": [
+        47,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 2,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    },
+    {
+      "label": "H. BOMB",
+      "sourceRect": [
+        30,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 1,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    },
+    {
+      "label": "F. STORM",
+      "sourceRect": [
+        64,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 3,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    },
+    {
+      "label": "T. BEAM",
+      "sourceRect": [
+        98,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 5,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    },
+    {
+      "label": "S. ARM",
+      "sourceRect": [
+        132,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 7,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    },
+    {
+      "label": "M. BEAM",
+      "sourceRect": [
+        166,
+        4,
+        16,
+        16
+      ],
+      "row": 0,
+      "column": 9,
+      "identification": "Proposed from sheet appearance; user confirmation pending"
+    }
+  ]
+}

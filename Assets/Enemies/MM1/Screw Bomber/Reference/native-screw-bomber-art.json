@@ -1,0 +1,810 @@
+{
+  "method": "CORRECTED: supplied USA/JSNES2.1.0 fresh boot. One disclosed page20 placement + PC C219 native death-handler redirect, then700native frames to checkpoint restart. Original restart loads corridor graphics and palette. Right-only approaches stop at5296/5536/5672, neutral320updates each, protection100 only; no enemy/type/CHR/palette edits. All THREE original corridor encounters spawn naturally after checkpoint setup. Fifteen COMPLETE poses native-render matched with exact tile-set checks; repeated floor independently matches first floor. Not natural whole-stage traversal, hardware/Mesen executable or GMS runtime certification.",
+  "correction": "Previous extraction substituted types05/16 atX824 in opening-area graphics. AI/OAM IDs were real but underlying CHR and palette were WRONG. Matching the same faulty fixture did not validate sprite identity. Superseded all ten previous art hashes. Existing damage observations below remain separate controlled AI-fixture evidence, not artwork evidence. Follow-up: first corrected frame0 had selected only C3/C4 from a transitional emerging pose after Y changed. Broadened Y selection plus exact COMPLETE tile sets now requires BC/CF for closed, rejecting partial OAM-transition captures. Other eight body poses unchanged.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "cell": [
+    16,
+    16
+  ],
+  "origin": [
+    8,
+    7
+  ],
+  "roomGraphicsIndex": 55,
+  "spritePalette3": [
+    48,
+    38,
+    15
+  ],
+  "bulletReuse": {
+    "resource": "spr_mm1_screw_bomber_bullet",
+    "tile": 106,
+    "palette": 3,
+    "rgbaSha256": "8cf83e02e157fa897ae468503033a4b6b0524a0d978cf795fe7f3d05587560f4",
+    "method": "Actual original corridor tile6A/palette3 agrees at all three encounters. Shape matches Blaster, but colour is native26 rather than opening-area14. Dedicated child object/Draw keeps accepted Blaster unchanged."
+  },
+  "encounters": [
+    {
+      "type": 5,
+      "worldX": 5336,
+      "baseY": 160,
+      "stopX": 5296,
+      "label": "floor",
+      "approachFrames": 44,
+      "slot": 16,
+      "poses": [
+        {
+          "index": 4,
+          "frame": 3,
+          "rgbaSha256": "3554307cd0dafd58c2567cbcf15f2e9554f1e6192420f7b10b0aaeba0c4511ad"
+        },
+        {
+          "index": 2,
+          "frame": 7,
+          "rgbaSha256": "a5ec9e4d87b1c151ffe33f675d8823ac611bbc7a3f71e688e2e959bf5decd9aa"
+        },
+        {
+          "index": 3,
+          "frame": 13,
+          "rgbaSha256": "ed8594936131a19aca857eb332652739477be232260b073eab6777917bd9182c"
+        },
+        {
+          "index": 1,
+          "frame": 68,
+          "rgbaSha256": "2184512a5dda99052b82e8509c04c3368d887241cc1bdfb37bc6e20842cb569c"
+        },
+        {
+          "index": 0,
+          "frame": 73,
+          "rgbaSha256": "546ac33899e29a89cfe951b8a6379eade23c38aa9efecc71348936e37831e20d"
+        }
+      ]
+    },
+    {
+      "type": 22,
+      "worldX": 5576,
+      "baseY": 96,
+      "stopX": 5536,
+      "label": "ceiling",
+      "approachFrames": 177,
+      "slot": 17,
+      "poses": [
+        {
+          "index": 4,
+          "frame": 3,
+          "rgbaSha256": "2d159a4ecb7a4a56fc47195c1bb50a4076beaafc9d5f397034884e7292c0c7a6"
+        },
+        {
+          "index": 2,
+          "frame": 9,
+          "rgbaSha256": "441b4fdb52591e1a3f38a5859e52a5b2706db492b33e4d4f4a9229a9869cd7a8"
+        },
+        {
+          "index": 3,
+          "frame": 13,
+          "rgbaSha256": "44e95064b99119af52f9785dda8558d087ced5e59b82b11073b0c47355958e62"
+        },
+        {
+          "index": 1,
+          "frame": 68,
+          "rgbaSha256": "09be6a2adce09f983d19e423d6109fbaa0aa2ae6f98c3e8b03c6aa004b278dac"
+        },
+        {
+          "index": 0,
+          "frame": 73,
+          "rgbaSha256": "8bfe570b306266f8aad9b47ddc3f499f94f14517943f5fba7349c2173c33d5ed"
+        }
+      ]
+    },
+    {
+      "type": 5,
+      "worldX": 5712,
+      "baseY": 160,
+      "stopX": 5672,
+      "label": "floor-repeat",
+      "approachFrames": 101,
+      "slot": 16,
+      "poses": [
+        {
+          "index": 3,
+          "frame": 2,
+          "rgbaSha256": "ed8594936131a19aca857eb332652739477be232260b073eab6777917bd9182c"
+        },
+        {
+          "index": 4,
+          "frame": 4,
+          "rgbaSha256": "3554307cd0dafd58c2567cbcf15f2e9554f1e6192420f7b10b0aaeba0c4511ad"
+        },
+        {
+          "index": 2,
+          "frame": 8,
+          "rgbaSha256": "a5ec9e4d87b1c151ffe33f675d8823ac611bbc7a3f71e688e2e959bf5decd9aa"
+        },
+        {
+          "index": 1,
+          "frame": 69,
+          "rgbaSha256": "2184512a5dda99052b82e8509c04c3368d887241cc1bdfb37bc6e20842cb569c"
+        },
+        {
+          "index": 0,
+          "frame": 74,
+          "rgbaSha256": "546ac33899e29a89cfe951b8a6379eade23c38aa9efecc71348936e37831e20d"
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "type": 5,
+      "index": 0,
+      "frame": 73,
+      "slot": 16,
+      "enemyY": 160,
+      "left": 151,
+      "top": 153,
+      "cells": [
+        {
+          "i": 5,
+          "x": 151,
+          "y": 152,
+          "tile": 207,
+          "attr": 3
+        },
+        {
+          "i": 6,
+          "x": 159,
+          "y": 152,
+          "tile": 188,
+          "attr": 3
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 207,
+          "hex": "1f2973bb9a73211f1f377fdeff7f3f1f",
+          "romOffset": 40960
+        },
+        {
+          "tile": 188,
+          "hex": "f884ce5d59ce84f8f8fcfefbfffefcf8",
+          "romOffset": 40656
+        }
+      ],
+      "opaquePixels": 104,
+      "rgbaSha256": "546ac33899e29a89cfe951b8a6379eade23c38aa9efecc71348936e37831e20d"
+    },
+    {
+      "type": 5,
+      "index": 1,
+      "frame": 68,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 151,
+      "top": 145,
+      "cells": [
+        {
+          "i": 22,
+          "x": 151,
+          "y": 144,
+          "tile": 193,
+          "attr": 3
+        },
+        {
+          "i": 23,
+          "x": 159,
+          "y": 144,
+          "tile": 194,
+          "attr": 3
+        },
+        {
+          "i": 24,
+          "x": 151,
+          "y": 152,
+          "tile": 195,
+          "attr": 3
+        },
+        {
+          "i": 25,
+          "x": 159,
+          "y": 152,
+          "tile": 196,
+          "attr": 3
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 193,
+          "hex": "00001f2973bb9a7300001f377fdeff7f",
+          "romOffset": 40736
+        },
+        {
+          "tile": 194,
+          "hex": "0000f884ce5d59ce0000f8fcfefbfffe",
+          "romOffset": 40752
+        },
+        {
+          "tile": 195,
+          "hex": "211f0503050305073f1f060306030607",
+          "romOffset": 40768
+        },
+        {
+          "tile": 196,
+          "hex": "84f820c020c020e0fcf8e0c0e0c0e0e0",
+          "romOffset": 40784
+        }
+      ],
+      "opaquePixels": 136,
+      "rgbaSha256": "2184512a5dda99052b82e8509c04c3368d887241cc1bdfb37bc6e20842cb569c"
+    },
+    {
+      "type": 5,
+      "index": 2,
+      "frame": 7,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 155,
+      "top": 145,
+      "cells": [
+        {
+          "i": 6,
+          "x": 155,
+          "y": 144,
+          "tile": 191,
+          "attr": 3
+        },
+        {
+          "i": 7,
+          "x": 163,
+          "y": 144,
+          "tile": 192,
+          "attr": 3
+        },
+        {
+          "i": 8,
+          "x": 159,
+          "y": 152,
+          "tile": 206,
+          "attr": 3
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 191,
+          "hex": "1f2e6faba96f261f1f377ffdff7f3f1f",
+          "romOffset": 40704
+        },
+        {
+          "tile": 192,
+          "hex": "f8143a2e263a14f8f8fcfef6fefefcf8",
+          "romOffset": 40720
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "a5ec9e4d87b1c151ffe33f675d8823ac611bbc7a3f71e688e2e959bf5decd9aa"
+    },
+    {
+      "type": 5,
+      "index": 3,
+      "frame": 13,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 152,
+      "top": 145,
+      "cells": [
+        {
+          "i": 6,
+          "x": 152,
+          "y": 144,
+          "tile": 189,
+          "attr": 3
+        },
+        {
+          "i": 7,
+          "x": 160,
+          "y": 144,
+          "tile": 190,
+          "attr": 3
+        },
+        {
+          "i": 8,
+          "x": 156,
+          "y": 152,
+          "tile": 206,
+          "attr": 3
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 189,
+          "hex": "1f2c5c6c645c281f1f3b7f777f7f3f1f",
+          "romOffset": 40672
+        },
+        {
+          "tile": 190,
+          "hex": "f864f6d595f664f8f8fcfebffffefcf8",
+          "romOffset": 40688
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "ed8594936131a19aca857eb332652739477be232260b073eab6777917bd9182c"
+    },
+    {
+      "type": 5,
+      "index": 4,
+      "frame": 3,
+      "slot": 16,
+      "enemyY": 152,
+      "left": 157,
+      "top": 145,
+      "cells": [
+        {
+          "i": 1,
+          "x": 157,
+          "y": 144,
+          "tile": 207,
+          "attr": 3
+        },
+        {
+          "i": 2,
+          "x": 165,
+          "y": 144,
+          "tile": 188,
+          "attr": 3
+        },
+        {
+          "i": 3,
+          "x": 161,
+          "y": 152,
+          "tile": 206,
+          "attr": 3
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 207,
+          "hex": "1f2973bb9a73211f1f377fdeff7f3f1f",
+          "romOffset": 40960
+        },
+        {
+          "tile": 188,
+          "hex": "f884ce5d59ce84f8f8fcfefbfffefcf8",
+          "romOffset": 40656
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 146,
+      "rgbaSha256": "3554307cd0dafd58c2567cbcf15f2e9554f1e6192420f7b10b0aaeba0c4511ad"
+    },
+    {
+      "type": 22,
+      "index": 0,
+      "frame": 73,
+      "slot": 17,
+      "enemyY": 96,
+      "left": 151,
+      "top": 89,
+      "cells": [
+        {
+          "i": 22,
+          "x": 151,
+          "y": 96,
+          "tile": 188,
+          "attr": 195
+        },
+        {
+          "i": 23,
+          "x": 159,
+          "y": 96,
+          "tile": 207,
+          "attr": 195
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 188,
+          "hex": "f884ce5d59ce84f8f8fcfefbfffefcf8",
+          "romOffset": 40656
+        },
+        {
+          "tile": 207,
+          "hex": "1f2973bb9a73211f1f377fdeff7f3f1f",
+          "romOffset": 40960
+        }
+      ],
+      "opaquePixels": 104,
+      "rgbaSha256": "8bfe570b306266f8aad9b47ddc3f499f94f14517943f5fba7349c2173c33d5ed"
+    },
+    {
+      "type": 22,
+      "index": 1,
+      "frame": 68,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 151,
+      "top": 97,
+      "cells": [
+        {
+          "i": 5,
+          "x": 151,
+          "y": 96,
+          "tile": 196,
+          "attr": 195
+        },
+        {
+          "i": 6,
+          "x": 159,
+          "y": 96,
+          "tile": 195,
+          "attr": 195
+        },
+        {
+          "i": 7,
+          "x": 151,
+          "y": 104,
+          "tile": 194,
+          "attr": 195
+        },
+        {
+          "i": 8,
+          "x": 159,
+          "y": 104,
+          "tile": 193,
+          "attr": 195
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 196,
+          "hex": "84f820c020c020e0fcf8e0c0e0c0e0e0",
+          "romOffset": 40784
+        },
+        {
+          "tile": 195,
+          "hex": "211f0503050305073f1f060306030607",
+          "romOffset": 40768
+        },
+        {
+          "tile": 194,
+          "hex": "0000f884ce5d59ce0000f8fcfefbfffe",
+          "romOffset": 40752
+        },
+        {
+          "tile": 193,
+          "hex": "00001f2973bb9a7300001f377fdeff7f",
+          "romOffset": 40736
+        }
+      ],
+      "opaquePixels": 136,
+      "rgbaSha256": "09be6a2adce09f983d19e423d6109fbaa0aa2ae6f98c3e8b03c6aa004b278dac"
+    },
+    {
+      "type": 22,
+      "index": 2,
+      "frame": 9,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 154,
+      "top": 97,
+      "cells": [
+        {
+          "i": 23,
+          "x": 154,
+          "y": 104,
+          "tile": 192,
+          "attr": 195
+        },
+        {
+          "i": 24,
+          "x": 162,
+          "y": 104,
+          "tile": 191,
+          "attr": 195
+        },
+        {
+          "i": 25,
+          "x": 158,
+          "y": 96,
+          "tile": 206,
+          "attr": 195
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 192,
+          "hex": "f8143a2e263a14f8f8fcfef6fefefcf8",
+          "romOffset": 40720
+        },
+        {
+          "tile": 191,
+          "hex": "1f2e6faba96f261f1f377ffdff7f3f1f",
+          "romOffset": 40704
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "441b4fdb52591e1a3f38a5859e52a5b2706db492b33e4d4f4a9229a9869cd7a8"
+    },
+    {
+      "type": 22,
+      "index": 3,
+      "frame": 13,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 152,
+      "top": 97,
+      "cells": [
+        {
+          "i": 23,
+          "x": 152,
+          "y": 104,
+          "tile": 190,
+          "attr": 195
+        },
+        {
+          "i": 24,
+          "x": 160,
+          "y": 104,
+          "tile": 189,
+          "attr": 195
+        },
+        {
+          "i": 25,
+          "x": 156,
+          "y": 96,
+          "tile": 206,
+          "attr": 195
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 190,
+          "hex": "f864f6d595f664f8f8fcfebffffefcf8",
+          "romOffset": 40688
+        },
+        {
+          "tile": 189,
+          "hex": "1f2c5c6c645c281f1f3b7f777f7f3f1f",
+          "romOffset": 40672
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 144,
+      "rgbaSha256": "44e95064b99119af52f9785dda8558d087ced5e59b82b11073b0c47355958e62"
+    },
+    {
+      "type": 22,
+      "index": 4,
+      "frame": 3,
+      "slot": 17,
+      "enemyY": 104,
+      "left": 157,
+      "top": 97,
+      "cells": [
+        {
+          "i": 22,
+          "x": 157,
+          "y": 104,
+          "tile": 188,
+          "attr": 195
+        },
+        {
+          "i": 23,
+          "x": 165,
+          "y": 104,
+          "tile": 207,
+          "attr": 195
+        },
+        {
+          "i": 24,
+          "x": 161,
+          "y": 96,
+          "tile": 206,
+          "attr": 195
+        }
+      ],
+      "patterns": [
+        {
+          "tile": 188,
+          "hex": "f884ce5d59ce84f8f8fcfefbfffefcf8",
+          "romOffset": 40656
+        },
+        {
+          "tile": 207,
+          "hex": "1f2973bb9a73211f1f377fdeff7f3f1f",
+          "romOffset": 40960
+        },
+        {
+          "tile": 206,
+          "hex": "523c523c523c527e6e3c6e3c6e3c6e7e",
+          "romOffset": 40944
+        }
+      ],
+      "opaquePixels": 146,
+      "rgbaSha256": "2d159a4ecb7a4a56fc47195c1bb50a4076beaafc9d5f397034884e7292c0c7a6"
+    }
+  ],
+  "hits": [
+    {
+      "type": 5,
+      "phase": "closed",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 0,
+          "timer": 45,
+          "hp": 20,
+          "type": 5
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 0,
+          "timer": 25,
+          "hp": 13,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 5
+        }
+      ],
+      "finalType": 27
+    },
+    {
+      "type": 5,
+      "phase": "open",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 51,
+          "timer": 52,
+          "hp": 20,
+          "type": 5
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 67,
+          "timer": 32,
+          "hp": 13,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 5
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 5
+        }
+      ],
+      "finalType": 27
+    },
+    {
+      "type": 22,
+      "phase": "closed",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 0,
+          "timer": 45,
+          "hp": 20,
+          "type": 22
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 0,
+          "timer": 25,
+          "hp": 13,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 0,
+          "timer": 3,
+          "hp": 6,
+          "type": 22
+        }
+      ],
+      "finalType": 27
+    },
+    {
+      "type": 22,
+      "phase": "open",
+      "method": "Natural closed-cooldown frame110/openframe40 of controlled original fixture; three real one-frame B presses21updates apart, playerX788/Y=currentenemyY/facingright/protection100 pinned. No hit flags, enemy HP/state edits, ROM patch or forced bullet collision.",
+      "events": [
+        {
+          "frame": 4,
+          "pc": 48840,
+          "state": 51,
+          "timer": 52,
+          "hp": 20,
+          "type": 22
+        },
+        {
+          "frame": 24,
+          "pc": 48840,
+          "state": 67,
+          "timer": 32,
+          "hp": 13,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48840,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 22
+        },
+        {
+          "frame": 46,
+          "pc": 48873,
+          "state": 48,
+          "timer": 10,
+          "hp": 6,
+          "type": 22
+        }
+      ],
+      "finalType": 27
+    }
+  ]
+}

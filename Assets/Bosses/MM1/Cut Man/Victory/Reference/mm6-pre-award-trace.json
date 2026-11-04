@@ -1,0 +1,47 @@
+{
+  "method": "Controlled actor0 handoff042A/0413=9145 used by F9B4; stage0,06A5=0,x128,y180,initial velocity0. Natural stage geometry, not boss-room fixture. Original ROM/code; no sound injection. Ends at9237 before transition.",
+  "finished": true,
+  "frames": 276,
+  "events": [
+    {
+      "frame": 0,
+      "kind": "pre-award-code",
+      "pc": "9145"
+    },
+    {
+      "frame": 0,
+      "kind": "pre-award-code",
+      "pc": "9167"
+    },
+    {
+      "frame": 0,
+      "kind": "audio-dispatch",
+      "command": 58
+    },
+    {
+      "frame": 55,
+      "kind": "pre-award-code",
+      "pc": "91a7"
+    },
+    {
+      "frame": 55,
+      "kind": "audio-dispatch",
+      "command": 95
+    },
+    {
+      "frame": 274,
+      "kind": "pre-award-code",
+      "pc": "91fe"
+    },
+    {
+      "frame": 274,
+      "kind": "audio-dispatch",
+      "command": 240
+    },
+    {
+      "frame": 275,
+      "kind": "pre-award-code",
+      "pc": "9237"
+    }
+  ]
+}

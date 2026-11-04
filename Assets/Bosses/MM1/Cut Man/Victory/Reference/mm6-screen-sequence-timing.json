@@ -1,0 +1,673 @@
+{
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "method": "Continuous original-ROM controlled centre handoff through acquisition/teleport to stage0 award. All event ages relative BD1B; no post-handoff game RAM/ROM/code/audio patches. These are emulated code dispatch frames, not acoustic measurements.",
+  "events": [
+    {
+      "frame": 330,
+      "kind": "award",
+      "pc": "bd1b",
+      "age": 0
+    },
+    {
+      "frame": 338,
+      "kind": "audio-dispatch",
+      "command": 22,
+      "age": 8
+    },
+    {
+      "frame": 347,
+      "kind": "screen-timing",
+      "pc": "bd76",
+      "remaining": 0,
+      "offset": 240,
+      "age": 17
+    },
+    {
+      "frame": 372,
+      "kind": "screen-timing",
+      "pc": "bd86",
+      "remaining": 0,
+      "offset": 240,
+      "age": 42
+    },
+    {
+      "frame": 436,
+      "kind": "screen-timing",
+      "pc": "bd93",
+      "remaining": 0,
+      "offset": 240,
+      "age": 106
+    },
+    {
+      "frame": 436,
+      "kind": "screen-timing",
+      "pc": "bd9d",
+      "remaining": 0,
+      "offset": 240,
+      "age": 106
+    },
+    {
+      "frame": 436,
+      "kind": "audio-dispatch",
+      "command": 101,
+      "age": 106
+    },
+    {
+      "frame": 444,
+      "kind": "screen-timing",
+      "pc": "bdab",
+      "remaining": 0,
+      "offset": 240,
+      "age": 114
+    },
+    {
+      "frame": 494,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 164
+    },
+    {
+      "frame": 495,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 165
+    },
+    {
+      "frame": 496,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 166
+    },
+    {
+      "frame": 497,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 167
+    },
+    {
+      "frame": 498,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 168
+    },
+    {
+      "frame": 499,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 169
+    },
+    {
+      "frame": 500,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 170
+    },
+    {
+      "frame": 501,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 171
+    },
+    {
+      "frame": 502,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 172
+    },
+    {
+      "frame": 503,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 173
+    },
+    {
+      "frame": 504,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 174
+    },
+    {
+      "frame": 505,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 175
+    },
+    {
+      "frame": 506,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 176
+    },
+    {
+      "frame": 507,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 177
+    },
+    {
+      "frame": 508,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 178
+    },
+    {
+      "frame": 509,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 179
+    },
+    {
+      "frame": 510,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 180
+    },
+    {
+      "frame": 511,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 181
+    },
+    {
+      "frame": 512,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 182
+    },
+    {
+      "frame": 513,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 183
+    },
+    {
+      "frame": 514,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 184
+    },
+    {
+      "frame": 515,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 185
+    },
+    {
+      "frame": 516,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 186
+    },
+    {
+      "frame": 517,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 187
+    },
+    {
+      "frame": 518,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 188
+    },
+    {
+      "frame": 519,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 189
+    },
+    {
+      "frame": 520,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 190
+    },
+    {
+      "frame": 521,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 191
+    },
+    {
+      "frame": 522,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 192
+    },
+    {
+      "frame": 523,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 193
+    },
+    {
+      "frame": 524,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 194
+    },
+    {
+      "frame": 525,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 195
+    },
+    {
+      "frame": 526,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 196
+    },
+    {
+      "frame": 527,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 197
+    },
+    {
+      "frame": 528,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 198
+    },
+    {
+      "frame": 529,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 199
+    },
+    {
+      "frame": 530,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 200
+    },
+    {
+      "frame": 531,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 201
+    },
+    {
+      "frame": 532,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 202
+    },
+    {
+      "frame": 533,
+      "kind": "screen-timing",
+      "pc": "bdc9",
+      "remaining": 0,
+      "offset": 240,
+      "age": 203
+    },
+    {
+      "frame": 534,
+      "kind": "screen-timing",
+      "pc": "bdf0",
+      "remaining": 0,
+      "offset": 240,
+      "age": 204
+    },
+    {
+      "frame": 534,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 204
+    },
+    {
+      "frame": 538,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 208
+    },
+    {
+      "frame": 542,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 212
+    },
+    {
+      "frame": 546,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 216
+    },
+    {
+      "frame": 550,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 220
+    },
+    {
+      "frame": 554,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 224
+    },
+    {
+      "frame": 558,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 228
+    },
+    {
+      "frame": 562,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 232
+    },
+    {
+      "frame": 566,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 236
+    },
+    {
+      "frame": 570,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 240
+    },
+    {
+      "frame": 574,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 244
+    },
+    {
+      "frame": 578,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 248
+    },
+    {
+      "frame": 582,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 252
+    },
+    {
+      "frame": 586,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 256
+    },
+    {
+      "frame": 590,
+      "kind": "audio-dispatch",
+      "command": 55,
+      "age": 260
+    },
+    {
+      "frame": 594,
+      "kind": "screen-timing",
+      "pc": "be06",
+      "remaining": 0,
+      "offset": 240,
+      "age": 264
+    },
+    {
+      "frame": 684,
+      "kind": "screen-timing",
+      "pc": "be0b",
+      "remaining": 0,
+      "offset": 240,
+      "age": 354
+    },
+    {
+      "frame": 705,
+      "kind": "screen-timing",
+      "pc": "be14",
+      "remaining": 0,
+      "offset": 240,
+      "age": 375
+    },
+    {
+      "frame": 705,
+      "kind": "award",
+      "pc": "be42",
+      "age": 375
+    },
+    {
+      "frame": 705,
+      "kind": "screen-timing",
+      "pc": "be5b",
+      "remaining": 0,
+      "offset": 240,
+      "age": 375
+    },
+    {
+      "frame": 735,
+      "kind": "screen-timing",
+      "pc": "be66",
+      "remaining": 0,
+      "offset": 240,
+      "age": 405
+    },
+    {
+      "frame": 735,
+      "kind": "screen-timing",
+      "pc": "bf3b",
+      "remaining": 0,
+      "offset": 64,
+      "age": 405
+    },
+    {
+      "frame": 740,
+      "kind": "screen-timing",
+      "pc": "bf3b",
+      "remaining": 0,
+      "offset": 48,
+      "age": 410
+    },
+    {
+      "frame": 745,
+      "kind": "screen-timing",
+      "pc": "bf3b",
+      "remaining": 0,
+      "offset": 32,
+      "age": 415
+    },
+    {
+      "frame": 750,
+      "kind": "screen-timing",
+      "pc": "bf3b",
+      "remaining": 0,
+      "offset": 16,
+      "age": 420
+    },
+    {
+      "frame": 755,
+      "kind": "screen-timing",
+      "pc": "bf3b",
+      "remaining": 0,
+      "offset": 0,
+      "age": 425
+    },
+    {
+      "frame": 760,
+      "kind": "screen-timing",
+      "pc": "be6f",
+      "remaining": 0,
+      "offset": 240,
+      "age": 430
+    },
+    {
+      "frame": 770,
+      "kind": "screen-timing",
+      "pc": "be74",
+      "remaining": 0,
+      "offset": 240,
+      "age": 440
+    },
+    {
+      "frame": 791,
+      "kind": "audio-dispatch",
+      "command": 35,
+      "age": 461
+    },
+    {
+      "frame": 855,
+      "kind": "audio-dispatch",
+      "command": 35,
+      "age": 525
+    },
+    {
+      "frame": 919,
+      "kind": "audio-dispatch",
+      "command": 35,
+      "age": 589
+    },
+    {
+      "frame": 983,
+      "kind": "audio-dispatch",
+      "command": 35,
+      "age": 653
+    },
+    {
+      "frame": 1010,
+      "kind": "screen-timing",
+      "pc": "be9c",
+      "remaining": 0,
+      "offset": 240,
+      "age": 680
+    },
+    {
+      "frame": 1010,
+      "kind": "screen-timing",
+      "pc": "bea1",
+      "remaining": 0,
+      "offset": 240,
+      "age": 680
+    },
+    {
+      "frame": 1120,
+      "kind": "award",
+      "pc": "bea9",
+      "age": 790
+    }
+  ],
+  "slideUpdates": [
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203
+  ],
+  "source": "tools/rom-recovery/probe-mm6-screen-timing.mjs"
+}

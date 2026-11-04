@@ -1,0 +1,18 @@
+// Custom selected palette for original MM6 upgrade art; never overwrite native extraction.
+import{PNG}from'pngjs';import fs from'node:fs';import assert from'node:assert/strict';import{createHash}from'node:crypto';
+const root=new URL('../../',import.meta.url),base=new URL('Assets/Mega Man/MM5/Pause Menu/',root),dir=new URL('Adapted Upgrade Icons/',base);fs.mkdirSync(dir,{recursive:true});
+const path=new URL('Recovered Utility Icons/spr_mm6_menu_energy_balancer.png',base),before=fs.readFileSync(path),gray=PNG.sync.read(before),selected=new PNG({width:16,height:16});assert.equal(gray.width,16);assert.equal(gray.height,16);
+const palette=JSON.parse(fs.readFileSync(new URL('./palettes/mesen-0.9.9-default.json',import.meta.url))).colors;
+const map={'000000ff':0x0f,'666666ff':0x11,'adadadff':0x21,'fffeffff':0x30};
+for(let k=0;k<256;k++){const key=gray.data.subarray(k*4,k*4+4).toString('hex');assert.ok(key in map);const hex=palette[map[key]],rgb=Buffer.from(hex,'hex');selected.data.set([...rgb,255],k*4);assert.equal(selected.data[k*4+3],gray.data[k*4+3]);assert.equal(selected.data.subarray(k*4,k*4+3).every(v=>v===0),key==='000000ff','Exact black-background/shape mask');}
+assert.notDeepEqual(selected.data,gray.data);assert.equal(new Set(Array.from({length:256},(_,i)=>selected.data.subarray(i*4,i*4+4).toString('hex'))).size,4);
+function save(p,file){const path=new URL(file,dir);fs.writeFileSync(path,PNG.sync.write(p));assert.deepEqual(PNG.sync.read(fs.readFileSync(path)).data,p.data);}
+save(selected,'spr_mm6_menu_energy_balancer_selected.png');
+const strip=new PNG({width:32,height:16});for(let y=0;y<16;y++){gray.data.copy(strip.data,y*128,y*64,(y+1)*64);selected.data.copy(strip.data,y*128+64,y*64,(y+1)*64);}save(strip,'spr_mm6_menu_energy_balancer_states_strip2.png');
+const font=PNG.sync.read(fs.readFileSync(new URL('Reference/mm5-original-complete-font-reference.png',base))),chars=JSON.parse(fs.readFileSync(new URL('Reference/mm5-original-complete-font-reference.json',base))).chars;
+const review=new PNG({width:256,height:80});for(let k=0;k<256*80;k++)review.data.set([0,0,0,255],k*4);
+function text(t,x,y){assert.ok(x+t.length*8<=256);for(let i=0;i<t.length;i++){let f=chars.indexOf(t[i]);assert.ok(f>=0);for(let j=0;j<8;j++)for(let k=0;k<8;k++)if(font.data[(j*font.width+f*8+k)*4+3])review.data.set([255,254,255,255],((y+j)*256+x+i*8+k)*4);}}
+text('ENERGY BALANCER',8,8);text('GRAY',8,26);text('COLOUR',80,26);for(let y=0;y<16;y++){gray.data.copy(review.data,((40+y)*256+16)*4,y*64,(y+1)*64);selected.data.copy(review.data,((40+y)*256+96)*4,y*64,(y+1)*64);}text('CUSTOM SELECTED PALETTE',8,66);save(review,'upgrade-states-review.png');
+const big=new PNG({width:1024,height:320});for(let y=0;y<320;y++)for(let x=0;x<1024;x++){let k=((y>>2)*256+(x>>2))*4;big.data.set(review.data.subarray(k,k+4),(y*1024+x)*4);}save(big,'upgrade-states-review-4x.png');
+assert.deepEqual(fs.readFileSync(path),before,'Original extraction unchanged');
+fs.writeFileSync(new URL('upgrade-states-manifest.json',dir),JSON.stringify({id:'energy_balancer',source:'Original MM6 grey icon; Capcom art, not KindlyPatrick sheet',sourceSHA256:createHash('sha256').update(before).digest('hex'),classification:'Custom selected palette adaptation, NOT an original MM6 selected-state extraction',sourceRGBAToNES:map,palette:[0x0f,0x11,0x21,0x30].map(i=>({index:i,rgb:palette[i]})),statesOrder:['unselected original grey','selected custom blue/cyan/white'],status:'Coloured draft for user review. Only current upgrade is Energy Balancer; future upgrades not invented.'},null,2));console.log('PASS: original grey PNG unchanged, exact16x16 shape/alpha and black mask, four pinned NES colours, selected PNG/strip roundtrip exact.');

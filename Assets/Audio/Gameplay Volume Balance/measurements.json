@@ -1,0 +1,247 @@
+{
+  "gain": 2,
+  "gain_db": 6.020599913279624,
+  "scope": "MM5/MM6 current gameplay effects and charge PCM; original files unchanged",
+  "files": [
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Arrival/snd_mm5_megaman_arrival.wav",
+      "output": "Sounds/snd_mm5_megaman_arrival.wav",
+      "source_sha256": "ad246c9731a6bef859533a94800beb3f2e05a279526cba1ce516509fed2c8904",
+      "output_sha256": "ffc0eb5eede6673d6524a6da30dacee75cbce315269f5382994fb78ed2244a85",
+      "samples": 17798,
+      "before": {
+        "peak": 0.201446533203125,
+        "rms": 0.06077302260511743
+      },
+      "after": {
+        "peak": 0.40289306640625,
+        "rms": 0.12154604521023486
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Buster/Charging/snd_mm5_buster_full.wav",
+      "output": "Sounds/snd_mm5_buster_full.wav",
+      "source_sha256": "24f7f49966dec6b46da8a95f5352b71c4482026a175e7fc887b3106732fe9fe1",
+      "output_sha256": "d329bc50f37df7049f21b38de3905bf649a0fc1745a1c4aaf901bf15c17e57b7",
+      "samples": 39128,
+      "before": {
+        "peak": 0.249908447265625,
+        "rms": 0.0647563870900071
+      },
+      "after": {
+        "peak": 0.49981689453125,
+        "rms": 0.1295127741800142
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Buster/Charging/snd_mm5_buster_mid.wav",
+      "output": "Sounds/snd_mm5_buster_mid.wav",
+      "source_sha256": "f860e42a992dbe8fce004de3ac5d345577393e7e96a276234c523939f3ed3cbf",
+      "output_sha256": "381c9e099d6d57b8471eefac7977b88b627f2c7fccda45856e4a5fdcc28bf4a9",
+      "samples": 24432,
+      "before": {
+        "peak": 0.24896240234375,
+        "rms": 0.06471963365230435
+      },
+      "after": {
+        "peak": 0.4979248046875,
+        "rms": 0.1294392673046087
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Buster/snd_mm5_buster_shot.wav",
+      "output": "Sounds/snd_mm5_buster_shot.wav",
+      "source_sha256": "9db233f978dae85b682eb50bfe57fdfb75260f394f4924ed830a9eb733da5242",
+      "output_sha256": "44cdba9e256cc3f60ffcb899eae95ae9cef4f1958f78b1472ac9a976928e028c",
+      "samples": 18484,
+      "before": {
+        "peak": 0.156158447265625,
+        "rms": 0.05008364060211861
+      },
+      "after": {
+        "peak": 0.31231689453125,
+        "rms": 0.10016728120423722
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_extra_life.wav",
+      "output": "Sounds/snd_mm5_extra_life.wav",
+      "source_sha256": "7c48ef1c5c6f55e448e622497604feee06e162da63642ca4e69f0bf6a3a6ea0d",
+      "output_sha256": "e7f4a048a9b9bd402a56b7a6fecddaca5247e9fc7f78860977c4fcc4fcfac901",
+      "samples": 104476,
+      "before": {
+        "peak": 0.15618896484375,
+        "rms": 0.04631090851801098
+      },
+      "after": {
+        "peak": 0.3123779296875,
+        "rms": 0.09262181703602196
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_health_refill.wav",
+      "output": "Sounds/snd_mm5_health_refill.wav",
+      "source_sha256": "777accaa2324c76349fde032c029af4f45dd66d28d0986ea54ee511e29af8fbf",
+      "output_sha256": "1284beaf7364fe0f61b9a734b6efa2a94ed985a91fbe8068552e53f2dafb9522",
+      "samples": 25640,
+      "before": {
+        "peak": 0.225616455078125,
+        "rms": 0.07295741107589236
+      },
+      "after": {
+        "peak": 0.45123291015625,
+        "rms": 0.14591482215178472
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_megaman_death.wav",
+      "output": "Sounds/snd_mm5_megaman_death.wav",
+      "source_sha256": "6dd32ce4101f372b25423f9bc81392ffb6a51ad6aa1c920653bd1939848689f1",
+      "output_sha256": "589bb9b5d5a81d1b3f5dd930f7d31c00cb653c1f4d931007bab923eb307885d6",
+      "samples": 143134,
+      "before": {
+        "peak": 0.22393798828125,
+        "rms": 0.04502557461209582
+      },
+      "after": {
+        "peak": 0.4478759765625,
+        "rms": 0.09005114922419163
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Combat/snd_mm5_megaman_hurt.wav",
+      "output": "Sounds/snd_mm5_megaman_hurt.wav",
+      "source_sha256": "94052f27f0d18f1fa7c983c8b5c367adaf86b59a92fbb822b2100ead5c4f8501",
+      "output_sha256": "fe31bb8ca9b2e8d3ed58cf4ec636b428be7f617b2f86094b05d4393abcd39312",
+      "samples": 29082,
+      "before": {
+        "peak": 0.311981201171875,
+        "rms": 0.07385259690016348
+      },
+      "after": {
+        "peak": 0.62396240234375,
+        "rms": 0.14770519380032696
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Movement/snd_mm5_megaman_land.wav",
+      "output": "Sounds/snd_mm5_megaman_land.wav",
+      "source_sha256": "95fd97887c6b6161d48e2450720e141aa760c6c2c263383fd7bfd7274646a521",
+      "output_sha256": "bcd8986156f47ce4face2de8a245a1f6bb70f0a2c44539c9c51c0c47c9a7e7f0",
+      "samples": 13874,
+      "before": {
+        "peak": 0.267059326171875,
+        "rms": 0.05557631637141473
+      },
+      "after": {
+        "peak": 0.53411865234375,
+        "rms": 0.11115263274282947
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Pause Menu/snd_mm5_menu_close.wav",
+      "output": "Sounds/snd_mm5_menu_close.wav",
+      "source_sha256": "a895709d78445d425755e9a13cfe74131fe0f803117112171f77f5482a8d6fd3",
+      "output_sha256": "08215863f889f9baafda15a89920467b4d6fe3ab417bc3c2ba7431a62d1da575",
+      "samples": 55270,
+      "before": {
+        "peak": 0.189910888671875,
+        "rms": 0.04329108803957915
+      },
+      "after": {
+        "peak": 0.37982177734375,
+        "rms": 0.0865821760791583
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Pause Menu/snd_mm5_menu_cursor.wav",
+      "output": "Sounds/snd_mm5_menu_cursor.wav",
+      "source_sha256": "ab49a2a04a2e5c6614347ab2e93ed3bae476e026d8e19e98fa1f95e7f65310f2",
+      "output_sha256": "9ac24e1b49cce0d614bdad765591153f7cd550b8e8ef372a66ee2d813cbcbf15",
+      "samples": 25312,
+      "before": {
+        "peak": 0.156219482421875,
+        "rms": 0.05672421005447681
+      },
+      "after": {
+        "peak": 0.31243896484375,
+        "rms": 0.11344842010895362
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Pause Menu/snd_mm5_menu_open.wav",
+      "output": "Sounds/snd_mm5_menu_open.wav",
+      "source_sha256": "63e1e9669b17c45877d59877bb36a4e52e2f7c80da095320adee6919174289c0",
+      "output_sha256": "8a8fe0f87fe9720fbe64d5fa1052f969066c1e42c8aef8d70197f271d8cc9547",
+      "samples": 34286,
+      "before": {
+        "peak": 0.156219482421875,
+        "rms": 0.06222858925259853
+      },
+      "after": {
+        "peak": 0.31243896484375,
+        "rms": 0.12445717850519707
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Stage/Gate/snd_mm5_gate_open.wav",
+      "output": "Sounds/snd_mm5_gate_open.wav",
+      "source_sha256": "81145a38ed3410b3776e39ada46c342536dc881cc343d05eafc108fa92d2bd8e",
+      "output_sha256": "26f946f65010e69aea0c0962654b1e8a62b4719d8b2bc4ec4ddea88cef983728",
+      "samples": 46304,
+      "before": {
+        "peak": 0.31500244140625,
+        "rms": 0.06213779823638082
+      },
+      "after": {
+        "peak": 0.6300048828125,
+        "rms": 0.12427559647276164
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM6/Combat/Enemy Hit/snd_mm6_enemy_hit.wav",
+      "output": "Sounds/snd_mm6_enemy_hit.wav",
+      "source_sha256": "e51cc99123c8f14a41ec7ea9d83bde99b60952bf772b312462fc9c85ab70a86c",
+      "output_sha256": "fc25710d0ef67a034adbc74dd2ee31bf852eea83230cbceb928023c004d608c1",
+      "samples": 38694,
+      "before": {
+        "peak": 0.1898193359375,
+        "rms": 0.07304071180276625
+      },
+      "after": {
+        "peak": 0.379638671875,
+        "rms": 0.1460814236055325
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Buster/Charging/Playback/mm5_charge_intro.pcm",
+      "output": "Included Files/mm5_charge_intro.pcm",
+      "source_sha256": "d19d4e9b682ac19b11a88ca37caae82337a0728e8ae5dda70d4aece269bc6944",
+      "output_sha256": "db4c00e8b77911e34bddffa3361326053df3cf7fddb909652a0d270d08026a64",
+      "samples": 206514,
+      "before": {
+        "peak": 0.1275634765625,
+        "rms": 0.04451000608361646
+      },
+      "after": {
+        "peak": 0.255126953125,
+        "rms": 0.08902001216723292
+      }
+    },
+    {
+      "source": "Assets/Audio/Mega Man/MM5/Buster/Charging/Playback/mm5_charge_loop.pcm",
+      "output": "Included Files/mm5_charge_loop.pcm",
+      "source_sha256": "905a4bbc8c86655ee76d337975f016f97dc76ea2b732c7680b9c99d6eccea081",
+      "output_sha256": "2f7a04f8083a9987efa8a38a572b947583c7ed73e9800095bb1743cdac24b2a3",
+      "samples": 38380,
+      "before": {
+        "peak": 0.10162353515625,
+        "rms": 0.04055891528390233
+      },
+      "after": {
+        "peak": 0.2032470703125,
+        "rms": 0.08111783056780467
+      }
+    }
+  ]
+}

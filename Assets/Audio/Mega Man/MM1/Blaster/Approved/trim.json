@@ -1,0 +1,19 @@
+{
+  "source": "Assets/Audio/Mega Man/MM1/Blaster/Tail Check/mm1-blaster-last-shot-full-tail-balanced.wav",
+  "sourceSha256": "351fd51e988c34518b54918b88a7470d2cb2c3d30b8cdae9f05e36cac5d9790e",
+  "output": "Assets/Audio/Mega Man/MM1/Blaster/Approved/snd_mm1_blaster_fire.wav",
+  "outputSha256": "2d1b7b758c7ec436fa1004083b78e04fd665e5fbbeddd116f3f55d397a47c0e8",
+  "method": "Exact PCM-zero padding removal from user-approved full-tail take. Preserve every nonzero stereo frame bit-for-bit. Keep2ms leading and10ms trailing zero margins. No gain/fade/filter/pitch/resampling changes. Prior accepted2x amplitude already baked in; do not boost again.",
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "sourceFrames": 60481,
+  "firstNonzeroFrame": 4606,
+  "lastNonzeroFrame": 10829,
+  "startFrame": 4510,
+  "endFrameExclusive": 11310,
+  "frames": 6800,
+  "seconds": 0.14166666666666666,
+  "removedLeadingSeconds": 0.09395833333333334,
+  "removedTrailingSeconds": 1.0243958333333334
+}

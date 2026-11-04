@@ -1,0 +1,20 @@
+{
+  "status": "Connected incremental combat/victory GMS1.4 package assembled with approved custom/MM6 sequence and extended original-level MM5 audio. Source regressions/archive checks pass; installed compile/playtest acceptance pending.",
+  "userDirection": "you know what i change my mind.. can we do megaman 5 get X weapon music and do an adaptation of megaman 6's screen but custom",
+  "music": "Original Mega Man5 weapon-acquisition / GET [weapon] music, recovered from supplied USA ROM. Not a new original composition and not MM6 track16.",
+  "screen": "Custom adaptation of Mega Man6 weapon-get screen for YOU GOT ROLLING CUTTER, retaining MM6-style new-weapon demonstration. Not a verbatim MM6 screen or native MM6 weapon name.",
+  "flow": "Defeat -> approved MM6 stage-clear -> centre walk -> approved5F in-room acquisition -> teleport -> custom MM6-adapted screen with MM5 weapon-get music and Rolling Cutter demonstration -> once-only unlock/return to stage selection.",
+  "unchanged": [
+    "No score or CLEAR POINTS",
+    "Stage E-Tank remains separate",
+    "Accepted entrance/flash/shutter unchanged",
+    "Approved stage-clear13 and in-room acquisition5F unchanged",
+    "All boss-owned attacks permanently harmless immediately at lethal hit"
+  ],
+  "supersedes": "Original custom action music approval; retained only as historical review material.",
+  "verification": "Native MM5 Gravity Hold award scene identified command14. User confirmed track and chose unboosted original level. Complete-cycle/loop recovery and GMS playback remain separate acceptance steps.",
+  "musicApproval": "Reference/mm5-weapon-get-music-approval.json",
+  "sequenceReview": "Reference/mm6-sequence-review.json",
+  "extendedMusicReview": "Reference/mm5-weapon-get-extended-recovery.json",
+  "connectedPackage": "../Integration/mm1-cutman-connected-combat-victory-gms14.zip"
+}

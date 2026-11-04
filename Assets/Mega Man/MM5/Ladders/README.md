@@ -30,3 +30,7 @@ Next: import the single top pose, then connect visual selection inside the attac
 ## Subsequent integration checkpoint
 
 User has now imported both resources. The controller source connects climb/top selection inside the attached branch; see docs/mm5-player-ladder-animation-setup.md for the exact Create and Step changes. The original import-only notes above are historical. Functional ladder movement is unchanged; user animation validation remains pending.
+
+## Approved Mesen colour update
+
+User approved the Mesen0.9.9 default-palette standing preview. Current PNGs now use that palette; geometry, padding, frame layouts and origins are unchanged. Extraction tools retain the same palette. This is palette matching, not a direct Mesen capture. See `Assets/Palette Review/Mesen 0.9.9/MM5-PLAYER-IMPORT.md` for batch replacement instructions.

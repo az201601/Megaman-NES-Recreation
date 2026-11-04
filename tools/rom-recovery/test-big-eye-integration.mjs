@@ -1,0 +1,47 @@
+// Actual GML via limited engine adapter; NOT GMS compiler/runtime.
+process.env.BIG_EYE_OVERLAY='1';
+const{Engine,eq,check}=await import('./test-blader-combat-integration.mjs');
+const fs=await import('node:fs');const root=new URL('../../',import.meta.url),base=new URL('Assets/Combat/MM5/Big Eye Checkpoint/',root),native=JSON.parse(fs.readFileSync(new URL('Assets/Enemies/MM1/Big Eye/Reference/native-big-eye-gameplay.json',root)));
+function setup(){const e=new Engine().setup();e.owner.combat_spawn_count=0;e.owner.blaster_spawn_count=0;e.owner.super_spawn_count=0;e.owner.big_eye_spawn_count=0;e.owner.battery_spawn_count=0;e.owner.shell_spawn_count=0;e.view=[1792,720];e.p.x=1820;e.p.y=756;return e;}
+function box(l,t,r,b,type='obj_stage_solid'){return{type,bbox_left:l,bbox_top:t,bbox_right:r,bbox_bottom:b};}
+let free=0,ground=0,skip=0;
+for(const t of native.trials)for(let k=0;k<t.rows.length-1;k++){
+ const a=t.rows[k],b=t.rows[k+1];if(b.frame!==a.frame+1)continue;
+ const airborne=a.state>=16,j=t.jumps.find(v=>v.frame===a.frame),isSkip=airborne&&(a.clock&3)===0;
+ const signedVX=(j??a).vx*(((j??a).flags&64)?1:-1),upVY=(j??a).vy;
+ let kind;
+ if(isSkip){kind='skip';skip++;}
+ else if(!airborne&&a.timer>1&&b.y===a.y){kind='ground';ground++;}
+ else if(b.x-a.x===signedVX/256&&b.y-a.y===-upVY/256&&b.vy===Math.max(-3072,upVY-64)){kind='free';free++;}
+ else continue; // native wall/ceiling/floor edges are separately exercised below.
+ const e=setup(),f=e.make('obj_mm1_big_eye',a.x,a.y);Object.assign(f,{big_eye_facing:a.flags&64?1:-1,big_eye_vx:a.vx/256,big_eye_vy:-a.vy/256,big_eye_airborne:airborne,big_eye_timer:a.timer});
+ if(kind==='ground')e.terrain=[box(0,a.y+20,65535,a.y+35)];
+ const target=j?j.x+((j.flags&64)?64:-64):a.x+64;
+ e.call('scr_mm1_big_eye_step',f,[target,a.clock,a.random]);
+ eq(f.x,b.x);eq(f.y,b.y);eq(f.big_eye_vx,b.vx/256);eq(f.big_eye_vy||0,(-b.vy/256)||0);eq(f.big_eye_airborne,b.state>=16);eq(f.big_eye_timer,b.timer);eq(e.sounds.length,0);
+}
+check(free>500);check(ground>200);check(skip>200);console.log({free,ground,skip});
+// Actual accepted terrain supports the exact record anchor (not painted scenery).
+const geometry=JSON.parse(fs.readFileSync(new URL('Assets/Cut Man/Stage/Second Gate Passage/geometry.json',root)));
+const terrain=[...geometry.solids.map(v=>box(v.x,v.y,v.x+v.width-1,v.y+v.height-1)),...geometry.tops.map(v=>box(v.x,v.y,v.x+v.width-1,v.y+v.height-1,'obj_stage_ladder_top'))];for(const o of geometry.objects)terrain.push(box(o.x,o.y,o.x+31,o.y+31));
+{const e=setup(),a=e.make('obj_mm1_big_eye',2016,892);e.terrain=terrain;a.big_eye_vy=.75;for(let i=1;i<15;i++)e.call('scr_mm1_big_eye_step',a,[1820,i,0]);eq(a.y,892);eq(a.big_eye_timer,1);e.call('scr_mm1_big_eye_step',a,[1820,15,0]);check(a.big_eye_airborne);check(a.y<892);}
+// Ground/ceiling/wall/oneway fixtures are explicit rectangular-solid adaptations.
+for(const type of['obj_stage_solid','obj_stage_ladder_top']){const e=setup(),a=e.make('obj_mm1_big_eye',1900,800);Object.assign(a,{big_eye_airborne:true,big_eye_vy:4});e.terrain=[box(1850,822,1950,839,type)];e.call('scr_mm1_big_eye_step',a,[1800,1,0]);eq(a.y,802);eq(a.big_eye_timer,15);check(!a.big_eye_airborne);eq(e.sounds.map(s=>s.sound),['snd_mm1_big_eye_land']);for(let i=0;i<14;i++)e.call('scr_mm1_big_eye_step',a,[1800,i,0]);eq(e.sounds.length,1);eq(a.big_eye_timer,1);}
+{const e=setup(),a=e.make('obj_mm1_big_eye',1900,800);Object.assign(a,{big_eye_airborne:true,big_eye_vy:-4});e.terrain=[box(1850,760,1950,778)];e.call('scr_mm1_big_eye_step',a,[1800,1,0]);eq(a.y,799);eq(a.big_eye_vy,.75);check(a.big_eye_airborne);eq(e.sounds.length,0);}
+for(const face of[-1,1]){const e=setup(),a=e.make('obj_mm1_big_eye',1900,800);Object.assign(a,{big_eye_airborne:true,big_eye_vx:3,big_eye_facing:face});e.terrain=[face>0?box(1913,760,1930,840):box(1870,760,1887,840)];e.call('scr_mm1_big_eye_step',a,[1800,1,0]);eq(a.x,1900+(face>0?1:0));}
+// Twenty normal/mid hits or seven full hits; highHP full shots consumed, weak kill pierces.
+for(const kind of['obj_mm5_buster_shot','obj_mm5_buster_mid','obj_mm5_buster_full']){const e=setup(),a=e.make('obj_mm1_big_eye',1920,892),count=kind==='obj_mm5_buster_full'?7:20;for(let i=0;i<count;i++){const s=e.shot(kind,1915,892);e.call('scr_mm1_big_eye_hit',e.owner,[a,s]);eq(s.dead,kind!=='obj_mm5_buster_full'||i<count-1);eq(e.sounds.at(-1).sound,'snd_mm6_enemy_hit');if(i<count-1)check(!a.dead);}check(a.dead);eq(e.list('obj_mm5_enemy_explosion').length,1);e.terrain=[box(1792,920,2047,959)];e.rolls=[3];for(let i=0;i<13;i++)e.tick();eq(e.list('obj_mm5_pickup').length,1);}
+// Shot and player bounds: native12x20 enemy numeric halfsize, established MM5 player/shot bounds.
+for(const slide of[false,true])for(const dy of[0,24,25,31,32]){const e=setup(),a=e.make('obj_mm1_big_eye',e.p.x,e.p.y+dy);e.p.sliding=slide;e.call('scr_mm1_big_eye_contact',e.owner,[e.p]);eq(e.p.mm5_health,dy<(slide?25:32)?18:28);e.call('scr_mm1_big_eye_contact',e.owner,[e.p]);eq(e.p.mm5_health,dy<(slide?25:32)?18:28);check(!a.dead);}
+for(const dy of[21,22]){const e=setup(),a=e.make('obj_mm1_big_eye',1920,850);e.shot('obj_mm5_buster_shot',1916,850+dy);e.call('scr_mm5_combat_shot_step',e.list('obj_mm5_buster_shot')[0]);eq(a.big_eye_hp,dy===21?19:20);}
+{const e=setup();e.p.x=1920;e.p.y=850;const a=e.make('obj_mm1_big_eye',1920,850);a.big_eye_hp=1;e.shot('obj_mm5_buster_shot',1916,850);e.tick();check(a.dead);eq(e.p.mm5_health,28);}
+// Anchor spawns once, no manual instances, born guard, rearm only after leaving view.
+{const e=setup();e.owner.big_eye_spawn_count=1;e.call('scr_mm1_big_eye_spawn',e.owner);const a=e.list('obj_mm1_big_eye')[0];eq([a.x,a.y,a.big_eye_timer,a.big_eye_hp],[2016,892,15,20]);e.call('scr_mm1_big_eye_world_step',e.owner,[e.p]);eq(a.big_eye_timer,15);a.dead=true;e.call('scr_mm1_big_eye_spawn',e.owner);eq(e.list('obj_mm1_big_eye').length,0);e.view=[1280,720];e.call('scr_mm1_big_eye_spawn',e.owner);e.view=[1792,720];e.call('scr_mm1_big_eye_spawn',e.owner);eq(e.list('obj_mm1_big_eye').length,1);}
+for(const flag of['combat_dead','combat_refilling']){const e=setup(),a=e.make('obj_mm1_big_eye',1920,850);e.owner[flag]=true;e.owner.combat_begin_done=true;e.call('scr_mm5_combat_end_frame',e.owner);eq(a.big_eye_timer,15);eq(a.y,850);eq(e.sounds.length,0);}
+{const e=setup(),a=e.make('obj_mm1_big_eye',1920,850);e.route=true;e.tick();check(a.dead);eq(e.list('obj_mm5_enemy_explosion').length,0);eq(e.sounds.length,0);}
+// Exact accepted central source outside additive calls/loop.
+const old=new URL('Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/',root);let end=fs.readFileSync(new URL('Scripts/scr_mm5_combat_end_frame.gml',base),'utf8');end=end.replace('        with (obj_mm1_big_eye) instance_destroy();\n        for (i = 0; i < big_eye_spawn_count; i += 1) big_eye_spawn_armed[i] = true;\n','').replace('scr_mm1_big_eye_world_step(p);\n','').replace('scr_mm1_big_eye_contact(p);\n','').replace('if (!combat_dead && !combat_refilling) scr_mm1_big_eye_spawn();\n','');eq(end,fs.readFileSync(new URL('scr_mm5_combat_end_frame.gml',old),'utf8'));let shot=fs.readFileSync(new URL('Scripts/scr_mm5_combat_shot_step.gml',base),'utf8');const first=shot.indexOf('// Big Eye halfsize'),last=shot.indexOf('left_edge = view_xview[0];',first);shot=shot.slice(0,first)+shot.slice(last);eq(shot,fs.readFileSync(new URL('scr_mm5_combat_shot_step.gml',old),'utf8'));
+const{createHash}=await import('node:crypto'),{PNG}=await import('pngjs');const art=JSON.parse(fs.readFileSync(new URL('Assets/Enemies/MM1/Big Eye/Reference/native-big-eye-art.json',root))),png=PNG.sync.read(fs.readFileSync(new URL('Assets/Enemies/MM1/Big Eye/spr_mm1_big_eye_strip2.png',root)));eq(art.cell,[32,48]);eq(art.origin,[12,27]);for(const frame of art.frames){const rgba=Buffer.alloc(32*48*4);for(let y=0;y<48;y++)png.data.copy(rgba,y*128,(y*64+frame.index*32)*4,(y*64+frame.index*32+32)*4);eq(createHash('sha256').update(rgba).digest('hex'),frame.rgbaSha256);}
+const audio=new URL('Assets/Audio/Mega Man/MM1/Big Eye/',root),r=JSON.parse(fs.readFileSync(new URL('recovery.json',audio)));eq(r.take.totalRequests,1);eq(r.take.totalCueDispatches,1);for(const f of r.files){const wav=fs.readFileSync(new URL(f.name,audio));eq(createHash('sha256').update(wav).digest('hex'),f.sha256);eq(wav.readUInt32LE(24),48000);}const full=fs.readFileSync(new URL(r.files[1].name,audio)),trim=fs.readFileSync(new URL(r.files[0].name,audio));eq(trim.subarray(44),full.subarray(44+r.take.trimStart*4,44+r.take.trimEnd*4));check(trim.subarray(44,44+96*4).every(v=>v===0));check(trim.subarray(-480*4).every(v=>v===0));
+const reserved=new Set(['direction','speed','x','y','id','depth','visible','solid','persistent','sprite_index','object_index','image_index','image_speed','hspeed','vspeed','gravity','friction','mask_index']);for(const dir of['Scripts','Objects','Hooks'])for(const f of fs.readdirSync(new URL(dir+'/',base))){const src=fs.readFileSync(new URL(dir+'/'+f,base),'utf8').replace(/\/\/[^\n]*/g,'');for(const d of src.matchAll(/\bvar\s+([^;]+);/g))for(const name of d[1].split(',').map(n=>n.trim()))check(!reserved.has(name),f+': built-in local '+name);check(!src.includes('variable_instance_exists')&&!src.includes('variable_global_exists'));}
+console.log(`PASS Big Eye actualGML: ${free}native free/${ground}ground/${skip}skip transitions; terrain/landing-once/bounds/20normal7full/drop/freeze/rearm/cleanup/killbeforecontact/art/audio/preservation/builtins. NOT GMS compiler/runtime.`);

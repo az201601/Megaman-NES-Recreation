@@ -1,0 +1,3849 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "method": "Original-USA entrance snapshot frame473; controlled boss pose/counter/X128/Y120/facing/lifecycle1 over two updates per fixture. Full original renderer/APU-disabled PPU frame. All opaque exported sprite pixels independently matched to completed native frame. Both facings exported explicitly, no inferred mirror offset. No ROM,CHR or palette changes.",
+  "limitations": [
+    "Pose substitution/lifecycle fixture, not natural combat animation timing.",
+    "Strip includes both facings and no-head-cutter pose variants.",
+    "No GMS render/installation acceptance."
+  ],
+  "file": "Art/spr_mm1_cutman_combat_strip34.png",
+  "sha256": "64cc1dac9d8cf5d53cfdfdfc42b9795476e97483c45f3955d11d1ce27bc4b4ec",
+  "cell": [
+    48,
+    64
+  ],
+  "origin": [
+    24,
+    32
+  ],
+  "animations": [
+    {
+      "pose": 27,
+      "hurt": false,
+      "pointer": 41190,
+      "header": 24,
+      "frames": [
+        {
+          "left": 0,
+          "right": 1
+        },
+        {
+          "left": 2,
+          "right": 3
+        }
+      ]
+    },
+    {
+      "pose": 28,
+      "hurt": false,
+      "pointer": 41193,
+      "header": 2,
+      "frames": [
+        {
+          "left": 0,
+          "right": 1
+        }
+      ]
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "pointer": 41312,
+      "header": 54,
+      "frames": [
+        {
+          "left": 4,
+          "right": 5
+        },
+        {
+          "left": 6,
+          "right": 7
+        },
+        {
+          "left": 8,
+          "right": 9
+        },
+        {
+          "left": 6,
+          "right": 7
+        }
+      ]
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "pointer": 41317,
+      "header": 54,
+      "frames": [
+        {
+          "left": 10,
+          "right": 11
+        },
+        {
+          "left": 12,
+          "right": 13
+        },
+        {
+          "left": 14,
+          "right": 15
+        },
+        {
+          "left": 12,
+          "right": 13
+        }
+      ]
+    },
+    {
+      "pose": 65,
+      "hurt": false,
+      "pointer": 41322,
+      "header": 0,
+      "frames": [
+        {
+          "left": 16,
+          "right": 17
+        }
+      ]
+    },
+    {
+      "pose": 66,
+      "hurt": false,
+      "pointer": 41324,
+      "header": 0,
+      "frames": [
+        {
+          "left": 18,
+          "right": 19
+        }
+      ]
+    },
+    {
+      "pose": 67,
+      "hurt": false,
+      "pointer": 41326,
+      "header": 31,
+      "frames": [
+        {
+          "left": 20,
+          "right": 21
+        },
+        {
+          "left": 22,
+          "right": 23
+        }
+      ]
+    },
+    {
+      "pose": 68,
+      "hurt": false,
+      "pointer": 41329,
+      "header": 31,
+      "frames": [
+        {
+          "left": 22,
+          "right": 23
+        },
+        {
+          "left": 22,
+          "right": 23
+        }
+      ]
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "pointer": 41332,
+      "header": 52,
+      "frames": [
+        {
+          "left": 24,
+          "right": 24
+        },
+        {
+          "left": 25,
+          "right": 26
+        },
+        {
+          "left": 27,
+          "right": 27
+        },
+        {
+          "left": 25,
+          "right": 26
+        }
+      ]
+    },
+    {
+      "pose": 70,
+      "hurt": false,
+      "pointer": 41337,
+      "header": 24,
+      "frames": [
+        {
+          "left": 0,
+          "right": 1
+        },
+        {
+          "left": 2,
+          "right": 3
+        }
+      ]
+    },
+    {
+      "pose": 71,
+      "hurt": false,
+      "pointer": 41340,
+      "header": 24,
+      "frames": [
+        {
+          "left": 28,
+          "right": 29
+        },
+        {
+          "left": 30,
+          "right": 31
+        }
+      ]
+    },
+    {
+      "pose": 87,
+      "hurt": false,
+      "pointer": 41413,
+      "header": 0,
+      "frames": [
+        {
+          "left": 6,
+          "right": 7
+        }
+      ]
+    },
+    {
+      "pose": 88,
+      "hurt": false,
+      "pointer": 41415,
+      "header": 0,
+      "frames": [
+        {
+          "left": 12,
+          "right": 13
+        }
+      ]
+    },
+    {
+      "pose": 87,
+      "hurt": true,
+      "pointer": 41413,
+      "header": 0,
+      "frames": [
+        {
+          "left": 32,
+          "right": 33
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "rgbaSha256": "e980807ffc11d3997fdb438789deaf16f8f859b30648a977cc87aa4b3db71c3c"
+    },
+    {
+      "index": 1,
+      "rgbaSha256": "3536af19c3750aaf652f641e9895ed25ab4d69ca5b33afbabda4d976b137e6ab"
+    },
+    {
+      "index": 2,
+      "rgbaSha256": "8933b77bf0023b6aca466290a2893dfbc80169eda114088638f360681e63b083"
+    },
+    {
+      "index": 3,
+      "rgbaSha256": "723944601444d246d1695d7af75e3234c6b5314a63158261e93efcbe4c69b4c2"
+    },
+    {
+      "index": 4,
+      "rgbaSha256": "9badedcaeee1a5d45a0d61e70aa223337e4893a5037dec89b3c8a581470d697e"
+    },
+    {
+      "index": 5,
+      "rgbaSha256": "29db5d63362944e3ea4bfb960125efaba681676b9514394ec9f417ab85720e71"
+    },
+    {
+      "index": 6,
+      "rgbaSha256": "a6ee428cea17ca5fef4ee668398b1b80e34b7d3a827b8bd4fdcf840a824f469d"
+    },
+    {
+      "index": 7,
+      "rgbaSha256": "10427182eaee2ebd003a5d63c72452bd2d251f0120456b0d86348b51bcb98701"
+    },
+    {
+      "index": 8,
+      "rgbaSha256": "2e3fc3320cacc73c772dfc4aa8c5f36c1be6dc2d92343f164f15a6f99e8645c1"
+    },
+    {
+      "index": 9,
+      "rgbaSha256": "05bcceb14a1a062d939e31604fd26a62c65ae9dce1cd4e59b892918fe4985498"
+    },
+    {
+      "index": 10,
+      "rgbaSha256": "72d44bcbc50ad0dc063795d47b3ba1ced702bd61296c1c74908c97b445143abd"
+    },
+    {
+      "index": 11,
+      "rgbaSha256": "5f33f1c9a6189eaa7cab8eb6c1f654be406c1911abe531470cfee46671e26e6c"
+    },
+    {
+      "index": 12,
+      "rgbaSha256": "f8a4f8305cd7cb38da7668874de60db578630c86d77c9faabff715b274142c3b"
+    },
+    {
+      "index": 13,
+      "rgbaSha256": "b7003b48d8bd2651c492deb25b3972c070c742dc1d38225296866e86acb6eef7"
+    },
+    {
+      "index": 14,
+      "rgbaSha256": "28c1a858ad2d5135d52e9974e25112bf7dd5f46d6a23ffaaf599c432718b72bc"
+    },
+    {
+      "index": 15,
+      "rgbaSha256": "3a882a18769c566b3a3d687248949239ec9605daa6cbd172226809109e5ef16d"
+    },
+    {
+      "index": 16,
+      "rgbaSha256": "adb72b63c1d4d04bef41eddf24b2f2f6d4456e8f0d075bb1391efff8fe484e9a"
+    },
+    {
+      "index": 17,
+      "rgbaSha256": "93e91efd9b9e95509529df6e9f991742b6b967b6e1d38ffc5f447b7914a97a37"
+    },
+    {
+      "index": 18,
+      "rgbaSha256": "83661e897a049303594d1ef4767ef7f27faa88660f3cb4909ad69c39b81ea2db"
+    },
+    {
+      "index": 19,
+      "rgbaSha256": "1c10096ba9d959570709c62071ff848bbe4dbce4aa840a4dc65ef9537198720d"
+    },
+    {
+      "index": 20,
+      "rgbaSha256": "5cbf94aec7241f94628371c04221859e96e44fe0c653962083c91a126f53cf3d"
+    },
+    {
+      "index": 21,
+      "rgbaSha256": "b3cfe5fd5aff9a93cbb5c31b46c854ba48f819eb33c1e63249fe97fe61b0eb77"
+    },
+    {
+      "index": 22,
+      "rgbaSha256": "221e011243cf38511f27b3ab5061c1cc41102224cbd63b8d41811eb9cb0b6757"
+    },
+    {
+      "index": 23,
+      "rgbaSha256": "353aa7776b82a586305bd3480f9dff54b27ac31dcd0f0b8eb103db6443896674"
+    },
+    {
+      "index": 24,
+      "rgbaSha256": "1e95da3e1c04f16caa1035a0f2f57ce7966169848f7e9a08717aa6fad77cfb68"
+    },
+    {
+      "index": 25,
+      "rgbaSha256": "824f92249374198c5625e77aad2319fa6d89351a151e37cc40526d58169c98a5"
+    },
+    {
+      "index": 26,
+      "rgbaSha256": "c07e29763623a7dc8e6bc0837d28c35f02403c277218fe89212a23af8ba0f450"
+    },
+    {
+      "index": 27,
+      "rgbaSha256": "407bf580894d35ba687e64a41049f4b00e7b9ae33805c5c9d0976b62a1846ad6"
+    },
+    {
+      "index": 28,
+      "rgbaSha256": "35b1fe303a3685f3c4ddf9222abcbb4b07d75e86bb284ff5054a67d8a888547e"
+    },
+    {
+      "index": 29,
+      "rgbaSha256": "a5089a32b02ca4a1f89f24c59bf522da97d50c5b9d5e11bd1206a7002c02ec56"
+    },
+    {
+      "index": 30,
+      "rgbaSha256": "280184143f28f6fa4d726ec3c785b6376c21c259cc1b114252d5ffae09fd8f41"
+    },
+    {
+      "index": 31,
+      "rgbaSha256": "f0b96580353920c9b6d3eea151949ce0a9a0e8777a8e9f8071c42e900a2c9274"
+    },
+    {
+      "index": 32,
+      "rgbaSha256": "77db2008dd43ea1fced4da993dd661077840eb5852e9956f55fe0eb4626458db"
+    },
+    {
+      "index": 33,
+      "rgbaSha256": "3fad0f20b8ede05f6c774623f90c36f4aaa9364ecf329c21d319b43ff2127bf1"
+    }
+  ],
+  "fixtures": [
+    {
+      "pose": 27,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 0,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 133,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 131,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        },
+        {
+          "x": -7,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": 1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 440
+    },
+    {
+      "pose": 27,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 1,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 133,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 131,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        },
+        {
+          "x": -1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -9,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 440
+    },
+    {
+      "pose": 27,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 2,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 139,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 138,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 137,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -19,
+          "tile": 151,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -19,
+          "tile": 150,
+          "attr": 66
+        }
+      ],
+      "matched": 392
+    },
+    {
+      "pose": 27,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 3,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 139,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 138,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 137,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -19,
+          "tile": 151,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -19,
+          "tile": 150,
+          "attr": 2
+        }
+      ],
+      "matched": 392
+    },
+    {
+      "pose": 28,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 0,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 133,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 131,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        },
+        {
+          "x": -7,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": 1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 440
+    },
+    {
+      "pose": 28,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 1,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 133,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 131,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        },
+        {
+          "x": -1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -9,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 440
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 4,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 164,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 165,
+          "attr": 2
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 16,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 174,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 175,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 19,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 33,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 34,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "tile": 35,
+          "attr": 2
+        },
+        {
+          "x": -10,
+          "y": -16,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": -2,
+          "y": -16,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 388
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 5,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 164,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 165,
+          "attr": 66
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 16,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 174,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 175,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 19,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 33,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 34,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": 5,
+          "tile": 35,
+          "attr": 66
+        },
+        {
+          "x": 2,
+          "y": -16,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -6,
+          "y": -16,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 388
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 6,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 160,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 161,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 170,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 171,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 6,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 39,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 40,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -18,
+          "tile": 150,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -18,
+          "tile": 151,
+          "attr": 2
+        }
+      ],
+      "matched": 313
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 7,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 160,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 161,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 170,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 171,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 6,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 39,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 40,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -18,
+          "tile": 150,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -18,
+          "tile": 151,
+          "attr": 66
+        }
+      ],
+      "matched": 313
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 2,
+      "right": false,
+      "stripIndex": 8,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 162,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 163,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 172,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 173,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 22,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 36,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 37,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "tile": 38,
+          "attr": 2
+        },
+        {
+          "x": -10,
+          "y": -16,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": -2,
+          "y": -16,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 366
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 2,
+      "right": true,
+      "stripIndex": 9,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 162,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 163,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 172,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 173,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 22,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 36,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 37,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": 5,
+          "tile": 38,
+          "attr": 66
+        },
+        {
+          "x": 2,
+          "y": -16,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -6,
+          "y": -16,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 366
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 3,
+      "right": false,
+      "stripIndex": 6,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 160,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 161,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 170,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 171,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 6,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 39,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 40,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -18,
+          "tile": 150,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -18,
+          "tile": 151,
+          "attr": 2
+        }
+      ],
+      "matched": 313
+    },
+    {
+      "pose": 63,
+      "hurt": false,
+      "frame": 3,
+      "right": true,
+      "stripIndex": 7,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 160,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 161,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 170,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 171,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 6,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 39,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 40,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -18,
+          "tile": 150,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -18,
+          "tile": 151,
+          "attr": 66
+        }
+      ],
+      "matched": 313
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 10,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 164,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 165,
+          "attr": 2
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 16,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 174,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 175,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 19,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 33,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 34,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "tile": 35,
+          "attr": 2
+        }
+      ],
+      "matched": 326
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 11,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 164,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 165,
+          "attr": 66
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 16,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 174,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 175,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 19,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 33,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 34,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": 5,
+          "tile": 35,
+          "attr": 66
+        }
+      ],
+      "matched": 326
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 12,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 160,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 161,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 170,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 171,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 6,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 39,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 40,
+          "attr": 2
+        }
+      ],
+      "matched": 253
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 13,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 160,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 161,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 170,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 171,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 6,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 39,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 40,
+          "attr": 66
+        }
+      ],
+      "matched": 253
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 2,
+      "right": false,
+      "stripIndex": 14,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 162,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 163,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 172,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 173,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 22,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 36,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 37,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": 5,
+          "tile": 38,
+          "attr": 2
+        }
+      ],
+      "matched": 304
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 2,
+      "right": true,
+      "stripIndex": 15,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 162,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 163,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 172,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 173,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 22,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 36,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 37,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": 5,
+          "tile": 38,
+          "attr": 66
+        }
+      ],
+      "matched": 304
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 3,
+      "right": false,
+      "stripIndex": 12,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 160,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 161,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 170,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 171,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 6,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 39,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 40,
+          "attr": 2
+        }
+      ],
+      "matched": 253
+    },
+    {
+      "pose": 64,
+      "hurt": false,
+      "frame": 3,
+      "right": true,
+      "stripIndex": 13,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 160,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 161,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 170,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 171,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 6,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 39,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 40,
+          "attr": 66
+        }
+      ],
+      "matched": 253
+    },
+    {
+      "pose": 65,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 16,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 140,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 141,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 142,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 143,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 144,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 145,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 147,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 146,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 148,
+          "attr": 2
+        },
+        {
+          "x": -10,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": -2,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 430
+    },
+    {
+      "pose": 65,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 17,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 140,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 141,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 142,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 143,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 144,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 145,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 147,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 146,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 148,
+          "attr": 66
+        },
+        {
+          "x": 2,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -6,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 430
+    },
+    {
+      "pose": 66,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 18,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 140,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 141,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 142,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 143,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 144,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 145,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 147,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 146,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 148,
+          "attr": 2
+        }
+      ],
+      "matched": 368
+    },
+    {
+      "pose": 66,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 19,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 140,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 141,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 142,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 143,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 144,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 145,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 147,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 146,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 148,
+          "attr": 66
+        }
+      ],
+      "matched": 368
+    },
+    {
+      "pose": 67,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 20,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 178,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 177,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 176,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 180,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 179,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        },
+        {
+          "x": -7,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": 1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 414
+    },
+    {
+      "pose": 67,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 21,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 178,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 177,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 176,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 180,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 179,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        },
+        {
+          "x": -1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -9,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 414
+    },
+    {
+      "pose": 67,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 22,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 183,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 182,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 185,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 184,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 189,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 188,
+          "attr": 66
+        },
+        {
+          "x": -20,
+          "y": -4,
+          "tile": 186,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -10,
+          "tile": 181,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 187,
+          "attr": 66
+        }
+      ],
+      "matched": 351
+    },
+    {
+      "pose": 67,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 23,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 183,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 182,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 185,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 184,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 189,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 188,
+          "attr": 2
+        },
+        {
+          "x": 12,
+          "y": -4,
+          "tile": 186,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -10,
+          "tile": 181,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 187,
+          "attr": 2
+        }
+      ],
+      "matched": 351
+    },
+    {
+      "pose": 68,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 22,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 183,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 182,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 185,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 184,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 189,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 188,
+          "attr": 66
+        },
+        {
+          "x": -20,
+          "y": -4,
+          "tile": 186,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -10,
+          "tile": 181,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 187,
+          "attr": 66
+        }
+      ],
+      "matched": 351
+    },
+    {
+      "pose": 68,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 23,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 183,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 182,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 185,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 184,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 189,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 188,
+          "attr": 2
+        },
+        {
+          "x": 12,
+          "y": -4,
+          "tile": 186,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -10,
+          "tile": 181,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 187,
+          "attr": 2
+        }
+      ],
+      "matched": 351
+    },
+    {
+      "pose": 68,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 22,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 183,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 182,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 185,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 184,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 189,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 188,
+          "attr": 66
+        },
+        {
+          "x": -20,
+          "y": -4,
+          "tile": 186,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -10,
+          "tile": 181,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 187,
+          "attr": 66
+        }
+      ],
+      "matched": 351
+    },
+    {
+      "pose": 68,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 23,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 183,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 182,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 185,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 184,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 189,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 188,
+          "attr": 2
+        },
+        {
+          "x": 12,
+          "y": -4,
+          "tile": 186,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -10,
+          "tile": 181,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 187,
+          "attr": 2
+        }
+      ],
+      "matched": 351
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 24,
+      "cells": [
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 204,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 204,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 205,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 205,
+          "attr": 66
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 24,
+      "cells": [
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 204,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 204,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 205,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 205,
+          "attr": 2
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 25,
+      "cells": [
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 207,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 206,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 207,
+          "attr": 194
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 206,
+          "attr": 194
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 26,
+      "cells": [
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 207,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 206,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 207,
+          "attr": 130
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 206,
+          "attr": 130
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 2,
+      "right": false,
+      "stripIndex": 27,
+      "cells": [
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 205,
+          "attr": 130
+        },
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 205,
+          "attr": 194
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 204,
+          "attr": 130
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 204,
+          "attr": 194
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 2,
+      "right": true,
+      "stripIndex": 27,
+      "cells": [
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 205,
+          "attr": 194
+        },
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 205,
+          "attr": 130
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 204,
+          "attr": 194
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 204,
+          "attr": 130
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 3,
+      "right": false,
+      "stripIndex": 25,
+      "cells": [
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 207,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 206,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 207,
+          "attr": 194
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 206,
+          "attr": 194
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 69,
+      "hurt": false,
+      "frame": 3,
+      "right": true,
+      "stripIndex": 26,
+      "cells": [
+        {
+          "x": 0,
+          "y": -7,
+          "tile": 207,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -7,
+          "tile": 206,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "tile": 207,
+          "attr": 130
+        },
+        {
+          "x": -8,
+          "y": 1,
+          "tile": 206,
+          "attr": 130
+        }
+      ],
+      "matched": 74
+    },
+    {
+      "pose": 70,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 0,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 133,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 131,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        },
+        {
+          "x": -7,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "x": 1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        }
+      ],
+      "matched": 440
+    },
+    {
+      "pose": 70,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 1,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 133,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 131,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        },
+        {
+          "x": -1,
+          "y": -19,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "x": -9,
+          "y": -19,
+          "tile": 149,
+          "attr": 2
+        }
+      ],
+      "matched": 440
+    },
+    {
+      "pose": 70,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 2,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 139,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 138,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 137,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -19,
+          "tile": 151,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -19,
+          "tile": 150,
+          "attr": 66
+        }
+      ],
+      "matched": 392
+    },
+    {
+      "pose": 70,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 3,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 139,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 138,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 137,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -19,
+          "tile": 151,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -19,
+          "tile": 150,
+          "attr": 2
+        }
+      ],
+      "matched": 392
+    },
+    {
+      "pose": 71,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 28,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 133,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 131,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        }
+      ],
+      "matched": 378
+    },
+    {
+      "pose": 71,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 29,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 133,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 132,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 131,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        }
+      ],
+      "matched": 378
+    },
+    {
+      "pose": 71,
+      "hurt": false,
+      "frame": 1,
+      "right": false,
+      "stripIndex": 30,
+      "cells": [
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 130,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 128,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 139,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 138,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 137,
+          "attr": 66
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 136,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 134,
+          "attr": 66
+        }
+      ],
+      "matched": 332
+    },
+    {
+      "pose": 71,
+      "hurt": false,
+      "frame": 1,
+      "right": true,
+      "stripIndex": 31,
+      "cells": [
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 130,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 129,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 128,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 139,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 138,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 137,
+          "attr": 2
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 136,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 135,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 134,
+          "attr": 2
+        }
+      ],
+      "matched": 332
+    },
+    {
+      "pose": 87,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 6,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 160,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 161,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 170,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 171,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 6,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 39,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 40,
+          "attr": 2
+        },
+        {
+          "x": -12,
+          "y": -18,
+          "tile": 150,
+          "attr": 2
+        },
+        {
+          "x": -4,
+          "y": -18,
+          "tile": 151,
+          "attr": 2
+        }
+      ],
+      "matched": 313
+    },
+    {
+      "pose": 87,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 7,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 160,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 161,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 170,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 171,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 6,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 39,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 40,
+          "attr": 66
+        },
+        {
+          "x": 4,
+          "y": -18,
+          "tile": 150,
+          "attr": 66
+        },
+        {
+          "x": -4,
+          "y": -18,
+          "tile": 151,
+          "attr": 66
+        }
+      ],
+      "matched": 313
+    },
+    {
+      "pose": 88,
+      "hurt": false,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 12,
+      "cells": [
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 160,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 161,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 170,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 171,
+          "attr": 2
+        },
+        {
+          "x": 8,
+          "y": -3,
+          "tile": 6,
+          "attr": 2
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 39,
+          "attr": 2
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 40,
+          "attr": 2
+        }
+      ],
+      "matched": 253
+    },
+    {
+      "pose": 88,
+      "hurt": false,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 13,
+      "cells": [
+        {
+          "x": 0,
+          "y": -11,
+          "tile": 160,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -11,
+          "tile": 161,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": -3,
+          "tile": 170,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": -3,
+          "tile": 171,
+          "attr": 66
+        },
+        {
+          "x": -16,
+          "y": -3,
+          "tile": 6,
+          "attr": 66
+        },
+        {
+          "x": 0,
+          "y": 5,
+          "tile": 39,
+          "attr": 66
+        },
+        {
+          "x": -8,
+          "y": 5,
+          "tile": 40,
+          "attr": 66
+        }
+      ],
+      "matched": 253
+    },
+    {
+      "pose": 87,
+      "hurt": true,
+      "frame": 0,
+      "right": false,
+      "stripIndex": 32,
+      "cells": [
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 123,
+          "attr": 1
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 121,
+          "attr": 1
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 122,
+          "attr": 129
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 121,
+          "attr": 65
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 119,
+          "attr": 1
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 122,
+          "attr": 1
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 119,
+          "attr": 65
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 120,
+          "attr": 1
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 120,
+          "attr": 65
+        }
+      ],
+      "matched": 364
+    },
+    {
+      "pose": 87,
+      "hurt": true,
+      "frame": 0,
+      "right": true,
+      "stripIndex": 33,
+      "cells": [
+        {
+          "x": -4,
+          "y": -3,
+          "tile": 123,
+          "attr": 65
+        },
+        {
+          "x": 4,
+          "y": 5,
+          "tile": 121,
+          "attr": 65
+        },
+        {
+          "x": -4,
+          "y": 5,
+          "tile": 122,
+          "attr": 193
+        },
+        {
+          "x": -12,
+          "y": 5,
+          "tile": 121,
+          "attr": 1
+        },
+        {
+          "x": 4,
+          "y": -11,
+          "tile": 119,
+          "attr": 65
+        },
+        {
+          "x": -4,
+          "y": -11,
+          "tile": 122,
+          "attr": 65
+        },
+        {
+          "x": -12,
+          "y": -11,
+          "tile": 119,
+          "attr": 1
+        },
+        {
+          "x": 4,
+          "y": -3,
+          "tile": 120,
+          "attr": 65
+        },
+        {
+          "x": -12,
+          "y": -3,
+          "tile": 120,
+          "attr": 1
+        }
+      ],
+      "matched": 364
+    }
+  ]
+}

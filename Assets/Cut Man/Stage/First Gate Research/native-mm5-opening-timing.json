@@ -1,0 +1,156 @@
+{
+  "method": "Controlled original-USA routine execution: at normal camera-update entry C9DD, redirect PC once to original D0FC using existing caller stack. Stage6 snapshot, no extra input, no ROM edits. This verifies opening-routine timing, NOT natural gate contact/approach or full opening+scroll+closing sequence.",
+  "disassembly": {
+    "repository": "https://github.com/refreshing-lemonade/megaman5-disassembly",
+    "commit": "03e59a6855c1aca85d063bd2973005dc3ffd02ef",
+    "file": "bank1B_1F.asm"
+  },
+  "romSha256": "32bd2b4ecd2129aa5337afe9171696ef35646d3fd597339aebba19221764521c",
+  "spans": [
+    {
+      "cpu": "cb8d",
+      "offset": 248733,
+      "hex": "b968a948100320fcd0"
+    },
+    {
+      "cpu": "d11c",
+      "offset": 250156,
+      "hex": "a9038511a925205dec"
+    },
+    {
+      "cpu": "d133",
+      "offset": 250179,
+      "hex": "2022ffe695e69da59d2903d0ef"
+    }
+  ],
+  "events": [
+    {
+      "frame": 1,
+      "event": "controlled-camera-call-redirection",
+      "stage": 6
+    },
+    {
+      "frame": 1,
+      "event": "opening-entry",
+      "a": 0,
+      "counter": 165
+    },
+    {
+      "frame": 1,
+      "event": "queue-opening-sound",
+      "a": 37,
+      "counter": 0
+    },
+    {
+      "frame": 1,
+      "event": "build-PPU-edit",
+      "a": 6,
+      "counter": 0
+    },
+    {
+      "frame": 1,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 0
+    },
+    {
+      "frame": 2,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 1
+    },
+    {
+      "frame": 3,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 2
+    },
+    {
+      "frame": 4,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 3
+    },
+    {
+      "frame": 5,
+      "event": "build-PPU-edit",
+      "a": 0,
+      "counter": 4
+    },
+    {
+      "frame": 5,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 4
+    },
+    {
+      "frame": 6,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 5
+    },
+    {
+      "frame": 7,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 6
+    },
+    {
+      "frame": 8,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 7
+    },
+    {
+      "frame": 9,
+      "event": "build-PPU-edit",
+      "a": 39,
+      "counter": 8
+    },
+    {
+      "frame": 9,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 8
+    },
+    {
+      "frame": 10,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 9
+    },
+    {
+      "frame": 11,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 10
+    },
+    {
+      "frame": 12,
+      "event": "yield-one-frame",
+      "a": 0,
+      "counter": 11
+    },
+    {
+      "frame": 13,
+      "event": "opening-return",
+      "a": 0,
+      "counter": 12
+    }
+  ],
+  "opening": {
+    "startFrame": 1,
+    "soundFrame": 1,
+    "editFrames": [
+      1,
+      5,
+      9
+    ],
+    "returnFrame": 13,
+    "totalWaitFrames": 12,
+    "edits": 3,
+    "intervalFrames": 4,
+    "nominalSecondsAt60Hz": 0.2
+  },
+  "interpretation": "First PPU edit is built and command25 queued on the entry frame; no initial32-frame hold inside the opener. Caller CB8D/CB91/CB93 directly invokes opener when its gate flag is set, without a frame-wait call between flag test and opener. PPU presentation occurs on an NMI; exact visible contact-to-first-edit still requires a natural/controlled gate-trigger PPU trace, not this redirected-call probe."
+}

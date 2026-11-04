@@ -2,9 +2,8 @@
 // Returns true when this update has been handled; caller must exit.
 // Standing-reference Y stays fixed; Draw offsets only the slide artwork by +2.
 // Rectangle geometry is an adaptation, not a complete NES metatile engine.
-var ss_input, ss_remaining, ss_amount, ss_next_x, ss_next_y;
-var ss_hit, ss_blocked, ss_probe, ss_px, ss_surface;
-var ss_landed, ss_resolved_y;
+var ss_input, ss_remaining, ss_amount, ss_next_x;
+var ss_blocked, ss_probe, ss_px;
 
 if (!sliding)
 {
@@ -18,6 +17,13 @@ if (!sliding)
         obj_stage_solid, false, true
     ) != noone) return false;
 
+    // Spawn at the pre-movement standing reference; no continuous emitter.
+    if (!instance_exists(obj_mm5_slide_dust))
+    {
+        instance_create(x - 12, y + 7, obj_mm5_slide_dust);
+    }
+
+    slide_overhang_fall = false;
     sliding = true;
     slide_timer = slide_duration;
     slide_direction = sign(image_xscale);
@@ -101,73 +107,29 @@ for (ss_probe = 0; ss_probe < 3; ss_probe += 1)
         grounded = true;
 }
 
-// If a ledge has no standing clearance, keep the small body while falling.
-// This is a safety adaptation; combined low-ceiling/edge timing is unmeasured.
-ss_landed = false;
-if (!grounded && !scr_mm5_player_can_stand(x, y))
+// Support loss ends the slide even if an overhang blocks standing clearance.
+// Preserve the accepted standing-reference air handoff; do not move Y twice.
+if (!grounded)
 {
+    slide_overhang_fall = !scr_mm5_player_can_stand(x, y);
+    sliding = false;
+    slide_timer = 0;
     fall_speed = max(1, fall_speed);
-    ss_remaining = fall_speed;
-    while (ss_remaining > 0)
-    {
-        ss_amount = min(1, ss_remaining);
-        ss_next_y = y + ss_amount;
-        ss_resolved_y = ss_next_y;
-        ss_hit = false;
-        for (ss_probe = 0; ss_probe < 3; ss_probe += 1)
-        {
-            ss_px = floor(x) + (ss_probe - 1) * 14;
-            ss_surface = collision_point(ss_px, floor(ss_next_y + feet_offset),
-                obj_stage_solid, false, true);
-            if (ss_surface == noone)
-            {
-                ss_surface = collision_point(ss_px, floor(ss_next_y + feet_offset),
-                    obj_stage_ladder_top, false, true);
-                if (ss_surface != noone)
-                {
-                    if (y + feet_offset > ss_surface.bbox_top
-                        || ss_next_y + feet_offset < ss_surface.bbox_top)
-                        ss_surface = noone;
-                }
-            }
-            if (ss_surface != noone)
-            {
-                ss_hit = true;
-                ss_resolved_y = min(ss_resolved_y,
-                    ss_surface.bbox_top - feet_offset);
-            }
-        }
-        y = ss_resolved_y;
-        if (ss_hit)
-        {
-            grounded = true;
-            fall_speed = 0;
-            ss_landed = true;
-            break;
-        }
-        ss_remaining -= ss_amount;
-    }
-    if (!grounded) fall_speed = min(fall_speed + fall_gravity, fall_speed_max);
+    sprite_index = spr_mm5_megaman_air;
+    image_speed = 0;
+    image_index = 0;
+    return true;
 }
 
-if (grounded) fall_speed = 0;
-if (ss_landed) audio_play_sound(snd_mm5_megaman_land, 1, false);
-
-// Never restore the tall body solely because the timer expired.
-if ((slide_timer <= 0 || !grounded)
-    && scr_mm5_player_can_stand(x, y))
+fall_speed = 0;
+// Grounded tunnel behaviour remains unchanged.
+if (slide_timer <= 0 && scr_mm5_player_can_stand(x, y))
 {
     sliding = false;
     slide_timer = 0;
+    sprite_index = spr_mm5_megaman_idle;
     image_speed = 0;
     image_index = 0;
-    if (grounded) sprite_index = spr_mm5_megaman_idle;
-    else
-    {
-        sprite_index = spr_mm5_megaman_air;
-        // Ordinary gravity/collision resumes on the following update.
-        fall_speed = max(1, fall_speed);
-    }
     return true;
 }
 

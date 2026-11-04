@@ -25,3 +25,7 @@ Run `node tools/rom-recovery/extract-movement.mjs` after generating mm5-stage.js
 ## Next steps (not installed)
 
 Import the walk strip as four 32x32 subimages, each with origin 16,16, then connect visual selection and integer frame timing to the existing controller. Preserve image_xscale facing and image_speed=0. The diagnostic Draw event must keep draw_self(). No animation selection, startup-pose gating or final frame timing code has been added by this checkpoint.
+
+## Approved Mesen colour update
+
+User approved the Mesen0.9.9 default-palette standing preview. Current PNGs now use that palette; geometry, padding, frame layouts and origins are unchanged. Extraction tools retain the same palette. This is palette matching, not a direct Mesen capture. See `Assets/Palette Review/Mesen 0.9.9/MM5-PLAYER-IMPORT.md` for batch replacement instructions.

@@ -1,0 +1,15 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{createHash}from'node:crypto';import{NES}from'jsnes';import{PNG}from'pngjs';import{mesenRgbFromJsnes}from'./mesen-palette.mjs';
+const root=new URL('../../',import.meta.url),out=new URL('Assets/Enemies/MM1/Flea/',root);let pixels;
+const n=new NES({emulateSound:false,onFrame:p=>pixels=p.slice()});n.loadROM(fs.readFileSync(new URL('Mega Man (USA).nes',root),'binary'));n.fromJSON(JSON.parse(fs.readFileSync(new URL('./.work/flea-before-first-ai.json',import.meta.url))));for(let b=0;b<8;b++)n.buttonUp(1,b);
+const poses=new Map();
+for(let f=1;f<=180&&poses.size<2;f++){const m=n.cpu.mem;m[0x480]=2064&255;m[0x460]=2064>>8;m[0x4a0]=0;m[0x600]=36;m[0x620]=m[0x660]=m[0x680]=0;m[0x55]=100;n.frame();const cells=[];
+ for(let i=0;i<64;i++){const[y,tile,attr,x]=n.ppu.spriteMem.slice(i*4,i*4+4);if(y<230&&tile>=0x95&&tile<=0x9d)cells.push({i,x,y,tile,attr});}
+ for(const c of cells){if(![0x95,0x97].includes(c.tile)||(c.attr&64))continue;const index=c.tile===0x95?0:1;if(poses.has(index))continue;
+ const wanted=index===0?[[0,0,0x95],[8,0,0x95],[0,8,0x96],[8,8,0x96]]:[[0,0,0x97],[8,0,0x98],[0,8,0x9b],[8,8,0x9c],[4,16,0x9d]];
+ const group=wanted.map(([x,y,t])=>cells.find(v=>v.x===c.x+x&&v.y===c.y+y&&v.tile===t));if(group.some(v=>!v))continue;const p=new PNG({width:16,height:24});
+ for(const v of [...group].reverse())for(let y=0;y<8;y++)for(let x=0;x<8;x++){const val=n.ppu.ptTile[v.tile+256*n.ppu.f_spPatternTable].pix[(v.attr&128?7-y:y)*8+(v.attr&64?7-x:x)];if(!val)continue;const rgb=mesenRgbFromJsnes(n.ppu.sprPalette[(v.attr&3)*4+val]);p.data.set([rgb&255,rgb>>8&255,rgb>>16&255,255],((v.y+y-c.y)*16+v.x+x-c.x)*4);}
+ let matches=true;for(let y=0;y<24;y++)for(let x=0;x<16;x++){const k=(y*16+x)*4;if(!p.data[k+3])continue;const rgb=mesenRgbFromJsnes(pixels[(c.y+1+y)*256+c.x+x]);if(p.data[k]!=(rgb&255)||p.data[k+1]!=(rgb>>8&255)||p.data[k+2]!=(rgb>>16&255))matches=false;}
+ if(matches)poses.set(index,{p,frame:f,cells:group,rgbaSha256:createHash('sha256').update(p.data).digest('hex')});
+ }}
+assert.equal(poses.size,2);const strip=new PNG({width:32,height:24}),records=[];for(const index of[0,1]){const{p,...record}=poses.get(index);for(let y=0;y<24;y++)p.data.copy(strip.data,(y*32+index*16)*4,y*64,(y+1)*64);records.push({index,...record});}
+fs.writeFileSync(new URL('spr_mm1_flea_strip2.png',out),PNG.sync.write(strip));fs.writeFileSync(new URL('Reference/native-flea-art.json',out),JSON.stringify({method:'Supplied MM1USA/JSNES2.1.0 original live OAM/CHR/palette. Controlled frame-boundary firstFlea snapshot from probe-flea-gameplay.mjs; playerX2064,Y36/verticalspeed0/protection100 eachframe. Both poses independently opaque-pixel matched to native rendering. Mesen0.9.9RGB mapping, not Mesen.exe. Standing16x16 image occupies top16rows of common16x24cell; airborne spring extends below body, no invented pixels.',cell:[16,24],origin:[8,7],canonical:'left',frames:records},null,2)+'\n');console.log('PASS Flea: original grounded/airborne poses independently native-render matched;16x24commoncells/origin8,7.');

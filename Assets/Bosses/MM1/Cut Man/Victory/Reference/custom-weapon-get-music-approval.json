@@ -1,0 +1,14 @@
+{
+  "status": "Superseded by user: use original Mega Man5 GET weapon music instead. Historical listening approval only; DO NOT integrate this custom track.",
+  "userConfirmation": "oksy we will do this on e",
+  "file": "Audio/Approved/snd_mm1_rolling_cutter_weapon_get.wav",
+  "source": "Audio/Custom Review/rolling-cutter-weapon-get-action-v3.wav",
+  "sha256": "b80f14692e266eec6645a6c4039b1673a6646c8a8814d90fa19e3961c5ce1846",
+  "processing": "Byte-identical approved revision3 action audition. No gain, trimming, resampling or composition changes.",
+  "composition": "Original riff-led action theme,160BPM,8bars,12seconds. Not native MM6 track16.",
+  "resource": "snd_mm1_rolling_cutter_weapon_get",
+  "supersedes": "Revision1 and revision2 rejected. Revision3 driving action version approved.",
+  "limitation": "Listening approval is not installed GMS playback or complete screen/demo acceptance.",
+  "activeProductionChoice": false,
+  "supersededBy": "Reference/weapon-screen-production-direction.json"
+}

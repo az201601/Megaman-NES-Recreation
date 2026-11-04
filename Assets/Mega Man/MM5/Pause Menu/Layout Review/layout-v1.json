@@ -1,0 +1,109 @@
+{
+  "size": [
+    256,
+    240
+  ],
+  "font": "User-approved larger original MM5 set",
+  "placements": [
+    {
+      "label": "M. BUSTER",
+      "x": 16,
+      "y": 52
+    },
+    {
+      "label": "R. CUTTER",
+      "x": 16,
+      "y": 70
+    },
+    {
+      "label": "I. SLASHER",
+      "x": 16,
+      "y": 88
+    },
+    {
+      "label": "H. BOMB",
+      "x": 16,
+      "y": 106
+    },
+    {
+      "label": "F. STORM",
+      "x": 16,
+      "y": 124
+    },
+    {
+      "label": "T. BEAM",
+      "x": 16,
+      "y": 142
+    },
+    {
+      "label": "S. ARM",
+      "x": 136,
+      "y": 52
+    },
+    {
+      "label": "M. BEAM",
+      "x": 136,
+      "y": 70
+    },
+    {
+      "label": "R. COIL",
+      "x": 136,
+      "y": 88
+    },
+    {
+      "label": "R. JET",
+      "x": 136,
+      "y": 106
+    },
+    {
+      "label": "R. MARINE",
+      "x": 136,
+      "y": 124
+    }
+  ],
+  "originalCrops": {
+    "buster": [
+      32,
+      32,
+      16,
+      16
+    ],
+    "coil": [
+      144,
+      96,
+      16,
+      16
+    ],
+    "eTank": [
+      24,
+      192,
+      16,
+      16
+    ],
+    "mTank": [
+      80,
+      192,
+      16,
+      16
+    ],
+    "life": [
+      208,
+      192,
+      16,
+      16
+    ],
+    "energy": [
+      176,
+      104,
+      56,
+      8
+    ]
+  },
+  "placeholders": [
+    "six MM1 weapon icons",
+    "Magnet Beam icon",
+    "Rush Jet and Marine originals pending recovery",
+    "W tank original source not verified"
+  ],
+  "scope": "Static layout review only. No inventory ownership, gameplay or controls implemented."
+}

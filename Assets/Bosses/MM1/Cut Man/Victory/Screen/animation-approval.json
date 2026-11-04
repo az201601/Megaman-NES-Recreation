@@ -1,0 +1,15 @@
+{
+  "status": "User approved portrait reveal and typing preview. Actual weapon demonstration and installed runtime acceptance remain pending.",
+  "userConfirmation": "approved",
+  "previewCommit": "ec5e129",
+  "previewFile": "custom-rolling-cutter-reveal-preview.gif",
+  "previewSha256": "4061e4471ec5d60c93af7528a85f4637c79e65fc80d4a0686ef984be3e8bb06d",
+  "approvedScope": [
+    "Bottom-to-top grey/white Rolling Cutter portrait reveal",
+    "Original MM5 font typing YOU GOT then ROLLING CUTTER",
+    "Final composition matches approved static layout",
+    "Custom active-update reveal/typing/hold timing shown in preview"
+  ],
+  "audio": "GIF is silent. MM5 weapon-get track and original unboosted volume were approved separately.",
+  "excluded": "Approval does not cover an unimplemented Rolling Cutter demonstration,complete installation or GMS runtime playback."
+}

@@ -1,0 +1,211 @@
+{
+  "romSha256": "32bd2b4ecd2129aa5337afe9171696ef35646d3fd597339aebba19221764521c",
+  "method": "After native F0 and150updates silent warmup, controlled native main restartDDE8 from naturally booted playable snapshot:30=10(award),6C=0(Gravity),67=0(previous clears),6E=1(current clear),80=8/82=E8/83=DD. Original main routine establishes its own stack/subsystems and selects banks17/0C before entering178860. No CPU PC/stack/bank redirection and no injected14 music command. Original scene runs without further game-RAM/code/CHR/palette/audio patches. Not a natural boss defeat.",
+  "source": {
+    "repository": "refreshing-lemonade/megaman5-disassembly",
+    "commit": "03e59a6855c1aca85d063bd2973005dc3ffd02ef",
+    "file": "bank17_18.asm",
+    "blob": "d1300af86b9a03bc378ac35cb5481987b95f235e"
+  },
+  "spans": [
+    {
+      "bank": "17",
+      "address": "8860",
+      "hex": "a9008595a56cc9089011c9"
+    },
+    {
+      "bank": "17",
+      "address": "88f9",
+      "hex": "a914205bec"
+    },
+    {
+      "bank": "17",
+      "address": "8998",
+      "hex": "c60ed0c1a93c207d8aa004b9db8f9980078810f7a66cbcff8eb9078fc920f026c95cf0148d830748a9ff8519a908207d8a68c92e"
+    }
+  ],
+  "finished": true,
+  "frames": 717,
+  "events": [
+    {
+      "frame": 0,
+      "kind": "scene",
+      "pc": "8860"
+    },
+    {
+      "frame": 25,
+      "kind": "scene",
+      "pc": "88f9"
+    },
+    {
+      "frame": 25,
+      "kind": "audio-request",
+      "pc": "ec5b",
+      "command": 20
+    },
+    {
+      "frame": 25,
+      "kind": "audio-request",
+      "pc": "ec5d",
+      "command": 20
+    },
+    {
+      "frame": 310,
+      "kind": "scene",
+      "pc": "899c"
+    },
+    {
+      "frame": 370,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 378,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 386,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 394,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 394,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 402,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 410,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 418,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 418,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 426,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 434,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 442,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 450,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 458,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 466,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 474,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 474,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 482,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 490,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 498,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 506,
+      "kind": "scene",
+      "pc": "89b1"
+    },
+    {
+      "frame": 694,
+      "kind": "scene",
+      "pc": "853b"
+    },
+    {
+      "frame": 715,
+      "kind": "audio-request",
+      "pc": "ec5b",
+      "command": 19
+    },
+    {
+      "frame": 715,
+      "kind": "audio-request",
+      "pc": "ec5d",
+      "command": 19
+    }
+  ],
+  "status": "Scene-identified listening review; not approved/integrated.",
+  "audio": {
+    "file": "Audio/Review/mm5-weapon-get-native-scene-review.wav",
+    "sha256": "db43f2417cc02b391cbfcdf92d53d8a0b1ffe6a54d3cf673cdfc3c26c0903c0f",
+    "rate": 48000,
+    "channels": 2,
+    "bits": 16,
+    "samples": 551145,
+    "seconds": 11.4821875,
+    "peak": 0.41943359375,
+    "warmPeak": 0,
+    "dispatch": [
+      {
+        "frame": 26,
+        "command": 20
+      },
+      {
+        "frame": 716,
+        "command": 19
+      }
+    ],
+    "method": "Complete unmuted native APU samples from actual scene driver14 dispatch until next-screen13 dispatch. No replacement synthesis,normalization,gain,filtering,channel isolation,or trimming. Native scene length excerpt,not natural track ending or seamless-loop proof."
+  },
+  "sceneImage": "Reference/mm5-weapon-get-native-scene.png",
+  "sceneImageSha256": "5d3a38cc549f57a1fd049d7555ea4ab0369c56c16824750901541b0fec25132c",
+  "limitations": [
+    "Controlled native scene fixture,not natural boss defeat.",
+    "Original Gravity Hold screen identifies shared weapon-get track14; not Rolling Cutter/MM6 custom screen.",
+    "Native next-screen13 interrupts this excerpt; loop point/full music cycle not established.",
+    "JSNES2.1.0 sound and Mesen0.9.9 RGB mapping,not Mesen runtime/hardware recording."
+  ]
+}

@@ -1,3 +1,5 @@
+// Artwork colours: approved Mesen0.9.9 default palette; emulation remains JSNES.
+import {mesenRgbFromJsnes} from './mesen-palette.mjs';
 // ROM-OAM ladder artwork extraction using controlled ladder-result inputs.
 // Not a natural ladder encounter or proof of endpoint timing.
 import {NES,Controller} from 'jsnes';
@@ -37,7 +39,7 @@ function render(n,referenceY){
    if(!c)continue;
    const dx=n.ppu.sprX[i]+x-refX+16,dy=n.ppu.sprY[i]+1+y-referenceY+16;
    assert.ok(dx>=0&&dx<32&&dy>=0&&dy<40,'Clipped opaque ladder pixel');
-   const v=n.ppu.sprPalette[n.ppu.sprCol[i]+c];
+   const v=mesenRgbFromJsnes(n.ppu.sprPalette[n.ppu.sprCol[i]+c]);
    p.data.set([v&255,(v>>8)&255,(v>>16)&255,255],(dy*32+dx)*4);
   }
  }

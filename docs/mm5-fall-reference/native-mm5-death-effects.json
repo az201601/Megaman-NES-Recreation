@@ -1,0 +1,565 @@
+{
+  "romSha256": "32bd2b4ecd2129aa5337afe9171696ef35646d3fd597339aebba19221764521c",
+  "method": "Supplied MM5USA/JSNES2.1.0 original-routine controlled fixtures, not natural spike traversal/hardware/GMS runtime.",
+  "cases": [
+    {
+      "kind": "spike",
+      "method": "Replace one original player terrain-probe classification at C737 with F0 lethal spike class; native marker collection, flash guard, hazard dispatch and death/explosion spawning unmodified. No natural spike approach or collision-mask claim.",
+      "injected": true,
+      "events": [
+        {
+          "frame": 1,
+          "pc": "c737",
+          "event": "controlled single lethal-spike tile classification F0"
+        },
+        {
+          "frame": 1,
+          "pc": "82a5",
+          "marker": 240,
+          "hp": 28,
+          "flash": 0
+        },
+        {
+          "frame": 1,
+          "pc": "8332",
+          "marker": 240,
+          "hp": 28,
+          "flash": 0
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 1,
+          "slot": 23,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 22,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 21,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 20,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 19,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 18,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 17,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 16,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 15,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 14,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 13,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 12,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 11,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 10,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 9,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        },
+        {
+          "frame": 1,
+          "slot": 8,
+          "type": 3,
+          "x": 128,
+          "y": 180
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 1,
+          "id": 240
+        },
+        {
+          "frame": 1,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 2,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 3,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 4,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 5,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 6,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 7,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 8,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        }
+      ]
+    },
+    {
+      "kind": "spike-blinking",
+      "method": "Replace one original player terrain-probe classification at C737 with F0 lethal spike class; native marker collection, flash guard, hazard dispatch and death/explosion spawning unmodified. No natural spike approach or collision-mask claim.",
+      "injected": true,
+      "events": [
+        {
+          "frame": 1,
+          "pc": "c737",
+          "event": "controlled single lethal-spike tile classification F0"
+        }
+      ],
+      "spawns": [],
+      "sounds": [],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 0,
+          "hp": 28,
+          "flash": 59,
+          "particles": 0
+        },
+        {
+          "frame": 2,
+          "state": 0,
+          "hp": 28,
+          "flash": 58,
+          "particles": 0
+        },
+        {
+          "frame": 3,
+          "state": 0,
+          "hp": 28,
+          "flash": 57,
+          "particles": 0
+        },
+        {
+          "frame": 4,
+          "state": 0,
+          "hp": 28,
+          "flash": 56,
+          "particles": 0
+        },
+        {
+          "frame": 5,
+          "state": 0,
+          "hp": 28,
+          "flash": 55,
+          "particles": 0
+        },
+        {
+          "frame": 6,
+          "state": 0,
+          "hp": 28,
+          "flash": 54,
+          "particles": 0
+        },
+        {
+          "frame": 7,
+          "state": 0,
+          "hp": 28,
+          "flash": 53,
+          "particles": 0
+        },
+        {
+          "frame": 8,
+          "state": 0,
+          "hp": 28,
+          "flash": 52,
+          "particles": 0
+        }
+      ]
+    },
+    {
+      "kind": "lethal-contact",
+      "method": "Original imminent Napalm tiger contact snapshot, health set1/flash0; collision and native damage/death routines unmodified.",
+      "injected": false,
+      "events": [
+        {
+          "frame": 2,
+          "pc": "8332",
+          "marker": 0,
+          "hp": 1,
+          "flash": 0
+        }
+      ],
+      "spawns": [
+        {
+          "frame": 2,
+          "slot": 23,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 22,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 21,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 20,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 19,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 18,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 17,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 16,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 15,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 14,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 13,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 12,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 11,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 10,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 9,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        },
+        {
+          "frame": 2,
+          "slot": 7,
+          "type": 3,
+          "x": 220,
+          "y": 147
+        }
+      ],
+      "sounds": [
+        {
+          "frame": 2,
+          "id": 240
+        },
+        {
+          "frame": 2,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 1,
+          "hp": 1,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 2,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 3,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 4,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 5,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 6,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 7,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        },
+        {
+          "frame": 8,
+          "state": 7,
+          "hp": 0,
+          "flash": 0,
+          "particles": 16
+        }
+      ]
+    },
+    {
+      "kind": "pit",
+      "method": "Controlled below-floorY224/downspeed7 freefall, native room data unchanged.",
+      "injected": false,
+      "events": [
+        {
+          "frame": 3,
+          "pc": "e02b",
+          "marker": 0,
+          "hp": 28,
+          "flash": 0
+        }
+      ],
+      "spawns": [],
+      "sounds": [
+        {
+          "frame": 3,
+          "id": 240
+        },
+        {
+          "frame": 3,
+          "id": 29
+        }
+      ],
+      "rows": [
+        {
+          "frame": 1,
+          "state": 1,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 2,
+          "state": 1,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 3,
+          "state": 7,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 4,
+          "state": 7,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 5,
+          "state": 7,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 6,
+          "state": 7,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 7,
+          "state": 7,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        },
+        {
+          "frame": 8,
+          "state": 7,
+          "hp": 28,
+          "flash": 0,
+          "particles": 0
+        }
+      ]
+    }
+  ]
+}

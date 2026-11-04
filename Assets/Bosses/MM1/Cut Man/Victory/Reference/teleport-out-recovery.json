@@ -1,0 +1,40 @@
+{
+  "status": "Listening review only; no production integration before user approval.",
+  "file": "Audio/Review/mm6-teleport-out-review.wav",
+  "sha256": "e3d25497015b7c2060396a3dcd690aed07ad8b6a86a14f389afa666ecc9d9eae",
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "command": "3A",
+  "nativeDispatch": [
+    {
+      "frame": 1359,
+      "kind": "audio-dispatch",
+      "command": 58
+    },
+    {
+      "frame": 1399,
+      "kind": "audio-dispatch",
+      "command": 240
+    }
+  ],
+  "isolatedDispatch": [
+    {
+      "frame": 0,
+      "command": 58
+    },
+    {
+      "frame": 40,
+      "command": 240
+    }
+  ],
+  "gain": 2,
+  "peak": 0.442413330078125,
+  "samples": 32050,
+  "seconds": 0.6677083333333333,
+  "lastNonzero": 31569,
+  "method": "Unmodified original MM6 driver/full APU, mono average of original stereo, established F0+35 silent warmup then isolated native mailbox3A. NativeF0 at40updates matches independently archived continuous victory dispatch spacing. Capture180updates; keep onset through last nonzero plus10ms exact-silent tail, no pitch/time edits.2x gain matches standing SFX-level direction, not MM5 weapon music gain1.",
+  "limits": [
+    "Disclosed isolated native sound-command fixture,not a natural recording of whole scene.",
+    "MM6 teleport-out cue matched by native dispatch,not arrival2D.",
+    "Listening/GMS integration acceptance pending."
+  ]
+}

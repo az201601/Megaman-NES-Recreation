@@ -1,0 +1,131 @@
+{
+  "scope": "Additive Flying Shell manual installer after accepted Blader/Blaster/Super Cutter/Flea/Octopus Battery combat. User GMS import/compile/runtime pending. New native burst sound awaits approval. No ROM/savestates/old-audio/scenery replacements.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_flying_shell_bullet.png",
+      "source": "Assets/Enemies/MM1/Flying Shell/spr_mm1_flying_shell_bullet.png",
+      "bytes": 156,
+      "sha256": "3d3031039c699a9091d64d8c4d09ab02ccd7f5892b3b6f5612a53f766002f217"
+    },
+    {
+      "path": "Art/spr_mm1_flying_shell_strip2.png",
+      "source": "Assets/Enemies/MM1/Flying Shell/spr_mm1_flying_shell_strip2.png",
+      "bytes": 506,
+      "sha256": "1a7fbb7802554f16852d2ef0be7037e541f17ba10aba3b8825a3363a1fafb0c1"
+    },
+    {
+      "path": "Audio/snd_mm1_flying_shell_fire.wav",
+      "source": "Assets/Audio/Mega Man/MM1/Flying Shell/mm1-flying-shell-native-burst-balanced.wav",
+      "bytes": 28620,
+      "sha256": "c40b2aa7a51f4ee464bce68d8e6564107bc90f1a40e4785f96b92112ea57fcd5"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_flying_shell_append.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Hooks/obj_mm5_combat_create_flying_shell_append.gml",
+      "bytes": 407,
+      "sha256": "9a2b89954f58df8737de66d9a29bdbfbc7da23aa964801f36aaf0dc36109cc2d"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/INSTALL-GMS14.md",
+      "bytes": 9461,
+      "sha256": "24eb3ff3c0b61b0de27d1242e81f266c5e42ac0f9f750553b7f9b61be8f5b915"
+    },
+    {
+      "path": "Objects/obj_mm1_flying_shell_bullet_create.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Objects/obj_mm1_flying_shell_bullet_create.gml",
+      "bytes": 126,
+      "sha256": "7287d01b0781ec9eb4c61e12540c55f3515107981683468c4eefb87dff0dd4ce"
+    },
+    {
+      "path": "Objects/obj_mm1_flying_shell_bullet_draw.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Objects/obj_mm1_flying_shell_bullet_draw.gml",
+      "bytes": 156,
+      "sha256": "5b97154296b5492a7922eea5f6ce56883861950f1d6c5437d43153403ee5a371"
+    },
+    {
+      "path": "Objects/obj_mm1_flying_shell_create.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Objects/obj_mm1_flying_shell_create.gml",
+      "bytes": 217,
+      "sha256": "ebb1795598002973d5fe95887e395beabeca69e2634149af2957b875074f6dba"
+    },
+    {
+      "path": "Objects/obj_mm1_flying_shell_draw.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Objects/obj_mm1_flying_shell_draw.gml",
+      "bytes": 138,
+      "sha256": "2a78c6846313f475194462ca0d88180bf6fa9bcfb9df02f05467acdd06822e86"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/README.md",
+      "bytes": 6207,
+      "sha256": "9e5b29d9a9d6effc249048ea29186273237d0bc6619aaf2cbf42d4e1c020a7e1"
+    },
+    {
+      "path": "Reference/native-burst-audio.json",
+      "source": "Assets/Audio/Mega Man/MM1/Flying Shell/recovery.json",
+      "bytes": 4443,
+      "sha256": "fedaa21982caf209233859184a221b64d22b415154328fe8cac98aaef9df048e"
+    },
+    {
+      "path": "Reference/native-flying-shell-art.json",
+      "source": "Assets/Enemies/MM1/Flying Shell/Reference/native-flying-shell-art.json",
+      "bytes": 2088,
+      "sha256": "391878caf58216ab5c7e331210bf3c97d201a2e3b87495fcbee94279063d8115"
+    },
+    {
+      "path": "Reference/native-flying-shell-bullet-art.json",
+      "source": "Assets/Enemies/MM1/Flying Shell/Reference/native-flying-shell-bullet-art.json",
+      "bytes": 479,
+      "sha256": "5dfddbd38feeedb4320744b24ca4b13a7f0d051d0873f266e3a9278335e2f15f"
+    },
+    {
+      "path": "Reference/native-flying-shell.json",
+      "source": "Assets/Enemies/MM1/Flying Shell/Reference/native-flying-shell.json",
+      "bytes": 833101,
+      "sha256": "ba8cfe57fad1b3ff0439a92172e3ea43e23f9db23e5ade47aa7af1211c5010e6"
+    },
+    {
+      "path": "Scripts/scr_mm1_flying_shell_contact.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm1_flying_shell_contact.gml",
+      "bytes": 452,
+      "sha256": "46df269328ee13aaf2045c1af7228c305415615c152b52f4b95df8743bdb696a"
+    },
+    {
+      "path": "Scripts/scr_mm1_flying_shell_hit.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm1_flying_shell_hit.gml",
+      "bytes": 1348,
+      "sha256": "c370dd15444a3ff52ba12c10901c35db00525368d05ce52c839e2a850ecdc425"
+    },
+    {
+      "path": "Scripts/scr_mm1_flying_shell_spawn.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm1_flying_shell_spawn.gml",
+      "bytes": 794,
+      "sha256": "5186f1eb44ea7105462d154dc258d4eb38bd4a0bde899f4bf45fa420a78becf3"
+    },
+    {
+      "path": "Scripts/scr_mm1_flying_shell_step.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm1_flying_shell_step.gml",
+      "bytes": 2097,
+      "sha256": "36c1ddf4c0dd87175684fff9cf7a449d57465005bda5ea3e24a8defdfba66759"
+    },
+    {
+      "path": "Scripts/scr_mm1_flying_shell_world_step.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm1_flying_shell_world_step.gml",
+      "bytes": 446,
+      "sha256": "505ba0c3b3488be13c57a9885aecc2ed471f7cd4cd5a64a48719f0dc282b41a1"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 5459,
+      "sha256": "0a2c00d94e6504f42500c22e0273bf6115ef2321a6cc4fd24275efd67e9a693a"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Flying Shell Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 3582,
+      "sha256": "14ecad612b28a23f0655fc3416656613c43956ab1c76e76159ac036804f964f2"
+    }
+  ]
+}

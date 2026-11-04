@@ -1,0 +1,23 @@
+{
+  "status": "User-confirmed installed victory-flow acceptance for the specific checks below. Not blanket acceptance of all combat/checklist cases.",
+  "confirmation": "yes!",
+  "confirmedPrompt": "Did the victory sequence finish, return to stage selection, and leave R.CUTTER unlocked in the pause menu when you re-entered a stage?",
+  "confirmed": [
+    "Victory sequence finishes in installed project.",
+    "Returns to stage selection.",
+    "R.CUTTER remains unlocked in pause menu after re-entering a stage.",
+    "Full teleport-out sound plays correctly (prior user yes).",
+    "Temporary F8 victory-test block removed (prior user done)."
+  ],
+  "installedCorrections": [
+    "Throw sound resource typo corrected by user.",
+    "Existing Mega Man death sound added to once-only lethal handoff.",
+    "GMS1.4 bare return statements corrected to exit.",
+    "Approved full-tail teleport-out cue and dedicated voice patch installed."
+  ],
+  "limits": [
+    "No claim of general equipped-Cutter gameplay implementation; screen demo uses native fixed playback.",
+    "No claim that every ACCEPTANCE.md combat/pause/death/revisit-energy/new-game case was individually exercised.",
+    "Session inventory persistence confirmed, not disk saving."
+  ]
+}

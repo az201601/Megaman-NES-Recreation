@@ -1,0 +1,402 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "aimChecks": 24000,
+  "managerChecks": 18000,
+  "method": "Actual GML vs unmodified original-USA6502 F8C6 and DC9D..DD52. Direct routine input fixtures; native4F=0 contract. Manager dispatcher sleeps boss to skip strategies, not cutter manager. Does not move/render/collide projectile or allocate throw.",
+  "naturalScratchEvidence": {
+    "method": "Existing native entrance frame473 snapshot, release all buttons,800original updates, refresh only player protection55=100; no boss/cutter/physics/aim patches.",
+    "calls": [
+      {
+        "frame": 142,
+        "dx": 42,
+        "dyByte": 246,
+        "carry": 0,
+        "speed": 608,
+        "scratch4F": 0
+      },
+      {
+        "frame": 158,
+        "dx": 42,
+        "dyByte": 251,
+        "carry": 0,
+        "speed": 612,
+        "scratch4F": 0
+      },
+      {
+        "frame": 162,
+        "dx": 30,
+        "dyByte": 3,
+        "carry": 1,
+        "speed": 616,
+        "scratch4F": 0
+      },
+      {
+        "frame": 166,
+        "dx": 15,
+        "dyByte": 24,
+        "carry": 1,
+        "speed": 620,
+        "scratch4F": 0
+      },
+      {
+        "frame": 170,
+        "dx": 4,
+        "dyByte": 34,
+        "carry": 1,
+        "speed": 624,
+        "scratch4F": 0
+      },
+      {
+        "frame": 174,
+        "dx": 3,
+        "dyByte": 38,
+        "carry": 1,
+        "speed": 628,
+        "scratch4F": 0
+      },
+      {
+        "frame": 178,
+        "dx": 8,
+        "dyByte": 39,
+        "carry": 1,
+        "speed": 632,
+        "scratch4F": 0
+      },
+      {
+        "frame": 182,
+        "dx": 12,
+        "dyByte": 35,
+        "carry": 1,
+        "speed": 636,
+        "scratch4F": 0
+      },
+      {
+        "frame": 186,
+        "dx": 15,
+        "dyByte": 28,
+        "carry": 1,
+        "speed": 640,
+        "scratch4F": 0
+      },
+      {
+        "frame": 190,
+        "dx": 16,
+        "dyByte": 16,
+        "carry": 1,
+        "speed": 644,
+        "scratch4F": 0
+      },
+      {
+        "frame": 194,
+        "dx": 6,
+        "dyByte": 3,
+        "carry": 1,
+        "speed": 648,
+        "scratch4F": 0
+      },
+      {
+        "frame": 248,
+        "dx": 0,
+        "dyByte": 173,
+        "carry": 0,
+        "speed": 608,
+        "scratch4F": 0
+      },
+      {
+        "frame": 314,
+        "dx": 19,
+        "dyByte": 98,
+        "carry": 1,
+        "speed": 612,
+        "scratch4F": 0
+      },
+      {
+        "frame": 318,
+        "dx": 15,
+        "dyByte": 106,
+        "carry": 1,
+        "speed": 616,
+        "scratch4F": 0
+      },
+      {
+        "frame": 322,
+        "dx": 12,
+        "dyByte": 110,
+        "carry": 1,
+        "speed": 620,
+        "scratch4F": 0
+      },
+      {
+        "frame": 326,
+        "dx": 9,
+        "dyByte": 110,
+        "carry": 1,
+        "speed": 624,
+        "scratch4F": 0
+      },
+      {
+        "frame": 330,
+        "dx": 5,
+        "dyByte": 105,
+        "carry": 1,
+        "speed": 628,
+        "scratch4F": 0
+      },
+      {
+        "frame": 334,
+        "dx": 3,
+        "dyByte": 97,
+        "carry": 1,
+        "speed": 632,
+        "scratch4F": 0
+      },
+      {
+        "frame": 338,
+        "dx": 0,
+        "dyByte": 84,
+        "carry": 1,
+        "speed": 636,
+        "scratch4F": 0
+      },
+      {
+        "frame": 342,
+        "dx": 2,
+        "dyByte": 69,
+        "carry": 1,
+        "speed": 640,
+        "scratch4F": 0
+      },
+      {
+        "frame": 346,
+        "dx": 4,
+        "dyByte": 48,
+        "carry": 1,
+        "speed": 644,
+        "scratch4F": 0
+      },
+      {
+        "frame": 350,
+        "dx": 6,
+        "dyByte": 23,
+        "carry": 1,
+        "speed": 648,
+        "scratch4F": 0
+      },
+      {
+        "frame": 354,
+        "dx": 6,
+        "dyByte": 250,
+        "carry": 0,
+        "speed": 652,
+        "scratch4F": 0
+      },
+      {
+        "frame": 653,
+        "dx": 33,
+        "dyByte": 246,
+        "carry": 0,
+        "speed": 608,
+        "scratch4F": 0
+      },
+      {
+        "frame": 666,
+        "dx": 30,
+        "dyByte": 251,
+        "carry": 0,
+        "speed": 612,
+        "scratch4F": 0
+      },
+      {
+        "frame": 670,
+        "dx": 20,
+        "dyByte": 252,
+        "carry": 0,
+        "speed": 616,
+        "scratch4F": 0
+      },
+      {
+        "frame": 674,
+        "dx": 11,
+        "dyByte": 10,
+        "carry": 1,
+        "speed": 620,
+        "scratch4F": 0
+      },
+      {
+        "frame": 678,
+        "dx": 1,
+        "dyByte": 23,
+        "carry": 1,
+        "speed": 624,
+        "scratch4F": 0
+      },
+      {
+        "frame": 682,
+        "dx": 1,
+        "dyByte": 31,
+        "carry": 1,
+        "speed": 628,
+        "scratch4F": 0
+      },
+      {
+        "frame": 686,
+        "dx": 0,
+        "dyByte": 34,
+        "carry": 1,
+        "speed": 632,
+        "scratch4F": 0
+      },
+      {
+        "frame": 690,
+        "dx": 1,
+        "dyByte": 34,
+        "carry": 1,
+        "speed": 636,
+        "scratch4F": 0
+      },
+      {
+        "frame": 694,
+        "dx": 0,
+        "dyByte": 29,
+        "carry": 1,
+        "speed": 640,
+        "scratch4F": 0
+      },
+      {
+        "frame": 698,
+        "dx": 0,
+        "dyByte": 21,
+        "carry": 1,
+        "speed": 644,
+        "scratch4F": 0
+      },
+      {
+        "frame": 702,
+        "dx": 0,
+        "dyByte": 8,
+        "carry": 1,
+        "speed": 648,
+        "scratch4F": 0
+      },
+      {
+        "frame": 706,
+        "dx": 0,
+        "dyByte": 248,
+        "carry": 0,
+        "speed": 652,
+        "scratch4F": 0
+      },
+      {
+        "frame": 738,
+        "dx": 32,
+        "dyByte": 246,
+        "carry": 0,
+        "speed": 608,
+        "scratch4F": 0
+      },
+      {
+        "frame": 750,
+        "dx": 32,
+        "dyByte": 251,
+        "carry": 0,
+        "speed": 612,
+        "scratch4F": 0
+      },
+      {
+        "frame": 754,
+        "dx": 23,
+        "dyByte": 252,
+        "carry": 0,
+        "speed": 616,
+        "scratch4F": 0
+      },
+      {
+        "frame": 758,
+        "dx": 12,
+        "dyByte": 4,
+        "carry": 1,
+        "speed": 620,
+        "scratch4F": 0
+      },
+      {
+        "frame": 762,
+        "dx": 4,
+        "dyByte": 24,
+        "carry": 1,
+        "speed": 624,
+        "scratch4F": 0
+      },
+      {
+        "frame": 766,
+        "dx": 7,
+        "dyByte": 33,
+        "carry": 1,
+        "speed": 628,
+        "scratch4F": 0
+      },
+      {
+        "frame": 770,
+        "dx": 11,
+        "dyByte": 37,
+        "carry": 1,
+        "speed": 632,
+        "scratch4F": 0
+      },
+      {
+        "frame": 774,
+        "dx": 13,
+        "dyByte": 38,
+        "carry": 1,
+        "speed": 636,
+        "scratch4F": 0
+      },
+      {
+        "frame": 778,
+        "dx": 15,
+        "dyByte": 34,
+        "carry": 1,
+        "speed": 640,
+        "scratch4F": 0
+      },
+      {
+        "frame": 782,
+        "dx": 17,
+        "dyByte": 27,
+        "carry": 1,
+        "speed": 644,
+        "scratch4F": 0
+      },
+      {
+        "frame": 786,
+        "dx": 12,
+        "dyByte": 15,
+        "carry": 1,
+        "speed": 648,
+        "scratch4F": 0
+      },
+      {
+        "frame": 790,
+        "dx": 5,
+        "dyByte": 0,
+        "carry": 1,
+        "speed": 652,
+        "scratch4F": 0
+      }
+    ]
+  },
+  "limits": [
+    "Not a complete boss fight or GMS runtime test.",
+    "Body physics, projectile update order and art/collision integration unfinished.",
+    "4F=0 observed in this native trace, not proven for every possible game state."
+  ],
+  "scripts": [
+    {
+      "name": "scr_mm1_cutman_cutter_aim",
+      "sha256": "4bfc158ffc1dc36fb67c9d2c5d59fed3bcd49135e40799418287199fc32e9750"
+    },
+    {
+      "name": "scr_mm1_cutman_cutter_manage",
+      "sha256": "9d42d0f0b048ce5a6532830331709ec1c4e93cf52ad76170a509942fd012dbca"
+    }
+  ]
+}

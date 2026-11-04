@@ -1,0 +1,24 @@
+{
+  "source": "Supplied Mega Man5 USA ROM, actual fresh Right moves pause selection from Buster to Rush Coil",
+  "renderer": "JSNES2.1.0 full APU, NOT a Mesen execution/capture",
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "requests": [
+    {
+      "frame": 10,
+      "command": 39
+    }
+  ],
+  "musicStop": "Original F0 command via sound ring; warm tail verified zero",
+  "warmPeak": 0,
+  "first": 9641,
+  "last": 21816,
+  "start": 9401,
+  "end": 22057,
+  "sampleFrames": 12656,
+  "seconds": 0.26366666666666666,
+  "peakPCM": 5119,
+  "processing": "PCM16 conversion; trim only PCM-zero silence, retain5ms silent margin each side. No normalization, fades, synthesis or isolated channels.",
+  "scope": "Cursor movement effect only. Opening sound waited out before recording. No close/confirm sound choice or GMS menu implementation."
+}

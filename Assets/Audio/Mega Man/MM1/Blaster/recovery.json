@@ -1,0 +1,280 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "sourceEvidence": "Assets/Enemies/MM1/Blaster/Reference/native-blaster-assets.json",
+  "sounds": [
+    {
+      "name": "snd_mm1_blaster_fire",
+      "id": 21,
+      "method": "Controlled original sound queue at native dispatchD554. Fresh native boot with pre-capture scene sound requests replaced by FF before driver init (no channel muting); this avoids a held-note/DC residual from stopping already-playing music. Original FF/FE queue startup,150warmupupdates, one original cue,150captureupdates. Full unmuted APU, all5channels centered (matching MM1 stage capture),48kHzPCM16. No synthesis,channelisolation,normalization,pitch/timechanges. Raw is exact PCM slice; trim zero leading samples and constant settled tail, retain10ms. Review gain2x matches accepted MM5/MM6 gameplay volume adjustment. If the JSNES integer DC filter settles at nonzero constant, ONLY the already-constant final10ms of review audio is ramped tozero to prevent an export-end click; the raw trimmed file remains an exact capture slice. User audition pending.",
+      "commands": [
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 254,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 254,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 21,
+          "capture": true
+        }
+      ],
+      "warmPeak": 0,
+      "firstFrame": 1632,
+      "lastAudibleFrame": 7530,
+      "endFrame": 8011,
+      "frames": 6379,
+      "seconds": 0.13289583333333332,
+      "tailBaseline": [
+        0,
+        0
+      ],
+      "reviewTailRampFrames": 0,
+      "rawPeak": 0.24078369140625,
+      "balancedPeak": 0.4815673828125,
+      "rawSha256": "0b56ff5c4a8c1efffc72d19698333095575e917f9dce596ae1d7b363bbd26f9d",
+      "balancedSha256": "df47284c32365ddd896f4a042a4e2fd47d7b746c8d63bfc7592729a96e1e829c"
+    },
+    {
+      "name": "snd_mm1_blaster_blocked",
+      "id": 29,
+      "method": "Controlled original sound queue at native dispatchD554. Fresh native boot with pre-capture scene sound requests replaced by FF before driver init (no channel muting); this avoids a held-note/DC residual from stopping already-playing music. Original FF/FE queue startup,150warmupupdates, one original cue,150captureupdates. Full unmuted APU, all5channels centered (matching MM1 stage capture),48kHzPCM16. No synthesis,channelisolation,normalization,pitch/timechanges. Raw is exact PCM slice; trim zero leading samples and constant settled tail, retain10ms. Review gain2x matches accepted MM5/MM6 gameplay volume adjustment. If the JSNES integer DC filter settles at nonzero constant, ONLY the already-constant final10ms of review audio is ramped tozero to prevent an export-end click; the raw trimmed file remains an exact capture slice. User audition pending.",
+      "commands": [
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 254,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 254,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 255,
+          "capture": false
+        },
+        {
+          "frame": 0,
+          "id": 29,
+          "capture": true
+        }
+      ],
+      "warmPeak": 0,
+      "firstFrame": 1628,
+      "lastAudibleFrame": 5249,
+      "endFrame": 5730,
+      "frames": 4102,
+      "seconds": 0.08545833333333333,
+      "tailBaseline": [
+        1023,
+        1023
+      ],
+      "reviewTailRampFrames": 480,
+      "rawPeak": 0.248077392578125,
+      "balancedPeak": 0.49615478515625,
+      "rawSha256": "b1c85a558c9d68220e8449861cc92d38dd30eef2817b3e3a2d343b328a4094cd",
+      "balancedSha256": "e4746f9944d32e3603cda248a741eaa9ddf191e0183b9a3485b04371ad251174"
+    }
+  ]
+}

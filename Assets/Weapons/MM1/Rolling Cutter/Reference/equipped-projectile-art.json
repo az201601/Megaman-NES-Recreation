@@ -1,0 +1,143 @@
+{
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "sha256": "536c2fd34f2075e1984540cfcd9b8938a4ddf220105ba234030c2aeecce082d6",
+  "cell": [
+    16,
+    16
+  ],
+  "frames": 4,
+  "origin": [
+    8,
+    7
+  ],
+  "facing": "right",
+  "nativeUpdatesPerPose": 5,
+  "matched": 296,
+  "method": "Actual native player Cutter OAM tiles EC..EF,not the two-pose demo filter EE/EF. Four phases independently matched against native rendered opaque pixels,converted to existing Mesen palette. Runtime renders current simulation position,not native one-update display latency. Left uses horizontal reflection.",
+  "poses": [
+    {
+      "index": 0,
+      "nativeUpdate": 1,
+      "cells": [
+        {
+          "x": 142,
+          "y": 135,
+          "tile": 236,
+          "attr": 64
+        },
+        {
+          "x": 134,
+          "y": 135,
+          "tile": 236,
+          "attr": 0
+        },
+        {
+          "x": 142,
+          "y": 143,
+          "tile": 237,
+          "attr": 64
+        },
+        {
+          "x": 134,
+          "y": 143,
+          "tile": 237,
+          "attr": 0
+        }
+      ],
+      "rgbaSha256": "4f1c230c621fb8e7dba0c0b7e9f22a10b3730e58a6203b7511698d41e13196e6"
+    },
+    {
+      "index": 1,
+      "nativeUpdate": 6,
+      "cells": [
+        {
+          "x": 152,
+          "y": 127,
+          "tile": 239,
+          "attr": 0
+        },
+        {
+          "x": 144,
+          "y": 127,
+          "tile": 238,
+          "attr": 0
+        },
+        {
+          "x": 152,
+          "y": 135,
+          "tile": 239,
+          "attr": 128
+        },
+        {
+          "x": 144,
+          "y": 135,
+          "tile": 238,
+          "attr": 128
+        }
+      ],
+      "rgbaSha256": "50b5a90fe6d16711fd197acf36d39412159e04d1cae4f7d25a4c6142362499e2"
+    },
+    {
+      "index": 2,
+      "nativeUpdate": 11,
+      "cells": [
+        {
+          "x": 162,
+          "y": 121,
+          "tile": 237,
+          "attr": 192
+        },
+        {
+          "x": 154,
+          "y": 121,
+          "tile": 237,
+          "attr": 128
+        },
+        {
+          "x": 162,
+          "y": 129,
+          "tile": 236,
+          "attr": 192
+        },
+        {
+          "x": 154,
+          "y": 129,
+          "tile": 236,
+          "attr": 128
+        }
+      ],
+      "rgbaSha256": "da57eab2d0ae1e590e515b9a918f4e23c6606e071070bc97ad2689406396f588"
+    },
+    {
+      "index": 3,
+      "nativeUpdate": 16,
+      "cells": [
+        {
+          "x": 172,
+          "y": 118,
+          "tile": 238,
+          "attr": 64
+        },
+        {
+          "x": 164,
+          "y": 118,
+          "tile": 239,
+          "attr": 64
+        },
+        {
+          "x": 172,
+          "y": 126,
+          "tile": 238,
+          "attr": 192
+        },
+        {
+          "x": 164,
+          "y": 126,
+          "tile": 239,
+          "attr": 192
+        }
+      ],
+      "rgbaSha256": "af503c878fb449d94c6f254bf870df4f9598eae76ffad01bb3f4d334f7c93db1"
+    }
+  ]
+}

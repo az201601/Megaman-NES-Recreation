@@ -1,0 +1,35 @@
+{
+  "id": "energy_balancer",
+  "source": "Original MM6 grey icon; Capcom art, not KindlyPatrick sheet",
+  "sourceSHA256": "89520c47c9079203a5192d8e819d136169147f9756dc23faf0e58169cad1262c",
+  "classification": "Custom selected palette adaptation, NOT an original MM6 selected-state extraction",
+  "sourceRGBAToNES": {
+    "000000ff": 15,
+    "666666ff": 17,
+    "adadadff": 33,
+    "fffeffff": 48
+  },
+  "palette": [
+    {
+      "index": 15,
+      "rgb": "000000"
+    },
+    {
+      "index": 17,
+      "rgb": "155FD9"
+    },
+    {
+      "index": 33,
+      "rgb": "64B0FF"
+    },
+    {
+      "index": 48,
+      "rgb": "FFFEFF"
+    }
+  ],
+  "statesOrder": [
+    "unselected original grey",
+    "selected custom blue/cyan/white"
+  ],
+  "status": "Coloured draft for user review. Only current upgrade is Energy Balancer; future upgrades not invented."
+}

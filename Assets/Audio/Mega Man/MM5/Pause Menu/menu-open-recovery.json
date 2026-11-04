@@ -1,0 +1,24 @@
+{
+  "source": "Supplied Mega Man5 USA ROM, actual fresh Start opens pause menu",
+  "renderer": "JSNES2.1.0 full APU, NOT a Mesen execution/capture",
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "requests": [
+    {
+      "frame": 10,
+      "command": 41
+    }
+  ],
+  "musicStop": "Original F0 command via sound ring; warm tail verified zero",
+  "warmPeak": 0,
+  "first": 9648,
+  "last": 26310,
+  "start": 9408,
+  "end": 26551,
+  "sampleFrames": 17143,
+  "seconds": 0.35714583333333333,
+  "peakPCM": 5119,
+  "processing": "PCM16 conversion; trim only PCM-zero silence, retain5ms silent margin each side. No normalization, fades, synthesis or isolated channels.",
+  "scope": "Menu-open effect only. No close/move/confirm sounds or GMS menu implementation."
+}

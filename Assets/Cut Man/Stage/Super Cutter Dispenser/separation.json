@@ -1,0 +1,168 @@
+{
+  "source": "Fourth Ladder Transition native-decoded scenery, authorised sprite/object conversion. Not a claim original hardware drew the building as sprites.",
+  "building": {
+    "x": 864,
+    "y": 128,
+    "width": 96,
+    "height": 80
+  },
+  "removedTiles": [
+    {
+      "x": 864,
+      "y": 128,
+      "tile": 13
+    },
+    {
+      "x": 880,
+      "y": 128,
+      "tile": 14
+    },
+    {
+      "x": 896,
+      "y": 128,
+      "tile": 14
+    },
+    {
+      "x": 912,
+      "y": 128,
+      "tile": 14
+    },
+    {
+      "x": 928,
+      "y": 128,
+      "tile": 14
+    },
+    {
+      "x": 944,
+      "y": 128,
+      "tile": 15
+    },
+    {
+      "x": 864,
+      "y": 144,
+      "tile": 16
+    },
+    {
+      "x": 880,
+      "y": 144,
+      "tile": 17
+    },
+    {
+      "x": 896,
+      "y": 144,
+      "tile": 18
+    },
+    {
+      "x": 912,
+      "y": 144,
+      "tile": 19
+    },
+    {
+      "x": 928,
+      "y": 144,
+      "tile": 17
+    },
+    {
+      "x": 944,
+      "y": 144,
+      "tile": 20
+    },
+    {
+      "x": 864,
+      "y": 160,
+      "tile": 16
+    },
+    {
+      "x": 880,
+      "y": 160,
+      "tile": 17
+    },
+    {
+      "x": 896,
+      "y": 160,
+      "tile": 21
+    },
+    {
+      "x": 912,
+      "y": 160,
+      "tile": 22
+    },
+    {
+      "x": 928,
+      "y": 160,
+      "tile": 17
+    },
+    {
+      "x": 944,
+      "y": 160,
+      "tile": 20
+    },
+    {
+      "x": 864,
+      "y": 176,
+      "tile": 16
+    },
+    {
+      "x": 880,
+      "y": 176,
+      "tile": 17
+    },
+    {
+      "x": 896,
+      "y": 176,
+      "tile": 23
+    },
+    {
+      "x": 912,
+      "y": 176,
+      "tile": 24
+    },
+    {
+      "x": 928,
+      "y": 176,
+      "tile": 17
+    },
+    {
+      "x": 944,
+      "y": 176,
+      "tile": 20
+    },
+    {
+      "x": 864,
+      "y": 192,
+      "tile": 16
+    },
+    {
+      "x": 880,
+      "y": 192,
+      "tile": 17
+    },
+    {
+      "x": 896,
+      "y": 192,
+      "tile": 18
+    },
+    {
+      "x": 912,
+      "y": 192,
+      "tile": 19
+    },
+    {
+      "x": 928,
+      "y": 192,
+      "tile": 17
+    },
+    {
+      "x": 944,
+      "y": 192,
+      "tile": 20
+    }
+  ],
+  "placements": 1177,
+  "spriteOrigin": [
+    0,
+    0
+  ],
+  "collision": "unchanged class0; object has no collision parent",
+  "behaviour": "artwork only; spawning deferred"
+}

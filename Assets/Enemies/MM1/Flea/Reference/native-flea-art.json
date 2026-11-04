@@ -1,0 +1,91 @@
+{
+  "method": "Supplied MM1USA/JSNES2.1.0 original live OAM/CHR/palette. Controlled frame-boundary firstFlea snapshot from probe-flea-gameplay.mjs; playerX2064,Y36/verticalspeed0/protection100 eachframe. Both poses independently opaque-pixel matched to native rendering. Mesen0.9.9RGB mapping, not Mesen.exe. Standing16x16 image occupies top16rows of common16x24cell; airborne spring extends below body, no invented pixels.",
+  "cell": [
+    16,
+    24
+  ],
+  "origin": [
+    8,
+    7
+  ],
+  "canonical": "left",
+  "frames": [
+    {
+      "index": 0,
+      "frame": 2,
+      "cells": [
+        {
+          "i": 29,
+          "x": 192,
+          "y": 144,
+          "tile": 149,
+          "attr": 2
+        },
+        {
+          "i": 30,
+          "x": 200,
+          "y": 144,
+          "tile": 149,
+          "attr": 66
+        },
+        {
+          "i": 31,
+          "x": 192,
+          "y": 152,
+          "tile": 150,
+          "attr": 2
+        },
+        {
+          "i": 32,
+          "x": 200,
+          "y": 152,
+          "tile": 150,
+          "attr": 66
+        }
+      ],
+      "rgbaSha256": "00f8aa7373f434e06f8b5d13e1dac477125c6988e4aa5d9d68c30a6814978476"
+    },
+    {
+      "index": 1,
+      "frame": 2,
+      "cells": [
+        {
+          "i": 24,
+          "x": 158,
+          "y": 171,
+          "tile": 151,
+          "attr": 2
+        },
+        {
+          "i": 25,
+          "x": 166,
+          "y": 171,
+          "tile": 152,
+          "attr": 2
+        },
+        {
+          "i": 26,
+          "x": 158,
+          "y": 179,
+          "tile": 155,
+          "attr": 2
+        },
+        {
+          "i": 27,
+          "x": 166,
+          "y": 179,
+          "tile": 156,
+          "attr": 2
+        },
+        {
+          "i": 28,
+          "x": 162,
+          "y": 187,
+          "tile": 157,
+          "attr": 2
+        }
+      ],
+      "rgbaSha256": "8d89de7d946db95db6055c8e5d61afffbc9d553eaae7493f8adeb2d260f43b7c"
+    }
+  ]
+}

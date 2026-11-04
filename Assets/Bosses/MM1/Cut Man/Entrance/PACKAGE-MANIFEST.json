@@ -1,0 +1,190 @@
+{
+  "scope": "Cut Man boss-room ENTRANCE ONLY: native delayed incoming closing/appearance/scissors/meter28/music/control303. Original opening/geometry/MM5 player/E preserved. Combat AI/contact/damage/defeat/reward NOT implemented. Manual GMS1.4 resources/events. Source/model/native checks, NOT installed acceptance.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_cutman_boss_entrance_strip2.png",
+      "bytes": 988,
+      "sha256": "f4d99e4fc7c5e1929451ff60334da3228fc3813e77af58a45562d666c703fe39"
+    },
+    {
+      "path": "Art/spr_mm1_cutman_boss_entry_backdrop.png",
+      "bytes": 323,
+      "sha256": "dd6998bb28826c62c6241cca9a40726a6d1de58a62ab74cb1b7f575cb87f7c36"
+    },
+    {
+      "path": "Art/spr_mm1_cutman_boss_meter_strip29.png",
+      "bytes": 4332,
+      "sha256": "2a0611dafe7fa1b52311db3bac7c84ea1739a556edb5b94b4e90e086a07c8295"
+    },
+    {
+      "path": "Art/spr_mm1_cutman_boss_room_flash.png",
+      "bytes": 2258,
+      "sha256": "8463da88a270075f144f9604709ae7118d2a789b6ce4886c6cc1bd0dbc01b8ba"
+    },
+    {
+      "path": "Audio/mm1-cutman-scissors-full-tail-check.wav",
+      "bytes": 39978,
+      "sha256": "839838da5c5c79bb093cdb5318e36201ae172f2ac57c37d521a9ef5a60f8ea9e"
+    },
+    {
+      "path": "Audio/snd_mm1_cutman_boss_fill.wav",
+      "bytes": 20962,
+      "sha256": "3b7e9b6227a89135834663db684c80b27a1a1094b17ffea536c22e05dd9495b8"
+    },
+    {
+      "path": "Audio/snd_mm1_cutman_boss_intro.wav",
+      "bytes": 309942,
+      "sha256": "f9004717f36ab8e16851b54dc4c051a558685663b8ee7d5e57e4535ccb9c0530"
+    },
+    {
+      "path": "Audio/snd_mm1_cutman_boss_loop.wav",
+      "bytes": 613450,
+      "sha256": "9cc5be542eaac38c7a4a39609c6b6440d0daa3a458da9e3a4e39654121053578"
+    },
+    {
+      "path": "Audio/snd_mm1_cutman_boss_scissors.wav",
+      "bytes": 27636,
+      "sha256": "6d38a8c61c5dc5958bd516a36a31f0caf35d22ac5f365a94723c5cb8c5b45b79"
+    },
+    {
+      "path": "FLASH-INSTALL-GMS14.md",
+      "bytes": 4272,
+      "sha256": "b6f685ad6399befb7789c53585e660f2bff8d12fbc861c872ca8db97bafc5b7c"
+    },
+    {
+      "path": "Hooks/obj_mm1_cutman_camera_cleanup_append.gml",
+      "bytes": 424,
+      "sha256": "3738a6a01afd353a09d770a494d2f3be9317568cf361e809c5de0981a3459f91"
+    },
+    {
+      "path": "Hooks/obj_mm1_cutman_camera_create_append.gml",
+      "bytes": 271,
+      "sha256": "70433de15d74352c94c162cd04bf083723b793961c5b8388a334514c775abfbf"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "bytes": 12846,
+      "sha256": "842c8a22f9079423319e05dbfa338c68de1d48e992f79ff90c50d17c75b5215b"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_create.gml",
+      "bytes": 234,
+      "sha256": "429cfba4253b85f1c0b69ff12648e41e10ad65c9961585cfbe71b3048cc7265c"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_draw.gml",
+      "bytes": 31,
+      "sha256": "b4c1559318143604697f4a7794d6e173c8408bd785aebc6e4fdabc311389469a"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_draw_gui.gml",
+      "bytes": 184,
+      "sha256": "f064419a2882756e845d6e1f3cf40cc1d4f772a154891f7f8dfdc0702c9639c6"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_entry_gate_create.gml",
+      "bytes": 240,
+      "sha256": "4278fd3e97184603f1b7d1fcd512b6f28e09b21be85a4e3d205c2ba6adb5ca03"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_entry_gate_draw.gml",
+      "bytes": 295,
+      "sha256": "a32f6641189083dac2fca4342c5544c1d81253e604ba24495b503098520f0376"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_music_audio_playback.gml",
+      "bytes": 437,
+      "sha256": "7c4b080134abb2959a7ae0a3563e17b4a487f36c654abc30b47b0a09746bc252"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_music_create.gml",
+      "bytes": 1108,
+      "sha256": "e795c7eba5e90f198f57c5d227de9315e34c90d1df4d50d24375344c73e835fd"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_music_room_end_and_destroy.gml",
+      "bytes": 37,
+      "sha256": "69df58b761ca60595d08e101059283e008bbb50820b13844161086816e80a1b7"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_room_flash_create.gml",
+      "bytes": 98,
+      "sha256": "71103d6e57b7275d4b552c82bb7f375d0aab986751ef485215813920d6e1b363"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_boss_room_flash_draw.gml",
+      "bytes": 588,
+      "sha256": "2654f1a6171a5a3bd4f7a654c8dd6de71c9532174d3c875aed8218301949896b"
+    },
+    {
+      "path": "Objects/obj_mm1_cutman_camera_begin_step.gml",
+      "bytes": 8517,
+      "sha256": "d4b077c8922e25800d22bee6a79d149d60049cd14ccf5703376e6c20ed5eb30e"
+    },
+    {
+      "path": "Objects/obj_mm5_pause_menu_draw_gui.gml",
+      "bytes": 3361,
+      "sha256": "fd2f4abe4b7b63fbeb6e94e38099ace2f313011c95540fee0ef1868a2af6fe45"
+    },
+    {
+      "path": "Playback/mm1_cutman_boss_intro.pcm",
+      "bytes": 309898,
+      "sha256": "3fadab26d1a46f00b587bbb3d31678b2e164b8c956437e95f584404102bfb68b"
+    },
+    {
+      "path": "Playback/mm1_cutman_boss_loop.pcm",
+      "bytes": 613406,
+      "sha256": "7fed9979e42b881a223c2baef76306edd24dba2740663d28facacbdfa91b4cb7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6482,
+      "sha256": "c11037cf612c46c502a4e40420f1d08acfd9b88f8fc6cf2c1cb3d6856118a0b8"
+    },
+    {
+      "path": "Reference/native-audio.json",
+      "bytes": 2850,
+      "sha256": "aab68ca783befa1a81989121971575aefe796194ac8b9031b100f9af71f157d7"
+    },
+    {
+      "path": "Reference/native-entrance.json",
+      "bytes": 247332,
+      "sha256": "3cfc2de145135ebd70143538f354456a7e5329b5379fdb861ced1da9a6055962"
+    },
+    {
+      "path": "Reference/native-room-flash.json",
+      "bytes": 34569,
+      "sha256": "01dd246007e117938abc8c5d1798e4fbfb35c770c3e354b95ceefcf1d65edece"
+    },
+    {
+      "path": "Reference/native-scissors-verification.json",
+      "bytes": 6681,
+      "sha256": "7497f29e851659e07a0a03070a39dac14f42815152aa4261e07fcf39030072d3"
+    },
+    {
+      "path": "Reference/scissors-full-tail-audit.json",
+      "bytes": 8173,
+      "sha256": "e9f524784418df7b160a4cfe53123890ebcf95a61e30a80c485340077ce1ee58"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_entrance_start.gml",
+      "bytes": 987,
+      "sha256": "250468b7c0db354b420bd3d5c430d4bf3b15435cb1ae7a94799a0592acd58da1"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_entrance_step.gml",
+      "bytes": 2284,
+      "sha256": "79995b8c6670b3dd228f9b6f91043f3adc498f92c3ef7c01c744cda51a2cbf36"
+    },
+    {
+      "path": "Scripts/scr_mm1_cutman_boss_music_dispose.gml",
+      "bytes": 420,
+      "sha256": "e50cc23370795f4f8154a68ea5f2fc27de7ea1a98d5f153a42b41c0f9f0997b4"
+    },
+    {
+      "path": "Scripts/scr_mm5_pause_open.gml",
+      "bytes": 2276,
+      "sha256": "eca581db8098bf2ded637b7fc1fef9e883a94170853957c3b860a0738eeefa64"
+    }
+  ]
+}

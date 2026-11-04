@@ -1,0 +1,107 @@
+{
+  "scope": "Additive Big Eye manual installer after accepted Blader/Blaster/Super Cutter/Flea/Octopus Battery/Flying Shell combat. User GMS import/compile/runtime pending. New native landing sound awaits approval. No ROM/savestates/old-audio/scenery replacements.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_big_eye_strip2.png",
+      "source": "Assets/Enemies/MM1/Big Eye/spr_mm1_big_eye_strip2.png",
+      "bytes": 1587,
+      "sha256": "0c6e18b8c3362e1ba30ed2c9e94f043bc56d7a91a19101a8a6e0fd1d7a1fa8a3"
+    },
+    {
+      "path": "Audio/snd_mm1_big_eye_land.wav",
+      "source": "Assets/Audio/Mega Man/MM1/Big Eye/mm1-big-eye-land-balanced.wav",
+      "bytes": 34652,
+      "sha256": "34375211f5b4599484e8b8977303bcddb53ada86ae15f8683071f30e21c89cd2"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_big_eye_append.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Hooks/obj_mm5_combat_create_big_eye_append.gml",
+      "bytes": 241,
+      "sha256": "e57572872cc44d6abfb0a17a795c68e9eded4a68b7f47e2ef811cfb48a316b27"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/INSTALL-GMS14.md",
+      "bytes": 7292,
+      "sha256": "6889e304ce00951511c9e8c7f59719bca63190aa4a58c233daa54e023d2991da"
+    },
+    {
+      "path": "Objects/obj_mm1_big_eye_create.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Objects/obj_mm1_big_eye_create.gml",
+      "bytes": 275,
+      "sha256": "7c93726b4d22b50e19a6cfceeac8824a07f2dd66f42dbca73eec60962c7bab50"
+    },
+    {
+      "path": "Objects/obj_mm1_big_eye_draw.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Objects/obj_mm1_big_eye_draw.gml",
+      "bytes": 216,
+      "sha256": "98072f9b0d12076d73d4dea27baf3755338eb83185a4380b1f1ddc08ffaedf7f"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/README.md",
+      "bytes": 2525,
+      "sha256": "dcd5bedcb3a70aae68e5108bc706027e69589b12dcdde834fee9235c7bb1221e"
+    },
+    {
+      "path": "Reference/native-big-eye-art.json",
+      "source": "Assets/Enemies/MM1/Big Eye/Reference/native-big-eye-art.json",
+      "bytes": 6246,
+      "sha256": "335094bbc2246c935d38ef815b2d4b0353abed688c133848d743a58471c334aa"
+    },
+    {
+      "path": "Reference/native-big-eye-gameplay.json",
+      "source": "Assets/Enemies/MM1/Big Eye/Reference/native-big-eye-gameplay.json",
+      "bytes": 392726,
+      "sha256": "e01958d48b96cafa189464ab57d500a9fb301e1102f7d2a3fe5e324485cb675b"
+    },
+    {
+      "path": "Reference/native-landing-audio.json",
+      "source": "Assets/Audio/Mega Man/MM1/Big Eye/recovery.json",
+      "bytes": 1584,
+      "sha256": "64b195983d0c0e267a8fa40247511a62560847f1ee7c38113532686b750e4894"
+    },
+    {
+      "path": "Scripts/scr_mm1_big_eye_contact.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm1_big_eye_contact.gml",
+      "bytes": 437,
+      "sha256": "e624d14156e4cfd627897cab41dbaa4d50f3d92d40a7b7c49480e19478601b2c"
+    },
+    {
+      "path": "Scripts/scr_mm1_big_eye_hit.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm1_big_eye_hit.gml",
+      "bytes": 877,
+      "sha256": "2b1c1c8dfe9f6551853b283d32d0e38375258d1b8666643b78161eb2729810d0"
+    },
+    {
+      "path": "Scripts/scr_mm1_big_eye_spawn.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm1_big_eye_spawn.gml",
+      "bytes": 685,
+      "sha256": "6cf0ed0a3d0c8579f99e30de2c549bbf757d90d2db4e1dada7049d628cf02f64"
+    },
+    {
+      "path": "Scripts/scr_mm1_big_eye_step.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm1_big_eye_step.gml",
+      "bytes": 2939,
+      "sha256": "313862f1acdfcc0c0b65b7090712ffa7ee6978e1e553078df9481b0ca65013a6"
+    },
+    {
+      "path": "Scripts/scr_mm1_big_eye_world_step.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm1_big_eye_world_step.gml",
+      "bytes": 818,
+      "sha256": "ea8425cd81a75dfa30ce6163c167e1901e176559ca662333da2bc78b5be4b9cf"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 5717,
+      "sha256": "bdf2798f3c51fef3e490ceac48a6bf83b8209905ced6eb3ae7150ab245da0135"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Big Eye Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 4037,
+      "sha256": "a39f056c4b81311b608d1b2afb1b81efc6bad3d7a6149b82f98db6b4ecf95d1c"
+    }
+  ]
+}

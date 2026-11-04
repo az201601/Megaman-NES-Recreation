@@ -1,0 +1,58 @@
+{
+  "method": "Supplied originalMM6USA, fullAPU/defaultstereo,48kHzstereoPCM16. NativeDCmailboxF0stop, uncaptured35settlingcue and150warmupdates(final50exactzero), original27queued once/150captureupdates. Isolated originaldrivercue, NOT a natural armored-enemy collision trace. Identity independently established by byte-checked projectile bounce routine: horizontal speed negated, upwardspeedFC, facing toggled,27->DC. No fade/filter/synthesis/channelisolation/normalization. Silence-only trim10mstail; review exact2xgain. Prior35successfulhit file untouched.",
+  "romSha256": "86e069792addf21322355c245a0b155ba74e123b4a3eb9cd347175444569d122",
+  "source": {
+    "repository": "https://github.com/refreshing-lemonade/megaman6-disassembly",
+    "commit": "f0763c46fad2bbcb45e4b8a2f759a10ee3c7c421",
+    "file": "bank38_3F.asm"
+  },
+  "spans": [
+    {
+      "bank": 56,
+      "cpu": 37102,
+      "offset": 463102,
+      "hex": "bdc80549ff9dc805fec805a9fc9ddf05"
+    },
+    {
+      "bank": 56,
+      "cpu": 37118,
+      "offset": 463118,
+      "hex": "bdb70349409db703"
+    },
+    {
+      "bank": 56,
+      "cpu": 37138,
+      "offset": 463138,
+      "hex": "a92785dc"
+    },
+    {
+      "bank": 62,
+      "cpu": 50715,
+      "offset": 509483,
+      "hex": "a5dcc9fff00720b2c8a9ff85dc"
+    }
+  ],
+  "warmPeak": 0,
+  "commands": [
+    {
+      "frame": 0,
+      "id": 39
+    }
+  ],
+  "firstSample": 1167,
+  "lastAudibleSample": 5248,
+  "samples": 4562,
+  "peak": 0.3125,
+  "files": [
+    {
+      "name": "mm6-blocked-hit-raw.wav",
+      "sha256": "a715afb2504292018d970956cfe74800854a160fd88f441515f3edca4f8a4ea3",
+      "seconds": 0.09504166666666666
+    },
+    {
+      "name": "mm6-blocked-hit-balanced-review.wav",
+      "sha256": "aedf7b02d3eae36f69da8d420b47544dcf7828ab39f8df285e44473eae396d9d",
+      "seconds": 0.09504166666666666
+    }
+  ]
+}

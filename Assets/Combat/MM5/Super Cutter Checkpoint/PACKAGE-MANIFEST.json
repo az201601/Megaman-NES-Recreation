@@ -1,0 +1,89 @@
+{
+  "scope": "Additive Super Cutter manual installer after accepted Blader/Blaster combat. User GMS import/compile/runtime pending. No ROM/savestates/audio/building replacements.",
+  "files": [
+    {
+      "path": "Art/spr_mm1_super_cutter_strip2.png",
+      "source": "Assets/Enemies/MM1/Super Cutter/spr_mm1_super_cutter_strip2.png",
+      "bytes": 340,
+      "sha256": "0bca6fce5fc42a166716f76e08ba6276b046f820887dc46f92385a9ea8c9e149"
+    },
+    {
+      "path": "Hooks/obj_mm5_combat_create_super_cutter_append.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Hooks/obj_mm5_combat_create_super_cutter_append.gml",
+      "bytes": 306,
+      "sha256": "6cedbd0db92dc289babf78392cd601c7fb7b891e9c37e90d6df078ff51a6dacf"
+    },
+    {
+      "path": "INSTALL-GMS14.md",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/INSTALL-GMS14.md",
+      "bytes": 8225,
+      "sha256": "7d30359da0ed57c26bf76a257f8a29c5baef8179b577f7f7ad7e7e0620af9dba"
+    },
+    {
+      "path": "Objects/obj_mm1_super_cutter_create.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Objects/obj_mm1_super_cutter_create.gml",
+      "bytes": 250,
+      "sha256": "93649a07f7f3ed0d320fea07ec35e1adb1e3749c49baf5d66042abab95487a7d"
+    },
+    {
+      "path": "Objects/obj_mm1_super_cutter_draw.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Objects/obj_mm1_super_cutter_draw.gml",
+      "bytes": 193,
+      "sha256": "5c40a0c2d7a8aab4932453681b918f3e916bb62bd71418f0a43f7d71898293fe"
+    },
+    {
+      "path": "README.md",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/README.md",
+      "bytes": 4666,
+      "sha256": "e636d0b0f469211b351ee022b0b8704d0e777dda5ac906b1181557b2d8623de2"
+    },
+    {
+      "path": "Reference/native-super-cutter-art.json",
+      "source": "Assets/Enemies/MM1/Super Cutter/Reference/native-super-cutter-art.json",
+      "bytes": 2118,
+      "sha256": "88ecc76a5b86abf115b740e33c02d9e5bdca7f16956ab3028ebf22085def2b67"
+    },
+    {
+      "path": "Reference/native-super-cutter.json",
+      "source": "Assets/Enemies/MM1/Super Cutter/Reference/native-super-cutter.json",
+      "bytes": 75547,
+      "sha256": "d91a8ccad98de324fca78fcdc31d9499e433f04996c8aba9b656746fde834e2d"
+    },
+    {
+      "path": "Scripts/scr_mm1_super_cutter_contact.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm1_super_cutter_contact.gml",
+      "bytes": 446,
+      "sha256": "4ac0c47b8bfeb4d1a268eb1989513d05a6745b53a339e6bf78413ec0f275bfa7"
+    },
+    {
+      "path": "Scripts/scr_mm1_super_cutter_hit.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm1_super_cutter_hit.gml",
+      "bytes": 861,
+      "sha256": "336bc4233c7fc69228e3acb011aa1f41705ea04a8b187b7e40a5ce28b67f36cb"
+    },
+    {
+      "path": "Scripts/scr_mm1_super_cutter_step.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm1_super_cutter_step.gml",
+      "bytes": 170,
+      "sha256": "a5df7cc8de6c715e32d5edcbf562aa8dc93283c68565a99f5768efbab62c6096"
+    },
+    {
+      "path": "Scripts/scr_mm1_super_cutter_world_step.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm1_super_cutter_world_step.gml",
+      "bytes": 1645,
+      "sha256": "9f8c5739ebab1d7b1ac6a796cb8254ed40d6cffed2fb0b81ecca0cee2f2004c4"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_end_frame.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm5_combat_end_frame.gml",
+      "bytes": 4626,
+      "sha256": "9da3169db9d3e58ff9acf2eb11b77f00713d48b5c7b731f43d01f75f18069b86"
+    },
+    {
+      "path": "Scripts/scr_mm5_combat_shot_step.gml",
+      "source": "Assets/Combat/MM5/Super Cutter Checkpoint/Scripts/scr_mm5_combat_shot_step.gml",
+      "bytes": 2317,
+      "sha256": "509ec0e33acf6fa832882affc0f8e161609cf69ea06d79d43ac03718a55102cc"
+    }
+  ]
+}

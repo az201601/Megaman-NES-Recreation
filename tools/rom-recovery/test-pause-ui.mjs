@@ -1,0 +1,14 @@
+// Model/static checks, NOT execution in GMS1.4. Runtime checklist supplied separately.
+import fs from'node:fs';import assert from'node:assert/strict';
+const base=new URL('../../Assets/Mega Man/MM5/Pause Menu/Controller UI Test/',import.meta.url),read=f=>fs.readFileSync(new URL(f,base),'utf8');
+const positions=Array.from({length:11},(_,i)=>[i<6?72:192,60+18*(i<6?i:i-6)]).concat([[36,190],[108,190],[180,190],[128,217]]);
+function move(previous,dx,dy){let next=previous,best=100000;positions.forEach(([x,y],i)=>{let a=x-positions[previous][0],b=y-positions[previous][1],projection=a*dx+b*dy,cross=Math.abs(a*dy-b*dx),cost=projection+cross*4;if(projection>0&&(dx===0||cross<=20)&&cost<best){best=cost;next=i;}});return next;}
+const directions=[[-1,0],[1,0],[0,-1],[0,1]],seen=new Set([0]),pending=[0];while(pending.length){const p=pending.shift();for(const[d,e]of directions){let q=move(p,d,e);assert.ok(q>=0&&q<15);if(!seen.has(q)){seen.add(q);pending.push(q);}}}assert.equal(seen.size,15,'Every weapon/tank/page target reachable');assert.equal(move(0,-1,0),0);assert.equal(move(0,0,-1),0);assert.equal(move(5,0,1),11);
+let tanks=[2,2,1],uses=[0,0,0];function start(i,fresh){if(fresh&&tanks[i]>0){tanks[i]--;uses[i]++;}}for(let i=0;i<3;i++){const original=tanks[i];start(i,true);start(i,false);assert.equal(tanks[i],original-1);for(let j=0;j<5;j++)start(i,true);assert.equal(tanks[i],0);assert.equal(uses[i],original);}
+const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .',draw=read('obj_mm5_pause_menu_test_draw_gui.gml');for(const match of draw.matchAll(/scr_mm5_pause_text\("([^"]*)"/g)){assert.ok([...match[1]].every(c=>chars.includes(c)));assert.ok(match[1].length<=28);}
+const resources=JSON.parse(fs.readFileSync(new URL('../Import Pack/resource-manifest.json',base))),known=new Set([...resources.sprites.map(r=>r.name),...resources.sounds]);const files=fs.readdirSync(base).filter(f=>f.endsWith('.gml'));assert.equal(files.length,8);let all=files.map(read).join('\n');for(const name of all.match(/\b(?:spr|snd)_mm5_\w+/g)||[])assert.ok(known.has(name),name);
+assert.ok(!/\b(?:instance_deactivate_all|instance_activate_all|room_goto|audio_stop_all|draw_get_font|draw_set_gui_size|array_create|function|struct)\s*\(/.test(all));assert.ok(!all.includes('obj_mm5_megaman'),'Isolated from player');
+assert.ok(read('obj_mm5_pause_menu_test_step.gml').includes('keyboard_check_pressed(vk_enter)'));assert.ok(read('scr_mm5_pause_test_move.gml').includes('menu_cursor != previous'));
+// Repeat: immediate press, then18updates, then every6. No move on key-up.
+let ticks=[0];for(let t=1;t<=36;t++)if(t>=18&&(t-18)%6===0)ticks.push(t);assert.deepEqual(ticks,[0,18,24,30,36]);
+console.log('PASS:15 targets reachable; bounds/edge no-moves; tank fresh-press/zero-floor model; font/resource references;8 GMS1-style files; repeat model. NOT GMS runtime proof.');

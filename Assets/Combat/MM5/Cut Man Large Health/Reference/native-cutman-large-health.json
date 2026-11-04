@@ -1,0 +1,156 @@
+{
+  "method": "Supplied USA original ROM. Record38 read directly at bank6:A500; original SpawnObject record-table base previously observed at A468. Source spans verify type40 flags02/zero speed/no temporary flag10 and collection dispatch+10. Controlled opening-area fixture substitutes slot16/type40/defaultflags02/zero lifecycle,speeds,timer atX824/Y184; player X824/Y36/speed0/protection100 pinned600updates, thenY184/health5 for100updates. Original AI/collection/refill code unpatched; art is NOT extracted from this fixture. Not natural whole-stage traversal or native spawn/respawn/global-pool certification.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "spans": [
+    {
+      "offset": 107792,
+      "hex": "0f28b840",
+      "label": "Original Cut Man record38"
+    },
+    {
+      "offset": 107472,
+      "hex": "02",
+      "label": "Native fixed large-health flags"
+    },
+    {
+      "offset": 107542,
+      "hex": "08",
+      "label": "Native speed selector"
+    },
+    {
+      "offset": 128356,
+      "hex": "00000000",
+      "label": "Zero XY speed"
+    },
+    {
+      "offset": 107612,
+      "hex": "00",
+      "label": "Initial timer"
+    },
+    {
+      "offset": 116918,
+      "hex": "61c8",
+      "label": "Type40 collection dispatch"
+    },
+    {
+      "offset": 116849,
+      "hex": "a90a",
+      "label": "Original large health amount10"
+    },
+    {
+      "offset": 95935,
+      "hex": "bd20042910f00dfe4006bd4006c9f0d0034cb1be2049be60",
+      "label": "Lifetime test only applies to flag10; fixed flags02 skip"
+    }
+  ],
+  "record": {
+    "index": 38,
+    "page": 15,
+    "x": 40,
+    "y": 184,
+    "type": 64
+  },
+  "mapping": {
+    "nativeStripeBegin": 13,
+    "projectStripeLeft": 1280,
+    "bandY": 0,
+    "x": 1832,
+    "y": 184,
+    "formula": "1280+(15-13)*256+40; Y184+band0"
+  },
+  "samples": [
+    {
+      "frame": 1,
+      "type": 64,
+      "x": 824,
+      "y": 184,
+      "timer": 0
+    },
+    {
+      "frame": 240,
+      "type": 64,
+      "x": 824,
+      "y": 184,
+      "timer": 0
+    },
+    {
+      "frame": 255,
+      "type": 64,
+      "x": 824,
+      "y": 184,
+      "timer": 0
+    },
+    {
+      "frame": 300,
+      "type": 64,
+      "x": 824,
+      "y": 184,
+      "timer": 0
+    },
+    {
+      "frame": 600,
+      "type": 64,
+      "x": 824,
+      "y": 184,
+      "timer": 0
+    }
+  ],
+  "collection": [
+    {
+      "frame": 1,
+      "health": 5,
+      "itemY": 184
+    },
+    {
+      "frame": 6,
+      "health": 6,
+      "itemY": 248
+    },
+    {
+      "frame": 10,
+      "health": 7,
+      "itemY": 248
+    },
+    {
+      "frame": 14,
+      "health": 8,
+      "itemY": 248
+    },
+    {
+      "frame": 18,
+      "health": 9,
+      "itemY": 248
+    },
+    {
+      "frame": 22,
+      "health": 10,
+      "itemY": 248
+    },
+    {
+      "frame": 26,
+      "health": 11,
+      "itemY": 248
+    },
+    {
+      "frame": 30,
+      "health": 12,
+      "itemY": 248
+    },
+    {
+      "frame": 34,
+      "health": 13,
+      "itemY": 248
+    },
+    {
+      "frame": 38,
+      "health": 14,
+      "itemY": 248
+    },
+    {
+      "frame": 42,
+      "health": 15,
+      "itemY": 248
+    }
+  ],
+  "projectPolicy": "Existing MM5 large-health sprite/kind74/+10 incremental refill/cap28/sound. Fixed position, no random-drop gravity/255update timeout. Screen-entry rearm after anchor leaves view or route cleanup, not claimed exact NES global slot-reuse persistence."
+}

@@ -1,0 +1,101 @@
+{
+  "method": "Supplied original USA MM5, native8slot soundqueue after F0+150frame warmup with final50frames exact silence. Full APU48kHz/stereo16bit. One commanded effect per take (150frames for hurt/refill,240frames for life/death); no unrelated native requests, filtering, normalization or channel muting. Trim only PCM silence retaining10ms tail; exact full-take sample comparison. Sound identity from ROM byte spans, refill additionally identified in native collection trace.",
+  "files": [
+    {
+      "name": "snd_mm5_health_refill",
+      "command": 38,
+      "offset": 241402,
+      "hex": "a926205dec",
+      "warmPeak": 0,
+      "first": 840,
+      "last": 13179,
+      "end": 13660,
+      "files": [
+        {
+          "file": "snd_mm5_health_refill.wav",
+          "bytes": 51324,
+          "seconds": 0.26708333333333334,
+          "sha256": "777accaa2324c76349fde032c029af4f45dd66d28d0986ea54ee511e29af8fbf"
+        },
+        {
+          "file": "snd_mm5_health_refill_complete_untrimmed.wav",
+          "bytes": 479300,
+          "seconds": 2.496125,
+          "sha256": "a6f4e7c42c7a5e215cbbe4b99f150ce3a982c1c04ce16775afe424ace8869430"
+        }
+      ]
+    },
+    {
+      "name": "snd_mm5_megaman_hurt",
+      "command": 28,
+      "offset": 230204,
+      "hex": "a91c205dec",
+      "warmPeak": 0,
+      "first": 841,
+      "last": 14901,
+      "end": 15382,
+      "files": [
+        {
+          "file": "snd_mm5_megaman_hurt.wav",
+          "bytes": 58208,
+          "seconds": 0.3029375,
+          "sha256": "94052f27f0d18f1fa7c983c8b5c367adaf86b59a92fbb822b2100ead5c4f8501"
+        },
+        {
+          "file": "snd_mm5_megaman_hurt_complete_untrimmed.wav",
+          "bytes": 479300,
+          "seconds": 2.496125,
+          "sha256": "0bb20bab9e1f9e8e4c73b73010330448befa5081a37ee48dc2770f17ae6a22dd"
+        }
+      ]
+    },
+    {
+      "name": "snd_mm5_extra_life",
+      "command": 36,
+      "offset": 241487,
+      "hex": "24",
+      "warmPeak": 0,
+      "first": 841,
+      "last": 52598,
+      "end": 53079,
+      "files": [
+        {
+          "file": "snd_mm5_extra_life.wav",
+          "bytes": 208996,
+          "seconds": 1.0882916666666667,
+          "sha256": "7c48ef1c5c6f55e448e622497604feee06e162da63642ca4e69f0bf6a3a6ea0d"
+        },
+        {
+          "file": "snd_mm5_extra_life_complete_untrimmed.wav",
+          "bytes": 766852,
+          "seconds": 3.9937916666666666,
+          "sha256": "d36f6c9ff4c7306e9e95129886b516d140aa91a896c1cae744e5c83e52dbb6bd"
+        }
+      ]
+    },
+    {
+      "name": "snd_mm5_megaman_death",
+      "command": 29,
+      "offset": 230215,
+      "hex": "a91d205dec",
+      "warmPeak": 0,
+      "first": 840,
+      "last": 71926,
+      "end": 72407,
+      "files": [
+        {
+          "file": "snd_mm5_megaman_death.wav",
+          "bytes": 286312,
+          "seconds": 1.4909791666666667,
+          "sha256": "6dd32ce4101f372b25423f9bc81392ffb6a51ad6aa1c920653bd1939848689f1"
+        },
+        {
+          "file": "snd_mm5_megaman_death_complete_untrimmed.wav",
+          "bytes": 766852,
+          "seconds": 3.9937916666666666,
+          "sha256": "fd545f758f10486e28314edc3eeb3c945aead4c8cc6914dc723d13bc7e8c73e0"
+        }
+      ]
+    }
+  ]
+}

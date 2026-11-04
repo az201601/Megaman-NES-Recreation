@@ -1,0 +1,17 @@
+{
+  "frame": 29,
+  "tile": 106,
+  "attr": 67,
+  "x": 184,
+  "y": 121,
+  "cell": [
+    8,
+    8
+  ],
+  "origin": [
+    4,
+    3
+  ],
+  "rgbaSha256": "8cf83e02e157fa897ae468503033a4b6b0524a0d978cf795fe7f3d05587560f4",
+  "method": "Live FlyingShell type2D burst OAM/CHR/palette composition independently matches opaque native-render pixels. Original later-room salmon FE8170 differs from accepted Blaster magenta B71E7B, both use offwhite FFFEFF; separate sprite preserves both."
+}
