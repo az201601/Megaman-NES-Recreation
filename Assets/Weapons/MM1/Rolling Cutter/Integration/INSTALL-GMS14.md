@@ -100,9 +100,11 @@ note and is intentionally NOT packaged. Do not use it instead of the full file.
    beginning `var combat_owner, combat_draw;` through its closing character
    drawing brace,before reference/debug drawing. Use
    `Adapters/obj_mm5_megaman_draw_character_block.gml`.
-   KEEP the existing startup prefix,KEEP the accepted outer victory prefix
-   `if (scr_mm1_cutman_victory_player_draw()) exit;`,and KEEP debug drawing after.
-   Do not replace the entire event or duplicate those guards.
+   KEEP the existing startup prefix and debug drawing after. The replacement
+   includes the accepted inline victory guard immediately after `combat_draw = true;`.
+   If using original ZIP0b901a6,add that inline guard explicitly after pasting:
+   `if (scr_mm1_cutman_victory_player_draw()) combat_draw = false;`
+   Do not replace the entire event.
 
 No player Step/Create replacement,no camera/controller event replacement,no room
 editor changes. Existing camera calls the now-updated shared End Frame Script.

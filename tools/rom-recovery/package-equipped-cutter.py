@@ -33,7 +33,7 @@ assert files['Adapters/scr_mm5_combat_begin.gml'].count(b'scr_mm5_pause_e_tank_c
 assert b'global.mm1_cutman_e_tank_taken = false;' in files['Adapters/scr_mm5_pause_inventory_init.gml']
 assert b'global.mm1_cutman_cleared = false;' in files['Adapters/scr_mm5_pause_inventory_init.gml']
 assert b'global.mm5_equipped_weapon = 0;' in files['Adapters/scr_mm5_pause_inventory_init.gml']
-assert b'scr_mm1_cutman_victory_player_draw' not in files['Adapters/obj_mm5_megaman_draw_character_block.gml'] # Keep user's EXISTING outer guard,do not duplicate.
+assert files['Adapters/obj_mm5_megaman_draw_character_block.gml'].count(b'if (scr_mm1_cutman_victory_player_draw()) combat_draw = false;')==1 # Preserve accepted inline victory guard when replacing the block.
 manifest={'status':'Incremental source package. GMS1.4 compilation/installed acceptance pending.','baseline':'User-accepted Cut Man victory/full teleport,F8 removed,e4de8b8.','newScripts':new,'replaceScripts':replacements,'sprites':sprites,'files':[{'path':p,'bytes':len(b),'sha256':sha(b)}for p,b in sorted(files.items())]}
 manifestBytes=(json.dumps(manifest,indent=2)+'\n').encode();(I/'MANIFEST.json').write_bytes(manifestBytes);files['Integration/MANIFEST.json']=manifestBytes
 out=I/'mm1-equipped-rolling-cutter-gms14.zip'

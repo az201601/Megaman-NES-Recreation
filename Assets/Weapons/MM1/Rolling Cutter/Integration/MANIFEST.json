@@ -237,8 +237,8 @@
     },
     {
       "path": "Adapters/obj_mm5_megaman_draw_character_block.gml",
-      "bytes": 3188,
-      "sha256": "a08e142d4db1ac4b91786aaf8e2f840b69460caf835f9884c35cc98962243820"
+      "bytes": 3251,
+      "sha256": "6bafcfb36164a58438bf648560f081ef751fb980c3c9df68ccf40eb9156c433b"
     },
     {
       "path": "Adapters/obj_mm5_pause_menu_draw_gui.gml",
@@ -392,8 +392,8 @@
     },
     {
       "path": "Integration/INSTALL-GMS14.md",
-      "bytes": 7397,
-      "sha256": "8dda4a49f91d084f0a257223991638e81c7b24d7802ad1226e6699455fc7ad09"
+      "bytes": 7525,
+      "sha256": "bb00d87ce8a9c38ccc813d6e1b594e1f9fe1822203106e8acbc13dabd9f1cfed"
     },
     {
       "path": "Objects/obj_mm1_player_cutter_create.gml",

@@ -2,6 +2,7 @@
 var combat_owner, combat_draw;
 combat_owner = instance_find(obj_mm5_combat, 0);
 combat_draw = true;
+if (scr_mm1_cutman_victory_player_draw()) combat_draw = false;
 if (instance_exists(combat_owner))
     if (combat_owner.combat_dead) combat_draw = false;
 if (combat_draw && mm5_hurt_left > 0)
