@@ -1,0 +1,258 @@
+{
+  "status": "Staged palette resources,not installed.",
+  "method": "Only accepted MM5 blue/cyan armour colours map to grey/white. Skin,white flash,pixels,alpha,geometry,padding and origin preserved. Ladder-top-shoot copies only bank0/no charge; weapon does not charge.",
+  "mapping": {
+    "155fd9": "666666",
+    "48cdde": "fffeff",
+    "64b0ff": "fffeff"
+  },
+  "sprites": [
+    {
+      "name": "spr_mm5_cutter_player_idle",
+      "pose": "idle",
+      "file": "Art/spr_mm5_cutter_player_idle.png",
+      "source": "Assets/Mega Man/MM5/Standing/spr_mm5_megaman_idle.png",
+      "sourceSha256": "ed1f9d684165a00867741c75f5042f1c961f03c521b992be514f1be2b45329d1",
+      "sha256": "f0ffeb9fbb4c7fb548f75ab3669157ea6128a285acef2c3b1aff84d6a09bc879",
+      "cell": [
+        32,
+        32
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 168
+    },
+    {
+      "name": "spr_mm5_cutter_player_walk",
+      "pose": "walk",
+      "file": "Art/spr_mm5_cutter_player_walk_strip4.png",
+      "source": "Assets/Mega Man/MM5/Movement/spr_mm5_megaman_walk_strip4.png",
+      "sourceSha256": "706e20e2835d05f4fb733d21c9adfe3b5ddd5b222d6b91a26d872b4ca3669b4c",
+      "sha256": "e77aac4b0ab8f74cfeb4a1193d0bd69a8dd6fb05e9ea01680e7d1352119c948f",
+      "cell": [
+        32,
+        32
+      ],
+      "frames": 4,
+      "sourceFrames": 4,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 521
+    },
+    {
+      "name": "spr_mm5_cutter_player_air",
+      "pose": "air",
+      "file": "Art/spr_mm5_cutter_player_air.png",
+      "source": "Assets/Mega Man/MM5/Movement/spr_mm5_megaman_air.png",
+      "sourceSha256": "60abe9308f1476373b9bd6d69a09e67d87cb730800b1ba43114380cd4b35c2ab",
+      "sha256": "73c6cad42416f1729c2505abf5fc5b7d5e5832aedf5b2f068141eb9b6e978844",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 203
+    },
+    {
+      "name": "spr_mm5_cutter_player_climb",
+      "pose": "climb",
+      "file": "Art/spr_mm5_cutter_player_climb_strip2.png",
+      "source": "Assets/Mega Man/MM5/Ladders/spr_mm5_megaman_climb_strip2.png",
+      "sourceSha256": "d0a84d2e2bf49f36ca3067b5f4ce74851e75ab7b50303a4662eea30434427282",
+      "sha256": "ae192e7b22f8a94319f473ce0c26a6443ba102bfb1462b0888adb3c994284091",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 2,
+      "sourceFrames": 2,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 412
+    },
+    {
+      "name": "spr_mm5_cutter_player_ladder_top",
+      "pose": "ladder_top",
+      "file": "Art/spr_mm5_cutter_player_ladder_top.png",
+      "source": "Assets/Mega Man/MM5/Ladders/spr_mm5_megaman_ladder_top.png",
+      "sourceSha256": "fd5707bd623428ec7ff3f827a639b4849bbf65ba587058949a740b179f635fda",
+      "sha256": "2814d3ad68eca728b3fd05f71148c8c02766cce77a5b33570a8e47eb3acdf7b1",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 153
+    },
+    {
+      "name": "spr_mm5_cutter_player_slide",
+      "pose": "slide",
+      "file": "Art/spr_mm5_cutter_player_slide.png",
+      "source": "Assets/Mega Man/MM5/Sliding/spr_mm5_megaman_slide.png",
+      "sourceSha256": "51206c250a59a666ea99f0ce6125c0262ed3f5121dfff030bd81444eb350e770",
+      "sha256": "5a8791125eb50a1c4e212fb8ba02e83a3aa62a9db0e11cad8802731179d7f681",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 190
+    },
+    {
+      "name": "spr_mm5_cutter_player_idle_shoot",
+      "pose": "idle_shoot",
+      "file": "Art/spr_mm5_cutter_player_idle_shoot.png",
+      "source": "Assets/Mega Man/MM5/Buster/spr_mm5_megaman_idle_shoot.png",
+      "sourceSha256": "d1ae6ae11414f5136923843ec5acf43da0ceb72ca39257303e1abf985cd46436",
+      "sha256": "93becb33b6be08ecc1bb646a6204c60f60360a953b30fde8fd3d0f02edbb596d",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 190
+    },
+    {
+      "name": "spr_mm5_cutter_player_walk_shoot",
+      "pose": "walk_shoot",
+      "file": "Art/spr_mm5_cutter_player_walk_shoot_strip4.png",
+      "source": "Assets/Mega Man/MM5/Buster/spr_mm5_megaman_walk_shoot_strip4.png",
+      "sourceSha256": "9832d49946be9bfecb343b6fae4bf1bc6453ca46067fc578360e2f05cd614343",
+      "sha256": "90b07779bea77a217241b8a93e0c63045d20b3c18511fea4c3ee082f5ee068f2",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 4,
+      "sourceFrames": 4,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 569
+    },
+    {
+      "name": "spr_mm5_cutter_player_air_shoot",
+      "pose": "air_shoot",
+      "file": "Art/spr_mm5_cutter_player_air_shoot.png",
+      "source": "Assets/Mega Man/MM5/Buster/spr_mm5_megaman_air_shoot.png",
+      "sourceSha256": "ff1734841351d65a57142a3a911fa50d9b9af2b01caa07f551e4ab8ad8c7e21c",
+      "sha256": "5b4e86eb2a4b30f9fb2d6f8c912d4ecc87812c868552116b32cf96a7d9197061",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 204
+    },
+    {
+      "name": "spr_mm5_cutter_player_climb_shoot",
+      "pose": "climb_shoot",
+      "file": "Art/spr_mm5_cutter_player_climb_shoot.png",
+      "source": "Assets/Mega Man/MM5/Buster/spr_mm5_megaman_climb_shoot.png",
+      "sourceSha256": "844bfaa26820c3921585f7e4a6dd6e754e4fd6a89fee01853dc3d1bb0dc73eec",
+      "sha256": "1e958bcf86dac13a9d353ced2b51307df65f29b3e4d0211fd85d7257aae65c38",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 1,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 220
+    },
+    {
+      "name": "spr_mm5_cutter_player_ladder_top_shoot",
+      "pose": "ladder_top_shoot",
+      "file": "Art/spr_mm5_cutter_player_ladder_top_shoot.png",
+      "source": "Assets/Mega Man/MM5/Buster/Charging/Player Colours/spr_mm5_megaman_ladder_top_shoot_charge_strip6.png",
+      "sourceSha256": "4b9f5244bd5b090de4ad7fa77f688947247581fa713447ead6fcf64fe06fe6ca",
+      "sha256": "1e958bcf86dac13a9d353ced2b51307df65f29b3e4d0211fd85d7257aae65c38",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "sourceFrames": 6,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 220
+    },
+    {
+      "name": "spr_mm5_cutter_player_hurt",
+      "pose": "hurt",
+      "file": "Art/spr_mm5_cutter_player_hurt_strip2.png",
+      "source": "Assets/Combat/MM5/Blader Checkpoint/Art/spr_mm5_megaman_hurt_strip2.png",
+      "sourceSha256": "3b9e8db983dd7544053909ee6f6a62edd7e1e6d04bb9fbf4b23a4de222511d40",
+      "sha256": "abe87473eb65b1c7c4faf5d621adb4da6fcda21bcca5cc9613e2e33f9adca9f1",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 2,
+      "sourceFrames": 2,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 202
+    },
+    {
+      "name": "spr_mm5_cutter_player_arrival",
+      "pose": "arrival",
+      "file": "Art/spr_mm5_cutter_player_arrival_strip5.png",
+      "source": "Assets/Mega Man/MM5/Arrival/spr_mm5_megaman_arrival_strip5.png",
+      "sourceSha256": "1c2819d4eda49acde0920e54c60a19bde2c4aa097ea60619ec854acac7adfe63",
+      "sha256": "be5dd4249278238e5ed3f7b76053a9fbb77e19a5e2f73b1db0c594a8cfceb8cb",
+      "cell": [
+        32,
+        48
+      ],
+      "frames": 5,
+      "sourceFrames": 5,
+      "origin": [
+        16,
+        16
+      ],
+      "changed": 732
+    }
+  ]
+}

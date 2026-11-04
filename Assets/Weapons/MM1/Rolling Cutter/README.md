@@ -29,3 +29,32 @@ No installation instructions/ZIP yet. Remaining connected scope:
 
 Do not alter the working Cut Man combat/victory/teleport resources for this
 foundation. The approved victory screen is already user-confirmed working.
+
+## Staged equipment/input and palette integration
+
+Uninstalled `Adapters/` now preserve the actual accepted E-Tank menu branch,
+allow only owned slots0/1 to close/equip, reopen on current selection, rearm held
+fire on switching, and apply equipment only AFTER exact paused IDs reactivate.
+Switching disposes active player projectiles and charge; no blanket activation.
+The M.BUSTER firing body is byte-preserved behind a Cutter-specific dispatch.
+One active Cutter/no auto-repeat/no energy-empty fallback; successful allocation
+alone spends1energy and plays the already approved25 sound. Failed inputs do not
+spend energy. New selected-slot field is staged for new-game-only initialization;
+these adapters must NOT be installed separately into the current working game.
+
+`test-player-cutter-equipment.mjs`:166 actual-GML menu/equip/fire cases with engine
+mocks, held/rejected inputs,charge reset,one active shot and accepted E branch
+preservation. No GMS/pause-deactivation acceptance claimed.
+
+`build-equipped-cutter-palette.mjs` exports13 palette-only MM5 sprite variants for
+idle,walk,air,ladder/ladder-top,slide,shoot variants,hurt and arrival. Existing
+skin/white flash/alpha/geometry/padding/origin16,16 are retained. Ladder-top-shoot
+uses only base bank0 (Cutter does not charge). Draw-only mapping never changes
+player sprite_index/mask or movement/collision. Separate staged Draw replacement
+keeps accepted victory guard and debug/startup boundary; stage-start Draw maps
+arrival only, leaving READY timing/art unchanged. Pixel/mapping test passes.
+
+Still missing before any installation package:sole shared-clock world owner,
+actual projectile rendering/animation,enemy-hit/damage policies,route/pause/refill/
+death/victory/room cleanup and equipped-weapon HUD integration. Do not treat
+selection or these mocks as a completed usable weapon yet.
