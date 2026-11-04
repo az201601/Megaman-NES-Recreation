@@ -6,6 +6,18 @@ owner = instance_find(obj_mm5_combat, 0);
 if (!instance_exists(item) || !instance_exists(p) || !instance_exists(owner)) return false;
 if (item.pickup_taken || owner.combat_dead || owner.combat_refilling
     || p.mm5_hurt_left > 0 || p.mm5_startup_active) return false;
+// Dedicated fixed E-Tank: leave it available at cap, no immediate health effect.
+if (item.object_index == obj_mm1_cutman_e_tank)
+{
+    if (global.mm1_cutman_e_tank_taken || global.mm5_pause_tanks[0] >= 9) return false;
+    item.pickup_taken = true;
+    global.mm1_cutman_e_tank_taken = true;
+    global.mm5_pause_tanks[0] = min(9, global.mm5_pause_tanks[0] + 1);
+    // Native E-tank and extra-life pickups both request24hex; reuse approved sound only.
+    audio_play_sound(snd_mm5_extra_life, 12, false);
+    with (item) instance_destroy();
+    return true;
+}
 item.pickup_taken = true;
 if (item.pickup_kind == $75 || item.pickup_kind == $74)
 {

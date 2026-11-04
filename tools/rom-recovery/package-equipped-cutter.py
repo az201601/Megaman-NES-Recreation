@@ -30,6 +30,11 @@ for s in sprites:
 # Critical source bridges and accepted Buster body preserved;event edits stay bounded.
 original=(ROOT/'Assets/Mega Man/MM5/Buster/Charging/Controller/scr_mm5_player_try_buster.gml').read_bytes();assert files['Adapters/scr_mm5_player_try_buster.gml'].endswith(original)
 assert files['Adapters/scr_mm5_combat_begin.gml'].count(b'scr_mm5_pause_e_tank_commit')==1
+assert b'if (item.object_index == obj_mm1_cutman_e_tank)' in files['Adapters/scr_mm5_combat_collect.gml']
+assert b'global.mm1_cutman_e_tank_taken = true;' in files['Adapters/scr_mm5_combat_collect.gml']
+assert b'scr_mm5_pause_e_tank_commit();' in files['Adapters/scr_mm5_pause_restore.gml']
+assert b'menu_e_tank_refilling = false;' in files['Adapters/scr_mm5_pause_restore.gml']
+assert b'if (menu_e_tank_pending)' in files['Adapters/obj_mm5_pause_menu_draw_gui.gml']
 assert b'global.mm1_cutman_e_tank_taken = false;' in files['Adapters/scr_mm5_pause_inventory_init.gml']
 assert b'global.mm1_cutman_cleared = false;' in files['Adapters/scr_mm5_pause_inventory_init.gml']
 assert b'global.mm5_equipped_weapon = 0;' in files['Adapters/scr_mm5_pause_inventory_init.gml']

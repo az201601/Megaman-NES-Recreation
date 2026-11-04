@@ -242,8 +242,8 @@
     },
     {
       "path": "Adapters/obj_mm5_pause_menu_draw_gui.gml",
-      "bytes": 3113,
-      "sha256": "07bf966d34b4f5dc20bdc3df7ad71cba25bc6b2d8d631aae0a31b1a6c0853e38"
+      "bytes": 3334,
+      "sha256": "62e8db5827cf00a76a5e4c19722d5023302cc292b9f9d4490fd43170b0a40fe8"
     },
     {
       "path": "Adapters/obj_mm5_pause_menu_step.gml",
@@ -272,8 +272,8 @@
     },
     {
       "path": "Adapters/scr_mm5_combat_collect.gml",
-      "bytes": 1665,
-      "sha256": "2435c2f2c14e3415dc3983cd083f669ee9af43c41835497de8d2e79d403ab1c9"
+      "bytes": 2227,
+      "sha256": "89893e5c4eb4a97341b7aa758aff1c92803f2df2425b4e592783f5063b0c7685"
     },
     {
       "path": "Adapters/scr_mm5_combat_die.gml",
@@ -302,8 +302,8 @@
     },
     {
       "path": "Adapters/scr_mm5_pause_restore.gml",
-      "bytes": 1509,
-      "sha256": "191a3f3990bbaba0f08775a804586b47bf6538b50d70744d700cb5cd882a8c95"
+      "bytes": 1856,
+      "sha256": "2a678d61403240f9e8a2f980b47c3c86cd7b7ca6dd568bd3bed3ae06ec9a0cd8"
     },
     {
       "path": "Adapters/scr_mm5_player_try_buster.gml",

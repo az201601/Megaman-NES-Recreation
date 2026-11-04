@@ -70,7 +70,13 @@ if (menu_dim > 0)
     shader_set_uniform_f(menu_white_uniform, 0);
     texture_set_stage(menu_lut_sampler, surface_get_texture(menu_lut_surface));
 }
-if (menu_show_stage) draw_surface(menu_stage_surface, 0, 0);
+if (menu_show_stage)
+{
+    draw_surface(menu_stage_surface, 0, 0);
+    // Paid refill is shown on the frozen-stage HUD during closing, not the stale cached bars.
+    if (menu_e_tank_pending)
+        draw_sprite_ext(spr_mm5_health_meter, menu_health, 24, 25, 1, 1, 0, c_white, 1);
+}
 else scr_mm5_pause_draw_page();
 if (menu_dim > 0) shader_reset();
 surface_reset_target();
