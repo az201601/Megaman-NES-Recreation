@@ -7,3 +7,6 @@ pc_tick = -1;
 pc_anim = 0;
 pc_draw_frame = 0;
 depth = -11;
+pc_contacts = ds_map_create();
+pc_band = view_yview[0];
+pc_room = room;

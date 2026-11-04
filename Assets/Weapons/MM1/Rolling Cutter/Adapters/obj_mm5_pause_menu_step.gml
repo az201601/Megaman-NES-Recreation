@@ -36,7 +36,7 @@ if (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space))
     }
     else
     {
-        show_debug_message("This weapon is not connected to gameplay yet. Select M.BUSTER to resume.");
+        show_debug_message("This weapon is not connected to gameplay yet. Select M.BUSTER or R.CUTTER to resume.");
     }
     menu_nav_key = -1;
     menu_nav_timer = 0;

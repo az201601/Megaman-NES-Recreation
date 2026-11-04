@@ -1,0 +1,499 @@
+{
+  "status": "Incremental source package. GMS1.4 compilation/installed acceptance pending.",
+  "baseline": "User-accepted Cut Man victory/full teleport,F8 removed,e4de8b8.",
+  "newScripts": [
+    "scr_mm1_player_cutter_aim",
+    "scr_mm1_player_cutter_begin",
+    "scr_mm1_player_cutter_contacts",
+    "scr_mm1_player_cutter_hit",
+    "scr_mm1_player_cutter_manage",
+    "scr_mm1_player_cutter_motion",
+    "scr_mm1_player_cutter_palette",
+    "scr_mm1_player_cutter_refill_tick",
+    "scr_mm1_player_cutter_step",
+    "scr_mm1_player_cutter_try_fire",
+    "scr_mm5_weapon_apply_selection"
+  ],
+  "replaceScripts": [
+    "scr_mm1_cutman_boss_hit",
+    "scr_mm1_cutman_victory_handoff",
+    "scr_mm5_combat_begin",
+    "scr_mm5_combat_collect",
+    "scr_mm5_combat_die",
+    "scr_mm5_combat_end_frame",
+    "scr_mm5_pause_dispose",
+    "scr_mm5_pause_inventory_init",
+    "scr_mm5_pause_open",
+    "scr_mm5_pause_restore",
+    "scr_mm5_player_try_buster"
+  ],
+  "sprites": [
+    {
+      "name": "spr_mm5_cutter_player_idle",
+      "file": "Art/spr_mm5_cutter_player_idle.png",
+      "cell": [
+        32,
+        32
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_walk",
+      "file": "Art/spr_mm5_cutter_player_walk_strip4.png",
+      "cell": [
+        32,
+        32
+      ],
+      "frames": 4,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_air",
+      "file": "Art/spr_mm5_cutter_player_air.png",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_climb",
+      "file": "Art/spr_mm5_cutter_player_climb_strip2.png",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 2,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_ladder_top",
+      "file": "Art/spr_mm5_cutter_player_ladder_top.png",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_slide",
+      "file": "Art/spr_mm5_cutter_player_slide.png",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_idle_shoot",
+      "file": "Art/spr_mm5_cutter_player_idle_shoot.png",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_walk_shoot",
+      "file": "Art/spr_mm5_cutter_player_walk_shoot_strip4.png",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 4,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_air_shoot",
+      "file": "Art/spr_mm5_cutter_player_air_shoot.png",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_climb_shoot",
+      "file": "Art/spr_mm5_cutter_player_climb_shoot.png",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_ladder_top_shoot",
+      "file": "Art/spr_mm5_cutter_player_ladder_top_shoot.png",
+      "cell": [
+        40,
+        40
+      ],
+      "frames": 1,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_hurt",
+      "file": "Art/spr_mm5_cutter_player_hurt_strip2.png",
+      "cell": [
+        32,
+        40
+      ],
+      "frames": 2,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_player_arrival",
+      "file": "Art/spr_mm5_cutter_player_arrival_strip5.png",
+      "cell": [
+        32,
+        48
+      ],
+      "frames": 5,
+      "origin": [
+        16,
+        16
+      ]
+    },
+    {
+      "name": "spr_mm1_player_rolling_cutter",
+      "file": "Art/spr_mm1_player_rolling_cutter_strip4.png",
+      "cell": [
+        16,
+        16
+      ],
+      "frames": 4,
+      "origin": [
+        8,
+        7
+      ]
+    },
+    {
+      "name": "spr_mm5_cutter_energy_meter",
+      "file": "Art/spr_mm5_cutter_energy_meter_strip29.png",
+      "cell": [
+        8,
+        56
+      ],
+      "frames": 29,
+      "origin": [
+        0,
+        0
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "Adapters/obj_mm5_combat_create_equipment_append.gml",
+      "bytes": 144,
+      "sha256": "b0f34eabd0ffb8a85f1c9b1155ae1f745fb9f88111f022d7c7ff7d0032ac7585"
+    },
+    {
+      "path": "Adapters/obj_mm5_hud_draw_gui.gml",
+      "bytes": 561,
+      "sha256": "190653e8c4d01f2fb383bc0b25a76a937bc71ac88789b6ffec70d46d4b3889c1"
+    },
+    {
+      "path": "Adapters/obj_mm5_megaman_draw_character_block.gml",
+      "bytes": 3188,
+      "sha256": "a08e142d4db1ac4b91786aaf8e2f840b69460caf835f9884c35cc98962243820"
+    },
+    {
+      "path": "Adapters/obj_mm5_pause_menu_draw_gui.gml",
+      "bytes": 3113,
+      "sha256": "07bf966d34b4f5dc20bdc3df7ad71cba25bc6b2d8d631aae0a31b1a6c0853e38"
+    },
+    {
+      "path": "Adapters/obj_mm5_pause_menu_step.gml",
+      "bytes": 2466,
+      "sha256": "54477bed025fcb58bcde7e1c8e6bd8439b6c4a6142e84bdde402614347144e80"
+    },
+    {
+      "path": "Adapters/obj_mm5_stage_start_draw.gml",
+      "bytes": 426,
+      "sha256": "cca67dafcf312461834c329fbc2f453c6e80f7b8c7b029e1632a7578ff6d86ef"
+    },
+    {
+      "path": "Adapters/scr_mm1_cutman_boss_hit.gml",
+      "bytes": 1388,
+      "sha256": "544b36d056f9c73037a58959f65983f27052af95108212ebcb960b41261603ed"
+    },
+    {
+      "path": "Adapters/scr_mm1_cutman_victory_handoff.gml",
+      "bytes": 1059,
+      "sha256": "ddc58b6b7e240cda84c7d5befb8be835b40dc4fcd7d683a1138fd1c8108df57f"
+    },
+    {
+      "path": "Adapters/scr_mm5_combat_begin.gml",
+      "bytes": 1607,
+      "sha256": "c3fdd751d64972ebfc20993e7ba8e060935295192f7bebb6f0f0fb8124624cdb"
+    },
+    {
+      "path": "Adapters/scr_mm5_combat_collect.gml",
+      "bytes": 1665,
+      "sha256": "2435c2f2c14e3415dc3983cd083f669ee9af43c41835497de8d2e79d403ab1c9"
+    },
+    {
+      "path": "Adapters/scr_mm5_combat_die.gml",
+      "bytes": 941,
+      "sha256": "61f601195164c907a4e7115ba6958e90193a82043675e732220cf2aa1bc97c07"
+    },
+    {
+      "path": "Adapters/scr_mm5_combat_end_frame.gml",
+      "bytes": 7119,
+      "sha256": "744c468c84eed1374ebdace84b63132746e1e32d6053c3e428389c53c3dc42c6"
+    },
+    {
+      "path": "Adapters/scr_mm5_pause_dispose.gml",
+      "bytes": 708,
+      "sha256": "5d7784a34c9c6383d90ace8d071d1256061081790b781d4400e48c724d4179ee"
+    },
+    {
+      "path": "Adapters/scr_mm5_pause_inventory_init.gml",
+      "bytes": 1186,
+      "sha256": "faa32bbf3fed5de900a7941f144142c22e5a2577021ad4d5ceaad54b064bdcf3"
+    },
+    {
+      "path": "Adapters/scr_mm5_pause_open.gml",
+      "bytes": 2379,
+      "sha256": "ed23877341e95049770717fb13f06fec5f8cba135840ccdc9bd6a5b5da7c56a7"
+    },
+    {
+      "path": "Adapters/scr_mm5_pause_restore.gml",
+      "bytes": 1509,
+      "sha256": "191a3f3990bbaba0f08775a804586b47bf6538b50d70744d700cb5cd882a8c95"
+    },
+    {
+      "path": "Adapters/scr_mm5_player_try_buster.gml",
+      "bytes": 3359,
+      "sha256": "9106ce5125f41ec10f8fb42e9a493adba5e3fd31de2817a35c64c5544b439ddc"
+    },
+    {
+      "path": "Art/spr_mm1_player_rolling_cutter_strip4.png",
+      "bytes": 394,
+      "sha256": "536c2fd34f2075e1984540cfcd9b8938a4ddf220105ba234030c2aeecce082d6"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_energy_meter_strip29.png",
+      "bytes": 3613,
+      "sha256": "a06c93d35f0791ac215307d6d5dcb542b161ff6ed31fd50b89456ce468780200"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_air.png",
+      "bytes": 593,
+      "sha256": "73c6cad42416f1729c2505abf5fc5b7d5e5832aedf5b2f068141eb9b6e978844"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_air_shoot.png",
+      "bytes": 636,
+      "sha256": "5b4e86eb2a4b30f9fb2d6f8c912d4ecc87812c868552116b32cf96a7d9197061"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_arrival_strip5.png",
+      "bytes": 1077,
+      "sha256": "be5dd4249278238e5ed3f7b76053a9fbb77e19a5e2f73b1db0c594a8cfceb8cb"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_climb_shoot.png",
+      "bytes": 574,
+      "sha256": "1e958bcf86dac13a9d353ced2b51307df65f29b3e4d0211fd85d7257aae65c38"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_climb_strip2.png",
+      "bytes": 789,
+      "sha256": "ae192e7b22f8a94319f473ce0c26a6443ba102bfb1462b0888adb3c994284091"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_hurt_strip2.png",
+      "bytes": 831,
+      "sha256": "abe87473eb65b1c7c4faf5d621adb4da6fcda21bcca5cc9613e2e33f9adca9f1"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_idle.png",
+      "bytes": 512,
+      "sha256": "f0ffeb9fbb4c7fb548f75ab3669157ea6128a285acef2c3b1aff84d6a09bc879"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_idle_shoot.png",
+      "bytes": 625,
+      "sha256": "93becb33b6be08ecc1bb646a6204c60f60360a953b30fde8fd3d0f02edbb596d"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_ladder_top.png",
+      "bytes": 299,
+      "sha256": "2814d3ad68eca728b3fd05f71148c8c02766cce77a5b33570a8e47eb3acdf7b1"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_ladder_top_shoot.png",
+      "bytes": 574,
+      "sha256": "1e958bcf86dac13a9d353ced2b51307df65f29b3e4d0211fd85d7257aae65c38"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_slide.png",
+      "bytes": 573,
+      "sha256": "5a8791125eb50a1c4e212fb8ba02e83a3aa62a9db0e11cad8802731179d7f681"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_walk_shoot_strip4.png",
+      "bytes": 1675,
+      "sha256": "90b07779bea77a217241b8a93e0c63045d20b3c18511fea4c3ee082f5ee068f2"
+    },
+    {
+      "path": "Art/spr_mm5_cutter_player_walk_strip4.png",
+      "bytes": 1536,
+      "sha256": "e77aac4b0ab8f74cfeb4a1193d0bd69a8dd6fb05e9ea01680e7d1352119c948f"
+    },
+    {
+      "path": "Integration/ACCEPTANCE.md",
+      "bytes": 2285,
+      "sha256": "b9f37b353e2045b1107640eeffc2df899bc85147e62f8a77a329656dc5c53641"
+    },
+    {
+      "path": "Integration/INSTALL-GMS14.md",
+      "bytes": 7397,
+      "sha256": "8dda4a49f91d084f0a257223991638e81c7b24d7802ad1226e6699455fc7ad09"
+    },
+    {
+      "path": "Objects/obj_mm1_player_cutter_create.gml",
+      "bytes": 342,
+      "sha256": "b8d85c2929893c2209469c8e4d844a4616adc48420dec26291f6158681ec6f84"
+    },
+    {
+      "path": "Objects/obj_mm1_player_cutter_destroy_and_room_end.gml",
+      "bytes": 175,
+      "sha256": "4a363fc69dc29300e9f901b75ff67ff2bfbd75ce43bd48213bba59ac94ef20b9"
+    },
+    {
+      "path": "Objects/obj_mm1_player_cutter_draw.gml",
+      "bytes": 294,
+      "sha256": "f72b83cac944f11e7b653379e78c0a544cea716adf77342700354d680aab60d4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4345,
+      "sha256": "7489763a6c01d4fb03674712f369cf478b5e9a79a8b4489a570cc9e3c295f149"
+    },
+    {
+      "path": "Reference/equipped-combat-tests.json",
+      "bytes": 1558,
+      "sha256": "5de454164d7b7d9b5a3263f927e4404caf56ea8d61fd112045b8566d750d76a3"
+    },
+    {
+      "path": "Reference/equipped-energy-meter.json",
+      "bytes": 636,
+      "sha256": "05ab49e47f020a0f721e161e01447ab20342393c8b8d0c29f426480f364f6eb7"
+    },
+    {
+      "path": "Reference/equipped-palette.json",
+      "bytes": 7706,
+      "sha256": "7841610a2bf5a36d4a7f66894f46f20cbc9d88fabd2c969edd9d9b821dbdd4bf"
+    },
+    {
+      "path": "Reference/equipped-projectile-art.json",
+      "bytes": 3009,
+      "sha256": "04a21748a109dc9766ac96c8ef9b567097da112fde9153a05ae0747ed06a92bb"
+    },
+    {
+      "path": "Reference/player-manager-differential.json",
+      "bytes": 1337,
+      "sha256": "aebdc3d886ce1102291f01eaafc58bf3c3d1dcb83288b32e046dc886aa4975e0"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_aim.gml",
+      "bytes": 1034,
+      "sha256": "ef81e10ee858d5b0647f2f633d6cf9bbd230758944b776166f736f902378d745"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_begin.gml",
+      "bytes": 441,
+      "sha256": "bd1eea66f51af978dcecb728a2bbe4629d7d0460ebf2abbc607afdf94088ade7"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_contacts.gml",
+      "bytes": 1982,
+      "sha256": "64dcf044b8496ee992f99c33117e215b26359122d1aa854de8170f66deb6ef39"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_hit.gml",
+      "bytes": 2548,
+      "sha256": "9cee2bd6f9b8bc352a5c974bf79097e33a718d8e03a64552fae9f7c0930da2af"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_manage.gml",
+      "bytes": 1090,
+      "sha256": "9a323b877ad4c4ddbb97f50e22b63a80defccb8007c0118bed5a697b7c2197cf"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_motion.gml",
+      "bytes": 387,
+      "sha256": "a17bd59cfac4cea1cd04e6695b6c576c33e18d54a895a280f89643e161006060"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_palette.gml",
+      "bytes": 1197,
+      "sha256": "59e266b6d25b72b690425766d0b8c5d1d3536946f049ab713481c5724626c445"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_refill_tick.gml",
+      "bytes": 453,
+      "sha256": "701a9b8f7a2cc1e15b56009f355f2eb9a35547c74e63b50e2634a18085077e96"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_step.gml",
+      "bytes": 1021,
+      "sha256": "5541d837c9c1aa63ceaae8e92a77d1d22593f6f757b1aafcb7fb30c88e69f7f2"
+    },
+    {
+      "path": "Scripts/scr_mm1_player_cutter_try_fire.gml",
+      "bytes": 1452,
+      "sha256": "5f31e95d8f665502102b7438520a2aa7a2b068eca2dffd49d1b194bf91d02a14"
+    },
+    {
+      "path": "Scripts/scr_mm5_weapon_apply_selection.gml",
+      "bytes": 640,
+      "sha256": "75f40ca06d6565b68485a40fb6edff8dc06f0331a03abba7aef6d6d4451bfd07"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+// Draw > Draw GUI, NOT ordinary Draw. Independent of the player's startup lock.
+if (!instance_exists(hud_player)) exit;
+var hud_health_frame;
+hud_health_frame = max(0, min(28, floor(hud_player.mm5_health)));
+draw_sprite_ext(spr_mm5_health_meter, hud_health_frame,
+    24, 25, 1, 1, 0, c_white, 1);
+
+// Original MM5 meter shape,palette-only Cutter fill;hide while Buster equipped.
+if (global.mm5_equipped_weapon == 1)
+    draw_sprite_ext(spr_mm5_cutter_energy_meter,
+        clamp(floor(global.mm5_pause_energy[1]), 0, 28),
+        8, 25, 1, 1, 0, c_white, 1);

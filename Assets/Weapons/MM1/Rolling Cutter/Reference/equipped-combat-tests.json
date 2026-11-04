@@ -1,0 +1,72 @@
+{
+  "status": "Source/ROM and limited engine mock checks,NOT installed GMS acceptance.",
+  "romSha256": "58fb9ef0c14c2947332929b9330d56c38a78040fd388274c39efd84e8d5446c7",
+  "nativeChecks": 160,
+  "checks": 123,
+  "damage": [
+    {
+      "type": 0,
+      "P": 20,
+      "C": 20,
+      "normalizedHP": 1
+    },
+    {
+      "type": 11,
+      "P": 20,
+      "C": 20,
+      "normalizedHP": 1
+    },
+    {
+      "type": 17,
+      "P": 4,
+      "C": 4,
+      "normalizedHP": 5
+    },
+    {
+      "type": 2,
+      "P": 20,
+      "C": 20,
+      "normalizedHP": 1
+    },
+    {
+      "type": 4,
+      "P": 4,
+      "C": 20,
+      "normalizedHP": 5
+    },
+    {
+      "type": 10,
+      "P": 20,
+      "C": 20,
+      "normalizedHP": 1
+    },
+    {
+      "type": 9,
+      "P": 1,
+      "C": 1,
+      "normalizedHP": 20
+    },
+    {
+      "type": 5,
+      "P": 7,
+      "C": 20,
+      "normalizedHP": 3
+    }
+  ],
+  "collision": "Native C halfsize8/8. Explicit hybrid policy:one hit per contiguous target overlap,rearm after separation;no full-native hit-state claim.",
+  "scope": [
+    "eight enemy damage/death paths",
+    "closed armour ignored,not Buster-deflected",
+    "shell70wait/explosion/drop clock",
+    "nonconsuming Cutter",
+    "reentry suppression",
+    "moving target refresh/once-per-tick",
+    "owner/equipment/band/room/offscreen/catch cleanup",
+    "energy2/10 clamp/finalwait",
+    "same-update lethal handoff destruction"
+  ],
+  "remaining": [
+    "GMS1.4 compilation and installed playtest",
+    "native enemy full hit-state port not claimed"
+  ]
+}
