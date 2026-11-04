@@ -51,7 +51,8 @@ if ((item.pickup_kind == $77 || item.pickup_kind == $76)
     if (owner.combat_weapon_refill_left > 0)
     {
         with (owner)
-            if (scr_mm1_player_cutter_refill_tick()) scr_mm5_combat_refill_sound();
+            if (scr_mm1_player_cutter_refill_tick())
+            with (p) scr_mm5_combat_refill_sound();
         owner.combat_refilling = true;
     }
 }

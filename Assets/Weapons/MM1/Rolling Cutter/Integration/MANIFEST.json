@@ -267,13 +267,13 @@
     },
     {
       "path": "Adapters/scr_mm5_combat_begin.gml",
-      "bytes": 1607,
-      "sha256": "c3fdd751d64972ebfc20993e7ba8e060935295192f7bebb6f0f0fb8124624cdb"
+      "bytes": 1628,
+      "sha256": "9318b1906b498654b3797b2fd8332dfc3d75cdd79bb2c4f94099abb1464c9d8e"
     },
     {
       "path": "Adapters/scr_mm5_combat_collect.gml",
-      "bytes": 2227,
-      "sha256": "89893e5c4eb4a97341b7aa758aff1c92803f2df2425b4e592783f5063b0c7685"
+      "bytes": 2248,
+      "sha256": "e073d2f18147fc04c97c7272947c3cd81fed5a25693a0761231de39a2a08547a"
     },
     {
       "path": "Adapters/scr_mm5_combat_die.gml",

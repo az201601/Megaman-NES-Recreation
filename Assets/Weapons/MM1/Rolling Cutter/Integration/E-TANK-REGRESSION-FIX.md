@@ -3,6 +3,7 @@ Stop Run. Replace ENTIRE existing resource contents from the matching file:
 1. Script scr_mm5_combat_collect <- Adapters/scr_mm5_combat_collect.gml
 2. Script scr_mm5_pause_restore <- Adapters/scr_mm5_pause_restore.gml
 3. obj_mm5_pause_menu > Draw > Draw GUI <- Adapters/obj_mm5_pause_menu_draw_gui.gml
+4. Script scr_mm5_combat_begin <- Adapters/scr_mm5_combat_begin.gml
 No other resources/sprites/sounds/events need reinstallation.
 
 Cause: the weapon-update collector was based on the older pre-E-Tank collector;
@@ -19,3 +20,8 @@ Fresh Run from title: reach the tank with fewer than9 E-Tanks and not already ta
 in this run. Check disappears/count+1,then pause E use and health refill. If a failed
 collection already removed it in the previous test,stopping/restarting the runner
 is required to begin a clean run. No F8 or inventory-grant cheat is included.
+
+Weapon-refill context correction:timer runs on combat owner,but existing refill sound
+must run with(p),the player,for both pickup and subsequent Begin ticks. Health
+refills already used player context and were unaffected.116 actual-source chained
+pickup/Begin/refill/sound cases verify no controller mm5_refill_voice is created.

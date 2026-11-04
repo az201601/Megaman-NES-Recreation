@@ -36,7 +36,8 @@ if (owner.combat_dead)
 if (owner.combat_refilling)
 {
     with (owner)
-        if (scr_mm1_player_cutter_refill_tick()) scr_mm5_combat_refill_sound();
+        if (scr_mm1_player_cutter_refill_tick())
+            with (p) scr_mm5_combat_refill_sound();
     with (p)
     {
         if (scr_mm5_health_refill_tick()) scr_mm5_combat_refill_sound();
